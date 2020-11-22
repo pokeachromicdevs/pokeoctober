@@ -136,6 +136,15 @@ ReadTrainerPartyPieces:
 	ld b, NUM_MOVES
 .copy_moves
 	call GetNextTrainerDataByte
+	push hl
+	push af
+	call GetNextTrainerDataByte
+	ld h, a
+	pop af
+	ld l, a
+	call GetMoveIDFromIndex
+	pop hl
+	inc hl
 	ld [de], a
 	inc de
 	dec b
@@ -164,14 +173,9 @@ ReadTrainerPartyPieces:
 	jr z, .copied_pp
 
 	push hl
-	push bc
-	dec a
-	ld hl, Moves + MOVE_PP
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	pop bc
+	ld l, a
+	ld a, MOVE_PP
+	call GetMoveAttribute
 	pop hl
 
 	ld [de], a

@@ -10,7 +10,6 @@ BattleCommand_Transform:
 	jp nz, BattleEffect_ButItFailed
 	xor a
 	ld [wNumHits], a
-	ld [wFXAnimID + 1], a
 	ld a, $1
 	ld [wKickCounter], a
 	ld a, BATTLE_VARS_SUBSTATUS4
@@ -20,7 +19,8 @@ BattleCommand_Transform:
 	jr z, .mimic_substitute
 	call CheckUserIsCharging
 	jr nz, .mimic_substitute
-	ld a, SUBSTITUTE
+	ld hl, SUBSTITUTE
+	call GetMoveIDFromIndex
 	call LoadAnim
 .mimic_substitute
 	ld a, BATTLE_VARS_SUBSTATUS5
@@ -89,7 +89,10 @@ BattleCommand_Transform:
 	inc de
 	and a
 	jr z, .done_move
-	cp SKETCH
+	push bc
+	ld bc, SKETCH
+	call CompareMove
+	pop bc
 	ld a, 1
 	jr z, .done_move
 	ld a, 5
@@ -128,12 +131,14 @@ BattleCommand_Transform:
 .after_anim
 	xor a
 	ld [wNumHits], a
-	ld [wFXAnimID + 1], a
 	ld a, $2
 	ld [wKickCounter], a
 	pop af
-	ld a, SUBSTITUTE
-	call nz, LoadAnim
+	jr z, .no_substitute
+	ld hl, SUBSTITUTE
+	call GetMoveIDFromIndex
+	call LoadAnim
+.no_substitute
 	ld hl, TransformedText
 	jp StdBattleTextbox
 

@@ -740,8 +740,7 @@ AI_Smart_MirrorMove:
 .asm_38968
 	push hl
 	ld hl, UsefulMoves
-	ld de, 1
-	call IsInArray
+	call AI_CheckMoveInList
 	pop hl
 
 ; ...do nothing if he didn't use a useful move.
@@ -1192,7 +1191,18 @@ AI_Smart_SpeedDownHit:
 ; Player is faster than enemy.
 
 	ld a, [wEnemyMoveStruct + MOVE_ANIM]
-	cp ICY_WIND
+	push hl
+	call GetMoveIDFromIndex
+	ld a, h
+	if HIGH(ICY_WIND)
+		cp HIGH(ICY_WIND)
+	else
+		and a
+	endc
+	ld a, l
+	pop hl
+	ret nz
+	cp LOW(ICY_WIND)
 	ret nz
 	call AICheckEnemyQuarterHP
 	ret nc
@@ -1307,8 +1317,7 @@ AI_Smart_Mimic:
 	ld a, [wLastPlayerCounterMove]
 	push hl
 	ld hl, UsefulMoves
-	ld de, 1
-	call IsInArray
+	call AI_CheckMoveInList
 
 	pop hl
 	ret nc
@@ -1420,8 +1429,7 @@ AI_Smart_Encore:
 	push hl
 	ld a, [wLastPlayerCounterMove]
 	ld hl, EncoreMoves
-	ld de, 1
-	call IsInArray
+	call AI_CheckMoveInList
 	pop hl
 	jr nc, .asm_38c81
 
@@ -1665,13 +1673,9 @@ AI_Smart_Conversion2:
 	jr nz, .asm_38dc9
 
 	push hl
-	dec a
-	ld hl, Moves + MOVE_TYPE
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-
-	ld a, BANK(Moves)
-	call GetFarByte
+	ld l, a
+	ld a, MOVE_TYPE
+	call GetMoveAttribute
 	ld [wPlayerMoveStruct + MOVE_TYPE], a
 
 	xor a
@@ -1705,8 +1709,7 @@ AI_Smart_Disable:
 	push hl
 	ld a, [wLastPlayerCounterMove]
 	ld hl, UsefulMoves
-	ld de, 1
-	call IsInArray
+	call AI_CheckMoveInList
 
 	pop hl
 	jr nc, .asm_38dee
@@ -2201,7 +2204,18 @@ AI_Smart_Magnitude:
 AI_Smart_Earthquake:
 ; Greatly encourage this move if the player is underground and the enemy is faster.
 	ld a, [wLastPlayerCounterMove]
-	cp DIG
+	push hl
+	call GetMoveIndexFromID
+	ld a, h
+	if HIGH(DIG)
+		cp HIGH(DIG)
+	else
+		and a
+	endc
+	ld a, l
+	pop hl
+	ret nz
+	cp LOW(DIG)
 	ret nz
 
 	ld a, [wPlayerSubStatus3]
@@ -2557,7 +2571,18 @@ AI_Smart_Twister:
 AI_Smart_Gust:
 ; Greatly encourage this move if the player is flying and the enemy is faster.
 	ld a, [wLastPlayerCounterMove]
-	cp FLY
+	push hl
+	call GetMoveIndexFromID
+	ld a, h
+	if HIGH(FLY)
+		cp HIGH(FLY)
+	else
+		and a
+	endc
+	ld a, l
+	pop hl
+	ret nz
+	cp LOW(FLY)
 	ret nz
 
 	ld a, [wPlayerSubStatus3]
@@ -2822,34 +2847,36 @@ AIHasMoveEffect:
 AIHasMoveInArray:
 ; Return carry if the enemy has a move in array hl.
 
-	push hl
 	push de
 	push bc
-
-.next
-	ld a, [hli]
-	cp $ff
-	jr z, .done
-
-	ld b, a
-	ld c, wEnemyMonMovesEnd - wEnemyMonMoves + 1
+	push hl
+	ld b, NUM_MOVES
 	ld de, wEnemyMonMoves
-
-.check
-	dec c
-	jr z, .next
-
+.loop
 	ld a, [de]
 	inc de
-	cp b
-	jr nz, .check
-
-	scf
-
+	and a
+	jr z, .next
+	call GetMoveIndexFromID
+	ld a, h
+	ld c, l
+	pop hl
+	push hl
+	push bc
+	push de
+	ld b, a
+	ld de, 2
+	call IsInHalfwordArray
+	pop de
+	pop bc
+	jr c, .done
+.next
+	dec b
+	jr nz, .loop
 .done
+	pop hl
 	pop bc
 	pop de
-	pop hl
 	ret
 
 INCLUDE "data/battle/ai/useful_moves.asm"
@@ -2887,8 +2914,7 @@ AI_Opportunist:
 	push de
 	push bc
 	ld hl, StallMoves
-	ld de, 1
-	call IsInArray
+	call AI_CheckMoveInList
 
 	pop bc
 	pop de
@@ -2961,7 +2987,7 @@ AI_Aggressive:
 ; Nothing we can do if no attacks did damage.
 	ld a, c
 	and a
-	jr z, .done
+	ret z
 
 ; Discourage moves that do less damage unless they're reckless too.
 	ld hl, wBuffer1 - 1
@@ -2971,7 +2997,7 @@ AI_Aggressive:
 	inc b
 	ld a, b
 	cp wEnemyMonMovesEnd - wEnemyMonMoves + 1
-	jr z, .done
+	ret z
 
 ; Ignore this move if it is the highest damaging one.
 	cp c
@@ -3005,9 +3031,6 @@ AI_Aggressive:
 ; If we made it this far, discourage this move.
 	inc [hl]
 	jr .checkmove2
-
-.done
-	ret
 
 INCLUDE "data/battle/ai/reckless_moves.asm"
 
@@ -3054,8 +3077,7 @@ AI_Cautious:
 	push de
 	push bc
 	ld hl, ResidualMoves
-	ld de, 1
-	call IsInArray
+	call AI_CheckMoveInList
 
 	pop bc
 	pop de
@@ -3218,14 +3240,9 @@ AIGetEnemyMove:
 	push hl
 	push de
 	push bc
-	dec a
-	ld hl, Moves
-	ld bc, MOVE_LENGTH
-	call AddNTimes
 
 	ld de, wEnemyMoveStruct
-	ld a, BANK(Moves)
-	call FarCopyBytes
+	call GetMoveData
 
 	pop bc
 	pop de
@@ -3241,3 +3258,12 @@ AI_50_50:
 	call Random
 	cp 50 percent + 1
 	ret
+
+AI_CheckMoveInList:
+	push hl
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+	ld de, 2
+	jp IsInHalfwordArray

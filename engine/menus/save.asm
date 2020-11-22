@@ -462,17 +462,23 @@ SavePokemonData:
 	ret
 
 SaveIndexTables:
+	; saving is already a long operation, so take the chance to GC the table
+	farcall ForceGarbageCollection
 	ldh a, [rSVBK]
 	push af
-	ld a, BANK(wPokemonIndexTable)
+	ld a, BANK("16-bit WRAM tables")
 	ldh [rSVBK], a
-	; saving is already a long operation, so take the chance to GC the table
-	farcall PokemonTableGarbageCollection
 	ld a, BANK(sPokemonIndexTable)
 	call GetSRAMBank
 	ld hl, wPokemonIndexTable
 	ld de, sPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sMoveIndexTable)
+	call GetSRAMBank
+	ld hl, wMoveIndexTable
+	ld de, sMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
 	call CopyBytes
 	pop af
 	ldh [rSVBK], a
@@ -494,13 +500,26 @@ SaveBox:
 	ld hl, wBoxPartialData
 	ld bc, 2 * MONS_PER_BOX
 	call CopyBytes
+	call GetBoxAddress
+	ld b, a
+	ld c, 0
+	farcall BillsPC_ConvertBoxData
 	jp CloseSRAM
 
 SaveChecksum:
-	ld hl, sSaveData
-	ld bc, sSaveDataEnd - sSaveData
+	ld a, BANK(sMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
 	ld a, BANK(sSaveData)
 	call GetSRAMBank
+	ld hl, sConversionTableChecksum
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	ld hl, sSaveData
+	ld bc, sSaveDataEnd - sSaveData
 	call Checksum
 	ld a, e
 	ld [sChecksum + 0], a
@@ -558,21 +577,36 @@ SaveBackupIndexTables:
 	call GetSRAMBank
 	ldh a, [rSVBK]
 	push af
-	ld a, BANK(wPokemonIndexTable)
+	ld a, BANK("16-bit WRAM tables")
 	ldh [rSVBK], a
 	ld hl, wPokemonIndexTable
 	ld de, sBackupPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, wMoveIndexTable
+	ld de, sBackupMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
 	call CopyBytes
 	pop af
 	ldh [rSVBK], a
 	jp CloseSRAM
 
 SaveBackupChecksum:
-	ld hl, sBackupSaveData
-	ld bc, sBackupSaveDataEnd - sBackupSaveData
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sBackupMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
 	ld a, BANK(sBackupSaveData)
 	call GetSRAMBank
+	ld hl, sBackupConversionTableChecksum
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	ld hl, sBackupSaveData
+	ld bc, sBackupSaveDataEnd - sBackupSaveData
 	call Checksum
 	ld a, e
 	ld [sBackupChecksum + 0], a
@@ -756,15 +790,21 @@ LoadPokemonData:
 	ret
 
 LoadIndexTables:
-	ld a, BANK(sPokemonIndexTable)
-	call GetSRAMBank
 	ldh a, [rSVBK]
 	push af
-	ld a, BANK(wPokemonIndexTable)
+	ld a, BANK("16-bit WRAM tables")
 	ldh [rSVBK], a
+	ld a, BANK(sPokemonIndexTable)
+	call GetSRAMBank
 	ld hl, sPokemonIndexTable
 	ld de, wPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sMoveIndexTable
+	ld de, wMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
 	call CopyBytes
 	pop af
 	ldh [rSVBK], a
@@ -773,6 +813,9 @@ LoadIndexTables:
 LoadBox:
 	call GetBoxAddress
 	call LoadBoxAddress
+	lb bc, BANK(sBox), 1
+	ld de, sBox
+	farcall BillsPC_ConvertBoxData
 	call GetBoxPokemonIndexesAddress
 	call GetSRAMBank
 	ld de, wBoxPartialData
@@ -781,14 +824,8 @@ LoadBox:
 	ld a, BANK(sBox)
 	call GetSRAMBank
 	call ClearIndexesForLoadedBox
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wPokemonIndexTable)
-	ldh [rSVBK], a
 	; GC the table now that lots of entries are free
-	farcall PokemonTableGarbageCollection
-	pop af
-	ldh [rSVBK], a
+	farcall ForceGarbageCollection
 	call UpdateIndexesForLoadedBox
 	jp CloseSRAM
 
@@ -803,6 +840,23 @@ VerifyChecksum:
 	jr nz, .fail
 	ld a, [sChecksum + 1]
 	cp d
+	jr nz, .fail
+	ld hl, sConversionTableChecksum
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	push hl
+	ld a, BANK(sMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
+	pop hl
+	ld a, d
+	cp h
+	jr nz, .fail
+	ld a, e
+	cp l
 .fail
 	push af
 	call CloseSRAM
@@ -834,15 +888,21 @@ LoadBackupPokemonData:
 	ret
 
 LoadBackupIndexTables:
-	ld a, BANK(sBackupPokemonIndexTable)
-	call GetSRAMBank
 	ldh a, [rSVBK]
 	push af
-	ld a, BANK(wPokemonIndexTable)
+	ld a, BANK("16-bit WRAM tables")
 	ldh [rSVBK], a
+	ld a, BANK(sBackupPokemonIndexTable)
+	call GetSRAMBank
 	ld hl, sBackupPokemonIndexTable
 	ld de, wPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sBackupMoveIndexTable
+	ld de, wMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
 	call CopyBytes
 	pop af
 	ldh [rSVBK], a
@@ -859,6 +919,23 @@ VerifyBackupChecksum:
 	jr nz, .fail
 	ld a, [sBackupChecksum + 1]
 	cp d
+	jr nz, .fail
+	ld hl, sBackupConversionTableChecksum
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	push hl
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sBackupMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
+	pop hl
+	ld a, d
+	cp h
+	jr nz, .fail
+	ld a, e
+	cp l
 .fail
 	push af
 	call CloseSRAM
