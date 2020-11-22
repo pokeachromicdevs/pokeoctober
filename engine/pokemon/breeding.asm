@@ -38,18 +38,21 @@ CheckBreedmonCompatibility:
 	jr nz, .compute
 
 .genderless
+	ld hl, DITTO
+	call GetPokemonIDFromIndex
+	ld b, a
 	ld c, $0
 	ld a, [wBreedMon1Species]
-	cp DITTO
+	cp b
 	jr z, .ditto1
 	ld a, [wBreedMon2Species]
-	cp DITTO
+	cp b
 	jr nz, .done
 	jr .compute
 
 .ditto1
 	ld a, [wBreedMon2Species]
-	cp DITTO
+	cp b
 	jr z, .done
 
 .compute
@@ -121,8 +124,11 @@ CheckBreedmonCompatibility:
 
 ; Ditto is automatically compatible with everything.
 ; If not Ditto, load the breeding groups into b/c and d/e.
+	ld hl, DITTO
+	call GetPokemonIDFromIndex
+	ld d, a
 	ld a, [wBreedMon2Species]
-	cp DITTO
+	cp d
 	jr z, .Compatible
 	ld [wCurSpecies], a
 	call GetBaseData
@@ -136,7 +142,7 @@ CheckBreedmonCompatibility:
 	ld c, a
 
 	ld a, [wBreedMon1Species]
-	cp DITTO
+	cp d
 	jr z, .Compatible
 	ld [wCurSpecies], a
 	push bc
@@ -233,11 +239,23 @@ HatchEggs:
 	call AddNTimes
 	ld a, [hl]
 	ld [wCurPartySpecies], a
-	dec a
 	call SetSeenAndCaughtMon
 
 	ld a, [wCurPartySpecies]
-	cp TOGEPI
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(TOGEPI)
+	if HIGH(TOGEPI) == 0
+		or h
+	else
+		jr nz, .nottogepi
+		if HIGH(TOGEPI) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(TOGEPI)
+		endc
+	endc
 	jr nz, .nottogepi
 	; set the event flag for hatching togepi
 	ld de, EVENT_TOGEPI_HATCHED
@@ -424,24 +442,22 @@ InitEggMoves:
 GetEggMove:
 	push bc
 	ld a, [wEggMonSpecies]
-	dec a
-	ld c, a
-	ld b, 0
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, EggMovePointers
-	add hl, bc
-	add hl, bc
 	ld a, BANK(EggMovePointers)
-	call GetFarHalfword
+	call LoadDoubleIndirectPointer
 .loop
-	ld a, BANK("Egg Moves")
 	call GetFarByte
 	cp -1
 	jr z, .reached_end
-	ld b, a
+	ld c, a
 	ld a, [de]
-	cp b
+	cp c
 	jr z, .done_carry
 	inc hl
+	ld a, b
 	jr .loop
 
 .reached_end
@@ -458,31 +474,24 @@ GetEggMove:
 
 .found_eggmove
 	ld a, [wEggMonSpecies]
-	dec a
-	ld c, a
-	ld b, 0
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, EvosAttacksPointers
-	add hl, bc
-	add hl, bc
 	ld a, BANK(EvosAttacksPointers)
-	call GetFarHalfword
-.loop3
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	inc hl
-	and a
-	jr nz, .loop3
+	call LoadDoubleIndirectPointer
+	call FarSkipEvolutions
 .loop4
-	ld a, BANK("Evolutions and Attacks")
+	ld a, b
 	call GetFarByte
 	and a
 	jr z, .inherit_tmhm
 	inc hl
-	ld a, BANK("Evolutions and Attacks")
+	ld a, b
 	call GetFarByte
-	ld b, a
+	ld c, a
 	ld a, [de]
-	cp b
+	cp c
 	jr z, .done_carry
 	inc hl
 	jr .loop4
@@ -550,12 +559,15 @@ LoadEggMove:
 	ret
 
 GetHeritableMoves:
+	ld hl, DITTO
+	call GetPokemonIDFromIndex
+	ld b, a
 	ld hl, wBreedMon2Moves
 	ld a, [wBreedMon1Species]
-	cp DITTO
+	cp b
 	jr z, .ditto1
 	ld a, [wBreedMon2Species]
-	cp DITTO
+	cp b
 	jr z, .ditto2
 	ld a, [wBreedMotherOrNonDitto]
 	and a
@@ -607,12 +619,15 @@ GetHeritableMoves:
 	ret
 
 GetBreedmonMovePointer:
+	ld hl, DITTO
+	call GetPokemonIDFromIndex
+	ld b, a
 	ld hl, wBreedMon1Moves
 	ld a, [wBreedMon1Species]
-	cp DITTO
+	cp b
 	ret z
 	ld a, [wBreedMon2Species]
-	cp DITTO
+	cp b
 	jr z, .ditto
 	ld a, [wBreedMotherOrNonDitto]
 	and a

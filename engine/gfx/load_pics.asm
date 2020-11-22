@@ -116,24 +116,42 @@ _GetFrontpic:
 	pop hl
 	ret
 
-GetFrontpicPointer:
+GetPicIndirectPointer:
 	ld a, [wCurPartySpecies]
-	cp UNOWN
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		jr nz, .not_unown
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
 	jr z, .unown
-	ld a, [wCurPartySpecies]
+.not_unown
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
-	jr .ok
+.done
+	ld a, 6
+	jp AddNTimes
 
 .unown
 	ld a, [wUnownLetter]
-	ld hl, UnownPicPointers
+	ld c, a
+	ld b, 0
+	ld hl, UnownPicPointers - 6
 	ld d, BANK(UnownPicPointers)
+	jr .done
 
-.ok
-	dec a
-	ld bc, 6
-	call AddNTimes
+GetFrontpicPointer:
+	call GetPicIndirectPointer
 	ld a, d
 	call GetFarByte
 	push af
@@ -236,30 +254,16 @@ GetMonBackpic:
 	call IsAPokemon
 	ret c
 
-	ld a, [wCurPartySpecies]
-	ld b, a
-	ld a, [wUnownLetter]
-	ld c, a
 	ldh a, [rSVBK]
 	push af
+	push de
+	call GetPicIndirectPointer
 	ld a, BANK(wDecompressScratch)
 	ldh [rSVBK], a
-	push de
 
-	ld hl, PokemonPicPointers
-	ld a, b
-	ld d, BANK(PokemonPicPointers)
-	cp UNOWN
-	jr nz, .ok
-	ld hl, UnownPicPointers
-	ld a, c
-	ld d, BANK(UnownPicPointers)
-.ok
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld bc, 3
-	add hl, bc
+	inc hl
+	inc hl
+	inc hl
 	ld a, d
 	call GetFarByte
 	push af
@@ -279,24 +283,6 @@ GetMonBackpic:
 	call Get2bpp
 	pop af
 	ldh [rSVBK], a
-	ret
-
-Function511ec:
-	ld a, c
-	push de
-	ld hl, PokemonPicPointers
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld a, BANK(PokemonPicPointers)
-	call GetFarByte
-	push af
-	inc hl
-	ld a, BANK(PokemonPicPointers)
-	call GetFarHalfword
-	pop af
-	pop de
-	call FarDecompress
 	ret
 
 GetTrainerPic:

@@ -27,7 +27,6 @@ PrintPage1:
 	lb bc, 5, 18
 	call ClearBox
 	ld a, [wTempSpecies]
-	dec a
 	call CheckCaughtMon
 	push af
 	ld a, [wTempSpecies]
@@ -76,7 +75,6 @@ PrintPage2:
 	ld a, $32
 	call ByteFill
 	ld a, [wTempSpecies]
-	dec a
 	call CheckCaughtMon
 	push af
 	ld a, [wTempSpecies]
@@ -216,8 +214,25 @@ PrintPartyMonPage1:
 	xor a
 	ld [hl], a
 	ld a, [wCurPartySpecies]
-	cp UNOWN
+	push hl
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+		pop hl
+	else
+		ld a, h
+		pop hl
+		jr nz, .not_unown
+		if HIGH(UNOWN) == 1
+			dec a
+		else
+			cp HIGH(UNOWN)
+		endc
+	endc
 	jr z, .asm_1dc469
+.not_unown
 	inc [hl]
 
 .asm_1dc469

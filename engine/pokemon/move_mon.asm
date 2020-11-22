@@ -92,7 +92,7 @@ GeneratePartyMonStats:
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
 	call GetBaseData
-	ld a, [wBaseDexNo]
+	ld a, [wBaseSpecies]
 	ld [de], a
 	inc de
 
@@ -188,11 +188,9 @@ endr
 .registerpokedex
 	ld a, [wCurPartySpecies]
 	ld [wTempSpecies], a
-	dec a
 	push de
 	call CheckCaughtMon
 	ld a, [wTempSpecies]
-	dec a
 	call SetSeenAndCaughtMon
 	pop de
 
@@ -349,7 +347,20 @@ endr
 	and $f
 	jr nz, .done
 	ld a, [wCurPartySpecies]
-	cp UNOWN
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		jr nz, .done
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
 	jr nz, .done
 	ld hl, wPartyMon1DVs
 	ld a, [wPartyCount]
@@ -447,7 +458,6 @@ AddTempmonToParty:
 	ld [wNamedObjectIndexBuffer], a
 	cp EGG
 	jr z, .egg
-	dec a
 	call SetSeenAndCaughtMon
 	ld hl, wPartyMon1Happiness
 	ld a, [wPartyCount]
@@ -458,7 +468,20 @@ AddTempmonToParty:
 .egg
 
 	ld a, [wCurPartySpecies]
-	cp UNOWN
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		jr nz, .done
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
 	jr nz, .done
 	ld hl, wPartyMon1DVs
 	ld a, [wPartyCount]
@@ -1038,10 +1061,20 @@ SendMonIntoBox:
 	ld a, [wCurPartyLevel]
 	ld [de], a
 	ld a, [wCurPartySpecies]
-	dec a
 	call SetSeenAndCaughtMon
 	ld a, [wCurPartySpecies]
-	cp UNOWN
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	jr nz, .not_unown
+	if HIGH(UNOWN) == 0
+		or h
+	elif HIGH(UNOWN) == 1
+		dec h
+	else
+		ld a, h
+		cp HIGH(UNOWN)
+	endc
 	jr nz, .not_unown
 	ld hl, sBoxMon1DVs
 	predef GetUnownLetter
@@ -1120,10 +1153,8 @@ ShiftBoxMon:
 GiveEgg::
 	ld a, [wCurPartySpecies]
 	push af
-	callfar GetPreEvolution
-	callfar GetPreEvolution
+	callfar GetLowestEvolutionStage
 	ld a, [wCurPartySpecies]
-	dec a
 
 ; TryAddMonToParty sets Seen and Caught flags
 ; when it is successful.  This routine will make
@@ -1145,12 +1176,15 @@ GiveEgg::
 	and a
 	jr nz, .skip_caught_flag
 	ld a, [wCurPartySpecies]
-	dec a
-	ld c, a
-	ld d, $0
+	call GetPokemonIndexFromID
+	ld d, h
+	ld e, l
+	dec de
+	push de
 	ld hl, wPokedexCaught
 	ld b, RESET_FLAG
-	predef SmallFarFlagAction
+	call FlagAction
+	pop de
 
 .skip_caught_flag
 ; If we haven't seen this Pokemon before receiving
@@ -1160,13 +1194,9 @@ GiveEgg::
 	ld a, c
 	and a
 	jr nz, .skip_seen_flag
-	ld a, [wCurPartySpecies]
-	dec a
-	ld c, a
-	ld d, $0
 	ld hl, wPokedexSeen
 	ld b, RESET_FLAG
-	predef SmallFarFlagAction
+	call FlagAction
 
 .skip_seen_flag
 	pop af

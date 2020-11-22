@@ -1,5 +1,5 @@
 ; base data struct members (see data/pokemon/base_stats/*.asm)
-BASE_DEX_NO      EQUS "(wBaseDexNo - wCurBaseData)"
+BASE_SPECIES     EQUS "(wBaseSpecies - wCurBaseData)"
 BASE_STATS       EQUS "(wBaseStats - wCurBaseData)"
 BASE_HP          EQUS "(wBaseHP - wCurBaseData)"
 BASE_ATK         EQUS "(wBaseAttack - wCurBaseData)"
@@ -120,8 +120,8 @@ MONS_PER_BOX EQU 20
 NUM_BOXES    EQU 14
 
 ; hall of fame
-HOF_MON_LENGTH EQU 1 + 2 + 2 + 1 + (MON_NAME_LENGTH + -1) ; species, id, dvs, level, nick
-HOF_LENGTH EQU 1 + HOF_MON_LENGTH * PARTY_LENGTH + 1 ; win count, party, terminator
+HOF_MON_LENGTH EQU 2 + 2 + 2 + 1 + (MON_NAME_LENGTH + -1) ; species, id, dvs, level, nick
+HOF_LENGTH EQU 1 + HOF_MON_LENGTH * PARTY_LENGTH + 2 ; win count, party, terminator
 NUM_HOF_TEAMS EQU 30
 
 ; evolution types (used in data/pokemon/evos_attacks.asm)
@@ -149,8 +149,8 @@ NUM_HOF_TEAMS EQU 30
 NUM_GRASSMON EQU 7 ; data/wild/*_grass.asm table size
 NUM_WATERMON EQU 3 ; data/wild/*_water.asm table size
 
-GRASS_WILDDATA_LENGTH EQU 2 + (1 + NUM_GRASSMON * 2) * 3
-WATER_WILDDATA_LENGTH EQU 2 + (1 + NUM_WATERMON * 2) * 1
+GRASS_WILDDATA_LENGTH EQU 2 + (1 + NUM_GRASSMON * 3) * 3
+WATER_WILDDATA_LENGTH EQU 2 + (1 + NUM_WATERMON * 3) * 1
 FISHGROUP_DATA_LENGTH EQU 1 + 2 * 3
 
 NUM_ROAMMON_MAPS EQU 16 ; RoamMaps table size (see data/wild/roammon_maps.asm)

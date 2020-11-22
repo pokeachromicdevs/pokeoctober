@@ -1,33 +1,38 @@
 SetSeenAndCaughtMon::
-	push af
-	ld c, a
+	call GetPokemonFlagIndex
+	push de
+	call SetSeenMonIndex
+	pop de
+SetCaughtMonIndex::
 	ld hl, wPokedexCaught
-	ld b, SET_FLAG
-	call PokedexFlagAction
-	pop af
-	; fallthrough
+	jr SetPokedexStatusMonIndex
 
 SetSeenMon::
-	ld c, a
+	call GetPokemonFlagIndex
+SetSeenMonIndex::
 	ld hl, wPokedexSeen
+SetPokedexStatusMonIndex:
 	ld b, SET_FLAG
-	jr PokedexFlagAction
+	jr FlagActionBaseOne
 
 CheckCaughtMon::
-	ld c, a
+	call GetPokemonFlagIndex
+CheckCaughtMonIndex::
 	ld hl, wPokedexCaught
-	ld b, CHECK_FLAG
-	jr PokedexFlagAction
+	jr CheckPokedexStatusMonIndex
 
 CheckSeenMon::
-	ld c, a
+	call GetPokemonFlagIndex
+CheckSeenMonIndex::
 	ld hl, wPokedexSeen
+CheckPokedexStatusMonIndex:
 	ld b, CHECK_FLAG
-	; fallthrough
+FlagActionBaseOne:
+	dec de
+	jp FlagAction
 
-PokedexFlagAction::
-	ld d, 0
-	predef SmallFarFlagAction
-	ld a, c
-	and a
+GetPokemonFlagIndex:
+	call GetPokemonIndexFromID
+	ld d, h
+	ld e, l
 	ret

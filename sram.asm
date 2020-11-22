@@ -89,14 +89,20 @@ sBackupOptions:: ds wOptionsEnd - wOptions
 
 sBackupCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruption
 
+sBackupSaveData::
+
 sBackupGameData:: ; b209
 sBackupPlayerData::  ds wPlayerDataEnd - wPlayerData
 sBackupCurMapData::  ds wCurMapDataEnd - wCurMapData
 sBackupPokemonData:: ds wPokemonDataEnd - wPokemonData
 sBackupGameDataEnd::
 
+sBackupPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
+
+sBackupSaveDataEnd::
+
 ; bd83
-	ds $18a
+	ds $8a
 ; bf0d
 
 sBackupChecksum:: dw
@@ -112,14 +118,20 @@ sOptions:: ds wOptionsEnd - wOptions
 
 sCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruption
 
+sSaveData::
+
 sGameData:: ; a009
 sPlayerData::  ds wPlayerDataEnd - wPlayerData
 sCurMapData::  ds wCurMapDataEnd - wCurMapData
 sPokemonData:: ds wPokemonDataEnd - wPokemonData
 sGameDataEnd::
 
+sPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
+
+sSaveDataEnd::
+
 ; ab83
-	ds $18a
+	ds $8a
 ; ad0d
 
 sChecksum:: dw
@@ -192,11 +204,11 @@ sHallOfFameEnd::
 
 SECTION "SRAM Crystal Data", SRAM
 
-sMobileEventIndex:: db ; be3c
+sMobileEventIndex:: db ; bf0e
 
 sCrystalData:: ds wCrystalDataEnd - wCrystalData
 
-sMobileEventIndexBackup:: db ; be44
+sMobileEventIndexBackup:: db ; bf16
 
 
 SECTION "SRAM Battle Tower", SRAM
@@ -207,23 +219,23 @@ sBattleTowerChallengeState::
 ; 2: battle tower
 	db
 
-sBattleTower:: ; be46
+sBattleTower:: ; bf18
 sNrOfBeatenBattleTowerTrainers:: db
 sBTChoiceOfLevelGroup:: db
 ; Battle Tower trainers are saved here, so nobody appears more than once
-sBTTrainers:: ds BATTLETOWER_STREAK_LENGTH ; sbe48
+sBTTrainers:: ds BATTLETOWER_STREAK_LENGTH ; bf1a
 sBattleTowerSaveFileFlags:: db
 sBattleTowerReward:: db
 
 ; team of previous trainer
-sBTMonOfTrainers:: ; be51
-sBTMonPrevTrainer1:: db
-sBTMonPrevTrainer2:: db
-sBTMonPrevTrainer3:: db
+sBTMonOfTrainers:: ; bf23
+sBTMonPrevTrainer1:: dw
+sBTMonPrevTrainer2:: dw
+sBTMonPrevTrainer3:: dw
 ; team of preprevious trainer
-sBTMonPrevPrevTrainer1:: db
-sBTMonPrevPrevTrainer2:: db
-sBTMonPrevPrevTrainer3:: db
+sBTMonPrevPrevTrainer1:: dw
+sBTMonPrevPrevTrainer2:: dw
+sBTMonPrevPrevTrainer3:: dw
 
 
 SECTION "Boxes 1-7",  SRAM, BANK [2]
@@ -236,6 +248,14 @@ sBox5::  box sBox5
 sBox6::  box sBox6
 sBox7::  box sBox7
 
+sBox1PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox2PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox3PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox4PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox5PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox6PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox7PokemonIndexes::  ds 2 * MONS_PER_BOX
+
 
 SECTION "Boxes 8-14", SRAM
 
@@ -246,6 +266,14 @@ sBox11:: box sBox11
 sBox12:: box sBox12
 sBox13:: box sBox13
 sBox14:: box sBox14
+
+sBox8PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox9PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox10PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox11PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox12PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox13PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox14PokemonIndexes:: ds 2 * MONS_PER_BOX
 
 SECTION "SRAM Mobile 1", SRAM
 

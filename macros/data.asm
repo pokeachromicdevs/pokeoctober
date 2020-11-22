@@ -19,6 +19,11 @@ dbbw: MACRO
 	dw \3
 ENDM
 
+dbbbw: MACRO
+	db \1, \2, \3
+	dw \4
+ENDM
+
 dbww: MACRO
 	db \1
 	dw \2, \3
@@ -27,6 +32,19 @@ ENDM
 dbwww: MACRO
 	db \1
 	dw \2, \3, \4
+ENDM
+
+dbwbb: MACRO
+	db \1
+	dw \2
+	db \3, \4
+ENDM
+
+dbwbw: MACRO
+	db \1
+	dw \2
+	db \3
+	dw \4
 ENDM
 
 dn: MACRO ; nybbles

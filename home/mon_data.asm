@@ -4,8 +4,6 @@ GetBaseData::
 	push hl
 	ldh a, [hROMBank]
 	push af
-	ld a, BANK(BaseData)
-	rst Bankswitch
 
 ; Egg doesn't have BaseData
 	ld a, [wCurSpecies]
@@ -13,10 +11,14 @@ GetBaseData::
 	jr z, .egg
 
 ; Get BaseData
-	dec a
-	ld bc, BASE_DATA_SIZE
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld a, BANK(BaseData)
 	ld hl, BaseData
-	call AddNTimes
+	call LoadIndirectPointer
+	; jr z, <some error handler>
+	rst Bankswitch
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
 	call CopyBytes
@@ -45,7 +47,7 @@ GetBaseData::
 .end
 ; Replace Pokedex # with species
 	ld a, [wCurSpecies]
-	ld [wBaseDexNo], a
+	ld [wBaseSpecies], a
 
 	pop af
 	rst Bankswitch

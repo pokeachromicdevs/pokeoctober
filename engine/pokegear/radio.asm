@@ -212,46 +212,25 @@ OaksPKMNTalk4:
 	ld b, 0
 	add hl, bc
 	add hl, bc
-	ld b, [hl]
-	inc hl
-	ld c, [hl]
-	; bc now contains the chosen map's group and number indices.
-	push bc
+	ld a, [hli]
+	ld d, a
+	ld e, [hl]
+	; de now contains the chosen map's group and number indices.
+	push de
+	farcall LookUpGrassJohtoWildmons
 
-	; Search the JohtoGrassWildMons array for the chosen map.
-	ld hl, JohtoGrassWildMons
-.loop
-	ld a, BANK(JohtoGrassWildMons)
-	call GetFarByte
-	cp -1
-	jr z, .overflow
-	inc hl
-	cp b
-	jr nz, .next
-	ld a, BANK(JohtoGrassWildMons)
-	call GetFarByte
-	cp c
-	jr z, .done
-.next
-	dec hl
-	ld de, GRASS_WILDDATA_LENGTH
-	add hl, de
-	jr .loop
-
-.done
-	; Point hl to the list of morning Pokémon., skipping percentages
-rept 4
-	inc hl
-endr
 	; Generate a number, either 0, 1, or 2, to choose a time of day.
 .loop2
 	call Random
 	maskbits NUM_DAYTIMES
 	cp DARKNESS_F
 	jr z, .loop2
-
-	ld bc, 2 * NUM_GRASSMON
+	; Point hl to the list of Pokémon for that time of day, skipping the map ID and the percentages
+	ld bc, 5
+	add hl, bc
+	ld c, 3 * NUM_GRASSMON
 	call AddNTimes
+
 .loop3
 	; Choose one of the middle three Pokemon.
 	call Random
@@ -264,9 +243,11 @@ endr
 	ld d, 0
 	add hl, de
 	add hl, de
+	add hl, de
 	inc hl ; skip level
 	ld a, BANK(JohtoGrassWildMons)
-	call GetFarByte
+	call GetFarHalfword
+	call GetPokemonIDFromIndex
 	ld [wNamedObjectIndexBuffer], a
 	ld [wCurPartySpecies], a
 	call GetPokemonName
@@ -688,16 +669,23 @@ PokedexShow1:
 	call StartRadioStation
 .loop
 	call Random
-	cp NUM_POKEMON
+	ld e, a
+	call Random
+	and $f
+	ld d, a
+	cp HIGH(NUM_POKEMON)
+	jr c, .ok
+	jr nz, .loop
+	ld a, e
+	cp LOW(NUM_POKEMON)
 	jr nc, .loop
-	ld c, a
-	push bc
-	ld a, c
-	call CheckCaughtMon
-	pop bc
+.ok
+	inc de
+	push de
+	call CheckCaughtMonIndex
+	pop hl
 	jr z, .loop
-	inc c
-	ld a, c
+	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
 	ld [wNamedObjectIndexBuffer], a
 	call GetPokemonName
@@ -707,12 +695,13 @@ PokedexShow1:
 
 PokedexShow2:
 	ld a, [wCurPartySpecies]
-	dec a
-	ld hl, PokedexDataPointerTable
-	ld c, a
-	ld b, 0
+	call GetPokemonIndexFromID
+	dec hl
+	ld b, h
+	ld c, l
+	add hl, hl
 	add hl, bc
-	add hl, bc
+	ld bc, PokedexDataPointerTable
 	add hl, bc
 	ld a, BANK(PokedexDataPointerTable)
 	call GetFarByte
@@ -1616,7 +1605,14 @@ GetBuenasPassword:
 	dw .RawString ; BUENA_STRING
 
 .Mon:
-	call .GetTheIndex
+	ld h, 0
+	ld l, c
+	add hl, hl
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	call GetPokemonIDFromIndex
 	call GetPokemonName
 	ret
 

@@ -233,6 +233,8 @@ ScriptCommandTable:
 	dw Script_getname                    ; a7
 	dw Script_wait                       ; a8
 	dw Script_checksave                  ; a9
+	dw Script_loadmonindex               ; aa
+	dw Script_checkmaplockedmons         ; ab
 
 StartScript:
 	ld hl, wScriptFlags
@@ -447,11 +449,7 @@ Script_pokepic:
 ; script command 0x56
 ; parameters: pokemon
 
-	call GetScriptByte
-	and a
-	jr nz, .ok
-	ld a, [wScriptVar]
-.ok
+	call LoadScriptPokemonID
 	ld [wCurPartySpecies], a
 	farcall Pokepic
 	ret
@@ -902,14 +900,7 @@ Script_cry:
 ; script command 0x84
 ; parameters: cry_id
 
-	call GetScriptByte
-	push af
-	call GetScriptByte
-	pop af
-	and a
-	jr nz, .ok
-	ld a, [wScriptVar]
-.ok
+	call LoadScriptPokemonID
 	call PlayMonCry
 	ret
 
@@ -1288,7 +1279,8 @@ EarthquakeMovement:
 Script_loadpikachudata:
 ; script command 0x5a
 
-	ld a, PIKACHU
+	ld hl, PIKACHU
+	call GetPokemonIDFromIndex
 	ld [wTempWildMonSpecies], a
 	ld a, 5
 	ld [wCurPartyLevel], a
@@ -1318,7 +1310,7 @@ Script_loadwildmon:
 
 	ld a, (1 << 7)
 	ld [wBattleScriptFlags], a
-	call GetScriptByte
+	call LoadScriptPokemonID
 	ld [wTempWildMonSpecies], a
 	call GetScriptByte
 	ld [wCurPartyLevel], a
@@ -1852,11 +1844,7 @@ Script_getmonname:
 ; script command 0x40
 ; parameters: string_buffer, mon_id (0 aka USE_SCRIPT_VAR to use wScriptVar)
 
-	call GetScriptByte
-	and a
-	jr nz, .gotit
-	ld a, [wScriptVar]
-.gotit
+	call LoadScriptPokemonID
 	ld [wNamedObjectIndexBuffer], a
 	call GetPokemonName
 	ld de, wStringBuffer1
@@ -2207,7 +2195,7 @@ Script_checkpoke:
 
 	xor a
 	ld [wScriptVar], a
-	call GetScriptByte
+	call LoadScriptPokemonID
 	ld hl, wPartySpecies
 	ld de, 1
 	call IsInArray
@@ -2285,7 +2273,7 @@ Script_givepoke:
 ; script command 0x2d
 ; parameters: pokemon, level, item, trainer, trainer_name_pointer, pkmn_nickname
 
-	call GetScriptByte
+	call LoadScriptPokemonID
 	ld [wCurPartySpecies], a
 	call GetScriptByte
 	ld [wCurPartyLevel], a
@@ -2317,7 +2305,7 @@ Script_giveegg:
 	xor a ; PARTYMON
 	ld [wScriptVar], a
 	ld [wMonType], a
-	call GetScriptByte
+	call LoadScriptPokemonID
 	ld [wCurPartySpecies], a
 	call GetScriptByte
 	ld [wCurPartyLevel], a
@@ -2823,3 +2811,63 @@ Script_checksave:
 
 .byte
 	db 0
+
+Script_loadmonindex:
+; script command 0xaa
+	call LoadScriptPokemonID
+	ld [wScriptVar], a
+	ld c, a
+	call GetScriptByte
+	dec a
+	cp NUM_MAP_LOCKED_MON_IDS
+	ret nc
+	if LOCKED_MON_ID_MAP_1 > 1
+		add a, LOCKED_MON_ID_MAP_1
+	elif LOCKED_MON_ID_MAP_1 == 1
+		inc a
+	endc
+	ld l, a
+	ld a, c
+	jp LockPokemonID
+
+Script_checkmaplockedmons:
+; script command 0xab
+; check if the script variable's value is one of the reserved map indexes
+	ld a, [wScriptVar]
+	and a
+	ret z
+	cp MON_TABLE_ENTRIES + 1
+	ld c, 0
+	jr nc, .done
+	ld b, a
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wPokemonIndexTable)
+	ldh [rSVBK], a
+	ld hl, wPokemonIndexTableLockedEntries + LOCKED_MON_ID_MAP_1
+.loop
+	inc c
+	ld a, [hli]
+	cp b
+	jr z, .found
+	ld a, c
+	cp NUM_MAP_LOCKED_MON_IDS
+	jr c, .loop
+	ld c, 0
+.found
+	pop af
+	ldh [rSVBK], a
+.done
+	ld a, c
+	ld [wScriptVar], a
+	ret
+
+LoadScriptPokemonID:
+	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	or l
+	jp nz, GetPokemonIDFromIndex
+	ld a, [wScriptVar]
+	ret
