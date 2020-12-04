@@ -256,6 +256,8 @@ MoveDescriptions1:
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+	dw UprootDescription
+	dw WindRideDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1263,3 +1265,11 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+UprootDescription
+	db "User flings its" 
+	next "enemy to damage.@"
+
+WindRideDescription:
+	db  "Has a high criti-"
+	next "cal hit ratio.@"

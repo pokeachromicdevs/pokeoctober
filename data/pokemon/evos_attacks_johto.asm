@@ -155,8 +155,8 @@ CyndaquilEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 6, SMOKESCREEN
-	dbw 12, EMBER
+	dbw 6, UPROOT
+	dbw 7, SMOKESCREEN
 	dbw 19, QUICK_ATTACK
 	dbw 27, FLAME_WHEEL
 	dbw 36, SWIFT

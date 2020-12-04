@@ -275,6 +275,7 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
+	dw BattleAnim_Uproot
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -1719,6 +1720,7 @@ BattleAnim_Softboiled:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
+BattleAnim_WindRide:
 BattleAnim_FocusEnergy:
 BattleAnim_RazorWind_branch_c9fb5:
 BattleAnim_SkullBash_branch_c9fb5:
@@ -2867,6 +2869,7 @@ BattleAnim_DefenseCurl:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
+BattleAnim_Uproot:
 BattleAnim_SeismicToss:
 	anim_2gfx ANIM_GFX_GLOBE, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_20, $10, $1, $20

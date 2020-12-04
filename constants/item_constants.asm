@@ -272,8 +272,8 @@ endc
 	enum \1_TMNUM
 ENDM
 
-	add_hm CUT          ; f4
-	add_hm FLY          ; f5
+	add_hm UPROOT       ; f4
+	add_hm WIND_RIDE    ; f5
 	add_hm SURF         ; f6
 	add_hm STRENGTH     ; f7
 	add_hm FLASH        ; f8

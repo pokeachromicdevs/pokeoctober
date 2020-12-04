@@ -121,7 +121,7 @@ FieldMoveFailed:
 	text_far UnknownText_0x1c05c8
 	text_end
 
-CutFunction:
+UprootFunction:
 	call FieldMoveJumptableReset
 .loop
 	ld hl, .Jumptable
@@ -133,15 +133,15 @@ CutFunction:
 
 .Jumptable:
 	dw .CheckAble
-	dw .DoCut
+	dw .DoUproot
 	dw .FailCut
 
 .CheckAble:
 	ld de, ENGINE_HIVEBADGE
 	call CheckBadge
 	jr c, .nohivebadge
-	call CheckMapForSomethingToCut
-	jr c, .nothingtocut
+	call CheckMapForSomethingToUproot
+	jr c, .nothingtouproot
 	ld a, $1
 	ret
 
@@ -149,33 +149,33 @@ CutFunction:
 	ld a, $80
 	ret
 
-.nothingtocut
+.nothingtouproot
 	ld a, $2
 	ret
 
-.DoCut:
+.DoUproot:
 	ld hl, Script_CutFromMenu
 	call QueueScript
 	ld a, $81
 	ret
 
 .FailCut:
-	ld hl, Text_NothingToCut
+	ld hl, Text_NothingToUproot
 	call MenuTextboxBackup
 	ld a, $80
 	ret
 
-Text_UsedCut:
-	; used CUT!
+Text_UsedUproot:
+	; used UPROOT!
 	text_far UnknownText_0x1c05dd
 	text_end
 
-Text_NothingToCut:
-	; There's nothing to CUT here.
+Text_NothingToUproot:
+	; There's nothing to UPROOT here.
 	text_far UnknownText_0x1c05ec
 	text_end
 
-CheckMapForSomethingToCut:
+CheckMapForSomethingToUproot:
 	; Does the collision data of the facing tile permit cutting?
 	call GetFacingTileCoord
 	ld c, a
@@ -214,9 +214,9 @@ Script_CutFromMenu:
 	reloadmappart
 	special UpdateTimePals
 
-Script_Cut:
+Script_Uproot:
 	callasm GetPartyNick
-	writetext Text_UsedCut
+	writetext Text_UsedUproot
 	reloadmappart
 	callasm CutDownTreeOrGrass
 	closetext
@@ -1795,7 +1795,7 @@ GotOffTheBikeText:
 	text_end
 
 TryCutOW::
-	ld hl, CUT
+	ld hl, UPROOT
 	call CheckPartyMoveIndex
 	jr c, .cant_cut
 
@@ -1822,7 +1822,7 @@ AskCutScript:
 	yesorno
 	iffalse .script_d1b8
 	callasm .CheckMap
-	iftrue Script_Cut
+	iftrue Script_Uproot
 .script_d1b8
 	closetext
 	end
@@ -1830,7 +1830,7 @@ AskCutScript:
 .CheckMap:
 	xor a
 	ld [wScriptVar], a
-	call CheckMapForSomethingToCut
+	call CheckMapForSomethingToUproot
 	ret c
 	ld a, TRUE
 	ld [wScriptVar], a

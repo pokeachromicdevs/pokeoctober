@@ -18,8 +18,8 @@ IsHMMove::
 	jp IsInHalfwordArray
 
 .HMMoves:
-	dw CUT
-	dw FLY
+	dw UPROOT
+	dw WIND_RIDE
 	dw SURF
 	dw STRENGTH
 	dw FLASH

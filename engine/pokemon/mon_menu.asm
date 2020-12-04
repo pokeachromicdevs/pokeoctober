@@ -131,8 +131,8 @@ PokemonActionSubmenu:
 	ret
 
 .Actions:
-	dbw MONMENUITEM_CUT,        MonMenu_Cut
-	dbw MONMENUITEM_FLY,        MonMenu_Fly
+	dbw MONMENUITEM_UPROOT,     MonMenu_Uproot
+	dbw MONMENUITEM_WINDRIDE,   MonMenu_WindRide
 	dbw MONMENUITEM_SURF,       MonMenu_Surf
 	dbw MONMENUITEM_STRENGTH,   MonMenu_Strength
 	dbw MONMENUITEM_FLASH,      MonMenu_Flash
@@ -603,8 +603,8 @@ OpenPartyStats:
 	ld a, 0
 	ret
 
-MonMenu_Cut:
-	farcall CutFunction
+MonMenu_Uproot:
+	farcall UprootFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $1
 	jr nz, .Fail
@@ -616,7 +616,7 @@ MonMenu_Cut:
 	ld a, $3
 	ret
 
-MonMenu_Fly:
+MonMenu_WindRide:
 	farcall FlyFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $2

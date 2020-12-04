@@ -346,10 +346,10 @@ IlexForestCharcoalMasterScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_HM01_CUT
-	iftrue .AlreadyGotCut
+	iftrue .AlreadyGotUproot
 	writetext Text_CharcoalMasterIntro
 	buttonsound
-	verbosegiveitem HM_CUT
+	verbosegiveitem HM_UPROOT
 	setevent EVENT_GOT_HM01_CUT
 	writetext Text_CharcoalMasterOutro
 	waitbutton
@@ -362,7 +362,7 @@ IlexForestCharcoalMasterScript:
 	clearevent EVENT_CHARCOAL_KILN_BOSS
 	end
 
-.AlreadyGotCut:
+.AlreadyGotUproot:
 	writetext Text_CharcoalMasterTalkAfter
 	waitbutton
 	closetext
@@ -742,7 +742,7 @@ IlexForestApprenticeIntroText:
 	cont "steaming…"
 
 	para "The FARFETCH'D"
-	line "that CUTS trees"
+	line "that cuts trees"
 
 	para "for charcoal took"
 	line "off on me."
@@ -783,7 +783,7 @@ Text_CharcoalMasterIntro:
 	para "Without it, we"
 	line "wouldn't be able"
 
-	para "to CUT trees for"
+	para "to cut trees for"
 	line "charcoal."
 
 	para "Thanks, kid!"
@@ -796,8 +796,8 @@ Text_CharcoalMasterIntro:
 	done
 
 Text_CharcoalMasterOutro:
-	text "That's the CUT HM."
-	line "Teach that to a"
+	text "That's the UPROOT"
+	line "HM. Teach that to a"
 
 	para "#MON to clear"
 	line "small trees."
