@@ -251,4 +251,6 @@ MoveNames::
 	db "WHIRLPOOL@"
 	db "BEAT UP@"
 	db "UPROOT@"
-	db "WIND_RIDE"
+	db "WIND RIDE@"
+	db "ROCK HEAD@"
+	db "WATER SPORT@"

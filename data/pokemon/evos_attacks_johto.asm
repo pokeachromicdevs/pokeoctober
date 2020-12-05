@@ -156,9 +156,9 @@ CyndaquilEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 6, UPROOT
-	dbw 7, SMOKESCREEN
-	dbw 19, QUICK_ATTACK
-	dbw 27, FLAME_WHEEL
+	dbw 7, WIND_RIDE
+	dbw 8, ROCK_HEAD
+	dbw 9, WATER_SPORT
 	dbw 36, SWIFT
 	dbw 46, FLAMETHROWER
 	db 0 ; no more level-up moves

@@ -258,6 +258,8 @@ MoveDescriptions1:
 	dw BeatUpDescription
 	dw UprootDescription
 	dw WindRideDescription
+	dw RockHeadDescription
+	dw WaterSportDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -350,6 +352,7 @@ VineWhipDescription:
 	db   "Whips the foe with"
 	next "slender vines.@"
 
+RockHeadDescription:
 StompDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
@@ -774,6 +777,7 @@ ClampDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
+WaterSportDescription:
 SwiftDescription:
 	db   "An attack that"
 	next "never misses.@"
@@ -1272,4 +1276,4 @@ UprootDescription
 
 WindRideDescription:
 	db  "Has a high criti-"
-	next "cal hit ratio.@"
+	next "cal hit ratio.@"	

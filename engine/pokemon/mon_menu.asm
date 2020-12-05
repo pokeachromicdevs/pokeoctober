@@ -133,7 +133,7 @@ PokemonActionSubmenu:
 .Actions:
 	dbw MONMENUITEM_UPROOT,     MonMenu_Uproot
 	dbw MONMENUITEM_WINDRIDE,   MonMenu_WindRide
-	dbw MONMENUITEM_SURF,       MonMenu_Surf
+	dbw MONMENUITEM_WATERSPORT, MonMenu_WaterSport
 	dbw MONMENUITEM_STRENGTH,   MonMenu_Strength
 	dbw MONMENUITEM_FLASH,      MonMenu_Flash
 	dbw MONMENUITEM_WHIRLPOOL,  MonMenu_Whirlpool
@@ -705,7 +705,7 @@ MonMenu_Teleport:
 	ld a, $3
 	ret
 
-MonMenu_Surf:
+MonMenu_WaterSport:
 	farcall SurfFunction
 	ld a, [wFieldMoveSucceeded]
 	and a

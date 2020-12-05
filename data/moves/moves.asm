@@ -270,3 +270,5 @@ Moves1:
 	move EFFECT_BEAT_UP,            10, DARK,     100, 10,   0 ;BEAT_UP
 	move EFFECT_LEVEL_DAMAGE,		 1, NORMAL,   100, 25,   0 ;UPROOT
 	move EFFECT_NORMAL_HIT,         70, FLYING,   100, 17,   0 ;WIND_RIDE
+	move EFFECT_FLINCH_HIT,         90, ROCK,     100, 10,  30 ;ROCK_HEAD
+	move EFFECT_ALWAYS_HIT,         80, WATER,    100, 15,  10 ;WATER_SPORT
