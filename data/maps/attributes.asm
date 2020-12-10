@@ -100,8 +100,13 @@ ENDM
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 
+<<<<<<< HEAD
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5
+=======
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
+	connection north, Route30, ROUTE_30, 0
+>>>>>>> 28ea7cc7ea9c3e8d30405e20ba48acf5bf25d115
 	connection east, Route29, ROUTE_29, 9
 
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
