@@ -1402,3 +1402,19 @@ CelebiEvosAttacks:
 	dbw 40, BATON_PASS
 	dbw 50, PERISH_SONG
 	db 0 ; no more level-up moves
+	
+MeowsyEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
+	db 0 ; no more evolutions
+	db 1, SCRATCH
+	db 1, GROWL
+	db 11, BITE 
+	db 20, PAY_DAY
+	db 28, FAINT_ATTACK
+	db 32, ATTRACT
+	db 35, SCREECH
+	db 41, FURY_SWIPES
+	db 45, GLARE
+	db 50, BODY_SLAM
+	db 55, SLASH
+	db 0 ; no more level-up moves

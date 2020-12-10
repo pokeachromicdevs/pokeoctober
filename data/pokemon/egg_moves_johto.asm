@@ -467,3 +467,10 @@ LarvitarEggMoves:
 	dw ANCIENTPOWER
 NoEggMoves2:
 	dw -1 ; end
+	
+MeowsyEggMoves:
+	dw SPITE
+	dw CHARM
+	dw HYPNOSIS
+	dw AMNESIA
+	dw -1 ; end

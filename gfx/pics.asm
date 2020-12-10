@@ -154,7 +154,6 @@ VulpixFrontpic:      INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
 GligarFrontpic:      INCBIN "gfx/pokemon/gligar/front.animated.2bpp.lz"
 DunsparceFrontpic:   INCBIN "gfx/pokemon/dunsparce/front.animated.2bpp.lz"
 
-
 SECTION "Pics 7", ROMX
 
 VaporeonFrontpic:    INCBIN "gfx/pokemon/vaporeon/front.animated.2bpp.lz"
@@ -183,7 +182,6 @@ ForretressFrontpic:  INCBIN "gfx/pokemon/forretress/front.animated.2bpp.lz"
 TogeticFrontpic:     INCBIN "gfx/pokemon/togetic/front.animated.2bpp.lz"
 KangaskhanBackpic:   INCBIN "gfx/pokemon/kangaskhan/back.2bpp.lz"
 
-
 SECTION "Pics 8", ROMX
 
 SeelFrontpic:        INCBIN "gfx/pokemon/seel/front.animated.2bpp.lz"
@@ -209,11 +207,9 @@ LedianFrontpic:      INCBIN "gfx/pokemon/ledian/front.animated.2bpp.lz"
 GloomFrontpic:       INCBIN "gfx/pokemon/gloom/front.animated.2bpp.lz"
 FlaaffyFrontpic:     INCBIN "gfx/pokemon/flaaffy/front.animated.2bpp.lz"
 IvysaurFrontpic:     INCBIN "gfx/pokemon/ivysaur/front.animated.2bpp.lz"
-FurretFrontpic:      INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
 CyndaquilFrontpic:   INCBIN "gfx/pokemon/cyndaquil/front.animated.2bpp.lz"
 HitmonchanFrontpic:  INCBIN "gfx/pokemon/hitmonchan/front.animated.2bpp.lz"
 QuagsireFrontpic:    INCBIN "gfx/pokemon/quagsire/front.animated.2bpp.lz"
-
 
 SECTION "Pics 9", ROMX
 
@@ -248,7 +244,6 @@ SandshrewFrontpic:   INCBIN "gfx/pokemon/sandshrew/front.animated.2bpp.lz"
 NidoranFFrontpic:    INCBIN "gfx/pokemon/nidoran_f/front.animated.2bpp.lz"
 PidgeyFrontpic:      INCBIN "gfx/pokemon/pidgey/front.animated.2bpp.lz"
 ParasectBackpic:     INCBIN "gfx/pokemon/parasect/back.2bpp.lz"
-
 
 SECTION "Pics 10", ROMX
 
@@ -287,7 +282,6 @@ HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
 CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front.animated.2bpp.lz"
 UnownFBackpic:       INCBIN "gfx/pokemon/unown_f/back.2bpp.lz"
-
 
 SECTION "Pics 11", ROMX
 
@@ -375,7 +369,6 @@ GoldeenBackpic:      INCBIN "gfx/pokemon/goldeen/back.2bpp.lz"
 BulbasaurFrontpic:   INCBIN "gfx/pokemon/bulbasaur/front.animated.2bpp.lz"
 StarmieBackpic:      INCBIN "gfx/pokemon/starmie/back.2bpp.lz"
 
-
 SECTION "Pics 13", ROMX
 
 OmanyteBackpic:      INCBIN "gfx/pokemon/omanyte/back.2bpp.lz"
@@ -421,7 +414,6 @@ NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 MysticalmanPic:      INCBIN "gfx/trainers/mysticalman.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
-
 
 SECTION "Pics 14", ROMX
 
@@ -711,68 +703,10 @@ UnownPBackpic:       INCBIN "gfx/pokemon/unown_p/back.2bpp.lz"
 UnownIBackpic:       INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
 UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
-
 SECTION "Pics 19", ROMX
 
-; Seems to be an accidental copy of the previous bank
+FurretFrontpic: INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
+MeowsyFrontpic: INCBIN "gfx/pokemon/meowsy/front.animated.2bpp.lz"
+MeowsyBackpic:  INCBIN "gfx/pokemon/meowsy/back.2bpp.lz"
 
-INCBIN "gfx/pokemon/spinarak/back.2bpp.lz"
-INCBIN "gfx/pokemon/raikou/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_k/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/houndour/back.2bpp.lz"
-INCBIN "gfx/pokemon/poliwag/back.2bpp.lz"
-INCBIN "gfx/pokemon/squirtle/back.2bpp.lz"
-INCBIN "gfx/pokemon/shuckle/back.2bpp.lz"
-INCBIN "gfx/pokemon/dewgong/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_b/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/slowpoke/back.2bpp.lz"
-INCBIN "gfx/pokemon/dunsparce/back.2bpp.lz"
-INCBIN "gfx/pokemon/donphan/back.2bpp.lz"
-INCBIN "gfx/pokemon/wooper/back.2bpp.lz"
-INCBIN "gfx/pokemon/tauros/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_x/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/unown_n/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/tangela/back.2bpp.lz"
-INCBIN "gfx/pokemon/voltorb/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_j/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/mantine/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_l/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/piloswine/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_m/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/unown_f/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/natu/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_a/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/golem/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_u/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/diglett/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_q/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/unown_p/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/unown_c/back.2bpp.lz"
-INCBIN "gfx/pokemon/jynx/back.2bpp.lz"
-INCBIN "gfx/pokemon/golbat/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_y/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/unown_g/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_i/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/unown_v/back.2bpp.lz"
-INCBIN "gfx/pokemon/forretress/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_s/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_r/front.animated.2bpp.lz"
-INCBIN "gfx/pokemon/unown_e/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_j/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_b/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_o/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_z/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_w/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_n/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_a/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_m/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_k/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_t/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_x/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_l/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_u/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_q/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_y/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_p/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
+

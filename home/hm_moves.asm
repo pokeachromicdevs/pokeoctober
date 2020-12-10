@@ -20,7 +20,7 @@ IsHMMove::
 .HMMoves:
 	dw UPROOT
 	dw WIND_RIDE
-	dw SURF
+	dw WATER_SPORT
 	dw STRENGTH
 	dw FLASH
 	dw WATERFALL

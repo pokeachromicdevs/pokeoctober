@@ -52,7 +52,6 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw DiglettEggMoves
 	dw NoEggMoves1
-	dw MeowthEggMoves
 	dw NoEggMoves1
 	dw PsyduckEggMoves
 	dw NoEggMoves1
@@ -283,13 +282,6 @@ DiglettEggMoves:
 	dw ANCIENTPOWER
 	dw PURSUIT
 	dw BEAT_UP
-	dw -1 ; end
-
-MeowthEggMoves:
-	dw SPITE
-	dw CHARM
-	dw HYPNOSIS
-	dw AMNESIA
 	dw -1 ; end
 
 PsyduckEggMoves:

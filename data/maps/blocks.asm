@@ -447,20 +447,11 @@ RuinsOfAlphAerodactylChamber_Blocks:
 SproutTower1F_Blocks:
 	INCBIN "maps/SproutTower1F.blk"
 
-BetaSproutTowerCutOut1_Blocks:
-	INCBIN "maps/unused/BetaSproutTowerCutOut1.blk"
-
 SproutTower2F_Blocks:
 	INCBIN "maps/SproutTower2F.blk"
 
-BetaSproutTowerCutOut2_Blocks:
-	INCBIN "maps/unused/BetaSproutTowerCutOut2.blk"
-
 SproutTower3F_Blocks:
 	INCBIN "maps/SproutTower3F.blk"
-
-BetaSproutTowerCutOut3_Blocks:
-	INCBIN "maps/unused/BetaSproutTowerCutOut3.blk"
 
 RadioTower1F_Blocks:
 	INCBIN "maps/RadioTower1F.blk"
@@ -537,9 +528,6 @@ GoldenrodDeptStoreB1F_Blocks:
 GoldenrodUndergroundWarehouse_Blocks:
 	INCBIN "maps/GoldenrodUndergroundWarehouse.blk"
 
-BetaElevator_Blocks:
-	INCBIN "maps/unused/BetaElevator.blk"
-
 TinTower1F_Blocks:
 	INCBIN "maps/TinTower1F.blk"
 
@@ -575,9 +563,6 @@ BurnedTower1F_Blocks:
 
 BurnedTowerB1F_Blocks:
 	INCBIN "maps/BurnedTowerB1F.blk"
-
-BetaCaveTestMap_Blocks:
-	INCBIN "maps/unused/BetaCaveTestMap.blk"
 
 MountMortar1FOutside_Blocks:
 	INCBIN "maps/MountMortar1FOutside.blk"
