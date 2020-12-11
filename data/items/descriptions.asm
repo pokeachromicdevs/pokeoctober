@@ -24,7 +24,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw QuestionMarkDesc
+	dw HoneyPotDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -912,3 +912,7 @@ MusicMailDesc:
 MewMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
+	
+HoneyPotDesc
+	db   "A pot for storing"
+	next "SWEET HONEY."

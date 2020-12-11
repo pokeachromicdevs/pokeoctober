@@ -1211,7 +1211,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 2, WOOPER
 	dbw 2, PICHU
-	dbw 3, FURRET
+	dbw 3, PICHU
 	dbw 3, FURRET
 	dbw 2, PICHU
 	dbw 3, FURRET
