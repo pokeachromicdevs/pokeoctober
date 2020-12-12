@@ -279,6 +279,7 @@ BattleAnimations::
 	dw BattleAnim_WindRide
 	dw BattleAnim_RockHead
 	dw BattleAnim_WaterSport
+	dw BattleAnim_BrightMoss
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -1121,7 +1122,6 @@ BattleAnim_HydroPump:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_WaterSport:
 BattleAnim_Surf:
 	anim_1gfx ANIM_GFX_BUBBLE
 	anim_bgeffect ANIM_BG_SURF, $0, $0, $0
@@ -2527,6 +2527,7 @@ BattleAnim_Guillotine:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_BrightMoss:
 BattleAnim_Flash:
 	anim_1gfx ANIM_GFX_SPEED
 	anim_sound 0, 1, SFX_FLASH
@@ -4624,6 +4625,44 @@ BattleAnim_RockHead:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $90
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_WaterSport:
+	anim_3gfx ANIM_GFX_SPEED, ANIM_GFX_HIT, ANIM_GFX_WATER
+	anim_sound 0, 0, SFX_MENU
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_SPEED_LINE,  3, 0, 11, 0, $2
+	anim_obj ANIM_OBJ_SPEED_LINE,  4, 0, 11, 0, $1
+	anim_obj ANIM_OBJ_SPEED_LINE,  5, 0, 11, 0, $0
+	anim_obj ANIM_OBJ_SPEED_LINE,  6, 0, 11, 0, $80
+	anim_obj ANIM_OBJ_SPEED_LINE,  7, 0, 11, 0, $81
+	anim_obj ANIM_OBJ_SPEED_LINE,  8, 0, 11, 0, $82
+	anim_wait 4
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 9, 4, 13, 0, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 10, 4, 12, 2, $0
+	anim_wait 1
+	anim_sound 0, 0, SFX_MENU
+	anim_wait 1
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 11, 4, 11, 4, $0
+	anim_wait 2
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 12, 4, 10, 6, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 13, 4, 10, 0, $0
+	anim_wait 1
+	anim_sound 0, 0, SFX_MENU
+	anim_wait 1
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 14, 4, 9, 2, $0
+	anim_wait 2
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 15, 4, 8, 4, $0
+	anim_wait 3
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_01, 17, 0, 7, 0, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

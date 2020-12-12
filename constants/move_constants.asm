@@ -261,6 +261,7 @@
 	const WIND_RIDE    ; fd
 	const ROCK_HEAD    ; fe
 	const WATER_SPORT  ; ff
+	const BRIGHT_MOSS  ; 100
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

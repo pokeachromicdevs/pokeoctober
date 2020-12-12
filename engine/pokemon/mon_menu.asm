@@ -135,7 +135,7 @@ PokemonActionSubmenu:
 	dbw MONMENUITEM_WINDRIDE,   MonMenu_WindRide
 	dbw MONMENUITEM_WATERSPORT, MonMenu_WaterSport
 	dbw MONMENUITEM_STRENGTH,   MonMenu_Strength
-	dbw MONMENUITEM_FLASH,      MonMenu_Flash
+	dbw MONMENUITEM_BRIGHTMOSS, MonMenu_BrightMoss
 	dbw MONMENUITEM_WHIRLPOOL,  MonMenu_Whirlpool
 	dbw MONMENUITEM_DIG,        MonMenu_Dig
 	dbw MONMENUITEM_TELEPORT,   MonMenu_Teleport
@@ -640,7 +640,7 @@ MonMenu_WindRide:
 	ld a, $1
 	ret
 
-MonMenu_Flash:
+MonMenu_BrightMoss:
 	farcall OWFlash
 	ld a, [wFieldMoveSucceeded]
 	cp $1

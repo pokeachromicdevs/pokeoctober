@@ -254,3 +254,4 @@ MoveNames::
 	db "WIND RIDE@"
 	db "ROCK HEAD@"
 	db "WATER SPORT@"
+	db "BRIGHT MOSS@"

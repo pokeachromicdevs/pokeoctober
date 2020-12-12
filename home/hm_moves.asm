@@ -22,7 +22,7 @@ IsHMMove::
 	dw WIND_RIDE
 	dw WATER_SPORT
 	dw STRENGTH
-	dw FLASH
+	dw BRIGHT_MOSS
 	dw WATERFALL
 	dw WHIRLPOOL
 	dw -1 ; end

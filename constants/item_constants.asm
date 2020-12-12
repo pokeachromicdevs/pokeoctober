@@ -274,9 +274,9 @@ ENDM
 
 	add_hm UPROOT       ; f4
 	add_hm WIND_RIDE    ; f5
-	add_hm SURF         ; f6
+	add_hm WATER_SPORT  ; f6
 	add_hm STRENGTH     ; f7
-	add_hm FLASH        ; f8
+	add_hm BRIGHT_MOSS  ; f8
 	add_hm WHIRLPOOL    ; f9
 	add_hm WATERFALL    ; fa
 NUM_HMS EQU const_value - HM01

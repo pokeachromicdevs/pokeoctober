@@ -260,6 +260,7 @@ MoveDescriptions1:
 	dw WindRideDescription
 	dw RockHeadDescription
 	dw WaterSportDescription
+	dw BrightMossDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1277,3 +1278,7 @@ UprootDescription
 WindRideDescription:
 	db  "Has a high criti-"
 	next "cal hit ratio.@"	
+
+BrightMossDescription:
+	db "Raises accuracy of"
+	next "the user's moves.@"

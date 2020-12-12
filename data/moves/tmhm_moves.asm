@@ -56,7 +56,7 @@ TMHMMoves:
 	dw WIND_RIDE
 	dw WATER_SPORT
 	dw STRENGTH
-	dw FLASH
+	dw BRIGHT_MOSS
 	dw WHIRLPOOL
 	dw WATERFALL
 ; Move tutor
