@@ -105,7 +105,7 @@ DanceTheaterSurfGuy:
 .GetSurf:
 	writetext SurfGuyLikeADanceText
 	buttonsound
-	verbosegiveitem HM_SURF
+	verbosegiveitem HM_WATER_SPORT
 	setevent EVENT_GOT_HM03_SURF
 	writetext SurfGuySurfExplanationText
 	waitbutton
@@ -278,7 +278,7 @@ SurfGuyLikeADanceText:
 	done
 
 SurfGuySurfExplanationText:
-	text "That's SURF."
+	text "That's WATER SPORT."
 
 	para "It's a move that"
 	line "lets #MON swim"
