@@ -51,8 +51,8 @@ FirstEvoStages::
 	dw VENONAT
 	dw DIGLETT
 	dw DIGLETT
-	dw MEOWTH
-	dw MEOWTH
+	dw MEOWSY
+	dw MEOWSY
 	dw PSYDUCK
 	dw PSYDUCK
 	dw MANKEY     ;38
@@ -251,3 +251,4 @@ FirstEvoStages::
 	dw LUGIA
 	dw HO_OH
 	dw CELEBI
+	dw MEOWSY

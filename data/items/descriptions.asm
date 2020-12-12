@@ -913,6 +913,6 @@ MewMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
 	
-HoneyPotDesc
+HoneyPotDesc:
 	db   "A pot for storing"
-	next "SWEET HONEY."
+	next "SWEET HONEY.@"

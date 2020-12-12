@@ -354,6 +354,9 @@ VineWhipDescription:
 	next "slender vines.@"
 
 RockHeadDescription:
+	db	 "TODO"
+	next "TODO@"
+	
 StompDescription:
 	db   "An attack that may"
 	next "cause flinching.@"

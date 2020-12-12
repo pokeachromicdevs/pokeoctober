@@ -101,6 +101,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw MeowsyEggMoves
 
 ChikoritaEggMoves:
 	dw VINE_WHIP

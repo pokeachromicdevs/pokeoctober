@@ -101,6 +101,7 @@ EvosAttacksPointers2::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
+	dw MeowsyEvosAttacks
 
 ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, BAYLEEF
@@ -1404,17 +1405,17 @@ CelebiEvosAttacks:
 	db 0 ; no more level-up moves
 	
 MeowsyEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
+	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
-	db 11, BITE 
-	db 20, PAY_DAY
-	db 28, FAINT_ATTACK
-	db 32, ATTRACT
-	db 35, SCREECH
-	db 41, FURY_SWIPES
-	db 45, GLARE
-	db 50, BODY_SLAM
-	db 55, SLASH
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 11, BITE 
+	dbw 20, PAY_DAY
+	dbw 28, FAINT_ATTACK
+	dbw 32, ATTRACT
+	dbw 35, SCREECH
+	dbw 41, FURY_SWIPES
+	dbw 45, GLARE
+	dbw 50, BODY_SLAM
+	dbw 55, SLASH
 	db 0 ; no more level-up moves
