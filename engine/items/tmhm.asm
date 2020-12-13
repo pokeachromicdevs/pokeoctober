@@ -7,184 +7,9 @@ TMHMPocket:
 	ret nc
 	call PlaceHollowCursor
 	call WaitBGMap
-	ld a, [wCurItem]
-	dec a
-	ld [wCurItemQuantity], a
-	ld hl, wTMsHMs
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	ld [wItemQuantityBuffer], a
-	call .ConvertItemToTMHMNumber
+	ld a, [wCurTMHM]
 	scf
 	ret
-
-.ConvertItemToTMHMNumber:
-	ld a, [wCurItem]
-	ld c, a
-	callfar GetNumberedTMHM
-	ld a, c
-	ld [wCurItem], a
-	ret
-
-ConvertCurItemIntoCurTMHM:
-	ld a, [wCurItem]
-	ld c, a
-	callfar GetTMHMNumber
-	ld a, c
-	ld [wTempTMHM], a
-	ret
-
-GetTMHMItemMove:
-	call ConvertCurItemIntoCurTMHM
-	predef GetTMHMMove
-	ret
-
-AskTeachTMHM:
-	ld hl, wOptions
-	ld a, [hl]
-	push af
-	res NO_TEXT_SCROLL, [hl]
-	ld a, [wCurItem]
-	cp TM01
-	jr c, .NotTMHM
-	call GetTMHMItemMove
-	ld a, [wTempTMHM]
-	ld [wPutativeTMHMMove], a
-	call GetMoveName
-	call CopyName1
-	ld hl, Text_BootedTM ; Booted up a TM
-	ld a, [wCurItem]
-	cp HM01
-	jr c, .TM
-	ld hl, Text_BootedHM ; Booted up an HM
-.TM:
-	call PrintText
-	ld hl, Text_ItContained
-	call PrintText
-	call YesNoBox
-.NotTMHM:
-	pop bc
-	ld a, b
-	ld [wOptions], a
-	ret
-
-ChooseMonToLearnTMHM:
-	ld hl, wStringBuffer2
-	ld de, wTMHMMoveNameBackup
-	ld bc, 12
-	call CopyBytes
-	call ClearBGPalettes
-ChooseMonToLearnTMHM_NoRefresh:
-	farcall LoadPartyMenuGFX
-	farcall InitPartyMenuWithCancel
-	farcall InitPartyMenuGFX
-	ld a, PARTYMENUACTION_TEACH_TMHM
-	ld [wPartyMenuActionText], a
-.loopback
-	farcall WritePartyMenuTilemap
-	farcall PrintPartyMenuText
-	call WaitBGMap
-	call SetPalettes
-	call DelayFrame
-	farcall PartyMenuSelect
-	push af
-	ld a, [wCurPartySpecies]
-	cp EGG
-	pop bc ; now contains the former contents of af
-	jr z, .egg
-	push bc
-	ld hl, wTMHMMoveNameBackup
-	ld de, wStringBuffer2
-	ld bc, 12
-	call CopyBytes
-	pop af ; now contains the original contents of af
-	ret
-
-.egg
-	push hl
-	push de
-	push bc
-	push af
-	ld de, SFX_WRONG
-	call PlaySFX
-	call WaitSFX
-	pop af
-	pop bc
-	pop de
-	pop hl
-	jr .loopback
-
-TeachTMHM:
-	predef CanLearnTMHMMove
-
-	push bc
-	ld a, [wCurPartyMon]
-	ld hl, wPartyMonNicknames
-	call GetNick
-	pop bc
-
-	ld a, c
-	and a
-	jr nz, .compatible
-	push de
-	ld de, SFX_WRONG
-	call PlaySFX
-	pop de
-	ld hl, Text_TMHMNotCompatible
-	call PrintText
-	jr .nope
-
-.compatible
-	callfar KnowsMove
-	jr c, .nope
-
-	predef LearnMove
-	ld a, b
-	and a
-	jr z, .nope
-
-	farcall StubbedTrainerRankings_TMsHMsTaught
-	ld a, [wCurItem]
-	call IsHM
-	ret c
-
-	ld c, HAPPINESS_LEARNMOVE
-	callfar ChangeHappiness
-	call ConsumeTM
-	jr .learned_move
-
-.nope
-	and a
-	ret
-
-.unused
-	ld a, 2
-	ld [wItemEffectSucceeded], a
-.learned_move
-	scf
-	ret
-
-Text_BootedTM:
-	; Booted up a TM.
-	text_far UnknownText_0x1c0373
-	text_end
-
-Text_BootedHM:
-	; Booted up an HM.
-	text_far UnknownText_0x1c0384
-	text_end
-
-Text_ItContained:
-	; It contained @ . Teach @ to a #MON?
-	text_far UnknownText_0x1c0396
-	text_end
-
-Text_TMHMNotCompatible:
-	; is not compatible with @ . It can't learn @ .
-	text_far UnknownText_0x1c03c2
-	text_end
 
 TMHM_PocketLoop:
 	xor a
@@ -248,7 +73,7 @@ TMHM_ShowTMMoveDescription:
 	ld b, 4
 	ld c, SCREEN_WIDTH - 2
 	call Textbox
-	ld a, [wCurItem]
+	ld a, [wCurTMHM]
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, TMHM_JoypadLoop
 	ld [wTempTMHM], a
@@ -261,7 +86,7 @@ TMHM_ShowTMMoveDescription:
 
 TMHM_ChooseTMorHM:
 	call TMHM_PlaySFX_ReadText2
-	call CountTMsHMs ; This stores the count to wTempTMHM.
+	call CountwTMsHMs ; This stores the count to wTempTMHM.
 	ld a, [wMenuCursorY]
 	dec a
 	ld b, a
@@ -280,14 +105,13 @@ TMHM_CheckHoveringOverCancel:
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, .okay
-	ld a, [hli]
-	and a
+	call CheckTMHM
 	jr z, .loop
 	dec b
 	jr nz, .loop
 	ld a, c
 .okay
-	ld [wCurItem], a
+	ld [wCurTMHM], a
 	cp -1
 	ret
 
@@ -323,8 +147,7 @@ TMHM_ScrollPocket:
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
 	jp nc, TMHM_JoypadLoop
-	ld a, [hli]
-	and a
+	call CheckTMHM
 	jr z, .loop
 	dec b
 	jr nz, .loop
@@ -349,8 +172,7 @@ TMHM_DisplayPocketItems:
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, .NotTMHM
-	ld a, [hli]
-	and a
+	call CheckTMHM
 	jr z, .loop2
 	ld b, a
 	ld a, c
@@ -390,24 +212,6 @@ TMHM_DisplayPocketItems:
 	push hl
 	call PlaceString
 	pop hl
-	pop bc
-	ld a, c
-	push bc
-	cp NUM_TMS + 1
-	jr nc, .hm2
-	ld bc, SCREEN_WIDTH + 9
-	add hl, bc
-	ld [hl], "×"
-	inc hl
-	ld a, "0" ; why are we doing this?
-	pop bc
-	push bc
-	ld a, b
-	ld [wTempTMHM], a
-	ld de, wTempTMHM
-	lb bc, 1, 2
-	call PrintNum
-.hm2
 	pop bc
 	pop de
 	pop hl
@@ -457,19 +261,17 @@ TMHM_String_Cancel:
 	db "CANCEL@"
 
 TMHM_GetCurrentPocketPosition:
-	ld hl, wTMsHMs
 	ld a, [wTMHMPocketScrollPosition]
 	ld b, a
 	inc b
-	ld c, 0
+	ld c, -1
 .loop
 	inc c
-	ld a, [hli]
-	and a
+	ld a, c
+	call CheckTMHM
 	jr z, .loop
 	dec b
 	jr nz, .loop
-	dec hl
 	dec c
 	ret
 
@@ -487,15 +289,6 @@ TMHM_PlaySFX_ReadText2:
 	call PlaySFX
 	pop de
 	ret
-
-Unreferenced_Function2cadf:
-	call ConvertCurItemIntoCurTMHM
-	call .CheckHaveRoomForTMHM
-	ld hl, .NoRoomText
-	jr nc, .print
-	ld hl, .ReceivedText
-.print
-	jp PrintText
 
 .NoRoomText:
 	; You have no room for any more @ S.
@@ -521,39 +314,223 @@ Unreferenced_Function2cadf:
 	ld [hl], a
 	ret
 
-ConsumeTM:
-	call ConvertCurItemIntoCurTMHM
-	ld a, [wTempTMHM]
-	dec a
+CountwTMsHMs: ; 2cb2a (b:4b2a)
 	ld hl, wTMsHMs
+	ld b, 0
+	ld c, ((NUM_TMS + NUM_HMS) + 7) / 8
+.loop
+	ld a, [hli]
+	call CountSetBitsInByte
+	add b
+	ld b, a
+	dec c
+	jr nz, .loop
+	ld a, b
+	ld [wd265], a
+	pop de
+	ret
+
+CountSetBitsInByte:
+	push hl
+	push bc
+	ld hl, .SetBitsInByte
 	ld b, 0
 	ld c, a
 	add hl, bc
 	ld a, [hl]
-	and a
-	ret z
-	dec a
-	ld [hl], a
-	ret nz
-	ld a, [wTMHMPocketScrollPosition]
-	and a
-	ret z
-	dec a
-	ld [wTMHMPocketScrollPosition], a
+	pop bc
+	pop hl
 	ret
 
-CountTMsHMs:
-	ld b, 0
-	ld c, NUM_TMS + NUM_HMS
+.SetBitsInByte:
+	db 0, 1, 1, 2, 1, 2, 2, 3
+	db 1, 2, 2, 3, 2, 3, 3, 4
+	db 1, 2, 2, 3, 2, 3, 3, 4
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 1, 2, 2, 3, 2, 3, 3, 4
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 1, 2, 2, 3, 2, 3, 3, 4
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 4, 5, 5, 6, 5, 6, 6, 7
+	db 1, 2, 2, 3, 2, 3, 3, 4
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 4, 5, 5, 6, 5, 6, 6, 7
+	db 2, 3, 3, 4, 3, 4, 4, 5
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 4, 5, 5, 6, 5, 6, 6, 7
+	db 3, 4, 4, 5, 4, 5, 5, 6
+	db 4, 5, 5, 6, 5, 6, 6, 7
+	db 4, 5, 5, 6, 5, 6, 6, 7
+	db 5, 6, 6, 7, 6, 7, 7, 8
+
+CheckTMHM:
+	push bc
+	push de
+	dec a
+	ld e, a
+	ld d, 0
+	ld b, CHECK_FLAG
 	ld hl, wTMsHMs
-.loop
-	ld a, [hli]
+	call FlagAction
+	ld a, c
+	pop de
+	pop bc
 	and a
-	jr z, .skip
-	inc b
-.skip
-	dec c
-	jr nz, .loop
-	ld a, b
-	ld [wTempTMHM], a
 	ret
+	
+AskTeachTMHM: ; 2c7bf (b:47bf)
+	ld hl, wOptions
+	ld a, [hl]
+	push af
+	res NO_TEXT_SCROLL, [hl]
+	ld a, [wCurTMHM]
+	ld [wCurTMHM], a
+	predef GetTMHMMove
+	ld a, [wCurTMHM]
+	ld [wPutativeTMHMMove], a
+	call GetMoveName
+	call CopyName1
+	ld hl, Text_BootedTM ; Booted up a TM
+	ld a, [wCurTMHM]
+	cp HM01
+	jr c, .TM
+	ld hl, Text_BootedHM ; Booted up an HM
+.TM:
+	call PrintText
+	ld hl, Text_ItContained
+	call PrintText
+	call YesNoBox
+	pop bc
+	ld a, b
+	ld [wOptions], a
+	ret
+
+ChooseMonToLearnTMHM: ; 2c7fb
+	ld hl, wStringBuffer2
+	ld de, wTMHMMoveNameBackup
+	ld bc, 12
+	call CopyBytes
+	call ClearBGPalettes
+ChooseMonToLearnTMHM_NoRefresh: ; 2c80a
+	farcall LoadPartyMenuGFX
+	farcall InitPartyMenuWithCancel
+	farcall InitPartyMenuGFX
+	ld a, $3 ; TeachWhichPKMNString
+	ld [wPartyMenuActionText], a
+.loopback
+	farcall WritePartyMenuTilemap
+	farcall PrintPartyMenuText
+	call WaitBGMap
+	call SetPalettes
+	call DelayFrame
+	farcall PartyMenuSelect
+	push af
+	ld a, [wCurPartySpecies]
+	cp EGG
+	pop bc ; now contains the former contents of af
+	jr z, .egg
+	push bc
+	ld hl, wTMHMMoveNameBackup
+	ld de, wStringBuffer2
+	ld bc, 12
+	call CopyBytes
+	pop af ; now contains the original contents of af
+	ret
+
+.egg
+	push hl
+	push de
+	push bc
+	push af
+	ld de, SFX_WRONG
+	call PlaySFX
+	call WaitSFX
+	pop af
+	pop bc
+	pop de
+	pop hl
+	jr .loopback
+; 2c867
+
+TeachTMHM: ; 2c867
+	predef CanLearnTMHMMove
+
+	push bc
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMonNicknames
+	call GetNick
+	pop bc
+
+	ld a, c
+	and a
+	jr nz, .compatible
+	push de
+	ld de, SFX_WRONG
+	call PlaySFX
+	pop de
+	ld hl, Text_TMHMNotCompatible
+	call PrintText
+	jr .nope
+
+.compatible
+	farcall KnowsMove
+	jr c, .nope
+
+	predef LearnMove
+	ld a, b
+	and a
+	jr z, .nope
+
+	ld a, [wCurTMHM]
+	call IsHM
+	ret c
+
+	ld c, HAPPINESS_LEARNMOVE
+	farcall ChangeHappiness
+	jr .learned_move
+
+.nope
+	and a
+	ret
+
+.learned_move
+	scf
+	ret
+; 2c8bf (b:48bf)
+
+Text_BootedTM: ; 0x2c8bf
+	; Booted up a TM.
+	text_jump UnknownText_0x1c0373
+	db "@"
+; 0x2c8c4
+
+Text_BootedHM: ; 0x2c8c4
+	; Booted up an HM.
+	text_jump UnknownText_0x1c0384
+	db "@"
+; 0x2c8c9
+
+Text_ItContained: ; 0x2c8c9
+	; It contained @ . Teach @ to a #MON?
+	text_jump UnknownText_0x1c0396
+	db "@"
+; 0x2c8ce
+
+Text_TMHMNotCompatible: ; 0x2c8ce
+	; is not compatible with @ . It can't learn @ .
+	text_jump UnknownText_0x1c03c2
+	db "@"
+; 0x2c8d3

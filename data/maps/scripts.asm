@@ -366,14 +366,6 @@ INCLUDE "maps/FuchsiaPokecenter1F.asm"
 INCLUDE "maps/FuchsiaPokecenter2FBeta.asm"
 INCLUDE "maps/SafariZoneWardensHome.asm"
 INCLUDE "maps/Route15FuchsiaGate.asm"
-INCLUDE "maps/CherrygroveMart.asm"
-INCLUDE "maps/CherrygrovePokecenter1F.asm"
-INCLUDE "maps/CherrygroveGymSpeechHouse.asm"
-INCLUDE "maps/GuideGentsHouse.asm"
-INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
-INCLUDE "maps/Route30BerryHouse.asm"
-INCLUDE "maps/MrPokemonsHouse.asm"
-INCLUDE "maps/Route31VioletGate.asm"
 
 
 SECTION "Map Scripts 19", ROMX
@@ -484,3 +476,15 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+
+
+SECTION "Map Scripts 26", ROMX
+
+INCLUDE "maps/CherrygroveMart.asm"
+INCLUDE "maps/CherrygrovePokecenter1F.asm"
+INCLUDE "maps/CherrygroveGymSpeechHouse.asm"
+INCLUDE "maps/GuideGentsHouse.asm"
+INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
+INCLUDE "maps/Route30BerryHouse.asm"
+INCLUDE "maps/MrPokemonsHouse.asm"
+INCLUDE "maps/Route31VioletGate.asm"

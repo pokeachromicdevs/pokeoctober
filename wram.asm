@@ -1987,7 +1987,7 @@ ENDU ; d100
 wListPointer:: dw ; d100
 wUnusedD102:: dw ; d102
 wItemAttributesPtr:: dw ; d104
-
+wCurTMHM:: db
 wCurItem:: db ; d106
 wCurItemQuantity:: ; d107
 wMartItemID::
@@ -2545,7 +2545,8 @@ wBadges::
 wJohtoBadges:: flag_array NUM_JOHTO_BADGES ; d857
 wKantoBadges:: flag_array NUM_KANTO_BADGES ; d858
 
-wTMsHMs:: ds NUM_TMS + NUM_HMS ; d859
+wTMsHMs:: ; d859
+	flag_array NUM_TMS + NUM_HMS
 wTMsHMsEnd::
 
 wNumItems:: db ; d892
