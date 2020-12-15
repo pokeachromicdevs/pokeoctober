@@ -251,3 +251,4 @@ BitmasksPointers:
 	dw HoOhBitmasks
 	dw CelebiBitmasks
 	dw MeowsyBitmasks
+	dw KatuBitmasks

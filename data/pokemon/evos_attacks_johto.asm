@@ -102,6 +102,7 @@ EvosAttacksPointers2::
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
 	dw MeowsyEvosAttacks
+	dw KatuEvosAttacks
 
 ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, BAYLEEF
@@ -446,7 +447,7 @@ TogeticEvosAttacks:
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
-	dbbw EVOLVE_LEVEL, 25, XATU
+	dbbw EVOLVE_LEVEL, 25, KATU
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, LEER
@@ -1418,4 +1419,17 @@ MeowsyEvosAttacks:
 	dbw 45, GLARE
 	dbw 50, BODY_SLAM
 	dbw 55, SLASH
+	db 0 ; no more level-up moves
+	
+KatuEvosAttacks:
+	dbbw EVOLVE_LEVEL, 40, XATU
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, LEER
+	dbw 1, NIGHT_SHADE
+	dbw 10, NIGHT_SHADE
+	dbw 15, TELEPORT
+	dbw 25, FUTURE_SIGHT
+	dbw 45, CONFUSE_RAY
+	dbw 55, PSYCHIC_M
 	db 0 ; no more level-up moves

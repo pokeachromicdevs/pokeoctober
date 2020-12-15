@@ -160,7 +160,7 @@ Route46Sign:
 	jumptext Route46SignText
 
 Route46XSpeed:
-	itemball HM_WIND_RIDE
+	itemball X_SPEED
 
 Route46FruitTree1:
 	fruittree FRUITTREE_ROUTE_46_1
@@ -254,7 +254,7 @@ Route46_MapEvents:
 	db 3 ; warp events
 	warp_event  0, 30, ROUTE_29_ROUTE_46_GATE, 1
 	warp_event  2, 31, ROUTE_29_ROUTE_46_GATE, 2
-	warp_event 16,  1, DARK_CAVE_VIOLET_ENTRANCE, 3
+	warp_event  4,  7, DARK_CAVE_VIOLET_ENTRANCE, 3
 
 	db 0 ; coord events
 

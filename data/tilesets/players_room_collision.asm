@@ -4,8 +4,8 @@
 	tilecoll WALL, WALL, TV, BOOKSHELF ; 03
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 04
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 05
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 06
-	tilecoll WALL, WALL, FLOOR, FLOOR ; 07
+	tilecoll FF, FF, FF, FF ; 06
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 07
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 08
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 09
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 0a
@@ -36,12 +36,12 @@
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 23
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 24
 	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 25
-	tilecoll FF, FF, FF, FF ; 26
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 26
 	tilecoll FF, FF, FF, FF ; 27
 	tilecoll FF, FF, FF, FF ; 28
 	tilecoll FF, FF, FF, FF ; 29
-	tilecoll FF, FF, FF, FF ; 2a
-	tilecoll FF, FF, FF, FF ; 2b
+	tilecoll WALL, WALL, WALL, WALL ; 2a
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2b
 	tilecoll FF, FF, FF, FF ; 2c
 	tilecoll FF, FF, FF, FF ; 2d
 	tilecoll FF, FF, FF, FF ; 2e

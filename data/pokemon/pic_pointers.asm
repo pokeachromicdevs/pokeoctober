@@ -517,3 +517,5 @@ PokemonPicPointers::
 	dba CelebiBackpic
 	dba MeowsyFrontpic
 	dba MeowsyBackpic
+	dba KatuFrontpic
+	dba KatuBackpic

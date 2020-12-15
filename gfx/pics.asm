@@ -457,7 +457,6 @@ RemoraidBackpic:     INCBIN "gfx/pokemon/remoraid/back.2bpp.lz"
 DittoFrontpic:       INCBIN "gfx/pokemon/ditto/front.animated.2bpp.lz"
 KingdraBackpic:      INCBIN "gfx/pokemon/kingdra/back.2bpp.lz"
 CamperPic:           INCBIN "gfx/trainers/camper.2bpp.lz"
-WooperFrontpic:      INCBIN "gfx/pokemon/wooper/front.animated.2bpp.lz"
 ClefairyBackpic:     INCBIN "gfx/pokemon/clefairy/back.2bpp.lz"
 VenonatBackpic:      INCBIN "gfx/pokemon/venonat/back.2bpp.lz"
 BellossomBackpic:    INCBIN "gfx/pokemon/bellossom/back.2bpp.lz"
@@ -708,5 +707,6 @@ SECTION "Pics 19", ROMX
 FurretFrontpic: INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
 MeowsyFrontpic: INCBIN "gfx/pokemon/meowsy/front.animated.2bpp.lz"
 MeowsyBackpic:  INCBIN "gfx/pokemon/meowsy/back.2bpp.lz"
-
-
+WooperFrontpic: INCBIN "gfx/pokemon/wooper/front.animated.2bpp.lz"
+KatuFrontpic:   INCBIN "gfx/pokemon/katu/front.animated.2bpp.lz"
+KatuBackpic:    INCBIN "gfx/pokemon/katu/back.2bpp.lz"

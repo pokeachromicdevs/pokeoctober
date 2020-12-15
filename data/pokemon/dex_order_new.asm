@@ -161,6 +161,7 @@ NewPokedexOrder:
 	dw SMEARGLE
 	dw FARFETCH_D
 	dw NATU
+	dw KATU
 	dw XATU
 	dw QWILFISH
 	dw TENTACOOL

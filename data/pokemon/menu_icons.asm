@@ -253,3 +253,4 @@ MonMenuIcons:
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
     db ICON_FOX         ; MEOWSY
+	db ICON_BIRD        ; KATU

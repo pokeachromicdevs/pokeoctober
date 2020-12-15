@@ -291,7 +291,7 @@ NewBarkTown_MapEvents:
 	db 2 ; coord events
 	coord_event  2,  6, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene1
 	coord_event  2,  7, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene2
-
+	
 	db 4 ; bg events
 	bg_event  9,  9, BGEVENT_READ, NewBarkTownSign
 	bg_event  3,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
