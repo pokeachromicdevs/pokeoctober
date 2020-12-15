@@ -57,7 +57,7 @@ InitTitleScreen::
 ; Update palette colors
 	ld hl, TitleScreenPalettes
 	ld de, wBGPals2
-	ld bc, 5 palettes
+	ld bc, 7 palettes
 	call CopyBytes
 
 	ld hl, TitleScreenPalettes palette 5
