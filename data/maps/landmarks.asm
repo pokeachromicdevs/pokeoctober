@@ -5,6 +5,8 @@ landmark: MACRO
 ENDM
 
 Landmarks:
+; Also used for the map name overlay
+
 ; entries correspond to constants/landmark_constants.asm
 	dbbw       0,   0, SpecialMapName
 	landmark 140, 100, NewBarkTownName
@@ -103,17 +105,18 @@ Landmarks:
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
 
-NewBarkTownName:     db "NEW BARK¯TOWN@"
-CherrygroveCityName: db "CHERRYGROVE¯CITY@"
-VioletCityName:      db "VIOLET CITY@"
-AzaleaTownName:      db "AZALEA TOWN@"
-GoldenrodCityName:   db "GOLDENROD¯CITY@"
-EcruteakCityName:    db "ECRUTEAK¯CITY@"
-OlivineCityName:     db "OLIVINE¯CITY@"
-CianwoodCityName:    db "CIANWOOD¯CITY@"
-MahoganyTownName:    db "MAHOGANY¯TOWN@"
-BlackthornCityName:  db "BLACKTHORN¯CITY@"
-LakeOfRageName:      db "LAKE OF¯RAGE@"
+NewBarkTownName:     db "NEW BARK¯TOWN@"       ; Shizuoka
+CherrygroveCityName: db "CHERRYGROVE¯CITY@"    ; Nagoya
+VioletCityName:      db "VIOLET CITY@"        ; Nara
+AzaleaTownName:      db "AZALEA TOWN@"        ; Arida
+						; Shingu?
+GoldenrodCityName:   db "GOLDENROD¯CITY@"      ; Osaka
+EcruteakCityName:    db "ECRUTEAK¯CITY@"       ; Kyoto
+OlivineCityName:     db "OLIVINE¯CITY@"        ; Kobe
+CianwoodCityName:    db "CIANWOOD¯CITY@"       ; XXX does not exist
+MahoganyTownName:    db "MAHOGANY¯TOWN@"       ; Iga
+BlackthornCityName:  db "BLACKTHORN¯CITY@"     ; Yamanashi
+LakeOfRageName:      db "LAKE OF¯RAGE@"        ; Biwako / lake Biwa
 SilverCaveName:      db "SILVER CAVE@"
 SproutTowerName:     db "SPROUT¯TOWER@"
 RuinsOfAlphName:     db "RUINS¯OF ALPH@"
@@ -129,16 +132,16 @@ MtMortarName:        db "MT.MORTAR@"
 DragonsDenName:      db "DRAGON'S¯DEN@"
 IcePathName:         db "ICE PATH@"
 NotApplicableName:   db "N/A@" ; "オバケやしき" ("HAUNTED HOUSE") in Japanese
-PalletTownName:      db "PALLET TOWN@"
-ViridianCityName:    db "VIRIDIAN¯CITY@"
-PewterCityName:      db "PEWTER CITY@"
-CeruleanCityName:    db "CERULEAN¯CITY@"
-LavenderTownName:    db "LAVENDER¯TOWN@"
-VermilionCityName:   db "VERMILION¯CITY@"
-CeladonCityName:     db "CELADON¯CITY@"
-SaffronCityName:     db "SAFFRON¯CITY@"
-FuchsiaCityName:     db "FUCHSIA¯CITY@"
-CinnabarIslandName:  db "CINNABAR¯ISLAND@"
+PalletTownName:      db "PALLET TOWN@"		; Masara
+ViridianCityName:    db "VIRIDIAN¯CITY@"	; Tokiwa
+PewterCityName:      db "PEWTER CITY@"		; Nibi
+CeruleanCityName:    db "CERULEAN¯CITY@"	; Hanada
+LavenderTownName:    db "LAVENDER¯TOWN@"	; Sion
+VermilionCityName:   db "VERMILION¯CITY@"	; Kuchiba
+CeladonCityName:     db "CELADON¯CITY@"		; Tamamushi
+SaffronCityName:     db "SAFFRON¯CITY@"		; Yamabuki
+FuchsiaCityName:     db "FUCHSIA¯CITY@"		; Sekichiku
+CinnabarIslandName:  db "CINNABAR¯ISLAND@"       ; Guren
 IndigoPlateauName:   db "INDIGO¯PLATEAU@"
 VictoryRoadName:     db "VICTORY¯ROAD@"
 MtMoonName:          db "MT.MOON@"
