@@ -244,10 +244,11 @@ MomGivesPokegearText:
 	
 	para "ask you!"
 	
-	para "Is it Daylight"
-	line "Saving Time"
+	para "Can you please set"
+	line "your #GEAR"
 	
-	para "right now?"
+	para "for Daylight"
+	line "Saving Time?"
 	done
 
 IsItDSTText:
