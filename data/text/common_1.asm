@@ -169,8 +169,8 @@ _OakTimeText2::
 	done
 
 _OakTimeText3::
-	text "What?@"
-	text_end
+	text "Is it @?"
+	done 
 
 _OakTimeText4::
 	text "?"
@@ -181,7 +181,7 @@ _OakTimeText5::
 	done
 
 _OakTimeText6::
-	text "Whoa!@"
+	text "What?@"
 	text_end
 
 _OakTimeText7::
@@ -194,9 +194,8 @@ _OakTimeText8::
 	done
 
 _OakTimeText11::
-	text "!"
-	line "Yikes! I over-"
-	cont "slept!"
+	text ""
+	line "is that right?"
 	done
 
 _OakTimeText12::

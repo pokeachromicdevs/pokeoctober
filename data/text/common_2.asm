@@ -1547,3 +1547,62 @@ _OakText5::
 	para "That's why I study"
 	line "#MON every day."
 	prompt
+
+_OakText6::
+	text "Now, what did you"
+	line "say your name was?"
+	prompt
+
+_OakText6a::
+	text "Ah, so you are"
+	line "<PLAYER>!"
+	prompt
+
+_OakText6b::
+	text "This boy has been"
+	line "friends with you"
+	cont "since childhood,"
+	cont "is that right?"
+
+	para "…Erm, what was"
+	line "his name again?"
+	prompt
+
+_OakText6c::
+	text "…That's right!"
+	line "<RIVAL> was his"
+	cont "name!"
+	prompt
+
+_OakText7a::
+	text "<PLAYER>!"
+	
+	para "Before you start"
+	line "your journey,"
+
+	para "you'll have to"
+	line "set the date and"
+	cont "time."
+	
+	prompt
+_OakText7::
+	text "<PLAYER>, are you"
+	line "ready?"
+	
+	para "Your very own"
+	line "#MON story is"
+	cont "about to unfold."
+
+	para "You'll face fun"
+	line "times and tough"
+	cont "challenges."
+	
+	para "A world of dreams"
+	line "and adventures"
+	
+	para "with #MON"
+	line "awaits! Let's go!"
+	
+	para "I'll be seeing you"
+	line "later!"
+	done
