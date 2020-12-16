@@ -293,12 +293,11 @@ NewBarkTown_MapEvents:
 	coord_event  2,  7, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene2
 	
 	db 4 ; bg events
-	bg_event  9,  9, BGEVENT_READ, NewBarkTownSign
+	bg_event 10, 12, BGEVENT_READ, NewBarkTownSign
 	bg_event  3,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
-	bg_event 10, 12, BGEVENT_READ, NewBarkTownElmsLabSign
+	bg_event 15, 13, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9,  5, BGEVENT_READ, NewBarkTownElmsHouseSign
 
 	db 3 ; object events
 	object_event  7,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event 11, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
