@@ -650,14 +650,13 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 OakSpeech:
-	farcall InitClock
 	call RotateFourPalettesLeft
 	call ClearTileMap
 
 	ld de, MUSIC_ROUTE_30
 	call PlayMusic
 
-	call RotateFourPalettesRight
+	;call RotateFourPalettesRight
 	call RotateThreePalettesRight
 	xor a
 	ld [wCurPartySpecies], a
@@ -721,9 +720,57 @@ OakSpeech:
 	call GetSGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
+; name player
 	ld hl, OakText6
 	call PrintText
 	call NamePlayer
+	ld hl, OakText6a
+	call PrintText
+	call RotateThreePalettesRight	; fade out
+	call ClearTileMap
+; name the rival
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic	; fade in
+	ld hl, OakText6b
+	call PrintText
+	call NameRivalIntro
+	ld hl, OakText6c
+	call PrintText
+
+; flash in oak pic again
+	call RotateThreePalettesRight	; fade out
+	call ClearTileMap
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, POKEMON_PROF
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic	; fade in
+	ld hl, OakText7a
+	call PrintText
+	farcall InitClock	; set time
+
+; flash in the player pic again
+	call RotateThreePalettesRight	; fade out
+	call ClearTileMap
+	xor a
+	ld [wCurPartySpecies], a
+	farcall DrawIntroPlayerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic	; fade in
+; player! are you ready?
 	ld hl, OakText7
 	call PrintText
 	ret
@@ -758,9 +805,65 @@ OakText6:
 	text_far _OakText6
 	text_end
 
+OakText6a:
+	text_far _OakText6a
+	text_end
+
+OakText6b:
+	text_far _OakText6b
+	text_end
+
+OakText6c:
+	text_far _OakText6c
+	text_end
+
+OakText7a:
+	text_far _OakText7a
+	text_end
+
 OakText7:
 	text_far _OakText7
 	text_end
+
+NameRivalIntro:
+	farcall MovePlayerPicRight
+	farcall ShowRivalNamingChoices
+	ld a, [wMenuCursorY]
+	dec a
+	jr z, .NewName
+	call StoreRivalName
+	farcall ApplyMonOrTrainerPals
+	farcall MovePlayerPicLeft
+	ret
+
+.NewName:
+	ld b, NAME_RIVAL
+	ld de, wRivalName
+	farcall NamingScreen
+
+	call RotateThreePalettesRight
+	call ClearTileMap
+
+	call LoadFontsExtra
+	call WaitBGMap
+
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call RotateThreePalettesLeft
+
+	ld hl, wRivalName
+	ld de, .Silver
+	call InitName
+	ret
+
+.Silver:
+	db "SILVER@@@@@"
 
 NamePlayer:
 	farcall MovePlayerPicRight
@@ -822,6 +925,16 @@ StorePlayerName:
 	ld hl, wPlayerName
 	call ByteFill
 	ld hl, wPlayerName
+	ld de, wStringBuffer2
+	call CopyName2
+	ret
+
+StoreRivalName:
+	ld a, "@"
+	ld bc, NAME_LENGTH
+	ld hl, wRivalName
+	call ByteFill
+	ld hl, wRivalName
 	ld de, wStringBuffer2
 	call CopyName2
 	ret

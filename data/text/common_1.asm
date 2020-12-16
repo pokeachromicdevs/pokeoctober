@@ -169,7 +169,7 @@ _OakTimeText2::
 	done
 
 _OakTimeText3::
-	text "Is it @?"
+	text "Is it"
 	done 
 
 _OakTimeText4::

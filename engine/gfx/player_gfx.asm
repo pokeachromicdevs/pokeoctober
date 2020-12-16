@@ -70,7 +70,18 @@ ShowPlayerNamingChoices:
 	call CloseWindow
 	ret
 
+ShowRivalNamingChoices:
+	ld hl, RivalNameMenuHeader
+	call LoadMenuHeader
+	call VerticalMenu
+	ld a, [wMenuCursorY]
+	dec a
+	call CopyNameFromMenu
+	call CloseWindow
+	ret
+
 INCLUDE "data/player_names.asm"
+INCLUDE "data/rival_names.asm"
 
 Unreferenced_GetPlayerNameArray:
 	ld hl, wPlayerName
