@@ -198,8 +198,8 @@ ENDM
 	map_const BILLS_HOUSE,                                  4,  4 ; 11
 	map_const ROUTE_4,                                     20,  9 ; 12
 	map_const ROUTE_9,                                     30,  9 ; 13
-	map_const ROUTE_10_NORTH,                              10,  9 ; 14
-	map_const ROUTE_24,                                    10,  9 ; 15
+	map_const ROUTE_10_NORTH,                              10, 18 ; 14
+	map_const ROUTE_24,                                    30,  9 ; 15
 	map_const ROUTE_25,                                    30,  9 ; 16
 	map_const CERULEAN_CITY,                               20, 18 ; 17
 
@@ -210,8 +210,8 @@ ENDM
 	map_const AZALEA_MART,                                  6,  4 ;  3
 	map_const KURTS_HOUSE,                                  8,  4 ;  4
 	map_const AZALEA_GYM,                                   5,  8 ;  5
-	map_const ROUTE_33,                                    10,  9 ;  6
-	map_const AZALEA_TOWN,                                 20,  9 ;  7
+	map_const ROUTE_33,                                    20,  9 ;  6
+	map_const AZALEA_TOWN,                                 10,  9 ;  7
 
 	newgroup                                                      ;  9
 
@@ -244,7 +244,7 @@ ENDM
 
 	newgroup                                                      ; 11
 
-	map_const ROUTE_34,                                    10, 27 ;  1
+	map_const ROUTE_34,                                    10, 18 ;  1
 	map_const GOLDENROD_CITY,                              20, 18 ;  2
 	map_const GOLDENROD_GYM,                               10,  9 ;  3
 	map_const GOLDENROD_BIKE_SHOP,                          4,  4 ;  4
@@ -296,7 +296,7 @@ ENDM
 
 	newgroup                                                      ; 14
 
-	map_const ROUTE_3,                                     30,  9 ;  1
+	map_const ROUTE_3,                                     50,  9 ;  1
 	map_const PEWTER_CITY,                                 20, 18 ;  2
 	map_const PEWTER_NIDORAN_SPEECH_HOUSE,                  4,  4 ;  3
 	map_const PEWTER_GYM,                                   5,  7 ;  4
@@ -337,7 +337,7 @@ ENDM
 	map_const ROUTE_14,                                    10, 18 ;  2
 	map_const ROUTE_15,                                    20,  9 ;  3
 	map_const ROUTE_18,                                    10,  9 ;  4
-	map_const FUCHSIA_CITY,                                20, 18 ;  5
+	map_const FUCHSIA_CITY,                                40, 18 ;  5
 	map_const FUCHSIA_MART,                                 6,  4 ;  6
 	map_const SAFARI_ZONE_MAIN_OFFICE,                      4,  4 ;  7
 	map_const FUCHSIA_GYM,                                  5,  9 ;  8
@@ -385,7 +385,7 @@ ENDM
 	map_const ROUTE_7,                                     10,  9 ;  1
 	map_const ROUTE_16,                                    10,  9 ;  2
 	map_const ROUTE_17,                                    10, 45 ;  3
-	map_const CELADON_CITY,                                20, 18 ;  4
+	map_const CELADON_CITY,                                40, 18 ;  4
 	map_const CELADON_DEPT_STORE_1F,                        8,  4 ;  5
 	map_const CELADON_DEPT_STORE_2F,                        8,  4 ;  6
 	map_const CELADON_DEPT_STORE_3F,                        8,  4 ;  7
@@ -412,7 +412,7 @@ ENDM
 	newgroup                                                      ; 22
 
 	map_const ROUTE_40,                                    10, 18 ;  1
-	map_const ROUTE_41,                                    25, 27 ;  2
+	map_const ROUTE_41,                                    20,  9 ;  2
 	map_const CIANWOOD_CITY,                               15, 27 ;  3
 	map_const MANIAS_HOUSE,                                 4,  4 ;  4
 	map_const CIANWOOD_GYM,                                 5,  9 ;  5
