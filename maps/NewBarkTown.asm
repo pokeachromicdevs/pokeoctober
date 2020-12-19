@@ -283,7 +283,7 @@ NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 14, 13, ELMS_LAB, 1
+	warp_event 13, 13, ELMS_LAB, 1
 	warp_event  5,  5, PLAYERS_HOUSE_1F, 1
 	warp_event  3, 13, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11,  5, ELMS_HOUSE, 1
@@ -295,7 +295,7 @@ NewBarkTown_MapEvents:
 	db 4 ; bg events
 	bg_event 10, 12, BGEVENT_READ, NewBarkTownSign
 	bg_event  3,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
-	bg_event 15, 13, BGEVENT_READ, NewBarkTownElmsLabSign
+	bg_event 14, 13, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9,  5, BGEVENT_READ, NewBarkTownElmsHouseSign
 
 	db 3 ; object events

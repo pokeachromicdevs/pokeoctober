@@ -292,7 +292,7 @@ CeruleanCity_MapEvents:
 	bg_event 11, 29, BGEVENT_READ, CeruleanBikeShopSign
 	bg_event 25, 17, BGEVENT_READ, CeruleanPoliceSign
 	bg_event 23,  7, BGEVENT_READ, CeruleanCapeSign
-	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
+	bg_event 13, 29, BGEVENT_READ, CeruleanLockedDoor
 	bg_event 20, 21, BGEVENT_READ, CeruleanCityPokecenterSign
 	bg_event 26, 29, BGEVENT_READ, CeruleanCityMartSign
 	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
