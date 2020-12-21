@@ -121,9 +121,6 @@ Route20_Blocks:
 BetaSproutTower6_Blocks:
 	INCBIN "maps/unused/BetaSproutTower6.blk"
 
-BetaPokecenter_Blocks:
-	INCBIN "maps/unused/BetaPokecenter.blk"
-
 Route26_Blocks:
 	INCBIN "maps/Route26.blk"
 
