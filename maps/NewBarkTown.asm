@@ -1,7 +1,8 @@
 	object_const_def ; object_event constants
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
-	const NEWBARKTOWN_SILVER
+	const NewBarkTown_SILVER
+	const NewBarkTown_ELM
 
 NewBarkTown_MapScripts:
 	db 2 ; scene scripts
@@ -21,52 +22,90 @@ NewBarkTown_MapScripts:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
+	
+NewBarkTown_RivalGreets:
+	applymovement NewBarkTown_SILVER, RivalMeetsPlayer
+	turnobject PLAYER, RIGHT
+	special FadeOutMusic
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext NewBarkTownRivalText1
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, NewBarkTown_SILVER, 15
+	opentext
+	writetext NewBarkTownRivalText2
+	waitbutton
+	closetext
+	applymovement NewBarkTown_SILVER, RivalGoesToLab
+	disappear NewBarkTown_SILVER
+	setscene SCENE_TEACHER_STOPS
+	special FadeOutMusic
+	pause 15
+	special RestartMapMusic
+	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	end
+	
 
-NewBarkTown_TeacherStopsYouScene1:
-	playmusic MUSIC_MOM
-	turnobject NEWBARKTOWN_TEACHER, LEFT
+ElmStopsYouScene1:
+	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou1_NBT
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack1_NBT
-	stopfollow
+	appear NewBarkTown_ELM
+	applymovement NewBarkTown_ELM, ElmStopsPlayer1
 	opentext
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	special RestartMapMusic
+	setevent ElmsLabSilverScript
+	follow NewBarkTown_ELM, PLAYER
+	applymovement NewBarkTown_ELM, ElmTakesPlayerToLab1
+	stopfollow
+	playsound SFX_ENTER_DOOR
+	disappear NewBarkTown_ELM
+	applymovement PLAYER, PlayerEntersLab
+	playsound SFX_ENTER_DOOR
+	special FadeOutPalettes
+	warpfacing UP, ELMS_LAB, 4, 15
 	end
 
-NewBarkTown_TeacherStopsYouScene2:
-	playmusic MUSIC_MOM
-	turnobject NEWBARKTOWN_TEACHER, LEFT
+ElmStopsYouScene2:
+	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou2_NBT
-	turnobject PLAYER, UP
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack2_NBT
-	stopfollow
+	appear NewBarkTown_ELM
+	applymovement NewBarkTown_ELM, ElmStopsPlayer2
 	opentext
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	special RestartMapMusic
+	setevent EVENT_ELM_NEW_BARK_TOWN
+	follow NewBarkTown_ELM, PLAYER
+	applymovement NewBarkTown_ELM, ElmTakesPlayerToLab2
+	stopfollow
+	playsound SFX_ENTER_DOOR
+	disappear NewBarkTown_ELM
+	applymovement PLAYER, PlayerEntersLab
+	playsound SFX_ENTER_DOOR
+	special FadeOutPalettes
+	setevent ProfElmScript
+	warpfacing UP, ELMS_LAB, 4, 15
+	end
+	
+NewBarkTownRivalScript:
+	faceplayer
+	opentext
+	writetext Text_GearIsImpressive
+	waitbutton
+	closetext
 	end
 
 NewBarkTownTeacherScript:
@@ -136,6 +175,82 @@ NewBarkTownElmsLabSign:
 
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
+	
+ElmTakesPlayerToLab1:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+	
+ElmTakesPlayerToLab2:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+	
+ElmStopsPlayer1:
+	step UP
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+ElmStopsPlayer2:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+	
+RivalMeetsPlayer:
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step LEFT
+	step_end
+	
+RivalGoesToLab:
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
 
 Movement_TeacherRunsToYou1_NBT:
 	step LEFT
@@ -195,24 +310,29 @@ Text_GearIsImpressive:
 	done
 
 Text_WaitPlayer:
-	text "Wait, <PLAY_G>!"
-	done
-
-Text_WhatDoYouThinkYoureDoing:
-	text "What do you think"
-	line "you're doing?"
+	text "Wait! Stop!"
 	done
 
 Text_ItsDangerousToGoAlone:
-	text "It's dangerous to"
+	text "What do you think"
+	line "you're doing?"
+	
+	para "It's dangerous to"
 	line "go out without a"
 	cont "#MON!"
 
 	para "Wild #MON"
-	line "jump out of the"
-
-	para "grass on the way"
-	line "to the next town."
+	line "might attack you!"
+	
+	para "You need your own"
+	line "#MON for"
+	cont "protection!"
+	
+	para "Oh?"
+	
+	para "Are you perhaps…?"
+	
+	para "…Come with me!"
 	done
 
 Text_YourMonIsAdorable:
@@ -289,8 +409,9 @@ NewBarkTown_MapEvents:
 	warp_event 11,  5, ELMS_HOUSE, 1
 
 	db 2 ; coord events
-	coord_event  2,  6, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene1
-	coord_event  2,  7, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene2
+	coord_event  1,  6, SCENE_TEACHER_STOPS, ElmStopsYouScene1
+	coord_event  1,  7, SCENE_TEACHER_STOPS, ElmStopsYouScene2
+	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
 	
 	db 4 ; bg events
 	bg_event 10, 12, BGEVENT_READ, NewBarkTownSign
@@ -299,5 +420,7 @@ NewBarkTown_MapEvents:
 	bg_event  9,  5, BGEVENT_READ, NewBarkTownElmsHouseSign
 
 	db 3 ; object events
-	object_event  7,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
+	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
+	object_event  7,  6, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_NEW_BARK_TOWN
+	object_event  7, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
