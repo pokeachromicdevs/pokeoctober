@@ -87,7 +87,7 @@ ElmStopsYouScene2:
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	setevent EVENT_ELM_NEW_BARK_TOWN
+	setevent EVENT_RIVAL_NEW_BARK_TOWN
 	follow NewBarkTown_ELM, PLAYER
 	applymovement NewBarkTown_ELM, ElmTakesPlayerToLab2
 	stopfollow
