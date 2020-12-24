@@ -23,6 +23,35 @@ NewBarkTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 	
+NewBarkTown_RivalGreets:
+	applymovement NEWBARKTOWN_SILVER, RivalMeetsPlayer
+	turnobject PLAYER, RIGHT
+	special FadeOutMusic
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext NewBarkTownRivalText1
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
+	opentext
+	writetext NewBarkTownRivalText2
+	special NameMom 
+	waitbutton
+	closetext 
+	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
+	opentext
+	writetext NewBarkTownRivalText3
+	closetext
+	applymovement NEWBARKTOWN_SILVER, RivalGoesToLab
+	disappear NEWBARKTOWN_SILVER
+	setscene SCENE_TEACHER_STOPS
+	special FadeOutMusic
+	pause 15
+	special RestartMapMusic
+	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	end
+	
+
 ElmStopsYouScene1:
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
@@ -122,35 +151,6 @@ NewBarkTownTeacherScript:
 	waitbutton
 	closetext
 	end
-	
-NewBarkTown_RivalGreets:
-	applymovement NEWBARKTOWN_SILVER, Movement_SilverComesFromTheShadows_NBT
-	applymovement PLAYER, Movement_PlayerTurnsHead
-	special FadeOutMusic
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	opentext
-	writetext NewBarkTownRivalText1
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
-	opentext
-	writetext NewBarkTownRivalText2
-	waitbutton
-	special NameMom 
-	closetext 
-	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
-	opentext
-	writetext NewBarkTownRivalText3
-	closetext
-	applymovement NEWBARKTOWN_SILVER, RivalGoesToLab
-	disappear NEWBARKTOWN_SILVER
-	setscene SCENE_TEACHER_STOPS
-	special FadeOutMusic
-	pause 15
-	special RestartMapMusic
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
-	end
-	
 
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
@@ -166,19 +166,6 @@ NewBarkTownElmsLabSign:
 
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
-	
-Movement_SilverComesFromTheShadows_NBT:
-	big_step UP
-	big_step UP
-	step UP
-	step UP
-	slow_step UP
-	turn_head LEFT
-	step_end
-	
-Movement_PlayerTurnsHead:
-	turn_head RIGHT
-	step_end
 	
 ElmTakesPlayerToLab1:
 	step RIGHT
@@ -463,4 +450,4 @@ NewBarkTown_MapEvents:
 	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  7, 11, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event  6,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_NEW_BARK_TOWN
+	object_event  7,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_NEW_BARK_TOWN
