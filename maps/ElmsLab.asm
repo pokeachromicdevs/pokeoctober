@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const ELMSLAB_ELM
+	const ELMENTRANCE_SILVER
 	const ELMSLAB_ELMS_AIDE
 	const ELMSLAB_POKE_BALL1
 	const ELMSLAB_POKE_BALL2
@@ -84,6 +85,73 @@ ElmsLab_MapScripts:
 	waitbutton
 	setscene SCENE_ELMSLAB_CANT_LEAVE
 	closetext
+	end
+	
+BattleScript:
+	applymovement PLAYER, Movement_DownOne
+	playsound SFX_EXIT_BUILDING
+	moveobject ELMENTRANCE_SILVER, 4, 0
+	appear ELMENTRANCE_SILVER
+	applymovement ELMENTRANCE_SILVER, Movement_SilverDownOne
+	special FadeOutMusic
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext TimeToBattle
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .TOTODILE
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .CHIKORITA
+	winlosstext SilverEntranceWinText, SilverEntranceLossText
+	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.TOTODILE:
+	winlosstext SilverEntranceWinText, SilverEntranceLossText
+	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.CHIKORITA:
+	winlosstext SilverEntranceWinText, SilverEntranceLossText
+	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.AfterVictorious:
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext EntranceRivalText_YouWon
+	waitbutton
+	closetext
+	jump .FinishRival
+
+.AfterYourDefeat:
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext EntranceRivalText_YouLost
+	waitbutton
+	closetext
+.FinishRival:
+	applymovement ELMENTRANCE_SILVER, SilverLeavesLab
+	disappear ELMENTRANCE_SILVER
+	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
+	special HealParty
+	playmapmusic
 	end
 
 ProfElmScript:
@@ -607,6 +675,28 @@ ElmsLabTrashcan2:
 
 ElmsLabBookshelf:
 	jumpstd difficultbookshelf
+	
+ElmsLabSilverScript:
+	jumptextfaceplayer ElmsLabSilverText
+		
+SilverLeavesLab:
+	step LEFT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+	
+Movement_SilverDownOne:
+	step DOWN
+	step_end
+	
+Movement_DownOne:
+	step DOWN
+	turn_head UP
+	step_end	
 
 ElmsLab_WalkUpToElmMovement:
 	step UP
@@ -722,6 +812,64 @@ AfterChikoritaMovement:
 	step UP
 	turn_head UP
 	step_end
+	
+ElmsLabSilverText:
+	text "Yo <PLAY_G>!"
+	
+	para "Looks like PROF."
+	line "ELM isn't here!"
+	
+	para "I wonder when"
+	line "he would have"
+	
+	para "expected us to"
+	line "show up!"
+	
+	done
+	
+SilverEntranceWinText:
+	text "Wow! I thought my"
+	line "#MON would have"
+	para "been the best!"
+	done
+
+EntranceRivalText_YouLost:
+	text "<PLAY_G>! I'm"
+	line "so ready to show"
+	para "the world how"
+	line "great my #MON"
+	cont "is!"
+	para "I'll see you"
+	line "around soon!"
+	done
+
+SilverEntranceLossText:
+	text "Alright! My"
+	line "#MON rules!"
+	done
+
+EntranceRivalText_YouWon:
+	text "<PLAY_G>! I'm"
+	line "so ready to show"
+	para "the world how"
+	line "great my #MON"
+	cont "is!"
+	para "I'll see you"
+	line "around soon!"
+	done
+	
+TimeToBattle:
+	text "<PLAY_G>!"
+	para "You're not getting"
+	line "off that easy!"
+	para "OAK gave us these"
+	line "#MON, so now"
+	para "we gotta battle"
+	line "them!"
+	para "I'm not gonna hold"
+	line "back!"
+	done
+
 
 ElmText_Intro:
 	text "ELM: <PLAY_G>!"
@@ -1375,11 +1523,11 @@ ElmsLab_MapEvents:
 	warp_event  4, 11, NEW_BARK_TOWN, 1
 	warp_event  5, 11, NEW_BARK_TOWN, 1
 
-	db 8 ; coord events
+	db 6 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  5,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
-	coord_event  4,  5, SCENE_ELMSLAB_MEET_OFFICER, MeetCopScript
-	coord_event  5,  5, SCENE_ELMSLAB_MEET_OFFICER, MeetCopScript2
+	coord_event  4,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
+	coord_event  5,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls1
@@ -1409,5 +1557,4 @@ ElmsLab_MapEvents:
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
-	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
-	object_event  4,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabSilverScript, EVENT_RIVAL_ELMS_LAB
+	object_event  5,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabSilverScript, EVENT_RIVAL_ELMS_LAB
