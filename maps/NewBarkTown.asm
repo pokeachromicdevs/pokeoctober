@@ -23,30 +23,6 @@ NewBarkTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 	
-NewBarkTown_RivalGreets:
-	applymovement NEWBARKTOWN_SILVER, RivalMeetsPlayer
-	turnobject PLAYER, RIGHT
-	special FadeOutMusic
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	opentext
-	writetext NewBarkTownRivalText1
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
-	opentext
-	writetext NewBarkTownRivalText2
-	waitbutton
-	closetext
-	applymovement NEWBARKTOWN_SILVER, RivalGoesToLab
-	disappear NEWBARKTOWN_SILVER
-	setscene SCENE_TEACHER_STOPS
-	special FadeOutMusic
-	pause 15
-	special RestartMapMusic
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
-	end
-	
-
 ElmStopsYouScene1:
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
@@ -146,6 +122,35 @@ NewBarkTownTeacherScript:
 	waitbutton
 	closetext
 	end
+	
+NewBarkTown_RivalGreets:
+	applymovement NEWBARKTOWN_SILVER, Movement_SilverComesFromTheShadows_NBT
+	applymovement PLAYER, Movement_PlayerTurnsHead
+	special FadeOutMusic
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext NewBarkTownRivalText1
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
+	opentext
+	writetext NewBarkTownRivalText2
+	waitbutton
+	special NameMom 
+	closetext 
+	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
+	opentext
+	writetext NewBarkTownRivalText3
+	closetext
+	applymovement NEWBARKTOWN_SILVER, RivalGoesToLab
+	disappear NEWBARKTOWN_SILVER
+	setscene SCENE_TEACHER_STOPS
+	special FadeOutMusic
+	pause 15
+	special RestartMapMusic
+	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	end
+	
 
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
@@ -161,6 +166,19 @@ NewBarkTownElmsLabSign:
 
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
+	
+Movement_SilverComesFromTheShadows_NBT:
+	big_step UP
+	big_step UP
+	step UP
+	step UP
+	slow_step UP
+	turn_head LEFT
+	step_end
+	
+Movement_PlayerTurnsHead:
+	turn_head RIGHT
+	step_end
 	
 ElmTakesPlayerToLab1:
 	step RIGHT
@@ -363,27 +381,42 @@ NewBarkTownRivalText1:
 	text "<RIVAL>: Hey,"
 	line "<PLAYER>!"
 	para "There's something"
-	line "I gotta brag to"
+	line "I wanted to remind"
 	cont "you about!"
 	
-	para "I got an email"
-	line "from PROF.OAK!"
-
-	para "Yeah, the famous"
-	line "one!"
+	para "Today's the day we"
+	line "get our first"
+	
+	para "#MON, remember?"
 	done
 
 NewBarkTownRivalText2:
-	text "…"
-	para "You got one too?!"
-	para "Man, that's no"
-	line "fun!"
+	text "Tch, don't get too"
+	line "cocky. I could" 
 	
-	para "Hmph!"
+	para "beat you any day!"
+	para "Anyways..."
+
 	
-	para "Well, I'm off to"
-	line "OAK's!"
-	cont "See you there!"
+	para "Well, you, uhh..."
+	
+	para "What is it that"
+	line "you call your" 
+	
+	para "mother again?"
+	done
+	
+NewBarkTownRivalText3:
+	text "Bahaha!"
+	para "Don't make me"
+	line "laugh!"
+	para "Calling her"
+	line "something so"
+	cont "childish is"
+	para "hilarious!"
+	para "Welp, see ya!"
+	para "I'm gonna head off"
+	line "to ELM's!"
 	done
 
 NewBarkTownSignText:
