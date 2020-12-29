@@ -2319,14 +2319,14 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (4)
 	db "WADE@", TRAINERTYPE_NORMAL
-	db 2
-	dw CATERPIE
-	db 2
+	db 3
 	dw CATERPIE
 	db 3
-	dw WEEDLE
-	db 2
-	dw CATERPIE
+	dw METAPOD
+	db 4
+	dw KAKUNA
+	db 5
+	dw SCYTHER
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (5)
