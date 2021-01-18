@@ -66,7 +66,8 @@ ElmStopsYouScene1:
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	setevent EVENT_RIVAL_ELMS_LAB
+	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	setmapscene ELMS_LAB, SCENE_DEFAULT
 	follow NEWBARKTOWN_ELM, PLAYER
 	applymovement NEWBARKTOWN_ELM, ElmTakesPlayerToLab1
 	stopfollow
@@ -75,7 +76,7 @@ ElmStopsYouScene1:
 	applymovement PLAYER, PlayerEntersLab
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
-	warpfacing UP, ELMS_LAB, 4, 15
+	warpfacing UP, ELMS_LAB, 4, 11
 	end
 
 ElmStopsYouScene2:
@@ -102,7 +103,7 @@ ElmStopsYouScene2:
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
 	setevent ProfElmScript
-	warpfacing UP, ELMS_LAB, 4, 15
+	warpfacing UP, ELMS_LAB, 4, 11
 	end
 	
 NewBarkTownRivalScript:
@@ -177,8 +178,10 @@ ElmTakesPlayerToLab1:
 	step DOWN
 	step DOWN
 	step DOWN
-	step RIGHT
-	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -197,8 +200,10 @@ ElmTakesPlayerToLab2:
 	step DOWN
 	step DOWN
 	step DOWN
-	step RIGHT
-	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step RIGHT
 	step RIGHT
 	step RIGHT

@@ -1,11 +1,10 @@
 	object_const_def ; object_event constants
 	const ELMSLAB_ELM
-	const ELMENTRANCE_SILVER
 	const ELMSLAB_ELMS_AIDE
 	const ELMSLAB_POKE_BALL1
 	const ELMSLAB_POKE_BALL2
 	const ELMSLAB_POKE_BALL3
-	const ELMSLAB_OFFICER
+	const ELMENTRANCE_SILVER
 
 ElmsLab_MapScripts:
 	db 6 ; scene scripts
@@ -562,6 +561,12 @@ AideScript_WalkBalls2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
+AideScript_ExplainBalls:
+	writetext AideText_ExplainBalls
+	waitbutton
+	closetext
+	end
+
 AideScript_GiveYouBalls:
 	opentext
 	writetext AideText_GiveYouBalls
@@ -584,72 +589,20 @@ ElmsAideScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue AideScript_AfterTheft
+	iftrue AideText_AlwaysBusy
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue AideScript_ExplainBalls
 	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	iftrue AideScript_TheftTestimony
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
 	end
 
-AideScript_TheftTestimony:
-	writetext AideText_TheftTestimony
-	waitbutton
-	closetext
-	end
-
-AideScript_ExplainBalls:
-	writetext AideText_ExplainBalls
-	waitbutton
-	closetext
-	end
-
-AideScript_AfterTheft:
-	writetext AideText_AfterTheft
-	waitbutton
-	closetext
-	end
-
-MeetCopScript2:
-	applymovement PLAYER, MeetCopScript2_StepLeft
-
-MeetCopScript:
-	applymovement PLAYER, MeetCopScript_WalkUp
-CopScript:
-	turnobject ELMSLAB_OFFICER, LEFT
-	opentext
-	writetext ElmsLabOfficerText1
-	buttonsound
-	special NameRival
-	writetext ElmsLabOfficerText2
-	waitbutton
-	closetext
-	applymovement ELMSLAB_OFFICER, OfficerLeavesMovement
-	disappear ELMSLAB_OFFICER
-	setscene SCENE_ELMSLAB_NOTHING
-	end
-
 ElmsLabWindow:
 	opentext
-	checkflag ENGINE_FLYPOINT_VIOLET
-	iftrue .Normal
-	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
-	iftrue .BreakIn
-	sjump .Normal
-
-.BreakIn:
-	writetext ElmsLabWindowText2
-	waitbutton
-	closetext
-	end
-
-.Normal:
 	writetext ElmsLabWindowText1
 	waitbutton
 	closetext
-	end
 
 ElmsLabTravelTip1:
 	jumptext ElmsLabTravelTip1Text
@@ -711,24 +664,6 @@ ElmsLab_WalkUpToElmMovement:
 
 ElmsLab_CantLeaveMovement:
 	step UP
-	step_end
-
-MeetCopScript2_StepLeft:
-	step LEFT
-	step_end
-
-MeetCopScript_WalkUp:
-	step UP
-	step UP
-	turn_head RIGHT
-	step_end
-
-OfficerLeavesMovement:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
 	step_end
 
 AideWalksRight1:
@@ -1375,31 +1310,6 @@ AideText_AlwaysBusy:
 	cont "always busy."
 	done
 
-AideText_TheftTestimony:
-	text "There was a loud"
-	line "noise outside…"
-
-	para "When we went to"
-	line "look, someone"
-	cont "stole a #MON."
-
-	para "It's unbelievable"
-	line "that anyone would"
-	cont "do that!"
-
-	para "…sigh… That"
-	line "stolen #MON."
-
-	para "I wonder how it's"
-	line "doing."
-
-	para "They say a #MON"
-	line "raised by a bad"
-
-	para "person turns bad"
-	line "itself."
-	done
-
 AideText_GiveYouBalls:
 	text "<PLAY_G>!"
 
@@ -1417,45 +1327,12 @@ AideText_ExplainBalls:
 	cont "to get them."
 	done
 
-ElmsLabOfficerText1:
-	text "I heard a #MON"
-	line "was stolen here…"
-
-	para "I was just getting"
-	line "some information"
-	cont "from PROF.ELM."
-
-	para "Apparently, it was"
-	line "a young male with"
-	cont "long, red hair…"
-
-	para "What?"
-
-	para "You battled a"
-	line "trainer like that?"
-
-	para "Did you happen to"
-	line "get his name?"
-	done
-
-ElmsLabOfficerText2:
-	text "OK! So <RIVAL>"
-	line "was his name."
-
-	para "Thanks for helping"
-	line "my investigation!"
-	done
 
 ElmsLabWindowText1:
 	text "The window's open."
 
 	para "A pleasant breeze"
 	line "is blowing in."
-	done
-
-ElmsLabWindowText2:
-	text "He broke in"
-	line "through here!"
 	done
 
 ElmsLabTravelTip1Text:
@@ -1523,7 +1400,7 @@ ElmsLab_MapEvents:
 	warp_event  4, 11, NEW_BARK_TOWN, 1
 	warp_event  5, 11, NEW_BARK_TOWN, 1
 
-	db 6 ; coord events
+	db 8 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  5,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  4,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
