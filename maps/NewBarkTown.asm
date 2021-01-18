@@ -173,15 +173,15 @@ ElmTakesPlayerToLab1:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -196,14 +196,14 @@ ElmTakesPlayerToLab2:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
 	step RIGHT
 	step RIGHT
 	step RIGHT
