@@ -3,7 +3,8 @@
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_SILVER
 	const NEWBARKTOWN_ELM
-
+	const NEWBARKTOWN_FISHER_2
+	
 NewBarkTown_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
@@ -155,6 +156,9 @@ NewBarkTownTeacherScript:
 
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
+	
+NewBarkTownFisher2Script:
+	jumptextfaceplayer KantoRockText
 
 NewBarkTownSign:
 	jumptext NewBarkTownSignText
@@ -387,10 +391,10 @@ NewBarkTownRivalText2:
 	line "cocky. I could" 
 	
 	para "beat you any day!"
-	para "Anyways..."
+	para "Anyways… "
 
 	
-	para "Well, you, uhh..."
+	para "Well, you, uhh…"
 	
 	para "What is it that"
 	line "you call your" 
@@ -430,6 +434,19 @@ NewBarkTownElmsLabSignText:
 NewBarkTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
+	
+KantoRockText:
+	text "Hngh…"
+	
+	para "Sorry kid, the"
+	line "route to KANTO" 
+	cont "all blocked off"
+	line "until I can find a"
+	line "way to move this"
+	line "rock out of the"
+	
+	para	"way."
+	done 
 
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
@@ -451,8 +468,9 @@ NewBarkTown_MapEvents:
 	bg_event 14, 13, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9,  5, BGEVENT_READ, NewBarkTownElmsHouseSign
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  7, 11, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
 	object_event  7,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_NEW_BARK_TOWN
+	object_event 19,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisher2Script, -1

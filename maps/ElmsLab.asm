@@ -46,7 +46,6 @@ ElmsLab_MapScripts:
 
 .WalkUpToElm:
 	applymovement PLAYER, ElmsLab_WalkUpToElmMovement
-	showemote EMOTE_SHOCK, ELMSLAB_ELM, 15
 	turnobject ELMSLAB_ELM, RIGHT
 	opentext
 	writetext ElmText_Intro
@@ -66,11 +65,10 @@ ElmsLab_MapScripts:
 	pause 30
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 10
 	turnobject ELMSLAB_ELM, DOWN
+	turnobject ELMENTRANCE_SILVER, LEFT
 	opentext
-	writetext ElmText_GotAnEmail
-	waitbutton
+	writetext SilverEmailShock
 	closetext
-	opentext
 	turnobject ELMSLAB_ELM, RIGHT
 	writetext ElmText_MissionFromMrPokemon
 	waitbutton
@@ -797,7 +795,7 @@ TimeToBattle:
 	text "<PLAY_G>!"
 	para "You're not getting"
 	line "off that easy!"
-	para "OAK gave us these"
+	para "ELM gave us these"
 	line "#MON, so now"
 	para "we gotta battle"
 	line "them!"
@@ -807,11 +805,12 @@ TimeToBattle:
 
 
 ElmText_Intro:
-	text "ELM: <PLAY_G>!"
-	line "There you are!"
+	text "Alright! Now that"
+	line "we're all together,"
 
-	para "I needed to ask"
-	line "you a favor."
+	para "I need to ask"
+	line "you two to do"
+	cont "a favor for me."
 
 	para "I'm conducting new"
 	line "#MON research"
@@ -820,7 +819,8 @@ ElmText_Intro:
 	line "wondering if you"
 
 	para "could help me with"
-	line "it, <PLAY_G>."
+	line "it, <PLAY_G>"
+	cont "and <RIVAL>."
 
 	para "You see…"
 
@@ -838,8 +838,8 @@ ElmText_Intro:
 
 	para "So!"
 
-	para "I'd like you to"
-	line "raise a #MON"
+	para "I'd like you two"
+	line "to raise a #MON"
 
 	para "that I recently"
 	line "caught."
@@ -870,10 +870,13 @@ ElmText_ResearchAmbitions:
 	para "You can count on"
 	line "it!"
 	done
-
-ElmText_GotAnEmail:
-	text "Oh, hey! I got an"
-	line "e-mail!"
+	
+SilverEmailShock:
+	text "<RIVAL>: What is"
+	line "it, Professor?"
+	
+	para "ELM: I just got"
+	line "an e-mail!"
 
 	para "<……><……><……>"
 	line "Hm… Uh-huh…"
@@ -1103,7 +1106,9 @@ ElmAfterTheftText5:
 
 	para "The closest GYM"
 	line "would be the one"
-	cont "in VIOLET CITY."
+	cont "in CHERRYGROVE"
+	
+	para "CITY."
 	done
 
 ElmAfterTheftText6:

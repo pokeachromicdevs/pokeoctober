@@ -18,6 +18,9 @@ ElmsHousePC:
 
 ElmsHouseBookshelf:
 	jumpstd difficultbookshelf
+	
+ElmsFood:
+	jumptext ElmsHouseFoodText
 
 ElmsWifeText:
 	text "Hi, <PLAY_G>! My"
@@ -43,15 +46,13 @@ ElmsSonText:
 	cont "professor!"
 	done
 
-ElmsHouseLabFoodText:
-; unused
+ElmsHouseFoodText:
 	text "There's some food"
 	line "here. It must be"
 	cont "for the LAB."
 	done
 
 ElmsHousePokemonFoodText:
-; unused
 	text "There's some food"
 	line "here. This must be"
 	cont "for #MON."
@@ -85,16 +86,20 @@ ElmsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, NEW_BARK_TOWN, 4
-	warp_event  3,  7, NEW_BARK_TOWN, 4
+	warp_event  6,  7, NEW_BARK_TOWN, 4
+	warp_event  7,  7, NEW_BARK_TOWN, 4
 
 	db 0 ; coord events
 
-	db 3 ; bg events
-	bg_event  0,  1, BGEVENT_READ, ElmsHousePC
-	bg_event  6,  1, BGEVENT_READ, ElmsHouseBookshelf
-	bg_event  7,  1, BGEVENT_READ, ElmsHouseBookshelf
+	db 7 ; bg events
+	bg_event  6,  1, BGEVENT_READ, ElmsHousePC
+	bg_event 12,  1, BGEVENT_READ, ElmsHouseBookshelf
+	bg_event 13,  1, BGEVENT_READ, ElmsHouseBookshelf
+	bg_event  1,  1, BGEVENT_READ, ElmsHouseFoodText
+	bg_event  2,  1, BGEVENT_READ, ElmsHousePokemonFoodText
+	bg_event 10,  1, BGEVENT_READ, ElmsHouseBookshelf
+	bg_event 11,  1, BGEVENT_READ, ElmsHouseBookshelf
 
 	db 2 ; object events
-	object_event  1,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
-	object_event  5,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
+	object_event  9,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
