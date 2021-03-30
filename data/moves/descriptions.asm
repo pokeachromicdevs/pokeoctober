@@ -1274,7 +1274,7 @@ BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
 
-UprootDescription
+UprootDescription:
 	db "User flings its" 
 	next "enemy to damage.@"
 

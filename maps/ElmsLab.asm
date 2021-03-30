@@ -7,13 +7,14 @@
 	const ELMENTRANCE_SILVER
 
 ElmsLab_MapScripts:
-	db 6 ; scene scripts
+	db 7 ; scene scripts
 	scene_script .MeetElm ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_CANT_LEAVE
 	scene_script .DummyScene2 ; SCENE_ELMSLAB_NOTHING
 	scene_script .DummyScene3 ; SCENE_ELMSLAB_MEET_OFFICER
 	scene_script .DummyScene4 ; SCENE_ELMSLAB_UNUSED
 	scene_script .DummyScene5 ; SCENE_ELMSLAB_AIDE_GIVES_POTION
+	scene_script .SceneElmsLabEntranceBattle
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .MoveElmCallback
@@ -36,7 +37,10 @@ ElmsLab_MapScripts:
 
 .DummyScene5:
 	end
-
+	
+.SceneElmsLabEntranceBattle:
+	end
+	
 .MoveElmCallback:
 	checkscene
 	iftrue .Skip ; not SCENE_DEFAULT
@@ -54,7 +58,7 @@ ElmsLab_MapScripts:
 	iftrue .ElmGetsEmail
 	writetext ElmText_Refused
 	sjump .MustSayYes
-
+	
 .ElmGetsEmail:
 	writetext ElmText_Accepted
 	buttonsound
@@ -150,7 +154,7 @@ BattleScript:
 	special HealParty
 	playmapmusic
 	end
-
+	
 ProfElmScript:
 	faceplayer
 	opentext
@@ -336,7 +340,7 @@ ElmDirectionsScript:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
-	setscene SCENE_ELM_ENTRANCE_BATTLE
+	setscene SCENE_ELM_ENTRANCE_BATTLE 
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
 	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
 	end
@@ -846,7 +850,7 @@ ElmText_Intro:
 	done
 
 ElmText_Accepted:
-	text "Thanks, <PLAY_G>!"
+	text "Thanks, you two!"
 
 	para "You're a great"
 	line "help!"
@@ -1408,12 +1412,12 @@ ElmsLab_MapEvents:
 	db 8 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  5,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
-	coord_event  4,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
-	coord_event  5,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls2
+	coord_event  4,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
+	coord_event  5,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
 
 	db 16 ; bg events
 	bg_event  2,  1, BGEVENT_READ, ElmsLabHealingMachine
