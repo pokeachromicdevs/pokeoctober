@@ -74,6 +74,7 @@ ElmsLab_MapScripts:
 	writetext SilverEmailShock
 	closetext
 	turnobject ELMSLAB_ELM, RIGHT
+	opentext
 	writetext ElmText_MissionFromMrPokemon
 	waitbutton
 	closetext
