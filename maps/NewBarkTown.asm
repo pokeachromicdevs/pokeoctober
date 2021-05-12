@@ -391,35 +391,36 @@ NewBarkTownRivalText1:
 	
 	para "Today's the day we"
 	line "get our first"
-	
-	para "#MON, remember?"
+	cont "#MON, remember?"
 	done
 
 NewBarkTownRivalText2:
 	text "Tch, don't get too"
 	line "cocky. I could" 
-	
-	para "beat you any day!"
+	cont "beat you any day!"
+
 	para "Anyways… "
 
-	
 	para "Well, you, uhh…"
-	
+
 	para "What is it that"
 	line "you call your" 
-	
-	para "mother again?"
-	done
-	
+	cont "mother again?"
+	prompt
+
 NewBarkTownRivalText3:
 	text "Bahaha!"
+
 	para "Don't make me"
 	line "laugh!"
+
 	para "Calling her"
 	line "something so"
 	cont "childish is"
-	para "hilarious!"
+	cont "hilarious!"
+
 	para "Welp, see ya!"
+
 	para "I'm gonna head off"
 	line "to ELM's!"
 	done
