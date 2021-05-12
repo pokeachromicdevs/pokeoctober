@@ -7,13 +7,14 @@
 	const ELMENTRANCE_SILVER
 
 ElmsLab_MapScripts:
-	db 7 ; scene scripts
-	scene_script .MeetElm ; SCENE_DEFAULT
+	db 8 ; scene scripts
+	scene_script .DummyScene1 ; SCENE_DEFAULT
+	scene_script .MeetElm ; SCENE_MEETELM
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_CANT_LEAVE
-	scene_script .DummyScene2 ; SCENE_ELMSLAB_NOTHING
-	scene_script .DummyScene3 ; SCENE_ELMSLAB_MEET_OFFICER
-	scene_script .DummyScene4 ; SCENE_ELMSLAB_UNUSED
-	scene_script .DummyScene5 ; SCENE_ELMSLAB_AIDE_GIVES_POTION
+	scene_script .DummyScene1 ; SCENE_ELMSLAB_NOTHING
+	scene_script .DummyScene1 ; SCENE_ELMSLAB_MEET_OFFICER
+	scene_script .DummyScene1 ; SCENE_ELMSLAB_UNUSED
+	scene_script .DummyScene1 ; SCENE_ELMSLAB_AIDE_GIVES_POTION
 	scene_script .SceneElmsLabEntranceBattle
 
 	db 1 ; callbacks
@@ -26,31 +27,33 @@ ElmsLab_MapScripts:
 .DummyScene1:
 	end
 
-.DummyScene2:
-	end
 
-.DummyScene3:
-	end
-
-.DummyScene4:
-	end
-
-.DummyScene5:
-	end
-	
 .SceneElmsLabEntranceBattle:
 	end
-	
+
 .MoveElmCallback:
 	checkscene
-	iftrue .Skip ; not SCENE_DEFAULT
-	moveobject ELMSLAB_ELM, 3, 4
-.Skip:
+	iffalse .doHide
+	checkscene SCENE_MEETELM
+	iftrue .doMove
+	return
+.doMove
+	moveobject ELMSLAB_ELM, 4, 10
+	return
+.doHide
+	moveobject ELMSLAB_ELM, 99, 99
+	disappear ELMSLAB_ELM
 	return
 
 .WalkUpToElm:
-	applymovement PLAYER, ElmsLab_WalkUpToElmMovement
+	moveobject ELMSLAB_ELM, 4, 10
+	follow ELMSLAB_ELM, PLAYER
+	applymovement ELMSLAB_ELM, ElmsLab_WalkUpToPCMovement
+	stopfollow
+	applymovement ELMSLAB_ELM, ElmsLab_WalkUpToPC2Movement
+	applymovement PLAYER, ElmsLab_CantLeaveMovement
 	turnobject ELMSLAB_ELM, RIGHT
+	turnobject PLAYER, LEFT
 	opentext
 	writetext ElmText_Intro
 .MustSayYes:
@@ -226,6 +229,8 @@ LabTryToLeaveScript:
 	end
 
 CyndaquilPokeBallScript:
+	checkscene
+	iffalse LookAtElmPokeBallScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
@@ -256,6 +261,8 @@ CyndaquilPokeBallScript:
 	sjump ElmDirectionsScript
 
 TotodilePokeBallScript:
+	checkscene
+	iffalse LookAtElmPokeBallScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
@@ -284,6 +291,8 @@ TotodilePokeBallScript:
 	sjump ElmDirectionsScript
 
 ChikoritaPokeBallScript:
+	checkscene
+	iffalse LookAtElmPokeBallScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
@@ -633,7 +642,11 @@ ElmsLabBookshelf:
 	jumpstd difficultbookshelf
 	
 ElmsLabSilverScript:
+	checkscene
+	iftrue .letPlayerChoose
 	jumptextfaceplayer ElmsLabSilverText
+.letPlayerChoose
+	jumptextfaceplayer ElmsLabSilverText2
 		
 SilverLeavesLab:
 	step LEFT
@@ -647,6 +660,7 @@ SilverLeavesLab:
 	
 Movement_SilverDownOne:
 	step DOWN
+	return
 	step_end
 	
 Movement_DownOne:
@@ -654,15 +668,17 @@ Movement_DownOne:
 	turn_head UP
 	step_end	
 
-ElmsLab_WalkUpToElmMovement:
+ElmsLab_WalkUpToPCMovement:
 	step UP
 	step UP
 	step UP
 	step UP
 	step UP
 	step UP
-	step UP
-	turn_head LEFT
+	step_end
+ElmsLab_WalkUpToPC2Movement:
+	step LEFT
+	turn_head DOWN
 	step_end
 
 ElmsLab_CantLeaveMovement:
@@ -731,23 +747,35 @@ ElmsLab_ElmToDefaultPositionMovement2:
 	step_end
 
 AfterCyndaquilMovement:
+	step DOWN
+	step LEFT
 	step LEFT
 	step UP
+	step UP
+	step RIGHT
 	turn_head UP
 	step_end
 
 AfterTotodileMovement:
 	step LEFT
+	step DOWN
+	step LEFT
 	step LEFT
 	step UP
+	step UP
+	step RIGHT
 	turn_head UP
 	step_end
 
 AfterChikoritaMovement:
 	step LEFT
 	step LEFT
+	step DOWN
+	step LEFT
 	step LEFT
 	step UP
+	step UP
+	step RIGHT
 	turn_head UP
 	step_end
 	
@@ -764,7 +792,15 @@ ElmsLabSilverText:
 	line "show up!"
 	
 	done
-	
+
+ElmsLabSilverText2:
+	text "I'll let you"
+	line "choose first,"
+	para "'cause I'm a"
+	line "generous kind"
+	cont "of guy!"
+	done
+
 SilverEntranceWinText:
 	text "Wow! I thought my"
 	line "#MON would have"

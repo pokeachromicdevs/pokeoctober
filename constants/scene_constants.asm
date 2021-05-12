@@ -41,12 +41,13 @@ SCENE_FINISHED EQU 1
 
 ; wElmsLabSceneID
 	const_def 1
-	const SCENE_ELMSLAB_CANT_LEAVE            ; 1
-	const SCENE_ELMSLAB_NOTHING               ; 2
-	const SCENE_ELM_ENTRANCE_BATTLE           ; 3
-	const SCENE_ELMSLAB_UNUSED                ; 4
-	const SCENE_ELMSLAB_AIDE_GIVES_POTION     ; 5
-	const SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS ; 6
+	const SCENE_ELMSLAB_MEETELM               ; 1
+	const SCENE_ELMSLAB_CANT_LEAVE            ; 2
+	const SCENE_ELMSLAB_NOTHING               ; 3
+	const SCENE_ELM_ENTRANCE_BATTLE           ; 4
+	const SCENE_ELMSLAB_UNUSED                ; 5
+	const SCENE_ELMSLAB_AIDE_GIVES_POTION     ; 6
+	const SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS ; 7
 
 ; wRoute29SceneID
 	const_def

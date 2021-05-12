@@ -1,3 +1,5 @@
+; TODO: have the rival choose a starter and then battle you
+
 	object_const_def ; object_event constants
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
@@ -58,6 +60,7 @@ ElmStopsYouScene1:
 	checkevent EVENT_ELM_NEW_BARK_TOWN
 	iftrue .skip
 	setevent EVENT_ELM_NEW_BARK_TOWN
+	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEETELM
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
@@ -72,7 +75,6 @@ ElmStopsYouScene1:
 	waitbutton
 	closetext
 	setevent EVENT_RIVAL_NEW_BARK_TOWN
-	setmapscene ELMS_LAB, SCENE_DEFAULT
 	follow NEWBARKTOWN_ELM, PLAYER
 	applymovement NEWBARKTOWN_ELM, ElmTakesPlayerToLab1
 	stopfollow
@@ -89,6 +91,7 @@ ElmStopsYouScene2:
 	checkevent EVENT_ELM_NEW_BARK_TOWN
 	iftrue .skip
 	setevent EVENT_ELM_NEW_BARK_TOWN
+	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEETELM
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
