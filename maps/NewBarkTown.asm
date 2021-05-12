@@ -22,6 +22,7 @@ NewBarkTown_MapScripts:
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
+	setevent EVENT_ELM_APPEARED_NEW_BARK_TOWN
 	return
 	
 NewBarkTown_RivalGreets:
@@ -54,6 +55,9 @@ NewBarkTown_RivalGreets:
 	
 
 ElmStopsYouScene1:
+	checkevent EVENT_ELM_NEW_BARK_TOWN
+	iftrue .skip
+	setevent EVENT_ELM_NEW_BARK_TOWN
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
@@ -78,9 +82,13 @@ ElmStopsYouScene1:
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
 	warpfacing UP, ELMS_LAB, 4, 11
+.skip
 	end
 
 ElmStopsYouScene2:
+	checkevent EVENT_ELM_NEW_BARK_TOWN
+	iftrue .skip
+	setevent EVENT_ELM_NEW_BARK_TOWN
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
@@ -105,6 +113,7 @@ ElmStopsYouScene2:
 	special FadeOutPalettes
 	setevent ProfElmScript
 	warpfacing UP, ELMS_LAB, 4, 11
+.skip
 	end
 	
 NewBarkTownRivalScript:
@@ -472,5 +481,5 @@ NewBarkTown_MapEvents:
 	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  7, 11, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event  7,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_NEW_BARK_TOWN
+	object_event  7,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_APPEARED_NEW_BARK_TOWN
 	object_event 19,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisher2Script, -1
