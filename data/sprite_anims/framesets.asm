@@ -123,8 +123,8 @@ SpriteAnimFrameData:
 	dorestart
 
 .Frameset_GSTitleTrail:
-	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1,  1
-	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2,  1
+	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1,  2
+	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2,  2
 	dorestart
 
 .Frameset_TextEntryCursor:

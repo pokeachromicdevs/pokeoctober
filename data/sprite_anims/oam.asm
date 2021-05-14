@@ -31,8 +31,8 @@ SpriteAnimOAMData:
 	dbw $10, .OAMData_GSIntroStarter           ; SPRITE_ANIM_OAMSET_GS_INTRO_CHIKORITA
 	dbw $29, .OAMData_GSIntroStarter           ; SPRITE_ANIM_OAMSET_GS_INTRO_CYNDAQUIL
 	dbw $42, .OAMData_GSIntroStarter           ; SPRITE_ANIM_OAMSET_GS_INTRO_TOTODILE
-	dbw $f8, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1
-	dbw $fa, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2
+	dbw $60, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1
+	dbw $62, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2
 	dbw $00, .OAMData_TextEntryCursor          ; SPRITE_ANIM_OAMSET_TEXT_ENTRY_CURSOR
 	dbw $00, .OAMData_TextEntryCursorBig       ; SPRITE_ANIM_OAMSET_TEXT_ENTRY_CURSOR_BIG
 	dbw $00, .OAMData_GSIntroGameFreakLogo     ; SPRITE_ANIM_OAMSET_GS_INTRO_GAMEFREAK_LOGO
@@ -687,7 +687,7 @@ SpriteAnimOAMData:
 
 .OAMData_GSTitleTrail:
 	db 1
-	dsprite -1,  4, -1,  4, $00, 1 | OBP_NUM
+	dsprite 1,  4, -1,  4, $00, 1 | OBP_NUM
 
 .OAMData_EZChatCursor1:
 	db 12

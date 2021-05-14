@@ -18,7 +18,6 @@ InitTitleScreen::
 ; Turn LCD off
 	call DisableLCD
 
-
 ; title screen GFX
 	ld hl, G98T
 	ld de, vTiles1
@@ -28,6 +27,12 @@ InitTitleScreen::
 	ld hl, TitleHoohGFX
 	ld de, vTiles0
 	call Decompress
+
+; copy sparkles
+	ld hl, TitleBetaSparklesGFX
+	ld de, vTiles0 tile $60
+	ld bc, TitleBetaSparklesGFX_End - TitleBetaSparklesGFX
+	call CopyBytes
 
 ; copy map
 	debgcoord 0, 0
@@ -57,12 +62,12 @@ InitTitleScreen::
 ; Update palette colors
 	ld hl, TitleScreenPalettes
 	ld de, wBGPals2
-	ld bc, 7 palettes
+	ld bc, 6 palettes
 	call CopyBytes
 
-	ld hl, TitleScreenPalettes palette 5
+	ld hl, TitleScreenPalettes palette 6
 	ld de, wOBPals2
-	ld bc, 1 palettes
+	ld bc, 2 palettes
 	call CopyBytes
 
 ; Restore WRAM bank
@@ -130,9 +135,8 @@ RunTitleScreen::
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-
 	farcall PlaySpriteAnimations
-
+	call UpdateTitleTrailSprite
 	call DelayFrame
 	and a
 	ret
@@ -151,6 +155,65 @@ ScrollTitleScreenClouds:
 	ld bc, $28
 	call ByteFill
 	ret
+
+UpdateTitleTrailSprite:
+	; If bit 0 or 1 of [wTitleScreenTimer] is set, we don't need to be here.
+	ld a, [wTitleScreenTimer]
+	and %00000011
+	ret nz
+;IF DEF(_GOLD)
+	ld bc, wSpriteAnim2
+	ld hl, SPRITEANIMSTRUCT_FRAME
+	add hl, bc
+	ld l, [hl]
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	ld de, .TitleTrailCoords
+	add hl, de
+	; If bit 2 of [wTitleScreenTimer] is set, get the second coords; else, get the first coords
+	ld a, [wTitleScreenTimer]
+	and %00000100
+	srl a
+	srl a
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	and a
+	ret z
+	ld e, a
+	ld d, [hl]
+;ELIF DEF(_SILVER)
+;	depixel 15, 11, 4, 0
+;ENDC
+	ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
+	call _InitSpriteAnimStruct
+	ret
+
+
+.TitleTrailCoords:
+trail_coords: MACRO
+rept _NARG / 2
+_dx = 4
+if \1 == 0 && \2 == 0
+_dx = 0
+endc
+	dbpixel \1, \2, _dx, 0
+	shift
+	shift
+endr
+ENDM
+	; frame 0 y, x; frame 1 y, x
+	trail_coords 11, 10,  0,  0
+	trail_coords 11, 13, 11, 11
+	trail_coords 11, 13, 11, 15
+	trail_coords 11, 17, 11, 15
+	trail_coords  0,  0, 11, 15
+	trail_coords  0,  0, 11, 11
+
+
 
 TitleScreenScene:
 	ld e, a
@@ -313,6 +376,10 @@ G98M_A_End:
 
 TitleHoohGFX:
 INCLUDE "gfx/title/98/HOUOUOBJ.DAT"
+
+TitleBetaSparklesGFX:
+INCLUDE "gfx/title/98/beta_sparkles.asm"
+TitleBetaSparklesGFX_End:
 
 TitleScreenPalettes:
 INCLUDE "gfx/title/title.pal"
