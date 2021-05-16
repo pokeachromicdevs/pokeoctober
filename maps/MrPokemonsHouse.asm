@@ -28,7 +28,7 @@ MrPokemonsHouse_MapScripts:
 	writetext MrPokemonIntroText2
 	buttonsound
 	waitsfx
-	giveitem MYSTERY_EGG
+	giveitem ELMS_EGG
 	writetext MrPokemonsHouse_GotEggText
 	playsound SFX_KEY_ITEM
 	waitsfx
@@ -185,7 +185,7 @@ MrPokemonIntroText2:
 
 MrPokemonsHouse_GotEggText:
 	text "<PLAYER> received"
-	line "MYSTERY EGG."
+	line "OAK'S PARCEL."
 	done
 
 MrPokemonIntroText3:

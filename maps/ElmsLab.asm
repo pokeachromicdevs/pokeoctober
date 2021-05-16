@@ -402,12 +402,12 @@ ElmAfterTheftDoneScript:
 
 ElmAfterTheftScript:
 	writetext ElmAfterTheftText1
-	checkitem MYSTERY_EGG
+	checkitem ELMS_EGG
 	iffalse ElmAfterTheftDoneScript
 	buttonsound
 	writetext ElmAfterTheftText2
 	waitbutton
-	takeitem MYSTERY_EGG
+	takeitem ELMS_EGG
 	scall ElmJumpBackScript1
 	writetext ElmAfterTheftText3
 	waitbutton
