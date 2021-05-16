@@ -105,15 +105,14 @@ Landmarks:
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
 
-NewBarkTownName:     db "NEW BARK¯TOWN@"       ; Shizuoka
+NewBarkTownName:     db "SILENT¯TOWN@"       ; Shizuoka
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"    ; Nagoya
 VioletCityName:      db "VIOLET CITY@"        ; Nara
 AzaleaTownName:      db "AZALEA TOWN@"        ; Arida
-						; Shingu?
+CianwoodCityName:    db "ALDER¯TOWN@"       ; XXX: Substitute Cianwood for Shingu 
 GoldenrodCityName:   db "GOLDENROD¯CITY@"      ; Osaka
 EcruteakCityName:    db "ECRUTEAK¯CITY@"       ; Kyoto
 OlivineCityName:     db "OLIVINE¯CITY@"        ; Kobe
-CianwoodCityName:    db "CIANWOOD¯CITY@"       ; XXX does not exist
 MahoganyTownName:    db "MAHOGANY¯TOWN@"       ; Iga
 BlackthornCityName:  db "BLACKTHORN¯CITY@"     ; Yamanashi
 LakeOfRageName:      db "LAKE OF¯RAGE@"        ; Biwako / lake Biwa
