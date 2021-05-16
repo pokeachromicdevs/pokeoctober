@@ -1101,8 +1101,15 @@ ReturnToBattle_UseBall:
 	ret
 
 TownMapEffect:
-	farcall PokegearMap
-	ret
+	call FadeToMenu
+	farcall _TownMap
+	call ExitMenu
+	xor a
+	ldh [hBGMapMode], a
+	farcall Pack_InitGFX
+	farcall WaitBGMap_DrawPackGFX
+	farcall Pack_InitColors
+ 	ret
 
 BicycleEffect:
 	farcall BikeFunction

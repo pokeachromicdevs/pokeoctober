@@ -5,7 +5,7 @@ ItemDescriptions:
 	dw BrightpowderDesc
 	dw GreatBallDesc
 	dw PokeBallDesc
-	dw QuestionMarkDesc
+	dw TownMapDesc
 	dw BicycleDesc
 	dw MoonStoneDesc
 	dw AntidoteDesc
@@ -916,3 +916,7 @@ MewMailDesc:
 HoneyPotDesc:
 	db   "A pot for storing"
 	next "SWEET HONEY.@"
+	
+TownMapDesc:
+	db "Use to view the"
+	next "map.@"
