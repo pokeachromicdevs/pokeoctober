@@ -130,7 +130,7 @@ WhirlIslandsName:    db "WHIRL¯ISLANDS@"
 MtMortarName:        db "MT.MORTAR@"
 DragonsDenName:      db "DRAGON'S¯DEN@"
 IcePathName:         db "ICE PATH@"
-NotApplicableName:   db "N/A@" ; "オバケやしき" ("HAUNTED HOUSE") in Japanese
+NotApplicableName:   db "HAUNTED¯HOUSE@"
 PalletTownName:      db "PALLET TOWN@"		; Masara
 ViridianCityName:    db "VIRIDIAN¯CITY@"	; Tokiwa
 PewterCityName:      db "PEWTER CITY@"		; Nibi
