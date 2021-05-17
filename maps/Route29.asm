@@ -112,13 +112,13 @@ CatchingTutorialDudeScript:
 	writetext CatchingTutorialDeclinedText
 	waitbutton
 	closetext
-	end
+	end  
 
 Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball ELMS_EGG
+	itemball POTION
 
 DudeMovementData1a:
 	step UP
@@ -203,7 +203,7 @@ Route29Sign1Text:
 	text "ROUTE 29"
 
 	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
+	line "SILENT TOWN"
 	done
 
 Route29_MapEvents:

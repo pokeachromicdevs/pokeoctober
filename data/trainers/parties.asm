@@ -2292,11 +2292,11 @@ SabrinaGroup:
 
 BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (1)
-	db "DON@", TRAINERTYPE_NORMAL
+	db "MAX@", TRAINERTYPE_NORMAL
 	db 3
-	dw CATERPIE
-	db 3
-	dw CATERPIE
+	dw VENONAT
+	db 4
+	dw LEDYBA
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (2)

@@ -922,5 +922,5 @@ TownMapDesc:
 	next "map.@"
 	
 OaksParcelDesc:
-	db "Delivery from PROF." 
-	next "OAK to PROF. ELM."
+	db "Package from PROF." 
+	next "OAK to PROF. ELM.@"

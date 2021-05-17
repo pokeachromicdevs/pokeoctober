@@ -326,7 +326,7 @@ KRIS EQU __enum__
 	const SABRINA1
 
 	trainerclass BUG_CATCHER ; 24
-	const DON
+	const MAX
 	const ROB
 	const ED
 	const WADE1
