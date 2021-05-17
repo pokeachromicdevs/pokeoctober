@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball TOWN_MAP
+	itemball ELMS_EGG
 
 DudeMovementData1a:
 	step UP

@@ -28,7 +28,7 @@ MrPokemonsHouse_MapScripts:
 	writetext MrPokemonIntroText2
 	buttonsound
 	waitsfx
-	giveitem ELMS_EGG
+	giveitem OAKS_PARCEL
 	writetext MrPokemonsHouse_GotEggText
 	playsound SFX_KEY_ITEM
 	waitsfx

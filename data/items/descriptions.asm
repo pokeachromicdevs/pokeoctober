@@ -44,7 +44,7 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw QuestionMarkDesc
+	dw OaksParcelDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
@@ -920,3 +920,7 @@ HoneyPotDesc:
 TownMapDesc:
 	db "Use to view the"
 	next "map.@"
+	
+OaksParcelDesc:
+	db "Delivery from PROF." 
+	next "OAK to PROF. ELM."
