@@ -5272,5 +5272,11 @@ MysticalmanGroup:
 	dw ELECTRODE
 	dw SCREECH, SONICBOOM, THUNDER, ROLLOUT
 	db -1 ; end
+	
+InstructorGroup:
+	next_list_item ; INSTRUCTOR (1)
+	db "STANLEY@", TRAINERTYPE_NORMAL
+	db  5, HOOTHOOT
+	db -1 ; end
 
 	end_list_items
