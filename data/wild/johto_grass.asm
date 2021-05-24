@@ -1201,9 +1201,9 @@ JohtoGrassWildMons:
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
 	; day
-	dbw 2, KATU
-	dbw 2, KATU
-	dbw 3, KATU
+	dbw 2, COINPUR
+	dbw 2, COINPUR
+	dbw 3, COINPUR
 	dbw 3, KATU
 	dbw 2, KATU
 	dbw 3, KATU

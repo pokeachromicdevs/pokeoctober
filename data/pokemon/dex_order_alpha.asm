@@ -31,6 +31,7 @@ AlphabeticalPokedexOrder:
 	dw CLEFAIRY
 	dw CLEFFA
 	dw CLOYSTER
+	dw COINPUR
 	dw CORSOLA
 	dw CROBAT
 	dw CROCONAW
@@ -130,7 +131,6 @@ AlphabeticalPokedexOrder:
 	dw MARILL
 	dw MAROWAK
 	dw MEGANIUM
-	dw MEOWSY
 	dw MEOWTH
 	dw METAPOD
 	dw MEW

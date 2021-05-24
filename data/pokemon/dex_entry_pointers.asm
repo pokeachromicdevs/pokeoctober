@@ -251,5 +251,5 @@ PokedexDataPointerTable:
 	dba LugiaPokedexEntry
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
-	dba MeowsyPokedexEntry
+	dba CoinpurPokedexEntry
 	dba KatuPokedexEntry

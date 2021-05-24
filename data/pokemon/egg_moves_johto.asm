@@ -101,7 +101,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
-	dw MeowsyEggMoves
+	dw CoinpurEggMoves
 	dw NoEggMoves2
 
 ChikoritaEggMoves:
@@ -470,7 +470,7 @@ LarvitarEggMoves:
 NoEggMoves2:
 	dw -1 ; end
 	
-MeowsyEggMoves:
+CoinpurEggMoves:
 	dw SPITE
 	dw CHARM
 	dw HYPNOSIS

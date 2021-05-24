@@ -254,5 +254,5 @@ PokemonNames::
 	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"
 	db "CELEBI@@@@"
-	db "MEOWSY@@@@"
+	db "COINPUR@@@"
 	db "KATU@@@@@@"

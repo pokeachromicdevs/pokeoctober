@@ -252,5 +252,5 @@ MonMenuIcons:
 	db ICON_LUGIA       ; LUGIA
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
-    db ICON_FOX         ; MEOWSY
+    db ICON_FOX         ; COINPUR
 	db ICON_BIRD        ; KATU

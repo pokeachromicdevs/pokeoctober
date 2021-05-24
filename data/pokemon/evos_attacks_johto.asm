@@ -101,7 +101,7 @@ EvosAttacksPointers2::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
-	dw MeowsyEvosAttacks
+	dw CoinpurEvosAttacks
 	dw KatuEvosAttacks
 
 ChikoritaEvosAttacks:
@@ -1405,7 +1405,7 @@ CelebiEvosAttacks:
 	dbw 50, PERISH_SONG
 	db 0 ; no more level-up moves
 	
-MeowsyEvosAttacks:
+CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH

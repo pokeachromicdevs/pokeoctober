@@ -136,7 +136,7 @@ NewPokedexOrder:
 	dw DUGTRIO
 	dw MANKEY
 	dw PRIMEAPE
-	dw MEOWSY
+	dw COINPUR
 	dw MEOWTH
 	dw PERSIAN
 	dw PSYDUCK
