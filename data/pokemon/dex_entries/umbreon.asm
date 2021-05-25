@@ -1,10 +1,9 @@
-	db "MOONLIGHT@" ; species name
+	db "POISON@" ; species name
 	dw 303, 600 ; height, weight
 
-	db   "On the night of a"
-	next "full moon, or when"
-	next "it gets excited,"
+	db   "When agitated, this"
+	next "#MON protects"
+	next "itself by spraying"
 
-	page "the ring patterns"
-	next "on its body glow"
-	next "yellow.@"
+	page "poisonous sweat"
+	next "from its pores."
