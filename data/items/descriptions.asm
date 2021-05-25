@@ -49,7 +49,7 @@ ItemDescriptions:
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw QuestionMarkDesc
+	dw SnakeskinDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
@@ -924,3 +924,7 @@ TownMapDesc:
 OaksParcelDesc:
 	db "Package from PROF." 
 	next "OAK to PROF. ELM.@"
+	
+SnakeskinDesc:
+	db "Prevents poisoning."
+	next "(HOLD)@"

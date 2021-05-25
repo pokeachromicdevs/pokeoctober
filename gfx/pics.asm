@@ -35,8 +35,6 @@ VenusaurFrontpic:    INCBIN "gfx/pokemon/venusaur/front.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 TyphlosionFrontpic:  INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"
-InstructorPic:       INCBIN "gfx/trainers/instructor.2bpp.lz"
-
 
 SECTION "Pics 2", ROMX
 
@@ -710,3 +708,4 @@ MeowsyBackpic:  INCBIN "gfx/pokemon/meowsy/back.2bpp.lz"
 WooperFrontpic: INCBIN "gfx/pokemon/wooper/front.animated.2bpp.lz"
 KatuFrontpic:   INCBIN "gfx/pokemon/katu/front.animated.2bpp.lz"
 KatuBackpic:    INCBIN "gfx/pokemon/katu/back.2bpp.lz"
+InstructorPic:  INCBIN "gfx/trainers/instructor.2bpp.lz"
