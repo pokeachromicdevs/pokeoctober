@@ -340,6 +340,7 @@ SpinarakEvosAttacks:
 	dbw 17, NIGHT_SHADE
 	dbw 23, LEECH_LIFE
 	dbw 30, FURY_SWIPES
+	dbw 34, PIN_MISSILE
 	dbw 37, SPIDER_WEB
 	dbw 45, AGILITY
 	dbw 53, PSYCHIC_M
@@ -356,6 +357,7 @@ AriadosEvosAttacks:
 	dbw 17, NIGHT_SHADE
 	dbw 25, LEECH_LIFE
 	dbw 34, FURY_SWIPES
+	dbw 40, PIN_MISSILE
 	dbw 43, SPIDER_WEB
 	dbw 53, AGILITY
 	dbw 63, PSYCHIC_M
