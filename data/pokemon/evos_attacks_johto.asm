@@ -986,11 +986,14 @@ UrsaringEvosAttacks:
 SlugmaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 38, MAGCARGO
 	db 0 ; no more evolutions
+	dbw 1, YAWN
 	dbw 1, SMOG
-	dbw 8, EMBER
-	dbw 15, ROCK_THROW
-	dbw 22, HARDEN
-	dbw 29, AMNESIA
+	dbw 6, EMBER
+	dbw 8, ROCK_THROW
+	dbw 13, HARDEN
+	dbw 19, RECOVER
+	dbw 22, ANCIENTPOWER
+	dbw 27, AMNESIA
 	dbw 36, FLAMETHROWER
 	dbw 43, ROCK_SLIDE
 	dbw 50, BODY_SLAM
@@ -998,12 +1001,14 @@ SlugmaEvosAttacks:
 
 MagcargoEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, YAWN
 	dbw 1, SMOG
 	dbw 1, EMBER
 	dbw 1, ROCK_THROW
 	dbw 8, EMBER
 	dbw 15, ROCK_THROW
 	dbw 22, HARDEN
+	dbw 25, RECOVER
 	dbw 29, AMNESIA
 	dbw 36, FLAMETHROWER
 	dbw 48, ROCK_SLIDE
