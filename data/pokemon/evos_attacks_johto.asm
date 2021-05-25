@@ -783,11 +783,12 @@ GirafarigEvosAttacks:
 PinecoEvosAttacks:
 	dbbw EVOLVE_LEVEL, 31, FORRETRESS
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ABSORB
 	dbw 1, PROTECT
 	dbw 8, SELFDESTRUCT
 	dbw 15, TAKE_DOWN
 	dbw 22, RAPID_SPIN
+	dbw 25, MEGA_DRAIN
 	dbw 29, BIDE
 	dbw 36, EXPLOSION
 	dbw 43, SPIKES
@@ -796,12 +797,13 @@ PinecoEvosAttacks:
 
 ForretressEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ABSORB
 	dbw 1, PROTECT
 	dbw 1, SELFDESTRUCT
 	dbw 8, SELFDESTRUCT
 	dbw 15, TAKE_DOWN
 	dbw 22, RAPID_SPIN
+	dbw 25, MEGA_DRAIN
 	dbw 29, BIDE
 	dbw 39, EXPLOSION
 	dbw 49, SPIKES
