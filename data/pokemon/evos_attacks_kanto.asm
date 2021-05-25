@@ -672,12 +672,13 @@ ZubatEvosAttacks:
 	dbbw EVOLVE_LEVEL, 22, GOLBAT
 	db 0 ; no more evolutions
 	dbw 1, LEECH_LIFE
+	dbw 3, HAZE
 	dbw 6, SUPERSONIC
 	dbw 12, BITE
 	dbw 19, CONFUSE_RAY
 	dbw 27, WING_ATTACK
 	dbw 36, MEAN_LOOK
-	dbw 46, HAZE
+	dbw 46, FLY
 	db 0 ; no more level-up moves
 
 GolbatEvosAttacks:
@@ -686,12 +687,13 @@ GolbatEvosAttacks:
 	dbw 1, SCREECH
 	dbw 1, LEECH_LIFE
 	dbw 1, SUPERSONIC
+	dbw 1, HAZE
 	dbw 6, SUPERSONIC
 	dbw 12, BITE
 	dbw 19, CONFUSE_RAY
 	dbw 30, WING_ATTACK
 	dbw 42, MEAN_LOOK
-	dbw 55, HAZE
+	dbw 55, FLY
 	db 0 ; no more level-up moves
 
 OddishEvosAttacks:
