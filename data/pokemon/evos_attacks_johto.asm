@@ -1044,13 +1044,16 @@ PiloswineEvosAttacks:
 CorsolaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 7, HARDEN
-	dbw 13, BUBBLE
-	dbw 19, RECOVER
-	dbw 25, BUBBLEBEAM
-	dbw 31, SPIKE_CANNON
-	dbw 37, MIRROR_COAT
-	dbw 43, ANCIENTPOWER
+	dbw 1, HARDEN
+	dbw 4, BUBBLE
+	dbw 8, RECOVER
+	dbw 10, BUBBLEBEAM
+	dbw 17, ANCIENTPOWER
+	dbw 20, SPIKE_CANNON
+	dbw 29, ENDURE
+	dbw 35, ROCK_HEAD
+	dbw 38, MIRROR_COAT
+	dbw 41, FLAIL
 	db 0 ; no more level-up moves
 
 RemoraidEvosAttacks:
