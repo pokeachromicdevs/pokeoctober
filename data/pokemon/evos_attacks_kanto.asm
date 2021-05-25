@@ -823,27 +823,33 @@ MeowthEvosAttacks:
 	dbbw EVOLVE_LEVEL, 28, PERSIAN
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
-	dbw 1, GROWL
-	dbw 11, BITE
-	dbw 20, PAY_DAY
-	dbw 28, FAINT_ATTACK
-	dbw 35, SCREECH
-	dbw 41, FURY_SWIPES
-	dbw 46, SLASH
-	db 0 ; no more level-up moves
+    dbw 1, GROWL
+    dbw 13, BITE 
+    dbw 25, PAY_DAY
+    dbw 32, FAINT_ATTACK
+    dbw 35, ATTRACT
+    dbw 38, SCREECH
+    dbw 45, FURY_SWIPES
+    dbw 50, GLARE
+    dbw 55, BODY_SLAM
+    dbw 60, SLASH
+    db 0 ; no more level-up moves
 
 PersianEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
-	dbw 1, GROWL
-	dbw 1, BITE
-	dbw 11, BITE
-	dbw 20, PAY_DAY
-	dbw 29, FAINT_ATTACK
-	dbw 38, SCREECH
-	dbw 46, FURY_SWIPES
-	dbw 53, SLASH
-	db 0 ; no more level-up moves
+    dbw 1, GROWL
+    dbw 17, BITE 
+    dbw 29, PAY_DAY
+    dbw 38, FAINT_ATTACK
+    dbw 40, ATTRACT
+    dbw 45, SCREECH
+    dbw 52, FURY_SWIPES
+    dbw 58, GLARE
+    dbw 62, BODY_SLAM
+    dbw 68, SLASH
+    db 0 ; no more level-up moves
+
 
 PsyduckEvosAttacks:
 	dbbw EVOLVE_LEVEL, 33, GOLDUCK

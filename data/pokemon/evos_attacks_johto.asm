@@ -705,16 +705,17 @@ EspeonEvosAttacks:
 
 UmbreonEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, TAIL_WHIP
-	dbw 8, SAND_ATTACK
-	dbw 16, PURSUIT
-	dbw 23, QUICK_ATTACK
-	dbw 30, CONFUSE_RAY
-	dbw 36, FAINT_ATTACK
-	dbw 42, MEAN_LOOK
-	dbw 47, SCREECH
-	dbw 52, MOONLIGHT
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 6, SAND_ATTACK
+	db 10, ACID
+	db 14, QUICK_ATTACK
+	db 18, BITE
+	db 23, SLUDGE
+	db 27, SCREECH
+	db 33, TOXIC
+	db 38, MOONLIGHT
+	db 45, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 MurkrowEvosAttacks:
