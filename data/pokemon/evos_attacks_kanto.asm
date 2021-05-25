@@ -1431,6 +1431,8 @@ OnixEvosAttacks:
 	dbw 27, RAGE
 	dbw 36, SANDSTORM
 	dbw 40, SLAM
+	dbw 43, ROCK_HEAD
+	dbw 44, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 DrowzeeEvosAttacks:

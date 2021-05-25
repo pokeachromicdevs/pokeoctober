@@ -855,6 +855,7 @@ GligarEvosAttacks:
 	dbw 28, FAINT_ATTACK
 	dbw 36, SLASH
 	dbw 44, SCREECH
+	dbw 47, SWORDS_DANCE
 	dbw 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
@@ -868,7 +869,9 @@ SteelixEvosAttacks:
 	dbw 27, RAGE
 	dbw 36, SANDSTORM
 	dbw 40, SLAM
-	dbw 49, CRUNCH
+	dbw 46, ROCK_HEAD
+	dbw 50, CRUNCH
+	dbw 54, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 SnubbullEvosAttacks:
@@ -883,6 +886,7 @@ SnubbullEvosAttacks:
 	dbw 26, ROAR
 	dbw 34, RAGE
 	dbw 43, TAKE_DOWN
+	dbw 49, CRUNCH
 	db 0 ; no more level-up moves
 
 GranbullEvosAttacks:
@@ -896,6 +900,7 @@ GranbullEvosAttacks:
 	dbw 28, ROAR
 	dbw 38, RAGE
 	dbw 51, TAKE_DOWN
+	dbw 55, CRUNCH
 	db 0 ; no more level-up moves
 
 QwilfishEvosAttacks:
