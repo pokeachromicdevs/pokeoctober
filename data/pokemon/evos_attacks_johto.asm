@@ -738,11 +738,13 @@ UmbreonEvosAttacks:
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
-	dbw 11, PURSUIT
-	dbw 16, HAZE
-	dbw 26, NIGHT_SHADE
-	dbw 31, FAINT_ATTACK
-	dbw 41, MEAN_LOOK
+	dbw 7, PURSUIT
+	dbw 11, HAZE
+	dbw 15, WING_ATTACK
+	dbw 21, NIGHT_SHADE
+	dbw 25, FAINT_ATTACK
+	dbw 31, MEAN_LOOK
+	dbw 35, FLY
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
@@ -832,11 +834,16 @@ DunsparceEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, RAGE
 	dbw 5, DEFENSE_CURL
-	dbw 13, GLARE
-	dbw 18, SPITE
-	dbw 26, PURSUIT
-	dbw 30, SCREECH
-	dbw 38, TAKE_DOWN
+	dbw 13, MUD_SLAP
+	dbw 16, ROLLOUT
+	dbw 20, GLARE
+	dbw 24, ANCIENTPOWER
+	dbw 28, SPITE
+	dbw 32, YAWN
+	dbw 36, BODY_SLAM
+	dbw 40, SCREECH
+	dbw 44, TAKE_DOWN
+	dbw 52, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:
