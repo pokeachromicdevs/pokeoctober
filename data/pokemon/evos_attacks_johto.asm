@@ -101,8 +101,6 @@ EvosAttacksPointers2::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
-	dw CoinpurEvosAttacks
-	dw KatuEvosAttacks
 
 ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, BAYLEEF
@@ -311,7 +309,7 @@ LedybaEvosAttacks:
 	dbw 36, SWIFT
 	dbw 43, AGILITY
 	dbw 50, FLY
-	dbw 55 DOUBLE_EDGE
+	dbw 55, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 LedianEvosAttacks:
@@ -389,7 +387,7 @@ ChinchouEvosAttacks:
 	dbw 20, SPARK
 	dbw 28, WATERFALL
 	dbw 34, TAKE_DOWN
-	dbw 49 THUNDERBOLT
+	dbw 49, THUNDERBOLT
 	dbw 55, SURF
 	dbw 60, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -405,7 +403,7 @@ LanturnEvosAttacks:
 	dbw 25, SPARK
 	dbw 33, WATERFALL
 	dbw 45, TAKE_DOWN
-	dbw 54 THUNDERBOLT
+	dbw 54, THUNDERBOLT
 	dbw 62, SURF
 	dbw 66, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -841,7 +839,6 @@ DunsparceEvosAttacks:
 	dbw 20, GLARE
 	dbw 24, ANCIENTPOWER
 	dbw 28, SPITE
-	dbw 32, YAWN
 	dbw 36, BODY_SLAM
 	dbw 40, SCREECH
 	dbw 44, TAKE_DOWN
@@ -1002,7 +999,6 @@ UrsaringEvosAttacks:
 SlugmaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 38, MAGCARGO
 	db 0 ; no more evolutions
-	dbw 1, YAWN
 	dbw 1, SMOG
 	dbw 6, EMBER
 	dbw 8, ROCK_THROW
@@ -1017,7 +1013,6 @@ SlugmaEvosAttacks:
 
 MagcargoEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, YAWN
 	dbw 1, SMOG
 	dbw 1, EMBER
 	dbw 1, ROCK_THROW
@@ -1464,33 +1459,4 @@ CelebiEvosAttacks:
 	dbw 30, FUTURE_SIGHT
 	dbw 40, BATON_PASS
 	dbw 50, PERISH_SONG
-	db 0 ; no more level-up moves
-	
-CoinpurEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
-	db 0 ; no more evolutions
-	dbw 1, SCRATCH
-	dbw 1, GROWL
-	dbw 11, BITE 
-	dbw 20, PAY_DAY
-	dbw 28, FAINT_ATTACK
-	dbw 32, ATTRACT
-	dbw 35, SCREECH
-	dbw 41, FURY_SWIPES
-	dbw 45, GLARE
-	dbw 50, BODY_SLAM
-	dbw 55, SLASH
-	db 0 ; no more level-up moves
-	
-KatuEvosAttacks:
-	dbbw EVOLVE_LEVEL, 40, XATU
-	db 0 ; no more evolutions
-	dbw 1, PECK
-	dbw 1, LEER
-	dbw 1, NIGHT_SHADE
-	dbw 10, NIGHT_SHADE
-	dbw 15, TELEPORT
-	dbw 25, FUTURE_SIGHT
-	dbw 45, CONFUSE_RAY
-	dbw 55, PSYCHIC_M
 	db 0 ; no more level-up moves
