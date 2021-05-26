@@ -686,9 +686,9 @@ WooperEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 11, SLAM
 	dbw 21, AMNESIA
-	dbw 25, YAWN
+	dbw 25, RAIN_DANCE
 	dbw 31, EARTHQUAKE
-	dbw 41, RAIN_DANCE
+	dbw 41, SURF
 	dbw 51, MIST
 	dbw 51, HAZE
 	db 0 ; no more level-up moves
@@ -699,9 +699,9 @@ QuagsireEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 11, SLAM
 	dbw 23, AMNESIA
-	dbw 28, YAWN
+	dbw 28, RAIN_DANCE
 	dbw 35, EARTHQUAKE
-	dbw 47, RAIN_DANCE
+	dbw 47, SURF
 	dbw 59, MIST
 	dbw 59, HAZE
 	db 0 ; no more level-up moves
