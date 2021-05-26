@@ -241,6 +241,7 @@ ROMX $5c
 	"Mobile 5C"
 ROMX $5d
 	"Crystal Phone Text 2"
+	"Enemy Trainer Parties 3"
 ROMX $5e
 	"UpdateBattleHUDs"
 	"Songs 5"
@@ -294,6 +295,8 @@ ROMX $74
 	"Pokedex Entries 193-251"
 ROMX $75
 	"16-bit ID stuff"
+ROMX $76
+	"Pic Animations 4"
 ROMX $77
 	"bank77"
 	"Tileset Data 7"
@@ -304,6 +307,7 @@ ROMX $79
 	"Events"
 ROMX $7b
 	"Battle Tower Text"
+	"Evolutions and Attacks 3"
 ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d

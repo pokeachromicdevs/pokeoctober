@@ -457,7 +457,6 @@ INCLUDE "gfx/pokemon/unown_bitmasks.asm"
 
 SECTION "Pic Animations 2", ROMX
 
-INCLUDE "gfx/pokemon/frame_pointers.asm"
 INCLUDE "gfx/pokemon/kanto_frames.asm"
 
 
@@ -473,6 +472,10 @@ INCLUDE "gfx/pokemon/johto_frames.asm"
 INCLUDE "gfx/pokemon/unown_frame_pointers.asm"
 INCLUDE "gfx/pokemon/unown_frames.asm"
 
+SECTION "Pic Animations 4", ROMX
+
+INCLUDE "gfx/pokemon/frame_pointers.asm"
+INCLUDE "gfx/pokemon/beytah_frames.asm"
 
 SECTION "bank38", ROMX
 
