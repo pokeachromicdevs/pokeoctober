@@ -688,6 +688,7 @@ WooperEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 11, SLAM
 	dbw 21, AMNESIA
+	dbw 25, YAWN
 	dbw 31, EARTHQUAKE
 	dbw 41, RAIN_DANCE
 	dbw 51, MIST
@@ -700,6 +701,7 @@ QuagsireEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 11, SLAM
 	dbw 23, AMNESIA
+	dbw 28, YAWN
 	dbw 35, EARTHQUAKE
 	dbw 47, RAIN_DANCE
 	dbw 59, MIST
@@ -790,13 +792,13 @@ GirafarigEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 1, CONFUSION
+	dbw 1, DOUBLE_KICK
 	dbw 1, STOMP
-	dbw 7, CONFUSION
+	dbw 7, SPITE
 	dbw 13, STOMP
 	dbw 20, AGILITY
 	dbw 30, BATON_PASS
-	dbw 41, PSYBEAM
+	dbw 41, SHADOW_BALL
 	dbw 54, CRUNCH
 	db 0 ; no more level-up moves
 
