@@ -1209,9 +1209,9 @@ JohtoGrassWildMons:
 	dbw 3, KATU
 	dbw 3, KATU
 	; nite
-	dbw 2, STARMIE
-	dbw 2, STARYU
-	dbw 3, STARYU
+	dbw 2, COINPUR
+	dbw 2, COINPUR
+	dbw 3, COINPUR
 	dbw 3, STARMIE
 	dbw 2, PICHU
 	dbw 3, FURRET
