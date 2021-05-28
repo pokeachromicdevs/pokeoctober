@@ -459,6 +459,7 @@ EkansEvosAttacks:
 	dbw 1, WRAP
 	dbw 1, LEER
 	dbw 9, POISON_STING
+	dbw 12, PURSUIT
 	dbw 15, BITE
 	dbw 23, GLARE
 	dbw 29, SCREECH
@@ -473,9 +474,11 @@ ArbokEvosAttacks:
 	dbw 1, POISON_STING
 	dbw 1, BITE
 	dbw 9, POISON_STING
+	dbw 12, PURSUIT
 	dbw 15, BITE
 	dbw 25, GLARE
 	dbw 33, SCREECH
+	dbw 40, CRUNCH
 	dbw 43, ACID
 	dbw 51, HAZE
 	db 0 ; no more level-up moves

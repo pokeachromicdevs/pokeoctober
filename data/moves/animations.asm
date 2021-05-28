@@ -280,6 +280,7 @@ BattleAnimations::
 	dw BattleAnim_RockHead
 	dw BattleAnim_WaterSport
 	dw BattleAnim_BrightMoss
+	dw BattleAnim_StrongArm
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -4663,6 +4664,50 @@ BattleAnim_WaterSport:
 	anim_obj ANIM_OBJ_01, 17, 0, 7, 0, $0
 	anim_wait 8
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
+	
+BattleAnim_StrongArm:
+	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_AGILITY, 8, 24, $10
+	anim_obj ANIM_OBJ_AGILITY, 8, 48, $2
+	anim_obj ANIM_OBJ_AGILITY, 8, 88, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_AGILITY, 8, 32, $6
+	anim_obj ANIM_OBJ_AGILITY, 8, 56, $c
+	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
+	anim_obj ANIM_OBJ_AGILITY, 8, 104, $e
+	anim_wait 12
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_bgp $90
+.loop
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_GFX_HIT, 148, 56, $0
+	anim_wait 1
+	anim_obj ANIM_GFX_HIT, 148, 56, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_GFX_HIT, 122, 34, $0
+	anim_wait 1
+	anim_obj ANIM_GFX_HIT, 122, 34, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_GFX_HIT, 132, 64, $0
+	anim_wait 1
+	anim_obj ANIM_GFX_HIT, 132, 64, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_GFX_HIT, 140, 42, $0
+	anim_wait 1
+	anim_obj ANIM_GFX_HIT, 140, 42, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_GFX_HIT, 114, 52, $0
+	anim_wait 1
+	anim_obj ANIM_GFX_HIT, 114, 52, $0
+	anim_wait 2
+	anim_loop 4, .loop
+	anim_wait 16
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

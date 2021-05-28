@@ -261,6 +261,7 @@ MoveDescriptions1:
 	dw RockHeadDescription
 	dw WaterSportDescription
 	dw BrightMossDescription
+	dw StrongArmDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1285,3 +1286,7 @@ WindRideDescription:
 BrightMossDescription:
 	db "Raises accuracy of"
 	next "the user's moves.@"
+	
+StrongArmDescription:
+	db "May raise the"
+	next "user's ATTACK.@"

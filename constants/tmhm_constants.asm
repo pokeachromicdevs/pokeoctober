@@ -74,7 +74,7 @@ ENDM
 	add_hm UPROOT       ; 32
 	add_hm WIND_RIDE    ; 33
 	add_hm WATER_SPORT  ; 34
-	add_hm STRENGTH     ; 35
+	add_hm STRONG_ARM   ; 35
 	add_hm BRIGHT_MOSS  ; 36
 	add_hm WHIRLPOOL    ; 37
 	add_hm WATERFALL    ; 38

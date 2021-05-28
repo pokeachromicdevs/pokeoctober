@@ -255,3 +255,4 @@ MoveNames::
 	db "ROCK HEAD@"
 	db "WATER SPORT@"
 	db "BRIGHT MOSS@"
+	db "STRONG ARM@"

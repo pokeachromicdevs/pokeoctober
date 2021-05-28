@@ -123,7 +123,7 @@ PokemonActionSubmenu:
 	dbw MONMENUITEM_UPROOT,     MonMenu_Uproot
 	dbw MONMENUITEM_WINDRIDE,   MonMenu_WindRide
 	dbw MONMENUITEM_WATERSPORT, MonMenu_WaterSport
-	dbw MONMENUITEM_STRENGTH,   MonMenu_Strength
+	dbw MONMENUITEM_STRONGARM,  MonMenu_StrongArm
 	dbw MONMENUITEM_BRIGHTMOSS, MonMenu_BrightMoss
 	dbw MONMENUITEM_WHIRLPOOL,  MonMenu_Whirlpool
 	dbw MONMENUITEM_DIG,        MonMenu_Dig
@@ -642,7 +642,7 @@ MonMenu_BrightMoss:
 	ld a, $3
 	ret
 
-MonMenu_Strength:
+MonMenu_StrongArm:
 	farcall StrengthFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $1
