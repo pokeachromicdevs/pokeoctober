@@ -213,8 +213,8 @@ Route29_MapEvents:
 		; filler
 
 	db 2 ; coord events
-	coord_event 53,  8, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1
-	coord_event 53,  9, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
+	coord_event 42,  3, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1
+	coord_event 42,  4, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
 
 	db 1 ; bg events
 	bg_event 27,  1, BGEVENT_READ, Route29Sign1
