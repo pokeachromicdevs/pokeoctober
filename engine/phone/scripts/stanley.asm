@@ -1,5 +1,5 @@
 StanleyPhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, STANLEY1
+	gettrainername STRING_BUFFER_3, INSTRUCTOR, STANLEY1
 	checkflag ENGINE_STANLEY
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
@@ -10,7 +10,7 @@ StanleyPhoneCalleeScript:
 	readvar VAR_WEEKDAY
 	ifnotequal TUESDAY, .NotTuesday
 	checktime NITE
-	iftrue STANLEYTuesdayNight
+	iftrue StanleyTuesdayNight
 
 .NotTuesday:
 	farscall PhoneScript_Random2
@@ -36,7 +36,7 @@ StanleyPhoneCalleeScript:
 	getlandmarkname STRING_BUFFER_5, ROUTE_31
 	farsjump UnknownScript_0xa0ab5
 
-STANLEYPhoneCallerScript:
+StanleyPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, BUG_CATCHER, STANLEY1
 	farscall PhoneScript_GreetPhone_Male
 	farscall PhoneScript_Random2
@@ -56,32 +56,32 @@ STANLEYPhoneCallerScript:
 	checkflag ENGINE_STANLEY_HAS_ITEM
 	iftrue .next
 	farscall PhoneScript_Random2
-	ifequal 0, STANLEYHasItem2
+	ifequal 0, StanleyHasItem2
 	checkflag ENGINE_FLYPOINT_GOLDENROD
 	iffalse .next
 	farscall PhoneScript_Random2
-	ifequal 0, STANLEYWantsBattle2
+	ifequal 0, StanleyWantsBattle2
 
 .next:
 	farscall PhoneScript_Random3
-	ifequal 0, STANLEYFoundRare
+	ifequal 0, StanleyFoundRare
 	farsjump Phone_GenericCall_Male
 
 .ContestToday:
 	farsjump PhoneScript_BugCatchingContest
 
-STANLEYTuesdayNight:
+StanleyTuesdayNight:
 	setflag ENGINE_STANLEY_TUESDAY_NIGHT
 
-STANLEYWantsBattle2:
+StanleyWantsBattle2:
 	getlandmarkname STRING_BUFFER_5, ROUTE_31
 	setflag ENGINE_STANLEY
 	farsjump PhoneScript_WantsToBattle_Male
 
-STANLEYFoundRare:
+StanleyFoundRare:
 	farsjump Phone_CheckIfUnseenRare_Male
 
-STANLEYHasItem2:
+StanleyHasItem2:
 	setflag ENGINE_STANLEY_HAS_ITEM
 	getlandmarkname STRING_BUFFER_5, ROUTE_31
 	clearevent EVENT_STANLEY_HAS_BERRY

@@ -1,15 +1,15 @@
 UnknownText_0x1b5a3b:
-	text "Hello? This is"
+	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
-	text " speaking."
+	cont" speaking."
 
 	para "Oh. Hi, <PLAY_G>!"
 	line "Good morning!"
 	done
 
 UnknownText_0x1b5a74:
-	text "Hello? This is"
+	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
 	text " speaking."
@@ -18,13 +18,13 @@ UnknownText_0x1b5a74:
 	done
 
 UnknownText_0x1b5a9f:
-	text "Hello? This is"
+	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
 	text " speaking."
 
 	para "Oh, hi, <PLAY_G>!"
-	line "Good evening!"
+	line "Good night!"
 	done
 
 UnknownText_0x1b5ad8:
@@ -57,21 +57,19 @@ UnknownText_0x1b5b37:
 	done
 
 UnknownText_0x1b5b68:
-	text "How are your"
-	line "#MON doing?"
+	text "How's your life"
+	line "going?"
 
-	para "My #MON have"
-	line "too much energy to"
+	para "Mine's a little"
+	line "dull, as always."
 
-	para "burn. It gets to"
-	line "be a problem."
+	para "Still, seeing all"
+	line "of the happy"
 
-	para "Of all my #MON,"
-	line "@"
-	text_ram wStringBuffer4
-	text " is the"
-	cont "hardest to handle."
-
-	para "Working with it is"
-	line "exhausting."
+	para "students enjoying"
+	line "life with their"
+	cont "#MON always"
+	
+	para "cheers me up a"
+	line "bit."
 	done

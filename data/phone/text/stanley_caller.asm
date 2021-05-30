@@ -1,4 +1,4 @@
-WadeAreYouGrowingText:
+StanleyAreYouGrowingText:
 	text "Are your #MON"
 	line "growing?"
 
@@ -71,7 +71,7 @@ UnknownText_0x1759e7:
 	text "See you later!"
 	done
 
-WadeBugCatchingContestText:
+StanleyBugCatchingContestText:
 	text "The Bug-Catching"
 	line "Contest is at the"
 
@@ -85,7 +85,7 @@ WadeBugCatchingContestText:
 	line "up my mind."
 	done
 
-WadeFoundBerryText:
+StanleyFoundBerryText:
 	text "I found all kinds"
 	line "of BERRIES. If you"
 

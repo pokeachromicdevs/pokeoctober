@@ -329,19 +329,15 @@ KRIS EQU __enum__
 	const MAX
 	const ROB
 	const ED
-	const WADE1
+	const STANLEY1
 	const BUG_CATCHER_BENNY
 	const AL
 	const JOSH
 	const ARNIE1
 	const KEN
-	const WADE2
-	const WADE3
 	const DOUG
 	const ARNIE2
 	const ARNIE3
-	const WADE4
-	const WADE5
 	const ARNIE4
 	const ARNIE5
 	const WAYNE
@@ -700,8 +696,12 @@ KRIS EQU __enum__
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
 	
-	trainerclass INSTRUCTOR
+	trainerclass INSTRUCTOR  ; 44
 	const STANLEY
+	const STANLEY2
+	const STANLEY3
+	const STANLEY4
+	const STANLEY5
 
 
 NUM_TRAINER_CLASSES EQU __enum__

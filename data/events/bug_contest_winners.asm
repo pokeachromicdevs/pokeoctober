@@ -1,7 +1,7 @@
 BugContestantPointers:
 ; there are NUM_BUG_CONTESTANTS + 1 entries
-	dw BugContestant_BugCatcherDon ; this reverts back to the player
-	dw BugContestant_BugCatcherDon
+	dw BugContestant_YoungsterMax ; this reverts back to the player
+	dw BugContestant_YoungsterMax
 	dw BugContestant_BugCatcherEd
 	dw BugContestant_CooltrainerMNick
 	dw BugContestant_PokefanMWilliam
@@ -18,8 +18,8 @@ BugContestantPointers:
 ;   dw 2nd-place mon, score
 ;   dw 3rd-place mon, score
 
-BugContestant_BugCatcherDon:
-	db BUG_CATCHER, MAX
+BugContestant_YoungsterMax:
+	db YOUNGSTER,  MAX
 	dw KAKUNA,     300
 	dw METAPOD,    285
 	dw CATERPIE,   226

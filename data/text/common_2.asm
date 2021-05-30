@@ -303,12 +303,12 @@ UnknownText_0x1c05c8::
 UnknownText_0x1c05dd::
 	text_ram wStringBuffer2
 	text " used"
-	line "CUT!"
+	line "UPROOT!"
 	prompt
 
 UnknownText_0x1c05ec::
 	text "There's nothing to"
-	line "CUT here."
+	line "UPROOT here."
 	prompt
 
 UnknownText_0x1c0609::
@@ -513,14 +513,14 @@ UnknownText_0x1c09c7::
 
 UnknownText_0x1c09dd::
 	text "This tree can be"
-	line "CUT!"
+	line "UPROOTed!"
 
-	para "Want to use CUT?"
+	para "Want to use UPROOT?"
 	done
 
 UnknownText_0x1c0a05::
 	text "This tree can be"
-	line "CUT!"
+	line "UPROOTed!"
 	done
 
 UnknownText_0x1c0a1c::

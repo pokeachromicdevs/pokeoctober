@@ -632,6 +632,12 @@ ErikaGroup:
 
 YoungsterGroup:
 	next_list_item ; YOUNGSTER (1)
+	db "MAX@", TRAINERTYPE_NORMAL
+	db 4
+	dw SANDSHREW
+	db -1 ; end
+
+	next_list_item ; YOUNGSTER (1)
 	db "JOEY@", TRAINERTYPE_NORMAL
 	db 4
 	dw RATTATA
@@ -5078,10 +5084,58 @@ SECTION "Enemy Trainer Parties 3", ROMX
 InstructorGroup:
 	next_list_item ; INSTRUCTOR (1)
 	db "STANLEY@", TRAINERTYPE_NORMAL
-	db  5, HOOTHOOT
+	db 5
+	dw HOOTHOOT
 	db -1 ; end
-
+	
+	next_list_item ; INSTRUCTOR (2)
+	db "STANLEY@", TRAINERTYPE_NORMAL
+	db 15
+	dw ABRA
+	db 15
+	dw HOOTHOOT
+	db -1 ; end
+	
+	next_list_item ; INSTRUCTOR (3)
+	db "STANLEY@", TRAINERTYPE_NORMAL
+	db 26
+	dw KADABRA
+	db 27
+	dw EXEGGCUTE
+	db 28
+	dw NOCTOWL
+	db -1 ; end
+	
+	next_list_item ; INSTRUCTOR (4)
+	db "STANLEY@", TRAINERTYPE_NORMAL
+	db 34
+	dw SHUCKLE
+	db 36
+	dw KADABRA
+	db 37
+	dw EXEGGUTOR
+	db 38 
+	dw NOCTOWL
+	db -1 ; end
+	
+	next_list_item ; INSTRUCTOR (5)
+	db "STANLEY@", TRAINERTYPE_MOVES
+	db 46
+	dw SHUCKLE
+	dw TOXIC, EARTHQUAKE, ROLLOUT, REST
+	db 48
+	dw ALAKAZAM
+	dw PSYCHIC_M, DYNAMICPUNCH, SHADOW_BALL, TOXIC
+	db 49
+	dw EXEGGUTOR
+	dw PSYCHIC_M, EGG_BOMB, SOLARBEAM, SUNNY_DAY
+	db 50
+	dw NOCTOWL
+	dw FLY, TAKE_DOWN, HYPNOSIS, DREAM_EATER
+	db -1 ; end
+	
 	end_list_items
+
 
 CamperGroup:
 	next_list_item ; CAMPER (1)
@@ -5283,5 +5337,6 @@ CamperGroup:
 	db 30
 	dw TAUROS
 	db -1 ; end
-
+	
 	end_list_items
+	

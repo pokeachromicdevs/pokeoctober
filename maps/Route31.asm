@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
 	const ROUTE31_FISHER
 	const ROUTE31_YOUNGSTER
-	const ROUTE31_BUG_CATCHER
+	const ROUTE31_SUPER_NERD
 	const ROUTE31_COOLTRAINER_M
 	const ROUTE31_FRUIT_TREE
 	const ROUTE31_POKE_BALL1
@@ -22,40 +22,42 @@ Route31_MapScripts:
 	specialphonecall SPECIALCALL_WORRIED
 	return
 
-TrainerBugCatcherWade1:
-	trainer BUG_CATCHER, WADE1, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcherWade1SeenText, BugCatcherWade1BeatenText, 0, .Script
+TrainerInstructorStanley:
+	trainer INSTRUCTOR, STANLEY, EVENT_BEAT_INSTRUCTOR_STANLEY, InstructorStanley1SeenText, InstructorStanley1BeatenText, 0, .Script
+
+;put rematch on Stanley?
 
 .Script:
-	loadvar VAR_CALLERID, PHONE_BUG_CATCHER_WADE
+	loadvar VAR_CALLERID, PHONE_INSTRUCTOR_STANLEY
 	endifjustbattled
 	opentext
-	checkflag ENGINE_WADE
+	checkflag ENGINE_STANLEY
 	iftrue .WadeRematch
-	checkflag ENGINE_WADE_HAS_ITEM
+	checkflag ENGINE_STANLEY_HAS_ITEM
 	iftrue .WadeItem
-	checkcellnum PHONE_BUG_CATCHER_WADE
+	checkcellnum PHONE_INSTRUCTOR_STANLEY
 	iftrue .AcceptedNumberSTD
-	checkevent EVENT_WADE_ASKED_FOR_PHONE_NUMBER
+	checkevent EVENT_STANLEY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext BugCatcherWade1AfterText
+	writetext InstructorStanley1AfterText
 	waitbutton
-	setevent EVENT_WADE_ASKED_FOR_PHONE_NUMBER
+	setevent EVENT_STANLEY_ASKED_FOR_PHONE_NUMBER
 	scall .AskPhoneNumberSTD
 	sjump .Continue
 
 .AskAgain:
 	scall .AskAgainSTD
 .Continue:
-	askforphonenumber PHONE_BUG_CATCHER_WADE
+	askforphonenumber PHONE_INSTRUCTOR_STANLEY
 	ifequal PHONE_CONTACTS_FULL, .PhoneFullSTD
 	ifequal PHONE_CONTACT_REFUSED, .DeclinedNumberSTD
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, WADE1
+	gettrainername STRING_BUFFER_3, BUG_CATCHER, STANLEY1
 	scall .RegisterNumberSTD
 	sjump .AcceptedNumberSTD
 
 .WadeRematch:
 	scall .RematchSTD
-	winlosstext BugCatcherWade1BeatenText, 0
+	winlosstext InstructorStanley1BeatenText, 0
 	readmem wWadeFightCount
 	ifequal 4, .Fight4
 	ifequal 3, .Fight3
@@ -75,53 +77,53 @@ TrainerBugCatcherWade1:
 	checkflag ENGINE_FLYPOINT_GOLDENROD
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer BUG_CATCHER, WADE1
+	loadtrainer INSTRUCTOR, STANLEY
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 1
-	clearflag ENGINE_WADE
+	clearflag ENGINE_STANLEY
 	end
 
 .LoadFight1:
-	loadtrainer BUG_CATCHER, WADE2
+	loadtrainer BUG_CATCHER, STANLEY2
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 2
-	clearflag ENGINE_WADE
+	clearflag ENGINE_STANLEY
 	end
 
 .LoadFight2:
-	loadtrainer BUG_CATCHER, WADE3
+	loadtrainer BUG_CATCHER, STANLEY3
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 3
-	clearflag ENGINE_WADE
+	clearflag ENGINE_STANLEY
 	end
 
 .LoadFight3:
-	loadtrainer BUG_CATCHER, WADE4
+	loadtrainer BUG_CATCHER, STANLEY4
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 4
-	clearflag ENGINE_WADE
+	clearflag ENGINE_STANLEY
 	end
 
 .LoadFight4:
-	loadtrainer BUG_CATCHER, WADE5
+	loadtrainer INSTRUCTOR, STANLEY
 	startbattle
 	reloadmapafterbattle
-	clearflag ENGINE_WADE
+	clearflag ENGINE_STANLEY
 	end
 
 .WadeItem:
 	scall .ItemSTD
-	checkevent EVENT_WADE_HAS_BERRY
+	checkevent EVENT_STANLEY_HAS_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_PSNCUREBERRY
+	checkevent EVENT_STANLEY_HAS_PSNCUREBERRY
 	iftrue .Psncureberry
-	checkevent EVENT_WADE_HAS_PRZCUREBERRY
+	checkevent EVENT_STANLEY_HAS_PRZCUREBERRY
 	iftrue .Przcureberry
-	checkevent EVENT_WADE_HAS_BITTER_BERRY
+	checkevent EVENT_STANLEY_HAS_BITTER_BERRY
 	iftrue .BitterBerry
 .Berry:
 	verbosegiveitem BERRY
@@ -139,7 +141,7 @@ TrainerBugCatcherWade1:
 	verbosegiveitem BITTER_BERRY
 	iffalse .PackFull
 .Done:
-	clearflag ENGINE_WADE_HAS_ITEM
+	clearflag ENGINE_STANLEY_HAS_ITEM
 	sjump .AcceptedNumberSTD
 .PackFull:
 	sjump .PackFullSTD
@@ -251,7 +253,7 @@ Route31Sign:
 	jumptext Route31SignText
 
 DarkCaveSign:
-	jumptext DarkCaveSignText
+	jumptext MrPokemonHouseText
 
 Route31CooltrainerMScript:
 	jumptextfaceplayer Route31CooltrainerMText
@@ -273,26 +275,24 @@ Route31CooltrainerMText:
 	cont "explore it."
 	done
 
-BugCatcherWade1SeenText:
-	text "I caught a bunch"
-	line "of #MON. Let me"
-	cont "battle with you!"
+InstructorStanley1SeenText:
+	text "Do you want to"
+	line "learn about"
+	cont "BERRIES?"
 	done
 
-BugCatcherWade1BeatenText:
-	text "Awwwww…"
+InstructorStanley1BeatenText:
+	text "Oh…I guess not…"
 	done
 
-BugCatcherWade1AfterText:
-	text "You can catch"
-	line "#MON even if"
+InstructorStanley1AfterText:
+	text "We take kids out"
+	line "here for some"
 
-	para "you have six with"
-	line "you."
+	para "experience out in"
+	line "the real world"
 
-	para "If you catch one,"
-	line "it'll go to your"
-	cont "BOX automatically."
+	para "pretty frequently."
 	done
 
 Text_Route31SleepyMan:
@@ -411,29 +411,28 @@ Route31SignText:
 	line "CHERRYGROVE CITY"
 	done
 
-DarkCaveSignText:
-	text "DARK CAVE"
+MrPokemonHouseText:
+	text "MR. #MON's"
+	line "HOUSE"
 	done
 
 Route31_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 2 ; warp events
 	warp_event 21,  3, MR_POKEMONS_HOUSE, 1
-	warp_event 26,  5, ROUTE_31_VIOLET_GATE, 4
-	warp_event 34,  1, DARK_CAVE_VIOLET_ENTRANCE, 1
+	warp_event  1,  4, ROUTE_31_VIOLET_GATE, 4
 
 	db 0 ; coord events
 
-	db 2 ; bg events
-	bg_event 30, 12, BGEVENT_READ, Route31Sign
-	bg_event 19,  3, BGEVENT_READ, DarkCaveSign
+	db 1 ; bg events
+	bg_event 19,  3, BGEVENT_READ, MrPokemonHouseText
 
 	db 7 ; object events
 	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
-	object_event 25, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31YoungsterScript, -1
-	object_event 28, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherWade1, -1
+	object_event 28,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31YoungsterScript, -1
+	object_event 27, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerInstructorStanley, -1
 	object_event 33,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31CooltrainerMScript, -1
-	object_event 12,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
+	object_event  9,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
 	object_event 35,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
 	object_event 36,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL

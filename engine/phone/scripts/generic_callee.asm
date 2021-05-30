@@ -29,7 +29,7 @@ PhoneScript_AnswerPhone_Male:
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_BUG_CATCHER_WADE, .Wade
+	ifequal PHONE_INSTRUCTOR_STANLEY, .Stanley
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -70,7 +70,7 @@ PhoneScript_AnswerPhone_Male:
 	buttonsound
 	end
 
-.Wade:
+.Stanley:
 	farwritetext UnknownText_0x1b5a3b
 	buttonsound
 	end
@@ -152,7 +152,7 @@ PhoneScript_AnswerPhone_Male_Day:
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_BUG_CATCHER_WADE, .Wade
+	ifequal PHONE_INSTRUCTOR_STANLEY, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -275,7 +275,7 @@ PhoneScript_AnswerPhone_Male_Nite:
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_BUG_CATCHER_WADE, .Wade
+	ifequal PHONE_INSTRUCTOR_STANLEY, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -559,7 +559,7 @@ PhoneScript_GreetPhone_Male:
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_BUG_CATCHER_WADE, .Wade
+	ifequal PHONE_INSTRUCTOR_STANLEY, .Wade
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -682,7 +682,7 @@ PhoneScript_GreetPhone_Male_Day:
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_BUG_CATCHER_WADE, .Wade
+	ifequal PHONE_INSTRUCTOR_STANLEY, .Stanley
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -723,7 +723,7 @@ PhoneScript_GreetPhone_Male_Day:
 	buttonsound
 	end
 
-.Wade:
+.Stanley:
 	farwritetext UnknownText_0x1b5b0b
 	buttonsound
 	end
@@ -805,7 +805,7 @@ PhoneScript_GreetPhone_Male_Nite:
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_BUG_CATCHER_WADE, .Wade
+	ifequal PHONE_INSTRUCTOR_STANLEY, .Stanley
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -846,7 +846,7 @@ PhoneScript_GreetPhone_Male_Nite:
 	buttonsound
 	end
 
-.Wade:
+.Stanley:
 	farwritetext UnknownText_0x1b5b37
 	buttonsound
 	end
@@ -1084,7 +1084,7 @@ PhoneScript_Generic_Male:
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
-	ifequal PHONE_BUG_CATCHER_WADE, .Wade
+	ifequal PHONE_INSTRUCTOR_STANLEY, .Stanley
 	ifequal PHONE_FISHER_RALPH, .Ralph
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
@@ -1123,7 +1123,7 @@ PhoneScript_Generic_Male:
 	buttonsound
 	end
 
-.Wade:
+.Stanley:
 	farwritetext UnknownText_0x1b5b68
 	buttonsound
 	end
