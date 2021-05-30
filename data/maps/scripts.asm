@@ -73,7 +73,7 @@ SECTION "Map Scripts 5", ROMX
 
 INCLUDE "maps/Route11.asm"
 INCLUDE "maps/VioletMart.asm"
-INCLUDE "maps/VioletGym.asm"
+INCLUDE "maps/CherrygroveGym.asm"
 INCLUDE "maps/EarlsPokemonAcademy.asm"
 INCLUDE "maps/VioletNicknameSpeechHouse.asm"
 INCLUDE "maps/VioletPokecenter1F.asm"

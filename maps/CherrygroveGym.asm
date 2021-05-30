@@ -1,15 +1,15 @@
 	object_const_def ; object_event constants
-	const VIOLETGYM_FALKNER
-	const VIOLETGYM_YOUNGSTER1
-	const VIOLETGYM_YOUNGSTER2
-	const VIOLETGYM_GYM_GUY
+	const CHERRYGROVEGYM_FALKNER
+	const CHERRYGROVEGYM_YOUNGSTER1
+	const CHERRYGROVEGYM_YOUNGSTER2
+	const CHERRYGROVEGYM_GYM_GUY
 
-VioletGym_MapScripts:
+CherrygroveGym_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-VioletGymFalknerScript:
+CherrygroveGymFalknerScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_FALKNER
@@ -28,7 +28,7 @@ VioletGymFalknerScript:
 	waitsfx
 	setflag ENGINE_ZEPHYRBADGE
 	readvar VAR_BADGES
-	scall VioletGymActivateRockets
+	scall CherrygroveGymActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
@@ -53,7 +53,7 @@ VioletGymFalknerScript:
 	closetext
 	end
 
-VioletGymActivateRockets:
+CherrygroveGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
 	ifequal 6, .GoldenrodRockets
 	end
@@ -86,23 +86,23 @@ TrainerBirdKeeperAbe:
 	closetext
 	end
 
-VioletGymGuyScript:
+CherrygroveGymGuyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_FALKNER
-	iftrue .VioletGymGuyWinScript
-	writetext VioletGymGuyText
+	iftrue .CherrygroveGymGuyWinScript
+	writetext CherrygroveGymGuyText
 	waitbutton
 	closetext
 	end
 
-.VioletGymGuyWinScript:
-	writetext VioletGymGuyWinText
+.CherrygroveGymGuyWinScript:
+	writetext CherrygroveGymGuyWinText
 	waitbutton
 	closetext
 	end
 
-VioletGymStatue:
+CherrygroveGymStatue:
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue .Beaten
 	jumpstd gymstatue1
@@ -112,7 +112,7 @@ VioletGymStatue:
 
 FalknerIntroText:
 	text "I'm FALKNER, the"
-	line "VIOLET #MON GYM"
+	line "Cherrygrove #MON GYM"
 	cont "leader!"
 
 	para "People say you can"
@@ -250,7 +250,7 @@ BirdKeeperAbeAfterBattleText:
 	cont "rookie trainer…"
 	done
 
-VioletGymGuyText:
+CherrygroveGymGuyText:
 	text "Hey! I'm no train-"
 	line "er but I can give"
 	cont "some advice!"
@@ -271,7 +271,7 @@ VioletGymGuyText:
 	line "this in mind."
 	done
 
-VioletGymGuyWinText:
+CherrygroveGymGuyWinText:
 	text "Nice battle! Keep"
 	line "it up, and you'll"
 
@@ -279,21 +279,21 @@ VioletGymGuyWinText:
 	line "time at all!"
 	done
 
-VioletGym_MapEvents:
+CherrygroveGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 15, VIOLET_CITY, 2
-	warp_event  5, 15, VIOLET_CITY, 2
+	warp_event  4, 15, CHERRYGROVE_CITY, 2
+	warp_event  5, 15, CHERRYGROVE_CITY, 2
 
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  3, 13, BGEVENT_READ, VioletGymStatue
-	bg_event  6, 13, BGEVENT_READ, VioletGymStatue
+	bg_event  3, 13, BGEVENT_READ, CherrygroveGymStatue
+	bg_event  6, 13, BGEVENT_READ, CherrygroveGymStatue
 
 	db 4 ; object events
-	object_event  5,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
+	object_event  5,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveGymFalknerScript, -1
 	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
 	object_event  2, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
-	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymGuyScript, -1
+	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveGymGuyScript, -1

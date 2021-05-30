@@ -230,17 +230,16 @@ ENDM
 	map_const ROUTE_37,                                    10,  9 ;  4
 	map_const VIOLET_CITY,                                 20, 18 ;  5
 	map_const VIOLET_MART,                                  6,  4 ;  6
-	map_const VIOLET_GYM,                                   5,  8 ;  7
-	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
-	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
-	map_const VIOLET_POKECENTER_1F,                         8,  4 ; 10
-	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 11
-	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 12
-	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 13
-	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 14
-	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 15
-	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 16
-	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 17
+	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  7
+	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
+	map_const VIOLET_POKECENTER_1F,                         8,  4 ;  9
+	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 10
+	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 11
+	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 12
+	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 13
+	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14
+	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 15
+	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 16
 
 	newgroup                                                      ; 11
 
@@ -491,3 +490,4 @@ ENDM
 	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
+	map_const CHERRYGROVE_GYM,                              5,  8 ; 12
