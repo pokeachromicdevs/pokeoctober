@@ -263,6 +263,7 @@ MoveDescriptions1:
 	dw BrightMossDescription
 	dw StrongArmDescription
 	dw CrossCutterDescription
+	dw TemptDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1189,6 +1190,7 @@ RapidSpinDescription:
 	db   "A high-speed"
 	next "spinning attack.@"
 
+TemptDescription:
 SweetScentDescription:
 	db   "Reduces the foe's"
 	next "evasiveness.@"

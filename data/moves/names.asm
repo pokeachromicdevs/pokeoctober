@@ -257,3 +257,4 @@ MoveNames::
 	db "BRIGHT MOSS@"
 	db "STRONG ARM@"
 	db "CROSS CUTTER@"
+	db "TEMPT@"

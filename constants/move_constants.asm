@@ -264,6 +264,7 @@
 	const BRIGHT_MOSS  ; 100
 	const STRONG_ARM   ; 101
 	const CROSS_CUTTER ; 102
+	const TEMPT        ; 103
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff
