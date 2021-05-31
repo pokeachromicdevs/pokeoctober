@@ -2369,7 +2369,7 @@ BattleBGEffect_GetNthDMGPal:
 	ld [hl], a
 	call BattleBGEffect_GetFirstDMGPal
 	ret
-
+	
 BGEffect_RapidCyclePals:
 	ldh a, [hCGB]
 	and a

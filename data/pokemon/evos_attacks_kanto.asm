@@ -745,6 +745,7 @@ ParasEvosAttacks:
 	dbw 19, LEECH_LIFE
 	dbw 25, SPORE
 	dbw 31, SLASH
+	dbw 33, METAL_CLAW
 	dbw 37, GROWTH
 	dbw 43, GIGA_DRAIN
 	db 0 ; no more level-up moves
@@ -759,6 +760,7 @@ ParasectEvosAttacks:
 	dbw 19, LEECH_LIFE
 	dbw 28, SPORE
 	dbw 37, SLASH
+	dbw 42, METAL_CLAW
 	dbw 46, GROWTH
 	dbw 55, GIGA_DRAIN
 	db 0 ; no more level-up moves
@@ -1885,6 +1887,7 @@ PinsirEvosAttacks:
 	dbw 19, SEISMIC_TOSS
 	dbw 25, HARDEN
 	dbw 31, GUILLOTINE
+	dbw 35, CROSS_CUTTER
 	dbw 37, SUBMISSION
 	dbw 43, SWORDS_DANCE
 	db 0 ; no more level-up moves

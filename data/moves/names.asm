@@ -256,3 +256,4 @@ MoveNames::
 	db "WATER SPORT@"
 	db "BRIGHT MOSS@"
 	db "STRONG ARM@"
+	db "CROSS CUTTER@"

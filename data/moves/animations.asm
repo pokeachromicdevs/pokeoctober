@@ -281,6 +281,7 @@ BattleAnimations::
 	dw BattleAnim_WaterSport
 	dw BattleAnim_BrightMoss
 	dw BattleAnim_StrongArm
+	dw BattleAnim_CrossCutter
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -4708,6 +4709,33 @@ BattleAnim_StrongArm:
 	anim_wait 2
 	anim_loop 4, .loop
 	anim_wait 16
+	anim_ret
+
+BattleAnim_CrossCutter:
+	anim_1gfx ANIM_GFX_CUT
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $58, $2, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_A0, 152, 40, $0
+	anim_obj ANIM_OBJ_A1, 120, 72, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_1F, $58, $2, $0
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $58, $2, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_A0, 152, 40, $0
+	anim_obj ANIM_OBJ_A1, 120, 72, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_1F, $58, $2, $0
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $58, $2, $0
+	anim_wait 32
+	anim_sound 0, 1, SFX_VICEGRIP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
+	anim_wait 4
+		anim_bgeffect ANIM_BG_1F, $58, $2, $0
+	anim_wait 20
+	anim_bgp $e4
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

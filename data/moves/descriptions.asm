@@ -262,6 +262,7 @@ MoveDescriptions1:
 	dw WaterSportDescription
 	dw BrightMossDescription
 	dw StrongArmDescription
+	dw CrossCutterDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -566,6 +567,7 @@ GrowthDescription:
 	db   "Raises the SPCL."
 	next "ATK rating.@"
 
+CrossCutterDescription:
 RazorLeafDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"

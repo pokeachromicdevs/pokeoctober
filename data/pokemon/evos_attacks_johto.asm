@@ -155,7 +155,7 @@ CyndaquilEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 6, UPROOT
+	dbw 6, CROSS_CUTTER
 	dbw 7, WIND_RIDE
 	dbw 8, ROCK_HEAD
 	dbw 9, WATER_SPORT
