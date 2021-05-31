@@ -119,7 +119,7 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw GoldeenEggMoves
 	dw NoEggMoves1
-	dw NoEggMoves1
+	dw StaryuEggMoves
 	dw NoEggMoves1
 	dw MrMimeEggMoves
 	dw ScytherEggMoves
@@ -510,6 +510,12 @@ GoldeenEggMoves:
 	dw PSYBEAM
 	dw HAZE
 	dw HYDRO_PUMP
+	dw -1 ; end
+	
+StaryuEggMoves:
+	dw AURORA_BEAM
+	dw BARRIER
+	dw SUPERSONIC
 	dw -1 ; end
 
 MrMimeEggMoves:
