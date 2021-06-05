@@ -28,7 +28,7 @@ MrPokemonsHouse_MapScripts:
 	writetext MrPokemonIntroText2
 	buttonsound
 	waitsfx
-	giveitem OAKS_PARCEL
+	giveitem ELMS_EGG
 	writetext MrPokemonsHouse_GotEggText
 	playsound SFX_KEY_ITEM
 	waitsfx
@@ -373,8 +373,8 @@ MrPokemonsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, ROUTE_31, 2
-	warp_event  3,  7, ROUTE_31, 2
+	warp_event  2,  7, ROUTE_31, 1
+	warp_event  3,  7, ROUTE_31, 1
 
 	db 0 ; coord events
 

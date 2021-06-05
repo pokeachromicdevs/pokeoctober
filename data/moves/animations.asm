@@ -4731,7 +4731,7 @@ BattleAnim_CrossCutter:
 	anim_wait 8
 	anim_obj ANIM_OBJ_A0, 152, 40, $0
 	anim_obj ANIM_OBJ_A1, 120, 72, $0
-	anim_wait 8
+	anim_wait 4
 	anim_bgeffect ANIM_BG_1F, $58, $2, $0
 	anim_sound 0, 1, SFX_CUT
 	anim_bgeffect ANIM_BG_1F, $58, $2, $0

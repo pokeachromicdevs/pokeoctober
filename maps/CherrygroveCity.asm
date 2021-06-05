@@ -551,7 +551,7 @@ CherrygroveCity_MapEvents:
 	warp_event 23, 21, CHERRYGROVE_MART, 2
 	warp_event 29, 21, CHERRYGROVE_POKECENTER_1F, 1
 	warp_event 23, 15, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
-	warp_event  7, 11, GUIDE_GENTS_HOUSE, 1
+	warp_event 33, 15, GUIDE_GENTS_HOUSE, 1
 	warp_event 29, 15, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
 	warp_event 26,  5, CHERRYGROVE_GYM, 1
 
