@@ -220,8 +220,6 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_PLAYERHEAD_1ROW
 	const ANIM_OBJ_ENEMYFEET_2ROW
 	const ANIM_OBJ_PLAYERHEAD_2ROW
-	const ANIM_OBJ_CUT_LONG_DOWN_LEFT
-	const ANIM_OBJ_CUT_LONG_DOWN_RIGHT
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -305,6 +303,9 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFUNC_4D
 	const BATTLEANIMFUNC_4E
 	const BATTLEANIMFUNC_4F
+	const ANIM_OBJ_CUT_LONG_DOWN_RIGHT
+	const ANIM_BG_SHAKE_SCREEN_X
+	const ANIM_OBJ_CUT_LONG_DOWN_LEFT
 
 ; BattleAnimFrameData indexes (see data/battle_anims/framesets.asm)
 	const_def
@@ -768,7 +769,6 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_BG_VIBRATE_MON
 	const ANIM_BG_WOBBLE_MON
 	const ANIM_BG_35
-	const ANIM_BG_SHAKE_SCREEN_X
 
 ; AnimObjGFX indexes (see data/battle_anims/object_gfx.asm)
 	const_def 1
@@ -819,7 +819,6 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BG_EFFECT_STRUCT_FUNCTION
 	const BG_EFFECT_STRUCT_JT_INDEX
 	const BG_EFFECT_STRUCT_BATTLE_TURN
-	const BG_EFFECT_STRUCT_PARAM      
 	const BG_EFFECT_STRUCT_03
 BG_EFFECT_STRUCT_LENGTH EQU const_value
 NUM_BG_EFFECTS EQU 5 ; see wActiveBGEffects
