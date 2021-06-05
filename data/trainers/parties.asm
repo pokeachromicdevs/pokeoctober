@@ -637,16 +637,16 @@ YoungsterGroup:
 	dw SANDSHREW
 	db -1 ; end
 
-	next_list_item ; YOUNGSTER (1)
-	db "JOEY@", TRAINERTYPE_NORMAL
-	db 4
-	dw RATTATA
-	db -1 ; end
-
 	next_list_item ; YOUNGSTER (2)
 	db "MIKEY@", TRAINERTYPE_NORMAL
 	db 2
 	dw PIDGEY
+	db 4
+	dw RATTATA
+	db -1 ; end
+	
+	next_list_item ; YOUNGSTER (1)
+	db "JOEY@", TRAINERTYPE_NORMAL
 	db 4
 	dw RATTATA
 	db -1 ; end
@@ -2324,7 +2324,7 @@ BugCatcherGroup:
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (4)
-	db "WADE@", TRAINERTYPE_NORMAL
+	db "STANLEY@", TRAINERTYPE_NORMAL
 	db 3
 	dw CATERPIE
 	db 3

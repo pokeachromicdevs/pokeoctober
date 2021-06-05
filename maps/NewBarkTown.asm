@@ -36,7 +36,6 @@ NewBarkTown_RivalGreets:
 	writetext NewBarkTownRivalText1
 	waitbutton
 	closetext
-	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
 	opentext
 	writetext NewBarkTownRivalText2
 	special NameMom 
@@ -329,29 +328,31 @@ Text_GearIsImpressive:
 	done
 
 Text_WaitPlayer:
-	text "Wait! Stop!"
+	text "Woah! Hold on!"
 	done
 
 Text_ItsDangerousToGoAlone:
-	text "What do you think"
-	line "you're doing?"
+	text "Hold your"
+	line "RAPIDASH!"
 	
-	para "It's dangerous to"
-	line "go out without a"
-	cont "#MON!"
+	para "<PLAY_G>, don't"
+	line "you know that it's"
+	cont "a bad idea to just"
 
-	para "Wild #MON"
-	line "might attack you!"
+	para "wander out into"
+	line "ROUTE 29 without"
 	
-	para "You need your own"
-	line "#MON for"
-	cont "protection!"
+	para "a #MON? Wild"
+	line "#MON live in" 
+	cont "the tall grass,"
+	cont "and who knows"
 	
-	para "Oh?"
+	para "what else could"
+	line "happen to you out"
+	cont "in the wild!"
 	
-	para "Are you perhaps…?"
-	
-	para "…Come with me!"
+	para "Come on, let's"
+	line "head to my LAB."
 	done
 
 Text_YourMonIsAdorable:
@@ -386,21 +387,39 @@ Text_ElmDiscoveredNewMon:
 	done
 
 NewBarkTownRivalText1:
-	text "<RIVAL>: Hey,"
-	line "<PLAYER>!"
-	para "There's something"
-	line "I wanted to remind"
-	cont "you about!"
+	text "<PLAY_G>!" 
 	
-	para "Today's the day we"
-	line "get our first"
-	cont "#MON, remember?"
+	para "I've been waiting"
+	line "at the LAB for"
+	cont "hours, and you're"
+	
+	para "just coming out"
+	line "of your house?"
+	
+	para "Man, are you not"
+	line "excited to get" 
+	cont "your first" 
+	
+	para "#MON?" 
+	
+	para "Although, you"
+	line "might've had the"
+	cont "right idea to stay"
+	
+	para "home for so long."
+	line "ELM's been gone,"
+	cont "and all that"
+	
+	para "waiting in the"
+    line "LAB was boring!"
 	done
 
 NewBarkTownRivalText2:
-	text "Tch, don't get too"
-	line "cocky. I could" 
-	cont "beat you any day!"
+	text "All that boredom's"
+	line "the only reason I" 
+	cont "left to check on"
+	
+	para "you!"
 
 	para "Anyways… "
 
@@ -422,18 +441,15 @@ NewBarkTownRivalText3:
 	cont "childish is"
 	cont "hilarious!"
 
-	para "Welp, see ya!"
+	para "Well, see ya!"
 
-	para "I'm gonna head off"
-	line "to ELM's!"
+	para "I'm gonna head"
+	line "back to ELM's!"
 	done
 
 NewBarkTownSignText:
-	text "NEW BARK TOWN"
-
-	para "The Town Where the"
-	line "Winds of a New"
-	cont "Beginning Blow"
+	text "Forever peaceful"
+	line "SILENT TOWN"
 	done
 
 NewBarkTownPlayersHouseSignText:
@@ -454,11 +470,12 @@ KantoRockText:
 	para "Sorry kid, the"
 	line "route to KANTO" 
 	cont "all blocked off"
-	line "until I can find a"
-	line "way to move this"
-	line "rock out of the"
 	
-	para	"way."
+	para "until I can find a"
+	line "way to move this"
+	cont "rock out of the"
+	
+	para "way."
 	done 
 
 NewBarkTown_MapEvents:
