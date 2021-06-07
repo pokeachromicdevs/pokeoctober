@@ -2178,6 +2178,7 @@ BattleCommand_FailureText:
 .fly_dig_moves
 	dw FLY
 	dw DIG
+	dw BOUNCE
 	dw -1
 
 BattleCommand_ApplyDamage:
