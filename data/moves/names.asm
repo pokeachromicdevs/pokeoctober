@@ -258,3 +258,4 @@ MoveNames::
 	db "STRONG ARM@"
 	db "CROSS CUTTER@"
 	db "TEMPT@"
+	db "COIN HURL@"

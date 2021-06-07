@@ -283,6 +283,7 @@ BattleAnimations::
 	dw BattleAnim_StrongArm
 	dw BattleAnim_CrossCutter
 	dw BattleAnim_Tempt
+	dw BattleAnim_CoinHurl
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -4726,6 +4727,29 @@ BattleAnim_Tempt:
 	anim_sound 6, 2, SFX_THROW_BALL
 	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
 	anim_wait 16
+	anim_ret
+	
+BattleAnim_CoinHurl:
+	anim_3gfx ANIM_GFX_HIT, ANIM_GFX_STATUS, ANIM_GFX_SPEED
+	anim_sound 0, 0, SFX_METRONOME
+	
+.loop
+	anim_wait 8
+	anim_obj ANIM_OBJ_AE, 64, 88, $4
+	anim_wait 8
+	anim_obj ANIM_OBJ_AE, 64, 80, $4
+	anim_wait 8
+	anim_obj ANIM_OBJ_AE, 64, 96, $4
+	anim_wait 8
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_01, 128, 56, $0
+	
+.loop2
+	anim_sound 0, 1, SFX_PAY_DAY
+	anim_obj ANIM_OBJ_PAY_DAY, 120, 76, $1
+	anim_wait 12
+	anim_loop 3, .loop2
+	anim_wait 8
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

@@ -264,6 +264,7 @@ MoveDescriptions1:
 	dw StrongArmDescription
 	dw CrossCutterDescription
 	dw TemptDescription
+	dw CoinHurlDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1294,3 +1295,7 @@ BrightMossDescription:
 StrongArmDescription:
 	db "May raise the"
 	next "user's ATTACK.@"
+	
+CoinHurlDescription:
+	db "Richer the owner,"
+	next "stronger the attack.@"

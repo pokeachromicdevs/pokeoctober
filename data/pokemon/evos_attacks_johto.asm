@@ -158,7 +158,7 @@ CyndaquilEvosAttacks:
 	dbw 6, CROSS_CUTTER
 	dbw 7, WIND_RIDE
 	dbw 8, ROCK_HEAD
-	dbw 9, WATER_SPORT
+	dbw 9, COIN_HURL
 	dbw 36, SWIFT
 	dbw 46, FLAMETHROWER
 	db 0 ; no more level-up moves
