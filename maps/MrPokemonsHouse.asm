@@ -90,6 +90,7 @@ MrPokemonsHouse_OakScript:
 	buttonsound
 	waitsfx
 	writetext MrPokemonsHouse_GetDexText
+	giveitem OAKS_PARCEL
 	playsound SFX_ITEM
 	waitsfx
 	setflag ENGINE_POKEDEX
@@ -170,50 +171,50 @@ MrPokemonsHouse_OakExits:
 	step_end
 
 MrPokemonIntroText1:
-	text "Hello, hello! You"
-	line "must be <PLAY_G>."
+	text "Ah, hello there!" 
 
-	para "PROF.ELM said that"
-	line "you would visit."
+	para "You must be the"
+	line "trainer ELM sent."
 	done
 
 MrPokemonIntroText2:
-	text "This is what I"
-	line "want PROF.ELM to"
-	cont "examine."
+	text "In that case,"
+	line "here's ELM's EGG"
+	cont "back."
 	done
 
 MrPokemonsHouse_GotEggText:
 	text "<PLAYER> received"
-	line "OAK'S PARCEL."
+	line "ELM's EGG."
 	done
 
 MrPokemonIntroText3:
-	text "I know a couple"
-	line "who run a #MON"
-	cont "DAY-CARE service."
+	text "I'll admit, even"
+	line "I haven't seen an"
+	cont "EGG quite like"
 
-	para "They gave me that"
-	line "EGG."
+	para "this one. It might"
+	line "contain a new"
+	cont "#MON we've"
 
-	para "I was intrigued,"
-	line "so I sent mail to"
-	cont "PROF.ELM."
+	para "never seen before!"
+	
+	para "Oh?"
+	
+	para "Speaking of"
+	line "#MON…it looks"
+	cont "like yours really"
 
-	para "For #MON evolu-"
-	line "tion, PROF.ELM is"
-	cont "the authority."
+	para "adores you!"
 	done
 
 MrPokemonIntroText4:
-	text "Even PROF.OAK here"
-	line "recognizes that."
+	text "Hey, OAK!"
 	done
 
 MrPokemonIntroText5:
-	text "If my assumption"
-	line "is correct, PROF."
-	cont "ELM will know it."
+	text "Come check this"
+	line "trainer's #MON!"
 	done
 
 MrPokemonsHouse_MrPokemonHealText:
@@ -239,90 +240,88 @@ MrPokemonText_AlwaysNewDiscoveries:
 	done
 
 MrPokemonsHouse_OakText1:
-	text "OAK: Aha! So"
-	line "you're <PLAY_G>!"
+	text "OAK: Pardon me, I"
+	line "was busy looking"
 
-	para "I'm OAK! A #MON"
-	line "researcher."
+	para "through a few"
+	line "photos an"
+	cont "assistant of mine"
 
-	para "I was just visit-"
-	line "ing my old friend"
-	cont "MR.#MON."
+	para "sent me recently."
+	
+	para "My name's OAK."
+	line "I'm a #MON"
+    cont "researcher."
 
-	para "I heard you were"
-	line "running an errand"
+	para "I only heard"
+	line "something about"
+	cont "examining #MON."
 
-	para "for PROF.ELM, so I"
-	line "waited here."
+	para "Let's see here…"
+	
+	para "Oh my! That's one"
+	line "happy #MON"
+	cont "indeed! You really"
 
-	para "Oh! What's this?"
-	line "A rare #MON!"
+	para "have potential if"
+	line "you're this loving"
+	cont "to your #MON!"
 
-	para "Let's see…"
+	para "Huh? You're the"
+	line "trainer ELM sent?"
 
-	para "Hm, I see!"
+	para "My, seeing such"
+	line "a new trainer"
+	cont "already making a"
 
-	para "I understand why"
-	line "PROF.ELM gave you"
-
-	para "a #MON for this"
-	line "errand."
-
-	para "To researchers"
-	line "like PROF.ELM and"
-
-	para "I, #MON are our"
-	line "friends."
-
-	para "He saw that you"
-	line "would treat your"
-
-	para "#MON with love"
-	line "and care."
-
-	para "…Ah!"
-
-	para "You seem to be"
-	line "dependable."
-
-	para "How would you like"
-	line "to help me out?"
-
-	para "See? This is the"
-	line "latest version of"
-	cont "#DEX."
-
-	para "It automatically"
-	line "records data on"
-
-	para "#MON you've"
-	line "seen or caught."
-
-	para "It's a hi-tech"
-	line "encyclopedia!"
+	para "#MON so happy…"
+	line "that sure does"
+	cont "bring back"
+	
+	para "memories!"
+	
+	para "Well, since you're"
+	line "heading right back"
+	cont "to ELM, can you"
+	
+	para "deliver this"
+	line "PARCEL to him for"
+	cont "me?"
 	done
 
 MrPokemonsHouse_GetDexText:
 	text "<PLAYER> received"
-	line "#DEX!"
+	line "OAK's PARCEL."
 	done
 
 MrPokemonsHouse_OakText2:
-	text "Go meet many kinds"
-	line "of #MON and"
+	text "I originally came"
+	line "down around this"
 
-	para "complete that"
-	line "#DEX!"
+	para "part of JOHTO just"
+	line "to deliver that"
 
-	para "But I've stayed"
-	line "too long."
+	para "PARCEL, but I"
+	line "stuck around a" 
+	cont "while to see my"
 
-	para "I have to get to"
-	line "GOLDENROD for my"
-	cont "usual radio show."
+	para "old friend MR."
+	line "#MON here and,"
+	cont "well, it appears"
 
-	para "<PLAY_G>, I'm"
-	line "counting on you!"
+	para "that I've hung"
+	line "around for a tad"
+	cont "bit too long,"
+	
+	para "hehe. I have a"
+	line "radio show in"
+	cont "GOLDENROD to"
+	
+	para "attend to, and"
+	line "then I'll get back"
+	cont "to my studies."
+	
+	para "Farewell for now!"
 	done
 
 MrPokemonText_GimmeTheScale:
