@@ -265,6 +265,7 @@ MoveDescriptions1:
 	dw CrossCutterDescription
 	dw TemptDescription
 	dw CoinHurlDescription
+	dw BounceDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1299,3 +1300,7 @@ StrongArmDescription:
 CoinHurlDescription:
 	db "Richer the owner,"
 	next "stronger the attack.@"
+	
+BounceDescription:
+	db "1st turn: Bounce"
+	next "2nd turn: Attack@"

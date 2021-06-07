@@ -284,6 +284,7 @@ BattleAnimations::
 	dw BattleAnim_CrossCutter
 	dw BattleAnim_Tempt
 	dw BattleAnim_CoinHurl
+	dw BattleAnim_Bounce
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -1593,6 +1594,7 @@ BattleAnim_Teleport:
 	anim_wait 64
 	anim_ret
 
+BattleAnim_Bounce:
 BattleAnim_Fly:
 	anim_if_param_equal $1, BattleAnim_Fly_branch_c9e89
 	anim_if_param_equal $2, BattleAnim_Fly_branch_c9e82

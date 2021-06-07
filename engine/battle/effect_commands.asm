@@ -367,6 +367,7 @@ CantMove:
 .fly_dig_moves
 	dw FLY
 	dw DIG
+	dw BOUNCE
 	dw -1
 
 OpponentCantMove:

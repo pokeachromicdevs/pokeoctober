@@ -259,3 +259,4 @@ MoveNames::
 	db "CROSS CUTTER@"
 	db "TEMPT@"
 	db "COIN HURL@"
+	db "BOUNCE@"
