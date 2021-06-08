@@ -49,6 +49,7 @@ ElmsLab_MapScripts:
 	applymovement PLAYER, ElmsLab_CantLeaveMovement
 	turnobject ELMSLAB_ELM, RIGHT
 	turnobject PLAYER, LEFT
+	turnobject ELMENTRANCE_SILVER, LEFT
 	opentext
 	writetext ElmText_Intro
 .MustSayYes:
@@ -56,7 +57,8 @@ ElmsLab_MapScripts:
 	iftrue .ElmGetsEmail
 	writetext ElmText_Refused
 	sjump .MustSayYes
-	
+	end
+
 .ElmGetsEmail:
 	writetext ElmText_Accepted
 	buttonsound
@@ -67,7 +69,6 @@ ElmsLab_MapScripts:
 	pause 30
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 10
 	turnobject ELMSLAB_ELM, DOWN
-	turnobject ELMENTRANCE_SILVER, LEFT
 	opentext
 	writetext SilverEmailShock
 	closetext
@@ -792,7 +793,6 @@ ElmsLabSilverText:
 	
 	para "expected us to"
 	line "show up!"
-	
 	done
 
 ElmsLabSilverText2:
@@ -804,44 +804,25 @@ ElmsLabSilverText2:
 	done
 	
 ElmText_Intro:
-	text "Alright! Now that"
-	line "we're all together,"
+	text "Finally! We're all"
+	line "together now!"
 
-	para "I need to ask"
-	line "you two to do"
-	cont "a favor for me."
-
-	para "I'm conducting new"
-	line "#MON research"
-
-	para "right now. I was"
-	line "wondering if you"
-
-	para "could help me with"
-	line "it, <PLAY_G>"
-	cont "and <RIVAL>."
-
-	para "You see…"
-
-	para "I'm writing a"
-	line "paper that I want"
-
-	para "to present at a"
-	line "conference."
-
-	para "But there are some"
-	line "things I don't"
-
-	para "quite understand"
-	line "yet."
-
-	para "So!"
-
-	para "I'd like you two"
-	line "to raise a #MON"
-
-	para "that I recently"
-	line "caught."
+	para "<RIVAL>: ELM!"
+	line "What took you so"
+	cont "long? I've been"
+	
+	para "waiting here for"
+	line "hours!"
+	
+	para "ELM: Calm"
+	line "yourself, <RIVAL>."
+	cont "No need to stay"
+	
+	para "impatient, as you"
+	line "two are finally"
+	cont "going to get your"
+	
+	para "own #MON!"
 	done
 
 ElmText_Accepted:
