@@ -7,7 +7,7 @@
 	const ELMENTRANCE_SILVER
 
 ElmsLab_MapScripts:
-	db 8 ; scene scripts
+	db 7 ; scene scripts
 	scene_script .DummyScene1 ; SCENE_DEFAULT
 	scene_script .MeetElm ; SCENE_MEETELM
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_CANT_LEAVE
@@ -15,7 +15,6 @@ ElmsLab_MapScripts:
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_MEET_OFFICER
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_UNUSED
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_AIDE_GIVES_POTION
-	scene_script .SceneElmsLabEntranceBattle
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .MoveElmCallback
@@ -27,12 +26,8 @@ ElmsLab_MapScripts:
 .DummyScene1:
 	end
 
-
-.SceneElmsLabEntranceBattle:
-	end
-
 .MoveElmCallback:
-	checkscene
+	checkscene 
 	iffalse .doHide
 	checkscene SCENE_MEETELM
 	iftrue .doMove
@@ -44,7 +39,7 @@ ElmsLab_MapScripts:
 	moveobject ELMSLAB_ELM, 99, 99
 	disappear ELMSLAB_ELM
 	return
-
+	
 .WalkUpToElm:
 	moveobject ELMSLAB_ELM, 4, 10
 	follow ELMSLAB_ELM, PLAYER
@@ -87,78 +82,12 @@ ElmsLab_MapScripts:
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext ElmText_ChooseAPokemon
+	writetext ElmsLabSilverText2
 	waitbutton
 	setscene SCENE_ELMSLAB_CANT_LEAVE
 	closetext
 	end
-	
-BattleScript:
-	applymovement PLAYER, Movement_DownOne
-	playsound SFX_EXIT_BUILDING
-	moveobject ELMENTRANCE_SILVER, 4, 0
-	appear ELMENTRANCE_SILVER
-	applymovement ELMENTRANCE_SILVER, Movement_SilverDownOne
-	special FadeOutMusic
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	opentext
-	writetext TimeToBattle
-	waitbutton
-	closetext
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .TOTODILE
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .CHIKORITA
-	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
-	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	jump .AfterYourDefeat
 
-.TOTODILE:
-	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
-	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	jump .AfterYourDefeat
-
-.CHIKORITA:
-	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
-	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	jump .AfterYourDefeat
-
-.AfterVictorious:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext EntranceRivalText_YouWon
-	waitbutton
-	closetext
-	jump .FinishRival
-
-.AfterYourDefeat:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext EntranceRivalText_YouLost
-	waitbutton
-	closetext
-.FinishRival:
-	applymovement ELMENTRANCE_SILVER, SilverLeavesLab
-	disappear ELMENTRANCE_SILVER
-	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
-	special HealParty
-	playmapmusic
-	end
-	
 ProfElmScript:
 	faceplayer
 	opentext
@@ -255,6 +184,18 @@ CyndaquilPokeBallScript:
 	buttonsound
 	givepoke CYNDAQUIL, 5, BERRY
 	closetext
+	applymovement ELMENTRANCE_SILVER, SilverGetTotodileMovement
+	opentext
+	writetext Text_SilverTakeThisOne
+	waitbutton
+	closetext
+	disappear ELMSLAB_POKE_BALL2
+	opentext
+	writetext Text_SilverGetTotodile
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	closetext
 	readvar VAR_FACING
 	ifequal RIGHT, ElmDirectionsScript
 	applymovement PLAYER, AfterCyndaquilMovement
@@ -287,6 +228,18 @@ TotodilePokeBallScript:
 	buttonsound
 	givepoke TOTODILE, 5, BERRY
 	closetext
+	applymovement ELMENTRANCE_SILVER, SilverGetChikoritaMovement
+	opentext
+	writetext Text_SilverTakeThisOne
+	waitbutton
+	closetext
+	disappear ELMSLAB_POKE_BALL3
+	opentext
+	writetext Text_SilverGetChikorita
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	closetext
 	applymovement PLAYER, AfterTotodileMovement
 	sjump ElmDirectionsScript
 
@@ -316,6 +269,18 @@ ChikoritaPokeBallScript:
 	waitsfx
 	buttonsound
 	givepoke CHIKORITA, 5, BERRY
+	closetext
+	applymovement ELMENTRANCE_SILVER, SilverGetCyndaquilMovement
+	opentext
+	writetext Text_SilverTakeThisOne
+	waitbutton
+	closetext
+	disappear ELMSLAB_POKE_BALL2
+	opentext
+	writetext Text_SilverGetCyndaquil
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
 	closetext
 	applymovement PLAYER, AfterChikoritaMovement
 	sjump ElmDirectionsScript
@@ -633,7 +598,28 @@ ElmsLabTrashcan:
 
 ElmsLabPC:
 	jumptext ElmsLabPCText
-
+	
+SilverGetCyndaquilMovement:
+	step RIGHT
+	step RIGHT
+	turn_head UP
+	step_end
+	
+SilverGetChikoritaMovement:
+	step RIGHT
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+	
+SilverGetTotodileMovement:
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+	
 ElmsLabTrashcan2:
 ; unused
 	jumpstd trashcan
@@ -659,6 +645,12 @@ SilverLeavesLab:
 	step_end
 	
 Movement_SilverDownOne:
+	step DOWN
+	return
+	step_end
+	
+Movement_SilverDownTwo:
+	step DOWN
 	step DOWN
 	return
 	step_end
@@ -747,37 +739,47 @@ ElmsLab_ElmToDefaultPositionMovement2:
 	step_end
 
 AfterCyndaquilMovement:
-	step DOWN
-	step LEFT
 	step LEFT
 	step UP
-	step UP
-	step RIGHT
-	turn_head UP
 	step_end
 
 AfterTotodileMovement:
 	step LEFT
-	step DOWN
-	step LEFT
 	step LEFT
 	step UP
-	step UP
-	step RIGHT
-	turn_head UP
 	step_end
 
 AfterChikoritaMovement:
-	step LEFT
-	step LEFT
 	step DOWN
 	step LEFT
 	step LEFT
+	step LEFT
 	step UP
 	step UP
-	step RIGHT
-	turn_head UP
 	step_end
+	
+Text_SilverTakeThisOne:
+	text "This #MON looks"
+	line "strong!"
+	
+	para "I will take this"
+	line "one."
+	done
+	
+Text_SilverGetCyndaquil:
+	text "<RIVAL> received"
+	line "CYNDAQUIL!"
+	done
+	
+Text_SilverGetChikorita:
+	text "<RIVAL> received"
+	line "CHIKORITA!"
+	done
+	
+Text_SilverGetTotodile:
+	text "<RIVAL> received"
+	line "TOTODILE!"
+	done
 	
 ElmsLabSilverText:
 	text "Yo <PLAY_G>!"
@@ -800,51 +802,7 @@ ElmsLabSilverText2:
 	line "generous kind"
 	cont "of guy!"
 	done
-
-SilverEntranceWinText:
-	text "Wow! I thought my"
-	line "#MON would have"
-	para "been the best!"
-	done
-
-EntranceRivalText_YouLost:
-	text "<PLAY_G>! I'm"
-	line "so ready to show"
-	para "the world how"
-	line "great my #MON"
-	cont "is!"
-	para "I'll see you"
-	line "around soon!"
-	done
-
-SilverEntranceLossText:
-	text "Alright! My"
-	line "#MON rules!"
-	done
-
-EntranceRivalText_YouWon:
-	text "<PLAY_G>! I'm"
-	line "so ready to show"
-	para "the world how"
-	line "great my #MON"
-	cont "is!"
-	para "I'll see you"
-	line "around soon!"
-	done
 	
-TimeToBattle:
-	text "<PLAY_G>!"
-	para "You're not getting"
-	line "off that easy!"
-	para "ELM gave us these"
-	line "#MON, so now"
-	para "we gotta battle"
-	line "them!"
-	para "I'm not gonna hold"
-	line "back!"
-	done
-
-
 ElmText_Intro:
 	text "Alright! Now that"
 	line "we're all together,"
@@ -1446,15 +1404,13 @@ ElmsLab_MapEvents:
 	warp_event  4, 11, NEW_BARK_TOWN, 1
 	warp_event  5, 11, NEW_BARK_TOWN, 1
 
-	db 8 ; coord events
+	db 6 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  5,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls2
-	coord_event  4,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
-	coord_event  5,  7, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
 
 	db 16 ; bg events
 	bg_event  2,  1, BGEVENT_READ, ElmsLabHealingMachine

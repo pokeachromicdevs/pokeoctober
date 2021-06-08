@@ -8,9 +8,10 @@
 	const NEWBARKTOWN_FISHER_2
 	
 NewBarkTown_MapScripts:
-	db 2 ; scene scripts
+	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script .SilentTownSilverBattleScript
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -26,6 +27,9 @@ NewBarkTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	setevent EVENT_ELM_APPEARED_NEW_BARK_TOWN
 	return
+	
+.SilentTownSilverBattleScript:
+	end
 	
 NewBarkTown_RivalGreets:
 	applymovement NEWBARKTOWN_SILVER, RivalMeetsPlayer
@@ -53,7 +57,6 @@ NewBarkTown_RivalGreets:
 	special RestartMapMusic
 	setevent EVENT_RIVAL_NEW_BARK_TOWN
 	end
-	
 
 ElmStopsYouScene1:
 	checkevent EVENT_ELM_NEW_BARK_TOWN
@@ -164,6 +167,71 @@ NewBarkTownTeacherScript:
 	waitbutton
 	closetext
 	end
+	
+SilentTownSilverBattleScript:
+	applymovement PLAYER, MovementBattle
+	playsound SFX_EXIT_BUILDING
+	applymovement ELMENTRANCE_SILVER, Movement_SilverDownTwo
+	moveobject NEWBARKTOWN_SILVER, 13, 13
+	special FadeOutMusic
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext TimeToBattle
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .TOTODILE
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .CHIKORITA
+	winlosstext SilverEntranceWinText, SilverEntranceLossText
+	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.TOTODILE:
+	winlosstext SilverEntranceWinText, SilverEntranceLossText
+	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.CHIKORITA:
+	winlosstext SilverEntranceWinText, SilverEntranceLossText
+	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.AfterVictorious:
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext EntranceRivalText_YouWon
+	waitbutton
+	closetext
+	jump .FinishRival
+
+.AfterYourDefeat:
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext EntranceRivalText_YouLost
+	waitbutton
+	closetext
+.FinishRival:
+	applymovement ELMENTRANCE_SILVER, SilverLeavesLab
+	disappear ELMENTRANCE_SILVER
+	special HealParty
+	playmapmusic
+	end
 
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
@@ -182,6 +250,10 @@ NewBarkTownElmsLabSign:
 
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
+	
+MovementBattle:
+	turn_head LEFT
+	return
 	
 ElmTakesPlayerToLab1:
 	step RIGHT
@@ -477,7 +549,50 @@ KantoRockText:
 	
 	para "way."
 	done 
+	
+SilverEntranceWinText:
+	text "Wow! I thought my"
+	line "#MON would have"
+	para "been the best!"
+	done
 
+EntranceRivalText_YouLost:
+	text "<PLAY_G>! I'm"
+	line "so ready to show"
+	para "the world how"
+	line "great my #MON"
+	cont "is!"
+	para "I'll see you"
+	line "around soon!"
+	done
+
+SilverEntranceLossText:
+	text "Alright! My"
+	line "#MON rules!"
+	done
+
+EntranceRivalText_YouWon:
+	text "<PLAY_G>! I'm"
+	line "so ready to show"
+	para "the world how"
+	line "great my #MON"
+	cont "is!"
+	para "I'll see you"
+	line "around soon!"
+	done
+
+TimeToBattle:
+	text "<PLAY_G>!"
+	para "You're not getting"
+	line "off that easy!"
+	para "ELM gave us these"
+	line "#MON, so now"
+	para "we gotta battle"
+	line "them!"
+	para "I'm not gonna hold"
+	line "back!"
+	done
+	
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -487,10 +602,12 @@ NewBarkTown_MapEvents:
 	warp_event  3, 13, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11,  5, ELMS_HOUSE, 1
 
-	db 3 ; coord events
+	db 4 ; coord events
 	coord_event  1,  6, SCENE_TEACHER_STOPS, ElmStopsYouScene1
 	coord_event  1,  7, SCENE_TEACHER_STOPS, ElmStopsYouScene2
 	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
+	coord_event  12, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
+
 	
 	db 4 ; bg events
 	bg_event 10, 12, BGEVENT_READ, NewBarkTownSign
