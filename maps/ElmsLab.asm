@@ -52,16 +52,8 @@ ElmsLab_MapScripts:
 	turnobject ELMENTRANCE_SILVER, LEFT
 	opentext
 	writetext ElmText_Intro
-.MustSayYes:
-	yesorno
-	iftrue .ElmGetsEmail
-	writetext ElmText_Refused
-	sjump .MustSayYes
-	end
-
-.ElmGetsEmail:
-	writetext ElmText_Accepted
-	buttonsound
+	closetext
+	opentext
 	writetext ElmText_ResearchAmbitions
 	waitbutton
 	closetext
@@ -88,7 +80,15 @@ ElmsLab_MapScripts:
 	setscene SCENE_ELMSLAB_CANT_LEAVE
 	closetext
 	end
+	
+.ElmsLabSilverScript3:
+	jumptextfaceplayer Text_Best
 
+.ElmGetsEmail:
+	writetext ElmText_ResearchAmbitions
+	waitbutton
+	closetext
+	
 ProfElmScript:
 	faceplayer
 	opentext
@@ -276,7 +276,7 @@ ChikoritaPokeBallScript:
 	writetext Text_SilverTakeThisOne
 	waitbutton
 	closetext
-	disappear ELMSLAB_POKE_BALL2
+	disappear ELMSLAB_POKE_BALL1
 	opentext
 	writetext Text_SilverGetCyndaquil
 	playsound SFX_CAUGHT_MON
@@ -602,7 +602,6 @@ ElmsLabPC:
 	
 SilverGetCyndaquilMovement:
 	step RIGHT
-	step RIGHT
 	turn_head UP
 	step_end
 	
@@ -634,7 +633,12 @@ ElmsLabSilverScript:
 	jumptextfaceplayer ElmsLabSilverText
 .letPlayerChoose
 	jumptextfaceplayer ElmsLabSilverText2
-		
+	
+ElmsLabSilverScript3:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue ElmsLabSilverScript3
+	jumptextfaceplayer Text_Best
+	
 SilverLeavesLab:
 	step LEFT
 	step DOWN
@@ -796,11 +800,10 @@ ElmsLabSilverText:
 	done
 
 ElmsLabSilverText2:
-	text "I'll let you"
-	line "choose first,"
-	para "'cause I'm a"
-	line "generous kind"
-	cont "of guy!"
+	text "Whatever #MON"
+	line "I have, I'll be"
+	para "sure to be better"
+	line "than you, <PLAY_G>!"
 	done
 	
 ElmText_Intro:
@@ -813,8 +816,10 @@ ElmText_Intro:
 	
 	para "waiting here for"
 	line "hours!"
-	
-	para "ELM: Calm"
+	done
+
+ElmText_ResearchAmbitions:
+	text "ELM: Calm"
 	line "yourself, <RIVAL>."
 	cont "No need to stay"
 	
@@ -824,91 +829,97 @@ ElmText_Intro:
 	
 	para "own #MON!"
 	done
-
-ElmText_Accepted:
-	text "Thanks, you two!"
-
-	para "You're a great"
-	line "help!"
-	done
-
-ElmText_Refused:
-	text "But… Please, I"
-	line "need your help!"
-	done
-
-ElmText_ResearchAmbitions:
-	text "When I announce my"
-	line "findings, I'm sure"
-
-	para "we'll delve a bit"
-	line "deeper into the"
-
-	para "many mysteries of"
-	line "#MON."
-
-	para "You can count on"
-	line "it!"
-	done
 	
 SilverEmailShock:
-	text "<RIVAL>: What is"
-	line "it, Professor?"
-	
-	para "ELM: I just got"
-	line "an e-mail!"
-
-	para "<……><……><……>"
-	line "Hm… Uh-huh…"
-
-	para "Okay…"
+	text "<RIVAL>: Hey,"
+	line "ELM. What's with"
+	cont "your computer?"
 	done
-
+	
 ElmText_MissionFromMrPokemon:
-	text "Hey, listen."
-
-	para "I have an acquain-"
-	line "tance called MR."
-	cont "#MON."
-
-	para "He keeps finding"
-	line "weird things and"
-
-	para "raving about his"
-	line "discoveries."
-
-	para "Anyway, I just got"
-	line "an e-mail from him"
-
-	para "saying that this"
-	line "time it's real."
-
-	para "It is intriguing,"
-	line "but we're busy"
-
-	para "with our #MON"
-	line "research…"
+	text"ELM: Hmm…"
+	
+	para "Well, I just got"
+	line "an email from a"
+	cont "colleague of mine,"
+	
+	para "MR. #MON. He"
+	line "says he's done"
+	cont "studying an EGG"
+	
+	para "I sent him a few"
+	line "weeks ago."
+	
+	para "Normally, I would"
+	line "go get the EGG"
+	cont "myself, but I'm"
+	
+	para "too busy writing"
+	line "a paper for a"
+	cont "conference in"
+	
+	para "SAFFRON and"
+	line "preparing for a"
+	cont "lengthy trip"
+	
+	para "outside of the"
+	line "LAB to go get it."
 
 	para "Wait!"
 
 	para "I know!"
 
-	para "<PLAY_G>, can you"
-	line "go in our place?"
+	para "Since you two are"
+	line "going to pass by"
+	cont "MR. #MON's"
+	
+	para "house, one of you"
+	line "two can get it for"
+	cont "me!"
+	
+	para "<RIVAL>: Well,"
+	line "that sounds like"
+	cont "the perfect job"
+	
+	para "for <PLAY_G>!"
+	line "Sorry, <PLAY_G>,"
+	cont "but I'm way too"
+	
+	para "excited to run"
+	line "such a boring"
+	cont "errand!"
+	
+	para "I've got a huge"
+	line "adventure to"
+	cont "go on, you know!"
+	
+	para "ELM: Er…well then."
 	done
 
 ElmText_ChooseAPokemon:
-	text "I want you to"
-	line "raise one of the"
-
-	para "#MON contained"
-	line "in these BALLS."
-
-	para "You'll be that"
-	line "#MON's first"
-	cont "partner, <PLAY_G>!"
-
-	para "Go on. Pick one!"
+	text "<PLAY_G>, I guess"
+	line "you'll go to MR."
+	
+	para "#MON's house."
+	line "His place is on"
+	cont "ROUTE 31, on top"
+	
+	para "of a hill. You"
+	line "can't miss it."
+	cont "But first, you'll"
+	
+	para "need to pick a"
+	line "#MON to aid you"
+	cont "on your journeys"
+	
+	para "ahead. And since"
+	line "you were a bit…"
+	
+	para "forced into"
+	line "taking on this"
+	cont "task, you can"
+	
+	para "pick first."
 	done
 
 ElmText_LetYourMonBattleIt:
@@ -962,23 +973,26 @@ ReceivedStarterText:
 	done
 
 ElmDirectionsText1:
-	text "MR.#MON lives a"
-	line "little bit beyond"
+	text "Alright!"
 
-	para "CHERRYGROVE, the"
-	line "next city over."
+	para "Remember, his"
+	line "house is on ROUTE"
+	cont "31."
 
-	para "It's almost a"
-	line "direct route"
-
-	para "there, so you"
-	line "can't miss it."
-
-	para "But just in case,"
-	line "here's my phone"
-
-	para "number. Call me if"
-	line "anything comes up!"
+	para "If you see anyone"
+	line "raving on about"
+	cont "strange findings"
+	
+	para "around there,"
+	line "it's probably him."
+	
+	para "If you find a"
+	line "need to contact"
+	cont "me, here's my"
+	
+	para "number. Call me"
+	line "if anything comes"
+	cont "up!"
 	done
 
 ElmDirectionsText2:
@@ -993,8 +1007,13 @@ ElmDirectionsText2:
 	done
 
 ElmDirectionsText3:
-	text "<PLAY_G>, I'm"
-	line "counting on you!"
+	text "Good luck!"
+	done
+	
+Text_Best:
+	text "My #MON is"
+	line "gonna be the best"
+	cont "one!"
 	done
 
 GotElmsNumberText:
@@ -1003,13 +1022,18 @@ GotElmsNumberText:
 	done
 
 ElmDescribesMrPokemonText:
-	text "MR.#MON goes"
-	line "everywhere and"
-	cont "finds rarities."
+	text "Remember, his"
+	line "house is on ROUTE"
+	cont "31."
 
-	para "Too bad they're"
-	line "just rare and"
-	cont "not very useful…"
+	para "If you see anyone"
+	line "raving on about"
+	cont "strange findings"
+	
+	para "around there,"
+	line "it's probably him."
+	
+	para "Good luck!"
 	done
 
 ElmPokeBallText:

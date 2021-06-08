@@ -8,10 +8,9 @@
 	const NEWBARKTOWN_FISHER_2
 	
 NewBarkTown_MapScripts:
-	db 3 ; scene scripts
+	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
-	scene_script .SilentTownSilverBattleScript
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -606,7 +605,7 @@ NewBarkTown_MapEvents:
 	coord_event  1,  6, SCENE_TEACHER_STOPS, ElmStopsYouScene1
 	coord_event  1,  7, SCENE_TEACHER_STOPS, ElmStopsYouScene2
 	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
-	coord_event  12, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
+	coord_event 11, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
 	
 	db 4 ; bg events
