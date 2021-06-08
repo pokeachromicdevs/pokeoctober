@@ -6,11 +6,14 @@
 	const NEWBARKTOWN_SILVER
 	const NEWBARKTOWN_ELM
 	const NEWBARKTOWN_FISHER_2
+	const NEWBARKTOWN_SILVER_2
 	
 NewBarkTown_MapScripts:
-	db 2 ; scene scripts
+	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script .SilentTownSilverBattleScript
+	
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -168,12 +171,12 @@ NewBarkTownTeacherScript:
 	end
 	
 SilentTownSilverBattleScript:
-	applymovement PLAYER, MovementBattle
-	playsound SFX_EXIT_BUILDING
-	applymovement ELMENTRANCE_SILVER, Movement_SilverDownTwo
-	moveobject NEWBARKTOWN_SILVER, 13, 13
+	moveobject NEWBARKTOWN_SILVER_2, 7, 14
+	appear NEWBARKTOWN_SILVER_2
+	applymovement NEWBARKTOWN_SILVER_2, MovementBattle
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
+	turnobject PLAYER, LEFT
 	opentext
 	writetext TimeToBattle
 	waitbutton
@@ -226,8 +229,8 @@ SilentTownSilverBattleScript:
 	waitbutton
 	closetext
 .FinishRival:
-	applymovement ELMENTRANCE_SILVER, SilverLeavesLab
-	disappear ELMENTRANCE_SILVER
+	applymovement ELMENTRANCE_SILVER, SilverAfterBattle
+	disappear NEWBARKTOWN_SILVER_2
 	special HealParty
 	playmapmusic
 	end
@@ -250,9 +253,19 @@ NewBarkTownElmsLabSign:
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
 	
+SilverAfterBattle:
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+	
 MovementBattle:
-	turn_head LEFT
-	return
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
 	
 ElmTakesPlayerToLab1:
 	step RIGHT
@@ -605,7 +618,7 @@ NewBarkTown_MapEvents:
 	coord_event  1,  6, SCENE_TEACHER_STOPS, ElmStopsYouScene1
 	coord_event  1,  7, SCENE_TEACHER_STOPS, ElmStopsYouScene2
 	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
-	coord_event 11, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
+	coord_event 12, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
 	
 	db 4 ; bg events
@@ -614,9 +627,10 @@ NewBarkTown_MapEvents:
 	bg_event 14, 13, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9,  5, BGEVENT_READ, NewBarkTownElmsHouseSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  7, 11, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
 	object_event  7,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_APPEARED_NEW_BARK_TOWN
 	object_event 19,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisher2Script, -1
+	object_event  7, 14, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, SCENE_ELM_ENTRANCE_BATTLE
