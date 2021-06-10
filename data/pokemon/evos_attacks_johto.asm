@@ -465,24 +465,34 @@ NatuEvosAttacks:
 	dbbw EVOLVE_LEVEL, 25, KATU
 	db 0 ; no more evolutions
 	dbw 1, PECK
-	dbw 1, LEER
+	dbw 6, CONFUSION
 	dbw 10, NIGHT_SHADE
-	dbw 20, TELEPORT
-	dbw 30, FUTURE_SIGHT
+	dbw 15, TELEPORT
+	dbw 20, QUICK_ATTACK
+	dbw 25, PSYBEAM
+	dbw 30, PURSUIT
+	dbw 35, FUTURE_SIGHT
 	dbw 40, CONFUSE_RAY
-	dbw 50, PSYCHIC_M
+	dbw 45, WING_ATTACK ; put Synchronoise in this slot for final
+	dbw 48, DRILL_PECK
+	dbw 56, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
-	dbw 1, LEER
+	dbw 1, CONFUSION
 	dbw 1, NIGHT_SHADE
-	dbw 10, NIGHT_SHADE
-	dbw 20, TELEPORT
-	dbw 35, FUTURE_SIGHT
+	dbw 15, NIGHT_SHADE
+	dbw 25, TELEPORT
+	dbw 30, QUICK_ATTACK
+	dbw 35, PSYBEAM
+	dbw 40, PURSUIT
+	dbw 45, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
-	dbw 65, PSYCHIC_M
+	dbw 55, WING_ATTACK ; put Synchronoise in this slot for final
+	dbw 58, DRILL_PECK
+	dbw 66, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 MareepEvosAttacks:

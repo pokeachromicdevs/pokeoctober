@@ -17,7 +17,7 @@ FalknerGroup:
 	dw TACKLE, MUD_SLAP, NO_MOVE, NO_MOVE
 	db 10
 	dw NATU
-	dw PECK, LEER, NIGHT_SHADE, NO_MOVE
+	dw PECK, CONFUSION, NIGHT_SHADE, NO_MOVE
 	db -1 ; end
 
 	end_list_items
