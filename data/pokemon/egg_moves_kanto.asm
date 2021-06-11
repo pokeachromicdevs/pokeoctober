@@ -128,7 +128,7 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw PinsirEggMoves
 	dw NoEggMoves1
-	dw NoEggMoves1
+	dw MagikarpEggMoves
 	dw NoEggMoves1
 	dw LaprasEggMoves
 	dw NoEggMoves1
@@ -536,6 +536,14 @@ ScytherEggMoves:
 PinsirEggMoves:
 	dw FURY_ATTACK
 	dw FLAIL
+	dw -1 ; end
+	
+MagikarpEggMoves:
+	dw PSYBEAM
+	dw TWISTER
+	dw WATER_GUN
+	dw HYDRO_PUMP
+	dw MINIMIZE
 	dw -1 ; end
 
 LaprasEggMoves:

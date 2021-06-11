@@ -176,7 +176,7 @@ PokemonCries::
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
-	mon_cry CRY_PICHU,       $000,  $140 ; PICHU
+	mon_cry CRY_SPINARAK,      0,  256   ; PICHU   
 	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
 	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF
 	mon_cry CRY_TOGEPI,      $010,  $100 ; TOGEPI
@@ -236,7 +236,7 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,   -$10a,  $100 ; HOUNDOOM
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
 	mon_cry CRY_SENTRET,     $048,  $230 ; PHANPY
-	mon_cry CRY_DONPHAN,     $000,  $1a0 ; DONPHAN
+	mon_cry CRY_SENTRET,    -184,  768   ; DONPHAN
 	mon_cry CRY_GIRAFARIG,   $073,  $240 ; PORYGON2
 	mon_cry CRY_AIPOM,      -$160,  $180 ; STANTLER
 	mon_cry CRY_PICHU,      -$21a,  $1f0 ; SMEARGLE

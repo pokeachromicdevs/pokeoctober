@@ -1,3 +1,5 @@
+; to do: insert beta cries
+
 Cry_Marill:
 	musicheader 3, 5, Cry_Marill_Ch5
 	musicheader 1, 6, Cry_Marill_Ch6
@@ -141,6 +143,12 @@ Cry_Mantine:
 	musicheader 3, 5, Cry_Mantine_Ch5
 	musicheader 1, 6, Cry_Mantine_Ch6
 	musicheader 1, 8, Cry_Mantine_Ch8
+	
+Cry_BetaTotodile:
+	channel_count 3
+	channel 5, Cry_Totodile_Ch5
+	channel 6, Cry_Totodile_Ch6
+	channel 8, Cry_Totodile_Ch8
 
 Cry_Entei_Ch5:
 	soundinput $ff
