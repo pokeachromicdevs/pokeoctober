@@ -232,8 +232,8 @@ PokemonCries::
 	mon_cry CRY_TEDDIURSA,   $002,  $06a ; DELIBIRD
 	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE
 	mon_cry CRY_AMPHAROS,    $8a9,  $180 ; SKARMORY
-	mon_cry CRY_CYNDAQUIL,   $039,  $140 ; HOUNDOUR
-	mon_cry CRY_TOTODILE,   -$10a,  $100 ; HOUNDOOM
+	mon_cry CRY_CYNDAQUIL,     0,  288   ; HOUNDOUR 
+	mon_cry CRY_CYNDAQUIL,   531,  128   ; HOUNDOOM 
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
 	mon_cry CRY_SENTRET,     $048,  $230 ; PHANPY
 	mon_cry CRY_SENTRET,    -184,  768   ; DONPHAN
