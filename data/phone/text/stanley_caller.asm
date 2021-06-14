@@ -1,35 +1,33 @@
 StanleyAreYouGrowingText:
-	text "Are your #MON"
-	line "growing?"
+	text "How are your #MON"
+	line "#MON faring?"
 
-	para "My #MON are"
-	line "growing a bit too"
+	para "Mine are lively"
+	line "as usual."
 
-	para "quickly for me."
-	line "It's overwhelming!"
-
-	para "@"
-	text_ram wStringBuffer4
-	text "'s grow-"
-	line "ing especially"
-
-	para "quickly. I think"
-	line "it'll get tough."
+	para "Although,"
+	line "sometimes they" 
+	cont "are a little"
+	
+	para "too lively to"
+	line "handle, haha!"
 	done
 
 UnknownText_0x175869:
-	text "Oh yeah, we KO'd a"
-	line "wild @"
+	text "By the way, I"
+	line "encountered a"
+	cont "wild @"
 	text_ram wStringBuffer4
 	text_start
-	para "with one hit a"
-	line "while back."
+	para "just a little"
+	line "bit ago."
 
-	para "It went down so"
-	line "easily, I felt a"
+	para "My tactics plus"
+	line "my #MON's"
 
-	para "little sorry for"
-	line "the poor thing."
+	para "power made it an"
+	line "easy victory for"
+	cont "us."
 	done
 
 UnknownText_0x1758e4:
