@@ -1386,7 +1386,7 @@ JohtoGrassWildMons:
 	dbw 4, PIDGEY
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
-	dbw 5, VUPLIX
+	dbw 5, VULPIX
 	dbw 6, PIDGEY
 	dbw 6, PIDGEY
 	; day

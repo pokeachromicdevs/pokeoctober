@@ -334,7 +334,7 @@ KantoGrassWildMons:
 	dbw 18, SNUBBULL
 	dbw 18, RATICATE
 	dbw 18, JIGGLYPUFF
-	dbw 16, VUPLIX
+	dbw 16, VULPIX
 	dbw 16, ABRA
 	; day
 	dbw 17, RATTATA
