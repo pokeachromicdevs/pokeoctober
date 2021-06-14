@@ -1277,7 +1277,7 @@ JohtoGrassWildMons:
 	dbw 4, EKANS
 	dbw 5, RATTATA
 	dbw 7, BELLSPROUT
-	dbw 6, HOPPIP
+	dbw 6, MAREEP
 	dbw 7, PIDGEY
 	dbw 7, HOPPIP
 	dbw 7, HOPPIP
@@ -1285,7 +1285,7 @@ JohtoGrassWildMons:
 	dbw 4, EKANS
 	dbw 5, RATTATA
 	dbw 7, BELLSPROUT
-	dbw 6, HOPPIP
+	dbw 6, MAREEP
 	dbw 7, PIDGEY
 	dbw 7, HOPPIP
 	dbw 7, HOPPIP
@@ -1296,7 +1296,7 @@ JohtoGrassWildMons:
 	dbw 6, ZUBAT
 	dbw 7, HOOTHOOT
 	dbw 7, GASTLY
-	dbw 7, GASTLY
+	dbw 7, MAREEP
 
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1493,26 +1493,26 @@ JohtoGrassWildMons:
 	dbw 13, EKANS
 	dbw 14, SPEAROW
 	dbw 15, RATTATA
-	dbw 16, RATICATE
+	dbw 16, MAREEP
 	dbw 15, ARBOK
 	dbw 16, MANKEY
-	dbw 16, FEAROW
+	dbw 16, FLAAFFY
 	; day
 	dbw 13, EKANS
 	dbw 14, SPEAROW
 	dbw 15, RATTATA
-	dbw 16, RATICATE
+	dbw 16, MAREEP
 	dbw 15, ARBOK
 	dbw 16, MANKEY
-	dbw 16, FEAROW
+	dbw 16, FLAAFFY
 	; nite
 	dbw 13, RATTATA
 	dbw 14, ZUBAT
-	dbw 15, RATICATE
+	dbw 15, MAREEP
 	dbw 16, GOLBAT
 	dbw 15, MARILL
 	dbw 16, MANKEY
-	dbw 16, GOLBAT
+	dbw 16, FLAAFFY
 
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1522,24 +1522,24 @@ JohtoGrassWildMons:
 	dbw 16, FARFETCH_D
 	dbw 15, FURRET
 	dbw 17, RATICATE
-	dbw 17, FURRET
+	dbw 17, MAREEP
 	dbw 17, FURRET
 	; day
 	dbw 15, SENTRET
 	dbw 16, PIDGEOTTO
 	dbw 16, FARFETCH_D
-	dbw 15, FURRET
+	dbw 15, FLAAFFY
 	dbw 17, RATICATE
-	dbw 17, FURRET
+	dbw 17, MAREEP
 	dbw 17, FURRET
 	; nite
 	dbw 15, VENONAT
 	dbw 16, NOCTOWL
-	dbw 16, RATICATE
+	dbw 16, FLAAFFY
 	dbw 17, VENONAT
 	dbw 17, RATICATE
 	dbw 17, VENOMOTH
-	dbw 17, VENOMOTH
+	dbw 17, MAREEP
 
 	map_id ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
