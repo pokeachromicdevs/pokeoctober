@@ -387,25 +387,25 @@ KantoGrassWildMons:
 	dbw 15, SPEAROW
 	dbw 15, RATICATE
 	dbw 15, FEAROW
-	dbw 15, FEAROW
-	dbw 18, MAROWAK
+	dbw 15, MANKEY
+	dbw 18, PRIMEAPE
 	dbw 18, MAROWAK
 	; day
 	dbw 15, RATTATA
 	dbw 15, SPEAROW
 	dbw 15, RATICATE
 	dbw 15, FEAROW
-	dbw 15, FEAROW
-	dbw 18, MAROWAK
+	dbw 15, MANKEY
+	dbw 18, PRIMEAPE
 	dbw 18, MAROWAK
 	; nite
-	dbw 15, RATTATA
+	dbw 15, MANKEY
 	dbw 15, VENONAT
 	dbw 15, RATICATE
 	dbw 15, VENOMOTH
 	dbw 15, ZUBAT
 	dbw 18, RATICATE
-	dbw 18, RATICATE
+	dbw 18, PRIMEAPE
 
 	map_id ROUTE_10_NORTH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

@@ -1495,7 +1495,7 @@ JohtoGrassWildMons:
 	dbw 15, RATTATA
 	dbw 16, RATICATE
 	dbw 15, ARBOK
-	dbw 16, FEAROW
+	dbw 16, MANKEY
 	dbw 16, FEAROW
 	; day
 	dbw 13, EKANS
@@ -1503,7 +1503,7 @@ JohtoGrassWildMons:
 	dbw 15, RATTATA
 	dbw 16, RATICATE
 	dbw 15, ARBOK
-	dbw 16, FEAROW
+	dbw 16, MANKEY
 	dbw 16, FEAROW
 	; nite
 	dbw 13, RATTATA
@@ -1511,7 +1511,7 @@ JohtoGrassWildMons:
 	dbw 15, RATICATE
 	dbw 16, GOLBAT
 	dbw 15, MARILL
-	dbw 16, GOLBAT
+	dbw 16, MANKEY
 	dbw 16, GOLBAT
 
 	map_id ROUTE_43
