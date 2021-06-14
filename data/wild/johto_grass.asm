@@ -1386,15 +1386,15 @@ JohtoGrassWildMons:
 	dbw 4, PIDGEY
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
-	dbw 5, PIDGEY
+	dbw 5, VUPLIX
 	dbw 6, PIDGEY
 	dbw 6, PIDGEY
 	; day
 	dbw 4, PIDGEY
-	dbw 4, PIDGEY
+	dbw 4, VULPIX
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
-	dbw 5, PIDGEY
+	dbw 5, VULPIX
 	dbw 6, PIDGEY
 	dbw 6, PIDGEY
 	; nite
@@ -1414,12 +1414,12 @@ JohtoGrassWildMons:
 	dbw 15, PIDGEY
 	dbw 16, GROWLITHE
 	dbw 15, PIDGEOTTO
-	dbw 15, LEDIAN
-	dbw 15, LEDIAN
+	dbw 15, VULPIX
+	dbw 18, LEDIAN
 	; day
 	dbw 13, PIDGEY
 	dbw 14, GROWLITHE
-	dbw 15, PIDGEY
+	dbw 15, VULPIX
 	dbw 16, GROWLITHE
 	dbw 15, PIDGEOTTO
 	dbw 15, PIDGEY
@@ -1430,7 +1430,7 @@ JohtoGrassWildMons:
 	dbw 15, HOOTHOOT
 	dbw 16, STANTLER
 	dbw 15, NOCTOWL
-	dbw 15, ARIADOS
+	dbw 15, VULPIX
 	dbw 15, ARIADOS
 
 	map_id ROUTE_38

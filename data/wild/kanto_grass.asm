@@ -334,7 +334,7 @@ KantoGrassWildMons:
 	dbw 18, SNUBBULL
 	dbw 18, RATICATE
 	dbw 18, JIGGLYPUFF
-	dbw 16, ABRA
+	dbw 16, VUPLIX
 	dbw 16, ABRA
 	; day
 	dbw 17, RATTATA
@@ -342,7 +342,7 @@ KantoGrassWildMons:
 	dbw 18, SNUBBULL
 	dbw 18, RATICATE
 	dbw 18, JIGGLYPUFF
-	dbw 16, ABRA
+	dbw 16, VULPIX
 	dbw 16, ABRA
 	; nite
 	dbw 17, MEOWTH
@@ -350,7 +350,7 @@ KantoGrassWildMons:
 	dbw 18, HOUNDOUR
 	dbw 18, PERSIAN
 	dbw 18, JIGGLYPUFF
-	dbw 16, ABRA
+	dbw 16, VULPIX
 	dbw 16, ABRA
 
 	map_id ROUTE_8
@@ -361,7 +361,7 @@ KantoGrassWildMons:
 	dbw 16, ABRA
 	dbw 17, GROWLITHE
 	dbw 16, JIGGLYPUFF
-	dbw 18, KADABRA
+	dbw 18, VULPIX
 	dbw 18, KADABRA
 	; day
 	dbw 17, SNUBBULL
@@ -369,7 +369,7 @@ KantoGrassWildMons:
 	dbw 16, ABRA
 	dbw 17, GROWLITHE
 	dbw 16, JIGGLYPUFF
-	dbw 18, KADABRA
+	dbw 18, VULPIX
 	dbw 18, KADABRA
 	; nite
 	dbw 17, MEOWTH
@@ -377,7 +377,7 @@ KantoGrassWildMons:
 	dbw 16, ABRA
 	dbw 17, HAUNTER
 	dbw 16, JIGGLYPUFF
-	dbw 18, KADABRA
+	dbw 18, VULPIX
 	dbw 18, KADABRA
 
 	map_id ROUTE_9
