@@ -31,22 +31,24 @@ UnknownText_0x175869:
 	done
 
 UnknownText_0x1758e4:
-	text "Oh yeah, a wild"
-	line "@"
+	text "By the way, a"
+	line "wild"
+	cont "@"
 	text_ram wStringBuffer4
-	text " got"
+	para "slipped from my"
 
-	para "away from me at"
-	line "the last second."
+	line "grasp earlier."
+	cont "It's a shame,"
 
-	para "I know it's a"
-	line "common #MON…"
+	para "since it's a"
+	line "#MON that I've"
 
-	para "But it does annoy"
-	line "me that it got"
-
-	para "away when I almost"
-	line "had it."
+	cont "been watching to"
+	para "catch for a while"
+	line "now."
+	
+	cont "Farewell for"
+	para "now!"
 	done
 
 UnknownText_0x175976:
