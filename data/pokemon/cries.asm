@@ -199,7 +199,7 @@ PokemonCries::
 	mon_cry CRY_SUNFLORA,   -$020,  $180 ; SUNFLORA
 	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
 	mon_cry CRY_WOOPER,      $093,  $0af ; WOOPER
-	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGSIRE
+	mon_cry CRY_WOOPER,      125,  175   ; QUAGSIRE
 	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
 	mon_cry CRY_GIRAFARIG,   -30,   160  ; UMBREON 
 	mon_cry CRY_MARILL,     -$01f,  $180 ; MURKROW
@@ -258,3 +258,5 @@ PokemonCries::
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
     mon_cry CRY_ENTEI,      $2fb,  $100  ; COINPUR
 	mon_cry CRY_NATU,       -$07c, $166  ; KATU
+	
+	;Beytah cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu
