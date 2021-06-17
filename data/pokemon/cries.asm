@@ -210,7 +210,7 @@ PokemonCries::
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
 	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
-	mon_cry CRY_DUNSPARCE,   $1c4,  $100 ; DUNSPARCE
+	mon_cry CRY_GIRAFARIG,  -138,  320   ; DUNSPARCE
 	mon_cry CRY_GLIGAR,     -$102,  $100 ; GLIGAR
 	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELIX
 	mon_cry CRY_DUNSPARCE,   $112,  $0e8 ; SNUBBULL
