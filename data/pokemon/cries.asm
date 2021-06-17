@@ -201,7 +201,7 @@ PokemonCries::
 	mon_cry CRY_WOOPER,      $093,  $0af ; WOOPER
 	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGSIRE
 	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
-	mon_cry CRY_VENONAT,    -$0e9,  $0f0 ; UMBREON
+	mon_cry CRY_GIRAFARIG,   -30,   160  ; UMBREON 
 	mon_cry CRY_MARILL,     -$01f,  $180 ; MURKROW
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
 	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; MISDREAVUS
