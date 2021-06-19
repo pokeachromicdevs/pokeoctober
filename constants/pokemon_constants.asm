@@ -273,6 +273,7 @@ JOHTO_POKEMON EQU const_value
 	const CELEBI     ; fb
 	const COINPUR    ; fc
 	const KATU       ; fd
+	const ADBARSTORK ; fe
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

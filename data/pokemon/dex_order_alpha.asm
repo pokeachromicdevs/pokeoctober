@@ -2,6 +2,7 @@
 
 AlphabeticalPokedexOrder:
 	dw ABRA
+	dw ADBARSTORK
 	dw AERODACTYL
 	dw AIPOM
 	dw ALAKAZAM

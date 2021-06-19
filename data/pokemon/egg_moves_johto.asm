@@ -103,6 +103,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw CoinpurEggMoves
 	dw NoEggMoves2
+	dw AdbarstorkEggMoves
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -467,12 +468,21 @@ LarvitarEggMoves:
 	dw OUTRAGE
 	dw FOCUS_ENERGY
 	dw ANCIENTPOWER
-NoEggMoves2:
-	dw -1 ; end
 	
 CoinpurEggMoves:
 	dw SPITE
 	dw CHARM
 	dw HYPNOSIS
 	dw AMNESIA
+	dw -1 ; end
+	
+AdbarstorkEggMoves:
+	dw GUST
+	dw SKY_ATTACK
+	dw CHARM
+	dw PURSUIT
+	dw FAINT_ATTACK
+	dw -1 ; end
+
+NoEggMoves2:
 	dw -1 ; end

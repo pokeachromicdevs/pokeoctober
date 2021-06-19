@@ -3,6 +3,7 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw CoinpurEvosAttacks
 	dw KatuEvosAttacks
+	dw AdbarstorkEvosAttacks
 
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -35,4 +36,18 @@ KatuEvosAttacks:
 	dbw 50, WING_ATTACK ; put Synchronoise in this slot for final
 	dbw 53, DRILL_PECK
 	dbw 61, PSYCHIC_M
+	db 0 ; no more level-up moves
+	
+AdbarstorkEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 5, GROWL
+	dbw 9, FURY_ATTACK
+	dbw 12, WHIRLWIND
+	dbw 19, TWISTER
+	dbw 25, WING_ATTACK
+	dbw 31, SCREECH
+	dbw 39, MIRROR_MOVE
+	dbw 45, DRILL_PECK
+	dbw 52, FLY
 	db 0 ; no more level-up moves

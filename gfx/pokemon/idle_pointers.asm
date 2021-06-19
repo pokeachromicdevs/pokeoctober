@@ -252,3 +252,4 @@ AnimationIdlePointers:
 	dw CelebiAnimationIdle
 	dw MeowsyAnimationIdle
 	dw KatuAnimationIdle
+	dw AdbarstorkAnimationIdle

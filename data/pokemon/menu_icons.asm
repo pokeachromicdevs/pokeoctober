@@ -254,3 +254,4 @@ MonMenuIcons:
 	db ICON_HUMANSHAPE  ; CELEBI
     db ICON_FOX         ; COINPUR
 	db ICON_BIRD        ; KATU
+	db ICON_BIRD        ; ADBARSTORK

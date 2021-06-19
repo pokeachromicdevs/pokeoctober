@@ -252,3 +252,4 @@ AnimationPointers:
 	dw CelebiAnimation
 	dw MeowsyAnimation
 	dw KatuAnimation
+	dw AdbarstorkAnimation

@@ -253,3 +253,4 @@ PokedexDataPointerTable:
 	dba CelebiPokedexEntry
 	dba CoinpurPokedexEntry
 	dba KatuPokedexEntry
+	dba AdbarstorkPokedexEntry

@@ -256,3 +256,4 @@ PokemonNames::
 	db "CELEBI@@@@"
 	db "COINPUR@@@"
 	db "KATU@@@@@@"
+	db "ADBARSTORK"

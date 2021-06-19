@@ -17,6 +17,7 @@ NewPokedexOrder:
 	dw FEAROW
 	dw HOOTHOOT
 	dw NOCTOWL
+	dw ADBARSTORK
 	dw RATTATA
 	dw RATICATE
 	dw SENTRET
