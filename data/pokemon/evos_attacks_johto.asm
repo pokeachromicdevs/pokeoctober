@@ -660,33 +660,43 @@ SunkernEvosAttacks:
 	dbw 1, ABSORB
 	dbw 4, GROWTH
 	dbw 10, MEGA_DRAIN
-	dbw 19, SUNNY_DAY
-	dbw 31, SYNTHESIS
-	dbw 46, GIGA_DRAIN
+	dbw 13, LEECH_SEED
+	dbw 16, RAZOR_LEAF
+	dbw 22, GIGA_DRAIN
+	dbw 28, SYNTHESIS
+	dbw 34, SOLARBEAM
+	dbw 37, DOUBLE_EDGE
+	dbw 40, SUNNY_DAY
 	db 0 ; no more level-up moves
 
 SunfloraEvosAttacks:
-	db 0 ; no more evolutions
 	dbw 1, ABSORB
-	dbw 1, POUND
 	dbw 4, GROWTH
-	dbw 10, RAZOR_LEAF
-	dbw 19, SUNNY_DAY
-	dbw 31, PETAL_DANCE
-	dbw 46, SOLARBEAM
+	dbw 10, MEGA_DRAIN
+	dbw 13, LEECH_SEED
+	dbw 16, RAZOR_LEAF
+	dbw 22, GIGA_DRAIN
+	dbw 28, PETAL_DANCE
+	dbw 34, SOLARBEAM
+	dbw 37, DOUBLE_EDGE
+	dbw 40, SUNNY_DAY
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, FORESIGHT
-	dbw 7, QUICK_ATTACK
-	dbw 13, DOUBLE_TEAM
-	dbw 19, SONICBOOM
-	dbw 25, DETECT
-	dbw 31, SUPERSONIC
-	dbw 37, WING_ATTACK
-	dbw 43, SCREECH
+	dbw 6, QUICK_ATTACK
+	dbw 11, DOUBLE_TEAM
+	dbw 14, SONICBOOM
+	dbw 17, DETECT
+	dbw 22, SUPERSONIC
+	dbw 27, PURSUIT
+	dbw 33, ANCIENTPOWER
+	dbw 38, HYPNOSIS
+	dbw 43, WING_ATTACK
+	dbw 46, SCREECH
+	dbw 49, FLY
 	db 0 ; no more level-up moves
 
 WooperEvosAttacks:

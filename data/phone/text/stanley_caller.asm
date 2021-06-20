@@ -118,8 +118,7 @@ UnknownText_0x175abe:
 UnknownText_0x175b1e:
 	text "You feel like"
 	line "having a rematch?"
-	
-	para "I sure have been."
+	cont "I sure have been."
 	
 	para "Meet me at"
 	line "@"
