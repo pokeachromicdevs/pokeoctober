@@ -3,8 +3,8 @@
 
 	db   "A gentle and kind-"
 	next "hearted #MON"
-	next "that often takes in"
+	next "that often takes"
 
-	page "orphaned #MON"
-	next "and finds them a"
-	next "home.@"
+	page "in orphaned"
+	next "#MON and"
+	next "nurtures them.@"

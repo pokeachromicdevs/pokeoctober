@@ -68,7 +68,7 @@ UnknownText_0x175976:
 	done
 
 UnknownText_0x1759e7:
-	text "See you later!"
+	text "Farewell!"
 	done
 
 StanleyBugCatchingContestText:
@@ -99,14 +99,20 @@ StanleyFoundBerryText:
 	done
 
 UnknownText_0x175abe:
-	text "Huh? BERRIES?"
+	text "If you're calling"
+	line "about BERRIES, I'm"
 
-	para "Sorry, I haven't"
-	line "found any yet."
+	para "afraid I have no"
+	line "extras at the"
 
-	para "I'll call you if I"
-	line "find any. Will you"
-	cont "please wait?"
+	para "moment. Sorry!"
+	
+	para "I'll find more"
+	line "soon enough"
+	cont "though!"
+	
+	para "I'll call you"
+	line "then."
 	done
 
 UnknownText_0x175b1e:
@@ -123,14 +129,15 @@ UnknownText_0x175b1e:
 	done
 
 UnknownText_0x175b6d:
-	text "How come you're"
-	line "not here yet?"
-
-	para "@"
+	text "I hate to sound"
+	line "possibly annoying,"
+	
+	para "but have you"
+	line "forgotten about"
+	cont "our rematch?"
+	
+	para "I'm still here at"
+	
+	para "@."
 	text_ram wStringBuffer5
-	text " is"
-	line "where I am."
-
-	para "Please get here as"
-	line "soon as you can!"
 	done

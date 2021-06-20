@@ -1,4 +1,10 @@
-	db "LITTLE BIRD@" ; species name
+	db "PEAFOWL@" ; species name
 	dw 200, 155 ; height, weight
 	
-	db "TBD@"
+	db   "Worshipped since"
+	next "ancient times,"
+	next "this #MON will"
+
+	page "stop moving when"
+	next "it senses"
+	next "something strange.@"

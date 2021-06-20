@@ -1,8 +1,6 @@
 UnknownText_0x1b5a3b:
 	text "Hello, this is"
-	line "@"
-	text_ram wStringBuffer3
-	cont" speaking."
+	line "STANLEY speaking."
 
 	para "Oh. Hi, <PLAY_G>!"
 	line "Good morning!"
@@ -12,7 +10,7 @@ UnknownText_0x1b5a74:
 	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
-	text " speaking."
+	text "speaking."
 
 	para "Oh, hi, <PLAY_G>!"
 	done
@@ -21,7 +19,7 @@ UnknownText_0x1b5a9f:
 	text "Hello, this is"
 	line "@"
 	text_ram wStringBuffer3
-	text " speaking."
+	text "speaking."
 
 	para "Oh, hi, <PLAY_G>!"
 	line "Good night!"
