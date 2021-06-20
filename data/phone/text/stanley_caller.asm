@@ -52,19 +52,19 @@ UnknownText_0x1758e4:
 	done
 
 UnknownText_0x175976:
-	text "Do you feel like a"
-	line "#MON battle?"
-
-	para "It won't be like"
-	line "last time!"
-
-	para "@"
+	text "You feel like"
+	line "having a rematch?"
+	
+	para "I sure have been."
+	
+	para "Meet me at"
+	line "@"
 	text_ram wStringBuffer5
-	text "'s"
-	line "where I'll be."
+	text ", and"
+	line "we'll see who's"
 
-	para "Let me know when"
-	line "you get there."
+	para "the victor this"
+	line "time."
 	done
 
 UnknownText_0x1759e7:
@@ -116,16 +116,19 @@ UnknownText_0x175abe:
 	done
 
 UnknownText_0x175b1e:
-	text "Let's battle"
-	line "already!"
-
-	para "@"
+	text "You feel like"
+	line "having a rematch?"
+	
+	para "I sure have been."
+	
+	para "Meet me at"
+	line "@"
 	text_ram wStringBuffer5
-	text " is"
-	line "where I am."
+	text ", and"
+	line "we'll see who's"
 
-	para "Please get here as"
-	line "soon as you can!"
+	para "the victor this"
+	line "time."
 	done
 
 UnknownText_0x175b6d:
@@ -138,6 +141,7 @@ UnknownText_0x175b6d:
 	
 	para "I'm still here at"
 	
-	para "@."
+	para "@"
 	text_ram wStringBuffer5
+	text "."
 	done
