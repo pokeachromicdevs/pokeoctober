@@ -37,6 +37,7 @@ CherrygroveCityGuideGent:
 	playmusic MUSIC_SHOW_ME_AROUND
 	follow CHERRYGROVECITY_GRAMPS, PLAYER
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement1
+	turnobject PLAYER, UP
 	opentext
 	writetext GuideGentPokecenterText
 	waitbutton
@@ -48,13 +49,13 @@ CherrygroveCityGuideGent:
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement3
-	turnobject PLAYER, UP
+	turnobject PLAYER, LEFT
 	opentext
 	writetext GuideGentRoute30Text
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement4
-	turnobject PLAYER, LEFT
+	turnobject PLAYER, UP
 	opentext
 	writetext GuideGentSeaText
 	waitbutton
@@ -240,6 +241,10 @@ GuideGentMovement1:
 	step LEFT
 	step UP
 	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
 	turn_head UP
 	step_end
 
@@ -257,40 +262,51 @@ GuideGentMovement3:
 	step LEFT
 	step LEFT
 	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	turn_head LEFT
 	step_end
 
 GuideGentMovement4:
-	step LEFT
-	step LEFT
-	step LEFT
+	step UP
+	step UP
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
 	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step DOWN
-	turn_head LEFT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head UP
 	step_end
 
 GuideGentMovement5:
 	step DOWN
 	step DOWN
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
 	step DOWN
 	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -301,6 +317,7 @@ GuideGentMovement5:
 
 GuideGentMovement6:
 	step UP
+	step LEFT
 	step UP
 	step_end
 
@@ -566,7 +583,7 @@ CherrygroveCity_MapEvents:
 	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 
 	db 5 ; object events
-	object_event 34, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
+	object_event 36, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	object_event 39, 24, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
