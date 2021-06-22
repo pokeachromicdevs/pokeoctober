@@ -100,11 +100,15 @@ PlayBattleMusic:
 	cp GRUNTF
 	jr z, .done
 	cp EXECUTIVEM
-+	jr z, .done
-+	cp EXECUTIVEF
-+	jr z, .done
-+	cp SCIENTIST
-+	jr z, .done
+	jr z, .done
+	cp EXECUTIVEF
+	jr z, .done
+	cp SCIENTIST
+	jr z, .done
+	cp WILL
+	jr z, .done
+	cp KAREN
+	jr z, .done
 
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
