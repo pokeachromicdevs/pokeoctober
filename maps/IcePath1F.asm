@@ -9,7 +9,7 @@ IcePath1F_MapScripts:
 	db 0 ; callbacks
 
 IcePath1FHMWaterfall:
-	itemball HM_WATERFALL
+	itemball HM_BOUNCE
 
 IcePath1FPPUp:
 	itemball PP_UP

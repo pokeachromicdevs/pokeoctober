@@ -23,6 +23,6 @@ IsHMMove::
 	dw WATER_SPORT
 	dw STRONG_ARM
 	dw BRIGHT_MOSS
-	dw WATERFALL
+	dw BOUNCE
 	dw WHIRLPOOL
 	dw -1 ; end

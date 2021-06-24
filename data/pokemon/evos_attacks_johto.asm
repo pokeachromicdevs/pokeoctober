@@ -398,7 +398,7 @@ LanturnEvosAttacks:
 	dbw 1, SUPERSONIC
 	dbw 1, THUNDER_WAVE
 	dbw 12, WATER_GUN
-	dbw 14, CONFUSE_RAY
+	dbw 15, CONFUSE_RAY
 	dbw 20, BUBBLEBEAM
 	dbw 25, SPARK
 	dbw 33, WATERFALL
@@ -595,25 +595,29 @@ PolitoedEvosAttacks:
 HoppipEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, SKIPLOOM
 	db 0 ; no more evolutions
-	dbw 1, SPLASH
-	dbw 5, SYNTHESIS
-	dbw 5, TAIL_WHIP
-	dbw 10, TACKLE
+	dbw 1, ABSORB 
+	dbw 1, SPLASH 
+	dbw 4, SYNTHESIS
+	dbw 6, GUST 
+	dbw 9, TAIL_WHIP   
+	dbw 11, TACKLE
 	dbw 13, POISONPOWDER
 	dbw 15, STUN_SPORE
 	dbw 17, SLEEP_POWDER
 	dbw 20, LEECH_SEED
-	dbw 25, COTTON_SPORE
-	dbw 30, MEGA_DRAIN
+	dbw 25, MEGA_DRAIN
+	dbw 30, COTTON_SPORE
+	dbw 35, FLY
 	db 0 ; no more level-up moves
 
 SkiploomEvosAttacks:
 	dbbw EVOLVE_LEVEL, 27, JUMPLUFF
 	db 0 ; no more evolutions
+	dbw 1, ABSORB
 	dbw 1, SPLASH
 	dbw 1, SYNTHESIS
 	dbw 1, TAIL_WHIP
-	dbw 1, TACKLE
+	dbw 4, TACKLE
 	dbw 5, SYNTHESIS
 	dbw 5, TAIL_WHIP
 	dbw 10, TACKLE
@@ -623,14 +627,16 @@ SkiploomEvosAttacks:
 	dbw 22, LEECH_SEED
 	dbw 29, COTTON_SPORE
 	dbw 36, MEGA_DRAIN
+	dbw 41, FLY
 	db 0 ; no more level-up moves
 
 JumpluffEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, ABSORB
 	dbw 1, SPLASH
 	dbw 1, SYNTHESIS
 	dbw 1, TAIL_WHIP
-	dbw 1, TACKLE
+	dbw 4, TACKLE
 	dbw 5, SYNTHESIS
 	dbw 5, TAIL_WHIP
 	dbw 10, TACKLE
@@ -640,6 +646,7 @@ JumpluffEvosAttacks:
 	dbw 22, LEECH_SEED
 	dbw 33, COTTON_SPORE
 	dbw 44, MEGA_DRAIN
+	dbw 49, FLY
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:

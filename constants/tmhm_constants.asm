@@ -77,7 +77,7 @@ ENDM
 	add_hm STRONG_ARM   ; 35
 	add_hm BRIGHT_MOSS  ; 36
 	add_hm WHIRLPOOL    ; 37
-	add_hm WATERFALL    ; 38
+	add_hm BOUNCE       ; 38
 	
 NUM_HMS EQU const_value - HM01
 

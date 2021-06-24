@@ -709,6 +709,8 @@ Script_UsedWaterfall:
 	ret
 
 .WaterfallStep:
+	slow_step DOWN
+	step UP
 	turn_waterfall UP
 	step_end
 
