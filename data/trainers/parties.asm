@@ -5142,7 +5142,39 @@ InstructorGroup:
 	
 	end_list_items
 
+ProfessorGroup:
+	next_list_item ; PROFESSOR (1)	
+	db "OAK@", TRAINERTYPE_MOVES
+	db 3
+	dw SPEAROW
+	dw FURY_ATTACK, MIRROR_MOVE, NO_MOVE, NO_MOVE
+	db 7
+	dw BULBASAUR
+	dw TACKLE, GROWL, LEECH_SEED, NO_MOVE
+	db -1 ; end
+	
+	next_list_item ; PROFESSOR (2)	
+	db "OAK@", TRAINERTYPE_MOVES
+	db 3
+	dw SPEAROW
+	dw FURY_ATTACK, MIRROR_MOVE, NO_MOVE, NO_MOVE
+	db 7
+	dw CHARMANDER
+	dw SCRATCH, GROWL, EMBER, NO_MOVE
+	db -1 ; end
+	
+	next_list_item ; PROFESSOR (3)	
+	db "OAK@", TRAINERTYPE_MOVES
+	db 3
+	dw SPEAROW
+	dw FURY_ATTACK, MIRROR_MOVE, NO_MOVE, NO_MOVE 
+	db 7
+	dw SQUIRTLE
+	dw TACKLE, TAIL_WHIP, BUBBLE, NO_MOVE
+	db -1 ; end
 
+	end_list_items
+	
 CamperGroup:
 	next_list_item ; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_NORMAL

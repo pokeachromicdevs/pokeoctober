@@ -88,6 +88,19 @@ MrPokemonsHouse_OakScript:
 	opentext
 	writetext MrPokemonsHouse_OakText1
 	buttonsound
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .Cyndaquil
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .TOTODILE
+	winlosstext OakBeatText, PlayerLostText
+	loadtrainer PROFESSOR, OAK1_1_BULBASAUR
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+	
 	waitsfx
 	writetext MrPokemonsHouse_GetDexText
 	giveitem OAKS_PARCEL
@@ -134,6 +147,40 @@ MrPokemonsHouse_OakScript:
 	iftrue .RivalTakesCyndaquil
 	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	end
+
+.Cyndaquil:
+	winlosstext OakBeatText, PlayerLostText
+	loadtrainer PROFESSOR, OAK1_1_CHARMANDER
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.TOTODILE:
+	winlosstext OakBeatText, PlayerLostText
+	loadtrainer PROFESSOR, OAK1_1_SQUIRTLE
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
+
+.AfterVictorious:
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext MrPokemonsHouse_OakText2
+	waitbutton
+	closetext
+
+.AfterYourDefeat:
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext MrPokemonsHouse_OakText2
+	waitbutton
+	closetext
 
 .RivalTakesChikorita:
 	setevent EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
@@ -366,6 +413,14 @@ MrPokemonsHouse_StrangeCoinsText:
 
 	para "Maybe they're from"
 	line "another country…"
+	done
+	
+OakBeatText:
+	text "you show potential"
+	done
+	
+PlayerLostText:
+	text "you show potential"
 	done
 
 MrPokemonsHouse_MapEvents:

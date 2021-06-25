@@ -702,6 +702,12 @@ KRIS EQU __enum__
 	const STANLEY3
 	const STANLEY4
 	const STANLEY5
+	
+	trainerclass PROFESSOR   ; 45
+	const OAK1_1_BULBASAUR
+	const OAK1_1_CHARMANDER
+	const OAK1_1_SQUIRTLE
+	
 
 
 NUM_TRAINER_CLASSES EQU __enum__

@@ -109,7 +109,7 @@ PlayBattleMusic:
 	jr z, .done
 	cp KAREN
 	jr z, .done
-
+	
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
 	jr c, .done
@@ -132,7 +132,7 @@ PlayBattleMusic:
 	jr c, .done
 	ld de, MUSIC_CHAMPION_BATTLE
 	jr .done
-
+	
 .othertrainer
 	ld a, [wLinkMode]
 	and a

@@ -25,8 +25,6 @@ Route31_MapScripts:
 TrainerInstructorStanley:
 	trainer INSTRUCTOR, STANLEY, EVENT_BEAT_INSTRUCTOR_STANLEY, InstructorStanley1SeenText, InstructorStanley1BeatenText, 0, .Script
 
-;put rematch on Stanley?
-
 .Script:
 	loadvar VAR_CALLERID, PHONE_INSTRUCTOR_STANLEY
 	endifjustbattled

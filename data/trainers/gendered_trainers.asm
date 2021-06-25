@@ -27,6 +27,7 @@ MaleTrainers:
 	db BIKER
 	db SCIENTIST
 	db INSTRUCTOR
+	db PROFESSOR
 .End
 
 FemaleTrainers:

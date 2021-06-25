@@ -70,3 +70,4 @@ TrainerPicPointers::
 	dba GruntfPic
 	dba MysticalmanPic
 	dba InstructorPic
+	dba ProfessorPic
