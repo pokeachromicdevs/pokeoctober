@@ -829,28 +829,28 @@ DugtrioEvosAttacks:
 MeowthEvosAttacks:
 	dbbw EVOLVE_LEVEL, 28, PERSIAN
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
-	db 11, BITE
-	db 17, PAY_DAY
-	db 23, FURY_SWIPES
-	db 29, FAINT_ATTACK
-	db 35, COIN_HURL
-	db 41, SCREECH
-	db 47, SLASH
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 11, BITE
+	dbw 17, PAY_DAY
+	dbw 23, FURY_SWIPES
+	dbw 29, FAINT_ATTACK
+	dbw 35, COIN_HURL
+	dbw 41, SCREECH
+	dbw 47, SLASH
     db 0 ; no more level-up moves
 
 PersianEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
-	db 15, BITE
-	db 21, PAY_DAY
-	db 27, FURY_SWIPES
-	db 33, FAINT_ATTACK
-	db 41, COIN_HURL
-	db 49, SCREECH
-	db 57, SLASH
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 15, BITE
+	dbw 21, PAY_DAY
+	dbw 27, FURY_SWIPES
+	dbw 33, FAINT_ATTACK
+	dbw 41, COIN_HURL
+	dbw 49, SCREECH
+	dbw 57, SLASH
     db 0 ; no more level-up moves
 
 
