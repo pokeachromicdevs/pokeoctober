@@ -1,5 +1,5 @@
 ; to do: insert beta cries
-
+	
 Cry_Marill:
 	musicheader 3, 5, Cry_Marill_Ch5
 	musicheader 1, 6, Cry_Marill_Ch6
@@ -145,10 +145,9 @@ Cry_Mantine:
 	musicheader 1, 8, Cry_Mantine_Ch8
 	
 Cry_BetaTotodile:
-	channel_count 3
-	channel 5, Cry_Totodile_Ch5
-	channel 6, Cry_Totodile_Ch6
-	channel 8, Cry_Totodile_Ch8
+	musicheader 3, 5, Cry_BetaTotodile_Ch5
+	musicheader 1, 6, Cry_BetaTotodile_Ch6
+	musicheader 1, 8, Cry_BetaTotodile_Ch8
 
 Cry_Entei_Ch5:
 	soundinput $ff
@@ -2046,8 +2045,33 @@ Cry_Rattata_Ch6:
 	endchannel
 
 Cry_Rattata_Ch8:
-	noise __,  3, $92, $49
+	noise __,  3, $92, $49   
 	noise __,  8, $b5, $29
 	noise __,  2, $a2, $39
 	noise __,  9, $91, $49
 	endchannel
+	
+Cry_BetaTotodile_Ch5:
+	sound_duty  0, 3,  0, 2
+	sound __, 8, 15, 8, 816
+	sound __, 8, 15, 8, 832
+	sound __, 8, 12, 8, 1970
+	sound __, 8, 11, 8, 1971
+	sound __, 32, 11, 2, 1972
+	sound_ret
+
+Cry_BetaTotodile_Ch6:
+	sound_duty  0, 1,  0, 2
+	sound __, 8, 14, 8, 800
+	sound __, 8, 14, 8, 808
+	sound __, 8, 9, 8, 1920
+	sound __, 8, 8, 8, 1922
+	sound __, 32, 7, 2, 1924
+	sound_ret
+
+Cry_BetaTotodile_Ch8:
+	noise __, 2, 11, -6, 73
+	noise __, 5, 11, -6, 58
+	noise __, 2, 11, -6, 41
+	noise __,  40, 13, 3, 110
+	sound_ret

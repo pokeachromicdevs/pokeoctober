@@ -6,8 +6,89 @@
 callba EQUS "farcall"
 callab EQUS "callfar"
 
+; macros/gfx.asm
+
+; macros/data.asm
+
 ; macros/scripts/audio.asm
+
+musicheader: MACRO
+	channel_count \1
+	channel \2, \3
+ENDM
+
+sound: MACRO
+	note \1, \2
+	db \3
+	dw \4
+ENDM
+
+noise: MACRO
+	note \1, \2
+	db \3
+	db \4
+ENDM
+
+notetype: MACRO
+if _NARG >= 2
+	note_type \1, \2 >> 4, \2 & $0f
+else
+	note_type \1
+endc
+ENDM
+
+pitchoffset: MACRO
+	transpose \1, \2 - 1
+ENDM
+
+dutycycle EQUS "duty_cycle"
+
+intensity: MACRO
+	volume_envelope \1 >> 4, \1 & $0f
+ENDM
+
+soundinput: MACRO
+	pitch_sweep \1 >> 4, \1 & $0f
+ENDM
+
 unknownmusic0xde EQUS "sound_duty"
+sound_duty: MACRO
+	db duty_cycle_pattern_cmd
+if _NARG == 4
+	db \1 | (\2 << 2) | (\3 << 4) | (\4 << 6)
+else
+	db \1
+endc
+ENDM
+
+togglesfx EQUS "toggle_sfx"
+
+slidepitchto: MACRO
+	pitch_slide \1, (8 - \2), \3
+ENDM
+
+togglenoise EQUS "toggle_noise"
+
+panning: MACRO
+	force_stereo_panning ((\1 >> 4) & 1), (\1 & 1)
+ENDM
+
+tone           EQUS "pitch_offset"
+restartchannel EQUS "restart_channel"
+newsong        EQUS "new_song"
+sfxpriorityon  EQUS "sfx_priority_on"
+sfxpriorityoff EQUS "sfx_priority_off"
+
+stereopanning: MACRO
+	stereo_panning ((\1 >> 4) & 1), (\1 & 1)
+ENDM
+
+sfxtogglenoise EQUS "sfx_toggle_noise"
+setcondition   EQUS "set_condition"
+jumpif         EQUS "sound_jump_if"
+jumpchannel    EQUS "sound_jump"
+loopchannel    EQUS "sound_loop"
+callchannel    EQUS "sound_call"
 
 ; macros/scripts/events.asm
 
@@ -17,7 +98,7 @@ checknite EQUS "checktime NITE"
 
 jump           EQUS "sjump"
 farjump        EQUS "farsjump"
-priorityjump   EQUS "prioritysjump"
+priorityjump   EQUS "sdefer"
 ptcall         EQUS "memcall"
 ptjump         EQUS "memjump"
 ptpriorityjump EQUS "stopandsjump"
@@ -89,30 +170,30 @@ readmoney: MACRO
 	getmoney \2, \1
 ENDM
 
-RAM2MEM           EQUS "getnum"
-loadfont          EQUS "opentext"
-loadmenudata      EQUS "loadmenu"
-loadmenuheader    EQUS "loadmenu"
-writebackup       EQUS "closewindow"
-interpretmenu     EQUS "_2dmenu"
-interpretmenu2    EQUS "verticalmenu"
-battlecheck       EQUS "randomwildmon"
-loadtrainerdata   EQUS "loadtemptrainer"
-loadpokedata      EQUS "loadwildmon"
-returnafterbattle EQUS "reloadmapafterbattle"
-trainerstatus     EQUS "trainerflagaction"
-talkaftercancel   EQUS "endifjustbattled"
-talkaftercheck    EQUS "checkjustbattled"
-playrammusic      EQUS "encountermusic"
-reloadmapmusic    EQUS "dontrestartmapmusic"
-resetfuncs        EQUS "endall"
-storetext         EQUS "battletowertext"
-displaylocation   EQUS "landmarktotext"
-givepokeitem      EQUS "givepokemail"
-checkpokeitem     EQUS "checkpokemail"
-passtoengine      EQUS "autoinput"
-verbosegiveitem2  EQUS "verbosegiveitemvar"
-loadbytec2cf      EQUS "writeunusedbytebuffer"
+RAM2MEM               EQUS "getnum"
+loadfont              EQUS "opentext"
+loadmenudata          EQUS "loadmenu"
+loadmenuheader        EQUS "loadmenu"
+writebackup           EQUS "closewindow"
+interpretmenu         EQUS "_2dmenu"
+interpretmenu2        EQUS "verticalmenu"
+battlecheck           EQUS "randomwildmon"
+loadtrainerdata       EQUS "loadtemptrainer"
+loadpokedata          EQUS "loadwildmon"
+returnafterbattle     EQUS "reloadmapafterbattle"
+trainerstatus         EQUS "trainerflagaction"
+talkaftercancel       EQUS "endifjustbattled"
+talkaftercheck        EQUS "checkjustbattled"
+playrammusic          EQUS "encountermusic"
+reloadmapmusic        EQUS "dontrestartmapmusic"
+resetfuncs            EQUS "endall"
+storetext             EQUS "battletowertext"
+displaylocation       EQUS "landmarktotext"
+givepokeitem          EQUS "givepokemail"
+checkpokeitem         EQUS "checkpokemail"
+passtoengine          EQUS "autoinput"
+verbosegiveitem2      EQUS "verbosegiveitemvar"
+loadbytec2cf          EQUS "writeunusedbyte"
 
 ; macros/scripts/maps.asm
 
@@ -135,18 +216,7 @@ signpost: MACRO
 ENDM
 
 person_event: MACRO
-;	object_event \3, \2, \1, \4, \5, \6, \7, \8, \9, \10, \11, \12, \13
-	db \1, \2 + 4, \3 + 4, \4
-	dn \6, \5
-	db \7, \8
-	shift
-	dn \8, \9
-	shift
-	db \9
-	shift
-	dw \9
-	shift
-	dw \9
+	object_event \3, \2, \1, \4, \5, \6, \7, \8, \9, \<10>, \<11>, \<12>, \<13>
 ENDM
 
 PERSONTYPE_SCRIPT   EQUS "OBJECTTYPE_SCRIPT"
@@ -231,7 +301,8 @@ start_asm              EQUS "text_asm"
 deciram                EQUS "text_decimal"
 interpret_data         EQUS "text_pause"
 limited_interpret_data EQUS "text_dots"
-link_wait_button       EQUS "text_linkwaitbutton"
+link_wait_button       EQUS "text_waitbutton"
+text_linkpromptbutton  EQUS "text_waitbutton"
 current_day            EQUS "text_today"
 text_jump              EQUS "text_far"
 
@@ -239,3 +310,8 @@ text_jump              EQUS "text_far"
 anim_enemyfeetobj  EQUS "anim_battlergfx_2row"
 anim_playerheadobj EQUS "anim_battlergfx_1row"
 anim_clearsprites  EQUS "anim_keepsprites"
+
+; engine/events/std_scripts.asm
+
+; constants/sprite_constants.asm
+SPRITE_BUENA EQUS "SPRITE_BEAUTY"

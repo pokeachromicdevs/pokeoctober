@@ -88,137 +88,6 @@ MrPokemonsHouse_OakScript:
 	opentext
 	writetext MrPokemonsHouse_OakText1
 	buttonsound
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Cyndaquil
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .TOTODILE
-	winlosstext OakBeatText, PlayerLostText
-	loadtrainer PROFESSOR, OAK1_1_BULBASAUR
-	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	reloadmap
-	dontrestartmapmusic
-	iftrue .AfterVictorious
-	jump .AfterYourDefeat
-	waitsfx
-	opentext
-	writetext MrPokemonsHouse_GetDexText
-	giveitem OAKS_PARCEL
-	playsound SFX_ITEM
-	waitsfx
-	setflag ENGINE_POKEDEX
-	writetext MrPokemonsHouse_OakText2
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
-	playsound SFX_EXIT_BUILDING
-	disappear MRPOKEMONSHOUSE_OAK
-	waitsfx
-	special RestartMapMusic
-	pause 15
-	turnobject PLAYER, UP
-	opentext
-	writetext MrPokemonsHouse_MrPokemonHealText
-	waitbutton
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	playmusic MUSIC_HEAL
-	special StubbedTrainerRankings_Healings
-	special HealParty
-	pause 60
-	special FadeInQuickly
-	special RestartMapMusic
-	opentext
-	writetext MrPokemonText_ImDependingOnYou
-	waitbutton
-	closetext
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
-	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
-	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
-	setscene SCENE_FINISHED
-	setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
-	specialphonecall SPECIALCALL_ROBBED
-	clearevent EVENT_COP_IN_ELMS_LAB
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .RivalTakesChikorita
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .RivalTakesCyndaquil
-	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	end
-
-.Cyndaquil:
-	winlosstext OakBeatText, PlayerLostText
-	loadtrainer PROFESSOR, OAK1_1_CHARMANDER
-	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	jump .AfterYourDefeat
-
-.TOTODILE:
-	winlosstext OakBeatText, PlayerLostText
-	loadtrainer PROFESSOR, OAK1_1_SQUIRTLE
-	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	jump .AfterYourDefeat
-
-.AfterVictorious:
-	waitsfx
-	opentext
-	writetext MrPokemonsHouse_GetDexText
-	giveitem OAKS_PARCEL
-	playsound SFX_ITEM
-	waitsfx
-	setflag ENGINE_POKEDEX
-	writetext MrPokemonsHouse_OakText2
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
-	playsound SFX_EXIT_BUILDING
-	disappear MRPOKEMONSHOUSE_OAK
-	waitsfx
-	special RestartMapMusic
-	pause 15
-	turnobject PLAYER, UP
-	opentext
-	writetext MrPokemonsHouse_MrPokemonHealText
-	waitbutton
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	playmusic MUSIC_HEAL
-	special StubbedTrainerRankings_Healings
-	special HealParty
-	pause 60
-	special FadeInQuickly
-	special RestartMapMusic
-	opentext
-	writetext MrPokemonText_ImDependingOnYou
-	waitbutton
-	closetext
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
-	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
-	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
-	setscene SCENE_FINISHED
-	setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
-	specialphonecall SPECIALCALL_ROBBED
-	clearevent EVENT_COP_IN_ELMS_LAB
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .RivalTakesChikorita
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .RivalTakesCyndaquil
-	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	end
-	
-
-.AfterYourDefeat:
 	waitsfx
 	opentext
 	writetext MrPokemonsHouse_GetDexText
@@ -329,7 +198,8 @@ MrPokemonIntroText3:
 	line "contain a new"
 	cont "#MON we've"
 
-	para "never seen before!"
+	para "never seen"
+	line "before!"
 	
 	para "Oh?"
 	
@@ -498,14 +368,6 @@ MrPokemonsHouse_StrangeCoinsText:
 
 	para "Maybe they're from"
 	line "another country…"
-	done
-	
-OakBeatText:
-	text "you show potential"
-	done
-	
-PlayerLostText:
-	text "you show potential"
 	done
 
 MrPokemonsHouse_MapEvents:
