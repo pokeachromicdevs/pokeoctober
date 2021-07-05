@@ -8,15 +8,15 @@ EvosAttacksPointers3::
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
-	db 7, BITE
-	db 13, PAY_DAY
-	db 19, FURY_SWIPES
-	db 25, FAINT_ATTACK
-	db 31, COIN_HURL
-	db 37, SCREECH
-	db 43, SLASH
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 7, BITE
+	dbw 13, PAY_DAY
+	dbw 19, FURY_SWIPES
+	dbw 25, FAINT_ATTACK
+	dbw 31, COIN_HURL
+	dbw 37, SCREECH
+	dbw 43, SLASH
 	db 0 ; no more level-up moves
 	
 KatuEvosAttacks:

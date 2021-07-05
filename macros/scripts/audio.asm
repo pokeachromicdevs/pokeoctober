@@ -319,7 +319,7 @@ sound_ret: MACRO
 	db sound_ret_cmd
 ENDM
 
-	enum endchannel_cmd ; $ff
+endchannel_cmd EQU const_value
 endchannel: MACRO
 	db endchannel_cmd
 ENDM
