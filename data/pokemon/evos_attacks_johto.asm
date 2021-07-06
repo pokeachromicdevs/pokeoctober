@@ -107,6 +107,7 @@ ChikoritaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
+	dbw 6, ICY_WIND
 	dbw 8, LEECH_SEED
 	dbw 12, RAZOR_LEAF
 	dbw 15, POISONPOWDER
@@ -625,8 +626,8 @@ SkiploomEvosAttacks:
 	dbw 15, STUN_SPORE
 	dbw 17, SLEEP_POWDER
 	dbw 22, LEECH_SEED
-	dbw 29, COTTON_SPORE
-	dbw 36, MEGA_DRAIN
+	dbw 29, MEGA_DRAIN
+	dbw 36, COTTON_SPORE
 	dbw 41, FLY
 	db 0 ; no more level-up moves
 
@@ -644,8 +645,8 @@ JumpluffEvosAttacks:
 	dbw 15, STUN_SPORE
 	dbw 17, SLEEP_POWDER
 	dbw 22, LEECH_SEED
-	dbw 33, COTTON_SPORE
-	dbw 44, MEGA_DRAIN
+	dbw 33, MEGA_DRAIN
+	dbw 44, COTTON_SPORE
 	dbw 49, FLY
 	db 0 ; no more level-up moves
 
@@ -817,13 +818,14 @@ GirafarigEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 1, DOUBLE_KICK
+	dbw 1, CONFUSE_RAY
 	dbw 1, STOMP
 	dbw 7, SPITE
 	dbw 13, STOMP
-	dbw 20, AGILITY
+	dbw 20, NIGHT_SHADE
 	dbw 30, BATON_PASS
 	dbw 41, SHADOW_BALL
+	dbw 45, AGILITY
 	dbw 54, CRUNCH
 	db 0 ; no more level-up moves
 
@@ -866,6 +868,7 @@ DunsparceEvosAttacks:
 	dbw 20, GLARE
 	dbw 24, ANCIENTPOWER
 	dbw 28, SPITE
+	dbw 32, PURSUIT
 	dbw 36, BODY_SLAM
 	dbw 40, SCREECH
 	dbw 44, TAKE_DOWN

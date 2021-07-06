@@ -212,7 +212,7 @@ Moves1:
 	move EFFECT_FORESIGHT,           0, NORMAL,   100, 40,   0 ;FORESIGHT
 	move EFFECT_DESTINY_BOND,        0, GHOST,    100,  5,   0 ;DESTINY_BOND
 	move EFFECT_PERISH_SONG,         0, NORMAL,   100,  5,   0 ;PERISH_SONG
-	move EFFECT_SPEED_DOWN_HIT,     55, ICE,       95, 15, 100 ;ICY_WIND
+	move EFFECT_SPEED_DOWN_2,       20, ICE,      100, 10, 100 ;ICY_WIND
 	move EFFECT_PROTECT,             0, FIGHTING, 100,  5,   0 ;DETECT
 	move EFFECT_MULTI_HIT,          25, GROUND,    80, 10,   0 ;BONE_RUSH
 	move EFFECT_LOCK_ON,             0, NORMAL,   100,  5,   0 ;LOCK_ON
