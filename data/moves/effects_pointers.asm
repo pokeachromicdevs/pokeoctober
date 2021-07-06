@@ -159,3 +159,4 @@ MoveEffectsPointers:
 	dw DefenseCurl
 	dw CoinHurl
 	dw Bounce
+	dw SpeedDown2Hit

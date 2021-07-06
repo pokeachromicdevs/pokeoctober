@@ -2120,3 +2120,25 @@ Bounce:
 	kingsrock
 	paralyzetarget
 	endmove
+	
+SpeedDown2Hit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	speeddown2
+	statdownmessage
+	endmove
