@@ -285,6 +285,7 @@ BattleAnimations::
 	dw BattleAnim_Tempt
 	dw BattleAnim_CoinHurl
 	dw BattleAnim_Bounce
+	dw BattleAnim_RockSlash
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -4683,16 +4684,16 @@ BattleAnim_StrongArm:
 	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
 	anim_obj ANIM_OBJ_AGILITY, 8, 104, $e
 	anim_wait 12
-	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
-	anim_bgp $90
+	;anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	;anim_bgp $90
 .loop
-	anim_sound 0, 1, SFX_KARATE_CHOP
-	anim_obj ANIM_GFX_HIT, 148, 56, $0
-	anim_wait 1
-	anim_obj ANIM_GFX_HIT, 148, 56, $0
-	anim_wait 2
-	anim_sound 0, 1, SFX_KARATE_CHOP
-	anim_obj ANIM_GFX_HIT, 122, 34, $0
+	;anim_sound 0, 1, SFX_KARATE_CHOP
+	;anim_obj ANIM_GFX_HIT, 148, 56, $0
+	;anim_wait 1
+	;anim_obj ANIM_GFX_HIT, 148, 56, $0
+	;anim_wait 2
+	;anim_sound 0, 1, SFX_KARATE_CHOP
+	;anim_obj ANIM_GFX_HIT, 122, 34, $0
 	anim_wait 1
 	anim_obj ANIM_GFX_HIT, 122, 34, $0
 	anim_wait 2
@@ -4752,6 +4753,19 @@ BattleAnim_CoinHurl:
 	anim_wait 12
 	anim_loop 3, .loop2
 	anim_wait 8
+	anim_ret
+	
+BattleAnim_RockSlash:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_CUT
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_BIG_ROCK, 120, 44, $30 ;128
+	anim_obj ANIM_OBJ_BIG_ROCK, 134, 48, $30
+	anim_obj ANIM_OBJ_BIG_ROCK, 156, 54, $30
+	anim_wait 60
+	anim_sound 0, 0, SFX_OUTRAGE
+	anim_sound 0, 0, SFX_VICEGRIP
+	anim_obj ANIM_OBJ_3A, 150, 40, $0
+	anim_wait 32
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

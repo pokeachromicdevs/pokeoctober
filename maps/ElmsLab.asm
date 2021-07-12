@@ -319,6 +319,7 @@ ElmDirectionsScript:
 	setscene SCENE_ELM_ENTRANCE_BATTLE 
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
 	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	reloadmap
 	end
 
 ElmDescribesMrPokemonScript:

@@ -266,6 +266,7 @@ MoveDescriptions1:
 	dw TemptDescription
 	dw CoinHurlDescription
 	dw BounceDescription
+	dw RockSlashDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1304,3 +1305,7 @@ CoinHurlDescription:
 BounceDescription:
 	db "1st turn: Bounce"
 	next "2nd turn: Attack@"
+	
+RockSlashDescription:
+	db "Attacks the enemy"
+	next "with extreme vigor."

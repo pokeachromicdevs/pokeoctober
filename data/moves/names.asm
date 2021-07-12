@@ -260,3 +260,4 @@ MoveNames::
 	db "TEMPT@"
 	db "COIN HURL@"
 	db "BOUNCE@"
+	db "ROCK SLASH@"

@@ -107,7 +107,6 @@ ChikoritaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 6, ICY_WIND
 	dbw 8, LEECH_SEED
 	dbw 12, RAZOR_LEAF
 	dbw 15, POISONPOWDER
@@ -156,7 +155,7 @@ CyndaquilEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 6, CROSS_CUTTER
+	dbw 6, ROCK_SLASH
 	dbw 7, WIND_RIDE
 	dbw 8, ROCK_HEAD
 	dbw 9, BOUNCE
