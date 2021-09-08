@@ -254,3 +254,4 @@ PokedexDataPointerTable:
 	dba CoinpurPokedexEntry
 	dba KatuPokedexEntry
 	dba AdbarstorkPokedexEntry
+	dba PupperonPokedexEntry

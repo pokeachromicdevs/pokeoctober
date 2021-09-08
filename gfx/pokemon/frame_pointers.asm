@@ -253,3 +253,4 @@ FramesPointers:
 	dba MeowsyFrames
 	dba KatuFrames
 	dba AdbarstorkFrames
+	dba PupperonFrames

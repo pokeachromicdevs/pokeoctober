@@ -128,6 +128,7 @@ NewPokedexOrder:
 	dw GRANBULL
 	dw VULPIX
 	dw NINETALES
+	dw PUPPERON
 	dw GROWLITHE
 	dw ARCANINE
 	dw STANTLER

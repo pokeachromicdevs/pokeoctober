@@ -521,3 +521,5 @@ PokemonPicPointers::
 	dba KatuBackpic
 	dba AdbarstorkFrontpic
 	dba AdbarstorkBackpic
+	dba PupperonFrontpic
+	dba PupperonBackpic

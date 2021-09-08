@@ -178,6 +178,7 @@ AlphabeticalPokedexOrder:
 	dw PRIMEAPE
 	dw PSYDUCK
 	dw PUPITAR
+	dw PUPPERON
 	dw QUAGSIRE
 	dw QUILAVA
 	dw QWILFISH

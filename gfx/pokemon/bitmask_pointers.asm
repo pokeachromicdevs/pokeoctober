@@ -253,3 +253,4 @@ BitmasksPointers:
 	dw MeowsyBitmasks
 	dw KatuBitmasks
 	dw AdbarstorkBitmasks
+	dw PupperonBitmasks

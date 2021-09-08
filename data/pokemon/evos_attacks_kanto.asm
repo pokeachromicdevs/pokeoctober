@@ -915,16 +915,20 @@ PrimeapeEvosAttacks:
 	db 0 ; no more level-up moves
 
 GrowlitheEvosAttacks:
-	dbbw EVOLVE_ITEM, FIRE_STONE, ARCANINE
+	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
 	db 0 ; no more evolutions
-	dbw 1, BITE
-	dbw 1, ROAR
-	dbw 9, EMBER
-	dbw 18, LEER
-	dbw 26, TAKE_DOWN
-	dbw 34, FLAME_WHEEL
-	dbw 42, AGILITY
-	dbw 50, FLAMETHROWER
+	db 1, BITE
+	db 1, ROAR
+	db 6, EMBER
+	db 12, LEER
+	db 17, FLAME_WHEEL
+	db 23, REVERSAL
+	db 28, TAKE_DOWN
+	db 34, FLAMETHROWER
+	db 39, AGILITY
+	db 45, CRUNCH
+	db 50, OUTRAGE
+	db 56, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 ArcanineEvosAttacks:

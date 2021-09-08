@@ -21,3 +21,5 @@
 	frame 9, 08
 	frame 0, 08
 	endanim
+	
+;check this animation later to see if it fully matches the .gif

@@ -253,3 +253,4 @@ AnimationPointers:
 	dw MeowsyAnimation
 	dw KatuAnimation
 	dw AdbarstorkAnimation
+	dw PupperonAnimation

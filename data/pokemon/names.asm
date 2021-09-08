@@ -257,3 +257,4 @@ PokemonNames::
 	db "COINPUR@@@"
 	db "KATU@@@@@@"
 	db "ADBARSTORK"
+	db "PUPPERON@@"

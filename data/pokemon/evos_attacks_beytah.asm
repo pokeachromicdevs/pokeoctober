@@ -4,6 +4,7 @@ EvosAttacksPointers3::
 	dw CoinpurEvosAttacks
 	dw KatuEvosAttacks
 	dw AdbarstorkEvosAttacks
+	dw PupperonEvosAttacks
 
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -48,4 +49,21 @@ AdbarstorkEvosAttacks:
 	dbw 39, MIRROR_MOVE
 	dbw 45, DRILL_PECK
 	dbw 52, FLY
+	db 0 ; no more level-up moves
+
+PupperonEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_ANYTIME, GROWLITHE
+	db 0 ; no more evolutions
+	db 1, BITE
+	db 1, CHARM
+	db 6, EMBER
+	db 12, LEER
+	db 17, FLAME_WHEEL
+	db 23, REVERSAL
+	db 28, TAKE_DOWN
+	db 34, FLAMETHROWER
+	db 39, AGILITY
+	db 45, CRUNCH
+	db 50, OUTRAGE
+	db 56, FIRE_BLAST
 	db 0 ; no more level-up moves

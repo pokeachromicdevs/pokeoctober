@@ -259,6 +259,7 @@ PokemonCries::
     mon_cry CRY_ENTEI,      $2fb,   $100 ; COINPUR
 	mon_cry CRY_NATU,       -$07c,  $166 ; KATU
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
+	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle
