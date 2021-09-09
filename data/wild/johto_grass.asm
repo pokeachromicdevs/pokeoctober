@@ -1139,7 +1139,7 @@ JohtoGrassWildMons:
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, GEODUDE
+	dbw 3, BIPULLA
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
@@ -1147,20 +1147,20 @@ JohtoGrassWildMons:
 	dbw 4, ZUBAT
 	dbw 4, DUNSPARCE
 	; day
-	dbw 3, GEODUDE
+	dbw 3, BIPULLA
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
 	dbw 2, ZUBAT
-	dbw 4, ZUBAT
+	dbw 4, BIPULLA
 	dbw 4, DUNSPARCE
 	; nite
 	dbw 3, GEODUDE
-	dbw 2, ZUBAT
+	dbw 2, BIPULLA
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
 	dbw 2, ZUBAT
-	dbw 4, ZUBAT
+	dbw 4, BIPULLA
 	dbw 4, DUNSPARCE
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
