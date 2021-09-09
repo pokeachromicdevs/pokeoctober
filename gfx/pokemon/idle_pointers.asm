@@ -254,3 +254,4 @@ AnimationIdlePointers:
 	dw KatuAnimationIdle
 	dw AdbarstorkAnimationIdle
 	dw PupperonAnimationIdle
+	dw BipullaAnimationIdle

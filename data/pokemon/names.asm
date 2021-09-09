@@ -258,3 +258,4 @@ PokemonNames::
 	db "KATU@@@@@@"
 	db "ADBARSTORK"
 	db "PUPPERON@@"
+	db "BIPULLA@@@"

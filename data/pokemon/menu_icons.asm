@@ -256,3 +256,4 @@ MonMenuIcons:
 	db ICON_BIRD        ; KATU
 	db ICON_BIRD        ; ADBARSTORK
 	db ICON_FOX         ; PUPPERON
+	db ICON_GHOST       ; BIPULLA

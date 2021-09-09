@@ -254,3 +254,4 @@ AnimationPointers:
 	dw KatuAnimation
 	dw AdbarstorkAnimation
 	dw PupperonAnimation
+	dw BipullaAnimation

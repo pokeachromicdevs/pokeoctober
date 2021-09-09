@@ -16,6 +16,7 @@ AlphabeticalPokedexOrder:
 	dw BEEDRILL
 	dw BELLOSSOM
 	dw BELLSPROUT
+	dw BIPULLA
 	dw BLASTOISE
 	dw BLISSEY
 	dw BULBASAUR

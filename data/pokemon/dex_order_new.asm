@@ -150,6 +150,7 @@ NewPokedexOrder:
 	dw HITMONLEE
 	dw HITMONCHAN
 	dw HITMONTOP
+	dw BIPULLA
 	dw GIRAFARIG
 	dw TAUROS
 	dw MILTANK

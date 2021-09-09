@@ -254,3 +254,4 @@ BitmasksPointers:
 	dw KatuBitmasks
 	dw AdbarstorkBitmasks
 	dw PupperonBitmasks
+	dw BipullaBitmasks

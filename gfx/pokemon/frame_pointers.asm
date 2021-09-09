@@ -254,3 +254,4 @@ FramesPointers:
 	dba KatuFrames
 	dba AdbarstorkFrames
 	dba PupperonFrames
+	dba BipullaFrames

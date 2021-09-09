@@ -255,3 +255,4 @@ PokedexDataPointerTable:
 	dba KatuPokedexEntry
 	dba AdbarstorkPokedexEntry
 	dba PupperonPokedexEntry
+	dba BipullaPokedexEntry
