@@ -18,6 +18,9 @@ FalknerGroup:
 	db 10
 	dw NATU
 	dw PECK, CONFUSION, NIGHT_SHADE, NO_MOVE
+	db 12
+	dw ADBARSTORK
+	dw FURY_ATTACK, GROWL, WHIRLWIND, NO_MOVE
 	db -1 ; end
 
 	end_list_items
