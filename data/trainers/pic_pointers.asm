@@ -75,3 +75,4 @@ TrainerPicPointers::
 	dba SoldierPic
 	dba FledglingPic
 	dba BallsmithPic
+	dba MysticPic

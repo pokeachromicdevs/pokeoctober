@@ -75,3 +75,4 @@ TrainerGroups:
 	dba SoldierGroup
 	dba FledglingGroup
 	dba BallsmithGroup
+	dba MysticGroup

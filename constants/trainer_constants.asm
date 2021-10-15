@@ -709,15 +709,18 @@ KRIS EQU __enum__
 	const OAK1_1_SQUIRTLE
 	
 	trainerclass PRODIGY     ; 46
-		const AXEL
+	const AXEL
 	
 	trainerclass SOLDIER     ; 47
-		const DWIGHT
+	const DWIGHT
 
 	trainerclass FLEDGLING
-		const BARRY_T
+	const BARRY_T
 		
 	trainerclass BALLSMITH
-		const KURT
+	const KURT
+		
+	trainerclass MYSTIC
+	const STELLA
 		
 NUM_TRAINER_CLASSES EQU __enum__

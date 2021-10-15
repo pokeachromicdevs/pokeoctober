@@ -75,3 +75,4 @@ BTTrainerClassGenders:
 	db MALE   ; SOLDIER
 	db MALE   ; FLEDGLING
 	db MALE   ; BALLSMITH
+	db FEMALE ; MYSTIC 

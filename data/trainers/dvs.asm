@@ -74,3 +74,4 @@ TrainerClassDVs:
 	dn  10, 10, 10, 7 ; SOLDIER
 	dn  9,  8,  8,  8 ; FLEDGLING
 	dn  9,  10, 8,  8 ; BALLSMITH
+	dn  7,  8,  8,  8 ; MYSTIC 

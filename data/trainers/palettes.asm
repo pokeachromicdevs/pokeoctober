@@ -80,3 +80,6 @@ INCBIN "gfx/trainers/prodigy.gbcpal", middle_colors
 INCBIN "gfx/trainers/soldier.gbcpal", middle_colors
 INCBIN "gfx/trainers/fledgling.gbcpal", middle_colors
 INCBIN "gfx/trainers/kurt.2bpp.lz", middle_colors
+INCBIN "gfx/trainers/mystic.2bpp.lz", middle_colors
+
+

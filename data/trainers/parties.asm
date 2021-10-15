@@ -5232,6 +5232,19 @@ BallsmithGroup:
 		
 		end_list_items
 		
+MysticGroup:
+	next_list_item: MYSTIC (1)
+		db "STELLA@", TRAINERTYPE_NORMAL
+		db 12
+		dw ABRA
+		db 13
+		dw GASTLY
+		db 14
+		dw NATU 
+		db -1 ;end
+		
+		end_list_items
+		
 CamperGroup:
 	next_list_item ; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_NORMAL
