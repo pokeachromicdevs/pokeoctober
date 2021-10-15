@@ -714,4 +714,7 @@ KRIS EQU __enum__
 	trainerclass SOLDIER     ; 47
 		const DWIGHT
 
+	trainerclass FLEDGLING
+		const BARRY
+		
 NUM_TRAINER_CLASSES EQU __enum__

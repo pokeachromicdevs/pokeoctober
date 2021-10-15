@@ -74,3 +74,4 @@ TrainerEncounterMusic::
 	db MUSIC_HIKER_ENCOUNTER       ; professor
 	db MUSIC_POKEMANIAC_ENCOUNTER  ; prodigy
 	db MUSIC_OFFICER_ENCOUNTER     ; soldier
+	db MUSIC_YOUNGSTER_ENCOUNTER   ; fledgling

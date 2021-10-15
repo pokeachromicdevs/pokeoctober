@@ -73,3 +73,4 @@ TrainerPicPointers::
 	dba ProfessorPic
 	dba ProdigyPic
 	dba SoldierPic
+	dba FledglingPic

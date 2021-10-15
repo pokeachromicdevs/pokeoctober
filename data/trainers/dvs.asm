@@ -71,4 +71,5 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; INSTRUCTOR
 	dn  10, 10, 13, 14; PROFESSOR
 	dn  10, 10, 10, 10; PRODIGY
-	dn  10, 10, 10, 7 ; SOLDIER 
+	dn  10, 10, 10, 7 ; SOLDIER
+	dn  9,  8,  8,  8 ; FLEDGLING

@@ -71,3 +71,4 @@ TrainerClassNames::
 	db "PROFESSOR@"
 	db "PRODIGY@"
 	db "SOLDIER@"
+	db "FLEDGLING@"

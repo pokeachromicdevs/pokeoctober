@@ -30,6 +30,7 @@ MaleTrainers:
 	db PROFESSOR
 	db PRODIGY
 	db SOLDIER
+	db FLEDGLING
 .End
 
 FemaleTrainers:

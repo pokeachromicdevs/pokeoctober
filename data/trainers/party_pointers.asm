@@ -73,3 +73,4 @@ TrainerGroups:
 	dba ProfessorGroup
 	dba ProdigyGroup
 	dba SoldierGroup
+	dba FledglingGroup

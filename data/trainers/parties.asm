@@ -5134,7 +5134,7 @@ InstructorGroup:
 	dw TOXIC, EARTHQUAKE, ROLLOUT, REST
 	db 48
 	dw ALAKAZAM
-	dw PSYCHIC_M, DYNAMICPUNCH, SHADOW_BALL, TOXIC
+	dw PSYCHIC_M, DYNAMICPUNCH, SHADOW_BALL, KINESIS
 	db 49
 	dw EXEGGUTOR
 	dw PSYCHIC_M, EGG_BOMB, SOLARBEAM, SUNNY_DAY
@@ -5200,6 +5200,17 @@ SoldierGroup:
 	dw RATTATA
 	db 3
 	dw SENTRET
+	db -1 ;end
+	
+	end_list_items
+	
+FledglingGroup:
+	next_list_item: FLEDGLING (1)
+	db "BARRY@", TRAINERTYPE_NORMAL
+	db 4
+	dw HOPPIP
+	db 6
+	dw PIDGEY
 	db -1 ;end
 	
 	end_list_items
