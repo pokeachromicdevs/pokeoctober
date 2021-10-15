@@ -711,6 +711,7 @@ KRIS EQU __enum__
 	trainerclass PRODIGY     ; 46
 		const AXEL
 	
-
+	trainerclass SOLDIER     ; 47
+		const DWIGHT
 
 NUM_TRAINER_CLASSES EQU __enum__

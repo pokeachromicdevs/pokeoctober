@@ -73,3 +73,4 @@ TrainerEncounterMusic::
 	db MUSIC_HIKER_ENCOUNTER	   ; instructor
 	db MUSIC_HIKER_ENCOUNTER       ; professor
 	db MUSIC_POKEMANIAC_ENCOUNTER  ; prodigy
+	db MUSIC_OFFICER_ENCOUNTER     ; soldier

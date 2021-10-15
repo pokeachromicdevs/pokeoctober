@@ -70,3 +70,4 @@ TrainerClassNames::
 	db "INSTRUCTOR@"
 	db "PROFESSOR@"
 	db "PRODIGY@"
+	db "SOLDIER@"

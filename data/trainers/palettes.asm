@@ -77,3 +77,4 @@ INCBIN "gfx/trainers/mysticalman.gbcpal", middle_colors
 INCBIN "gfx/trainers/instructor.gbcpal", middle_colors
 INCBIN "gfx/trainers/professor.gbcpal", middle_colors
 INCBIN "gfx/trainers/prodigy.gbcpal", middle_colors
+INCBIN "gfx/trainers/soldier.gbcpal", middle_colors

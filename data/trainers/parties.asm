@@ -5193,6 +5193,17 @@ ProdigyGroup:
 		
 		end_list_items
 		
+SoldierGroup:
+	next_list_item: SOLDIER (1)
+	db "DWIGHT@", TRAINERTYPE_NORMAL
+	db 3
+	dw RATTATA
+	db 3
+	dw SENTRET
+	db -1 ;end
+	
+	end_list_items
+		
 CamperGroup:
 	next_list_item ; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_NORMAL

@@ -420,3 +420,9 @@ TrainerClassAttributes:
 	db 18 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_OFTEN
+	
+; Soldier
+	db NO_ITEM, NO_ITEM ; items
+	db 25 ; base reward
+	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_STATUS
+	dw CONTEXT_USE | SWITCH_SOMETIMES

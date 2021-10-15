@@ -72,3 +72,4 @@ BTTrainerClassGenders:
 	db MALE   ; INSTRUCTOR 
 	db MALE   ; PROFESSOR
 	db MALE   ; PRODIGY
+	db MALE   ; SOLDIER
