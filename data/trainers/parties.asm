@@ -5214,6 +5214,23 @@ FledglingGroup:
 	db -1 ;end
 	
 	end_list_items
+	
+BallsmithGroup:
+	next_list_item: BALLSMITH (1)
+		db "KURT@", TRAINERTYPE_NORMAL
+		db 21
+		dw VOLTORB
+		db 21
+		dw SANDSHREW
+		db 22
+		dw LICKITUNG
+		db 24
+		dw GLOOM
+		db 24
+		dw SLOWPOKE
+		db -1 ;end
+		
+		end_list_items
 		
 CamperGroup:
 	next_list_item ; CAMPER (1)

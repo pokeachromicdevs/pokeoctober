@@ -74,3 +74,4 @@ TrainerGroups:
 	dba ProdigyGroup
 	dba SoldierGroup
 	dba FledglingGroup
+	dba BallsmithGroup

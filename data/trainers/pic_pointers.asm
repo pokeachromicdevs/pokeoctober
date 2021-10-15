@@ -74,3 +74,4 @@ TrainerPicPointers::
 	dba ProdigyPic
 	dba SoldierPic
 	dba FledglingPic
+	dba BallsmithPic

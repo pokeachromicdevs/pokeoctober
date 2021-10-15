@@ -72,3 +72,4 @@ TrainerClassNames::
 	db "PRODIGY@"
 	db "SOLDIER@"
 	db "FLEDGLING@"
+	db "BALLSMITH@"
