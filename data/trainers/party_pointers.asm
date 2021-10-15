@@ -71,3 +71,4 @@ TrainerGroups:
 	dba MysticalmanGroup
 	dba InstructorGroup
 	dba ProfessorGroup
+	dba ProdigyGroup

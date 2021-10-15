@@ -5177,7 +5177,22 @@ ProfessorGroup:
 	db -1 ; end
 
 	end_list_items
-	
+
+ProdigyGroup:
+	next_list_item ; PRODIGY (1)
+		db "AXEL@", TRAINERTYPE_NORMAL
+		db 8
+		dw CHIKORITA
+		db 8
+		dw CYNDAQUIL
+		db 8
+		dw TOTODILE
+		db 9
+		dw CUBONE
+		db -1 ;end
+		
+		end_list_items
+		
 CamperGroup:
 	next_list_item ; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_NORMAL

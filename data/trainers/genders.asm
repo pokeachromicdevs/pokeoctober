@@ -71,3 +71,4 @@ BTTrainerClassGenders:
 	db MALE   ; MYSTICALMAN
 	db MALE   ; INSTRUCTOR 
 	db MALE   ; PROFESSOR
+	db MALE   ; PRODIGY

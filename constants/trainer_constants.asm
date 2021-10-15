@@ -708,6 +708,9 @@ KRIS EQU __enum__
 	const OAK1_1_CHARMANDER
 	const OAK1_1_SQUIRTLE
 	
+	trainerclass PRODIGY     ; 46
+		const AXEL
+	
 
 
 NUM_TRAINER_CLASSES EQU __enum__

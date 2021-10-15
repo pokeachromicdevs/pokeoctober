@@ -28,6 +28,7 @@ MaleTrainers:
 	db SCIENTIST
 	db INSTRUCTOR
 	db PROFESSOR
+	db PRODIGY
 .End
 
 FemaleTrainers:

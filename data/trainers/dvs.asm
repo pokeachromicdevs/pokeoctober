@@ -69,4 +69,5 @@ TrainerClassDVs:
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn  9,  8,  8,  8 ; INSTRUCTOR
-	dn  9,  8,  8,  9 ; PROFESSOR
+	dn  10, 10, 13, 14; PROFESSOR
+	dn  10, 10, 10, 10; PRODIGY

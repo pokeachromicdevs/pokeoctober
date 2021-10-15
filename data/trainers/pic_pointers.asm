@@ -71,3 +71,4 @@ TrainerPicPointers::
 	dba MysticalmanPic
 	dba InstructorPic
 	dba ProfessorPic
+	dba ProdigyPic

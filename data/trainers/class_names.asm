@@ -69,3 +69,4 @@ TrainerClassNames::
 	db "MYSTICALMAN@"
 	db "INSTRUCTOR@"
 	db "PROFESSOR@"
+	db "PRODIGY@"
