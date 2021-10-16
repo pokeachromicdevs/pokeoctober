@@ -724,6 +724,6 @@ KRIS EQU __enum__
 	const STELLA
 	
 	trainerclass ROCKCLIMBER
-	const HENRY
+	const HENRY_T
 		
 NUM_TRAINER_CLASSES EQU __enum__
