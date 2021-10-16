@@ -5248,9 +5248,7 @@ MysticGroup:
 RockClimberGroup:
 	next_list_item: ROCKCLIMBER (1)
 		db "HENRY@", TRAINERTYPE_NORMAL
-		db 4
-		dw GEODUDE
-		db 6 
+		db 7
 		dw MACHOP
 		db -1 ;end 
 		

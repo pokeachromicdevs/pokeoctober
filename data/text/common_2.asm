@@ -1504,17 +1504,26 @@ _OakText1::
 	para "Welcome to the"
 	line "world of #MON!"
 
-	para "My name is OAK."
+	para "My name is ELM."
 
 	para "People call me the"
 	line "#MON PROF."
 	prompt
 
 _OakText2::
-	text "This world is in-"
-	line "habited by crea-"
-	cont "tures that we call"
-	cont "#MON.@"
+	text "Before we go any"
+	line "further, I'd like"
+	cont "to tell you a few"
+	cont "things that you"
+	
+	para "should know about"
+	line "this world."
+	
+	para "This world is in-"
+	line "habited by"
+	cont "creatures known"
+	
+	para "as #MON."
 	text_end
 
 _OakText3::
@@ -1524,15 +1533,22 @@ _OakText3::
 	text_end ; unused
 
 _OakText4::
-	text "People and #MON"
-	line "live together by"
+	text "We humans live"
+	line "alongside"
 
-	para "supporting each"
-	line "other."
+	para "#MON as"
+	line "friends. At times"
 
-	para "Some people play"
-	line "with #MON, some"
-	cont "battle with them."
+	para "we play together,"
+	line "and other times we"
+	cont "work together."
+	
+	para "Some people use"
+	line "their #MON to"
+	cont "battle and develop"
+	
+	para "closer bonds with"
+	line "them."
 	prompt
 
 _OakText5::
