@@ -74,3 +74,4 @@ TrainerClassNames::
 	db "FLEDGLING@"
 	db "BALLSMITH@"
 	db "MYSTIC@"
+	db "ROCKCLIMBER@"

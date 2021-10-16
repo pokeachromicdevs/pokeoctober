@@ -722,5 +722,8 @@ KRIS EQU __enum__
 		
 	trainerclass MYSTIC
 	const STELLA
+	
+	trainerclass ROCKCLIMBER
+	const HENRY
 		
 NUM_TRAINER_CLASSES EQU __enum__

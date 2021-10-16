@@ -77,3 +77,4 @@ TrainerEncounterMusic::
 	db MUSIC_YOUNGSTER_ENCOUNTER   ; fledgling
 	db MUSIC_SAGE_ENCOUNTER        ; ballsmith
 	db MUSIC_SAGE_ENCOUNTER        ; mystic 
+	db MUSIC_HIKER_ENCOUNTER       ; rockclimber

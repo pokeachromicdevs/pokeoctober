@@ -5245,6 +5245,17 @@ MysticGroup:
 		
 		end_list_items
 		
+RockClimberGroup:
+	next_list_item: ROCKCLIMBER (1)
+		db "HENRY@", TRAINERTYPE_NORMAL
+		db 4
+		dw GEODUDE
+		db 6 
+		dw MACHOP
+		db -1 ;end 
+		
+		end_list_items
+	
 CamperGroup:
 	next_list_item ; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_NORMAL

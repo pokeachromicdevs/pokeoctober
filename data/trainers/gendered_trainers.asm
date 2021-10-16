@@ -32,6 +32,7 @@ MaleTrainers:
 	db SOLDIER
 	db FLEDGLING
 	db BALLSMITH
+	db ROCKCLIMBER
 .End
 
 FemaleTrainers:

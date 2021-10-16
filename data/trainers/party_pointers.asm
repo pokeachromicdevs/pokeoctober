@@ -76,3 +76,4 @@ TrainerGroups:
 	dba FledglingGroup
 	dba BallsmithGroup
 	dba MysticGroup
+	dba RockClimberGroup

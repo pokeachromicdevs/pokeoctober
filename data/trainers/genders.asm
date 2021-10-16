@@ -76,3 +76,4 @@ BTTrainerClassGenders:
 	db MALE   ; FLEDGLING
 	db MALE   ; BALLSMITH
 	db FEMALE ; MYSTIC 
+	db MALE   ; ROCKCLIMBER

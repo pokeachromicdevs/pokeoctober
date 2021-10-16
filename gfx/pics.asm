@@ -721,3 +721,5 @@ SoldierPic:  INCBIN "gfx/trainers/soldier.2bpp.lz"
 FledglingPic: INCBIN "gfx/trainers/fledgling.2bpp.lz"
 BallsmithPic: INCBIN "gfx/trainers/kurt.2bpp.lz"
 MysticPic: INCBIN "gfx/trainers/mystic.2bpp.lz"
+RockClimberPic: INCBIN "gfx/trainers/rockclimber.2bpp.lz"
+
