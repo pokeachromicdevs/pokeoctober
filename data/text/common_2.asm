@@ -1506,8 +1506,9 @@ _OakText1::
 
 	para "My name is ELM."
 
-	para "People call me the"
-	line "#MON PROF."
+	para "But everyone calls"
+	line "me the #MON"
+	cont "PROF."
 	prompt
 
 _OakText2::
@@ -1602,23 +1603,26 @@ _OakText7a::
 	
 	prompt
 _OakText7::
-	text "<PLAYER>, are you"
+	text "<PLAYER>! Are you"
 	line "ready?"
 	
 	para "Your very own"
-	line "#MON story is"
-	cont "about to unfold."
-
-	para "You'll face fun"
-	line "times and tough"
-	cont "challenges."
+	line "tale of grand"
+	cont "adventure is" 
 	
-	para "A world of dreams"
-	line "and adventures"
+	para "about to unfold."
 	
-	para "with #MON"
-	line "awaits! Let's go!"
+	para "Fun experiences,"
+	line "difficult experi-"
+	cont "ences, there's so"
 	
-	para "I'll be seeing you"
-	line "later!"
+	para "much waiting for"
+	line "you!" 
+	
+	para "Dreams! Adventure!"
+	
+	para "Let's go to the"
+	line "world of #MON!"
+	
+	para "I'll see you later!"
 	done
