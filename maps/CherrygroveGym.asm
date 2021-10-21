@@ -3,6 +3,7 @@
 	const CHERRYGROVEGYM_YOUNGSTER1
 	const CHERRYGROVEGYM_YOUNGSTER2
 	const CHERRYGROVEGYM_GYM_GUY
+	const CHERRYGROVEGYM_LASS
 
 CherrygroveGym_MapScripts:
 	db 0 ; scene scripts
@@ -82,6 +83,17 @@ TrainerBirdKeeperAbe:
 	endifjustbattled
 	opentext
 	writetext BirdKeeperAbeAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerLassAriel:
+	trainer LASS, ARIEL, EVENT_BEAT_LASS_ARIEL, LassArielSeenText, LassArielBeatenText, 0, .Script 
+	
+.Script:
+	endifjustbattled
+	opentext
+	writetext LassArielAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -208,29 +220,27 @@ FalknerFightDoneText:
 	done
 
 BirdKeeperRodSeenText:
-	text "The keyword is"
-	line "guts!"
+	text "My SPEAROW can"
+	line "talk!"
 
-	para "Those here are"
-	line "training night and"
-
-	para "day to become bird"
-	line "#MON masters."
-
-	para "Come on!"
+	para "And it told me"
+	line "that you don't"
+	cont "stand a chance!"
 	done
 
 BirdKeeperRodBeatenText:
-	text "Gaaah!"
+	text "No! SPEAROW lied"
+	line "to me!"
 	done
 
 BirdKeeperRodAfterBattleText:
-	text "FALKNER's skills"
-	line "are for real!"
-
-	para "Don't get cocky"
-	line "just because you"
-	cont "beat me!"
+	text "It's true! I"
+	line "taught my SPEAROW"
+	cont "to talk!"
+	
+	para "Ugh…why must"
+	line "people never"
+	cont "believe me?"
 	done
 
 BirdKeeperAbeSeenText:
@@ -248,6 +258,29 @@ BirdKeeperAbeAfterBattleText:
 	text "I'm just a loser"
 	line "pretending to be"
 	cont "cool…sigh…"
+	done
+	
+LassArielSeenText:
+	text "I can feel the"
+	line "sunshine!"
+	done
+	
+LassArielBeatenText:
+	text "And boy does it"
+	line "burn."
+	done
+	
+LassArielAfterBattleText:
+	text "Seriously, never"
+	line "fly around on a"
+	cont "#MON. The"
+	
+	para "whole experience"
+	line "is pain. The"
+	
+	para "blinding sun, the"
+	line "risk of falling"
+	cont "off…it's agonizing."
 	done
 
 CherrygroveGymGuyText:
@@ -294,6 +327,7 @@ CherrygroveGym_MapEvents:
 
 	db 4 ; object events
 	object_event  5,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveGymFalknerScript, -1
-	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
-	object_event  2, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
+	object_event  7,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
+	object_event  2, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
+	object_event  2,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAriel, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveGymGuyScript, -1

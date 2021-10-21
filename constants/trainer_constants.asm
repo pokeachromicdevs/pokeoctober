@@ -188,6 +188,7 @@ KRIS EQU __enum__
 	const DANA3
 	const DANA4
 	const DANA5
+	const ARIEL
 
 	trainerclass JANINE ; 1a
 	const JANINE1

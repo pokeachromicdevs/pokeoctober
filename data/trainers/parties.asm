@@ -994,10 +994,10 @@ SchoolboyGroup:
 BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (1)
 	db "ROD@", TRAINERTYPE_NORMAL
+	db 6
+	dw HOOTHOOT
 	db 7
-	dw PIDGEY
-	db 7
-	dw PIDGEY
+	dw SPEAROW
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (2)
@@ -1302,7 +1302,17 @@ LassGroup:
 	dw GOLDUCK
 	dw DISABLE, SURF, PSYCHIC_M, SCREECH
 	db -1 ; end
-
+	
+	next_list_item ; LASS (18)
+	db "ARIEL@", TRAINERTYPE_NORMAL
+	db 5
+	dw ZUBAT
+	db 7
+	dw PIDGEY
+	db 8
+	dw HOPPIP
+	db -1 ; end
+	
 	end_list_items
 
 JanineGroup:
