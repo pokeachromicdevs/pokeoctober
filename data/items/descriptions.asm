@@ -409,8 +409,8 @@ MaxReviveDesc:
 	next "fainted #MON.@"
 
 GuardSpecDesc:
-	db   "Prevents stats"
-	next "reduction. (1 BTL)@"
+	db   "Raises SPECIAL"
+	next "DEFENSE. (1 BTL)@"
 
 SuperRepelDesc:
 	db   "Repels weak #-"
