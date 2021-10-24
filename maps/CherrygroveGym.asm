@@ -160,8 +160,7 @@ FalknerIntroText:
 
 FalknerWinLossText:
 	text "My…my father's"
-	line "cherished birds!"
-	cont 
+	line "cherished birds!" 
 
 	para "Well, you have"
 	line "bested my flying-"
@@ -181,11 +180,11 @@ ReceivedZephyrBadgeText:
 FalknerZephyrBadgeText:
 	text "With the"
 	line "ZEPHYRBADGE,"
-	cont "the attack"
+	cont "the attack power"
 
-	para "power of your"
-	line "#MON increases,"
-	para "and you are granted"
+	para "of your #MON"
+	line "increases, and"
+	para "you are granted"
 	line "the ability to use"
 	
 	para "UPROOT out of"
@@ -196,28 +195,34 @@ FalknerZephyrBadgeText:
 	done
 
 FalknerTMMudSlapText:
-	text "By using a TM, a"
-	line "#MON will"
+	text "That is a TM. Be"
+	line "wary-- TMs can be"
 
-	para "instantly learn a"
-	line "new move."
+	para "used only once."
+	line "Make sure you know"
 
-	para "Think before you"
-	line "act--a TM can be"
-	cont "used only once."
+	para "what you are doing"
+	line "when using it."
+	cont "That TM is TM 31--"
 
-	para "TM31 contains"
-	line "MUD-SLAP."
+	para "MUD-SLAP. Though"
+	line "it only deals"
 
-	para "It reduces the"
-	line "enemy's accuracy"
+	para "small damage, it"
+	line "always reduces the"
 
-	para "while it causes"
-	line "damage."
+	para "accuracy of your"
+	line "foes. That said…it"
 
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "is a ground-type"
+	line "TM. I wish I had a"
+	cont "flying-type TM"
+	
+	para "instead, but no"
+	line "such TM exists"
+	cont "yet. It's"
+	
+	para "embarrassing…"
 	done
 
 FalknerFightDoneText:
