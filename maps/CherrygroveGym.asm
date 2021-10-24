@@ -179,18 +179,20 @@ ReceivedZephyrBadgeText:
 	done
 
 FalknerZephyrBadgeText:
-	text "ZEPHYRBADGE"
-	line "raises the attack"
-	cont "power of #MON."
+	text "With the"
+	line "ZEPHYRBADGE,"
+	cont "the attack"
 
-	para "It also enables"
-	line "#MON to use"
-
-	para "FLASH, if they"
-	line "have it, anytime."
-
-	para "Here--take this"
-	line "too."
+	para "power of your"
+	line "#MON increases,"
+	para "and you are granted"
+	line "the ability to use"
+	
+	para "UPROOT out of"
+	line "battle. And, as"
+	cont "a personal gift,"
+	
+	para "please take this."
 	done
 
 FalknerTMMudSlapText:
