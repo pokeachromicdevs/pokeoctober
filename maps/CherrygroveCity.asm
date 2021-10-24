@@ -222,6 +222,15 @@ MysticWaterGuy:
 .Exit:
 	closetext
 	end
+	
+BirdKeeperBlockage:
+	jumptextfaceplayer BirdKeeperBlocking
+	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	iftrue .doHide
+.doHide
+	moveobject CHERRYGROVECITY_YOUNGSTER, 26, 6
+	disappear CHERRYGROVECITY_YOUNGSTER
+	return
 
 CherrygroveCitySign:
 	jumptext CherrygroveCitySignText
@@ -539,6 +548,27 @@ CherrygroveCitySignText:
 	para "The City of Cute,"
 	line "Fragrant Flowers"
 	done
+	
+BirdKeeperBlocking:
+	text "Heya. I'm watching"
+	line "over this place"
+	
+	para "while FALKNER is"
+	line "gone. Apparently,"
+	cont "someone claims"
+	
+	para "they saw some"
+	line "ROCKET goons"
+	cont "wandering around"
+	
+	para "here, so FALKNER"
+	line "decided to scout"
+	cont "for those crim-"
+	
+	para "inals from the"
+	line "sky. He'll be back"
+	cont "soon."
+	done
 
 GuideGentsHouseSignText:
 	text "GUIDE GENT'S HOUSE"
@@ -565,9 +595,10 @@ CherrygroveCity_MapEvents:
 	bg_event 24, 21, BGEVENT_READ, CherrygroveCityMartSign
 	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 36, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	object_event 39, 24, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
+	object_event 26,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, -1
