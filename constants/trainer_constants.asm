@@ -169,6 +169,7 @@ KRIS EQU __enum__
 	const JOSE3
 	const VANCE2
 	const VANCE3
+	const CLYDE_T
 
 	trainerclass LASS ; 19
 	const CARRIE

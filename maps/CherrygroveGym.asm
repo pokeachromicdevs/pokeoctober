@@ -4,6 +4,7 @@
 	const CHERRYGROVEGYM_YOUNGSTER2
 	const CHERRYGROVEGYM_GYM_GUY
 	const CHERRYGROVEGYM_LASS
+	const CHERRYGROVEGYM_YOUNGSTER3
 
 CherrygroveGym_MapScripts:
 	db 0 ; scene scripts
@@ -39,7 +40,7 @@ CherrygroveGymFalknerScript:
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound
-	verbosegiveitem TM_MUD_SLAP
+	verbosegivetmhm TM_MUD_SLAP
 	iffalse .NoRoomForMudSlap
 	setevent EVENT_GOT_TM31_MUD_SLAP
 	writetext FalknerTMMudSlapText
@@ -97,6 +98,18 @@ TrainerLassAriel:
 	waitbutton
 	closetext
 	end
+	
+TrainerBirdKeeperClyde:
+	trainer BIRD_KEEPER, CLYDE_T, EVENT_BEAT_BIRD_KEEPER_CLYDE, BirdKeeperClydeSeenText, BirdKeeperClydeBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BirdKeeperClydeAfterBattleText
+	waitbutton
+	closetext
+	end
+
 
 CherrygroveGymGuyScript:
 	faceplayer
@@ -123,39 +136,41 @@ CherrygroveGymStatue:
 	jumpstd gymstatue2
 
 FalknerIntroText:
-	text "I'm FALKNER, the"
-	line "Cherrygrove #MON GYM"
-	cont "leader!"
-
-	para "People say you can"
-	line "clip flying-type"
-
-	para "#MON's wings"
-	line "with a jolt of"
-	cont "electricity…"
-
-	para "I won't allow such"
-	line "insults to bird"
-	cont "#MON!"
-
-	para "I'll show you the"
-	line "real power of the"
-
-	para "magnificent bird"
-	line "#MON!"
+	text "Welcome. I am"
+	line "FALKNER, the GYM"
+	cont "LEADER of this"
+	
+	para "city."
+	
+	para "My position of"
+	line "gym leader has"
+	cont "only been given"
+	
+	para "to me fairly"
+	line "recently, but I"
+	cont "have trained"
+	
+	para "flying-types for"
+	line "many years. Let"
+	cont "me see if you can"
+	
+	para "hit a flying"
+	line "target!"
 	done
 
 FalknerWinLossText:
-	text "…Darn! My dad's"
-	line "cherished bird"
-	cont "#MON…"
+	text "My…my father's"
+	line "cherished birds!"
+	cont 
 
-	para "All right."
-	line "Take this."
+	para "Well, you have"
+	line "bested my flying-"
 
-	para "It's the official"
-	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+	para "types and I."
+	line "That means you"
+	cont "have earned the"
+	
+	para "ZEPHYRBADGE."
 	done
 
 ReceivedZephyrBadgeText:
@@ -282,7 +297,25 @@ LassArielAfterBattleText:
 	line "risk of falling"
 	cont "off…it's agonizing."
 	done
-
+	
+BirdKeeperClydeSeenText:
+	text "Prepare to"
+	line "plummet!"
+	done
+	
+BirdKeeperClydeBeatenText:
+	text "I'm falling!"
+	line "Help!"
+	done
+	
+BirdKeeperClydeAfterBattleText:
+	text "I'll knock you"
+	line "out of the sky"
+	cont "next time! Just"
+	
+	para "you watch!"
+	done 
+	
 CherrygroveGymGuyText:
 	text "Hey! I'm no train-"
 	line "er but I can give"
@@ -325,9 +358,10 @@ CherrygroveGym_MapEvents:
 	bg_event  3, 13, BGEVENT_READ, CherrygroveGymStatue
 	bg_event  6, 13, BGEVENT_READ, CherrygroveGymStatue
 
-	db 4 ; object events
+	db 6 ; object events
 	object_event  5,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveGymFalknerScript, -1
 	object_event  7,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
 	object_event  2, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
 	object_event  2,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassAriel, -1
+	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperClyde, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveGymGuyScript, -1

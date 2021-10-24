@@ -1148,9 +1148,15 @@ BirdKeeperGroup:
 	dw PIDGEOT
 	dw SWIFT, DETECT, STEEL_WING, FLY
 	db -1 ; end
+	
+	next_list_item ; BIRD_KEEPER (20)
+	db "CLYDE@", TRAINERTYPE_NORMAL
+	db 8
+	dw MURKROW
+	db -1 ; end 
 
 	end_list_items
-
+	
 LassGroup:
 	next_list_item ; LASS (1)
 	db "CARRIE@", TRAINERTYPE_MOVES
