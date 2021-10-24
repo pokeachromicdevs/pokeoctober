@@ -503,9 +503,27 @@ CherrygroveTeacherText_NoMapCard:
 	done
 
 CherrygroveTeacherText_HaveMapCard:
-	text "When you're with"
-	line "#MON, going"
-	cont "anywhere is fun."
+	text "FALKNER used to"
+	line "have an older"
+	cont "cousin around"
+	
+	para "here, but he left"
+	line "this place a few"
+	cont "years back. Unfor-"
+	
+	para "tuntely, I've heard"
+	line "the poor man's been"
+	cont "constantly losing"
+	
+	para "whatever job he"
+	line "gets, and can't"
+	cont "evem win enough"
+	
+	para "battles to get"
+	line "money. I hope he's"
+	cont "gotten back on his" 
+	
+	para "feet…"
 	done
 
 CherrygroveYoungsterText_NoPokedex:
