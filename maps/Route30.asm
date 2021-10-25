@@ -14,17 +14,6 @@ Route30_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
-TrainerYoungsterMikey
-	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
-	
-.Script:
-	endifjustbattled
-	opentext
-	writetext YoungsterMikeyAfterText
-	waitbutton
-	closetext
-	end
 
 TrainerYoungsterMax:
 	trainer YOUNGSTER, MAX, EVENT_BEAT_BUG_CATCHER_DON, YoungsterMaxSeenText, YoungsterMaxBeatenText, 0, .Script
@@ -102,29 +91,6 @@ Text_ThisIsABigBattle:
 	text "What? This is a"
 	line "big battle!"
 	cont "Leave me alone!"
-	done
-
-YoungsterMikeySeenText:
-	text "You're a #MON"
-	line "trainer, right?"
-
-	para "Then you have to"
-	line "battle!"
-	done
-
-YoungsterMikeyBeatenText:
-	text "That's strange."
-	line "I won before."
-	done
-
-YoungsterMikeyAfterText:
-	text "Becoming a good"
-	line "trainer is really"
-	cont "tough."
-
-	para "I'm going to bat-"
-	line "tle other people"
-	cont "to get better."
 	done
 
 YoungsterMaxSeenText:

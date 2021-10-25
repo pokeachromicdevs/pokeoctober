@@ -164,6 +164,17 @@ TrainerYoungsterMikey
 	closetext
 	end
 	
+TrainerBugCatcherLenny
+	trainer BUG_CATCHER, LENNY, EVENT_BEAT_BUG_CATCHER_LENNY, BugCatcherLennySeenText, BugCatcherLennyBeatenText, 0, .Script
+	
+.Script:
+	endifjustbattled
+	opentext
+	writetext BugCatcherLennyAfterText
+	waitbutton
+	closetext
+	end
+	
 YoungsterJoey1SeenText:
 	text "I just lost, so"
 	line "I'm trying to find"
@@ -228,6 +239,24 @@ YoungsterMikeyAfterText:
 	line "tle other people"
 	cont "to get better."
 	done
+	
+BugCatcherLennySeenText:
+	text "Buzz off! You're"
+	line "scaring the bugs"
+	cont "away!"
+	done
+	
+BugCatcherLennyBeatenText:
+	text "I said buzz off!"
+	done
+	
+BugCatcherLennyAfterText:
+	text "Geez! Now you've"
+	line "scared all the"
+	cont "bugs into hiding!"
+	
+	para "Nice job, idiot!"
+	done
 
 .DummyScene0:
 	end
@@ -244,6 +273,7 @@ CherrygroveWoods_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
-	object_event 42,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, -1
-	object_event 23,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMikey, -1
+	db 3 ; object events
+	object_event 42,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerYoungsterJoey, -1
+	object_event 23,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMikey, -1
+	object_event  9, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherLenny, -1

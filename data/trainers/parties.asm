@@ -20,7 +20,7 @@ FalknerGroup:
 	dw NATU
 	db NO_ITEM
 	dw PECK, CONFUSION, NIGHT_SHADE, NO_MOVE
-	db 1
+	db 12
 	dw ADBARSTORK
 	db BERRY
 	dw FURY_ATTACK, GROWL, WHIRLWIND, NO_MOVE
@@ -2467,6 +2467,14 @@ BugCatcherGroup:
 	db 24
 	dw BUTTERFREE
 	dw CONFUSION, SLEEP_POWDER, SUPERSONIC, WHIRLWIND
+	db -1 ; end
+	
+	next_list_item ; BUG_CATCHER (20)
+	db "LENNY@", TRAINERTYPE_NORMAL
+	db 2
+	dw CATERPIE
+	db 2
+	dw WEEDLE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (16)

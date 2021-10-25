@@ -343,6 +343,7 @@ KRIS EQU __enum__
 	const ARNIE4
 	const ARNIE5
 	const WAYNE
+	const LENNY
 
 	trainerclass FISHER ; 25
 	const JUSTIN
