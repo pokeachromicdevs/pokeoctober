@@ -4,6 +4,7 @@
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
 	const CHERRYGROVECITY_FISHER
+	const CHERRGROVECITY_YOUNGSTER2
 
 CherrygroveCity_MapScripts:
 	db 2 ; scene scripts
@@ -224,7 +225,8 @@ MysticWaterGuy:
 	end
 	
 BirdKeeperBlockage:
-	jumptextfaceplayer BirdKeeperBlocking
+	opentext
+	writetext BirdKeeperBlocking
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue .doHide
 .doHide
@@ -503,27 +505,9 @@ CherrygroveTeacherText_NoMapCard:
 	done
 
 CherrygroveTeacherText_HaveMapCard:
-	text "FALKNER used to"
-	line "have an older"
-	cont "cousin around"
-	
-	para "here, but he left"
-	line "this place a few"
-	cont "years back. Unfor-"
-	
-	para "tuntely, I've heard"
-	line "the poor man's been"
-	cont "constantly losing"
-	
-	para "whatever job he"
-	line "gets, and can't"
-	cont "evem win enough"
-	
-	para "battles to get"
-	line "money. I hope he's"
-	cont "gotten back on his" 
-	
-	para "feet…"
+	text "When you're with"
+	line "#MON, going"
+	cont "anywhere is fun."
 	done
 
 CherrygroveYoungsterText_NoPokedex:
@@ -569,23 +553,22 @@ CherrygroveCitySignText:
 	
 BirdKeeperBlocking:
 	text "Heya. I'm watching"
-	line "over this place"
 	
-	para "while FALKNER is"
-	line "gone. Apparently,"
-	cont "someone claims"
+	para "over this place"
+	line "while FALKNER is"
+	cont "gone. Apparently,"
 	
-	para "they saw some"
-	line "ROCKET goons"
-	cont "wandering around"
+	para "someone claims"
+	line "they saw some"
+	cont "ROCKET goons"
 	
-	para "here, so FALKNER"
-	line "decided to scout"
-	cont "for those crim-"
+	para "wandering around"
+	line "here, so FALKNER"
+	cont "decided to scout"
 	
-	para "inals from the"
-	line "sky. He'll be back"
-	cont "soon."
+	para "for those criminals"
+	line "from the sky. He'll"
+	cont "be back soon."
 	done
 
 GuideGentsHouseSignText:

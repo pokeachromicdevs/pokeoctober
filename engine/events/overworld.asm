@@ -137,15 +137,15 @@ UprootFunction:
 	dw .FailCut
 
 .CheckAble:
-	ld de, ENGINE_HIVEBADGE
+	ld de, ENGINE_ZEPHYRBADGE
 	call CheckBadge
-	jr c, .nohivebadge
+	jr c, .nozephyrbadge
 	call CheckMapForSomethingToUproot
 	jr c, .nothingtouproot
 	ld a, $1
 	ret
 
-.nohivebadge
+.nozephyrbadge
 	ld a, $80
 	ret
 

@@ -11,7 +11,8 @@ Landmarks:
 	dbbw       0,   0, SpecialMapName
 	landmark 140, 100, NewBarkTownName
 	landmark 128, 100, Route29Name
-	landmark 100, 100, CherrygroveCityName
+	landmark 100, 100, CherrygroveWoodsName
+	landmark 100, 150, CherrygroveCityName
 	landmark 100,  80, Route30Name
 	landmark  96,  60, Route31Name
 	landmark  84,  60, VioletCityName
@@ -207,3 +208,4 @@ TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"
+CherrygroveWoodsName:db "CHERRYGROVE¯WOODS@"

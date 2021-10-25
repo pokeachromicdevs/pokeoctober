@@ -981,3 +981,8 @@ BetaBlank_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+	
+Section "Map Blocks 4", ROMX
+
+CherrygroveWoods_Blocks:
+	INCBIN "maps/CherrygroveWoods.blk"

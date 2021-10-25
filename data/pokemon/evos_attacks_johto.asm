@@ -158,7 +158,7 @@ CyndaquilEvosAttacks:
 	dbw 6, ROCK_SLASH
 	dbw 7, WIND_RIDE
 	dbw 8, ROCK_HEAD
-	dbw 9, BOUNCE
+	dbw 13, UPROOT
 	dbw 36, SWIFT
 	dbw 46, FLAMETHROWER
 	db 0 ; no more level-up moves
