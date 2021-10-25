@@ -3,7 +3,7 @@
 
 CherrygroveWoods_MapScripts:
 	db 0 ; scene scripts
-
+	
 	db 0 ; callbacks
 	
 TrainerYoungsterJoey:
@@ -153,6 +153,17 @@ TrainerYoungsterJoey:
 	jumpstd rematchgiftm
 	end
 	
+TrainerYoungsterMikey
+	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
+	
+.Script:
+	endifjustbattled
+	opentext
+	writetext YoungsterMikeyAfterText
+	waitbutton
+	closetext
+	end
+	
 YoungsterJoey1SeenText:
 	text "I just lost, so"
 	line "I'm trying to find"
@@ -179,7 +190,7 @@ YoungsterJoey1AfterText:
 	line "with this one no"
 	cont "matter what!"
 	done
-
+	
 YoungsterJoeyText_GiveHPUpAfterBattle:
 	text "I lost again…"
 	line "Gee, you're tough!"
@@ -194,10 +205,33 @@ YoungsterJoeyText_GiveHPUpAfterBattle:
 	para "I'm going to get"
 	line "tougher too."
 	done
+	
+YoungsterMikeySeenText:
+	text "You're a #MON"
+	line "trainer, right?"
+
+	para "Then you have to"
+	line "battle!"
+	done
+
+YoungsterMikeyBeatenText:
+	text "That's strange."
+	line "I won before."
+	done
+
+YoungsterMikeyAfterText:
+	text "Becoming a good"
+	line "trainer is really"
+	cont "tough."
+
+	para "I'm going to bat-"
+	line "tle other people"
+	cont "to get better."
+	done
 
 .DummyScene0:
 	end
-
+ 
 .DummyScene1:
 	end
 
@@ -210,5 +244,6 @@ CherrygroveWoods_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
-	object_event 41, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, -1
+	db 2 ; object events
+	object_event 42,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, -1
+	object_event 23,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMikey, -1
