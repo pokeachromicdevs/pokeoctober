@@ -55,7 +55,7 @@ ItemDescriptions:
 	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw QuestionMarkDesc
+	dw PokeFluteDesc
 	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
@@ -936,3 +936,7 @@ EarthenClayDesc:
 DiggingClawDesc:
 	db "Use DIG outside of"
 	next "battle.(HOLD)@"
+	
+PokeFluteDesc:
+	db "Awakens sleeping"
+	next "#MON.@"

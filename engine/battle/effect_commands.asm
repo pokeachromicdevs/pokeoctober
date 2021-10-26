@@ -4261,6 +4261,11 @@ BattleCommand_EvasionUp2:
 ; evasionup2
 	ld b, $10 | EVASION
 	jr BattleCommand_StatUp
+	
+BattleCommand_SpecialDefenseOrb:
+; specialdefenseup
+	ld b, $50 | SP_DEFENSE
+	jr BattleCommand_StatUp
 
 BattleCommand_StatUp:
 ; statup

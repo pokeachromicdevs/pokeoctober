@@ -6,4 +6,5 @@ HeldStatUpItems:
 	dbw HELD_SP_DEFENSE_UP, BattleCommand_SpecialDefenseUp
 	dbw HELD_ACCURACY_UP,   BattleCommand_AccuracyUp
 	dbw HELD_EVASION_UP,    BattleCommand_EvasionUp
+	dbw HELD_WISDOM_ORB,    BattleCommand_SpecialDefenseOrb
 	db -1 ; end

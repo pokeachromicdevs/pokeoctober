@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball HONEY_POT
+	itemball POKE_FLUTE
 
 DudeMovementData1a:
 	step UP

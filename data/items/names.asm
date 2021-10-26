@@ -54,7 +54,7 @@ ItemNames::
 	db "X SPECIAL@"
 	db "COIN CASE@"
 	db "ITEMFINDER@"
-	db "TERU-SAMA@"
+	db "# FLUTE@"
 	db "EXP.SHARE@"
 	db "OLD ROD@"
 	db "GOOD ROD@"
@@ -86,15 +86,15 @@ ItemNames::
 	db "RED APRICORN@"
 	db "TINYMUSHROOM@"
 	db "BIG MUSHROOM@"
-	db "SILVERPOWDER@"
+	db "SILVERPOWDER@";change to weaken foe's bug attacks like SW97
 	db "BLU APRICORN@"
 	db "EARTHEN CLAY"
 	db "AMULET COIN@"
 	db "YLW APRICORN@"
 	db "GRN APRICORN@"
 	db "CLEANSE TAG@"
-	db "MYSTIC WATER@"
-	db "TWISTEDSPOON@"
+	db "MYSTIC WATER@"; change to weaken foe's water attacks like SW97
+	db "TWISTEDSPOON@";change to weaken foe's psychic attacks instead like SW97
 	db "WHT APRICORN@"
 	db "BLACKBELT@"
 	db "BLK APRICORN@"
@@ -118,7 +118,7 @@ ItemNames::
 	db "MIRACLE SEED@"
 	db "THICK CLUB@"
 	db "FOCUS BAND@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";mystic petal
 	db "ENERGYPOWDER@"
 	db "ENERGY ROOT@"
 	db "HEAL POWDER@"
@@ -133,27 +133,27 @@ ItemNames::
 	db "STAR PIECE@"
 	db "BASEMENT KEY@"
 	db "PASS@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";whitefeather
+	db "TERU-SAMA@";electric pouch
+	db "TERU-SAMA@";hard stone
 	db "CHARCOAL@"
 	db "BERRY JUICE@"
 	db "SCOPE LENS@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";wobbly bloon
+	db "TERU-SAMA@";fire mane
 	db "METAL COAT@"
 	db "DRAGON FANG@"
 	db "TERU-SAMA@"
 	db "LEFTOVERS@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";fossil shard
+	db "TERU-SAMA@";gross garbage
+	db "TERU-SAMA@";championbelt
 	db "MYSTERYBERRY@"
-	db "DRAGON SCALE@"
+	db "DRAGON SCALE@";add secondary effect to weaken Dragon moves as in SW97
 	db "BERSERK GENE@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";tag
+	db "TERU-SAMA@";guardthread
+	db "TERU-SAMA@";ice bikini
 	db "SACRED ASH@"
 	db "HEAVY BALL@"
 	db "FLOWER MAIL@"
