@@ -5230,7 +5230,7 @@ ProdigyGroup:
 		end_list_items
 		
 SoldierGroup:
-	next_list_item: SOLDIER (1)
+	next_list_item; SOLDIER (1)
 	db "DWIGHT@", TRAINERTYPE_NORMAL
 	db 3
 	dw RATTATA
@@ -5241,7 +5241,7 @@ SoldierGroup:
 	end_list_items
 	
 FledglingGroup:
-	next_list_item: FLEDGLING (1)
+	next_list_item; FLEDGLING (1)
 	db "BARRY@", TRAINERTYPE_NORMAL
 	db 4
 	dw HOPPIP
@@ -5252,7 +5252,7 @@ FledglingGroup:
 	end_list_items
 	
 BallsmithGroup:
-	next_list_item: BALLSMITH (1)
+	next_list_item; BALLSMITH (1)
 		db "KURT@", TRAINERTYPE_NORMAL
 		db 21
 		dw VOLTORB
@@ -5269,7 +5269,7 @@ BallsmithGroup:
 		end_list_items
 		
 MysticGroup:
-	next_list_item: MYSTIC (1)
+	next_list_item; MYSTIC (1)
 		db "STELLA@", TRAINERTYPE_NORMAL
 		db 12
 		dw ABRA
@@ -5282,7 +5282,7 @@ MysticGroup:
 		end_list_items
 		
 RockClimberGroup:
-	next_list_item: ROCKCLIMBER (1)
+	next_list_item; ROCKCLIMBER (1)
 		db "HENRY@", TRAINERTYPE_NORMAL
 		db 7
 		dw MACHOP
