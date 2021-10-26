@@ -153,10 +153,10 @@ TrainerYoungsterJoey:
 	jumpstd rematchgiftm
 	end
 	
-TrainerYoungsterMikey
+TrainerYoungsterMikey:
 	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
 	
-.Script:
+.Script
 	endifjustbattled
 	opentext
 	writetext YoungsterMikeyAfterText
@@ -164,10 +164,10 @@ TrainerYoungsterMikey
 	closetext
 	end
 	
-TrainerBugCatcherLenny
+TrainerBugCatcherLenny:
 	trainer BUG_CATCHER, LENNY, EVENT_BEAT_BUG_CATCHER_LENNY, BugCatcherLennySeenText, BugCatcherLennyBeatenText, 0, .Script
 	
-.Script:
+.Script
 	endifjustbattled
 	opentext
 	writetext BugCatcherLennyAfterText
