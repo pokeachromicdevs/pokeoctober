@@ -59,7 +59,7 @@ BattleTowerMons1:
 	db "E-HUi@@@@@@"
 
 	dw UMBREON
-	db GOLD_BERRY
+	db APPLE
 	dw SHADOW_BALL, IRON_TAIL, PSYCH_UP, TOXIC
 
 	dw 0 ; OT ID
@@ -167,7 +167,7 @@ BattleTowerMons1:
 	db "SANI-GO@@@@"
 
 	dw MILTANK
-	db GOLD_BERRY
+	db APPLE
 	dw BLIZZARD, EARTHQUAKE, HYPER_BEAM, TOXIC
 
 	dw 0 ; OT ID
@@ -248,7 +248,7 @@ BattleTowerMons1:
 	db "RAPURASU@@@"
 
 	dw SNEASEL
-	db GOLD_BERRY
+	db APPLE
 	dw SLASH, FAINT_ATTACK, SURF, BLIZZARD
 
 	dw 0 ; OT ID
@@ -329,7 +329,7 @@ BattleTowerMons1:
 	db "MUUMA@@@@@@"
 
 	dw HOUNDOUR
-	db GOLD_BERRY
+	db APPLE
 	dw FAINT_ATTACK, SOLARBEAM, ROAR, SUNNY_DAY
 
 	dw 0 ; OT ID
@@ -464,7 +464,7 @@ BattleTowerMons1:
 	db "NAtuSI-@@@@"
 
 	dw HERACROSS
-	db GOLD_BERRY
+	db APPLE
 	dw REVERSAL, ENDURE, COUNTER, ROCK_SMASH
 
 	dw 0 ; OT ID
@@ -602,7 +602,7 @@ BattleTowerMons2:
 	db "BURAtuKI-@@"
 
 	dw STARMIE
-	db GOLD_BERRY
+	db APPLE
 	dw RECOVER, PSYCHIC_M, SURF, PSYCH_UP
 
 	dw 0 ; OT ID
@@ -656,7 +656,7 @@ BattleTowerMons2:
 	db "GIyaRADOSU@"
 
 	dw STEELIX
-	db GOLD_BERRY
+	db APPLE
 	dw ROAR, IRON_TAIL, SWAGGER, EARTHQUAKE
 
 	dw 0 ; OT ID
@@ -791,7 +791,7 @@ BattleTowerMons2:
 	db "NAtuSI-@@@@"
 
 	dw AERODACTYL
-	db GOLD_BERRY
+	db APPLE
 	dw REST, HYPER_BEAM, EARTHQUAKE, DRAGON_RAGE
 
 	dw 0 ; OT ID
@@ -845,7 +845,7 @@ BattleTowerMons2:
 	db "HAPINASU@@@"
 
 	dw LAPRAS
-	db GOLD_BERRY
+	db APPLE
 	dw PSYCHIC_M, THUNDERBOLT, BLIZZARD, CONFUSE_RAY
 
 	dw 0 ; OT ID
@@ -926,7 +926,7 @@ BattleTowerMons2:
 	db "HAtuSAMU@@@"
 
 	dw HITMONCHAN
-	db GOLD_BERRY
+	db APPLE
 	dw THUNDERPUNCH, ICE_PUNCH, FIRE_PUNCH, MEGA_PUNCH
 
 	dw 0 ; OT ID
@@ -1034,7 +1034,7 @@ BattleTowerMons2:
 	db "MIRUTANKU@@"
 
 	dw WIGGLYTUFF
-	db GOLD_BERRY
+	db APPLE
 	dw HYPER_BEAM, BLIZZARD, FIRE_BLAST, ATTRACT
 
 	dw 0 ; OT ID
@@ -1226,7 +1226,7 @@ BattleTowerMons3:
 	db "SUTA-MI-@@@"
 
 	dw JYNX
-	db GOLD_BERRY
+	db APPLE
 	dw BLIZZARD, LOVELY_KISS, DREAM_EATER, ATTRACT
 
 	dw 0 ; OT ID
@@ -1388,7 +1388,7 @@ BattleTowerMons3:
 	db "KAIRIKI-@@@"
 
 	dw CROBAT
-	db GOLD_BERRY
+	db APPLE
 	dw ATTRACT, CONFUSE_RAY, TOXIC, WING_ATTACK
 
 	dw 0 ; OT ID
@@ -1523,7 +1523,7 @@ BattleTowerMons3:
 	db "RAPURASU@@@"
 
 	dw LANTURN
-	db GOLD_BERRY
+	db APPLE
 	dw RAIN_DANCE, THUNDER, SURF, FLAIL
 
 	dw 0 ; OT ID
@@ -1604,7 +1604,7 @@ BattleTowerMons3:
 	db "DOKUKURAGE@"
 
 	dw GENGAR
-	db GOLD_BERRY
+	db APPLE
 	dw THIEF, LICK, NIGHT_SHADE, GIGA_DRAIN
 
 	dw 0 ; OT ID
@@ -1631,7 +1631,7 @@ BattleTowerMons3:
 	db "GENGA-@@@@@"
 
 	dw URSARING
-	db GOLD_BERRY
+	db APPLE
 	dw HEADBUTT, PROTECT, ROAR, LEER
 
 	dw 0 ; OT ID
@@ -1715,7 +1715,7 @@ BattleTowerMons3:
 BattleTowerMons4:
 
 	dw TAUROS
-	db GOLD_BERRY
+	db APPLE
 	dw RETURN, HYPER_BEAM, EARTHQUAKE, IRON_TAIL
 
 	dw 0 ; OT ID
@@ -1823,7 +1823,7 @@ BattleTowerMons4:
 	db "RAPURASU@@@"
 
 	dw STEELIX
-	db GOLD_BERRY
+	db APPLE
 	dw SANDSTORM, IRON_TAIL, EARTHQUAKE, TOXIC
 
 	dw 0 ; OT ID
@@ -1904,7 +1904,7 @@ BattleTowerMons4:
 	db "SUTA-MI-@@@"
 
 	dw WOBBUFFET
-	db GOLD_BERRY
+	db APPLE
 	dw COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
 
 	dw 0 ; OT ID
@@ -2120,7 +2120,7 @@ BattleTowerMons4:
 	db "HUoRETOSU@@"
 
 	dw OMASTAR
-	db GOLD_BERRY
+	db APPLE
 	dw CURSE, WATER_GUN, ANCIENTPOWER, ROCK_SMASH
 
 	dw 0 ; OT ID
@@ -2285,7 +2285,7 @@ BattleTowerMons4:
 BattleTowerMons5:
 
 	dw KINGDRA
-	db GOLD_BERRY
+	db APPLE
 	dw SURF, HYPER_BEAM, BLIZZARD, DRAGONBREATH
 
 	dw 0 ; OT ID
@@ -2393,7 +2393,7 @@ BattleTowerMons5:
 	db "KABIGON@@@@"
 
 	dw LAPRAS
-	db GOLD_BERRY
+	db APPLE
 	dw THUNDERBOLT, SURF, CONFUSE_RAY, BLIZZARD
 
 	dw 0 ; OT ID
@@ -2501,7 +2501,7 @@ BattleTowerMons5:
 	db "YADOKINGU@@"
 
 	dw MACHAMP
-	db GOLD_BERRY
+	db APPLE
 	dw CROSS_CHOP, EARTHQUAKE, FIRE_BLAST, THUNDERPUNCH
 
 	dw 0 ; OT ID
@@ -2690,7 +2690,7 @@ BattleTowerMons5:
 	db "SANDA-@@@@@"
 
 	dw SKARMORY
-	db GOLD_BERRY
+	db APPLE
 	dw SANDSTORM, FLY, STEEL_WING, TOXIC
 
 	dw 0 ; OT ID
@@ -2825,7 +2825,7 @@ BattleTowerMons5:
 	db "GIyaRADOSU@"
 
 	dw ARTICUNO
-	db GOLD_BERRY
+	db APPLE
 	dw BLIZZARD, HYPER_BEAM, ROAR, ICY_WIND
 
 	dw 0 ; OT ID
@@ -2882,7 +2882,7 @@ BattleTowerMons6:
 	db "KINGUDORA@@"
 
 	dw TYRANITAR
-	db GOLD_BERRY
+	db APPLE
 	dw CRUNCH, EARTHQUAKE, ROCK_SLIDE, HYPER_BEAM
 
 	dw 0 ; OT ID
@@ -3017,7 +3017,7 @@ BattleTowerMons6:
 	db "SANDA-@@@@@"
 
 	dw WOBBUFFET
-	db GOLD_BERRY
+	db APPLE
 	dw COUNTER, MIRROR_COAT, DESTINY_BOND, SAFEGUARD
 
 	dw 0 ; OT ID
@@ -3098,7 +3098,7 @@ BattleTowerMons6:
 	db "KAIRIyu-@@@"
 
 	dw UMBREON
-	db GOLD_BERRY
+	db APPLE
 	dw MUD_SLAP, MOONLIGHT, PSYCHIC_M, FAINT_ATTACK
 
 	dw 0 ; OT ID
@@ -3287,7 +3287,7 @@ BattleTowerMons6:
 	db "RU-ZIyuRA@@"
 
 	dw BLASTOISE
-	db GOLD_BERRY
+	db APPLE
 	dw SURF, EARTHQUAKE, RAPID_SPIN, BLIZZARD
 
 	dw 0 ; OT ID
@@ -3368,7 +3368,7 @@ BattleTowerMons6:
 	db "SANDOPAN@@@"
 
 	dw PARASECT
-	db GOLD_BERRY
+	db APPLE
 	dw SPORE, GIGA_DRAIN, HYPER_BEAM, SLUDGE_BOMB
 
 	dw 0 ; OT ID
@@ -3479,7 +3479,7 @@ BattleTowerMons7:
 	db "SIyaWA-ZU@@"
 
 	dw UMBREON
-	db GOLD_BERRY
+	db APPLE
 	dw FAINT_ATTACK, MOONLIGHT, PSYCH_UP, TOXIC
 
 	dw 0 ; OT ID
@@ -3506,7 +3506,7 @@ BattleTowerMons7:
 	db "BURAtuKI-@@"
 
 	dw BLISSEY
-	db GOLD_BERRY
+	db APPLE
 	dw COUNTER, SOFTBOILED, SHADOW_BALL, THUNDERBOLT
 
 	dw 0 ; OT ID
@@ -3614,7 +3614,7 @@ BattleTowerMons7:
 	db "BANGIRASU@@"
 
 	dw ZAPDOS
-	db GOLD_BERRY
+	db APPLE
 	dw THUNDERBOLT, DRILL_PECK, THUNDER_WAVE, HYPER_BEAM
 
 	dw 0 ; OT ID
@@ -3668,7 +3668,7 @@ BattleTowerMons7:
 	db "NAtuSI-@@@@"
 
 	dw UMBREON
-	db GOLD_BERRY
+	db APPLE
 	dw MOONLIGHT, FAINT_ATTACK, PSYCHIC_M, SHADOW_BALL
 
 	dw 0 ; OT ID
@@ -3830,7 +3830,7 @@ BattleTowerMons7:
 	db "OKORIZARU@@"
 
 	dw GIRAFARIG
-	db GOLD_BERRY
+	db APPLE
 	dw AGILITY, BATON_PASS, CRUNCH, EARTHQUAKE
 
 	dw 0 ; OT ID
@@ -4076,7 +4076,7 @@ BattleTowerMons8:
 	db "HERUGA-@@@@"
 
 	dw TAUROS
-	db GOLD_BERRY
+	db APPLE
 	dw EARTHQUAKE, BODY_SLAM, IRON_TAIL, HYPER_BEAM
 
 	dw 0 ; OT ID
@@ -4238,7 +4238,7 @@ BattleTowerMons8:
 	db "KINGUDORA@@"
 
 	dw DRAGONITE
-	db GOLD_BERRY
+	db APPLE
 	dw THUNDER_WAVE, SURF, THUNDERBOLT, OUTRAGE
 
 	dw 0 ; OT ID
@@ -4319,7 +4319,7 @@ BattleTowerMons8:
 	db "RU-ZIyuRA@@"
 
 	dw MANTINE
-	db GOLD_BERRY
+	db APPLE
 	dw SURF, CONFUSE_RAY, BLIZZARD, WING_ATTACK
 
 	dw 0 ; OT ID
@@ -4508,7 +4508,7 @@ BattleTowerMons8:
 	db "UTUBOtuTO@@"
 
 	dw PINSIR
-	db GOLD_BERRY
+	db APPLE
 	dw HYPER_BEAM, SUBMISSION, STRENGTH, TOXIC
 
 	dw 0 ; OT ID
@@ -4673,7 +4673,7 @@ BattleTowerMons9:
 	db "PARUSIeN@@@"
 
 	dw CROBAT
-	db GOLD_BERRY
+	db APPLE
 	dw WING_ATTACK, HAZE, HYPER_BEAM, GIGA_DRAIN
 
 	dw 0 ; OT ID
@@ -4808,7 +4808,7 @@ BattleTowerMons9:
 	db "RAPURASU@@@"
 
 	dw ESPEON
-	db GOLD_BERRY
+	db APPLE
 	dw PSYCHIC_M, SHADOW_BALL, SUNNY_DAY, MORNING_SUN
 
 	dw 0 ; OT ID

@@ -16,7 +16,7 @@ MysteryGiftItems:
 	db MORPH_MAIL
 	db MUSIC_MAIL
 	db MIRACLEBERRY
-	db GOLD_BERRY
+	db APPLE
 	db REVIVE
 	db GREAT_BALL
 	db SUPER_REPEL

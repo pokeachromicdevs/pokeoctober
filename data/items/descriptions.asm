@@ -173,7 +173,7 @@ ItemDescriptions:
 	dw QuestionMarkDesc
 	dw UpGradeDesc
 	dw BerryDesc
-	dw GoldBerryDesc
+	dw AppleDesc
 	dw SquirtBottleDesc
 	dw QuestionMarkDesc
 	dw ParkBallDesc
@@ -854,9 +854,9 @@ BerryDesc:
 	db   "A self-restore"
 	next "item. (10HP, HOLD)@"
 
-GoldBerryDesc:
+AppleDesc:
 	db   "A self-restore"
-	next "item. (30HP, HOLD)@"
+	next "item. (50HP, HOLD)@"
 
 SquirtBottleDesc:
 	db   "A bottle used for"
@@ -943,4 +943,4 @@ PokeFluteDesc:
 	
 WisdomOrbDesc:
 	db "Raises SPCL DEF."
-	next "by 10. (HOLD)@"
+	next "by 2. (HOLD)@"

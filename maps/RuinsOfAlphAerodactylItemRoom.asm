@@ -10,7 +10,7 @@ RuinsOfAlphAerodactylItemRoom_MapScripts:
 	db 0 ; callbacks
 
 RuinsOfAlphAerodactylItemRoomGoldBerry:
-	itemball GOLD_BERRY
+	itemball APPLE
 
 RuinsOfAlphAerodactylItemRoomMoonStone:
 	itemball MOON_STONE

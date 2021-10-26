@@ -10,7 +10,7 @@ RuinsOfAlphHoOhItemRoom_MapScripts:
 	db 0 ; callbacks
 
 RuinsOfAlphHoOhItemRoomGoldBerry:
-	itemball GOLD_BERRY
+	itemball APPLE
 
 RuinsOfAlphHoOhItemRoomMysteryberry:
 	itemball MYSTERYBERRY

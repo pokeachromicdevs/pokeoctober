@@ -179,7 +179,7 @@
 	const ITEM_AB      ; ab
 	const UP_GRADE     ; ac
 	const BERRY        ; ad
-	const GOLD_BERRY   ; ae
+	const APPLE        ; ae
 	const SQUIRTBOTTLE ; af
 	const ITEM_B0      ; b0
 	const PARK_BALL    ; b1

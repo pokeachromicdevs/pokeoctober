@@ -265,7 +265,7 @@ Route36Officer_ContestHasConcluded:
 .GoldBerry:
 	writetext Route36NationalParkGateOfficer1HeresThePrizeText
 	buttonsound
-	verbosegiveitem GOLD_BERRY
+	verbosegiveitem APPLE
 	iffalse .BagFull
 	clearevent EVENT_CONTEST_OFFICER_HAS_GOLD_BERRY
 	closetext
