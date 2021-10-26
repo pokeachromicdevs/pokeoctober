@@ -88,7 +88,7 @@ ItemNames::
 	db "BIG MUSHROOM@"
 	db "SILVERPOWDER@"
 	db "BLU APRICORN@"
-	db "TERU-SAMA@"
+	db "EARTHEN CLAY"
 	db "AMULET COIN@"
 	db "YLW APRICORN@"
 	db "GRN APRICORN@"

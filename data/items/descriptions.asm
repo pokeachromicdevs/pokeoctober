@@ -99,7 +99,7 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw QuestionMarkDesc
+	dw EarthenClayDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -927,4 +927,8 @@ OaksParcelDesc:
 	
 SnakeskinDesc:
 	db "Prevents poisoning."
+	next "(HOLD)@"
+	
+EarthenClayDesc:
+	db "Prevents paralysis."
 	next "(HOLD)@"
