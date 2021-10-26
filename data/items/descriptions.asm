@@ -95,7 +95,7 @@ ItemDescriptions:
 	dw GrnApricornDesc
 	dw CleanseTagDesc
 	dw MysticWaterDesc
-	dw TwistedSpoonDesc
+	dw MigraineSeedDesc
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
@@ -161,7 +161,7 @@ ItemDescriptions:
 	dw LevelBallDesc
 	dw LureBallDesc
 	dw FastBallDesc
-	dw QuestionMarkDesc
+	dw WisdomOrbDesc
 	dw LightBallDesc
 	dw FriendBallDesc
 	dw MoonBallDesc
@@ -608,7 +608,7 @@ MysticWaterDesc:
 	db   "Powers up water-"
 	next "type moves. (HOLD)@"
 
-TwistedSpoonDesc:
+MigraineSeedDesc:
 	db   "Powers up psychic-"
 	next "type moves. (HOLD)@"
 
@@ -940,3 +940,7 @@ DiggingClawDesc:
 PokeFluteDesc:
 	db "Awakens sleeping"
 	next "#MON.@"
+	
+WisdomOrbDesc:
+	db "Raises SPCL DEF."
+	next "by 10. (HOLD)@"

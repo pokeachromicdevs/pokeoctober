@@ -94,8 +94,8 @@ ItemNames::
 	db "GRN APRICORN@"
 	db "CLEANSE TAG@"
 	db "MYSTIC WATER@"; change to weaken foe's water attacks like SW97
-	db "TWISTEDSPOON@";change to weaken foe's psychic attacks instead like SW97
 	db "WHT APRICORN@"
+	db "MIGRAINESEED@"
 	db "BLACKBELT@"
 	db "BLK APRICORN@"
 	db "PNK APRICORN@"
@@ -143,7 +143,7 @@ ItemNames::
 	db "TERU-SAMA@";fire mane
 	db "METAL COAT@"
 	db "DRAGON FANG@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";beta twistedspoon
 	db "LEFTOVERS@"
 	db "TERU-SAMA@";fossil shard
 	db "TERU-SAMA@";gross garbage
@@ -160,8 +160,8 @@ ItemNames::
 	db "LEVEL BALL@"
 	db "LURE BALL@"
 	db "FAST BALL@"
-	db "TERU-SAMA@"
 	db "LIGHT BALL@"
+	db "WISDOM ORB@"
 	db "FRIEND BALL@"
 	db "MOON BALL@"
 	db "LOVE BALL@"

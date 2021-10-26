@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball POKE_FLUTE
+	itemball MIGRAINE_SEED
 
 DudeMovementData1a:
 	step UP

@@ -101,7 +101,7 @@
 	const GRN_APRICORN ; 5d
 	const CLEANSE_TAG  ; 5e
 	const MYSTIC_WATER ; 5f
-	const TWISTEDSPOON ; 60
+	const MIGRAINE_SEED; 60
 	const WHT_APRICORN ; 61
 	const BLACKBELT    ; 62
 	const BLK_APRICORN ; 63
@@ -167,7 +167,7 @@
 	const LEVEL_BALL   ; 9f
 	const LURE_BALL    ; a0
 	const FAST_BALL    ; a1
-	const ITEM_A2      ; a2
+	const WISDOM_ORB   ; a2
 	const LIGHT_BALL   ; a3
 	const FRIEND_BALL  ; a4
 	const MOON_BALL    ; a5
