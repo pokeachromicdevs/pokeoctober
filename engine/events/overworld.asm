@@ -770,7 +770,7 @@ EscapeRopeFunction:
 DigFunction:
 	call FieldMoveJumptableReset
 	ld a, $2
-
+	
 dig_incave:
 	ld [wBuffer2], a
 .loop

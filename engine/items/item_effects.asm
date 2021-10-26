@@ -102,7 +102,7 @@ ItemEffects:
 	dw NoEffect            ; BIG_MUSHROOM
 	dw NoEffect            ; SILVERPOWDER
 	dw NoEffect            ; BLU_APRICORN
-	dw NoEffect            ; ITEM_5A
+	dw NoEffect            ; EARTHEN_CLAY
 	dw NoEffect            ; AMULET_COIN
 	dw NoEffect            ; YLW_APRICORN
 	dw NoEffect            ; GRN_APRICORN
@@ -112,7 +112,7 @@ ItemEffects:
 	dw NoEffect            ; WHT_APRICORN
 	dw NoEffect            ; BLACKBELT
 	dw NoEffect            ; BLK_APRICORN
-	dw NoEffect            ; EARTHEN_CLAY
+	dw DiggingClawEffect   ; DIGGING_CLAW
 	dw NoEffect            ; PNK_APRICORN
 	dw NoEffect            ; BLACKGLASSES
 	dw NoEffect            ; SLOWPOKETAIL
@@ -2051,6 +2051,130 @@ EscapeRopeEffect:
 	cp 1
 	call z, UseDisposableItem
 	ret
+	
+DiggingClawEffect:
+	call FieldMoveJumptableReset
+	ld a, $1
+	jr digclaw_incave
+	
+digclaw_incave:
+	ld [wBuffer2], a
+.loop
+	ld hl, .DiggingClawTable
+	call FieldMoveJumptable
+	jr nc, .loop
+	and $7f
+	ld [wFieldMoveSucceeded], a
+	ret
+
+.DiggingClawTable:
+	dw .CheckCanDigClaw
+	dw .DoDigClaw
+	dw .FailDigClaw
+
+.CheckCanDigClaw:
+	call GetMapEnvironment
+	cp CAVE
+	jr z, .incave
+	cp DUNGEON
+	jr z, .incave
+.fail
+	ld a, $2
+	ret
+
+.incave
+	ld hl, wDigWarpNumber
+	ld a, [hli]
+	and a
+	jr z, .fail
+	ld a, [hli]
+	and a
+	jr z, .fail
+	ld a, [hl]
+	and a
+	jr z, .fail
+	ld a, $1
+	ret
+
+.DoDigClaw:
+	ld hl, wDigWarpNumber
+	ld de, wNextWarp
+	ld bc, 3
+	call CopyBytes
+	call GetPartyNick
+	ld a, [wBuffer2]
+	cp $2
+	ld hl, .UsedDigClawScript
+	call QueueScript
+	ld a, $81
+	ret
+	
+.FailDigClaw:
+	ld a, [wBuffer2]
+	cp $2
+	ld hl, .Text_CantUseHere
+	call MenuTextbox
+	call WaitPressAorB_BlinkCursor
+	call CloseWindow
+	ret
+
+.Text_UsedDigClaw:
+	; used DIG!
+	text_far UnknownText_0x1c06de
+	text_end
+
+.Text_CantUseHere:
+	; Can't use that here.
+	text_far UnknownText_0x1c0705
+	text_end
+
+.UsedDigClawScript:
+	reloadmappart
+	special UpdateTimePals
+	writetext .Text_UsedDigClaw
+
+.UsedDiggingClawScript:
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	applymovement PLAYER, .DigClawOut
+	farscall Script_AbortBugContest
+	special WarpToSpawnPoint
+	loadvar VAR_MOVEMENT, PLAYER_NORMAL
+	newloadmap MAPSETUP_DOOR
+	playsound SFX_WARP_FROM
+	applymovement PLAYER, .DigClawReturn
+	end
+
+.DigClawOut:
+	step_dig 32
+	hide_object
+	step_end
+
+.DigClawReturn:
+	show_object
+	return_dig 32
+	step_end
+
+;DiggingClawEffect:
+	;xor a
+    ;ld [wItemEffectSucceeded], a
+	;cp HELD_DIGGING_CLAW
+	;farcall DigFunction	
+	;dig_incave:
+	;ld [wBuffer2], a
+;.loop
+	;ld hl, .DigTable
+	;call FieldMoveJumptable
+	;jr nc, .loop
+	;and $7f
+	;ld [wFieldMoveSucceeded], a
+	;ret
+	
+	;ld a, [wItemEffectSucceeded]
+	;cp 1
+	;call z, UseDisposableItem
+	;ret
 
 SuperRepelEffect:
 	ld b, 200

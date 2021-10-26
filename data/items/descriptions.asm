@@ -89,7 +89,7 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw QuestionMarkDesc
+	dw EarthenClayDesc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -99,7 +99,7 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw EarthenClayDesc
+	dw DiggingClawDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -134,7 +134,7 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw QuestionMarkDesc
+	dw DiggingClawDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw CharcoalDesc
@@ -932,3 +932,7 @@ SnakeskinDesc:
 EarthenClayDesc:
 	db "Prevents paralysis."
 	next "(HOLD)@"
+	
+DiggingClawDesc:
+	db "Use DIG outside of"
+	next "battle.(HOLD)@"
