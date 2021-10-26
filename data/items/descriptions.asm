@@ -170,7 +170,7 @@ ItemDescriptions:
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
 	dw PolkadotBowDesc
-	dw QuestionMarkDesc
+	dw OddThreadDesc
 	dw UpGradeDesc
 	dw BerryDesc
 	dw AppleDesc
@@ -944,3 +944,7 @@ PokeFluteDesc:
 WisdomOrbDesc:
 	db "Raises SPCL DEF."
 	next "by 2. (HOLD)@"
+	
+OddThreadDesc:
+	db "Raises EVASION of"
+	next "foe's moves.@"

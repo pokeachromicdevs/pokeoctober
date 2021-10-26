@@ -176,7 +176,7 @@
 	const GORGEOUS_BOX ; a8
 	const SUN_STONE    ; a9
 	const POLKADOT_BOW ; aa
-	const ITEM_AB      ; ab
+	const ODD_THREAD   ; ab
 	const UP_GRADE     ; ac
 	const BERRY        ; ad
 	const APPLE        ; ae
