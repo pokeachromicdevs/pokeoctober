@@ -203,8 +203,8 @@ ItemDescriptions:
 	dw IceWingDesc
 	dw ThunderWingDesc
 	dw FireWingDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw FireTailDesc
+	dw ThunderTailDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -928,7 +928,8 @@ OaksParcelDesc:
 SnakeskinDesc:
 	db "Prevents poison."
 	next "(HOLD)@"
-	
+
+ThunderTailDesc:	
 EarthenClayDesc:
 	db "Prevents paralysis."
 	next "(HOLD)@"
@@ -964,8 +965,8 @@ TickleStickDesc:
 	next "CAPTAIN's back.@"
 	
 PrettyTailDesc:
-	db "Prevents poison."
-	next "(HOLD)@"
+	db "Prevents poison-"
+	next "ing.(HOLD)@"
 	
 BurstOrbDesc:
 	db "Prevents sleep."
@@ -994,8 +995,12 @@ LongVineDesc:
 	
 ThunderWingDesc:
 	db "Raises SPEED by"
-	next "2. (HOLD)"
+	next "2. (HOLD)@"
 	
 FireWingDesc:
-	db "Sharply raises SPCL."
-	next "ATTACK. (HOLD)"
+	db "Sharply raises"
+	next "SPCL.ATTACK.(HOLD)@"
+	
+FireTailDesc:
+	db "Prevents freezing."
+	next "(HOLD)@"

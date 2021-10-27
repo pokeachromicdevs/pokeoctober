@@ -203,6 +203,8 @@ ItemNames::
 	db "ICE WING@"
 	db "THUNDER WING@"
 	db "FIRE WING@"
+	db "FIRE TAIL@"
+	db "THUNDER TAIL@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
@@ -236,9 +238,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";SW97 FLEE FEATHER (switch without wasting a turn)
 	db "TERU-SAMA@";5 YEN COIN
 	db "TERU-SAMA@";LIFE TAG
 	db "TERU-SAMA@";STRANGE POWDER
