@@ -8,10 +8,10 @@ HealingHPAmounts:
 	dbw MAX_POTION,   MAX_STAT_VALUE
 	dbw FULL_RESTORE, MAX_STAT_VALUE
 	dbw MOOMOO_MILK,  100
-	dbw BERRY,         10
+	dbw BERRY,         20
 	dbw APPLE,         50
 	dbw ENERGYPOWDER,  50
 	dbw ENERGY_ROOT,  200
 	dbw RAGECANDYBAR,  20
-	dbw BERRY_JUICE,   20
+	dbw BERRY_JUICE,   40
 	dbw -1, 0 ; end
