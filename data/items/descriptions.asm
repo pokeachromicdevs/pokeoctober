@@ -107,7 +107,7 @@ ItemDescriptions:
 	dw StickDesc
 	dw SmokeBallDesc
 	dw NeverMeltIceDesc
-	dw MagnetDesc
+	dw ThunderFangDesc
 	dw MiracleBerryDesc
 	dw PearlDesc
 	dw BigPearlDesc
@@ -118,7 +118,7 @@ ItemDescriptions:
 	dw BlueCardDesc
 	dw MiracleSeedDesc
 	dw ThickClubDesc
-	dw FocusBandDesc
+	dw FocusOrbDesc
 	dw QuestionMarkDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
@@ -651,7 +651,7 @@ NeverMeltIceDesc:
 	db   "Powers up ice-type"
 	next "moves. (HOLD)@"
 
-MagnetDesc:
+ThunderFangDesc:
 	db   "Boosts electric-"
 	next "type moves. (HOLD)@"
 
@@ -695,7 +695,7 @@ ThickClubDesc:
 	db   "A bone of some"
 	next "sort. Sell low.@"
 
-FocusBandDesc:
+FocusOrbDesc:
 	db   "May prevent faint-"
 	next "ing. (HOLD)@"
 

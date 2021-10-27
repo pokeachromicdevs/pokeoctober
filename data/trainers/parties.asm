@@ -1705,7 +1705,7 @@ CooltrainerFGroup:
 	db "BETH@", TRAINERTYPE_ITEM_MOVES
 	db 43
 	dw RAPIDASH
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw STOMP, FIRE_SPIN, FURY_ATTACK, FIRE_BLAST
 	db -1 ; end
 

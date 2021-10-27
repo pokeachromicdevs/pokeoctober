@@ -78,7 +78,7 @@ SunnyScript:
 	writetext SunnyGivesGiftText2
 	buttonsound
 .next
-	verbosegiveitem MAGNET
+	verbosegiveitem THUNDER_FANG
 	iffalse SunnyDoneScript
 	setevent EVENT_GOT_MAGNET_FROM_SUNNY
 	writetext SunnyGaveGiftText

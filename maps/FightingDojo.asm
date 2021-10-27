@@ -17,7 +17,7 @@ FightingDojoSign2:
 	jumptext FightingDojoSign2Text
 
 FightingDojoFocusBand:
-	itemball FOCUS_BAND
+	itemball FOCUS_ORB
 
 FightingDojoBlackBeltText:
 	text "Hello!"

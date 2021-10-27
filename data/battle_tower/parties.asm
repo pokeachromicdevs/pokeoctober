@@ -1,4 +1,4 @@
-BattleTowerMons:
+BattleTowerMons
 ; 10 groups of 21 mons.
 ; Each mon is several bytes too long; the initial species, item and move IDs must be converted to 8-bit when loading.
 
@@ -86,7 +86,7 @@ BattleTowerMons1:
 	db "BURAtuKI-@@"
 
 	dw WOBBUFFET
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
 
 	dw 0 ; OT ID
@@ -302,7 +302,7 @@ BattleTowerMons1:
 	db "PORIGON2@@@"
 
 	dw MISDREAVUS
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw PERISH_SONG, MEAN_LOOK, PAIN_SPLIT, SHADOW_BALL
 
 	dw 0 ; OT ID
@@ -737,7 +737,7 @@ BattleTowerMons2:
 	db "UINDEi@@@@@"
 
 	dw HERACROSS
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw ENDURE, REVERSAL, MEGAHORN, EARTHQUAKE
 
 	dw 0 ; OT ID
@@ -899,7 +899,7 @@ BattleTowerMons2:
 	db "PIKATIyuU@@"
 
 	dw SCIZOR
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw STEEL_WING, SLASH, TOXIC, SANDSTORM
 
 	dw 0 ; OT ID
@@ -1931,7 +1931,7 @@ BattleTowerMons4:
 	db "SO-NANSU@@@"
 
 	dw GOLEM
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw EXPLOSION, EARTHQUAKE, MEGA_PUNCH, ROCK_SLIDE
 
 	dw 0 ; OT ID
@@ -3233,7 +3233,7 @@ BattleTowerMons6:
 	db "KABIGON@@@@"
 
 	dw HERACROSS
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw REVERSAL, MEGAHORN, EARTHQUAKE, COUNTER
 
 	dw 0 ; OT ID
@@ -3749,7 +3749,7 @@ BattleTowerMons7:
 	db "NUO-@@@@@@@"
 
 	dw URSARING
-	db MAGNET
+	db THUNDER_FANG
 	dw SLASH, EARTHQUAKE, HYPER_BEAM, THUNDERPUNCH
 
 	dw 0 ; OT ID
@@ -3857,7 +3857,7 @@ BattleTowerMons7:
 	db "KIRINRIKI@@"
 
 	dw HITMONLEE
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw REVERSAL, ENDURE, BODY_SLAM, MEGA_KICK
 
 	dw 0 ; OT ID
@@ -5432,7 +5432,7 @@ BattleTowerMons10:
 	db "ONIDORIRU@@"
 
 	dw MISDREAVUS
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw PERISH_SONG, MEAN_LOOK, PAIN_SPLIT, SHADOW_BALL
 
 	dw 0 ; OT ID
@@ -5648,7 +5648,7 @@ BattleTowerMons10:
 	db "GORO-NIya@@"
 
 	dw HITMONCHAN
-	db FOCUS_BAND
+	db FOCUS_ORB
 	dw COUNTER, FIRE_PUNCH, THUNDERPUNCH, ICE_PUNCH
 
 	dw 0 ; OT ID

@@ -113,7 +113,7 @@
 	const STICK        ; 69
 	const SMOKE_BALL   ; 6a
 	const NEVERMELTICE ; 6b
-	const MAGNET       ; 6c
+	const THUNDER_FANG ; 6c
 	const MIRACLEBERRY ; 6d
 	const PEARL        ; 6e
 	const BIG_PEARL    ; 6f
@@ -124,7 +124,7 @@
 	const BLUE_CARD    ; 74
 	const MIRACLE_SEED ; 75
 	const THICK_CLUB   ; 76
-	const FOCUS_BAND   ; 77
+	const FOCUS_ORB    ; 77
 	const ITEM_78      ; 78
 	const ENERGYPOWDER ; 79
 	const ENERGY_ROOT  ; 7a
