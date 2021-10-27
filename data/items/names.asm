@@ -205,7 +205,7 @@ ItemNames::
 	db "FIRE WING@"
 	db "FIRE TAIL@"
 	db "THUNDER TAIL@"
-	db "TERU-SAMA@"
+	db "CALM SEED@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
@@ -253,5 +253,5 @@ ItemNames::
 	db "TERU-SAMA@";MYSTIC THREAD
 	db "TERU-SAMA@";MYSTIC NEEDLE
 	db "TERU-SAMA@";SAFARI BALL
-	db "TERU-SAMA@";FUJI'S LETTER
+	db "TERU-SAMA@";FUJI'S LETTER (for Kanto postgame)
 	db "?@"

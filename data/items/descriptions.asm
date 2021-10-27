@@ -205,7 +205,7 @@ ItemDescriptions:
 	dw FireWingDesc
 	dw FireTailDesc
 	dw ThunderTailDesc
-	dw QuestionMarkDesc
+	dw CalmSeedDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -953,7 +953,7 @@ OddThreadDesc:
 	next "foe's moves.@"
 	
 WaterTailDesc:
-	db "Prevents burn."
+	db "Prevents burns."
 	next "(HOLD)@"
 	
 VoucherDesc:
@@ -1004,3 +1004,7 @@ FireWingDesc:
 FireTailDesc:
 	db "Prevents freezing."
 	next "(HOLD)@"
+	
+CalmSeedDesc:
+	db "Prevents confu-"
+	next "sion.(HOLD)@"
