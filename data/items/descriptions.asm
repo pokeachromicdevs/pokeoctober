@@ -200,9 +200,9 @@ ItemDescriptions:
 	dw DetectOrbDesc
 	dw LongTongueDesc
 	dw LongVineDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw IceWingDesc
+	dw ThunderWingDesc
+	dw FireWingDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -940,10 +940,11 @@ DiggingClawDesc:
 PokeFluteDesc:
 	db "Awakens sleeping"
 	next "#MON.@"
-	
+
+IceWingDesc:	
 WisdomOrbDesc:
-	db "Raises SPCL DEF."
-	next "by 2. (HOLD)@"
+	db "Sharply raises"
+	next "SPCL.DEF. (HOLD)@"
 
 DetectOrbDesc:
 OddThreadDesc:
@@ -975,8 +976,8 @@ HiddenNeedleDesc:
 	next "ratio. (HOLD)@"
 	
 SharpHornDesc:
-	db "Sharply raises"
-	next "ATTACK. (HOLD)@"
+	db  "Raises ATTACK by"
+	next "2. (HOLD)@"
 	
 HeartStoneDesc:
 	db  "Evolves certain"
@@ -990,3 +991,11 @@ LongTongueDesc:
 LongVineDesc:
 	db  "Raises #MON"
 	next "catch rate. (HOLD)@"
+	
+ThunderWingDesc:
+	db "Raises SPEED by"
+	next "2. (HOLD)"
+	
+FireWingDesc:
+	db "Sharply raises SPCL."
+	next "ATTACK. (HOLD)"

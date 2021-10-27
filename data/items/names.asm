@@ -200,6 +200,9 @@ ItemNames::
 	db "DETECT ORB@"
 	db "LONG TONGUE@"
 	db "LONG VINE@"
+	db "ICE WING@"
+	db "THUNDER WING@"
+	db "FIRE WING@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
@@ -236,10 +239,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";5 YEN COIN
 	db "TERU-SAMA@";LIFE TAG
 	db "TERU-SAMA@";STRANGE POWDER
 	db "TERU-SAMA@";BUG-FLYING FOSSIL

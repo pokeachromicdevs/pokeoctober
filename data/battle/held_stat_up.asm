@@ -8,4 +8,6 @@ HeldStatUpItems:
 	dbw HELD_EVASION_UP,    BattleCommand_EvasionUp
 	dbw HELD_WISDOM_ORB,    BattleCommand_SpecialDefenseUp2
 	dbw HELD_SHARP_HORN,    BattleCommand_AttackUp2
+	dbw HELD_THUNDER_WING,  BattleCommand_SpeedUp2
+	dbw HELD_FIRE_WING,     BattleCommand_SpecialAttackUp2
 	db -1 ; end

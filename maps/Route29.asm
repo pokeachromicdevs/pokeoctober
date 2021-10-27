@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball FOCUS_ORB
+	itemball ICE_WING
 
 DudeMovementData1a:
 	step UP
