@@ -197,7 +197,7 @@ ItemDescriptions:
 	dw SharpHornDesc
 	dw HeartStoneDesc
 	dw PoisonStoneDesc
-	dw QuestionMarkDesc
+	dw DetectOrbDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -944,7 +944,8 @@ PokeFluteDesc:
 WisdomOrbDesc:
 	db "Raises SPCL DEF."
 	next "by 2. (HOLD)@"
-	
+
+DetectOrbDesc:
 OddThreadDesc:
 	db "Raises EVASION of"
 	next "foe's moves.@"

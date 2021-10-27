@@ -197,6 +197,7 @@ ItemNames::
 	db "SHARP HORN@"
 	db "HEART STONE@"
 	db "POISON STONE@"
+	db "DETECT ORB@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
@@ -247,8 +248,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";SKATEBOARD
 	db "TERU-SAMA@";MOMS LOVE
 	db "TERU-SAMA@";MYSTIC THREAD
 	db "TERU-SAMA@";MYSTIC NEEDLE
