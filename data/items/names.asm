@@ -236,7 +236,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";SW97 MYSTIC WATER (weakens a foe's water attacks)
 	db "TERU-SAMA@";SW97 CONFUSE CLAW ("Damages foe before battle. (HOLD)")
 	db "TERU-SAMA@";SW97 FLEE FEATHER (switch without wasting a turn)
 	db "TERU-SAMA@";5 YEN COIN
