@@ -175,7 +175,7 @@ ItemDescriptions:
 	dw BerryDesc
 	dw AppleDesc
 	dw SquirtBottleDesc
-	dw QuestionMarkDesc
+	dw WaterTailDesc
 	dw ParkBallDesc
 	dw RainbowWingDesc
 	dw QuestionMarkDesc
@@ -948,3 +948,7 @@ WisdomOrbDesc:
 OddThreadDesc:
 	db "Raises EVASION of"
 	next "foe's moves.@"
+	
+WaterTailDesc:
+	db "Prevents burn."
+	next "(HOLD)@"
