@@ -195,7 +195,7 @@
 	const BLUESKY_MAIL ; bb
 	const MUSIC_MAIL   ; bc
 	const MIRAGE_MAIL  ; bd
-	const ITEM_BE      ; be
+	const VOUCHER      ; be
 	const ITEM_DC      ; bf
 	const ITEM_C3      ; c0
 	const ITEM_FA      ; c1

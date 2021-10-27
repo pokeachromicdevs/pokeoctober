@@ -177,7 +177,7 @@ ItemNames::
 	db "PARK BALL@"
 	db "WATER TAIL@"
 	db "RAINBOW WING@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";countercuff
 	db "BRICK PIECE@"
 	db "SURF MAIL@"
 	db "LITEBLUEMAIL@"
@@ -188,8 +188,8 @@ ItemNames::
 	db "BLUESKY MAIL@"
 	db "MUSIC MAIL@"
 	db "MIRAGE MAIL@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";moms love
+	db "VOUCHER@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"

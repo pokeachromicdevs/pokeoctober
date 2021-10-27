@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball WATER_TAIL
+	itemball VOUCHER
 
 DudeMovementData1a:
 	step UP

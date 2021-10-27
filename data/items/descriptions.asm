@@ -189,7 +189,7 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MewMailDesc
-	dw QuestionMarkDesc
+	dw VoucherDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -952,3 +952,7 @@ OddThreadDesc:
 WaterTailDesc:
 	db "Prevents burn."
 	next "(HOLD)@"
+	
+VoucherDesc:
+	db "RADIO CARD"
+	next "voucher.@"
