@@ -195,6 +195,8 @@ ItemNames::
 	db "BURST ORB@"
 	db "HIDDENNEEDLE@"
 	db "SHARP HORN@"
+	db "HEART STONE@"
+	db "POISON STONE@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
@@ -247,9 +249,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";MOMS LOVE
 	db "TERU-SAMA@";MYSTIC THREAD
 	db "TERU-SAMA@";MYSTIC NEEDLE
 	db "TERU-SAMA@";SAFARI BALL

@@ -195,8 +195,8 @@ ItemDescriptions:
 	dw BurstOrbDesc
 	dw HiddenNeedleDesc
 	dw SharpHornDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw HeartStoneDesc
+	dw PoisonStoneDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -976,3 +976,11 @@ HiddenNeedleDesc:
 SharpHornDesc:
 	db "Sharply raises"
 	next "ATTACK. (HOLD)@"
+	
+HeartStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
+	
+PoisonStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
