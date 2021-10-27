@@ -196,7 +196,7 @@
 	const MUSIC_MAIL   ; bc
 	const MIRAGE_MAIL  ; bd
 	const VOUCHER      ; be
-	const ITEM_DC      ; bf
+	const TICKLE_STICK ; bf
 	const ITEM_C3      ; c0
 	const ITEM_FA      ; c1
 

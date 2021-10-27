@@ -190,7 +190,7 @@ ItemNames::
 	db "MIRAGE MAIL@"
 	db "TERU-SAMA@";moms love
 	db "VOUCHER@"
-	db "TERU-SAMA@"
+	db "TICKLE STICK@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"

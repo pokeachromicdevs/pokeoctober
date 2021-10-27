@@ -190,7 +190,7 @@ ItemDescriptions:
 	dw MusicMailDesc
 	dw MewMailDesc
 	dw VoucherDesc
-	dw QuestionMarkDesc
+	dw TickleStickDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -956,3 +956,7 @@ WaterTailDesc:
 VoucherDesc:
 	db "RADIO CARD"
 	next "voucher.@"
+	
+TickleStickDesc:
+	db "Tickle SS AQUA"
+	next "CAPTAIN's back.@"
