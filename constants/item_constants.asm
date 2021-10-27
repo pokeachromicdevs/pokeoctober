@@ -145,7 +145,7 @@
 	const ITEM_89      ; 89
 	const CHARCOAL     ; 8a
 	const BERRY_JUICE  ; 8b
-	const SCOPE_LENS   ; 8c
+	const SHARP_SCYTHE ; 8c
 	const ITEM_8D      ; 8d
 	const ITEM_8E      ; 8e
 	const METAL_COAT   ; 8f

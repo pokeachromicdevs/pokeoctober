@@ -139,7 +139,7 @@ ItemDescriptions:
 	dw QuestionMarkDesc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
-	dw ScopeLensDesc
+	dw SharpScytheDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw MetalCoatDesc
@@ -762,7 +762,7 @@ BerryJuiceDesc:
 	db   "Restores #MON"
 	next "HP by 40.@"
 
-ScopeLensDesc:
+SharpScytheDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
 

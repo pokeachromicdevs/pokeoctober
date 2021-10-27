@@ -140,7 +140,7 @@ BattleTowerMons1:
 	db "GARU-RA@@@@"
 
 	dw CORSOLA
-	db SCOPE_LENS
+	db MYSTIC_WATER
 	dw SURF, PSYCHIC_M, RECOVER, ANCIENTPOWER
 
 	dw 0 ; OT ID
@@ -1958,7 +1958,7 @@ BattleTowerMons4:
 	db "GORO-NIya@@"
 
 	dw SCIZOR
-	db SCOPE_LENS
+	db SHARP_SCYTHE
 	dw SLASH, STEEL_WING, PURSUIT, HYPER_BEAM
 
 	dw 0 ; OT ID
@@ -2528,7 +2528,7 @@ BattleTowerMons5:
 	db "KAIRIKI-@@@"
 
 	dw STARMIE
-	db SCOPE_LENS
+	db MYSTIC_WATER
 	dw THUNDER_WAVE, RECOVER, THUNDERBOLT, SURF
 
 	dw 0 ; OT ID
@@ -2771,7 +2771,7 @@ BattleTowerMons5:
 	db "HAGANE-RU@@"
 
 	dw GIRAFARIG
-	db SCOPE_LENS
+	db APPLE
 	dw DREAM_EATER, CRUNCH, PSYCHIC_M, EARTHQUAKE
 
 	dw 0 ; OT ID
@@ -3341,7 +3341,7 @@ BattleTowerMons6:
 	db "SAIDON@@@@@"
 
 	dw SANDSLASH
-	db SCOPE_LENS
+	db SOFT_SAND
 	dw EARTHQUAKE, SLASH, HYPER_BEAM, SNORE
 
 	dw 0 ; OT ID
@@ -3749,7 +3749,7 @@ BattleTowerMons7:
 	db "NUO-@@@@@@@"
 
 	dw URSARING
-	db SCOPE_LENS
+	db MAGNET
 	dw SLASH, EARTHQUAKE, HYPER_BEAM, THUNDERPUNCH
 
 	dw 0 ; OT ID
@@ -3938,7 +3938,7 @@ BattleTowerMons7:
 	db "HUSIGIBANA@"
 
 	dw CHARIZARD
-	db SCOPE_LENS
+	db CHARCOAL
 	dw SLASH, EARTHQUAKE, HYPER_BEAM, FLAMETHROWER
 
 	dw 0 ; OT ID
@@ -4454,7 +4454,7 @@ BattleTowerMons8:
 	db "MARUMAIN@@@"
 
 	dw DUGTRIO
-	db SCOPE_LENS
+	db SOFT_SAND
 	dw SLASH, EARTHQUAKE, THIEF, MUD_SLAP
 
 	dw 0 ; OT ID
@@ -5297,7 +5297,7 @@ BattleTowerMons10:
 	db "UINDEi@@@@@"
 
 	dw CHARIZARD
-	db SCOPE_LENS
+	db SHARP_BEAK
 	dw FLAMETHROWER, EARTHQUAKE, SLASH, FLY
 
 	dw 0 ; OT ID
@@ -5459,7 +5459,7 @@ BattleTowerMons10:
 	db "MUUMA@@@@@@"
 
 	dw SNEASEL
-	db SCOPE_LENS
+	db BLACKGLASSES
 	dw SLASH, BLIZZARD, DREAM_EATER, FAINT_ATTACK
 
 	dw 0 ; OT ID

@@ -138,8 +138,8 @@ ItemNames::
 	db "TERU-SAMA@";hard stone
 	db "CHARCOAL@"
 	db "BERRY JUICE@"
-	db "SCOPE LENS@"
 	db "TERU-SAMA@";wobbly bloon
+	db "SHARP SCYTHE@"
 	db "TERU-SAMA@";fire mane
 	db "METAL COAT@"
 	db "DRAGON FANG@"

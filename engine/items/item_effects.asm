@@ -152,7 +152,7 @@ ItemEffects:
 	dw NoEffect            ; ITEM_89
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
-	dw NoEffect            ; SCOPE_LENS
+	dw NoEffect            ; SHARP_SCYTHE
 	dw NoEffect            ; ITEM_8D
 	dw NoEffect            ; ITEM_8E
 	dw NoEffect            ; METAL_COAT

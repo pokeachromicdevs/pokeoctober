@@ -30,7 +30,7 @@ MysteryGiftItems:
 	db MAX_ETHER
 	db MAX_ELIXER
 	db MAX_REVIVE
-	db SCOPE_LENS
+	db UP_GRADE
 	db HP_UP
 	db PP_UP
 	db RARE_CANDY
