@@ -198,8 +198,8 @@ ItemDescriptions:
 	dw HeartStoneDesc
 	dw PoisonStoneDesc
 	dw DetectOrbDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw LongTongueDesc
+	dw LongVineDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -979,9 +979,14 @@ SharpHornDesc:
 	next "ATTACK. (HOLD)@"
 	
 HeartStoneDesc:
-	db   "Evolves certain"
+	db  "Evolves certain"
 	next "kinds of #MON.@"
 	
 PoisonStoneDesc:
-	db   "Evolves certain"
+	db  "Evolves certain"
 	next "kinds of #MON.@"
+	
+LongTongueDesc:
+LongVineDesc:
+	db  "Raises #MON"
+	next "catch rate. (HOLD)@"
