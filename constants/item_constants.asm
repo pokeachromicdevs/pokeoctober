@@ -197,7 +197,7 @@
 	const MIRAGE_MAIL  ; bd
 	const VOUCHER      ; be
 	const TICKLE_STICK ; bf
-	const ITEM_C3      ; c0
+	const PRETTY_TAIL  ; c0
 	const ITEM_FA      ; c1
 
 USE_SCRIPT_VAR EQU $00

@@ -191,7 +191,7 @@ ItemDescriptions:
 	dw MewMailDesc
 	dw VoucherDesc
 	dw TickleStickDesc
-	dw QuestionMarkDesc
+	dw PrettyTailDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -926,7 +926,7 @@ OaksParcelDesc:
 	next "OAK to PROF. ELM.@"
 	
 SnakeskinDesc:
-	db "Prevents poisoning."
+	db "Prevents poison."
 	next "(HOLD)@"
 	
 EarthenClayDesc:
@@ -960,3 +960,7 @@ VoucherDesc:
 TickleStickDesc:
 	db "Tickle SS AQUA"
 	next "CAPTAIN's back.@"
+	
+PrettyTailDesc:
+	db "Prevents poison."
+	next "(HOLD)@"

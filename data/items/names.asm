@@ -188,10 +188,10 @@ ItemNames::
 	db "BLUESKY MAIL@"
 	db "MUSIC MAIL@"
 	db "MIRAGE MAIL@"
-	db "TERU-SAMA@";moms love
+	db "TERU-SAMA@"
 	db "VOUCHER@"
 	db "TICKLE STICK@"
-	db "TERU-SAMA@"
+	db "PRETTY TAIL@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
