@@ -760,7 +760,7 @@ CharcoalDesc:
 
 BerryJuiceDesc:
 	db   "Restores #MON"
-	next "HP by 20.@"
+	next "HP by 40.@"
 
 ScopeLensDesc:
 	db   "Raises critical"
@@ -852,7 +852,7 @@ UpGradeDesc:
 
 BerryDesc:
 	db   "A self-restore"
-	next "item. (10HP, HOLD)@"
+	next "item. (20HP, HOLD)@"
 
 AppleDesc:
 	db   "A self-restore"
