@@ -206,7 +206,7 @@ ItemDescriptions:
 	dw FireTailDesc
 	dw ThunderTailDesc
 	dw CalmSeedDesc
-	dw QuestionMarkDesc
+	dw SpoonDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1008,3 +1008,7 @@ FireTailDesc:
 CalmSeedDesc:
 	db "Prevents confu-"
 	next "sion.(HOLD)@"
+	
+SpoonDesc:
+	db "A shining spoon."
+	next "Sell low.@"

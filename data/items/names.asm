@@ -206,7 +206,7 @@ ItemNames::
 	db "FIRE TAIL@"
 	db "THUNDER TAIL@"
 	db "CALM SEED@"
-	db "TERU-SAMA@"
+	db "SPOON@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
