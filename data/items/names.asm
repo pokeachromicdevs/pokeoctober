@@ -193,7 +193,7 @@ ItemNames::
 	db "TICKLE STICK@"
 	db "PRETTY TAIL@"
 	db "BURST ORB@"
-	db "TERU-SAMA@"
+	db "HIDDENNEEDLE@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"

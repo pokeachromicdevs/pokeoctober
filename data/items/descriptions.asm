@@ -193,7 +193,7 @@ ItemDescriptions:
 	dw TickleStickDesc
 	dw PrettyTailDesc
 	dw BurstOrbDesc
-	dw QuestionMarkDesc
+	dw HiddenNeedleDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -968,3 +968,7 @@ PrettyTailDesc:
 BurstOrbDesc:
 	db "Prevents sleep."
 	next "(HOLD)@"
+	
+HiddenNeedleDesc:
+	db   "Raises 1st strike"
+	next "ratio. (HOLD)@"
