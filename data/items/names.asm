@@ -194,6 +194,7 @@ ItemNames::
 	db "PRETTY TAIL@"
 	db "BURST ORB@"
 	db "HIDDENNEEDLE@"
+	db "SHARP HORN@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
@@ -249,9 +250,8 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";MYSTIC THREAD
+	db "TERU-SAMA@";MYSTIC NEEDLE
+	db "TERU-SAMA@";SAFARI BALL
+	db "TERU-SAMA@";FUJI'S LETTER
 	db "?@"

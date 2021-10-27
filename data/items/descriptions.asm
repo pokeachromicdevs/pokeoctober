@@ -194,7 +194,7 @@ ItemDescriptions:
 	dw PrettyTailDesc
 	dw BurstOrbDesc
 	dw HiddenNeedleDesc
-	dw QuestionMarkDesc
+	dw SharpHornDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -972,3 +972,7 @@ BurstOrbDesc:
 HiddenNeedleDesc:
 	db   "Raises 1st strike"
 	next "ratio. (HOLD)@"
+	
+SharpHornDesc:
+	db "Sharply raises"
+	next "ATTACK. (HOLD)@"

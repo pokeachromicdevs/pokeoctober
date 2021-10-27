@@ -195,11 +195,12 @@
 	const BLUESKY_MAIL ; bb
 	const MUSIC_MAIL   ; bc
 	const MIRAGE_MAIL  ; bd
-	const VOUCHER      ; be
+	const VOUCHER      ; b
 	const TICKLE_STICK ; bf
 	const PRETTY_TAIL  ; c0
 	const BURST_ORB    ; c1
 	const HIDDEN_NEEDLE
+	const SHARP_HORN
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff

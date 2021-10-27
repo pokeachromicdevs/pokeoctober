@@ -92,6 +92,7 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_EVASION_UP
 	const HELD_38
 	const HELD_WISDOM_ORB
+	const HELD_SHARP_HORN
 
 	const_def 40
 	const HELD_40
