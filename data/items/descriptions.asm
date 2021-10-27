@@ -192,7 +192,7 @@ ItemDescriptions:
 	dw VoucherDesc
 	dw TickleStickDesc
 	dw PrettyTailDesc
-	dw QuestionMarkDesc
+	dw BurstOrbDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -963,4 +963,8 @@ TickleStickDesc:
 	
 PrettyTailDesc:
 	db "Prevents poison."
+	next "(HOLD)@"
+	
+BurstOrbDesc:
+	db "Prevents sleep."
 	next "(HOLD)@"

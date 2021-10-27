@@ -192,7 +192,7 @@ ItemNames::
 	db "VOUCHER@"
 	db "TICKLE STICK@"
 	db "PRETTY TAIL@"
-	db "TERU-SAMA@"
+	db "BURST ORB@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"

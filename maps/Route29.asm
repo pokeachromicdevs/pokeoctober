@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball PRETTY_TAIL
+	itemball BURST_ORB
 
 DudeMovementData1a:
 	step UP

@@ -198,7 +198,7 @@
 	const VOUCHER      ; be
 	const TICKLE_STICK ; bf
 	const PRETTY_TAIL  ; c0
-	const ITEM_FA      ; c1
+	const BURST_ORB    ; c1
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff
