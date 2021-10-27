@@ -207,12 +207,12 @@ ItemDescriptions:
 	dw ThunderTailDesc
 	dw CalmSeedDesc
 	dw SpoonDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw PebbleDesc
+	dw BigStoneDesc
+	dw TornCollarDesc
+	dw CrushedTireDesc
+	dw TinyScalesDesc
+	dw SteelScalesDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1012,3 +1012,27 @@ CalmSeedDesc:
 SpoonDesc:
 	db "A shining spoon."
 	next "Sell low.@"
+	
+PebbleDesc:
+	db "A normal pebble."
+	next "Sell low.@"
+	
+BigStoneDesc:
+	db "A big stone."
+	next "Sell high.@"
+	
+TornCollarDesc:
+	db "A torn collar."
+	next "Sell low.@"
+	
+CrushedTireDesc:
+	db "A crushed tire."
+	next "Sell high.@"
+	
+TinyScalesDesc:
+	db "Some rocky scales."
+	next "Sell low.@"
+	
+SteelScalesDesc:
+	db "Some steel scales."
+	next "Sell high.@"
