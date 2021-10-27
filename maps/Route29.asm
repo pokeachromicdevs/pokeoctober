@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball CALM_SEED
+	itemball AQUA_HORN
 
 DudeMovementData1a:
 	step UP

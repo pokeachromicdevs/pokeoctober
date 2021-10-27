@@ -94,7 +94,7 @@ ItemDescriptions:
 	dw YlwApricornDesc
 	dw GrnApricornDesc
 	dw CleanseTagDesc
-	dw MysticWaterDesc
+	dw AquaHornDesc
 	dw MigraineSeedDesc
 	dw WhtApricornDesc
 	dw BlackbeltDesc
@@ -604,7 +604,7 @@ CleanseTagDesc:
 	db   "Helps repel wild"
 	next "#MON. (HOLD)@"
 
-MysticWaterDesc:
+AquaHornDesc:
 	db   "Powers up water-"
 	next "type moves. (HOLD)@"
 

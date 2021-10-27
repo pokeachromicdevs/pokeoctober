@@ -93,8 +93,8 @@ ItemNames::
 	db "YLW APRICORN@"
 	db "GRN APRICORN@"
 	db "CLEANSE TAG@"
-	db "MYSTIC WATER@"; change to weaken foe's water attacks like SW97
 	db "WHT APRICORN@"
+	db "AQUA HORN@"
 	db "MIGRAINESEED@"
 	db "BLACKBELT@"
 	db "BLK APRICORN@"
@@ -237,7 +237,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";SW97 CONFUSE CLAW ("Damages foe before battle. (HOLD)")
 	db "TERU-SAMA@";SW97 FLEE FEATHER (switch without wasting a turn)
 	db "TERU-SAMA@";5 YEN COIN
 	db "TERU-SAMA@";LIFE TAG

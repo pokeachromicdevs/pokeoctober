@@ -100,7 +100,7 @@
 	const YLW_APRICORN ; 5c
 	const GRN_APRICORN ; 5d
 	const CLEANSE_TAG  ; 5e
-	const MYSTIC_WATER ; 5f
+	const AQUA_HORN    ; 5f
 	const MIGRAINE_SEED; 60
 	const WHT_APRICORN ; 61
 	const BLACKBELT    ; 62

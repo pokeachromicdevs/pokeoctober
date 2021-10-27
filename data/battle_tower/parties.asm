@@ -140,7 +140,7 @@ BattleTowerMons1:
 	db "GARU-RA@@@@"
 
 	dw CORSOLA
-	db MYSTIC_WATER
+	db AQUA_HORN
 	dw SURF, PSYCHIC_M, RECOVER, ANCIENTPOWER
 
 	dw 0 ; OT ID
@@ -980,7 +980,7 @@ BattleTowerMons2:
 	db "KENTAROSU@@"
 
 	dw AZUMARILL
-	db MYSTIC_WATER
+	db AQUA_HORN
 	dw SURF, BLIZZARD, ATTRACT, RAIN_DANCE
 
 	dw 0 ; OT ID
@@ -2528,7 +2528,7 @@ BattleTowerMons5:
 	db "KAIRIKI-@@@"
 
 	dw STARMIE
-	db MYSTIC_WATER
+	db AQUA_HORN
 	dw THUNDER_WAVE, RECOVER, THUNDERBOLT, SURF
 
 	dw 0 ; OT ID

@@ -214,7 +214,7 @@ MysticWaterGuy:
 	iftrue .After
 	writetext MysticWaterGuyTextBefore
 	buttonsound
-	verbosegiveitem MYSTIC_WATER
+	verbosegiveitem AQUA_HORN
 	iffalse .Exit
 	setevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE
 .After:
@@ -532,8 +532,8 @@ MysticWaterGuyTextBefore:
 	text "A #MON I caught"
 	line "had an item."
 
-	para "I think it's"
-	line "MYSTIC WATER."
+	para "I think it's an"
+	line "AQUA HORN."
 
 	para "I don't need it,"
 	line "so do you want it?"

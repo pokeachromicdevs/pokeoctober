@@ -13,7 +13,7 @@ RuinsOfAlphOmanyteItemRoomMysteryberry:
 	itemball MYSTERYBERRY
 
 RuinsOfAlphOmanyteItemRoomMysticWater:
-	itemball MYSTIC_WATER
+	itemball AQUA_HORN;replace with fossil shard when implemented
 
 RuinsOfAlphOmanyteItemRoomStardust:
 	itemball STARDUST
