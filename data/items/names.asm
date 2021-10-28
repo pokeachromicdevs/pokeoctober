@@ -213,7 +213,7 @@ ItemNames::
 	db "CRUSHED TIRE@"
 	db "TINY SCALES@"
 	db "STEEL SCALES@"
-	db "TERU-SAMA@"
+	db "MYSTIC TAG@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"

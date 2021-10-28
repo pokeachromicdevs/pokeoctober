@@ -213,7 +213,7 @@ ItemDescriptions:
 	dw CrushedTireDesc
 	dw TinyScalesDesc
 	dw SteelScalesDesc
-	dw QuestionMarkDesc
+	dw MysticTagDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1036,3 +1036,7 @@ TinyScalesDesc:
 SteelScalesDesc:
 	db "Some steel scales."
 	next "Sell high.@"
+	
+MysticTagDesc:
+	db "Helps attract wild"
+	next "#MON. (HOLD)@"

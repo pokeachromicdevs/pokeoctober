@@ -237,6 +237,8 @@ ApplyMusicEffectOnEncounterRate::
 	jr z, .double
 	cp MUSIC_RUINS_OF_ALPH_RADIO
 	jr z, .double
+	cp HELD_MYSTIC_TAG
+	jr z, .double
 	cp MUSIC_POKEMON_LULLABY
 	ret nz
 	srl b
