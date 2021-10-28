@@ -235,23 +235,23 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@";PROTO CRANIDOS FOSSIL
 	db "TERU-SAMA@";SW97 MYSTIC WATER (weakens a foe's water attacks)
 	db "TERU-SAMA@";SW97 CONFUSE CLAW ("Damages foe before battle. (HOLD)")
 	db "TERU-SAMA@";SW97 FLEE FEATHER (switch without wasting a turn)
-	db "TERU-SAMA@";5 YEN COIN
-	db "TERU-SAMA@";LIFE TAG
-	db "TERU-SAMA@";STRANGE POWDER
+	db "TERU-SAMA@";5 YEN COIN (weakens a foe's psychic attacks)
+	db "TERU-SAMA@";LIFE TAG ("Revives fainted PKMN post-battle. (HOLD)")
+	db "TERU-SAMA@";STRANGE POWDER ("Nullifies all type effects. (HOLD)")
 	db "TERU-SAMA@";BUG-FLYING FOSSIL
 	db "TERU-SAMA@";SKELEBRO FOSSIL
 	db "TERU-SAMA@";OLD AMBER
 	db "TERU-SAMA@";DOME FOSSIL
 	db "TERU-SAMA@";HELIX FOSSIL
-	db "TERU-SAMA@";INVISIBLE WALL
-	db "TERU-SAMA@";SKATEBOARD
-	db "TERU-SAMA@";MOMS LOVE
-	db "TERU-SAMA@";MYSTIC THREAD
-	db "TERU-SAMA@";MYSTIC NEEDLE
+	db "TERU-SAMA@";INVISIBLE WALL ("Halves SP.ATK hits. (HOLD)")
+	db "TERU-SAMA@";SKATEBOARD (Plan to port from Reforged and add ability to go indoors, no depositing in PC)
+	db "TERU-SAMA@";MOMS LOVE ("Heals 1HP for each step taken. (HOLD)")
+	db "TERU-SAMA@";MYSTIC THREAD (Stroman valueable item)
+	db "TERU-SAMA@";MYSTIC NEEDLE (Stroman valueable item)
 	db "TERU-SAMA@";SAFARI BALL
 	db "TERU-SAMA@";FUJI'S LETTER (for Kanto postgame)
 	db "?@"
