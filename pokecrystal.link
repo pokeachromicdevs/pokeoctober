@@ -162,7 +162,6 @@ ROMX $3b
 ROMX $3c
 	"Songs 3"
 	"Sound Effects"
-	"Cries"
 ROMX $3d
 	"Songs 4"
 ROMX $3e
@@ -312,6 +311,7 @@ ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
 	"Mobile News Data"
+	"Cries"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
