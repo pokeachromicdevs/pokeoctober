@@ -261,7 +261,6 @@ PokemonCries::
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
 	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; BIPULLA (use until base cries are added)
-	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle
