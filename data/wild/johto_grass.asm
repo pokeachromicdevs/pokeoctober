@@ -1652,17 +1652,17 @@ JohtoGrassWildMons:
 	map_id CHERRYGROVE_WOODS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, MOIBELLE;PIDGEY
-	dbw 3, MOIBELLE;PIDGEY
-	dbw 2, MOIBELLE;CATERPIE
+	dbw 2, PIDGEY;PIDGEY
+	dbw 3, PIDGEY;PIDGEY
+	dbw 2, CATERPIE;CATERPIE
 	dbw 4, FARFETCH_D;MUSIC BIRD IN FINAL
 	dbw 2, CATERPIE
 	dbw 3, FARFETCH_D
 	dbw 3, FARFETCH_D
 	
-	dbw 2, MOIBELLE;SAME AS ABOVE
-	dbw 3, MOIBELLE
-	dbw 2, MOIBELLE
+	dbw 2, PIDGEY;SAME AS ABOVE
+	dbw 3, PIDGEY
+	dbw 2, RATTATA
 	dbw 4, WEEDLE;MUSIC BIRD IN FINAL
 	dbw 2, WEEDLE
 	dbw 3, FARFETCH_D
@@ -1672,8 +1672,8 @@ JohtoGrassWildMons:
 	dbw 3, VENONAT
 	dbw 2, ODDISH
 	dbw 4, GASTLY
-	dbw 2, HOOTHOOT
-	dbw 3, PARAS
+	dbw 2, MOIBELLE
+	dbw 3, MOIBELLE
 	dbw 3, PARAS
 	
 	db -1 ; end
