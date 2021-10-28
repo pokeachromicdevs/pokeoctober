@@ -255,3 +255,4 @@ BitmasksPointers:
 	dw AdbarstorkBitmasks
 	dw PupperonBitmasks
 	dw BipullaBitmasks
+	dw MoibelleBitmasks

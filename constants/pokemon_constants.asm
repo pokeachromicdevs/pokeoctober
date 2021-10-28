@@ -276,6 +276,7 @@ JOHTO_POKEMON EQU const_value
 	const ADBARSTORK ; fe
 	const PUPPERON   ; ff
 	const BIPULLA    ; ???
+	const MOIBELLE
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

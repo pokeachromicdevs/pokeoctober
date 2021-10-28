@@ -259,3 +259,4 @@ PokemonNames::
 	db "ADBARSTORK"
 	db "PUPPERON@@"
 	db "BIPULLA@@@"
+	db "MOIBELLE@@"

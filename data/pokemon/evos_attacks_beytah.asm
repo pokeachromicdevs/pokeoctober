@@ -6,6 +6,7 @@ EvosAttacksPointers3::
 	dw AdbarstorkEvosAttacks
 	dw PupperonEvosAttacks
 	dw BipullaEvosAttacks
+	dw MoibelleEvoAttacks
 
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -22,7 +23,8 @@ CoinpurEvosAttacks:
 	db 0 ; no more level-up moves
 	
 KatuEvosAttacks:
-	db 0 ; no more evolutions (make it Heart Stone in final)
+	dbbw EVOLVE_ITEM, HEART_STONE, XATU
+	db  0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, CONFUSION
 	dbw 5, NIGHT_SHADE
@@ -39,7 +41,7 @@ KatuEvosAttacks:
 	db 0 ; no more level-up moves
 	
 AdbarstorkEvosAttacks:
-	db 0 ; no more evolutions
+	db  0; no more evolutions 
 	dbw 1, PECK
 	dbw 5, GROWL
 	dbw 9, FURY_ATTACK
@@ -76,4 +78,21 @@ BipullaEvosAttacks:
 	dbw 1, GROWL
 	dbw 5, LICK
 	dbw 9, CONFUSE_RAY
+	db 0 ; no more level-up moves
+	
+MoibelleEvoAttacks:
+	db 0 ;no more evolutions
+	db 1, SCRATCH
+	db 1, GROWL
+	db 7, PURSUIT
+	db 12, BITE
+	db 18, COIN_HURL
+	db 23, FURY_SWIPES
+	db 27, HEAL_BELL
+	db 30, FAINT_ATTACK
+	db 34, LOVELY_KISS
+	db 34, SWEET_KISS
+	db 40, CONFUSE_RAY
+	db 45, ATTRACT
+	db 50, SLASH
 	db 0 ; no more level-up moves

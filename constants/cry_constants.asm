@@ -75,3 +75,4 @@
 	
 ; beta mons
 	const CRY_BETATOTODILE
+	const CRY_METTO

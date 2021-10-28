@@ -255,3 +255,4 @@ AnimationPointers:
 	dw AdbarstorkAnimation
 	dw PupperonAnimation
 	dw BipullaAnimation
+	dw MoibelleAnimation

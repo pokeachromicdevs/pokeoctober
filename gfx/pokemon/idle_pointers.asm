@@ -255,3 +255,4 @@ AnimationIdlePointers:
 	dw AdbarstorkAnimationIdle
 	dw PupperonAnimationIdle
 	dw BipullaAnimationIdle
+	dw MoibelleAnimationIdle

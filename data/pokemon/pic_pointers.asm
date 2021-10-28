@@ -525,3 +525,5 @@ PokemonPicPointers::
 	dba PupperonBackpic
 	dba BipullaFrontpic
 	dba BipullaBackpic
+	dba MoibelleFrontpic
+	dba MoibelleBackpic

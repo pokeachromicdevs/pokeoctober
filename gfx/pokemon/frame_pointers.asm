@@ -255,3 +255,4 @@ FramesPointers:
 	dba AdbarstorkFrames
 	dba PupperonFrames
 	dba BipullaFrames
+	dba MoibelleFrames

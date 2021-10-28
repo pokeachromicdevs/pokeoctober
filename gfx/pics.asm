@@ -722,4 +722,11 @@ FledglingPic: INCBIN "gfx/trainers/fledgling.2bpp.lz"
 BallsmithPic: INCBIN "gfx/trainers/kurt.2bpp.lz"
 MysticPic: INCBIN "gfx/trainers/mystic.2bpp.lz"
 RockClimberPic: INCBIN "gfx/trainers/rockclimber.2bpp.lz"
+MoibelleFrontpic: INCBIN "gfx/pokemon/moibelle/front.animated.2bpp.lz"
+MoibelleBackpic:  INCBIN "gfx/pokemon/moibelle/back.2bpp.lz"
+
+
+
+
+
 

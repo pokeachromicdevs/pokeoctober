@@ -141,6 +141,7 @@ NewPokedexOrder:
 	dw COINPUR
 	dw MEOWTH
 	dw PERSIAN
+	dw MOIBELLE
 	dw PSYDUCK
 	dw GOLDUCK
 	dw MACHOP

@@ -256,3 +256,4 @@ PokedexDataPointerTable:
 	dba AdbarstorkPokedexEntry
 	dba PupperonPokedexEntry
 	dba BipullaPokedexEntry
+	dba MoibellePokedexEntry
