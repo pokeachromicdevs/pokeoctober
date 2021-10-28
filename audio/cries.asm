@@ -2075,4 +2075,3 @@ Cry_BetaTotodile_Ch8:
 	noise __, 2, 11, -6, 41
 	noise __,  40, 13, 3, 110
 	sound_ret
-	
