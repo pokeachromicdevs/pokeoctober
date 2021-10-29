@@ -14,6 +14,7 @@ AlphabeticalPokedexOrder:
 	dw AZUMARILL
 	dw BAYLEEF
 	dw BEEDRILL
+	dw BELLEDAM
 	dw BELLOSSOM
 	dw BELLSPROUT
 	dw BIPULLA
@@ -32,6 +33,7 @@ AlphabeticalPokedexOrder:
 	dw CLEFABLE
 	dw CLEFAIRY
 	dw CLEFFA
+	dw CLEFLING
 	dw CLOYSTER
 	dw COINPUR
 	dw CORSOLA

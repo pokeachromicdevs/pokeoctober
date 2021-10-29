@@ -6,7 +6,9 @@ EvosAttacksPointers3::
 	dw AdbarstorkEvosAttacks
 	dw PupperonEvosAttacks
 	dw BipullaEvosAttacks
-	dw MoibelleEvoAttacks
+	dw MoibelleEvosAttacks
+	dw BelledamEvosAttacks
+	dw CleflingEvosAttacks
 
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -55,24 +57,24 @@ AdbarstorkEvosAttacks:
 	db 0 ; no more level-up moves
 
 PupperonEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, GROWLITHE
+	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, GROWLITHE
 	db 0 ; no more evolutions
-	db 1, BITE
-	db 1, CHARM
-	db 6, EMBER
-	db 12, LEER
-	db 17, FLAME_WHEEL
-	db 23, REVERSAL
-	db 28, TAKE_DOWN
-	db 34, FLAMETHROWER
-	db 39, AGILITY
-	db 45, CRUNCH
-	db 50, OUTRAGE
-	db 56, FIRE_BLAST
+	dbw 1, BITE
+	dbw 1, CHARM
+	dbw 6, EMBER
+	dbw 12, LEER
+	dbw 17, FLAME_WHEEL
+	dbw 23, REVERSAL
+	dbw 28, TAKE_DOWN
+	dbw 34, FLAMETHROWER
+	dbw 39, AGILITY
+	dbw 45, CRUNCH
+	dbw 50, OUTRAGE
+	dbw 56, FIRE_BLAST
 	db 0 ; no more level-up moves
 	
 BipullaEvosAttacks:
-	db EVOLVE_LEVEL, 17, GIRAFARIG
+	dbbw EVOLVE_LEVEL, 17, GIRAFARIG
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
@@ -80,19 +82,51 @@ BipullaEvosAttacks:
 	dbw 9, CONFUSE_RAY
 	db 0 ; no more level-up moves
 	
-MoibelleEvoAttacks:
-	db 0 ;no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
-	db 7, PURSUIT
-	db 12, BITE
-	db 18, COIN_HURL
-	db 23, FURY_SWIPES
-	db 27, HEAL_BELL
-	db 30, FAINT_ATTACK
-	db 34, LOVELY_KISS
-	db 34, SWEET_KISS
-	db 40, CONFUSE_RAY
-	db 45, ATTRACT
-	db 50, SLASH
+MoibelleEvosAttacks:
+	dbbw EVOLVE_LEVEL, 28, BELLEDAM
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 7, PURSUIT
+	dbw 12, BITE
+	dbw 18, COIN_HURL
+	dbw 23, FURY_SWIPES
+	dbw 27, HEAL_BELL
+	dbw 30, FAINT_ATTACK
+	dbw 34, LOVELY_KISS
+	dbw 34, SWEET_KISS
+	dbw 40, CONFUSE_RAY
+	dbw 45, ATTRACT
+	dbw 50, SLASH
+	db 0 ; no more level-up moves
+	
+BelledamEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 10, PURSUIT
+	dbw 18, BITE
+	dbw 21, COIN_HURL
+	dbw 26, FURY_SWIPES
+	dbw 30, HEAL_BELL
+	dbw 33, FAINT_ATTACK
+	dbw 36, LOVELY_KISS
+	dbw 36, SWEET_KISS
+	dbw 43, CONFUSE_RAY
+	dbw 48, ATTRACT
+	dbw 53, SLASH
+	db 0 ; no more level-up moves
+	
+CleflingEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, GROWL
+	dbw 7, QUICK_ATTACK
+	dbw 12, WHIRLWIND
+	dbw 17, SING
+	dbw 25, WING_ATTACK
+	dbw 34, MIMIC
+	dbw 40, SCREECH
+	dbw 46, MIRROR_MOVE
+	dbw 50, FLY
 	db 0 ; no more level-up moves

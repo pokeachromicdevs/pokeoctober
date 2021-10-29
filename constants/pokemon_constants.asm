@@ -275,8 +275,10 @@ JOHTO_POKEMON EQU const_value
 	const KATU       ; fd
 	const ADBARSTORK ; fe
 	const PUPPERON   ; ff
-	const BIPULLA    ; ???
+	const BIPULLA   
 	const MOIBELLE
+	const BELLEDAM
+	const CLEFLING
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

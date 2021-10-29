@@ -106,6 +106,8 @@ EggMovePointers2::
 	dw AdbarstorkEggMoves
 	dw NoEggMoves2
 	dw BipullaEggMoves
+	dw MoibelleEggMoves
+	dw NoEggMoves2
 	dw NoEggMoves2
 
 ChikoritaEggMoves:
@@ -494,4 +496,8 @@ BipullaEggMoves:
 	dw MIST
 	dw SPITE
 	dw DISABLE
+	dw -1 ; end
+	
+MoibelleEggMoves:
+	dw LICK
 	dw -1 ; end

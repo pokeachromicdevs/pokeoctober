@@ -724,6 +724,10 @@ MysticPic: INCBIN "gfx/trainers/mystic.2bpp.lz"
 RockClimberPic: INCBIN "gfx/trainers/rockclimber.2bpp.lz"
 MoibelleFrontpic: INCBIN "gfx/pokemon/moibelle/front.animated.2bpp.lz"
 MoibelleBackpic:  INCBIN "gfx/pokemon/moibelle/back.2bpp.lz"
+BelledamFrontpic: INCBIN "gfx/pokemon/belledam/front.animated.2bpp.lz"
+BelledamBackpic: INCBIN "gfx/pokemon/belledam/front.animated.2bpp.lz"
+CleflingFrontpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
+CleflingBackpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
 
 
 

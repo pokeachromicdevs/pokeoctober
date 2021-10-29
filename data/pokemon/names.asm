@@ -260,3 +260,5 @@ PokemonNames::
 	db "PUPPERON@@"
 	db "BIPULLA@@@"
 	db "MOIBELLE@@"
+	db "BELLEDAM@@"
+	db "CLEFLING@@"

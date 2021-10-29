@@ -258,3 +258,5 @@ MonMenuIcons:
 	db ICON_FOX         ; PUPPERON
 	db ICON_GHOST       ; BIPULLA
 	db ICON_FOX         ; MOIBELLE
+	db ICON_FOX         ; BELLEDAM
+	db ICON_BIRD        ; CLEFLING

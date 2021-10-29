@@ -256,3 +256,5 @@ BitmasksPointers:
 	dw PupperonBitmasks
 	dw BipullaBitmasks
 	dw MoibelleBitmasks
+	dw BelledamBitmasks
+	dw CleflingBitmasks

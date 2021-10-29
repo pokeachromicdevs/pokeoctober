@@ -17,6 +17,7 @@ NewPokedexOrder:
 	dw FEAROW
 	dw HOOTHOOT
 	dw NOCTOWL
+	dw CLEFLING
 	dw ADBARSTORK
 	dw RATTATA
 	dw RATICATE
@@ -142,6 +143,7 @@ NewPokedexOrder:
 	dw MEOWTH
 	dw PERSIAN
 	dw MOIBELLE
+	dw BELLEDAM
 	dw PSYDUCK
 	dw GOLDUCK
 	dw MACHOP

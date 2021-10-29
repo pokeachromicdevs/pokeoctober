@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball MYSTIC_TAG
+	itemball MASTER_BALL
 
 DudeMovementData1a:
 	step UP

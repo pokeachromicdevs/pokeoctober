@@ -256,3 +256,5 @@ FramesPointers:
 	dba PupperonFrames
 	dba BipullaFrames
 	dba MoibelleFrames
+	dba BelledamFrames
+	dba CleflingFrames

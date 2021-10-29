@@ -256,3 +256,5 @@ AnimationPointers:
 	dw PupperonAnimation
 	dw BipullaAnimation
 	dw MoibelleAnimation
+	dw BelledamAnimation
+	dw CleflingAnimation

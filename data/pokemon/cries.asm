@@ -156,7 +156,7 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   $03c,  $140 ; DRAGONITE
 	mon_cry CRY_PARAS,       $099,  $17f ; MEWTWO
 	mon_cry CRY_PARAS,       $0ee,  $17f ; MEW
-	mon_cry CRY_BETATOTODILE, 84,  224   ; TOTODILE (diff)                          ;mon_cry CRY_CHIKORITA,  -$010,  $0b0 ; CHIKORITA
+	mon_cry CRY_CHIKORITA,  -$010,  $0b0 ; CHIKORITA
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
 	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGANIUM
 	mon_cry CRY_CYNDAQUIL,   839,  128   ; CYNDAQUIL
@@ -256,12 +256,14 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-    mon_cry CRY_ENTEI,      $2fb,   $100 ; COINPUR
+    mon_cry CRY_ENTEI,       $2fb,  $100 ; COINPUR
 	mon_cry CRY_NATU,       -$07c,  $166 ; KATU
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
 	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; BIPULLA (use until base cries are added)
 	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
+	mon_cry CRY_RATTATA,     $065,  $180 ; BELLEDAM
+	mon_cry CRY_SPEAROW,     185,   $100 ; CLEFLING
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle
