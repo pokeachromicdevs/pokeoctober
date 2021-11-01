@@ -214,11 +214,11 @@ ItemDescriptions:
 	dw TinyScalesDesc
 	dw SteelScalesDesc
 	dw MysticTagDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw HeavyAmberDesc
+	dw ToxicAmberDesc
+	dw OldAmberDesc
+	dw DomeFossilDesc
+	dw HelixFossilDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1040,3 +1040,11 @@ SteelScalesDesc:
 MysticTagDesc:
 	db "Helps attract wild"
 	next "#MON. (HOLD)@"
+	
+HeavyAmberDesc:
+ToxicAmberDesc:
+OldAmberDesc:
+DomeFossilDesc:
+HelixFossilDesc:
+	db "Can be revived"
+	next "into a #MON.@"
