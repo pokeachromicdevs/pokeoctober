@@ -153,7 +153,7 @@ ItemEffects:
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; SHARP_SCYTHE
-	dw NoEffect            ; ITEM_8D
+	dw WobblyBloonEffect   ; WOBBLY_BLOON
 	dw NoEffect            ; ITEM_8E
 	dw NoEffect            ; METAL_COAT
 	dw NoEffect            ; DRAGON_FANG
@@ -2155,6 +2155,20 @@ digclaw_incave:
 	show_object
 	return_dig 32
 	step_end
+	
+WobblyBloonEffect:
+	xor a
+	cp HELD_WOBBLY_BLOON
+	call NOT_VERY_EFFECTIVE
+	call Play_SFX_NOT_VERY_EFFECTIVE
+	ret
+	
+Play_SFX_NOT_VERY_EFFECTIVE:
+	push de
+	ld de, SFX_NOT_VERY_EFFECTIVE
+	call WaitPlaySFX
+	pop de
+	ret
 
 ;DiggingClawEffect:
 	;xor a
@@ -2702,7 +2716,7 @@ OpenBox:
 
 NoEffect:
 	jp IsntTheTimeMessage
-
+	
 Play_SFX_FULL_HEAL:
 	push de
 	ld de, SFX_FULL_HEAL

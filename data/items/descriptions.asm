@@ -140,7 +140,7 @@ ItemDescriptions:
 	dw CharcoalDesc
 	dw BerryJuiceDesc
 	dw SharpScytheDesc
-	dw QuestionMarkDesc
+	dw WobblyBloonDesc
 	dw QuestionMarkDesc
 	dw MetalCoatDesc
 	dw DragonFangDesc
@@ -1048,3 +1048,9 @@ DomeFossilDesc:
 HelixFossilDesc:
 	db "Can be revived"
 	next "into a #MON.@"
+	
+WobblyBloonDesc:
+	db "Weaken a foe's"
+	next "NORMAL moves.@"
+	
+	

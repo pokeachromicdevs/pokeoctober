@@ -118,7 +118,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball HEAVY_AMBER
+	itemball WOBBLY_BLOON
 
 DudeMovementData1a:
 	step UP

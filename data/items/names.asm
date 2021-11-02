@@ -133,14 +133,14 @@ ItemNames::
 	db "STAR PIECE@"
 	db "BASEMENT KEY@"
 	db "PASS@"
-	db "TERU-SAMA@";whitefeather
-	db "TERU-SAMA@";electric pouch
+	db "WOBBLY BLOON@";whitefeather
+	db "TERU_SAMA@";electric pouch
 	db "TERU-SAMA@";hard stone
 	db "CHARCOAL@"
 	db "BERRY JUICE@"
-	db "TERU-SAMA@";wobbly bloon
+	db "TERU_SAMA@"
 	db "SHARP SCYTHE@"
-	db "TERU-SAMA@";fire mane
+	db "WOBBLY BLOON@";fire mane
 	db "METAL COAT@"
 	db "DRAGON FANG@"
 	db "TERU-SAMA@";beta twistedspoon
