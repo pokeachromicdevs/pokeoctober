@@ -29,6 +29,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NatuEggMoves
 	dw NoEggMoves2
+	dw NoEggMoves2
 	dw MareepEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -103,7 +104,6 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw CoinpurEggMoves
-	dw NoEggMoves2
 	dw AdbarstorkEggMoves
 	dw NoEggMoves2
 	dw BipullaEggMoves

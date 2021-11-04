@@ -198,6 +198,7 @@ JOHTO_POKEMON EQU const_value
 	const TOGEPI     ; af
 	const TOGETIC    ; b0
 	const NATU       ; b1
+	const KATU
 	const XATU       ; b2
 	const MAREEP     ; b3
 	const FLAAFFY    ; b4
@@ -273,7 +274,6 @@ JOHTO_POKEMON EQU const_value
 	const HO_OH      ; fa
 	const CELEBI     ; fb
 	const COINPUR    ; fc
-	const KATU       ; fd
 	const ADBARSTORK ; fe
 	const PUPPERON   ; ff
 	const BIPULLA   

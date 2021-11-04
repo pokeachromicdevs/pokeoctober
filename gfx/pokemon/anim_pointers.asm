@@ -177,6 +177,7 @@ AnimationPointers:
 	dw TogepiAnimation
 	dw TogeticAnimation
 	dw NatuAnimation
+	dw KatuAnimation
 	dw XatuAnimation
 	dw MareepAnimation
 	dw FlaaffyAnimation
@@ -252,7 +253,6 @@ AnimationPointers:
 	dw HoOhAnimation
 	dw CelebiAnimation
 	dw MeowsyAnimation
-	dw KatuAnimation
 	dw AdbarstorkAnimation
 	dw PupperonAnimation
 	dw BipullaAnimation

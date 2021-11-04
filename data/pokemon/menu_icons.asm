@@ -179,6 +179,7 @@ MonMenuIcons:
 	db ICON_CLEFAIRY    ; TOGEPI
 	db ICON_BIRD        ; TOGETIC
 	db ICON_BIRD        ; NATU
+	db ICON_BIRD        ; KATU
 	db ICON_BIRD        ; XATU
 	db ICON_FOX         ; MAREEP
 	db ICON_MONSTER     ; FLAAFFY
@@ -254,7 +255,6 @@ MonMenuIcons:
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
     db ICON_FOX         ; COINPUR
-	db ICON_BIRD        ; KATU
 	db ICON_BIRD        ; ADBARSTORK
 	db ICON_FOX         ; PUPPERON
 	db ICON_GHOST       ; BIPULLA

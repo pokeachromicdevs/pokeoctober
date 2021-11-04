@@ -178,6 +178,7 @@ PokedexDataPointerTable:
 	dba TogepiPokedexEntry
 	dba TogeticPokedexEntry
 	dba NatuPokedexEntry
+	dba KatuPokedexEntry
 	dba XatuPokedexEntry
 	dba MareepPokedexEntry
 	dba FlaaffyPokedexEntry
@@ -253,7 +254,6 @@ PokedexDataPointerTable:
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
 	dba CoinpurPokedexEntry
-	dba KatuPokedexEntry
 	dba AdbarstorkPokedexEntry
 	dba PupperonPokedexEntry
 	dba BipullaPokedexEntry

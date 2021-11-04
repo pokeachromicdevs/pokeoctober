@@ -183,6 +183,7 @@ PokemonCries::
 	mon_cry CRY_TOGEPI,      $010,  $100 ; TOGEPI
 	mon_cry CRY_TOGETIC,     $03b,  $038 ; TOGETIC
 	mon_cry CRY_NATU,       -$067,  $100 ; NATU
+	mon_cry CRY_NATU,       -$07c,  $166 ; KATU
 	mon_cry CRY_NATU,       -$0a7,  $168 ; XATU
 	mon_cry CRY_MAREEP,      $022,  $0d8 ; MAREEP
 	mon_cry CRY_MAREEP,     -$007,  $180 ; FLAAFFY
@@ -258,7 +259,6 @@ PokemonCries::
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
     mon_cry CRY_ENTEI,       $2fb,  $100 ; COINPUR
-	mon_cry CRY_NATU,       -$07c,  $166 ; KATU
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
 	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; BIPULLA (use until base cries are added)

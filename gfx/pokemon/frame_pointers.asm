@@ -177,6 +177,7 @@ FramesPointers:
 	dba TogepiFrames
 	dba TogeticFrames
 	dba NatuFrames
+	dba KatuFrames
 	dba XatuFrames
 	dba MareepFrames
 	dba FlaaffyFrames
@@ -252,7 +253,6 @@ FramesPointers:
 	dba HoOhFrames
 	dba CelebiFrames
 	dba MeowsyFrames
-	dba KatuFrames
 	dba AdbarstorkFrames
 	dba PupperonFrames
 	dba BipullaFrames

@@ -177,6 +177,7 @@ BitmasksPointers:
 	dw TogepiBitmasks
 	dw TogeticBitmasks
 	dw NatuBitmasks
+	dw KatuBitmasks
 	dw XatuBitmasks
 	dw MareepBitmasks
 	dw FlaaffyBitmasks
@@ -252,7 +253,6 @@ BitmasksPointers:
 	dw HoOhBitmasks
 	dw CelebiBitmasks
 	dw MeowsyBitmasks
-	dw KatuBitmasks
 	dw AdbarstorkBitmasks
 	dw PupperonBitmasks
 	dw BipullaBitmasks

@@ -366,6 +366,8 @@ PokemonPicPointers::
 	dba TogeticBackpic
 	dba NatuFrontpic
 	dba NatuBackpic
+	dba KatuFrontpic
+	dba KatuBackpic
 	dba XatuFrontpic
 	dba XatuBackpic
 	dba MareepFrontpic
@@ -519,8 +521,6 @@ PokemonPicPointers::
 	dba CelebiBackpic
 	dba MeowsyFrontpic
 	dba MeowsyBackpic
-	dba KatuFrontpic
-	dba KatuBackpic
 	dba AdbarstorkFrontpic
 	dba AdbarstorkBackpic
 	dba PupperonFrontpic

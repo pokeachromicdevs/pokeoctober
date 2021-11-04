@@ -2,7 +2,6 @@ SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
 	dw CoinpurEvosAttacks
-	dw KatuEvosAttacks
 	dw AdbarstorkEvosAttacks
 	dw PupperonEvosAttacks
 	dw BipullaEvosAttacks

@@ -177,6 +177,7 @@ AnimationIdlePointers:
 	dw TogepiAnimationIdle
 	dw TogeticAnimationIdle
 	dw NatuAnimationIdle
+	dw KatuAnimationIdle
 	dw XatuAnimationIdle
 	dw MareepAnimationIdle
 	dw FlaaffyAnimationIdle
@@ -252,7 +253,6 @@ AnimationIdlePointers:
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
 	dw MeowsyAnimationIdle
-	dw KatuAnimationIdle
 	dw AdbarstorkAnimationIdle
 	dw PupperonAnimationIdle
 	dw BipullaAnimationIdle
