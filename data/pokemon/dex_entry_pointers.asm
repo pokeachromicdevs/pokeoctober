@@ -152,7 +152,7 @@ PokedexDataPointerTable:
 	dba MewtwoPokedexEntry
 	dba MewPokedexEntry
 	dba ChikoritaPokedexEntry
-	dba BayleefPokedexEntry
+	dba PetamolePokedexEntry
 	dba MeganiumPokedexEntry
 	dba CyndaquilPokedexEntry
 	dba QuilavaPokedexEntry
@@ -160,6 +160,7 @@ PokedexDataPointerTable:
 	dba TotodilePokedexEntry
 	dba CroconawPokedexEntry
 	dba FeraligatrPokedexEntry
+	dba BayleefPokedexEntry
 	dba SentretPokedexEntry
 	dba FurretPokedexEntry
 	dba HoothootPokedexEntry

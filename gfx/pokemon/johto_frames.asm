@@ -1,7 +1,7 @@
 JohtoFrames: ; used only for BANK(JohtoFrames)
 
 ChikoritaFrames:  INCLUDE "gfx/pokemon/chikorita/frames.asm"
-BayleefFrames:    INCLUDE "gfx/pokemon/bayleef/frames.asm"
+PetamoleFrames:   INCLUDE "gfx/pokemon/petamole/frames.asm"
 MeganiumFrames:   INCLUDE "gfx/pokemon/meganium/frames.asm"
 CyndaquilFrames:  INCLUDE "gfx/pokemon/cyndaquil/frames.asm"
 QuilavaFrames:    INCLUDE "gfx/pokemon/quilava/frames.asm"
@@ -9,6 +9,7 @@ TyphlosionFrames: INCLUDE "gfx/pokemon/typhlosion/frames.asm"
 TotodileFrames:   INCLUDE "gfx/pokemon/totodile/frames.asm"
 CroconawFrames:   INCLUDE "gfx/pokemon/croconaw/frames.asm"
 FeraligatrFrames: INCLUDE "gfx/pokemon/feraligatr/frames.asm"
+BayleefFrames:    INCLUDE "gfx/pokemon/bayleef/frames.asm"
 SentretFrames:    INCLUDE "gfx/pokemon/sentret/frames.asm"
 FurretFrames:     INCLUDE "gfx/pokemon/furret/frames.asm"
 HoothootFrames:   INCLUDE "gfx/pokemon/hoothoot/frames.asm"

@@ -104,6 +104,7 @@ CatchingTutorialDudeScript:
 
 .BoxFull:
 	writetext CatchingTutorialBoxFullText
+	setflag ENGINE_POKEDEX
 	waitbutton
 	closetext
 	end
@@ -118,8 +119,8 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball WOBBLY_BLOON
-
+	itemball MASTER_BALL
+	
 DudeMovementData1a:
 	step UP
 	step UP

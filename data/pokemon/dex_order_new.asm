@@ -2,7 +2,7 @@
 
 NewPokedexOrder:
 	dw CHIKORITA
-	dw BAYLEEF
+	dw PETAMOLE
 	dw MEGANIUM
 	dw CYNDAQUIL
 	dw QUILAVA
@@ -10,6 +10,7 @@ NewPokedexOrder:
 	dw TOTODILE
 	dw CROCONAW
 	dw FERALIGATR
+	dw BAYLEEF
 	dw PIDGEY
 	dw PIDGEOTTO
 	dw PIDGEOT

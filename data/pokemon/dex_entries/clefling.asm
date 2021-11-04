@@ -1,10 +1,10 @@
-	db "MUSIC BIRD@" ; species name
+	db "TONAL@" ; species name
 	dw 100, 40 ; height, weight
 
-	db   "In its desperation"
-	next "to gulp down food,"
-	next "it forgets about"
+	db   "It's said that the"
+	next "joy listening to"
+	next "its songs is sec-"
 
-	page "the food it has"
-	next "hidden under its"
-	next "fur.@"
+	page "ond only to that"
+	next "of seeing its mass"
+	next "migrations.@"

@@ -151,7 +151,7 @@ AnimationIdlePointers:
 	dw MewtwoAnimationIdle
 	dw MewAnimationIdle
 	dw ChikoritaAnimationIdle
-	dw BayleefAnimationIdle
+	dw PetamoleAnimationIdle
 	dw MeganiumAnimationIdle
 	dw CyndaquilAnimationIdle
 	dw QuilavaAnimationIdle
@@ -159,6 +159,7 @@ AnimationIdlePointers:
 	dw TotodileAnimationIdle
 	dw CroconawAnimationIdle
 	dw FeraligatrAnimationIdle
+	dw BayleefAnimationIdle
 	dw SentretAnimationIdle
 	dw FurretAnimationIdle
 	dw HoothootAnimationIdle

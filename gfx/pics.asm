@@ -728,6 +728,8 @@ BelledamFrontpic: INCBIN "gfx/pokemon/belledam/front.animated.2bpp.lz"
 BelledamBackpic: INCBIN "gfx/pokemon/belledam/front.animated.2bpp.lz"
 CleflingFrontpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
 CleflingBackpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
+PetamoleFrontpic: INCBIN "gfx/pokemon/petamole/front.animated.2bpp.lz"
+PetamoleBackpic: INCBIN "gfx/pokemon/petamole/back.2bpp.lz"
 
 
 

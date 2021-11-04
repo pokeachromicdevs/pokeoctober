@@ -157,7 +157,7 @@ PokemonCries::
 	mon_cry CRY_PARAS,       $099,  $17f ; MEWTWO
 	mon_cry CRY_PARAS,       $0ee,  $17f ; MEW
 	mon_cry CRY_CHIKORITA,  -$010,  $0b0 ; CHIKORITA
-	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
+	mon_cry CRY_CHIKORITA,  -$059,  $160 ; PETAMOLE
 	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGANIUM
 	mon_cry CRY_CYNDAQUIL,   839,  128   ; CYNDAQUIL
 	mon_cry CRY_CYNDAQUIL,   $321,  $120 ; QUILAVA
@@ -165,6 +165,7 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,    1132,  232  ; TOTODILE
 	mon_cry CRY_TOTODILE,    $440,  $110 ; CROCONAW
 	mon_cry CRY_TOTODILE,    $3fc,  $180 ; FERALIGATR
+	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
 	mon_cry CRY_SENTRET,     $08a,  $0b8 ; SENTRET
 	mon_cry CRY_SENTRET,     $06b,  $102 ; FURRET
 	mon_cry CRY_HOOTHOOT,    $091,  $0d8 ; HOOTHOOT

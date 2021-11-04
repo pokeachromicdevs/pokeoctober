@@ -1652,18 +1652,18 @@ JohtoGrassWildMons:
 	map_id CHERRYGROVE_WOODS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, CLEFLING;PIDGEY
-	dbw 3, CLEFLING;PIDGEY
-	dbw 2, CLEFLING;CATERPIE
-	dbw 4, FARFETCH_D;MUSIC BIRD IN FINAL
+	dbw 2, PETAMOLE;PIDGEY
+	dbw 3, PETAMOLE;PIDGEY
+	dbw 2, PETAMOLE;CATERPIE
+	dbw 4, CLEFLING
 	dbw 2, CATERPIE
 	dbw 3, FARFETCH_D
 	dbw 3, FARFETCH_D
 	
-	dbw 2, BELLEDAM;SAME AS ABOVE
-	dbw 3, BELLEDAM
-	dbw 2, BELLEDAM
-	dbw 4, WEEDLE;MUSIC BIRD IN FINAL
+	dbw 2, PETAMOLE;SAME AS ABOVE
+	dbw 3, PETAMOLE
+	dbw 2, PETAMOLE
+	dbw 4, CLEFLING
 	dbw 2, WEEDLE
 	dbw 3, FARFETCH_D
 	dbw 3, FARFETCH_D

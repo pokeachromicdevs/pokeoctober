@@ -2,7 +2,7 @@ SECTION "Evolutions and Attacks 2", ROMX
 
 EvosAttacksPointers2::
 	dw ChikoritaEvosAttacks
-	dw BayleefEvosAttacks
+	dw PetamoleEvosAttacks
 	dw MeganiumEvosAttacks
 	dw CyndaquilEvosAttacks
 	dw QuilavaEvosAttacks
@@ -10,6 +10,7 @@ EvosAttacksPointers2::
 	dw TotodileEvosAttacks
 	dw CroconawEvosAttacks
 	dw FeraligatrEvosAttacks
+	dw BayleefEvosAttacks
 	dw SentretEvosAttacks
 	dw FurretEvosAttacks
 	dw HoothootEvosAttacks
@@ -116,22 +117,23 @@ ChikoritaEvosAttacks:
 	dbw 43, SAFEGUARD
 	dbw 50, SOLARBEAM
 	db 0 ; no more level-up moves
-
-BayleefEvosAttacks:
-	dbbw EVOLVE_LEVEL, 32, MEGANIUM
+	
+PetamoleEvosAttacks:
+	db EVOLVE_LEVEL, 32, MEGANIUM
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, GROWL
-	dbw 1, LEECH_SEED
-	dbw 1, RAZOR_LEAF
-	dbw 8, RAZOR_LEAF
-	dbw 12, REFLECT
-	dbw 15, POISONPOWDER
-	dbw 23, SYNTHESIS
-	dbw 31, BODY_SLAM
-	dbw 39, LIGHT_SCREEN
-	dbw 47, SAFEGUARD
-	dbw 55, SOLARBEAM
+	db 1, TACKLE
+	db 1, GROWL
+	db 1, RAZOR_LEAF
+	db 1, POISONPOWDER
+	db 7, RAZOR_LEAF
+	db 11, POISONPOWDER
+	db 15, REFLECT
+	db 16, LEECH_SEED
+	db 23, SYNTHESIS
+	db 31, BODY_SLAM
+	db 39, SAFEGUARD
+	db 47, LIGHT_SCREEN
+	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
 MeganiumEvosAttacks:
@@ -233,6 +235,23 @@ FeraligatrEvosAttacks:
 	dbw 38, SLASH
 	dbw 47, SCREECH
 	dbw 58, HYDRO_PUMP
+	db 0 ; no more level-up moves
+	
+BayleefEvosAttacks:
+	dbbw EVOLVE_LEVEL, 32, MEGANIUM
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, LEECH_SEED
+	dbw 1, RAZOR_LEAF
+	dbw 8, RAZOR_LEAF
+	dbw 12, REFLECT
+	dbw 15, POISONPOWDER
+	dbw 23, SYNTHESIS
+	dbw 31, BODY_SLAM
+	dbw 39, LIGHT_SCREEN
+	dbw 47, SAFEGUARD
+	dbw 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
 SentretEvosAttacks:

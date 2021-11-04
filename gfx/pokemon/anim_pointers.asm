@@ -151,7 +151,7 @@ AnimationPointers:
 	dw MewtwoAnimation
 	dw MewAnimation
 	dw ChikoritaAnimation
-	dw BayleefAnimation
+	dw PetamoleAnimation
 	dw MeganiumAnimation
 	dw CyndaquilAnimation
 	dw QuilavaAnimation
@@ -159,6 +159,7 @@ AnimationPointers:
 	dw TotodileAnimation
 	dw CroconawAnimation
 	dw FeraligatrAnimation
+	dw BayleefAnimation
 	dw SentretAnimation
 	dw FurretAnimation
 	dw HoothootAnimation

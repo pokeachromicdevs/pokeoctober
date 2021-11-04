@@ -151,7 +151,7 @@ FramesPointers:
 	dba MewtwoFrames
 	dba MewFrames
 	dba ChikoritaFrames
-	dba BayleefFrames
+	dba PetamoleFrames
 	dba MeganiumFrames
 	dba CyndaquilFrames
 	dba QuilavaFrames
@@ -159,6 +159,7 @@ FramesPointers:
 	dba TotodileFrames
 	dba CroconawFrames
 	dba FeraligatrFrames
+	dba BayleefFrames
 	dba SentretFrames
 	dba FurretFrames
 	dba HoothootFrames

@@ -10,6 +10,7 @@ EggMovePointers2::
 	dw TotodileEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw NoEggMoves2
 	dw SentretEggMoves
 	dw NoEggMoves2
 	dw HoothootEggMoves
