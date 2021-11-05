@@ -165,13 +165,13 @@ PokemonNames::
 	db "FERALIGATR";insert beta sprite
 	db "BAYLEEF@@@"
 	db "SENTRET@@@"
-	db "FURRET@@@@";insert beta sprite
+	db "FURRET@@@@";needs animation fully programmed in
 	db "HOOTHOOT@@"
 	db "NOCTOWL@@@"
 	db "LEDYBA@@@@"
 	db "LEDIAN@@@@"
 	db "SPINARAK@@"
-	db "ARIADOS@@@";insert beta sprite
+	db "ARIADOS@@@";needs animation fully programmed in
 	db "CROBAT@@@@"
 	db "YANMA@@@@@"
 	db "CHINCHOU@@"
