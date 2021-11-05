@@ -181,7 +181,7 @@ PokemonNames::
 	db "IGGLYBUFF@";insert beta sprite
 	db "TOGEPI@@@@"
 	db "TOGETIC@@@"
-	db "NATU@@@@@@";revert brown coloring
+	db "NATU@@@@@@"
 	db "KATU@@@@@@"
 	db "XATU@@@@@@"
 	db "MAREEP@@@@"
