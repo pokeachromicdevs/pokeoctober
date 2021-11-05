@@ -207,7 +207,7 @@ PokemonNames::
 	db "MISDREAVUS"
 	db "UNOWN@@@@@"
 	db "WOBBUFFET@"
-	db "BIPULLA@@@";needs animation
+	db "BIPULLA@@@";needs animation fully programmed in
 	db "GIRAFARIG@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
@@ -241,8 +241,8 @@ PokemonNames::
 	db "PORYGON2@@"
 	db "STANTLER@@";insert beta sprite
 	db "SMEARGLE@@"
-	db "TYROGUE@@@";insert beta sprite
-	db "HITMONTOP@";insert beta sprite
+	db "TYROGUE@@@";needs animation fully programmed in
+	db "HITMONTOP@";needs animation fully programmed in
 	db "SMOOCHUM@@"
 	db "ELEKID@@@@"
 	db "MAGBY@@@@@"
