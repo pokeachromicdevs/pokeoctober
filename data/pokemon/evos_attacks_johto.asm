@@ -54,6 +54,7 @@ EvosAttacksPointers2::
 	dw MisdreavusEvosAttacks
 	dw UnownEvosAttacks
 	dw WobbuffetEvosAttacks
+	dw BipullaEvosAttacks
 	dw GirafarigEvosAttacks
 	dw PinecoEvosAttacks
 	dw ForretressEvosAttacks
@@ -831,6 +832,15 @@ WobbuffetEvosAttacks:
 	dbw 1, MIRROR_COAT
 	dbw 1, SAFEGUARD
 	dbw 1, DESTINY_BOND
+	db 0 ; no more level-up moves
+	
+BipullaEvosAttacks:
+	dbbw EVOLVE_LEVEL, 17, GIRAFARIG
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 5, LICK
+	dbw 9, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks:

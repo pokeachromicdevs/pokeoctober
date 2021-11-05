@@ -203,6 +203,7 @@ BitmasksPointers:
 	dw MisdreavusBitmasks
 	dw UnownBitmasks
 	dw WobbuffetBitmasks
+	dw BipullaBitmasks
 	dw GirafarigBitmasks
 	dw PinecoBitmasks
 	dw ForretressBitmasks
@@ -255,7 +256,6 @@ BitmasksPointers:
 	dw MeowsyBitmasks
 	dw AdbarstorkBitmasks
 	dw PupperonBitmasks
-	dw BipullaBitmasks
 	dw MoibelleBitmasks
 	dw BelledamBitmasks
 	dw CleflingBitmasks

@@ -421,6 +421,8 @@ PokemonPicPointers::
 
 	dba WobbuffetFrontpic
 	dba WobbuffetBackpic
+	dba BipullaFrontpic
+	dba BipullaBackpic
 	dba GirafarigFrontpic
 	dba GirafarigBackpic
 	dba PinecoFrontpic
@@ -525,8 +527,6 @@ PokemonPicPointers::
 	dba AdbarstorkBackpic
 	dba PupperonFrontpic
 	dba PupperonBackpic
-	dba BipullaFrontpic
-	dba BipullaBackpic
 	dba MoibelleFrontpic
 	dba MoibelleBackpic
 	dba BelledamFrontpic

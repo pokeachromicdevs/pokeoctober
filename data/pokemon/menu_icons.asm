@@ -205,6 +205,7 @@ MonMenuIcons:
 	db ICON_GHOST       ; MISDREAVUS
 	db ICON_UNOWN       ; UNOWN
 	db ICON_GHOST       ; WOBBUFFET
+	db ICON_GHOST       ; BIPULLA
 	db ICON_EQUINE      ; GIRAFARIG
 	db ICON_BUG         ; PINECO
 	db ICON_BUG         ; FORRETRESS
@@ -257,7 +258,6 @@ MonMenuIcons:
     db ICON_FOX         ; COINPUR
 	db ICON_BIRD        ; ADBARSTORK
 	db ICON_FOX         ; PUPPERON
-	db ICON_GHOST       ; BIPULLA
 	db ICON_FOX         ; MOIBELLE
 	db ICON_FOX         ; BELLEDAM
 	db ICON_BIRD        ; CLEFLING

@@ -203,6 +203,7 @@ FramesPointers:
 	dba MisdreavusFrames
 	dba UnownFrames
 	dba WobbuffetFrames
+	dba BipullaFrames
 	dba GirafarigFrames
 	dba PinecoFrames
 	dba ForretressFrames
@@ -255,7 +256,6 @@ FramesPointers:
 	dba MeowsyFrames
 	dba AdbarstorkFrames
 	dba PupperonFrames
-	dba BipullaFrames
 	dba MoibelleFrames
 	dba BelledamFrames
 	dba CleflingFrames

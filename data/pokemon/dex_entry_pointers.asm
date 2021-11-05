@@ -204,6 +204,7 @@ PokedexDataPointerTable:
 	dba MisdreavusPokedexEntry
 	dba UnownPokedexEntry
 	dba WobbuffetPokedexEntry
+	dba BipullaPokedexEntry
 	dba GirafarigPokedexEntry
 	dba PinecoPokedexEntry
 	dba ForretressPokedexEntry
@@ -256,6 +257,5 @@ PokedexDataPointerTable:
 	dba CoinpurPokedexEntry
 	dba AdbarstorkPokedexEntry
 	dba PupperonPokedexEntry
-	dba BipullaPokedexEntry
 	dba MoibellePokedexEntry
 	dba BelledamPokedexEntry

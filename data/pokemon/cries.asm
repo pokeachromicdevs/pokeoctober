@@ -209,6 +209,7 @@ PokemonCries::
 	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; MISDREAVUS
 	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
 	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET
+	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; BIPULLA (use until base cries are added)
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
 	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
@@ -261,7 +262,6 @@ PokemonCries::
     mon_cry CRY_ENTEI,       $2fb,  $100 ; COINPUR
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
-	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; BIPULLA (use until base cries are added)
 	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
 	mon_cry CRY_RATTATA,     $065,  $180 ; BELLEDAM
 	mon_cry CRY_SPEAROW,     185,   $100 ; CLEFLING

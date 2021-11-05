@@ -1,5 +1,4 @@
 SECTION "Egg Moves 2", ROMX
-
 EggMovePointers2::
 	dw ChikoritaEggMoves
 	dw NoEggMoves2
@@ -54,7 +53,8 @@ EggMovePointers2::
 	dw MisdreavusEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
-	dw GirafarigEggMoves
+	dw BipullaEggMoves
+	dw NoEggMoves2
 	dw PinecoEggMoves
 	dw NoEggMoves2
 	dw DunsparceEggMoves
@@ -106,7 +106,6 @@ EggMovePointers2::
 	dw CoinpurEggMoves
 	dw AdbarstorkEggMoves
 	dw NoEggMoves2
-	dw BipullaEggMoves
 	dw MoibelleEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -283,13 +282,11 @@ MisdreavusEggMoves:
 	dw SCREECH
 	dw DESTINY_BOND
 	dw -1 ; end
-
-GirafarigEggMoves:
-	dw TAKE_DOWN
-	dw AMNESIA
-	dw FORESIGHT
-	dw FUTURE_SIGHT
-	dw BEAT_UP
+	
+BipullaEggMoves:
+	dw MIST
+	dw SPITE
+	dw DISABLE
 	dw -1 ; end
 
 PinecoEggMoves:
@@ -490,12 +487,6 @@ AdbarstorkEggMoves:
 	dw -1 ; end
 
 NoEggMoves2:
-	dw -1 ; end
-	
-BipullaEggMoves:
-	dw MIST
-	dw SPITE
-	dw DISABLE
 	dw -1 ; end
 	
 MoibelleEggMoves:

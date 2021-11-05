@@ -203,6 +203,7 @@ AnimationIdlePointers:
 	dw MisdreavusAnimationIdle
 	dw UnownAnimationIdle
 	dw WobbuffetAnimationIdle
+	dw BipullaAnimationIdle
 	dw GirafarigAnimationIdle
 	dw PinecoAnimationIdle
 	dw ForretressAnimationIdle
@@ -255,6 +256,6 @@ AnimationIdlePointers:
 	dw MeowsyAnimationIdle
 	dw AdbarstorkAnimationIdle
 	dw PupperonAnimationIdle
-	dw BipullaAnimationIdle
 	dw MoibelleAnimationIdle
+	dw BelledamAnimationIdle
 	dw CleflingAnimationIdle
