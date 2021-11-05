@@ -219,7 +219,7 @@ PokemonNames::
 	db "QWILFISH@@"
 	db "SCIZOR@@@@";insert beta sprite
 	db "SHUCKLE@@@";insert beta sprite
-	db "HERACROSS@";insert beta sprite
+	db "HERACROSS@";needs animation
 	db "SNEASEL@@@";insert beta sprite
 	db "TEDDIURSA@";insert beta sprite
 	db "URSARING@@"

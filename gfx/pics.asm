@@ -81,7 +81,6 @@ SECTION "Pics 4", ROMX
 
 DodrioFrontpic:      INCBIN "gfx/pokemon/dodrio/front.animated.2bpp.lz"
 SlowkingFrontpic:    INCBIN "gfx/pokemon/slowking/front.animated.2bpp.lz"
-HitmontopFrontpic:   INCBIN "gfx/pokemon/hitmontop/front.animated.2bpp.lz"
 OnixFrontpic:        INCBIN "gfx/pokemon/onix/front.animated.2bpp.lz"
 BlisseyFrontpic:     INCBIN "gfx/pokemon/blissey/front.animated.2bpp.lz"
 MachokeFrontpic:     INCBIN "gfx/pokemon/machoke/front.animated.2bpp.lz"
@@ -276,7 +275,6 @@ KimonoGirlPic:       INCBIN "gfx/trainers/kimono_girl.2bpp.lz"
 AlakazamBackpic:     INCBIN "gfx/pokemon/alakazam/back.2bpp.lz"
 AipomFrontpic:       INCBIN "gfx/pokemon/aipom/front.animated.2bpp.lz"
 AbraFrontpic:        INCBIN "gfx/pokemon/abra/front.animated.2bpp.lz"
-HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
 CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front.animated.2bpp.lz"
 UnownFBackpic:       INCBIN "gfx/pokemon/unown_f/back.2bpp.lz"
@@ -730,6 +728,8 @@ CleflingFrontpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
 CleflingBackpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
 PetamoleFrontpic: INCBIN "gfx/pokemon/petamole/front.animated.2bpp.lz"
 PetamoleBackpic: INCBIN "gfx/pokemon/petamole/back.2bpp.lz"
+HitmontopFrontpic:   INCBIN "gfx/pokemon/hitmontop/front.animated.2bpp.lz"
+HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
 
 
 
