@@ -1,10 +1,10 @@
-	db "BLOSSOM@" ; species name
+	db "BUD@" ; species name
 	dw 311, 350 ; height, weight
 
-	db   "A spicy aroma ema-"
-	next "nates from around"
-	next "its neck. The"
+	db   "The scent that"
+	next "wafts from its"
+	next "large petals"
 
-	page "aroma acts as a"
-	next "stimulant to re-"
-	next "store health.@"
+	page "causes anyone who"
+	next "smells it to"
+	next "become energetic.@"
