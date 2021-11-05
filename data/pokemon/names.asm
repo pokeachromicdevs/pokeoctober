@@ -155,99 +155,99 @@ PokemonNames::
 	db "MEWTWO@@@@"
 	db "MEW@@@@@@@"
 	db "CHIKORITA@"
-	db "PETAMOLE@@"
-	db "MEGANIUM@@"
+	db "PETAMOLE@@";needs animation
+	db "MEGANIUM@@";insert GS sprite
 	db "CYNDAQUIL@"
 	db "QUILAVA@@@"
 	db "TYPHLOSION"
 	db "TOTODILE@@"
 	db "CROCONAW@@"
-	db "FERALIGATR"
+	db "FERALIGATR";insert beta sprite
 	db "BAYLEEF@@@"
 	db "SENTRET@@@"
-	db "FURRET@@@@"
+	db "FURRET@@@@";insert beta sprite
 	db "HOOTHOOT@@"
 	db "NOCTOWL@@@"
 	db "LEDYBA@@@@"
 	db "LEDIAN@@@@"
 	db "SPINARAK@@"
-	db "ARIADOS@@@"
+	db "ARIADOS@@@";insert beta sprite
 	db "CROBAT@@@@"
 	db "YANMA@@@@@"
 	db "CHINCHOU@@"
-	db "LANTURN@@@"
-	db "PICHU@@@@@"
+	db "LANTURN@@@";insert beta sprite
+	db "PICHU@@@@@";check animation
 	db "CLEFFA@@@@"
-	db "IGGLYBUFF@"
+	db "IGGLYBUFF@";insert beta sprite
 	db "TOGEPI@@@@"
 	db "TOGETIC@@@"
-	db "NATU@@@@@@"
+	db "NATU@@@@@@";revert brown coloring
 	db "KATU@@@@@@"
 	db "XATU@@@@@@"
 	db "MAREEP@@@@"
 	db "FLAAFFY@@@"
 	db "AMPHAROS@@"
-	db "BELLOSSOM@"
+	db "BELLOSSOM@";swap regular and shiny palettes
 	db "MARILL@@@@"
-	db "AZUMARILL@"
+	db "AZUMARILL@";insert beta sprite
 	db "SUDOWOODO@"
-	db "POLITOED@@"
-	db "HOPPIP@@@@"
-	db "SKIPLOOM@@"
-	db "JUMPLUFF@@"
-	db "AIPOM@@@@@"
-	db "SUNKERN@@@"
+	db "POLITOED@@";needs beta sprite
+	db "HOPPIP@@@@";insert beta sprite
+	db "SKIPLOOM@@";insert beta sprite
+	db "JUMPLUFF@@";insert beta sprite
+	db "AIPOM@@@@@";insert beta sprite
+	db "SUNKERN@@@";insert beta sprite
 	db "SUNFLORA@@"
-	db "WOOPER@@@@"
+	db "WOOPER@@@@";insert beta sprite
 	db "QUAGSIRE@@"
-	db "ESPEON@@@@"
-	db "UMBREON@@@"
-	db "MURKROW@@@"
+	db "ESPEON@@@@";insert beta sprite
+	db "UMBREON@@@";insert beta sprite
+	db "MURKROW@@@";insert beta sprite
 	db "SLOWKING@@"
 	db "MISDREAVUS"
 	db "UNOWN@@@@@"
 	db "WOBBUFFET@"
-	db "BIPULLA@@@"
+	db "BIPULLA@@@";needs animation
 	db "GIRAFARIG@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
-	db "DUNSPARCE@"
-	db "GLIGAR@@@@"
+	db "DUNSPARCE@";insert beta sprite
+	db "GLIGAR@@@@";insert beta sprite
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"
 	db "QWILFISH@@"
-	db "SCIZOR@@@@"
-	db "SHUCKLE@@@"
-	db "HERACROSS@"
-	db "SNEASEL@@@"
-	db "TEDDIURSA@"
+	db "SCIZOR@@@@";insert beta sprite
+	db "SHUCKLE@@@";insert beta sprite
+	db "HERACROSS@";insert beta sprite
+	db "SNEASEL@@@";insert beta sprite
+	db "TEDDIURSA@";insert beta sprite
 	db "URSARING@@"
-	db "SLUGMA@@@@"
-	db "MAGCARGO@@"
+	db "SLUGMA@@@@";insert beta sprite
+	db "MAGCARGO@@";change cry
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
 	db "CORSOLA@@@"
-	db "REMORAID@@"
-	db "OCTILLERY@"
-	db "DELIBIRD@@"
-	db "MANTINE@@@"
+	db "REMORAID@@";insert beta sprite
+	db "OCTILLERY@";insert beta sprite
+	db "DELIBIRD@@";insert beta sprite
+	db "MANTINE@@@";insert beta sprite
 	db "SKARMORY@@"
 	db "HOUNDOUR@@"
 	db "HOUNDOOM@@"
-	db "KINGDRA@@@"
-	db "PHANPY@@@@"
+	db "KINGDRA@@@";insert beta sprite
+	db "PHANPY@@@@";insert beta sprite
 	db "DONPHAN@@@"
 	db "PORYGON2@@"
-	db "STANTLER@@"
+	db "STANTLER@@";insert beta sprite
 	db "SMEARGLE@@"
-	db "TYROGUE@@@"
-	db "HITMONTOP@"
+	db "TYROGUE@@@";insert beta sprite
+	db "HITMONTOP@";insert beta sprite
 	db "SMOOCHUM@@"
 	db "ELEKID@@@@"
 	db "MAGBY@@@@@"
 	db "MILTANK@@@"
-	db "BLISSEY@@@"
+	db "BLISSEY@@@";insert beta sprite
 	db "RAIKOU@@@@"
 	db "ENTEI@@@@@"
 	db "SUICUNE@@@"
@@ -256,10 +256,10 @@ PokemonNames::
 	db "TYRANITAR@"
 	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"
-	db "CELEBI@@@@"
-	db "COINPUR@@@"
-	db "ADBARSTORK"
-	db "PUPPERON@@"
-	db "MOIBELLE@@"
-	db "BELLEDAM@@"
-	db "CLEFLING@@"
+	db "CELEBI@@@@";insert beta sprite
+	db "COINPUR@@@";check animation
+	db "ADBARSTORK";check animation
+	db "PUPPERON@@";needs animation and palette fix
+	db "MOIBELLE@@";needs animation fully programmed in
+	db "BELLEDAM@@";needs animation
+	db "CLEFLING@@";needs animation fully programmed in
