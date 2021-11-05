@@ -178,7 +178,7 @@ PokemonNames::
 	db "LANTURN@@@";insert beta sprite
 	db "PICHU@@@@@";check animation
 	db "CLEFFA@@@@"
-	db "IGGLYBUFF@";insert beta sprite
+	db "IGGLYBUFF@"
 	db "TOGEPI@@@@"
 	db "TOGETIC@@@"
 	db "NATU@@@@@@"
