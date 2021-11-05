@@ -175,6 +175,7 @@ PokemonCries::
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
+	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
 	mon_cry CRY_SPINARAK,      0,  256   ; PICHU   
@@ -199,7 +200,6 @@ PokemonCries::
 	mon_cry CRY_AIPOM,      -$051,  $0e8 ; AIPOM
 	mon_cry CRY_MARILL,      $12b,  $0b8 ; SUNKERN
 	mon_cry CRY_SUNFLORA,   -$020,  $180 ; SUNFLORA
-	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
 	mon_cry CRY_WOOPER,      $093,  $0af ; WOOPER
 	mon_cry CRY_WOOPER,      125,  175   ; QUAGSIRE
 	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON

@@ -350,6 +350,8 @@ PokemonPicPointers::
 	dba AriadosBackpic
 	dba CrobatFrontpic
 	dba CrobatBackpic
+	dba YanmaFrontpic
+	dba YanmaBackpic
 	dba ChinchouFrontpic
 	dba ChinchouBackpic
 	dba LanturnFrontpic
@@ -398,8 +400,6 @@ PokemonPicPointers::
 	dba SunkernBackpic
 	dba SunfloraFrontpic
 	dba SunfloraBackpic
-	dba YanmaFrontpic
-	dba YanmaBackpic
 	dba WooperFrontpic
 	dba WooperBackpic
 	dba QuagsireFrontpic

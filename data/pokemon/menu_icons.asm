@@ -171,6 +171,7 @@ MonMenuIcons:
 	db ICON_BUG         ; SPINARAK
 	db ICON_BUG         ; ARIADOS
 	db ICON_BAT         ; CROBAT
+	db ICON_BUG         ; YANMA
 	db ICON_FISH        ; CHINCHOU
 	db ICON_FISH        ; LANTURN
 	db ICON_PIKACHU     ; PICHU
@@ -195,7 +196,6 @@ MonMenuIcons:
 	db ICON_MONSTER     ; AIPOM
 	db ICON_ODDISH      ; SUNKERN
 	db ICON_ODDISH      ; SUNFLORA
-	db ICON_BUG         ; YANMA
 	db ICON_MONSTER     ; WOOPER
 	db ICON_MONSTER     ; QUAGSIRE
 	db ICON_FOX         ; ESPEON

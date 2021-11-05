@@ -20,6 +20,7 @@ EggMovePointers2::
 	dw SpinarakEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw YanmaEggMoves
 	dw ChinchouEggMoves
 	dw NoEggMoves2
 	dw PichuEggMoves
@@ -44,7 +45,6 @@ EggMovePointers2::
 	dw AipomEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
-	dw YanmaEggMoves
 	dw WooperEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -113,7 +113,6 @@ EggMovePointers2::
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
-	dw LEECH_SEED
 	dw COUNTER
 	dw ANCIENTPOWER
 	dw FLAIL
@@ -167,6 +166,12 @@ SpinarakEggMoves:
 	dw SONICBOOM
 	dw BATON_PASS
 	dw PURSUIT
+	dw -1 ; end
+	
+YanmaEggMoves:
+	dw WHIRLWIND
+	dw REVERSAL
+	dw LEECH_LIFE
 	dw -1 ; end
 
 ChinchouEggMoves:
@@ -257,12 +262,6 @@ AipomEggMoves:
 	dw SLAM
 	dw DOUBLESLAP
 	dw BEAT_UP
-	dw -1 ; end
-
-YanmaEggMoves:
-	dw WHIRLWIND
-	dw REVERSAL
-	dw LEECH_LIFE
 	dw -1 ; end
 
 WooperEggMoves:

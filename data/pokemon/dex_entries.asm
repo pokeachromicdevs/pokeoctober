@@ -181,6 +181,7 @@ LedianPokedexEntry::     INCLUDE "data/pokemon/dex_entries/ledian.asm"
 SpinarakPokedexEntry::   INCLUDE "data/pokemon/dex_entries/spinarak.asm"
 AriadosPokedexEntry::    INCLUDE "data/pokemon/dex_entries/ariados.asm"
 CrobatPokedexEntry::     INCLUDE "data/pokemon/dex_entries/crobat.asm"
+YanmaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/yanma.asm"
 ChinchouPokedexEntry::   INCLUDE "data/pokemon/dex_entries/chinchou.asm"
 LanturnPokedexEntry::    INCLUDE "data/pokemon/dex_entries/lanturn.asm"
 PichuPokedexEntry::      INCLUDE "data/pokemon/dex_entries/pichu.asm"
@@ -209,7 +210,6 @@ SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/sunflora.asm"
 
 SECTION "Pokedex Entries 193-251", ROMX
 
-YanmaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/yanma.asm"
 WooperPokedexEntry::     INCLUDE "data/pokemon/dex_entries/wooper.asm"
 QuagsirePokedexEntry::   INCLUDE "data/pokemon/dex_entries/quagsire.asm"
 EspeonPokedexEntry::     INCLUDE "data/pokemon/dex_entries/espeon.asm"

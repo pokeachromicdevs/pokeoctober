@@ -20,6 +20,7 @@ EvosAttacksPointers2::
 	dw SpinarakEvosAttacks
 	dw AriadosEvosAttacks
 	dw CrobatEvosAttacks
+	dw YanmaEvosAttacks
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
 	dw PichuEvosAttacks
@@ -44,7 +45,6 @@ EvosAttacksPointers2::
 	dw AipomEvosAttacks
 	dw SunkernEvosAttacks
 	dw SunfloraEvosAttacks
-	dw YanmaEvosAttacks
 	dw WooperEvosAttacks
 	dw QuagsireEvosAttacks
 	dw EspeonEvosAttacks
@@ -394,6 +394,23 @@ CrobatEvosAttacks:
 	dbw 42, MEAN_LOOK
 	dbw 55, FLY
 	db 0 ; no more level-up moves
+	
+YanmaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, FORESIGHT
+	dbw 6, QUICK_ATTACK
+	dbw 11, DOUBLE_TEAM
+	dbw 14, SONICBOOM
+	dbw 17, DETECT
+	dbw 22, SUPERSONIC
+	dbw 27, PURSUIT
+	dbw 33, ANCIENTPOWER
+	dbw 38, HYPNOSIS
+	dbw 43, WING_ATTACK
+	dbw 46, SCREECH
+	dbw 49, FLY
+	db 0 ; no more level-up moves
 
 ChinchouEvosAttacks:
 	dbbw EVOLVE_LEVEL, 27, LANTURN
@@ -707,23 +724,6 @@ SunfloraEvosAttacks:
 	dbw 34, SOLARBEAM
 	dbw 37, DOUBLE_EDGE
 	dbw 40, SUNNY_DAY
-	db 0 ; no more level-up moves
-
-YanmaEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, FORESIGHT
-	dbw 6, QUICK_ATTACK
-	dbw 11, DOUBLE_TEAM
-	dbw 14, SONICBOOM
-	dbw 17, DETECT
-	dbw 22, SUPERSONIC
-	dbw 27, PURSUIT
-	dbw 33, ANCIENTPOWER
-	dbw 38, HYPNOSIS
-	dbw 43, WING_ATTACK
-	dbw 46, SCREECH
-	dbw 49, FLY
 	db 0 ; no more level-up moves
 
 WooperEvosAttacks:

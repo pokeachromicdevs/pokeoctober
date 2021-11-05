@@ -169,6 +169,7 @@ BitmasksPointers:
 	dw SpinarakBitmasks
 	dw AriadosBitmasks
 	dw CrobatBitmasks
+	dw YanmaBitmasks
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
 	dw PichuBitmasks
@@ -193,7 +194,6 @@ BitmasksPointers:
 	dw AipomBitmasks
 	dw SunkernBitmasks
 	dw SunfloraBitmasks
-	dw YanmaBitmasks
 	dw WooperBitmasks
 	dw QuagsireBitmasks
 	dw EspeonBitmasks

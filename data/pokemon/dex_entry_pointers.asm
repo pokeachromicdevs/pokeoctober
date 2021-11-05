@@ -170,6 +170,7 @@ PokedexDataPointerTable:
 	dba SpinarakPokedexEntry
 	dba AriadosPokedexEntry
 	dba CrobatPokedexEntry
+	dba YanmaPokedexEntry
 	dba ChinchouPokedexEntry
 	dba LanturnPokedexEntry
 	dba PichuPokedexEntry
@@ -194,7 +195,6 @@ PokedexDataPointerTable:
 	dba AipomPokedexEntry
 	dba SunkernPokedexEntry
 	dba SunfloraPokedexEntry
-	dba YanmaPokedexEntry
 	dba WooperPokedexEntry
 	dba QuagsirePokedexEntry
 	dba EspeonPokedexEntry

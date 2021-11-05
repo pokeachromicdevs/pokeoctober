@@ -190,6 +190,7 @@ JOHTO_POKEMON EQU const_value
 	const SPINARAK   ; a7
 	const ARIADOS    ; a8
 	const CROBAT     ; a9
+	const YANMA
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
 	const PICHU      ; ac
@@ -214,7 +215,6 @@ JOHTO_POKEMON EQU const_value
 	const AIPOM      ; be
 	const SUNKERN    ; bf
 	const SUNFLORA   ; c0
-	const YANMA      ; c1
 	const WOOPER     ; c2
 	const QUAGSIRE   ; c3
 	const ESPEON     ; c4

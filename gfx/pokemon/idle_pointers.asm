@@ -169,6 +169,7 @@ AnimationIdlePointers:
 	dw SpinarakAnimationIdle
 	dw AriadosAnimationIdle
 	dw CrobatAnimationIdle
+	dw YanmaAnimationIdle
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
 	dw PichuAnimationIdle
@@ -193,7 +194,6 @@ AnimationIdlePointers:
 	dw AipomAnimationIdle
 	dw SunkernAnimationIdle
 	dw SunfloraAnimationIdle
-	dw YanmaAnimationIdle
 	dw WooperAnimationIdle
 	dw QuagsireAnimationIdle
 	dw EspeonAnimationIdle

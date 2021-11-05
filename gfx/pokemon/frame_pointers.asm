@@ -169,6 +169,7 @@ FramesPointers:
 	dba SpinarakFrames
 	dba AriadosFrames
 	dba CrobatFrames
+	dba YanmaFrames
 	dba ChinchouFrames
 	dba LanturnFrames
 	dba PichuFrames
@@ -193,7 +194,6 @@ FramesPointers:
 	dba AipomFrames
 	dba SunkernFrames
 	dba SunfloraFrames
-	dba YanmaFrames
 	dba WooperFrames
 	dba QuagsireFrames
 	dba EspeonFrames

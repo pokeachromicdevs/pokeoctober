@@ -169,6 +169,7 @@ AnimationPointers:
 	dw SpinarakAnimation
 	dw AriadosAnimation
 	dw CrobatAnimation
+	dw YanmaAnimation
 	dw ChinchouAnimation
 	dw LanturnAnimation
 	dw PichuAnimation
@@ -193,7 +194,6 @@ AnimationPointers:
 	dw AipomAnimation
 	dw SunkernAnimation
 	dw SunfloraAnimation
-	dw YanmaAnimation
 	dw WooperAnimation
 	dw QuagsireAnimation
 	dw EspeonAnimation
