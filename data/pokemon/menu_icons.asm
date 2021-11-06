@@ -209,6 +209,7 @@ MonMenuIcons:
 	db ICON_EQUINE      ; GIRAFARIG
 	db ICON_BUG         ; PINECO
 	db ICON_BUG         ; FORRETRESS
+	db ICON_SERPENT     ; SHUCKLE
 	db ICON_SERPENT     ; DUNSPARCE
 	db ICON_BUG         ; GLIGAR
 	db ICON_SERPENT     ; STEELIX
@@ -216,7 +217,6 @@ MonMenuIcons:
 	db ICON_MONSTER     ; GRANBULL
 	db ICON_FISH        ; QWILFISH
 	db ICON_BUG         ; SCIZOR
-	db ICON_BUG         ; SHUCKLE
 	db ICON_BUG         ; HERACROSS
 	db ICON_FOX         ; SNEASEL
 	db ICON_MONSTER     ; TEDDIURSA

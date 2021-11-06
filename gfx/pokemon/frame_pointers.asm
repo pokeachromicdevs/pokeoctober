@@ -207,6 +207,7 @@ FramesPointers:
 	dba GirafarigFrames
 	dba PinecoFrames
 	dba ForretressFrames
+	dba ShuckleFrames
 	dba DunsparceFrames
 	dba GligarFrames
 	dba SteelixFrames
@@ -214,7 +215,6 @@ FramesPointers:
 	dba GranbullFrames
 	dba QwilfishFrames
 	dba ScizorFrames
-	dba ShuckleFrames
 	dba HeracrossFrames
 	dba SneaselFrames
 	dba TeddiursaFrames

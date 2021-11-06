@@ -206,6 +206,7 @@ AnimationPointers:
 	dw GirafarigAnimation
 	dw PinecoAnimation
 	dw ForretressAnimation
+	dw ShuckleAnimation
 	dw DunsparceAnimation
 	dw GligarAnimation
 	dw SteelixAnimation
@@ -213,7 +214,6 @@ AnimationPointers:
 	dw GranbullAnimation
 	dw QwilfishAnimation
 	dw ScizorAnimation
-	dw ShuckleAnimation
 	dw HeracrossAnimation
 	dw SneaselAnimation
 	dw TeddiursaAnimation

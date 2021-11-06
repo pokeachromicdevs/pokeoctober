@@ -207,6 +207,7 @@ AnimationIdlePointers:
 	dw GirafarigAnimationIdle
 	dw PinecoAnimationIdle
 	dw ForretressAnimationIdle
+	dw ShuckleAnimationIdle
 	dw DunsparceAnimationIdle
 	dw GligarAnimationIdle
 	dw SteelixAnimationIdle
@@ -214,7 +215,6 @@ AnimationIdlePointers:
 	dw GranbullAnimationIdle
 	dw QwilfishAnimationIdle
 	dw ScizorAnimationIdle
-	dw ShuckleAnimationIdle
 	dw HeracrossAnimationIdle
 	dw SneaselAnimationIdle
 	dw TeddiursaAnimationIdle

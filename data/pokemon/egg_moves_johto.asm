@@ -57,6 +57,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw PinecoEggMoves
 	dw NoEggMoves2
+	dw ShuckleEggMoves
 	dw DunsparceEggMoves
 	dw GligarEggMoves
 	dw NoEggMoves2
@@ -64,7 +65,6 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw QwilfishEggMoves
 	dw NoEggMoves2
-	dw ShuckleEggMoves
 	dw HeracrossEggMoves
 	dw SneaselEggMoves
 	dw TeddiursaEggMoves
@@ -296,6 +296,10 @@ PinecoEggMoves:
 	dw SWIFT
 	dw -1 ; end
 
+ShuckleEggMoves:
+	dw SWEET_SCENT
+	dw -1 ; end
+
 DunsparceEggMoves:
 	dw BIDE
 	dw ANCIENTPOWER
@@ -327,10 +331,6 @@ QwilfishEggMoves:
 	dw HAZE
 	dw BUBBLEBEAM
 	dw SUPERSONIC
-	dw -1 ; end
-
-ShuckleEggMoves:
-	dw SWEET_SCENT
 	dw -1 ; end
 
 HeracrossEggMoves:

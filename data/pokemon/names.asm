@@ -211,6 +211,7 @@ PokemonNames::
 	db "GIRAFARIG@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
+	db "SHUCKLE@@@";insert beta sprite
 	db "DUNSPARCE@";insert beta sprite
 	db "GLIGAR@@@@";insert beta sprite
 	db "STEELIX@@@"
@@ -218,8 +219,7 @@ PokemonNames::
 	db "GRANBULL@@"
 	db "QWILFISH@@"
 	db "SCIZOR@@@@";insert beta sprite
-	db "SHUCKLE@@@";insert beta sprite
-	db "HERACROSS@";needs animation
+	db "HERACROSS@"
 	db "SNEASEL@@@";insert beta sprite
 	db "TEDDIURSA@";insert beta sprite
 	db "URSARING@@"

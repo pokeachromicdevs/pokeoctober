@@ -388,7 +388,6 @@ LtSurgePic:          INCBIN "gfx/trainers/lt_surge.2bpp.lz"
 TeacherPic:          INCBIN "gfx/trainers/teacher.2bpp.lz"
 EggPic:              INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
 EeveeBackpic:        INCBIN "gfx/pokemon/eevee/back.2bpp.lz"
-ShuckleFrontpic:     INCBIN "gfx/pokemon/shuckle/front.animated.2bpp.lz"
 PonytaBackpic:       INCBIN "gfx/pokemon/ponyta/back.2bpp.lz"
 RemoraidFrontpic:    INCBIN "gfx/pokemon/remoraid/front.animated.2bpp.lz"
 PoliwagFrontpic:     INCBIN "gfx/pokemon/poliwag/front.animated.2bpp.lz"
@@ -730,6 +729,8 @@ PetamoleFrontpic: INCBIN "gfx/pokemon/petamole/front.animated.2bpp.lz"
 PetamoleBackpic: INCBIN "gfx/pokemon/petamole/back.2bpp.lz"
 HitmontopFrontpic:   INCBIN "gfx/pokemon/hitmontop/front.animated.2bpp.lz"
 HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
+ShuckleFrontpic:     INCBIN "gfx/pokemon/shuckle/front.animated.2bpp.lz"
+
 
 
 

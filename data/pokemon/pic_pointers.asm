@@ -429,6 +429,8 @@ PokemonPicPointers::
 	dba PinecoBackpic
 	dba ForretressFrontpic
 	dba ForretressBackpic
+	dba ShuckleFrontpic
+	dba ShuckleBackpic
 	dba DunsparceFrontpic
 	dba DunsparceBackpic
 	dba GligarFrontpic
@@ -443,8 +445,6 @@ PokemonPicPointers::
 	dba QwilfishBackpic
 	dba ScizorFrontpic
 	dba ScizorBackpic
-	dba ShuckleFrontpic
-	dba ShuckleBackpic
 	dba HeracrossFrontpic
 	dba HeracrossBackpic
 	dba SneaselFrontpic

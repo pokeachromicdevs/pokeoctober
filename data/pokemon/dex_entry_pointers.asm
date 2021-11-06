@@ -208,6 +208,7 @@ PokedexDataPointerTable:
 	dba GirafarigPokedexEntry
 	dba PinecoPokedexEntry
 	dba ForretressPokedexEntry
+	dba ShucklePokedexEntry
 	dba DunsparcePokedexEntry
 	dba GligarPokedexEntry
 	dba SteelixPokedexEntry
@@ -215,7 +216,6 @@ PokedexDataPointerTable:
 	dba GranbullPokedexEntry
 	dba QwilfishPokedexEntry
 	dba ScizorPokedexEntry
-	dba ShucklePokedexEntry
 	dba HeracrossPokedexEntry
 	dba SneaselPokedexEntry
 	dba TeddiursaPokedexEntry

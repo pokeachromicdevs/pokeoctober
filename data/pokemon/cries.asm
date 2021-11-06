@@ -213,6 +213,7 @@ PokemonCries::
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
 	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
+	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; SHUCKLE
 	mon_cry CRY_GIRAFARIG,  -138,  320   ; DUNSPARCE
 	mon_cry CRY_GLIGAR,     -$102,  $100 ; GLIGAR
 	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELIX
@@ -220,7 +221,6 @@ PokemonCries::
 	mon_cry CRY_DUNSPARCE,   $000,  $180 ; GRANBULL
 	mon_cry CRY_SLOWKING,    $160,  $0e0 ; QWILFISH
 	mon_cry CRY_AMPHAROS,    $000,  $160 ; SCIZOR
-	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; SHUCKLE
 	mon_cry CRY_AMPHAROS,    $035,  $0e0 ; HERACROSS
 	mon_cry CRY_WOOPER,       15,   191  ; SNEASEL
 	mon_cry CRY_TEDDIURSA,   $7a2,  $06e ; TEDDIURSA

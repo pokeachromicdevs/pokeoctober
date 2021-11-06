@@ -58,6 +58,7 @@ EvosAttacksPointers2::
 	dw GirafarigEvosAttacks
 	dw PinecoEvosAttacks
 	dw ForretressEvosAttacks
+	dw ShuckleEvosAttacks
 	dw DunsparceEvosAttacks
 	dw GligarEvosAttacks
 	dw SteelixEvosAttacks
@@ -65,7 +66,6 @@ EvosAttacksPointers2::
 	dw GranbullEvosAttacks
 	dw QwilfishEvosAttacks
 	dw ScizorEvosAttacks
-	dw ShuckleEvosAttacks
 	dw HeracrossEvosAttacks
 	dw SneaselEvosAttacks
 	dw TeddiursaEvosAttacks
@@ -887,6 +887,17 @@ ForretressEvosAttacks:
 	dbw 49, SPIKES
 	dbw 59, DOUBLE_EDGE
 	db 0 ; no more level-up moves
+	
+ShuckleEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, CONSTRICT
+	dbw 1, WITHDRAW
+	dbw 9, WRAP
+	dbw 14, ENCORE
+	dbw 23, SAFEGUARD
+	dbw 28, BIDE
+	dbw 37, REST
+	db 0 ; no more level-up moves
 
 DunsparceEvosAttacks:
 	db 0 ; no more evolutions
@@ -986,17 +997,6 @@ ScizorEvosAttacks:
 	dbw 36, SLASH
 	dbw 42, SWORDS_DANCE
 	dbw 48, DOUBLE_TEAM
-	db 0 ; no more level-up moves
-
-ShuckleEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, CONSTRICT
-	dbw 1, WITHDRAW
-	dbw 9, WRAP
-	dbw 14, ENCORE
-	dbw 23, SAFEGUARD
-	dbw 28, BIDE
-	dbw 37, REST
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:
