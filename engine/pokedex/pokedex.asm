@@ -193,7 +193,7 @@ Pokedex_InitCursorPosition:
 	and a
 	jr nz, .can_scroll
 	ld a, e
-	cp 8
+	cp 10
 	jr nc, .can_scroll
 	ld a, l
 	ld [wDexListingCursor], a
@@ -637,23 +637,26 @@ Pokedex_UpdateOptionScreen:
 	ret
 
 .NoUnownModeArrowCursorData:
-	db D_UP | D_DOWN, 3
-	dwcoord 2,  4 ; NEW
-	dwcoord 2,  6 ; OLD
-	dwcoord 2,  8 ; ABC
-
-.ArrowCursorData:
 	db D_UP | D_DOWN, 4
 	dwcoord 2,  4 ; NEW
 	dwcoord 2,  6 ; OLD
 	dwcoord 2,  8 ; ABC
-	dwcoord 2, 10 ; UNOWN
+	dwcoord 2, 10 ; HABITAT   
+
+.ArrowCursorData:
+	db D_UP | D_DOWN, 5
+	dwcoord 2,  4 ; NEW
+	dwcoord 2,  6 ; OLD
+	dwcoord 2,  8 ; ABC
+	dwcoord 2, 10 ; HABITAT
+	dwcoord 2, 12 ; UNOWN
 
 .MenuActionJumptable:
 	dw .MenuAction_NewMode
 	dw .MenuAction_OldMode
 	dw .MenuAction_ABCMode
 	dw .MenuAction_UnownMode
+	dw .MenuAction_HabitatMode
 
 .MenuAction_NewMode:
 	ld b, DEXMODE_NEW
@@ -665,6 +668,10 @@ Pokedex_UpdateOptionScreen:
 
 .MenuAction_ABCMode:
 	ld b, DEXMODE_ABC
+	
+.MenuAction_HabitatMode:
+	ld b, DEXMODE_HABITAT
+	jr .ChangeMode
 
 .ChangeMode:
 	ld a, [wCurDexMode]
@@ -1332,7 +1339,7 @@ Pokedex_DrawOptionScreenBG:
 	ld a, [wUnlockedUnownMode]
 	and a
 	ret z
-	hlcoord 3, 10
+	hlcoord 3, 12
 	ld de, .UnownMode
 	call PlaceString
 	ret
@@ -1344,6 +1351,7 @@ Pokedex_DrawOptionScreenBG:
 	db   "NEW #DEX MODE"
 	next "OLD #DEX MODE"
 	next "A to Z MODE"
+	next "HABITAT MODE"
 	db   "@"
 
 .UnownMode:
@@ -1830,6 +1838,7 @@ Pokedex_OrderMonsByMode:
 	dw .NewMode
 	dw .OldMode
 	dw Pokedex_ABCMode
+	dw Pokedex_HabitatMode
 
 .OldMode:
 	ld a, [wDexLastSeenValue] ;known to be non-zero
@@ -1949,10 +1958,43 @@ Pokedex_ABCMode:
 	ld a, h
 	ld [wDexListingEnd + 1], a
 	ret
-
+	
+Pokedex_HabitatMode:
+	ld hl, HabitatPokedexOrder
+	ld de, wPokedexOrder
+	ld bc, NUM_POKEMON * 2
+	call CopyBytes
+	ld a, BANK(wPokedexSeen)
+	ldh [rSVBK], a
+	ld bc, NUM_POKEMON
+	ld hl, HabitatPokedexOrder + (2 * NUM_POKEMON) - 1
+.habitat_mode_last_seen_loop
+	ld a, [hld]
+	ld d, a
+	ld a, [hld]
+	ld e, a
+	push hl
+	push bc
+	call CheckSeenMonIndex
+	pop bc
+	pop hl
+	jr nz, .found_last_seen_index
+	dec bc
+	ld a, b
+	or c
+	jr nz, .habitat_mode_last_seen_loop
+.found_last_seen_index
+	ld hl, wDexListingEnd
+	ld a, c
+	ld [hli], a
+	ld [hl], b
+	ret
+	
 INCLUDE "data/pokemon/dex_order_alpha.asm"
 
 INCLUDE "data/pokemon/dex_order_new.asm"
+
+INCLUDE "data/pokemon/dex_order_habitat.asm"
 
 Pokedex_DisplayModeDescription:
 	xor a
@@ -1975,6 +2017,7 @@ Pokedex_DisplayModeDescription:
 	dw .NewMode
 	dw .OldMode
 	dw .ABCMode
+	dw .HabitatMode
 	dw .UnownMode
 
 .NewMode:
@@ -1988,10 +2031,15 @@ Pokedex_DisplayModeDescription:
 .ABCMode:
 	db   "<PK><MN> are listed"
 	next "alphabetically.@"
+	
+.HabitatMode
+	db "<PK><MN> are listed by"
+	next "habitat order.@"
 
 .UnownMode:
 	db   "UNOWN are listed"
 	next "in catching order.@"
+
 
 Pokedex_DisplayChangingModesMessage:
 	xor a
@@ -2834,6 +2882,38 @@ Pokedex_LoadUnownFrontpicTiles:
 	ret
 
 _NewPokedexEntry:
+	xor a
+	ldh [hBGMapMode], a
+	farcall DrawDexEntryScreenRightEdge
+	call Pokedex_ResetBGMapMode
+	call DisableLCD
+	call LoadStandardFont
+	call LoadFontsExtra
+	call Pokedex_LoadGFX
+	call Pokedex_LoadAnyFootprint
+	ld a, [wTempSpecies]
+	ld [wCurPartySpecies], a
+	call Pokedex_DrawDexEntryScreenBG
+	call Pokedex_DrawFootprint
+	hlcoord 0, 17
+	ld [hl], $3b
+	inc hl
+	ld bc, 19
+	ld a, " "
+	call ByteFill
+	farcall DisplayDexEntry
+	call EnableLCD
+	call WaitBGMap
+	call GetBaseData
+	ld de, vTiles2
+	predef GetMonFrontpic
+	ld a, SCGB_POKEDEX
+	call Pokedex_GetSGBLayout
+	ld a, [wCurPartySpecies]
+	call PlayMonCry
+	ret
+	
+_HsbitatPokedexEntry:
 	xor a
 	ldh [hBGMapMode], a
 	farcall DrawDexEntryScreenRightEdge

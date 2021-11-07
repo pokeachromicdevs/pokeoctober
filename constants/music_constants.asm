@@ -108,6 +108,7 @@
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
 	const MUSIC_SILENT_TOWN                  ; 67
+	const MUSIC_DIGLETTS_CAVE
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

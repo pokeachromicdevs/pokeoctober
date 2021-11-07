@@ -141,6 +141,10 @@ SECTION "Extra Songs 2", ROMX
 INCLUDE "audio/music/postcredits.asm"
 INCLUDE "data/pokemon/cries_beytah.asm"
 
+SECTION "New Songs", ROMX
+
+INCLUDE "audio/music/diglettscave.asm"
+
 
 SECTION "Sound Effects", ROMX
 
