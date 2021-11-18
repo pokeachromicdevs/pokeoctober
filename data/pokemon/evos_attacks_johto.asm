@@ -822,8 +822,16 @@ MisdreavusEvosAttacks:
 
 UnownEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, HIDDEN_POWER
-	dbw 5, PSYWAVE
+	dbw 1, PSYWAVE
+	dbw 1, TELEPORT
+	dbw 5, DISABLE
+	dbw 10, CONFUSION
+	dbw 15, THUNDER_WAVE
+	dbw 20, HIDDEN_POWER
+	dbw 25, ANCIENTPOWER
+	dbw 30, SCREECH
+	dbw 35, FUTURE_SIGHT
+	dbw 40, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 WobbuffetEvosAttacks:
