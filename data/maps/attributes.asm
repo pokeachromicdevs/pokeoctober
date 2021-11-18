@@ -154,7 +154,7 @@ ENDM
 
 	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
 	connection north, Route46, ROUTE_46, 10
-	connection west, CherrygroveWoods, CHERRYGROVE_WOODS, 9
+	connection west, CherrygroveWoods, CHERRYGROVE_WOODS, 12
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 	
 	map_attributes CherrygroveWoods, CHERRYGROVE_WOODS, $05, WEST | EAST
