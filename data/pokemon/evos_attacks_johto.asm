@@ -109,7 +109,7 @@ ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, BAYLEEF
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, GROWL
+	dbw 1, GROWTH
 	dbw 8, LEECH_SEED
 	dbw 12, RAZOR_LEAF
 	dbw 15, POISONPOWDER
@@ -117,33 +117,36 @@ ChikoritaEvosAttacks:
 	dbw 29, BODY_SLAM
 	dbw 36, LIGHT_SCREEN
 	dbw 43, SAFEGUARD
-	dbw 50, SOLARBEAM
+	dbw 50, MORNING_SUN
+	dbw 55, SOLARBEAM
 	db 0 ; no more level-up moves
 	
 PetamoleEvosAttacks:
-	db EVOLVE_LEVEL, 32, MEGANIUM
+	dbbw EVOLVE_LEVEL, 32, MEGANIUM
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 1, RAZOR_LEAF
-	db 1, POISONPOWDER
-	db 7, RAZOR_LEAF
-	db 11, POISONPOWDER
-	db 15, REFLECT
-	db 16, LEECH_SEED
-	db 23, SYNTHESIS
-	db 31, BODY_SLAM
-	db 39, SAFEGUARD
-	db 47, LIGHT_SCREEN
-	db 55, SOLARBEAM
+	dbw 1, TACKLE
+	dbw 1, GROWTH
+	dbw 1, RAZOR_LEAF
+	dbw 1, POISONPOWDER
+	dbw 7, RAZOR_LEAF
+	dbw 11, POISONPOWDER
+	dbw 15, REFLECT
+	dbw 16, LEECH_SEED
+	dbw 23, SYNTHESIS
+	dbw 31, BODY_SLAM
+	dbw 39, SAFEGUARD
+	dbw 47, LIGHT_SCREEN
+	dbw 51, MORNING_SUN 
+	dbw 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
 MeganiumEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, GROWL
+	dbw 1, GROWTH
 	dbw 1, LEECH_SEED
 	dbw 1, RAZOR_LEAF
+	dbw 4, PETAL_DANCE
 	dbw 8, RAZOR_LEAF
 	dbw 12, REFLECT
 	dbw 15, POISONPOWDER
@@ -151,6 +154,7 @@ MeganiumEvosAttacks:
 	dbw 31, BODY_SLAM
 	dbw 41, LIGHT_SCREEN
 	dbw 51, SAFEGUARD
+	dbw 56, MORNING_SUN
 	dbw 61, SOLARBEAM
 	db 0 ; no more level-up moves
 
@@ -279,6 +283,7 @@ FurretEvosAttacks:
 	dbw 1, QUICK_ATTACK
 	dbw 5, DEFENSE_CURL
 	dbw 11, QUICK_ATTACK
+	dbw 14, AGILITY
 	dbw 18, FURY_SWIPES
 	dbw 34, SLAM
 	dbw 38, REST
@@ -374,6 +379,7 @@ AriadosEvosAttacks:
 	dbw 6, SCARY_FACE
 	dbw 11, CONSTRICT
 	dbw 17, NIGHT_SHADE
+	dbw 21, SWORDS_DANCE
 	dbw 25, LEECH_LIFE
 	dbw 34, FURY_SWIPES
 	dbw 40, PIN_MISSILE
@@ -509,11 +515,28 @@ NatuEvosAttacks:
 	dbw 20, QUICK_ATTACK
 	dbw 25, PSYBEAM
 	dbw 30, PURSUIT
-	dbw 35, FUTURE_SIGHT
 	dbw 40, CONFUSE_RAY
 	dbw 45, WING_ATTACK ; put Synchronoise in this slot for final
 	dbw 48, DRILL_PECK
 	dbw 56, PSYCHIC_M
+	db 0 ; no more level-up moves
+	
+KatuEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, XATU
+	db  0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, CONFUSION
+	dbw 5, NIGHT_SHADE
+	dbw 10, NIGHT_SHADE
+	dbw 20, TELEPORT
+	dbw 24, FLY
+	dbw 26, QUICK_ATTACK
+	dbw 30, PSYBEAM
+	dbw 35, PURSUIT
+	dbw 45, CONFUSE_RAY
+	dbw 50, WING_ATTACK ; put Synchronoise in this slot for final
+	dbw 53, DRILL_PECK
+	dbw 61, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 XatuEvosAttacks:
@@ -521,12 +544,12 @@ XatuEvosAttacks:
 	dbw 1, PECK
 	dbw 1, CONFUSION
 	dbw 1, NIGHT_SHADE
+	dbw 1, FUTURE_SIGHT
 	dbw 15, NIGHT_SHADE
 	dbw 25, TELEPORT
 	dbw 30, QUICK_ATTACK
 	dbw 35, PSYBEAM
 	dbw 40, PURSUIT
-	dbw 45, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
 	dbw 55, WING_ATTACK ; put Synchronoise in this slot for final
 	dbw 58, DRILL_PECK
@@ -567,7 +590,7 @@ AmpharosEvosAttacks:
 	dbw 9, THUNDERSHOCK
 	dbw 18, THUNDER_WAVE
 	dbw 27, COTTON_SPORE
-	dbw 30, THUNDERPUNCH
+	dbw 29, THUNDERPUNCH
 	dbw 42, LIGHT_SCREEN
 	dbw 57, THUNDER
 	db 0 ; no more level-up moves
@@ -758,8 +781,8 @@ EspeonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
+	dbw 1, CONFUSION
 	dbw 8, SAND_ATTACK
-	dbw 16, CONFUSION
 	dbw 23, QUICK_ATTACK
 	dbw 30, SWIFT
 	dbw 36, PSYBEAM
@@ -772,11 +795,11 @@ UmbreonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
+	db 1, SLUDGE
 	db 6, SAND_ATTACK
 	db 10, ACID
 	db 14, QUICK_ATTACK
 	db 18, BITE
-	db 23, SLUDGE
 	db 27, SCREECH
 	db 33, TOXIC
 	db 38, MOONLIGHT
@@ -859,6 +882,7 @@ GirafarigEvosAttacks:
 	dbw 1, STOMP
 	dbw 7, SPITE
 	dbw 13, STOMP
+	dbw 16, DOUBLE_KICK
 	dbw 20, NIGHT_SHADE
 	dbw 30, BATON_PASS
 	dbw 41, SHADOW_BALL
@@ -1094,7 +1118,7 @@ MagcargoEvosAttacks:
 	db 0 ; no more level-up moves
 
 SwinubEvosAttacks:
-	dbbw EVOLVE_LEVEL, 33, PILOSWINE
+	dbbw EVOLVE_LEVEL, 15, PILOSWINE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 10, POWDER_SNOW
@@ -1111,9 +1135,9 @@ PiloswineEvosAttacks:
 	dbw 1, POWDER_SNOW
 	dbw 1, ENDURE
 	dbw 10, POWDER_SNOW
+	dbw 14, FURY_ATTACK
 	dbw 19, ENDURE
 	dbw 28, TAKE_DOWN
-	dbw 33, FURY_ATTACK
 	dbw 42, MIST
 	dbw 56, BLIZZARD
 	dbw 70, AMNESIA
@@ -1154,7 +1178,7 @@ OctilleryEvosAttacks:
 	dbw 22, PSYBEAM
 	dbw 22, AURORA_BEAM
 	dbw 22, BUBBLEBEAM
-	dbw 25, OCTAZOOKA
+	dbw 24, OCTAZOOKA
 	dbw 38, FOCUS_ENERGY
 	dbw 54, ICE_BEAM
 	dbw 70, HYPER_BEAM
@@ -1165,11 +1189,13 @@ DelibirdEvosAttacks:
 	dbw 1, POUND
 	dbw 9, GROWL
 	dbw 12, POWDER_SNOW
+	dbw 16, ROCK_THROW
 	dbw 20, PRESENT
 	dbw 25, WING_ATTACK
-	dbw 30, DRILL_PECK
-	dbw 35, DOUBLESLAP
-	dbw 42, ICE_BEAM
+	dbw 29, ROCK_SLIDE 
+	dbw 37, DRILL_PECK
+	dbw 45, DOUBLESLAP
+	dbw 50, ICE_BEAM
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:
@@ -1260,7 +1286,7 @@ DonphanEvosAttacks:
 	dbw 1, GROWL
 	dbw 9, DEFENSE_CURL
 	dbw 17, FLAIL
-	dbw 25, FURY_ATTACK
+	dbw 24, FURY_ATTACK
 	dbw 33, ROLLOUT
 	dbw 41, RAPID_SPIN
 	dbw 49, EARTHQUAKE

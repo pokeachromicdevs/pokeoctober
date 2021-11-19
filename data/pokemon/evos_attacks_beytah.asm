@@ -22,24 +22,6 @@ CoinpurEvosAttacks:
 	dbw 43, SLASH
 	db 0 ; no more level-up moves
 	
-KatuEvosAttacks:
-	dbbw EVOLVE_ITEM, HEART_STONE, XATU
-	db  0 ; no more evolutions
-	dbw 1, PECK
-	dbw 1, CONFUSION
-	dbw 5, NIGHT_SHADE
-	dbw 10, NIGHT_SHADE
-	dbw 20, TELEPORT
-	dbw 26, QUICK_ATTACK
-	dbw 30, PSYBEAM
-	dbw 35, PURSUIT
-	dbw 40, FUTURE_SIGHT
-	dbw 45, CONFUSE_RAY
-	dbw 50, WING_ATTACK ; put Synchronoise in this slot for final
-	dbw 53, DRILL_PECK
-	dbw 61, PSYCHIC_M
-	db 0 ; no more level-up moves
-	
 AdbarstorkEvosAttacks:
 	db  0; no more evolutions 
 	dbw 1, PECK
