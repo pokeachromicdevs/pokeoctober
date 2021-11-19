@@ -1,4 +1,4 @@
-	db BIPULLA ; 252
+	db 0 ; 252
 
 	db  20,  20,  20,  45,  65,  85
 	;   hp  atk  def  spd  sat  sdf

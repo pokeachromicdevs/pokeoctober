@@ -1,4 +1,4 @@
-db 0 ; species ID placeholder
+	db 0 ; species ID placeholder
 
 	db  35, 40,  30,  70,  40,  40
 	;   hp  atk  def  spd  sat  sdf
