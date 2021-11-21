@@ -264,7 +264,6 @@ ENDM
 	map_const GOLDENROD_GAME_CORNER,                       10,  7 ; 19
 	map_const GOLDENROD_POKECENTER_1F,                      8,  4 ; 20
 	map_const POKECOM_CENTER_ADMIN_OFFICE_MOBILE,          16, 16 ; 21
-	map_const ILEX_FOREST_AZALEA_GATE,                      5,  4 ; 22
 	map_const ROUTE_34_ILEX_FOREST_GATE,                    5,  4 ; 23
 	map_const DAY_CARE,                                     5,  4 ; 24
 
@@ -492,3 +491,6 @@ ENDM
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 	map_const CHERRYGROVE_GYM,                              5,  8 ; 12
+	map_const CHERRYGROVE_WOODS_GATE,                       5,  4 ; 22
+	
+									

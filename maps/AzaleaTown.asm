@@ -463,8 +463,8 @@ AzaleaTown_MapEvents:
 	warp_event  9,  5, KURTS_HOUSE, 1
 	warp_event 10, 15, AZALEA_GYM, 1
 	warp_event 31,  7, SLOWPOKE_WELL_B1F, 1
-	warp_event  2, 10, ILEX_FOREST_AZALEA_GATE, 3
-	warp_event  2, 11, ILEX_FOREST_AZALEA_GATE, 4
+	warp_event  2, 10, CHERRYGROVE_WOODS_GATE, 3
+	warp_event  2, 11, CHERRYGROVE_WOODS_GATE, 4
 
 	db 3 ; coord events
 	coord_event  5, 10, SCENE_AZALEATOWN_RIVAL_BATTLE, AzaleaTownRivalBattleScene1

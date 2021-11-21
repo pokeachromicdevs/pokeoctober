@@ -553,7 +553,7 @@ ENDM
 	map_attributes GoldenrodGameCorner, GOLDENROD_GAME_CORNER, $00, 0
 	map_attributes GoldenrodPokecenter1F, GOLDENROD_POKECENTER_1F, $00, 0
 	map_attributes PokecomCenterAdminOfficeMobile, POKECOM_CENTER_ADMIN_OFFICE_MOBILE, $00, 0
-	map_attributes IlexForestAzaleaGate, ILEX_FOREST_AZALEA_GATE, $00, 0
+	map_attributes CherrygroveWoodsGate, CHERRYGROVE_WOODS_GATE, $00, 0
 	map_attributes Route34IlexForestGate, ROUTE_34_ILEX_FOREST_GATE, $00, 0
 	map_attributes DayCare, DAY_CARE, $00, 0
 	map_attributes VermilionFishingSpeechHouse, VERMILION_FISHING_SPEECH_HOUSE, $00, 0
