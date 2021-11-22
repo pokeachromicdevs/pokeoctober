@@ -109,6 +109,9 @@ INCLUDE "gfx/tilesets/battle_tower_palette_map.asm"
 TilesetBattleTowerOutsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
+TilesetSnowPalMap:
+INCLUDE "gfx/tilesets/snow_palette_map.asm"
+
 ; unused
 rept 26
 	db $06
