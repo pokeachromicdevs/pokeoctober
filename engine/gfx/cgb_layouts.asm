@@ -654,9 +654,6 @@ _CGB_TrainerCard:
 	ld bc, 8 palettes
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM
-	
-.BadgePalettes:
-INCLUDE "gfx/trainer_card/badges.pal"
 
 	; fill screen with opposite-gender palette for the card border
 	hlcoord 0, 0, wAttrMap
@@ -732,6 +729,9 @@ INCLUDE "gfx/trainer_card/badges.pal"
 	ld a, $1
 	ldh [hCGBPalUpdate], a
 	ret
+	
+.BadgePalettes:
+INCLUDE "gfx/trainer_card/badges.pal"
 
 _CGB_MoveList:
 	ld de, wBGPals1
