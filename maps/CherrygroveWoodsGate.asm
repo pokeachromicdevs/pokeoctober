@@ -31,11 +31,8 @@ CherrygroveWoodsGateGrannyText:
 CherrygroveWoodsGate_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
-	warp_event  0,  4, ILEX_FOREST, 2
-	warp_event  0,  5, ILEX_FOREST, 3
-	warp_event  9,  4, CHERRYGROVE_WOODS, 7
-	warp_event  9,  5, CHERRYGROVE_WOODS, 8
+	db 1 ; warp events
+	warp_event  9,  4, CHERRYGROVE_WOODS, 1
 
 	db 0 ; coord events
 
@@ -43,4 +40,4 @@ CherrygroveWoodsGate_MapEvents:
 
 	db 2 ; object events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsGateOfficerScript, -1
-	object_event  1,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsGateGrannyScript, -1
+	object_event  3,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsGateGrannyScript, -1
