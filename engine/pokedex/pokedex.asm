@@ -1841,19 +1841,14 @@ Pokedex_OrderMonsByMode:
 
 .OldMode:
 	ld de, OldPokedexOrder
-	jr .do_dex
-	
-.NewMode:
-	ld hl, NewPokedexOrder
-.do_dex:
 	ld hl, wPokedexOrder
  	ld c, NUM_POKEMON
-.loopnew
+.loopold
  	ld a, [de]
  	inc de
  	ld [hli], a
  	dec c
- 	jr nz, .loopnew
+ 	jr nz, .loopold
  	call .FindLastSeen
  	ret
 	
@@ -1873,6 +1868,19 @@ Pokedex_OrderMonsByMode:
 	ld a, d
 	ld [wDexListingEnd], a
 	ret
+	
+.NewMode:
+	ld hl, NewPokedexOrder
+	ld hl, wPokedexOrder
+ 	ld c, NUM_POKEMON
+.loopnew
+ 	ld a, [de]
+ 	inc de
+ 	ld [hli], a
+ 	dec c
+ 	jr nz, .loopnew
+ 	call .FindLastSeen
+ 	ret
 
 Pokedex_ABCMode:
 	; called in the WRAM bank of wPokedexOrder; the function doesn't preserve it
