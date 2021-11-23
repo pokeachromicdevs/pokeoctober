@@ -1690,18 +1690,19 @@ Pokedex_PrintListing:
 Pokedex_PrintNumberIfOldMode:
 	ld a, [wCurDexMode]
 	cp DEXMODE_OLD
-	jr z, .printnum
-	ret
-	
-.printnum
+	ret nz
 	push hl
-	ld de, -SCREEN_WIDTH
-	add hl, de
-	call Pokedex_GetDexNumber
-	ld de, wUnusedBCDNumber
-	
-	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
+	push de
+	ld bc, -SCREEN_WIDTH
+	add hl, bc
+	ld a, e
+	ld [wPokedexDisplayNumber + 1], a
+	ld a, d
+	ld de, wPokedexDisplayNumber
+	ld [de], a
+	lb bc, PRINTNUM_LEADINGZEROS | 2, 3
 	call PrintNum
+	pop de
 	pop hl
 	ret
 
@@ -1840,38 +1841,70 @@ Pokedex_OrderMonsByMode:
 	dw Pokedex_HabitatMode
 
 .OldMode:
-	ld de, OldPokedexOrder
-	jr .do_dex
-	
+	ld a, [wDexLastSeenValue] ;known to be non-zero
+	ld c, 9 ;bits are numbered 1-8 (instead of 0-7) because the first dex entry is #001, not #000
+.highest_bit_index_loop
+	dec c
+	add a, a
+	jr nc, .highest_bit_index_loop
+	ld a, [wDexLastSeenIndex]
+	ld l, a
+	ld h, 0
+	ld b, h
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, bc
+	ld d, h
+	ld e, l
+	ld hl, wPokedexOrder
+	ld c, b ;b = 0
+.old_mode_loop
+	inc bc
+	ld a, c
+	ld [hli], a
+	ld a, b
+	ld [hli], a
+	cp d
+	jr c, .old_mode_loop
+	ld a, c
+	cp e
+	jr c, .old_mode_loop
+	ld hl, wDexListingEnd
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	ret
+
 .NewMode:
 	ld hl, NewPokedexOrder
-.do_dex:
-	ld hl, wPokedexOrder
- 	ld c, NUM_POKEMON
-.loopnew
- 	ld a, [de]
- 	inc de
- 	ld [hli], a
- 	dec c
- 	jr nz, .loopnew
- 	call .FindLastSeen
- 	ret
-	
-.FindLastSeen:
-	ld hl, wPokedexOrder + NUM_POKEMON - 1
-	ld d, NUM_POKEMON
-	ld e, d
-.loopfindend
+	ld de, wPokedexOrder
+	ld bc, NUM_POKEMON * 2
+	call CopyBytes
+	ld a, BANK(wPokedexSeen)
+	ldh [rSVBK], a
+	ld bc, NUM_POKEMON
+	ld hl, NewPokedexOrder + (2 * NUM_POKEMON) - 1
+.new_mode_last_seen_loop
 	ld a, [hld]
-	ld [wTempSpecies], a
-	call Pokedex_CheckSeen
-	jr nz, .foundend
-	dec d
-	dec e
-	jr nz, .loopfindend
-.foundend
-	ld a, d
-	ld [wDexListingEnd], a
+	ld d, a
+	ld a, [hld]
+	ld e, a
+	push hl
+	push bc
+	call CheckSeenMonIndex
+	pop bc
+	pop hl
+	jr nz, .found_last_seen_index
+	dec bc
+	ld a, b
+	or c
+	jr nz, .new_mode_last_seen_loop
+.found_last_seen_index
+	ld hl, wDexListingEnd
+	ld a, c
+	ld [hli], a
+	ld [hl], b
 	ret
 
 Pokedex_ABCMode:
@@ -1962,9 +1995,6 @@ INCLUDE "data/pokemon/dex_order_alpha.asm"
 INCLUDE "data/pokemon/dex_order_new.asm"
 
 INCLUDE "data/pokemon/dex_order_habitat.asm"
-
-INCLUDE "data/pokemon/dex_order_old.asm"
-
 
 Pokedex_DisplayModeDescription:
 	xor a
@@ -2941,25 +2971,4 @@ Pokedex_SetBGMapMode_3ifDMG_4ifCGB:
 Pokedex_ResetBGMapMode:
 	xor a
 	ldh [hBGMapMode], a
-	ret
-	
-Pokedex_GetDexNumber:
-; Get the intended number of the selected Pokémon.
-	push bc
-	push hl
-	
-	ld a, [wTempSpecies] ;a = current mon (internal number)
-	ld b, a ;b = Needed mon (a and b must be matched)
-	ld c, 0 ;c = index
-	ld hl,OldPokedexOrder
-	
-.loop
-	inc c
-	ld a, [hli]
-	cp b
-	jr nz, .loop
-	ld a, c
-	ld [wUnusedBCDNumber], a
-	pop hl
-	pop bc
 	ret
