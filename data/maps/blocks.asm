@@ -198,6 +198,7 @@ SafariZoneFuchsiaGateBeta_Blocks:
 Route19FuchsiaGate_Blocks:
 Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
+CherrygroveWoodsGate_Blocks:
 Route34IlexForestGate_Blocks:
 Route35GoldenrodGate_Blocks:
 Route36RuinsOfAlphGate_Blocks:
@@ -208,10 +209,6 @@ Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 	
-CherrygroveWoodsGate_Blocks:
-	INCBIN "maps/CherrygroveWoodsGate.blk"
-	
-
 BetaEcruteakCity_Blocks:
 	INCBIN "maps/unused/BetaEcruteakCity.blk"
 
