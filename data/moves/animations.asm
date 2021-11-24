@@ -2801,6 +2801,7 @@ BattleAnim_Smokescreen:
 	anim_wait 128
 	anim_ret
 
+BattleAnim_StrongArm:
 BattleAnim_Strength:
 	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_20, $10, $1, $20
@@ -4669,10 +4670,6 @@ BattleAnim_WaterSport:
 	anim_obj ANIM_OBJ_01, 17, 0, 7, 0, $0
 	anim_wait 8
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
-	anim_ret
-	
-BattleAnim_StrongArm:
-	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 	anim_ret
 
 BattleAnim_CrossCutter:
