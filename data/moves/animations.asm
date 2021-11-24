@@ -4732,8 +4732,6 @@ BattleAnim_WindRide:
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
 	anim_1gfx ANIM_GFX_SKY_ATTACK
-	
-	anim_obj ANIM_OBJ_SKY_ATTACK, 48, 88, $40
 	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
 	anim_obj ANIM_OBJ_SPEED_LINE, 32, 88, $1
 	anim_obj ANIM_OBJ_SPEED_LINE, 40, 88, $0
