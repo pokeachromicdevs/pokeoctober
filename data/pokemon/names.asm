@@ -155,8 +155,8 @@ PokemonNames::
 	db "MEWTWO@@@@"
 	db "MEW@@@@@@@"
 	db "CHIKORITA@"
-	db "PETAMOLE@@";needs animation
-	db "MEGANIUM@@";insert GS sprite
+	db "BLOSSOMOLE";needs animation
+	db "BLOSSOMITE";insert GS sprite
 	db "CYNDAQUIL@"
 	db "QUILAVA@@@"
 	db "TYPHLOSION"

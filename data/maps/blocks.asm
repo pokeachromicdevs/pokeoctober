@@ -198,7 +198,6 @@ SafariZoneFuchsiaGateBeta_Blocks:
 Route19FuchsiaGate_Blocks:
 Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
-CherrygroveWoodsGate_Blocks:
 Route34IlexForestGate_Blocks:
 Route35GoldenrodGate_Blocks:
 Route36RuinsOfAlphGate_Blocks:
@@ -267,6 +266,7 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
+CherrygroveWoodsGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 VermilionCity_Blocks:
