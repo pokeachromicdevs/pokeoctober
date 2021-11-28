@@ -1,4 +1,4 @@
-BattleTowerMons
+BattleTowerMons:
 ; 10 groups of 21 mons.
 ; Each mon is several bytes too long; the initial species, item and move IDs must be converted to 8-bit when loading.
 

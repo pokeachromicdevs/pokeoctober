@@ -245,7 +245,5 @@ Function_LoadRandomBattleTowerMon:
 	ld [de], a
 	inc de
 	ret
-
 INCLUDE "data/battle_tower/classes.asm"
-
 INCLUDE "data/battle_tower/parties.asm"
