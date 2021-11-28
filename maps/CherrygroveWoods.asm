@@ -11,7 +11,6 @@ TrainerYoungsterJoey:
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_YOUNGSTER_JOEY
-	endifjustbattled
 	opentext
 	checkflag ENGINE_JOEY
 	iftrue .Rematch
