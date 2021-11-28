@@ -54,7 +54,7 @@ MovePlayerPic:
 	pop bc
 	pop hl
 	jr .loop
-
+	
 ShowPlayerNamingChoices:
 	ld hl, ChrisNameMenuHeader
 	ld a, [wPlayerGender]

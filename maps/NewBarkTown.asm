@@ -44,7 +44,7 @@ NewBarkTown_RivalGreets:
 	closetext
 	opentext
 	writetext NewBarkTownRivalText2
-	special NameMom 
+	special NameMom
 	waitbutton
 	closetext 
 	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
