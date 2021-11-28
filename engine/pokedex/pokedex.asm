@@ -13,6 +13,8 @@
 	const DEXSTATE_UPDATE_SEARCH_RESULTS_SCR
 	const DEXSTATE_UNOWN_MODE
 	const DEXSTATE_UPDATE_UNOWN_MODE
+	const DEXSTATE_COLOR_OPTION
+	const DEXSTATE_UPDATE_COLOR_OPTION
 	const DEXSTATE_EXIT
 
 POKEDEX_SCX EQU 5
@@ -269,6 +271,8 @@ Pokedex_RunJumptable:
 	dw Pokedex_UpdateSearchResultsScreen
 	dw Pokedex_InitUnownMode
 	dw Pokedex_UpdateUnownMode
+	dw Pokedex_InitColorOption
+	dw Pokedex_UpdateColorOption
 	dw Pokedex_Exit
 
 Pokedex_IncrementDexPointer:
@@ -595,7 +599,6 @@ Pokedex_InitOptionScreen:
 	call ClearSprites
 	call Pokedex_DrawOptionScreenBG
 	call Pokedex_InitArrowCursor
-	ld a, [wCurDexMode] ; Index of the topmost visible item in a scrolling menu ???
 	ld [wDexArrowCursorPosIndex], a
 	call Pokedex_DisplayModeDescription
 	call WaitBGMap
@@ -637,26 +640,29 @@ Pokedex_UpdateOptionScreen:
 	ret
 
 .NoUnownModeArrowCursorData:
-	db D_UP | D_DOWN, 4
-	dwcoord 2,  4 ; NEW
-	dwcoord 2,  6 ; OLD
-	dwcoord 2,  8 ; ABC
-	dwcoord 2, 10 ; HABITAT   
+	db D_UP | D_DOWN, 5
+	dwcoord 2,  3 ; NEW
+	dwcoord 2,  4 ; OLD
+	dwcoord 2,  5 ; ABC
+	dwcoord 2,  6 ; HABITAT
+	dwcoord 2,  7 ; COLOR
 
 .ArrowCursorData:
-	db D_UP | D_DOWN, 5
-	dwcoord 2,  4 ; NEW
-	dwcoord 2,  6 ; OLD
-	dwcoord 2,  8 ; ABC
-	dwcoord 2, 10 ; HABITAT
-	dwcoord 2, 12 ; UNOWN
+	db D_UP | D_DOWN, 6
+	dwcoord 2,  3 ; NEW
+	dwcoord 2,  4 ; OLD
+	dwcoord 2,  5 ; ABC
+	dwcoord 2,  6 ; HABITAT
+	dwcoord 2,  7 ; COLOR
+	dwcoord 2,  8 ; UNOWN
 
 .MenuActionJumptable:
 	dw .MenuAction_NewMode
 	dw .MenuAction_OldMode
 	dw .MenuAction_ABCMode
-	dw .MenuAction_UnownMode
 	dw .MenuAction_HabitatMode
+	dw .MenuAction_ColorOption
+	dw .MenuAction_UnownMode
 
 .MenuAction_NewMode:
 	ld b, DEXMODE_NEW
@@ -672,6 +678,12 @@ Pokedex_UpdateOptionScreen:
 .MenuAction_HabitatMode:
 	ld b, DEXMODE_HABITAT
 	jr .ChangeMode
+	
+.MenuAction_ColorOption
+	call Pokedex_BlackOutBG
+	ld a, DEXSTATE_COLOR_OPTION
+	ld [wJumptableIndex], a
+	ret
 
 .ChangeMode:
 	ld a, [wCurDexMode]
@@ -1000,6 +1012,19 @@ endr
 	ld l, a
 	ld [hl], c
 	ret
+	
+Pokedex_InitColorOption:
+	xor a
+	ldh [hBGMapMode], a
+	call ClearSprites
+	call Pokedex_DrawColorScreenBG
+	call Pokedex_InitArrowCursor
+	ld a, [wCurPokedexColor]
+	ld [wDexArrowCursorPosIndex], a
+	call WaitBGMap
+	ld a, SCGB_POKEDEX_SEARCH_OPTION
+	call Pokedex_GetSGBLayout
+	jp Pokedex_IncrementDexPointer
 
 Pokedex_LoadListingScrollParams:
 	; d = min(wDexListingEnd, wDexListingHeight); e = remaining scroll distance (cap at $FF)
@@ -1333,13 +1358,25 @@ Pokedex_DrawOptionScreenBG:
 	hlcoord 0, 1
 	ld de, .Title
 	call Pokedex_PlaceString
+	hlcoord 3, 3
+	ld de, .NewMode
+	call PlaceString
 	hlcoord 3, 4
-	ld de, .Modes
+	ld de, .OldMode
+	call PlaceString
+	hlcoord 3, 5
+	ld de, .AtoZMode
+	call PlaceString
+	hlcoord 3, 6
+	ld de, .HabitatMode
+	call PlaceString
+	hlcoord 3, 7
+	ld de, .Color
 	call PlaceString
 	ld a, [wUnlockedUnownMode]
 	and a
 	ret z
-	hlcoord 3, 12
+	hlcoord 3, 8
 	ld de, .UnownMode
 	call PlaceString
 	ret
@@ -1347,15 +1384,197 @@ Pokedex_DrawOptionScreenBG:
 .Title:
 	db $3b, " OPTION ", $3c, -1
 
-.Modes:
-	db   "NEW #DEX MODE"
-	next "OLD #DEX MODE"
-	next "A to Z MODE"
-	next "HABITAT MODE"
-	db   "@"
+.NewMode:
+	db "NEW #DEX MODE@"
+
+.OldMode:
+	db "OLD #DEX MODE@"
+
+.AtoZMode:
+	db "A to Z MODE@"
+	
+.HabitatMode
+	db "HABITAT MODE@"
+	
+.Color:
+	db "#DEX COLOR@"
 
 .UnownMode:
 	db "UNOWN MODE@"
+	
+Pokedex_DrawColorScreenBG:
+	call Pokedex_FillBackgroundColor2
+	hlcoord 0, 2
+	lb bc, 14, 18
+	call Pokedex_PlaceBorder
+	hlcoord 0, 1
+	ld de, .Title
+	call Pokedex_PlaceString
+	hlcoord 3, 3
+	ld de, .Red
+	call Pokedex_PlaceString	
+	hlcoord 3, 4
+	ld de, .Blue
+	call Pokedex_PlaceString
+	hlcoord 3, 5
+	ld de, .Purple
+	call Pokedex_PlaceString
+	hlcoord 3, 6
+	ld de, .Brown
+	call Pokedex_PlaceString
+	hlcoord 3, 7
+	ld de, .Green
+	call Pokedex_PlaceString
+	hlcoord 3, 8
+	ld de, .Pink
+	call Pokedex_PlaceString
+	hlcoord 3, 9
+	ld de, .Yellow
+	call Pokedex_PlaceString
+	hlcoord 3, 10
+	ld de, .Cyan
+	call Pokedex_PlaceString
+	hlcoord 3, 11
+	ld de, .Gray
+	call Pokedex_PlaceString
+	hlcoord 3, 12
+	ld de, .Mewtwo
+	jp Pokedex_PlaceString
+
+.Title:
+	db $3b, " COLORS ", $3c, -1
+
+.Red
+	db "RED    ", $4f, -1
+	
+.Blue
+	db "BLUE   ", $4f, -1
+
+.Purple
+	db "PURPLE ", $4f, -1
+
+.Brown
+	db "BROWN  ", $4f, -1
+
+.Green
+	db "GREEN  ", $4f, -1	
+	
+.Pink
+	db "PINK   ", $4f, -1	
+	
+.Yellow
+	db "YELLOW ", $4f, -1	
+	
+.Cyan
+	db "CYAN   ", $4f, -1
+	
+.Gray
+	db "GRAY   ", $4f, -1	
+	
+.Mewtwo
+	db "MEWTWO ", $4f, -1	
+
+Pokedex_UpdateColorOption:
+	ld de, .ArrowCursorData
+	call Pokedex_MoveArrowCursor
+	ld hl, hJoyPressed
+	ld a, [hl]
+	and SELECT | B_BUTTON
+	jr nz, .return_to_main_screen
+	ld a, [hl]
+	and A_BUTTON
+	jr nz, .do_menu_action
+	ret
+	
+.ArrowCursorData:
+	db D_UP | D_DOWN, 10
+	dwcoord 2,  3  ; Red
+	dwcoord 2,  4  ; Blue
+	dwcoord 2,  5  ; Purple
+	dwcoord 2,  6  ; Brown
+	dwcoord 2,  7  ; Green
+	dwcoord 2,  8  ; Pink
+	dwcoord 2,  9  ; Yellow	
+	dwcoord 2,  10 ; Cyan
+	dwcoord 2,  11 ; Gray
+	dwcoord 2,  12 ; Mewtwo
+	
+.do_menu_action
+	ld a, [wDexArrowCursorPosIndex]
+	ld hl, .MenuActionJumptable
+	call Pokedex_LoadPointer
+	jp hl
+	
+.return_to_main_screen
+	call Pokedex_BlackOutBG
+	ld a, DEXSTATE_MAIN_SCR
+	ld [wJumptableIndex], a
+	ret
+
+.MenuActionJumptable:
+	dw .MenuAction_Red
+	dw .MenuAction_Blue
+	dw .MenuAction_Purple
+	dw .MenuAction_Brown
+	dw .MenuAction_Green
+	dw .MenuAction_Pink
+	dw .MenuAction_Yellow
+	dw .MenuAction_Cyan
+	dw .MenuAction_Gray
+	dw .MenuAction_Mewtwo
+	
+.MenuAction_Red
+	ld b, DEXCOLOR_RED
+	jr .ChangeColor
+	
+.MenuAction_Blue
+	ld b, DEXCOLOR_BLUE
+	jr .ChangeColor
+
+.MenuAction_Purple
+	ld b, DEXCOLOR_PURPLE
+	jr .ChangeColor
+	
+.MenuAction_Brown
+	ld b, DEXCOLOR_BROWN
+	jr .ChangeColor
+
+.MenuAction_Green
+	ld b, DEXCOLOR_GREEN
+	jr .ChangeColor
+
+.MenuAction_Pink
+	ld b, DEXCOLOR_PINK
+	jr .ChangeColor
+	
+.MenuAction_Yellow
+	ld b, DEXCOLOR_YELLOW
+	jr .ChangeColor
+	
+.MenuAction_Cyan
+	ld b, DEXCOLOR_CYAN
+	jr .ChangeColor	
+	
+.MenuAction_Gray
+	ld b, DEXCOLOR_GRAY
+	jr .ChangeColor	
+
+.MenuAction_Mewtwo
+	ld b, DEXCOLOR_MEWTWO
+	
+.ChangeColor:
+	ld a, [wCurPokedexColor]
+	cp b
+	jr z, .skip_changing_color
+
+	ld a, b
+	ld [wCurPokedexColor], a
+	
+.skip_changing_color
+	call Pokedex_BlackOutBG
+	ld a, DEXSTATE_COLOR_OPTION
+	ld [wJumptableIndex], a
+	ret
 
 Pokedex_DrawSearchScreenBG:
 	call Pokedex_FillBackgroundColor2
@@ -2018,6 +2237,7 @@ Pokedex_DisplayModeDescription:
 	dw .OldMode
 	dw .ABCMode
 	dw .HabitatMode
+	dw .Color
 	dw .UnownMode
 
 .NewMode:
@@ -2035,6 +2255,10 @@ Pokedex_DisplayModeDescription:
 .HabitatMode
 	db "<PK><MN> are listed by"
 	next "habitat order.@"
+	
+.Color
+	db   "Change the color"
+	next "of the border.@"
 
 .UnownMode:
 	db   "UNOWN are listed"

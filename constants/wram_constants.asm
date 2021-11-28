@@ -13,6 +13,19 @@ AUTO_INPUT EQU $ff
 	const DEXMODE_ABC
 	const DEXMODE_UNOWN
 	const DEXMODE_HABITAT
+	
+; wPokedexColor
+	const_def
+	const DEXCOLOR_RED
+	const DEXCOLOR_BLUE
+	const DEXCOLOR_PURPLE
+	const DEXCOLOR_BROWN
+	const DEXCOLOR_GREEN
+	const DEXCOLOR_PINK
+	const DEXCOLOR_YELLOW
+	const DEXCOLOR_CYAN
+    const DEXCOLOR_GRAY
+	const DEXCOLOR_MEWTWO
 
 ; wMonType:: ; cf5f
 	const_def
