@@ -31,8 +31,12 @@ CherrygroveWoodsGateGrannyText:
 CherrygroveWoodsGate_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
-	warp_event  9,  4, CHERRYGROVE_WOODS, 1
+	db 4 ; warp events
+	warp_event  9,  4, ROUTE_29, 1
+	warp_event  9,  5, ROUTE_29, 1
+	warp_event  0,  4, CHERRYGROVE_WOODS, 1
+	warp_event  0,  5, CHERRYGROVE_WOODS, 1
+
 
 	db 0 ; coord events
 

@@ -267,8 +267,8 @@ CherrygroveWoods_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  2,  9, CHERRYGROVE_WOODS_GATE, 1
-
+	warp_event 57,  7, CHERRYGROVE_WOODS_GATE, 3
+	
 	db 0 ; coord events
 
 	db 0 ; bg events
