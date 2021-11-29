@@ -210,8 +210,9 @@ Route29Sign1Text:
 Route29_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
+	db 2 ; warp events
 	warp_event  2,  7, CHERRYGROVE_WOODS_GATE, 1
+	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 1
 
 	db 2 ; coord events
 	coord_event 42,  3, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1

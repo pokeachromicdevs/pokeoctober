@@ -29,6 +29,7 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
+	dw SnowGroupSprites
 
 PalletGroupSprites:
 	db SPRITE_SUICUNE
@@ -581,6 +582,7 @@ MahoganyGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db SPRITE_POKE_BALL
 
+SnowGroupSprites:
 BlackthornGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY

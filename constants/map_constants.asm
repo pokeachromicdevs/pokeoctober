@@ -169,7 +169,6 @@ ENDM
 	map_const BLACKTHORN_POKECENTER_1F,                     8,  4 ;  6
 	map_const MOVE_DELETERS_HOUSE,                          4,  4 ;  7
 	map_const ROUTE_45,                                    10, 45 ;  8
-	map_const ROUTE_46,                                    10, 18 ;  9
 	map_const BLACKTHORN_CITY,                             20, 18 ; 10
 
 	newgroup                                                      ;  6
@@ -493,5 +492,6 @@ ENDM
 	map_const CHERRYGROVE_WOODS_GATE,                       5,  4 ; 22
 	map_const CHERRYGROVE_WOODS,                           30,  9
 
+	newgroup                                                      ; 27
 	
-									
+	map_const ROUTE_46,                                    10, 18 ;  1
