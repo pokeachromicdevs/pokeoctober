@@ -11,17 +11,6 @@ Route46_MapScripts:
 
 	db 0 ; callbacks
 
-TrainerCamperTed:
-	trainer CAMPER, TED, EVENT_BEAT_CAMPER_TED, CamperTedSeenText, CamperTedBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext CamperTedAfterBattleText
-	waitbutton
-	closetext
-	end
-
 TrainerPicnickerErin1:
 	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErin1SeenText, PicnickerErin1BeatenText, 0, .Script
 
@@ -145,65 +134,14 @@ Route46RematchGiftF:
 	jumpstd rematchgiftf
 	end
 
-TrainerHikerBailey:
-	trainer HIKER, BAILEY, EVENT_BEAT_HIKER_BAILEY, HikerBaileySeenText, HikerBaileyBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext HikerBaileyAfterBattleText
-	waitbutton
-	closetext
-	end
-
 Route46Sign:
 	jumptext Route46SignText
-
-Route46XSpeed:
-	itemball X_SPEED
 
 Route46FruitTree1:
 	fruittree FRUITTREE_ROUTE_46_1
 
 Route46FruitTree2:
 	fruittree FRUITTREE_ROUTE_46_2
-
-HikerBaileySeenText:
-	text "Awright! I'll show"
-	line "you the power of"
-	cont "mountain #MON!"
-	done
-
-HikerBaileyBeatenText:
-	text "Mercy! You showed"
-	line "me your power!"
-	done
-
-HikerBaileyAfterBattleText:
-	text "It's over. I don't"
-	line "mind. We HIKERS"
-	cont "are like that."
-	done
-
-CamperTedSeenText:
-	text "I'm raising #-"
-	line "MON too!"
-
-	para "Will you battle"
-	line "with me?"
-	done
-
-CamperTedBeatenText:
-	text "Wha…?"
-	done
-
-CamperTedAfterBattleText:
-	text "I did my best but"
-	line "came up short."
-
-	para "No excuses--I"
-	line "admit I lost."
-	done
 
 PicnickerErin1SeenText:
 	text "I raise #MON"
@@ -251,20 +189,14 @@ Route46SignText:
 Route46_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
-	warp_event  8, 33, ROUTE_29_ROUTE_46_GATE, 1
-	warp_event  7, 33, ROUTE_29_ROUTE_46_GATE, 2
-	warp_event  4,  7, DARK_CAVE_VIOLET_ENTRANCE, 3
+	db  ; warp events
 
 	db 0 ; coord events
 
 	db 1 ; bg events
 	bg_event 10, 30, BGEVENT_READ, Route46Sign
 
-	db 6 ; object events
-	object_event 11, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerBailey, -1
-	object_event  4, 17, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperTed, -1
+	db 3 ; object events
 	object_event  8, 19, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
 	object_event  9, 15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1
-	object_event  5, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route46XSpeed, EVENT_ROUTE_46_X_SPEED
