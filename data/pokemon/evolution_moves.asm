@@ -168,6 +168,7 @@ EvolutionMoves::
 	db SWORDS_DANCE ; ARIADOS
 	db NO_MOVE      ; CROBAT
 	db NO_MOVE      ; YANMA
+	db LOVELY_KISS  ; BELLIGNAN
 	db NO_MOVE      ; CHINCHOU
 	db NO_MOVE      ; LANTURN
 	db NO_MOVE      ; PICHU

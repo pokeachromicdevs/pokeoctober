@@ -174,6 +174,7 @@ PokemonNames::
 	db "ARIADOS@@@";needs animation fully programmed in
 	db "CROBAT@@@@"
 	db "YANMA@@@@@"
+	db "BELLIGNAN@";needs animation fully programmed in
 	db "CHINCHOU@@"
 	db "LANTURN@@@";insert beta sprite
 	db "PICHU@@@@@";check animation

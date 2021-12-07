@@ -170,6 +170,7 @@ FramesPointers:
 	dba AriadosFrames
 	dba CrobatFrames
 	dba YanmaFrames
+	dba BellignanFrames
 	dba ChinchouFrames
 	dba LanturnFrames
 	dba PichuFrames

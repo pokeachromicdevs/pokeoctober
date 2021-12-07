@@ -132,7 +132,8 @@ HabitatPokedexOrder:
 	dw KRABBY;95
 	dw BELLSPROUT;96
 	dw WEEPINBELL;97
-	dw VICTREEBEL;98, add Bellignant after this once added
+	dw VICTREEBEL;98
+	dw BELLIGNAN
 	dw KINGLER;99
 	dw SLOWPOKE;100
 	dw SLOWBRO;101

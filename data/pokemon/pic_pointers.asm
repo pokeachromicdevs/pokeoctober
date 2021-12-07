@@ -352,6 +352,8 @@ PokemonPicPointers::
 	dba CrobatBackpic
 	dba YanmaFrontpic
 	dba YanmaBackpic
+	dba BellignanFrontpic
+	dba BellignanBackpic
 	dba ChinchouFrontpic
 	dba ChinchouBackpic
 	dba LanturnFrontpic

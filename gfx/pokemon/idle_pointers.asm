@@ -170,6 +170,7 @@ AnimationIdlePointers:
 	dw AriadosAnimationIdle
 	dw CrobatAnimationIdle
 	dw YanmaAnimationIdle
+	dw BellignanAnimationIdle
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
 	dw PichuAnimationIdle

@@ -170,6 +170,7 @@ BitmasksPointers:
 	dw AriadosBitmasks
 	dw CrobatBitmasks
 	dw YanmaBitmasks
+	dw BellignanBitmasks
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
 	dw PichuBitmasks

@@ -15,6 +15,7 @@ AlphabeticalPokedexOrder:
 	dw BAYLEEF
 	dw BEEDRILL
 	dw BELLEDAM
+	dw BELLIGNAN
 	dw BELLOSSOM
 	dw BELLSPROUT
 	dw BIPULLA

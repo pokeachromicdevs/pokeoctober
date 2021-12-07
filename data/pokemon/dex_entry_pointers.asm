@@ -171,6 +171,7 @@ PokedexDataPointerTable:
 	dba AriadosPokedexEntry
 	dba CrobatPokedexEntry
 	dba YanmaPokedexEntry
+	dba BellignanPokedexEntry
 	dba ChinchouPokedexEntry
 	dba LanturnPokedexEntry
 	dba PichuPokedexEntry

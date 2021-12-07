@@ -20,6 +20,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw YanmaEggMoves
+	dw NoEggMoves2
 	dw ChinchouEggMoves
 	dw NoEggMoves2
 	dw PichuEggMoves

@@ -19,7 +19,6 @@ SECTION "Trainer Pic Pointers", ROMX
 
 INCLUDE "data/trainers/pic_pointers.asm"
 
-
 SECTION "Pics 1", ROMX
 
 HoOhFrontpic:        INCBIN "gfx/pokemon/ho_oh/front.animated.2bpp.lz"
@@ -320,7 +319,6 @@ KrabbyBackpic:       INCBIN "gfx/pokemon/krabby/back.2bpp.lz"
 BugCatcherPic:       INCBIN "gfx/trainers/bug_catcher.2bpp.lz"
 SnorlaxBackpic:      INCBIN "gfx/pokemon/snorlax/back.2bpp.lz"
 
-
 SECTION "Pics 12", ROMX
 
 VenusaurBackpic:     INCBIN "gfx/pokemon/venusaur/back.2bpp.lz"
@@ -457,7 +455,6 @@ VenonatBackpic:      INCBIN "gfx/pokemon/venonat/back.2bpp.lz"
 BellossomBackpic:    INCBIN "gfx/pokemon/bellossom/back.2bpp.lz"
 Rival1Pic:           INCBIN "gfx/trainers/rival1.2bpp.lz"
 SwinubBackpic:       INCBIN "gfx/pokemon/swinub/back.2bpp.lz"
-
 
 SECTION "Pics 15", ROMX
 
@@ -727,13 +724,6 @@ CleflingFrontpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
 CleflingBackpic: INCBIN "gfx/pokemon/clefling/front.animated.2bpp.lz"
 PetamoleFrontpic: INCBIN "gfx/pokemon/petamole/front.animated.2bpp.lz"
 PetamoleBackpic: INCBIN "gfx/pokemon/petamole/back.2bpp.lz"
-HitmontopFrontpic:   INCBIN "gfx/pokemon/hitmontop/front.animated.2bpp.lz"
-HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
-ShuckleFrontpic:     INCBIN "gfx/pokemon/shuckle/front.animated.2bpp.lz"
-
-
-
-
-
-
-
+HitmontopFrontpic: INCBIN "gfx/pokemon/hitmontop/front.animated.2bpp.lz"
+HitmontopBackpic: INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
+ShuckleFrontpic: INCBIN "gfx/pokemon/shuckle/front.animated.2bpp.lz"
