@@ -1220,29 +1220,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, LEDYBA
-	dbw 3, CATERPIE
+	dbw 4, LEDYBA
 	dbw 4, CATERPIE
+	dbw 5, CATERPIE
 	dbw 4, PIDGEY
-	dbw 3, WEEDLE
-	dbw 4, HOPPIP
-	dbw 4, HOPPIP
+	dbw 4, WEEDLE
+	dbw 5, HOPPIP
+	dbw 5, HOPPIP
 	; day
-	dbw 3, PIDGEY
-	dbw 3, CATERPIE
-	dbw 4, CATERPIE
 	dbw 4, PIDGEY
-	dbw 3, WEEDLE
-	dbw 4, HOPPIP
-	dbw 4, HOPPIP
+	dbw 4, CATERPIE
+	dbw 5, CATERPIE
+	dbw 4, PIDGEY
+	dbw 4, WEEDLE
+	dbw 5, HOPPIP
+	dbw 5, HOPPIP
 	; nite
-	dbw 3, SPINARAK
-	dbw 3, HOOTHOOT
-	dbw 4, POLIWAG
+	dbw 4, SPINARAK
 	dbw 4, HOOTHOOT
-	dbw 3, ZUBAT
+	dbw 5, POLIWAG
 	dbw 4, HOOTHOOT
-	dbw 4, HOOTHOOT
+	dbw 4, ZUBAT
+	dbw 5, HOOTHOOT
+	dbw 5, HOOTHOOT
 
 	map_id ROUTE_31
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1652,28 +1652,28 @@ JohtoGrassWildMons:
 	map_id CHERRYGROVE_WOODS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, COINPUR;PIDGEY
-	dbw 3, COINPUR;PIDGEY
-	dbw 2, COINPUR;CATERPIE
-	dbw 4, CLEFLING
-	dbw 4, YANMA
-	dbw 3, WEEDLE
-	dbw 3, FARFETCH_D
+	dbw 3, PIDGEY;PIDGEY
+	dbw 3, PIDGEY;PIDGEY
+	dbw 4, CATERPIE;CATERPIE
+	dbw 3, SPEAROW
+	dbw 3, YANMA
+	dbw 4, WEEDLE
+	dbw 4, FARFETCH_D
 	
-	dbw 2, COINPUR;SAME AS ABOVE
-	dbw 3, COINPUR
-	dbw 2, COINPUR
-	dbw 4, CLEFLING
-	dbw 4, YANMA
-	dbw 3, WEEDLE
-	dbw 3, FARFETCH_D
+	dbw 3, PIDGEY;SAME AS ABOVE
+	dbw 3, PIDGEY
+	dbw 4, CATERPIE
+	dbw 3, SPEAROW
+	dbw 3, YANMA
+	dbw 4, WEEDLE
+	dbw 4, FARFETCH_D
 	; nite
-	dbw 2, ODDISH
+	dbw 3, ODDISH
 	dbw 3, VENONAT
-	dbw 2, ODDISH
-	dbw 4, GASTLY
-	dbw 4, MOIBELLE
+	dbw 4, ODDISH
+	dbw 3, GASTLY
 	dbw 3, MOIBELLE
-	dbw 3, PARAS
+	dbw 4, MOIBELLE
+	dbw 4, PARAS
 	
 	db -1 ; end
