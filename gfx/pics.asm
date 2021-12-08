@@ -727,3 +727,8 @@ PetamoleBackpic: INCBIN "gfx/pokemon/petamole/back.2bpp.lz"
 HitmontopFrontpic: INCBIN "gfx/pokemon/hitmontop/front.animated.2bpp.lz"
 HitmontopBackpic: INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
 ShuckleFrontpic: INCBIN "gfx/pokemon/shuckle/front.animated.2bpp.lz"
+
+SECTION "Pics 20", ROMX
+
+BellignanFrontpic: INCBIN "gfx/pokemon/bellignan/front.animated.2bpp.lz"
+BellignanBackpic: INCBIN "gfx/pokemon/bellignan/back.2bpp.lz"

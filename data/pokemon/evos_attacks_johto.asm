@@ -419,17 +419,6 @@ YanmaEvosAttacks:
 	dbw 46, SCREECH
 	dbw 49, FLY
 	db 0 ; no more level-up moves
-	
-BellignanEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, VINE_WHIP
-	db 1, GROWTH
-	db 1, LOVELY_KISS
-	db 1, RAZOR_LEAF
-	db 42, CONFUSE_RAY
-	db 50, GIGA_DRAIN
-	db 54, SOLARBEAM
-	db 0 ; no more level-up moves
 
 ChinchouEvosAttacks:
 	dbbw EVOLVE_LEVEL, 27, LANTURN
