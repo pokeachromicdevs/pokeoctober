@@ -73,7 +73,6 @@ ROMX $11
 ROMX $12
 	"Crystal Features 1"
 	"Egg Moves 2"
-	"Evolutions and Attacks 2"
 ROMX $13
 	"bank13"
 ROMX $14
@@ -310,7 +309,7 @@ ROMX $7b
 ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
-	"Mobile News Data"
+	"Evolutions and Attacks 2"
 	"Cries"
 ROMX $7e
 	"Crystal Events"

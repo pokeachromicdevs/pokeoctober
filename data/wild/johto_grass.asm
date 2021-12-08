@@ -1652,9 +1652,9 @@ JohtoGrassWildMons:
 	map_id CHERRYGROVE_WOODS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, BELLIGNAN;PIDGEY
-	dbw 3, BELLIGNAN;PIDGEY
-	dbw 4, BELLIGNAN;CATERPIE
+	dbw 3, CELEBI;PIDGEY
+	dbw 3, CELEBI;PIDGEY
+	dbw 4, CELEBI;CATERPIE
 	dbw 3, SPEAROW;Burgela when added in
 	dbw 3, YANMA
 	dbw 4, WEEDLE

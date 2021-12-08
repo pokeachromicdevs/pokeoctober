@@ -104,6 +104,7 @@ EvosAttacksPointers2::
 	dw TyranitarEvosAttacks
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
+	dw CelebiEvosAttacks
 
 ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, BAYLEEF
@@ -1550,4 +1551,17 @@ HoOhEvosAttacks:
 	dbw 77, WHIRLWIND
 	dbw 88, ANCIENTPOWER
 	dbw 99, FUTURE_SIGHT
+	db 0 ; no more level-up moves
+	
+CelebiEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, LEECH_SEED
+	dbw 1, CONFUSION
+	dbw 1, RECOVER
+	dbw 1, HEAL_BELL
+	dbw 10, SAFEGUARD
+	dbw 20, ANCIENTPOWER
+	dbw 30, FUTURE_SIGHT
+	dbw 40, BATON_PASS
+	dbw 50, PERISH_SONG
 	db 0 ; no more level-up moves
