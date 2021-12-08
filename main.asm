@@ -721,7 +721,3 @@ INCLUDE "data/trainers/parties.asm"
 SECTION "Pokedex", ROMX
 
 INCLUDE "engine/pokedex/pokedex.asm"
-
-SECTION "Pics 2", ROMX
-
-INCLUDE "gfx/pics_2.asm"
