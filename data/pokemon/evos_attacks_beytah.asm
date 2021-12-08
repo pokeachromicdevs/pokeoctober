@@ -1,12 +1,26 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
+	dw CelebiEvosAttacks
 	dw CoinpurEvosAttacks
 	dw AdbarstorkEvosAttacks
 	dw PupperonEvosAttacks
 	dw MoibelleEvosAttacks
 	dw BelledamEvosAttacks
 	dw CleflingEvosAttacks
+	
+CelebiEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, LEECH_SEED
+	dbw 1, CONFUSION
+	dbw 1, RECOVER
+	dbw 1, HEAL_BELL
+	dbw 10, SAFEGUARD
+	dbw 20, ANCIENTPOWER
+	dbw 30, FUTURE_SIGHT
+	dbw 40, BATON_PASS
+	dbw 50, PERISH_SONG
+	db 0 ; no more level-up moves
 
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -100,15 +114,4 @@ CleflingEvosAttacks:
 	dbw 40, SCREECH
 	dbw 46, MIRROR_MOVE
 	dbw 50, FLY
-	db 0 ; no more level-up moves
-	
-BellignanEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, VINE_WHIP
-	db 1, GROWTH
-	db 1, LOVELY_KISS
-	db 1, RAZOR_LEAF
-	db 42, CONFUSE_RAY
-	db 50, GIGA_DRAIN
-	db 54, SOLARBEAM
 	db 0 ; no more level-up moves

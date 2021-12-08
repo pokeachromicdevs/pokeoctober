@@ -104,7 +104,6 @@ EvosAttacksPointers2::
 	dw TyranitarEvosAttacks
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
-	dw CelebiEvosAttacks
 
 ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, BAYLEEF
@@ -418,6 +417,17 @@ YanmaEvosAttacks:
 	dbw 43, WING_ATTACK
 	dbw 46, SCREECH
 	dbw 49, FLY
+	db 0 ; no more level-up moves
+	
+BellignanEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, VINE_WHIP
+	dbw 1, GROWTH
+	dbw 1, LOVELY_KISS
+	dbw 1, RAZOR_LEAF
+	dbw 42, CONFUSE_RAY
+	dbw 50, GIGA_DRAIN
+	dbw 54, SOLARBEAM
 	db 0 ; no more level-up moves
 
 ChinchouEvosAttacks:
@@ -1540,17 +1550,4 @@ HoOhEvosAttacks:
 	dbw 77, WHIRLWIND
 	dbw 88, ANCIENTPOWER
 	dbw 99, FUTURE_SIGHT
-	db 0 ; no more level-up moves
-
-CelebiEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, LEECH_SEED
-	dbw 1, CONFUSION
-	dbw 1, RECOVER
-	dbw 1, HEAL_BELL
-	dbw 10, SAFEGUARD
-	dbw 20, ANCIENTPOWER
-	dbw 30, FUTURE_SIGHT
-	dbw 40, BATON_PASS
-	dbw 50, PERISH_SONG
 	db 0 ; no more level-up moves
