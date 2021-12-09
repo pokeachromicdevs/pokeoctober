@@ -197,6 +197,7 @@ MonMenuIcons:
 	db ICON_MONSTER     ; AIPOM
 	db ICON_ODDISH      ; SUNKERN
 	db ICON_ODDISH      ; SUNFLORA
+	db ICON_BIRD        ; LUXSWAN
 	db ICON_MONSTER     ; WOOPER
 	db ICON_MONSTER     ; QUAGSIRE
 	db ICON_FOX         ; ESPEON

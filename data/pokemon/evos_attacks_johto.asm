@@ -46,6 +46,7 @@ EvosAttacksPointers2::
 	dw AipomEvosAttacks
 	dw SunkernEvosAttacks
 	dw SunfloraEvosAttacks
+	dw LuxswanEvosAttacks
 	dw WooperEvosAttacks
 	dw QuagsireEvosAttacks
 	dw EspeonEvosAttacks
@@ -760,6 +761,20 @@ SunfloraEvosAttacks:
 	dbw 34, SOLARBEAM
 	dbw 37, DOUBLE_EDGE
 	dbw 40, SUNNY_DAY
+	db 0 ; no more level-up moves
+	
+LuxswanEvosAttacks:
+	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, LUXSWAN
+	dbw 1, PECK
+	dbw 1, LEER
+	dbw 15, FURY_ATTACK
+	dbw 21, BATON_PASS
+	dbw 27, CUT
+	dbw 33, FLY
+	dbw 39, FALSE_SWIPE
+	dbw 45, SWORDS_DANCE
+	dbw 51, SLASH
+	dbw 57, AGILITY
 	db 0 ; no more level-up moves
 
 WooperEvosAttacks:

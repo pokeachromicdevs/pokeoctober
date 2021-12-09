@@ -402,6 +402,8 @@ PokemonPicPointers::
 	dba SunkernBackpic
 	dba SunfloraFrontpic
 	dba SunfloraBackpic
+	dba LuxswanFrontpic
+	dba LuxswanBackpic
 	dba WooperFrontpic
 	dba WooperBackpic
 	dba QuagsireFrontpic

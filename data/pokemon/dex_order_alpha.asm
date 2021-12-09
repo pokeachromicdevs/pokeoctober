@@ -121,6 +121,7 @@ AlphabeticalPokedexOrder:
 	dw LEDYBA
 	dw LICKITUNG
 	dw LUGIA
+	dw LUXSWAN
 	dw MACHAMP
 	dw MACHOKE
 	dw MACHOP

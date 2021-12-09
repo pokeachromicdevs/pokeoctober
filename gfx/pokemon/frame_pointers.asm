@@ -195,6 +195,7 @@ FramesPointers:
 	dba AipomFrames
 	dba SunkernFrames
 	dba SunfloraFrames
+	dba LuxswanFrames
 	dba WooperFrames
 	dba QuagsireFrames
 	dba EspeonFrames

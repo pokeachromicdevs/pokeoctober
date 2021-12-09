@@ -45,6 +45,7 @@ EggMovePointers2::
 	dw AipomEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw NoEggMoves2
 	dw WooperEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2

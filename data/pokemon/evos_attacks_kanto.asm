@@ -1078,6 +1078,7 @@ BellsproutEvosAttacks:
 
 WeepinbellEvosAttacks:
 	dbbw EVOLVE_ITEM, LEAF_STONE, VICTREEBEL
+	dbbw EVOLVE_ITEM, POISON_STONE, BELLIGNAN
 	db 0 ; no more evolutions
 	dbw 1, VINE_WHIP
 	dbw 1, GROWTH
@@ -1270,15 +1271,17 @@ MagnetonEvosAttacks:
 	db 0 ; no more level-up moves
 
 FarfetchDEvosAttacks:
-	db 0 ; no more evolutions
+	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, LUXSWAN
 	dbw 1, PECK
-	dbw 7, SAND_ATTACK
-	dbw 13, LEER
-	dbw 19, FURY_ATTACK
-	dbw 25, SWORDS_DANCE
-	dbw 31, AGILITY
-	dbw 37, SLASH
-	dbw 44, FALSE_SWIPE
+	dbw 1, LEER
+	dbw 12, FURY_ATTACK
+	dbw 18, BATON_PASS
+	dbw 24, CUT
+	dbw 30, FLY
+	dbw 36, FALSE_SWIPE
+	dbw 42, SWORDS_DANCE
+	dbw 48, SLASH
+	dbw 54, AGILITY
 	db 0 ; no more level-up moves
 
 DoduoEvosAttacks:

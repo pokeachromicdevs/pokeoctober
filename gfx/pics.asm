@@ -732,3 +732,5 @@ SECTION "Pics 20", ROMX
 
 BellignanFrontpic: INCBIN "gfx/pokemon/bellignan/front.animated.2bpp.lz"
 BellignanBackpic: INCBIN "gfx/pokemon/bellignan/back.2bpp.lz"
+LuxswanFrontpic: INCBIN "gfx/pokemon/luxswan/front.animated.2bpp.lz"
+LuxswanBackpic: INCBIN "gfx/pokemon/luxswan/back.2bpp.lz"

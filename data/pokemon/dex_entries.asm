@@ -211,6 +211,7 @@ SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/sunflora.asm"
 
 SECTION "Pokedex Entries 193-251", ROMX
 
+LuxswanPokedexEntry::    INCLUDE "data/pokemon/dex_entries/luxswan.asm"
 WooperPokedexEntry::     INCLUDE "data/pokemon/dex_entries/wooper.asm"
 QuagsirePokedexEntry::   INCLUDE "data/pokemon/dex_entries/quagsire.asm"
 EspeonPokedexEntry::     INCLUDE "data/pokemon/dex_entries/espeon.asm"

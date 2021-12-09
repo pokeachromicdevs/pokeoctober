@@ -199,6 +199,7 @@ PokemonNames::
 	db "AIPOM@@@@@";insert beta sprite
 	db "SUNKERN@@@";insert beta sprite
 	db "SUNFLORA@@"
+	db "LUXSWAN@@@";needs animation fully programmed in
 	db "WOOPER@@@@";insert beta sprite
 	db "QUAGSIRE@@"
 	db "ESPEON@@@@";insert beta sprite

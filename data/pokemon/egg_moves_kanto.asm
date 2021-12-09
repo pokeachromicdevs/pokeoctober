@@ -371,11 +371,10 @@ SlowpokeEggMoves:
 	dw -1 ; end
 
 FarfetchDEggMoves:
-	dw FORESIGHT
-	dw MIRROR_MOVE
-	dw GUST
-	dw QUICK_ATTACK
-	dw FLAIL
+	dw DRILL_PECK
+	dw PURSUIT
+	dw FAINT_ATTACK
+	dw WHIRLWIND
 	dw -1 ; end
 
 DoduoEggMoves:

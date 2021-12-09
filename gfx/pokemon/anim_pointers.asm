@@ -195,6 +195,7 @@ AnimationPointers:
 	dw AipomAnimation
 	dw SunkernAnimation
 	dw SunfloraAnimation
+	dw LuxswanAnimation
 	dw WooperAnimation
 	dw QuagsireAnimation
 	dw EspeonAnimation
