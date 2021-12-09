@@ -210,16 +210,15 @@ Route29Sign1Text:
 Route29_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 1 ; warp events
 	warp_event  2,  7, CHERRYGROVE_WOODS_GATE, 1
-	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 1
 
 	db 2 ; coord events
 	coord_event 42,  3, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1
 	coord_event 42,  4, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
 
 	db 1 ; bg events
-	bg_event 27,  1, BGEVENT_READ, Route29Sign1
+	bg_event 54,  6, BGEVENT_READ, Route29Sign1
 
 	db 2 ; object events
 	object_event 50, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
