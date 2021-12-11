@@ -2022,7 +2022,7 @@ wSpriteFlags:: db ; d13e
 
 wHandlePlayerStep:: db ; d13f
 
-wCurIconMonHasItemOrMail:: db
+	ds 1
 
 wPartyMenuActionText:: db ; d141
 
