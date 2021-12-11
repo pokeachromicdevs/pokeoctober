@@ -1,3 +1,5 @@
+Icons: ; used only for BANK(icons)
+
 SECTION "Mon Icons 1", ROMX
 
 NullIcon:
