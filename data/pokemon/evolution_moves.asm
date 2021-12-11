@@ -193,7 +193,6 @@ EvolutionMoves::
 	db NO_MOVE      ; AIPOM
 	db NO_MOVE      ; SUNKERN
 	db NO_MOVE      ; SUNFLORA
-	db NO_MOVE      ; LUXSWAN
 	db NO_MOVE      ; WOOPER
 	db DIG          ; QUAGSIRE
 	db CONFUSION    ; ESPEON

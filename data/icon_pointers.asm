@@ -169,7 +169,6 @@ IconPointers:
 	dw SpinarakIcon
 	dw AriadosIcon
 	dw CrobatIcon
-	dw YanmaIcon
 	dw ChinchouIcon
 	dw LanturnIcon
 	dw PichuIcon
@@ -193,6 +192,7 @@ IconPointers:
 	dw AipomIcon
 	dw SunkernIcon
 	dw SunfloraIcon
+	dw YanmaIcon
 	dw WooperIcon
 	dw QuagsireIcon
 	dw EspeonIcon
