@@ -258,7 +258,7 @@ PlayersHouse1F_Blocks:
 
 Route38EcruteakGate_Blocks:
 Route42EcruteakGate_Blocks:
-Route32RuinsOfAlphGate_Blocks:
+CherrygroveWoodsExitGate_Blocks:
 IlexForestAzaleaGate_Blocks:
 Route15FuchsiaGate_Blocks:
 Route8SaffronGate_Blocks:

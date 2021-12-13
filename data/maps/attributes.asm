@@ -102,7 +102,7 @@ ENDM
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | EAST
 	connection north, Route30, ROUTE_30, 14
-	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, -3
+	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, 9
 
 	map_attributes VioletCity, VIOLET_CITY, $05, EAST
 	connection east, Route31, ROUTE_31, 9
@@ -158,7 +158,7 @@ ENDM
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 	
 	map_attributes CherrygroveWoods, CHERRYGROVE_WOODS, $05, WEST | EAST
-	connection west, CherrygroveCity, CHERRYGROVE_CITY, -14
+	connection west, CherrygroveCity, CHERRYGROVE_CITY, -9
 	connection east, Route29, ROUTE_29, 0
 
 	map_attributes Route30, ROUTE_30, $35, NORTH | SOUTH
@@ -528,7 +528,7 @@ ENDM
 	map_attributes VioletNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes VioletPokecenter1F, VIOLET_POKECENTER_1F, $00, 0
 	map_attributes VioletKylesHouse, VIOLET_KYLES_HOUSE, $00, 0
-	map_attributes Route32RuinsOfAlphGate, ROUTE_32_RUINS_OF_ALPH_GATE, $00, 0
+	map_attributes CherrygroveWoodsExitGate, CHERRYGROVE_WOODS_EXIT_GATE, $00, 0
 	map_attributes Route32Pokecenter1F, ROUTE_32_POKECENTER_1F, $00, 0
 	map_attributes Route35GoldenrodGate, ROUTE_35_GOLDENROD_GATE, $00, 0
 	map_attributes Route35NationalParkGate, ROUTE_35_NATIONAL_PARK_GATE, $00, 0

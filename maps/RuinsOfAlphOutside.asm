@@ -281,7 +281,7 @@ RuinsOfAlphOutsideYoungster2Text:
 RuinsOfAlphOutside_MapEvents:
 	db 0, 0 ; filler
 
-	db 11 ; warp events
+	db 8 ; warp events
 	warp_event  2, 17, RUINS_OF_ALPH_HO_OH_CHAMBER, 1
 	warp_event 14,  7, RUINS_OF_ALPH_KABUTO_CHAMBER, 1
 	warp_event  2, 29, RUINS_OF_ALPH_OMANYTE_CHAMBER, 1
@@ -290,9 +290,6 @@ RuinsOfAlphOutside_MapEvents:
 	warp_event 17, 11, RUINS_OF_ALPH_RESEARCH_CENTER, 1
 	warp_event  6, 19, UNION_CAVE_B1F, 1
 	warp_event  6, 27, UNION_CAVE_B1F, 2
-	warp_event  7,  5, ROUTE_36_RUINS_OF_ALPH_GATE, 3
-	warp_event 13, 20, ROUTE_32_RUINS_OF_ALPH_GATE, 1
-	warp_event 13, 21, ROUTE_32_RUINS_OF_ALPH_GATE, 2
 
 	db 2 ; coord events
 	coord_event 11, 14, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene1

@@ -3,7 +3,7 @@
 	const ROUTE32RUINSOFALPHGATE_POKEFAN_M
 	const ROUTE32RUINSOFALPHGATE_YOUNGSTER
 
-Route32RuinsOfAlphGate_MapScripts:
+CherrygroveWoodsExitGate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -44,14 +44,14 @@ Route32RuinsOfAlphGateYoungsterText:
 	cont "what they are."
 	done
 
-Route32RuinsOfAlphGate_MapEvents:
+CherrygroveWoodsExitGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  0,  4, RUINS_OF_ALPH_OUTSIDE, 10
-	warp_event  0,  5, RUINS_OF_ALPH_OUTSIDE, 11
-	warp_event  9,  4, ROUTE_32, 2
-	warp_event  9,  5, ROUTE_32, 3
+	warp_event  9,  4, CHERRYGROVE_WOODS, 2
+	warp_event  9,  5, CHERRYGROVE_WOODS, 2
+	warp_event  0,  4, CHERRYGROVE_CITY, 7
+	warp_event  0,  5, CHERRYGROVE_CITY, 8
 
 	db 0 ; coord events
 

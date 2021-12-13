@@ -266,8 +266,9 @@ BugCatcherLennyAfterText:
 CherrygroveWoods_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
+	db 2 ; warp events
 	warp_event 57,  7, CHERRYGROVE_WOODS_GATE, 3
+	warp_event 2,   9, CHERRYGROVE_WOODS_EXIT_GATE, 1
 	
 	db 0 ; coord events
 

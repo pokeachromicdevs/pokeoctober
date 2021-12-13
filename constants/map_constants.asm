@@ -233,7 +233,7 @@ ENDM
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
 	map_const VIOLET_POKECENTER_1F,                         8,  4 ;  9
 	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 10
-	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 11
+	map_const CHERRYGROVE_WOODS_EXIT_GATE,                  5,  4 ; 11
 	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 13
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14

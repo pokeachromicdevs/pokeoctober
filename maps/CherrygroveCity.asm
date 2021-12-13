@@ -578,13 +578,15 @@ GuideGentsHouseSignText:
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 6 ; warp events
+	db 8 ; warp events
 	warp_event 23, 21, CHERRYGROVE_MART, 2
 	warp_event 29, 21, CHERRYGROVE_POKECENTER_1F, 1
 	warp_event 23, 15, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
 	warp_event 33, 15, GUIDE_GENTS_HOUSE, 1
 	warp_event 29, 15, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
 	warp_event 26,  5, CHERRYGROVE_GYM, 1
+	warp_event 38, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
+	warp_event 38, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
 
 	db 2 ; coord events
 	coord_event 36, 24, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveSilverSceneNorth
