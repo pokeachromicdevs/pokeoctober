@@ -721,3 +721,35 @@ INCLUDE "data/trainers/parties.asm"
 SECTION "Pokedex", ROMX
 
 INCLUDE "engine/pokedex/pokedex.asm"
+
+SECTION "Fainting Cry", ROMX
+FaintingCry:
+; b contains species index
+	ld a, b
+	call LoadCryHeader
+	ret c
+	ld hl, CryPitch
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld bc, -$38
+	add hl, bc
+	ld a, l
+	ld [CryPitch], a
+	ld a, h
+	ld [CryPitch + 1], a
+	ld hl, CryLength
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld bc, $18
+	add hl, bc
+	ld a, l
+	ld [CryLength], a
+	ld a, h
+	ld [CryLength + 1], a
+	ld a, 1
+	ld [wc2bc], a
+	callba _PlayCryHeader
+	call WaitSFX
+	ret
