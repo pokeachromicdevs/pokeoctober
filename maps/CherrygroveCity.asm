@@ -585,8 +585,8 @@ CherrygroveCity_MapEvents:
 	warp_event 33, 15, GUIDE_GENTS_HOUSE, 1
 	warp_event 29, 15, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
 	warp_event 26,  5, CHERRYGROVE_GYM, 1
-	warp_event 38, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
-	warp_event 38, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
+	warp_event 37, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
+	warp_event 37, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
 
 	db 2 ; coord events
 	coord_event 36, 24, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveSilverSceneNorth
