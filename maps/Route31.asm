@@ -27,7 +27,6 @@ TrainerInstructorStanley:
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_INSTRUCTOR_STANLEY
-	endifjustbattled
 	opentext
 	checkflag ENGINE_STANLEY
 	iftrue .WadeRematch

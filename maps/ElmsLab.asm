@@ -36,8 +36,7 @@ ElmsLab_MapScripts:
 	moveobject ELMSLAB_ELM, 4, 10
 	return
 .doHide
-	moveobject ELMSLAB_ELM, 99, 99
-	disappear ELMSLAB_ELM
+	applymovement ELMSLAB_ELM, hide_object
 	return
 	
 .WalkUpToElm:
