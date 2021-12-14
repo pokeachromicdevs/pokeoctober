@@ -28,15 +28,15 @@ ElmsLab_MapScripts:
 
 .MoveElmCallback:
 	checkscene 
-	iffalse .doHide
+	iffalse .HideElm
 	checkscene SCENE_MEETELM
 	iftrue .doMove
 	return
 .doMove
 	moveobject ELMSLAB_ELM, 4, 10
 	return
-.doHide
-	applymovement ELMSLAB_ELM, hide_object
+.HideElm
+	applymovement ELMSLAB_ELM, HidePersonMovement
 	return
 	
 .WalkUpToElm:
@@ -87,6 +87,10 @@ ElmsLab_MapScripts:
 	writetext ElmText_ResearchAmbitions
 	waitbutton
 	closetext
+	
+HidePersonMovement:
+	hide_person
+	step_end
 	
 ProfElmScript:
 	faceplayer

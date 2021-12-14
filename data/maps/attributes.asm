@@ -163,7 +163,7 @@ ENDM
 
 	map_attributes Route30, ROUTE_30, $35, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -10
-	connection south, CherrygroveCity, CHERRYGROVE_CITY, -10
+	connection south, CherrygroveCity, CHERRYGROVE_CITY, -5
 
 	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
 	connection south, Route30, ROUTE_30, 10
