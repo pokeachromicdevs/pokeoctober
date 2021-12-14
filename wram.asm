@@ -2032,13 +2032,6 @@ wCurPartyLevel:: db ; d143
 
 wScrollingMenuListSize:: dw
 
-CryPitch:: ; c2b0
-	ds 2
-CryLength:: ; c2b2
-	ds 2
-	
-wc2bc:: ds 1
-
 ; used when following a map warp
 ; d146
 wNextWarp:: db
