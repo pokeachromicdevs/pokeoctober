@@ -105,6 +105,7 @@
 	const SPRITE_RAIKOU ; 65
 	const SPRITE_STANDING_YOUNGSTER ; 66
 	const SPRITE_FLEDGLING
+	const SPRITE_BIRD_KEEPER
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

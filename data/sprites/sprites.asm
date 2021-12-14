@@ -109,3 +109,4 @@ OverworldSprites:
 	overworld_sprite RaikouSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite StandingYoungsterSpriteGFX, 12, STANDING_SPRITE, PAL_OW_GREEN
 	overworld_sprite FledglingSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
+	overworld_sprite BirdKeeperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
