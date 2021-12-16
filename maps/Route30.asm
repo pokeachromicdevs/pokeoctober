@@ -25,7 +25,18 @@ TrainerYoungsterMax:
 	waitbutton
 	closetext
 	end
-
+	
+TrainerSoldierDwight:
+	trainer SOLDIER, DWIGHT, EVENT_BEAT_SOLDIER_DWIGHT, SoldierDwightSeenText, SoldierDwightBeatenText, 0, .Script
+	
+.Script:
+	endifjustbattled
+	opentext
+	writetext SoldierDwightAfterText
+	waitbutton
+	closetext
+	end
+	
 Route30YoungsterScript:
 	faceplayer
 	opentext
@@ -59,9 +70,6 @@ Route30TrainerTips:
 
 Route30Antidote:
 	itemball ANTIDOTE
-
-Route30FruitTree1:
-	fruittree FRUITTREE_ROUTE_30_1
 
 Route30FruitTree2:
 	fruittree FRUITTREE_ROUTE_30_2
@@ -109,6 +117,25 @@ YoungsterMaxAfterText:
 	cont "everyone else in"
 
 	para "my class!"
+	done
+	
+SoldierDwightSeenText:
+	text "Don't think you"
+	line "can just wander"
+	cont "past me!"
+	done
+	
+SoldierDwightBeatenText:
+	text "Curses! I've failed"
+	line "my duties!"
+	done
+	
+SoldierDwightAfterText:
+	text "Alright, I'll let"
+	line "you sneak by. Now"
+	cont "shoo, get out of"
+	
+	para "my face!"
 	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
@@ -165,16 +192,15 @@ Route30_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 3 ; bg events
 	bg_event 11, 23, BGEVENT_READ, Route30Sign
-	bg_event 15, 15, BGEVENT_READ, MrPokemonsHouseDirectionsSign
-	bg_event  1,  9, BGEVENT_READ, Route30TrainerTips
-	bg_event  4, 27, BGEVENT_ITEM, Route30HiddenPotion
+	bg_event 13,  5, BGEVENT_READ, Route30TrainerTips
+	bg_event  6, 15, BGEVENT_ITEM, Route30HiddenPotion
 
 	db 6 ; object events
-	object_event 12,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
+	object_event 12,  14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
+	object_event  8,  23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSoldierDwight, -1
 	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
-	object_event 14, 24, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree1, -1
-	object_event 12,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
-	object_event 11, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
+	object_event 12,  15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
+	object_event 13,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
 	object_event  5, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE
