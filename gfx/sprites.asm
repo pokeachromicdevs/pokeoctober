@@ -111,4 +111,5 @@ SECTION "Sprites 3", ROMX
 
 FledglingSpriteGFX::           INCBIN "gfx/sprites/fledgling.2bpp"
 BirdKeeperSpriteGFX::          INCBIN "gfx/sprites/bird_keeper.2bpp"
+SoldierSpriteGFX::             INCBIN "gfx/sprites/soldier.2bpp"
 
