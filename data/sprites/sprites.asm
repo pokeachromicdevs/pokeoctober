@@ -63,7 +63,7 @@ OverworldSprites:
 	overworld_sprite NurseSpriteGFX, 12, STANDING_SPRITE, PAL_OW_RED
 	overworld_sprite LinkReceptionistSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite ClerkSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
-	overworld_sprite FisherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite FisherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite FishingGuruSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite ScientistSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite KimonoGirlSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
@@ -111,3 +111,5 @@ OverworldSprites:
 	overworld_sprite FledglingSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite BirdKeeperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite SoldierSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
+	overworld_sprite FatGuySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+

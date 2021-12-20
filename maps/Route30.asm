@@ -37,6 +37,17 @@ TrainerSoldierDwight:
 	closetext
 	end
 	
+TrainerFisherBilly:
+	trainer FISHER, FISHER_BILLY, EVENT_BEAT_FISHER_BILLY, FisherBillySeenText, FisherBillyBeatenText, 0, .Script
+	
+.Script:
+	endifjustbattled
+	opentext
+	writetext FisherBillyAfterText
+	waitbutton
+	closetext
+	end
+	
 Route30YoungsterScript:
 	faceplayer
 	opentext
@@ -137,6 +148,25 @@ SoldierDwightAfterText:
 	
 	para "my face!"
 	done
+	
+FisherBillySeenText:
+	text "Oi! Buzz off, you"
+	line "little brat!"
+	done
+	
+FisherBillyBeatenText:
+	text "I told you to buzz"
+	line "off!"
+	done
+	
+FisherBillyAfterText:
+	text "Alright, you won."
+	line "Now leave. I got"
+	cont "better things to"
+	
+	para "do than to enter-"
+	line "tain twerps."
+	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
 	text "MR.#MON's"
@@ -197,9 +227,10 @@ Route30_MapEvents:
 	bg_event 13,  5, BGEVENT_READ, Route30TrainerTips
 	bg_event  6, 15, BGEVENT_ITEM, Route30HiddenPotion
 
-	db 6 ; object events
-	object_event 12,  14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
-	object_event  8,  23, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSoldierDwight, -1
+	db 7 ; object events
+	object_event 11, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerYoungsterMax, -1
+	object_event  8, 22, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSoldierDwight, -1
+	object_event  8,  19, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerFisherBilly, -1
 	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
 	object_event 12,  15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
 	object_event 13,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1

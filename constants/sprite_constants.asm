@@ -107,6 +107,7 @@
 	const SPRITE_FLEDGLING
 	const SPRITE_BIRD_KEEPER
 	const SPRITE_SOLDIER
+	const SPRITE_FAT_GUY
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

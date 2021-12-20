@@ -665,12 +665,6 @@ YoungsterGroup:
 	db 4
 	dw RATTATA
 	db -1 ; end
-	
-	next_list_item ; YOUNGSTER (1)
-	db "MAX@", TRAINERTYPE_NORMAL
-	db 4
-	dw SANDSHREW
-	db -1 ; end
 
 	next_list_item ; YOUNGSTER (3)
 	db "ALBERT@", TRAINERTYPE_NORMAL
@@ -759,6 +753,12 @@ YoungsterGroup:
 	db 37
 	dw RATICATE
 	dw HYPER_BEAM, QUICK_ATTACK, HYPER_FANG, PURSUIT
+	db -1 ; end
+	
+	next_list_item ; YOUNGSTER (1)
+	db "MAX@", TRAINERTYPE_NORMAL
+	db 4
+	dw SANDSHREW
 	db -1 ; end
 
 	end_list_items
@@ -2750,6 +2750,12 @@ FisherGroup:
 	db 37
 	dw QWILFISH
 	dw ROLLOUT, SURF, PIN_MISSILE, TAKE_DOWN
+	db -1 ; end
+	
+	next_list_item ; FISHER (26)
+	db "BILLY@", TRAINERTYPE_NORMAL
+	db 2
+	dw 	POLIWAG
 	db -1 ; end
 
 	end_list_items

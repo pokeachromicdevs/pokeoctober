@@ -122,6 +122,7 @@ KRIS EQU __enum__
 	const JASON
 	const JOEY4
 	const JOEY5
+	const MAX
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -328,7 +329,7 @@ KRIS EQU __enum__
 	const SABRINA1
 
 	trainerclass BUG_CATCHER ; 24
-	const MAX
+	const BC_MAX
 	const ROB
 	const ED
 	const STANLEY1
@@ -344,6 +345,7 @@ KRIS EQU __enum__
 	const ARNIE5
 	const WAYNE
 	const LENNY
+	const BC_TIMOTHY
 
 	trainerclass FISHER ; 25
 	const JUSTIN
@@ -371,6 +373,7 @@ KRIS EQU __enum__
 	const RALPH4
 	const RALPH5
 	const TULLY4
+	const FISHER_BILLY
 
 	trainerclass SWIMMERM ; 26
 	const HAROLD
