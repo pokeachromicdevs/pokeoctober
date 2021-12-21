@@ -91,7 +91,7 @@ EvolutionMoves::
 	db SPIKE_CANNON ; CLOYSTER
 	db NO_MOVE      ; GASTLY
 	db NO_MOVE      ; HAUNTER
-	db NO_MOVE      ; GENGAR
+	db NIGHTMARE    ; GENGAR
 	db NO_MOVE      ; ONIX
 	db NO_MOVE      ; DROWZEE
 	db NO_MOVE      ; HYPNO
@@ -119,7 +119,7 @@ EvolutionMoves::
 	db NO_MOVE      ; SEAKING
 	db NO_MOVE      ; STARYU
 	db NO_MOVE      ; STARMIE
-	db NO_MOVE      ; MR__MIME
+	db BARRIER      ; MR__MIME
 	db NO_MOVE      ; SCYTHER
 	db NO_MOVE      ; JYNX
 	db NO_MOVE      ; ELECTABUZZ
