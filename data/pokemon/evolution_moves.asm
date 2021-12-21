@@ -7,7 +7,7 @@ EvolutionMoves::
 	db WING_ATTACK  ; CHARIZARD
 	db NO_MOVE      ; SQUIRTLE
 	db NO_MOVE      ; WARTORTLE
-	db NO_MOVE      ; BLASTOISE
+	db LOCK_ON      ; BLASTOISE
 	db NO_MOVE      ; CATERPIE
 	db HARDEN       ; METAPOD
 	db CONFUSION    ; BUTTERFREE
@@ -16,7 +16,7 @@ EvolutionMoves::
 	db FURY_ATTACK  ; BEEDRILL
 	db NO_MOVE      ; PIDGEY
 	db NO_MOVE      ; PIDGEOTTO
-	db NO_MOVE      ; PIDGEOT 
+	db EXTREMESPEED ; PIDGEOT 
 	db SCARY_FACE   ; RATICATE
 	db NO_MOVE      ; SPEAROW
 	db NO_MOVE      ; FEAROW
@@ -25,7 +25,7 @@ EvolutionMoves::
 	db NO_MOVE      ; PIKACHU
 	db THUNDERPUNCH ; RAICHU
 	db NO_MOVE      ; SANDSHREW
-	db DIG          ; SANDSLASH
+	db SPIKES       ; SANDSLASH
 	db NO_MOVE      ; NIDORAN_F
 	db NO_MOVE      ; NIDORINA
 	db BODY_SLAM    ; NIDOQUEEN
@@ -35,16 +35,16 @@ EvolutionMoves::
 	db NO_MOVE      ; CLEFAIRY
 	db METRONOME    ; CLEFABLE
 	db NO_MOVE      ; VULPIX
-	db NO_MOVE      ; NINETALES
+	db NO_MOVE      ; NINETALES, Synchronoise
 	db NO_MOVE      ; JIGGLYPUFF
-	db NO_MOVE      ; WIGGLYTUFF
+	db PERISH_SONG  ; WIGGLYTUFF
 	db NO_MOVE      ; ZUBAT
 	db CRUNCH       ; GOLBAT
 	db NO_MOVE      ; ODDISH
 	db NO_MOVE      ; GLOOM
-	db NO_MOVE      ; VILEPLUME
+	db SLUDGE_BOMB  ; VILEPLUME
 	db NO_MOVE      ; PARAS
-	db NO_MOVE      ; PARASECT
+	db AMNESIA      ; PARASECT
 	db NO_MOVE      ; VENONAT
 	db GUST         ; VENOMOTH
 	db NO_MOVE      ; DIGLETT

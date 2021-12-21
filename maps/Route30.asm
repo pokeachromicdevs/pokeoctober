@@ -160,12 +160,11 @@ FisherBillyBeatenText:
 	done
 	
 FisherBillyAfterText:
-	text "Alright, you won."
-	line "Now leave. I got"
-	cont "better things to"
+	text "Alright, you won. Now"
+	line "leave. I got better"
+	cont "things to do than"
 	
-	para "do than to enter-"
-	line "tain twerps."
+	para "to entertain twerps."
 	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
@@ -228,8 +227,8 @@ Route30_MapEvents:
 	bg_event  6, 15, BGEVENT_ITEM, Route30HiddenPotion
 
 	db 7 ; object events
-	object_event 11, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerYoungsterMax, -1
-	object_event  8, 22, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSoldierDwight, -1
+	object_event 11,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
+	object_event  8, 22, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSoldierDwight, -1
 	object_event  8,  19, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerFisherBilly, -1
 	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
 	object_event 12,  15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
