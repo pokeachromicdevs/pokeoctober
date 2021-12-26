@@ -757,6 +757,8 @@ YoungsterGroup:
 	
 	next_list_item ; YOUNGSTER (1)
 	db "MAX@", TRAINERTYPE_NORMAL
+	db 2
+	dw YANMA
 	db 4
 	dw SANDSHREW
 	db -1 ; end
@@ -2754,8 +2756,12 @@ FisherGroup:
 	
 	next_list_item ; FISHER (26)
 	db "BILLY@", TRAINERTYPE_NORMAL
-	db 2
-	dw 	POLIWAG
+	db 3
+	dw MAGIKARP
+	db 3
+	dw POLIWAG
+	db 3
+	dw WOOPER
 	db -1 ; end
 
 	end_list_items
