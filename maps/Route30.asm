@@ -14,17 +14,6 @@ Route30_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-
-TrainerYoungsterMax:
-	trainer YOUNGSTER, MAX, EVENT_BEAT_BUG_CATCHER_DON, YoungsterMaxSeenText, YoungsterMaxBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext YoungsterMaxAfterText
-	waitbutton
-	closetext
-	end
 	
 TrainerSoldierDwight:
 	trainer SOLDIER, DWIGHT, EVENT_BEAT_SOLDIER_DWIGHT, SoldierDwightSeenText, SoldierDwightBeatenText, 0, .Script
@@ -111,24 +100,6 @@ Text_ThisIsABigBattle:
 	line "big battle!"
 	cont "Leave me alone!"
 	done
-
-YoungsterMaxSeenText:
-	text "Hahaha!"
-	line "Prepare to lose!"
-	done
-
-YoungsterMaxBeatenText:
-	text "You must've"
-	line "cheated!"
-	done
-
-YoungsterMaxAfterText:
-	text "I'm unstoppable!"
-	line "I always beat"
-	cont "everyone else in"
-
-	para "my class!"
-	done
 	
 SoldierDwightSeenText:
 	text "Don't think you"
@@ -160,11 +131,12 @@ FisherBillyBeatenText:
 	done
 	
 FisherBillyAfterText:
-	text "Alright, you won. Now"
-	line "leave. I got better"
-	cont "things to do than"
+	text "Alright, you won."
+	line "Now leave. I got"
+	cont "better things to do"
 	
-	para "to entertain twerps."
+	para "than to entertain"
+	line "twerps."
 	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
@@ -226,8 +198,7 @@ Route30_MapEvents:
 	bg_event 13,  5, BGEVENT_READ, Route30TrainerTips
 	bg_event  6, 15, BGEVENT_ITEM, Route30HiddenPotion
 
-	db 7 ; object events
-	object_event 11,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
+	db 6 ; object events
 	object_event  8, 22, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSoldierDwight, -1
 	object_event  8,  19, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerFisherBilly, -1
 	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
