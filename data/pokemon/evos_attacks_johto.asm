@@ -135,11 +135,11 @@ PetamoleEvosAttacks:
 	dbw 17, GROWTH
 	dbw 23, REFLECT
 	dbw 27, SWEET_SCENT
-	dbw 25, LIGHT_SCREEN
+	dbw 32, LIGHT_SCREEN
 	dbw 38, SAFEGUARD
 	dbw 42, GIGA_DRAIN
 	dbw 47, SYNTHESIS
-	dbw 55, SOLARBEAM
+	dbw 51, SOLARBEAM
 	db 0 ; no more level-up moves
 
 MeganiumEvosAttacks:
@@ -157,7 +157,7 @@ MeganiumEvosAttacks:
 	dbw 40, SAFEGUARD
 	dbw 44, GIGA_DRAIN
 	dbw 49, SYNTHESIS
-	dbw 57, SOLARBEAM
+	dbw 53, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CyndaquilEvosAttacks:

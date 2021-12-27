@@ -759,7 +759,7 @@ YoungsterGroup:
 	db "MAX@", TRAINERTYPE_NORMAL
 	db 2
 	dw YANMA
-	db 4
+	db 2
 	dw SANDSHREW
 	db -1 ; end
 
@@ -1319,6 +1319,14 @@ LassGroup:
 	dw PIDGEY
 	db 8
 	dw HOPPIP
+	db -1 ; end
+	
+	next_list_item ; LASS (18)
+	db "SAM@", TRAINERTYPE_NORMAL
+	db 2
+	dw COINPUR
+	db 4
+	dw SENTRET
 	db -1 ; end
 	
 	end_list_items
@@ -5149,7 +5157,7 @@ SECTION "Enemy Trainer Parties 3", ROMX
 InstructorGroup:
 	next_list_item ; INSTRUCTOR (1)
 	db "STANLEY@", TRAINERTYPE_NORMAL
-	db 5
+	db 3
 	dw HOOTHOOT
 	db -1 ; end
 	

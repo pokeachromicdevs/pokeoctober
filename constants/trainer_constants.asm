@@ -325,6 +325,7 @@ KRIS EQU __enum__
 	const COLETTE
 	const HILLARY
 	const SHIRLEY
+	const ANN
 
 	trainerclass SABRINA ; 23
 	const SABRINA1

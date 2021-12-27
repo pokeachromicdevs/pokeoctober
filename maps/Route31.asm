@@ -190,6 +190,17 @@ TrainerYoungsterMax:
 	closetext
 	end
 
+TrainerLassSam:
+	trainer LASS, LASS_SAM, EVENT_BEAT_LASS_SAM, LassSamSeenText, LassSamBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext LassSamAfterText
+	waitbutton
+	closetext
+	end
+	
 Route31MailRecipientScript:
 	faceplayer
 	opentext
@@ -278,24 +289,6 @@ Route31CooltrainerMText:
 	para "If #MON could"
 	line "light it up, I'd"
 	cont "explore it."
-	done
-	
-YoungsterMaxSeenText:
-	text "Hahaha!"
-	line "Prepare to lose!"
-	done
-
-YoungsterMaxBeatenText:
-	text "You must've"
-	line "cheated!"
-	done
-
-YoungsterMaxAfterText:
-	text "I'm unstoppable!"
-	line "I always beat"
-	cont "everyone else in"
-
-	para "my class!"
 	done
 
 InstructorStanley1SeenText:
@@ -425,6 +418,45 @@ MrPokemonHouseText:
 	text "MR. #MON's"
 	line "HOUSE"
 	done
+	
+YoungsterMaxSeenText:
+	text "Hahaha!"
+	line "Prepare to lose!"
+	done
+
+YoungsterMaxBeatenText:
+	text "You must've"
+	line "cheated!"
+	done
+
+YoungsterMaxAfterText:
+	text "I'm unstoppable!"
+	line "I always beat"
+	cont "everyone else in"
+
+	para "my class!"
+	done
+	
+LassSamSeenText:
+	text "Woo! Finally, my"
+	line "first trainer"
+	cont "battle!"
+	done
+	
+LassSamBeatenText:
+	text "And I lose."
+	line "Great."
+	done
+	
+LassSamAfterText:
+	text "This is the first"
+	line "time the teachers"
+	cont "have taken me out"
+	
+	para "for some #MON"
+	line "action outside of"
+	cont "the school."
+	done
 
 Route31_MapEvents:
 	db 0, 0 ; filler
@@ -441,8 +473,8 @@ Route31_MapEvents:
 	db 7 ; object events
 	object_event  4,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
 	object_event 22,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorStanley, -1
-	object_event 33,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31CooltrainerMScript, -1
 	object_event 10,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
 	object_event 35,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
 	object_event 36,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL
 	object_event 32, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
+	object_event 27, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassSam, -1
