@@ -193,7 +193,7 @@ PokemonNames::
 	db "AZUMARILL@";insert beta sprite
 	db "SUDOWOODO@"
 	db "POLITOED@@";needs beta sprite
-	db "HOPPIP@@@@";insert beta sprite
+	db "HOPPIP@@@@";needs animation fully programmed in
 	db "SKIPLOOM@@";insert beta sprite
 	db "JUMPLUFF@@";insert beta sprite
 	db "AIPOM@@@@@";insert beta sprite
@@ -238,7 +238,7 @@ PokemonNames::
 	db "HOUNDOUR@@"
 	db "HOUNDOOM@@"
 	db "KINGDRA@@@";insert beta sprite
-	db "PHANPY@@@@";insert beta sprite
+	db "PHANPY@@@@";needs animation fully programmed in
 	db "DONPHAN@@@"
 	db "PORYGON2@@"
 	db "STANTLER@@";insert beta sprite
