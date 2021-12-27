@@ -995,8 +995,8 @@ SchoolboyGroup:
 
 BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (1)
-	db "ROD@", TRAINERTYPE_NORMAL
-	db 6
+	db "RODNEY@", TRAINERTYPE_NORMAL
+	db 4
 	dw HOOTHOOT
 	db 7
 	dw SPEAROW
@@ -1153,7 +1153,7 @@ BirdKeeperGroup:
 	
 	next_list_item ; BIRD_KEEPER (20)
 	db "CLYDE@", TRAINERTYPE_NORMAL
-	db 8
+	db 7
 	dw MURKROW
 	db -1 ; end 
 
@@ -2323,6 +2323,14 @@ TeacherGroup:
 	db "SHIRLEY@", TRAINERTYPE_NORMAL
 	db 35
 	dw JIGGLYPUFF
+	db -1 ; end
+	
+	next_list_item ; TEACHER (4)
+	db "ANN@", TRAINERTYPE_NORMAL
+	db 2
+	dw HOOTHOOT
+	db 4 
+	dw PHANPY
 	db -1 ; end
 
 	end_list_items
