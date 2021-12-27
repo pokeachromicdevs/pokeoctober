@@ -470,24 +470,18 @@ LassSamAfterText:
 	done
 	
 TeacherAnnSeenText:
-	text "Woo! Finally, my"
-	line "first trainer"
-	cont "battle!"
+	text "Pay attention!"
 	done
 	
 TeacherAnnBeatenText:
-	text "And I lose."
-	line "Great."
+	text "Oh, you're not"
+	line "a student."
 	done
 	
 TeacherAnnAfterText:
-	text "This is the first"
-	line "time the teachers"
-	cont "have taken me out"
-	
-	para "for some #MON"
-	line "action outside of"
-	cont "the school."
+	text "I hope you still"
+	line "learned from our"
+	cont "battle."
 	done
 
 Route31_MapEvents:
