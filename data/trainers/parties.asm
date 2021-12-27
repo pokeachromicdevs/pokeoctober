@@ -2478,6 +2478,14 @@ BugCatcherGroup:
 	db 2
 	dw WEEDLE
 	db -1 ; end
+	
+	next_list_item ; BUG_CATCHER (20)
+	db "TIMMY@", TRAINERTYPE_NORMAL
+	db 4
+	dw LEDYBA
+	db 4
+	dw SPINARAK
+	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (16)
 	db "WADE@", TRAINERTYPE_MOVES

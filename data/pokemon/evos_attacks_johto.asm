@@ -110,54 +110,54 @@ EvosAttacksPointers2::
 ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, BAYLEEF
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, GROWTH
-	dbw 8, LEECH_SEED
-	dbw 12, RAZOR_LEAF
-	dbw 15, POISONPOWDER
-	dbw 22, SYNTHESIS
-	dbw 29, BODY_SLAM
-	dbw 36, LIGHT_SCREEN
-	dbw 43, SAFEGUARD
-	dbw 50, MORNING_SUN
-	dbw 55, SOLARBEAM
+	dbw 1, POUND
+	dbw 1, GROWL
+	dbw 6, LEECH_SEED
+	dbw 10, RAZOR_LEAF
+	dbw 15, GROWTH
+	dbw 21, REFLECT
+	dbw 25, SWEET_SCENT
+	dbw 30, LIGHT_SCREEN
+	dbw 36, SAFEGUARD
+	dbw 40, GIGA_DRAIN
+	dbw 45, SYNTHESIS
+	dbw 51, SOLARBEAM
 	db 0 ; no more level-up moves
 	
 PetamoleEvosAttacks:
 	dbbw EVOLVE_LEVEL, 32, MEGANIUM
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, GROWTH
+	dbw 1, POUND
+	dbw 1, GROWL
+	dbw 1, LEECH_SEED
 	dbw 1, RAZOR_LEAF
-	dbw 1, POISONPOWDER
-	dbw 7, RAZOR_LEAF
-	dbw 11, POISONPOWDER
-	dbw 15, REFLECT
-	dbw 16, LEECH_SEED
-	dbw 23, SYNTHESIS
-	dbw 31, BODY_SLAM
-	dbw 39, SAFEGUARD
-	dbw 47, LIGHT_SCREEN
-	dbw 51, MORNING_SUN 
+	dbw 12, RAZOR_LEAF
+	dbw 17, GROWTH
+	dbw 23, REFLECT
+	dbw 27, SWEET_SCENT
+	dbw 25, LIGHT_SCREEN
+	dbw 38, SAFEGUARD
+	dbw 42, GIGA_DRAIN
+	dbw 47, SYNTHESIS
 	dbw 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
 MeganiumEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, GROWTH
+	dbw 1, POUND
+	dbw 1, GROWL
 	dbw 1, LEECH_SEED
 	dbw 1, RAZOR_LEAF
 	dbw 4, PETAL_DANCE
 	dbw 8, RAZOR_LEAF
-	dbw 12, REFLECT
-	dbw 15, POISONPOWDER
-	dbw 23, SYNTHESIS
-	dbw 31, BODY_SLAM
-	dbw 41, LIGHT_SCREEN
-	dbw 51, SAFEGUARD
-	dbw 56, MORNING_SUN
-	dbw 61, SOLARBEAM
+	dbw 19, GROWTH
+	dbw 25, REFLECT
+	dbw 29, SWEET_SCENT
+	dbw 27, LIGHT_SCREEN
+	dbw 40, SAFEGUARD
+	dbw 44, GIGA_DRAIN
+	dbw 49, SYNTHESIS
+	dbw 57, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CyndaquilEvosAttacks:
@@ -165,12 +165,16 @@ CyndaquilEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 6, ROCK_SLASH
-	dbw 7, WIND_RIDE
-	dbw 8, ROCK_HEAD
-	dbw 13, UPROOT
-	dbw 36, SWIFT
-	dbw 46, FLAMETHROWER
+	dbw 6, SMOKESCREEN
+	dbw 10, EMBER
+	dbw 15, QUICK_ATTACK
+	dbw 21, FLAME_WHEEL
+	dbw 25, DEFENSE_CURL
+	dbw 30, ROLLOUT
+	dbw 36, RAPID_SPIN
+	dbw 40, FAINT_ATTACK
+	dbw 45, SUNNY_DAY
+	dbw 51, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 QuilavaEvosAttacks:
@@ -179,12 +183,16 @@ QuilavaEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 1, SMOKESCREEN
-	dbw 6, SMOKESCREEN
+	dbw 8, SMOKESCREEN
 	dbw 12, EMBER
-	dbw 21, QUICK_ATTACK
-	dbw 31, FLAME_WHEEL
-	dbw 42, SWIFT
-	dbw 54, FLAMETHROWER
+	dbw 17, QUICK_ATTACK
+	dbw 23, FLAME_WHEEL
+	dbw 27, DEFENSE_CURL
+	dbw 32, ROLLOUT
+	dbw 38, RAPID_SPIN
+	dbw 42, FAINT_ATTACK
+	dbw 47, SUNNY_DAY
+	dbw 53, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 TyphlosionEvosAttacks:
@@ -192,27 +200,33 @@ TyphlosionEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 1, SMOKESCREEN
-	dbw 1, EMBER
-	dbw 6, SMOKESCREEN
-	dbw 12, EMBER
-	dbw 21, QUICK_ATTACK
-	dbw 31, FLAME_WHEEL
-	dbw 45, SWIFT
-	dbw 60, FLAMETHROWER
+	dbw 1, FIRE_PUNCH
+	dbw 10, SMOKESCREEN
+	dbw 14, EMBER
+	dbw 19, QUICK_ATTACK
+	dbw 25, FLAME_WHEEL
+	dbw 29, DEFENSE_CURL
+	dbw 34, ROLLOUT
+	dbw 40, RAPID_SPIN
+	dbw 44, FAINT_ATTACK
+	dbw 49, SUNNY_DAY
+	dbw 55, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 TotodileEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, CROCONAW
-	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
-	dbw 7, RAGE
-	dbw 13, WATER_GUN
-	dbw 20, BITE
-	dbw 27, SCARY_FACE
-	dbw 35, SLASH
-	dbw 43, SCREECH
-	dbw 52, HYDRO_PUMP
+	dbw 6, RAGE 
+	dbw 10, WATER_GUN
+	dbw 15, BITE
+	dbw 21, SCARY_FACE
+	dbw 25, ICE_PUNCH
+	dbw 30, SLASH
+	dbw 36, CRUNCH
+	dbw 40, DIG
+	dbw 45, SCREECH
+	dbw 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 CroconawEvosAttacks:
@@ -221,13 +235,16 @@ CroconawEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, LEER
 	dbw 1, RAGE
-	dbw 7, RAGE
-	dbw 13, WATER_GUN
-	dbw 21, BITE
-	dbw 28, SCARY_FACE
-	dbw 37, SLASH
-	dbw 45, SCREECH
-	dbw 55, HYDRO_PUMP
+	dbw 8, RAGE
+	dbw 12, WATER_GUN
+	dbw 17, BITE
+	dbw 23, SCARY_FACE
+	dbw 27, ICE_PUNCH
+	dbw 32, SLASH
+	dbw 38, CRUNCH
+	dbw 42, DIG
+	dbw 47, SCREECH
+	dbw 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 FeraligatrEvosAttacks:
@@ -235,18 +252,20 @@ FeraligatrEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, LEER
 	dbw 1, RAGE
-	dbw 1, WATER_GUN
-	dbw 7, RAGE
-	dbw 13, WATER_GUN
-	dbw 21, BITE
-	dbw 28, SCARY_FACE
-	dbw 38, SLASH
-	dbw 47, SCREECH
-	dbw 58, HYDRO_PUMP
+	dbw 1, WATERFALL
+	dbw 10, RAGE
+	dbw 14, WATER_GUN
+	dbw 19, BITE
+	dbw 25, SCARY_FACE
+	dbw 29, ICE_PUNCH
+	dbw 34, SLASH
+	dbw 40, CRUNCH
+	dbw 44, DIG
+	dbw 49, SCREECH
+	dbw 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 	
 BayleefEvosAttacks:
-	dbbw EVOLVE_LEVEL, 32, MEGANIUM
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL

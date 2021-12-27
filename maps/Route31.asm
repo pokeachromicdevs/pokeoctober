@@ -21,17 +21,6 @@ Route31_MapScripts:
 .DoMomCall:
 	specialphonecall SPECIALCALL_WORRIED
 	return
-	
-TrainerYoungsterMax:
-	trainer YOUNGSTER, MAX, EVENT_BEAT_BUG_CATCHER_DON, YoungsterMaxSeenText, YoungsterMaxBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext YoungsterMaxAfterText
-	waitbutton
-	closetext
-	end
 
 TrainerInstructorStanley:
 	trainer INSTRUCTOR, STANLEY, EVENT_BEAT_INSTRUCTOR_STANLEY, InstructorStanley1SeenText, InstructorStanley1BeatenText, 0, .Script
@@ -189,6 +178,17 @@ TrainerInstructorStanley:
 .PackFullSTD:
 	jumpstd packfullm
 	end
+	
+TrainerYoungsterMax:
+	trainer YOUNGSTER, MAX, EVENT_BEAT_BUG_CATCHER_DON, YoungsterMaxSeenText, YoungsterMaxBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext YoungsterMaxAfterText
+	waitbutton
+	closetext
+	end
 
 Route31MailRecipientScript:
 	faceplayer
@@ -253,9 +253,6 @@ Route31MailRecipientScript:
 ReceivedSpearowMailText:
 	db   "DARK CAVE leads"
 	next "to another road@"
-
-Route31YoungsterScript:
-	jumptextfaceplayer Route31YoungsterText
 
 Route31Sign:
 	jumptext Route31SignText
@@ -443,9 +440,9 @@ Route31_MapEvents:
 
 	db 7 ; object events
 	object_event  4,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
-	object_event 22,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorStanley, -1
+	object_event 22,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorStanley, -1
 	object_event 33,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31CooltrainerMScript, -1
 	object_event 10,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
 	object_event 35,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
 	object_event 36,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL
-	object_event 32, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMax, -1
+	object_event 32, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
