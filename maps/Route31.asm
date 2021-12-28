@@ -211,6 +211,17 @@ TrainerTeacherAnn:
 	waitbutton
 	closetext
 	end
+	
+TrainerOfficerMatt:
+	trainer OFFICER, MATT, EVENT_BEAT_OFFICER_MATT, OfficerMattSeenText, OfficerMattBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext OfficerMattAfterText
+	waitbutton
+	closetext
+	end
 
 Route31MailRecipientScript:
 	faceplayer
@@ -483,6 +494,36 @@ TeacherAnnAfterText:
 	line "learned from our"
 	cont "battle."
 	done
+	
+OfficerMattSeenText:
+	text "A criminal always"
+	line "returns to the"
+	cont "scene of the"
+	
+	para "crime! Which"
+	line "means…you must be"
+	cont "one of those"
+	
+	para "ROCKETS that came"
+	line "by here!"
+	done
+	
+OfficerMattBeatenText:
+	text "Or…not."
+	done
+	
+OfficerMattAfterText:
+	text "Three ROCKETS were"
+	line "spotted around"
+	cont "here earlier,"
+	
+	para "passing through"
+	line "here and heading"
+	cont "into VIOLET CITY."
+	
+	para "You better keep an"
+	line "eye out."
+	done
 
 Route31_MapEvents:
 	db 0, 0 ; filler
@@ -496,8 +537,8 @@ Route31_MapEvents:
 	db 1 ; bg events
 	bg_event 19,  3, BGEVENT_READ, MrPokemonHouseText
 
-	db 8 ; object events
-	object_event  4,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
+	db 9 ; object events
+	object_event  8,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
 	object_event 23,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorStanley, -1
 	object_event 10,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
 	object_event 35,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
@@ -505,3 +546,4 @@ Route31_MapEvents:
 	object_event 32, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
 	object_event 27, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassSam, -1
 	object_event 16,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerTeacherAnn, -1
+	object_event  4,  7, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerOfficerMatt, -1

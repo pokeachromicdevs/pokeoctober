@@ -23,7 +23,6 @@ EvosAttacksPointers::
 	indirect_entries NUM_POKEMON, EvosAttacksPointers3
 	indirect_table_end
 
-INCLUDE "data/pokemon/evolution_moves.asm"
 INCLUDE "data/pokemon/evos_attacks_kanto.asm"
 INCLUDE "data/pokemon/evos_attacks_johto.asm"
 INCLUDE "data/pokemon/evos_attacks_beytah.asm"

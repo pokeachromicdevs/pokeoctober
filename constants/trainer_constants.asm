@@ -693,6 +693,7 @@ KRIS EQU __enum__
 	trainerclass OFFICER ; 41
 	const KEITH
 	const DIRK
+	const MATT
 
 	trainerclass GRUNTF ; 42
 	const GRUNTF_1

@@ -12,15 +12,15 @@ SECTION "Enemy Trainer Parties 1", ROMX
 FalknerGroup:
 	next_list_item ; FALKNER (1)
 	db "FALKNER@", TRAINERTYPE_ITEM_MOVES
-	db 9
+	db 10
 	dw PIDGEY
 	db NO_ITEM
 	dw TACKLE, MUD_SLAP, NO_MOVE, NO_MOVE
-	db 10
+	db 11
 	dw NATU
 	db NO_ITEM
-	dw PECK, CONFUSION, NIGHT_SHADE, NO_MOVE
-	db 12
+	dw PECK, NIGHT_SHADE, NO_MOVE, NO_MOVE
+	db 14
 	dw ADBARSTORK
 	db BERRY
 	dw FURY_ATTACK, GROWL, WHIRLWIND, NO_MOVE
@@ -5094,7 +5094,17 @@ OfficerGroup:
 	db 14
 	dw GROWLITHE
 	db -1 ; end
-
+	
+	next_list_item ; OFFICER (2)
+	db "MATT@", TRAINERTYPE_NORMAL
+	db 2
+	dw HOOTHOOT
+	db 2
+	dw PUPPERON
+	db 3
+	dw REMORAID
+	db -1 ; end
+	
 	end_list_items
 
 GruntFGroup:

@@ -108,7 +108,7 @@ EvosAttacksPointers2::
 	dw CelebiEvosAttacks
 
 ChikoritaEvosAttacks:
-	dbbw EVOLVE_LEVEL, 16, BAYLEEF
+	dbbw EVOLVE_LEVEL, 16, PETAMOLE
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	dbw 1, GROWL

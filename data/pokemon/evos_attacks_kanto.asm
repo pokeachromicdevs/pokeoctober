@@ -1,5 +1,7 @@
 SECTION "Evolutions and Attacks 1", ROMX
 
+INCLUDE "data/pokemon/evolution_moves.asm"
+
 EvosAttacksPointers1::
 	dw BulbasaurEvosAttacks
 	dw IvysaurEvosAttacks
