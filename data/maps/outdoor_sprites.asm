@@ -355,7 +355,7 @@ CherrygroveGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db SPRITE_LASS
 	db SPRITE_POKE_BALL
-	db SPRITE_FRUIT_TREE
+	db SPRITE_BIRD_KEEPER
 
 SilverGroupSprites:
 	db SPRITE_SUICUNE
