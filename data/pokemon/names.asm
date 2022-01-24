@@ -174,12 +174,13 @@ PokemonNames::
 	db "ARIADOS@@@";needs animation fully programmed in
 	db "CROBAT@@@@"
 	db "YANMA@@@@@"
+	db "TONBOSS@@@";needs animation fully programmed in
 	db "BELLIGNAN@";needs animation fully programmed in
 	db "CHINCHOU@@"
 	db "LANTURN@@@";insert beta sprite
 	db "PICHU@@@@@";check animation
 	db "CLEFFA@@@@"
-	db "IGGLYBUFF@"
+	db "IGGLYBUFF@";insert beta sprite 
 	db "TOGEPI@@@@"
 	db "TOGETIC@@@"
 	db "NATU@@@@@@"

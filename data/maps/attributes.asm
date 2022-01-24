@@ -104,7 +104,9 @@ ENDM
 	connection north, Route30, ROUTE_30, 5
 	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, 9
 
-	map_attributes VioletCity, VIOLET_CITY, $05, EAST
+	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
+	connection south, Route32, ROUTE_32, 0
+	connection west, Route36, ROUTE_36, 0
 	connection east, Route31, ROUTE_31, 9
 
 	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST

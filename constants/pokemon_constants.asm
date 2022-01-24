@@ -191,6 +191,7 @@ JOHTO_POKEMON EQU const_value
 	const ARIADOS    ; a8
 	const CROBAT     ; a9
 	const YANMA
+	const TONBOSS
 	const BELLIGNAN
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
