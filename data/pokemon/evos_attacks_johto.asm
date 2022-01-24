@@ -21,6 +21,7 @@ EvosAttacksPointers2::
 	dw AriadosEvosAttacks
 	dw CrobatEvosAttacks
 	dw YanmaEvosAttacks
+	dw TonbossEvosAttacks
 	dw BellignanEvosAttacks
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
@@ -424,21 +425,27 @@ CrobatEvosAttacks:
 	db 0 ; no more level-up moves
 	
 YanmaEvosAttacks:
+	dbbw EVOLVE_LEVEL, 10, TONBOSS
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, FORESIGHT
-	dbw 6, QUICK_ATTACK
-	dbw 11, DOUBLE_TEAM
-	dbw 14, SONICBOOM
-	dbw 17, DETECT
-	dbw 22, SUPERSONIC
-	dbw 27, PURSUIT
-	dbw 33, ANCIENTPOWER
-	dbw 38, HYPNOSIS
-	dbw 43, WING_ATTACK
-	dbw 46, SCREECH
-	dbw 49, FLY
+	dbw 5, LEECH_LIFE
+	dbw 5, QUICK_ATTACK
 	db 0 ; no more level-up moves
+	
+TonbossEvoAttacks:
+	db 0 ; no more evolutions
+	dbw 10, GUST 
+	dbw 13, PURSUIT
+	dbw 19, SONICBOOM
+	dbw 23, DOUBLE_TEAM
+	dbw 29, WING_ATTACK
+	dbw 33, ANCIENTPOWER
+	dbw 39, BITE
+	dbw 43, DETECT
+	dbw 49, FLY
+	dbw 53, EXTREMESPEED
+	db 0; no more level-up moves
 	
 BellignanEvosAttacks:
 	db 0 ; no more evolutions

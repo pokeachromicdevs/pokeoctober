@@ -237,6 +237,7 @@ AlphabeticalPokedexOrder:
 	dw TENTACRUEL
 	dw TOGEPI
 	dw TOGETIC
+	dw TONBOSS
 	dw TOTODILE
 	dw TYPHLOSION
 	dw TYRANITAR

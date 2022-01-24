@@ -106,6 +106,7 @@ NewPokedexOrder:
 	dw NIDORINO
 	dw NIDOKING
 	dw YANMA
+	dw TONBOSS
 	dw SUNKERN
 	dw SUNFLORA
 	dw EXEGGCUTE

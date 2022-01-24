@@ -161,7 +161,7 @@ PokemonCries::
 	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGANIUM
 	mon_cry CRY_CYNDAQUIL,   839,  128   ; CYNDAQUIL
 	mon_cry CRY_CYNDAQUIL,   $321,  $120 ; QUILAVA
-	mon_cry CRY_CYNDAQUIL,   749,  416   ; TYPHLOSION
+	mon_cry CRY_CYNDAQUIL,   749,   416   ; TYPHLOSION
 	mon_cry CRY_TOTODILE,    1132,  232  ; TOTODILE
 	mon_cry CRY_TOTODILE,    $440,  $110 ; CROCONAW
 	mon_cry CRY_TOTODILE,    $3fc,  $180 ; FERALIGATR
@@ -176,6 +176,7 @@ PokemonCries::
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
 	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
+	mon_cry CRY_TOTODILE,   -$022,  $200 ; TONBOSS
 	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
