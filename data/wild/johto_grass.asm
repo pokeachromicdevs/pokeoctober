@@ -1654,7 +1654,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, PIDGEY;PIDGEY
 	dbw 3, PIDGEY;PIDGEY
-	dbw 4, LEDYBA;LEDYBA
+	dbw 4, YANMA;LEDYBA
 	dbw 3, CLEFLING
 	dbw 3, YANMA;YANMA
 	dbw 4, LEDYBA
