@@ -433,14 +433,14 @@ YanmaEvosAttacks:
 	dbw 5, QUICK_ATTACK
 	db 0 ; no more level-up moves
 	
-TonbossEvoAttacks:
+TonbossEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 10, GUST 
-	dbw 13, PURSUIT
+	dbw 13, LEER
 	dbw 19, SONICBOOM
-	dbw 23, DOUBLE_TEAM
-	dbw 29, WING_ATTACK
+	dbw 23, GUST
+	dbw 29, DOUBLE_TEAM
 	dbw 33, ANCIENTPOWER
+	dbw 39, CRUNCH
 	dbw 39, BITE
 	dbw 43, DETECT
 	dbw 49, FLY

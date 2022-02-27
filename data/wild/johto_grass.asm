@@ -1654,25 +1654,25 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, PIDGEY;PIDGEY
 	dbw 3, PIDGEY;PIDGEY
-	dbw 4, CATERPIE;CATERPIE
+	dbw 4, LEDYBA;LEDYBA
 	dbw 3, CLEFLING
-	dbw 3, YANMA
-	dbw 4, WEEDLE
+	dbw 3, YANMA;YANMA
+	dbw 4, LEDYBA
 	dbw 4, FARFETCH_D
 	
 	dbw 3, PIDGEY;SAME AS ABOVE
 	dbw 3, PIDGEY
-	dbw 4, CATERPIE
+	dbw 4, LEDYBA
 	dbw 3, CLEFLING
 	dbw 3, YANMA
-	dbw 4, WEEDLE
+	dbw 4, LEDYBA
 	dbw 4, FARFETCH_D
 	; nite
 	dbw 3, ODDISH
 	dbw 3, VENONAT
 	dbw 4, ODDISH
 	dbw 3, GASTLY
-	dbw 3, MOIBELLE
+	dbw 3, SPINARAK
 	dbw 4, MOIBELLE
 	dbw 4, PARAS
 	

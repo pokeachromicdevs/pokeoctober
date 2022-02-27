@@ -170,6 +170,7 @@ AnimationPointers:
 	dw AriadosAnimation
 	dw CrobatAnimation
 	dw YanmaAnimation
+	dw TonbossAnimation
 	dw BellignanAnimation
 	dw ChinchouAnimation
 	dw LanturnAnimation
