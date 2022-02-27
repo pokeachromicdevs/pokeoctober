@@ -441,7 +441,6 @@ TonbossEvosAttacks:
 	dbw 29, DOUBLE_TEAM
 	dbw 33, ANCIENTPOWER
 	dbw 39, CRUNCH
-	dbw 39, BITE
 	dbw 43, DETECT
 	dbw 49, FLY
 	dbw 53, EXTREMESPEED
