@@ -1669,8 +1669,8 @@ JohtoGrassWildMons:
 	dbw 4, FARFETCH_D
 	; nite
 	dbw 3, ODDISH
-	dbw 3, VENONAT
-	dbw 4, ODDISH
+	dbw 3, MOIBELLE
+	dbw 4, VENONAT
 	dbw 3, GASTLY
 	dbw 3, SPINARAK
 	dbw 4, MOIBELLE
