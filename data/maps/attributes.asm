@@ -108,6 +108,9 @@ ENDM
 	connection south, Route32, ROUTE_32, 0
 	connection west, Route36, ROUTE_36, 0
 	connection east, Route31, ROUTE_31, 9
+	
+	map_attributes AlderTown, ALDER_TOWN, $05, NORTH
+	connection north, Route32, ROUTE_32, 0
 
 	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
 	connection west, Route34, ROUTE_34, -18
@@ -173,7 +176,7 @@ ENDM
 
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
 	connection north, VioletCity, VIOLET_CITY, 0
-	connection south, Route33, ROUTE_33, 0
+	connection south, AlderTown, ALDER_TOWN, 0
 
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST
 	connection north, Route32, ROUTE_32, 0

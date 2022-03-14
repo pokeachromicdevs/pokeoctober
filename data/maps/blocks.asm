@@ -112,8 +112,8 @@ BetaSproutTower2_Blocks:
 Route12_Blocks:
 	INCBIN "maps/Route12.blk"
 
-BetaGoldenrodCity_Blocks:
-	INCBIN "maps/unused/BetaGoldenrodCity.blk"
+AlderTown_Blocks:
+	INCBIN "maps/AlderTown.blk"
 
 Route20_Blocks:
 	INCBIN "maps/Route20.blk"

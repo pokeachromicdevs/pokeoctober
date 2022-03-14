@@ -396,6 +396,7 @@ INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
+INCLUDE "maps/AlderTown.asm"
 
 
 SECTION "Map Scripts 21", ROMX

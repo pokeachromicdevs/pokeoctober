@@ -18,6 +18,7 @@ Landmarks:
 	landmark  84,  60, VioletCityName
 	landmark  85,  58, SproutTowerName
 	landmark  84,  92, Route32Name
+	landmark  44,  92, AlderTownName
 	landmark  76,  76, RuinsOfAlphName
 	landmark  84, 124, UnionCaveName
 	landmark  82, 124, Route33Name
@@ -42,7 +43,6 @@ Landmarks:
 	landmark  28,  64, Route40Name
 	landmark  28,  92, WhirlIslandsName
 	landmark  28, 100, Route41Name
-	landmark  20, 100, CianwoodCityName
 	landmark  92,  44, Route42Name
 	landmark  84,  44, MtMortarName
 	landmark 108,  44, MahoganyTownName
@@ -110,7 +110,7 @@ NewBarkTownName:     db "SILENT¯TOWN@"       ; Shizuoka
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"    ; Nagoya
 VioletCityName:      db "VIOLET CITY@"        ; Nara
 AzaleaTownName:      db "AZALEA TOWN@"        ; Arida
-CianwoodCityName:    db "ALDER¯TOWN@"       ; XXX: Substitute Cianwood for Shingu 
+AlderTownName:       db "ALDER¯TOWN@"       ; XXX: Substitute Cianwood for Shingu 
 GoldenrodCityName:   db "GOLDENROD¯CITY@"      ; Osaka
 EcruteakCityName:    db "ECRUTEAK¯CITY@"       ; Kyoto
 OlivineCityName:     db "OLIVINE¯CITY@"        ; Kobe

@@ -211,7 +211,8 @@ ENDM
 	map_const AZALEA_GYM,                                   5,  8 ;  5
 	map_const ROUTE_33,                                    20,  9 ;  6
 	map_const AZALEA_TOWN,                                 10,  9 ;  7
-
+	map_const ALDER_TOWN,                                  10,  9 ;  8
+	
 	newgroup                                                      ;  9
 
 	map_const LAKE_OF_RAGE_HIDDEN_POWER_HOUSE,              4,  4 ;  1

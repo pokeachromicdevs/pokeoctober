@@ -12,6 +12,7 @@
 	const VIOLET_CITY       ; 06
 	const SPROUT_TOWER      ; 07
 	const ROUTE_32          ; 08
+	const ALDER_TOWN
 	const RUINS_OF_ALPH     ; 09
 	const UNION_CAVE        ; 0a
 	const ROUTE_33          ; 0b
