@@ -230,6 +230,7 @@ ENDM
 	map_const ROUTE_37,                                    10,  9 ;  4
 	map_const VIOLET_CITY,                                 20, 18 ;  5
 	map_const VIOLET_MART,                                  6,  4 ;  6
+	map_const VIOLET_GYM,                                  10,  9 ;  3
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  7
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
 	map_const VIOLET_POKECENTER_1F,                         8,  4 ;  9
@@ -240,12 +241,12 @@ ENDM
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 15
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 16
+	
 
 	newgroup                                                      ; 11
 
 	map_const ROUTE_34,                                    10, 18 ;  1
 	map_const GOLDENROD_CITY,                              20, 18 ;  2
-	map_const GOLDENROD_GYM,                               10,  9 ;  3
 	map_const GOLDENROD_BIKE_SHOP,                          4,  4 ;  4
 	map_const GOLDENROD_HAPPINESS_RATER,                    4,  4 ;  5
 	map_const BILLS_FAMILYS_HOUSE,                          4,  4 ;  6

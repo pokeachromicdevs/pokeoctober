@@ -671,8 +671,8 @@ AzaleaGym_Blocks:
 CherrygroveGym_Blocks:
 	INCBIN "maps/CherrygroveGym.blk"
 
-GoldenrodGym_Blocks:
-	INCBIN "maps/GoldenrodGym.blk"
+VioletGym_Blocks:
+	INCBIN "maps/VioletGym.blk"
 
 EcruteakGym_Blocks:
 	INCBIN "maps/EcruteakGym.blk"

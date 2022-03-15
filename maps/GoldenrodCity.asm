@@ -552,8 +552,7 @@ UnknownText_0x1991cf:
 GoldenrodCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 15 ; warp events
-	warp_event 24,  7, GOLDENROD_GYM, 1
+	db 14 ; warp events
 	warp_event 29, 29, GOLDENROD_BIKE_SHOP, 1
 	warp_event 31, 21, GOLDENROD_HAPPINESS_RATER, 1
 	warp_event  5, 25, BILLS_FAMILYS_HOUSE, 1

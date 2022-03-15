@@ -1,6 +1,6 @@
 SECTION "Map Scripts 1", ROMX
 
-INCLUDE "maps/GoldenrodGym.asm"
+INCLUDE "maps/VioletGym.asm"
 INCLUDE "maps/GoldenrodBikeShop.asm"
 INCLUDE "maps/GoldenrodHappinessRater.asm"
 INCLUDE "maps/BillsFamilysHouse.asm"

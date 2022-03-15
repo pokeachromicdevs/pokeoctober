@@ -6,7 +6,7 @@
 	const GOLDENRODGYM_BUENA2
 	const GOLDENRODGYM_GYM_GUY
 
-GoldenrodGym_MapScripts:
+VioletGym_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_GOLDENRODGYM_NOTHING
 	scene_script .DummyScene1 ; SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
@@ -183,18 +183,28 @@ BridgetWalksAwayMovement:
 	step_end
 
 WhitneyBeforeText:
-	text "Hi! I'm WHITNEY!"
-
-	para "Everyone was into"
-	line "#MON, so I got"
-	cont "into it too!"
-
-	para "#MON are"
-	line "super-cute!"
-
-	para "You want to bat-"
-	line "tle? I'm warning"
-	cont "you--I'm good!"
+	text "Yo! Name's" 
+	line "WHITNEY, the"
+	cont "VIOLET CITY GYM"
+	
+	para "LEADER! I'm the"
+	line "roughest, tough-"
+	cont "girl on this side"
+	
+	para "of JOHTO! I've"
+	line "even gone toe-to-"
+	cont "toe with wild"
+	
+	para "RATICATE before"
+	line "and won! But, I"
+	cont "do have a weak spot,"
+	
+	para "and that weak spot"
+	line "is cute #MON!"
+	
+	para "But hey, enough"
+	line "about me! Let's"
+	cont "rumble!"
 	done
 
 WhitneyShouldntBeSoSeriousText:
@@ -377,12 +387,12 @@ GoldenrodGymGuyWinText:
 	cont "the ladies here."
 	done
 
-GoldenrodGym_MapEvents:
+VioletGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2, 17, GOLDENROD_CITY, 1
-	warp_event  3, 17, GOLDENROD_CITY, 1
+	warp_event  2, 17, VIOLET_CITY, 6
+	warp_event  3, 17, VIOLET_CITY, 6
 
 	db 1 ; coord events
 	coord_event  8,  5, SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING, WhitneyCriesScript
