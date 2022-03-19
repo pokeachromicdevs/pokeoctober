@@ -391,8 +391,8 @@ VioletGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2, 17, VIOLET_CITY, 6
-	warp_event  3, 17, VIOLET_CITY, 6
+	warp_event  2, 17, VIOLET_CITY, 2
+	warp_event  3, 17, VIOLET_CITY, 2
 
 	db 1 ; coord events
 	coord_event  8,  5, SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING, WhitneyCriesScript

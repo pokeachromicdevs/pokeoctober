@@ -412,9 +412,7 @@ AcademyStickerMachineText:
 EarlsPokemonAcademy_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event  3, 15, VIOLET_CITY, 3
-	warp_event  4, 15, VIOLET_CITY, 3
+	db 0 ; warp events
 
 	db 0 ; coord events
 

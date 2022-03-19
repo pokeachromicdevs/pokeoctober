@@ -157,12 +157,12 @@ ENDM
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
-	connection north, Route46, ROUTE_46, 10
+	map_attributes Route29, ROUTE_29, $05, WEST | EAST
 	connection west, CherrygroveWoods, CHERRYGROVE_WOODS, 0
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 	
-	map_attributes CherrygroveWoods, CHERRYGROVE_WOODS, $05, WEST | EAST
+	map_attributes CherrygroveWoods, CHERRYGROVE_WOODS, $05, NORTH | WEST | EAST
+	connection north, Route46, ROUTE_46, 11
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, -9
 	connection east, Route29, ROUTE_29, 0
 
@@ -232,7 +232,7 @@ ENDM
 	connection west, Route46, ROUTE_46, 36
 
 	map_attributes Route46, ROUTE_46, $05, SOUTH | EAST
-	connection south, Route29, ROUTE_29, -10
+	connection south, CherrygroveWoods, CHERRYGROVE_WOODS, -11
 	connection east, Route45, ROUTE_45, -36
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST

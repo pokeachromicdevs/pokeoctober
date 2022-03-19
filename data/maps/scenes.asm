@@ -36,7 +36,6 @@ MapScenes::
 	scene_var ROUTE_36,                                    wRoute36SceneID
 	scene_var ROUTE_36_NATIONAL_PARK_GATE,                 wRoute36NationalParkGateSceneID
 	scene_var AZALEA_TOWN,                                 wAzaleaTownSceneID
-	scene_var VIOLET_GYM,                                  wGoldenrodGymSceneID
 	scene_var GOLDENROD_MAGNET_TRAIN_STATION,              wGoldenrodMagnetTrainStationSceneID
 	scene_var GOLDENROD_POKECENTER_1F,                     wGoldenrodPokecenter1FSceneID
 	scene_var OLIVINE_CITY,                                wOlivineCitySceneID
