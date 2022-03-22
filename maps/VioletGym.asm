@@ -197,10 +197,11 @@ WhitneyBeforeText:
 	
 	para "RATICATE before"
 	line "and won! But, I"
-	cont "do have a weak spot,"
+	cont "do have a weak"
 	
-	para "and that weak spot"
-	line "is cute #MON!"
+	para "spot, and that"
+	line "weak spot is cute"
+	cont "#MON!"
 	
 	para "But hey, enough"
 	line "about me! Let's"

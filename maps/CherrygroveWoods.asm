@@ -269,7 +269,7 @@ CherrygroveWoods_MapEvents:
 	db 3 ; warp events
 	warp_event 57,  7, CHERRYGROVE_WOODS_GATE, 3
 	warp_event 2,   9, CHERRYGROVE_WOODS_EXIT_GATE, 1
-	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 1
+	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 3
 	
 	db 0 ; coord events
 
