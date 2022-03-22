@@ -266,3 +266,5 @@ PokemonNames::
 	db "MOIBELLE@@";needs animation fully programmed in
 	db "BELLEDAM@@";needs animation
 	db "CLEFLING@@";needs animation fully programmed in
+	db "MALLODY@@@";needs animation fully programmed in
+	db "CAMOUFLAKE";needs animation fully programmed in

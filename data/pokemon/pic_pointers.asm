@@ -539,3 +539,7 @@ PokemonPicPointers::
 	dba BelledamBackpic
 	dba CleflingFrontpic
 	dba CleflingBackpic
+	dba MallodyFrontpic
+	dba MallodyBackpic
+	dba CamouflakeFrontpic
+	dba CamouflakeBackpic

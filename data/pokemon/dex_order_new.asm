@@ -19,6 +19,7 @@ NewPokedexOrder:
 	dw HOOTHOOT
 	dw NOCTOWL
 	dw CLEFLING
+	dw MALLODY
 	dw ADBARSTORK
 	dw RATTATA
 	dw RATICATE
@@ -205,6 +206,7 @@ NewPokedexOrder:
 	dw DELIBIRD
 	dw SWINUB
 	dw PILOSWINE
+	dw CAMOUFLAKE
 	dw TEDDIURSA
 	dw URSARING
 	dw PHANPY

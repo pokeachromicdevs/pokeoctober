@@ -1329,6 +1329,15 @@ LassGroup:
 	dw SENTRET
 	db -1 ; end
 	
+	next_list_item ; LASS (18)
+	db "NIECHELLE@", TRAINERTYPE_NORMAL
+	db 3
+	dw CAMOUFLAKE
+	db 4
+	dw CAMOUFLAKE
+	db -1 ; end
+	
+	
 	end_list_items
 
 JanineGroup:
@@ -4305,7 +4314,7 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (7)
 	db "SHARON@", TRAINERTYPE_NORMAL
-	db 31
+	db 1
 	dw FURRET
 	db 33
 	dw RAPIDASH
@@ -4328,10 +4337,10 @@ PicnickerGroup:
 	db -1 ; end
 
 	next_list_item ; PICNICKER (10)
-	db "ERIN@", TRAINERTYPE_NORMAL
-	db 16
+	db "NIECHELLE@", TRAINERTYPE_NORMAL
+	db 3
 	dw PONYTA
-	db 16
+	db 3
 	dw PONYTA
 	db -1 ; end
 

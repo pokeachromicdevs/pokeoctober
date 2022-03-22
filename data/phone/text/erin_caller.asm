@@ -31,8 +31,9 @@ UnknownText_0x671eb:
 	done
 
 UnknownText_0x6722e:
-	text "I'm ERIN. Want to"
-	line "battle me again?"
+	text "I'm NICHELLE."
+	line "Want to battle"
+	cont "me again?"
 
 	para "I won't lose this"
 	line "time!"
@@ -58,7 +59,8 @@ ErinWorkingHardText:
 
 ErinComeBattleText:
 	text "Oh, <PLAY_G>!"
-	line "Come battle ERIN!"
+	line "Come battle"
+	cont "NICHELLE!"
 
 	para "I'll be waiting on"
 	line "@"

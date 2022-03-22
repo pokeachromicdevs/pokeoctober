@@ -268,6 +268,9 @@ PokemonCries::
 	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
 	mon_cry CRY_RATTATA,     $065,  $180 ; BELLEDAM
 	mon_cry CRY_SPEAROW,     185,   $100 ; CLEFLING
+	mon_cry CRY_SPEAROW,     185,   $100 ; MALLODY
+	mon_cry CRY_SPEAROW,     185,   $100 ; CAMOUFLAKE
+
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

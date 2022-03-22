@@ -262,3 +262,5 @@ FramesPointers:
 	dba MoibelleFrames
 	dba BelledamFrames
 	dba CleflingFrames
+	dba MallodyFrames
+	dba CamouflakeFrames

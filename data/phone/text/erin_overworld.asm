@@ -6,10 +6,11 @@ ErinAskNumber1Text:
 	line "much harder…"
 
 	para "Here's my number."
-	line "I'm ERIN--don't"
+	line "I'm NICHELLE-"
 
-	para "forget! Want to"
-	line "battle me again?"
+	para "don't forget!"
+	line "Want to battle"
+	cont "me again?"
 	done
 
 ErinAskNumber2Text:

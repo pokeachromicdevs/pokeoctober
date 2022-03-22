@@ -262,3 +262,5 @@ AnimationIdlePointers:
 	dw MoibelleAnimationIdle
 	dw BelledamAnimationIdle
 	dw CleflingAnimationIdle
+	dw MallodyAnimationIdle
+	dw CamouflakeAnimationIdle

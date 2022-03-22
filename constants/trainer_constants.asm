@@ -192,6 +192,7 @@ KRIS EQU __enum__
 	const DANA5
 	const ARIEL
 	const LASS_SAM
+	const NIECHELLE
 
 	trainerclass JANINE ; 1a
 	const JANINE1

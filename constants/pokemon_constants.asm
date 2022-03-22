@@ -283,6 +283,8 @@ JOHTO_POKEMON EQU const_value
 	const MOIBELLE
 	const BELLEDAM
 	const CLEFLING
+	const MALLODY
+	const CAMOUFLAKE
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

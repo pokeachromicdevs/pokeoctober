@@ -262,3 +262,5 @@ BitmasksPointers:
 	dw MoibelleBitmasks
 	dw BelledamBitmasks
 	dw CleflingBitmasks
+	dw MallodyBitmasks
+	dw CamouflakeBitmasks

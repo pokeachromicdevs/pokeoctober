@@ -262,3 +262,5 @@ AnimationPointers:
 	dw MoibelleAnimation
 	dw BelledamAnimation
 	dw CleflingAnimation
+	dw MallodyAnimation
+	dw CamouflakeAnimation

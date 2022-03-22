@@ -556,3 +556,7 @@ INCBIN "gfx/pokemon/belledam/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/belledam/shiny.pal"
 INCBIN "gfx/pokemon/clefling/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/clefling/shiny.pal"
+INCBIN "gfx/pokemon/mallody/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/mallody/shiny.pal"
+INCBIN "gfx/pokemon/camouflake/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/camouflake/shiny.pal"

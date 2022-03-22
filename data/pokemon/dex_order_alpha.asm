@@ -23,6 +23,7 @@ AlphabeticalPokedexOrder:
 	dw BLISSEY
 	dw BULBASAUR
 	dw BUTTERFREE
+	dw CAMOUFLAKE
 	dw CATERPIE
 	dw CELEBI
 	dw CHANSEY
@@ -131,6 +132,7 @@ AlphabeticalPokedexOrder:
 	dw MAGMAR
 	dw MAGNEMITE
 	dw MAGNETON
+	dw MALLODY
 	dw MANKEY
 	dw MANTINE
 	dw MAREEP

@@ -12,11 +12,10 @@ Route46_MapScripts:
 	db 0 ; callbacks
 
 TrainerPicnickerErin1:
-	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErin1SeenText, PicnickerErin1BeatenText, 0, .Script
+	trainer LASS, NIECHELLE, EVENT_BEAT_PICNICKER_ERIN, PicnickerErin1SeenText, PicnickerErin1BeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_PICNICKER_ERIN
-	endifjustbattled
 	opentext
 	checkflag ENGINE_ERIN
 	iftrue .WantsBattle
@@ -144,26 +143,23 @@ Route46FruitTree2:
 	fruittree FRUITTREE_ROUTE_46_2
 
 PicnickerErin1SeenText:
-	text "I raise #MON"
-	line "too!"
-
-	para "Will you battle"
-	line "with me?"
+	text "Eek! Are you here"
+	line "to gawk at my"
+	cont "snowballs, too?"
 	done
 
 PicnickerErin1BeatenText:
-	text "Oh, rats!"
+	text "I guess not…"
 	done
 
 PicnickerErinAfterBattleText:
-	text "I've been to many"
-	line "GYMS, but the GYM"
-
-	para "in GOLDENROD is my"
-	line "favorite."
-
-	para "It's filled with"
-	line "pretty flowers!"
+	text "My CAMOUFLAKE"
+	line "sure are cute,"
+	cont "aren't they?"
+	
+	para "We even like to"
+	line "play in the snow"
+	cont "together!"
 	done
 
 PicnickerErin2BeatenText:
@@ -201,6 +197,6 @@ Route46_MapEvents:
 	bg_event 10, 30, BGEVENT_READ, Route46Sign
 
 	db 3 ; object events
-	object_event  8, 19, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
+	object_event  8, 19, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
 	object_event  9, 15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1

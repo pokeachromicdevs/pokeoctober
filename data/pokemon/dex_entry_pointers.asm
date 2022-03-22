@@ -262,3 +262,6 @@ PokedexDataPointerTable:
 	dba PupperonPokedexEntry
 	dba MoibellePokedexEntry
 	dba BelledamPokedexEntry
+	dba CleflingPokedexEntry
+	dba MallodyPokedexEntry
+	dba CamouflakePokedexEntry
