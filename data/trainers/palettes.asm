@@ -82,5 +82,4 @@ INCBIN "gfx/trainers/fledgling.gbcpal", middle_colors
 INCBIN "gfx/trainers/kurt.2bpp.lz", middle_colors
 INCBIN "gfx/trainers/mystic.2bpp.lz", middle_colors
 INCBIN "gfx/trainers/rockclimber.2bpp.lz", middle_colors
-
-
+INCBIN "gfx/trainers/sportsman.2bpp.lz", middle_colors

@@ -77,3 +77,4 @@ TrainerGroups:
 	dba BallsmithGroup
 	dba MysticGroup
 	dba RockClimberGroup
+	dba SportsmanGroup

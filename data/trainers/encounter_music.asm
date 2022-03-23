@@ -78,3 +78,4 @@ TrainerEncounterMusic::
 	db MUSIC_SAGE_ENCOUNTER        ; ballsmith
 	db MUSIC_SAGE_ENCOUNTER        ; mystic 
 	db MUSIC_HIKER_ENCOUNTER       ; rockclimber
+	db MUSIC_OFFICER_ENCOUNTER     ; sportsman

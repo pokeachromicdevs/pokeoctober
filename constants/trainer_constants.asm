@@ -123,6 +123,7 @@ KRIS EQU __enum__
 	const JOEY4
 	const JOEY5
 	const MAX
+	const BENNY
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -735,5 +736,8 @@ KRIS EQU __enum__
 	
 	trainerclass ROCKCLIMBER
 	const HENRY_T
+	
+	trainerclass SPORTSMAN
+	const JAYDEN
 		
 NUM_TRAINER_CLASSES EQU __enum__

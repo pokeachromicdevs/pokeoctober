@@ -1,5 +1,4 @@
 	object_const_def ; object_event constants
-	const ROUTE46_POKEFAN_M
 	const ROUTE46_YOUNGSTER
 	const ROUTE46_LASS
 	const ROUTE46_FRUIT_TREE1
@@ -132,6 +131,28 @@ ErinNoRoomForCalcium:
 Route46RematchGiftF:
 	jumpstd rematchgiftf
 	end
+	
+TrainerYoungsterBenny:	
+	trainer YOUNGSTER, BENNY, EVENT_BEAT_YOUNGSTER_BENNY, YoungsterBennySeenText, YoungsterBennyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext YoungsterBennyAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerSportsmanJayden:	
+	trainer SPORTSMAN, JAYDEN, EVENT_BEAT_SPORTSMAN_JAYDEN, SportsmanJaydenSeenText, SportsmanJaydenBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SportsmanJaydenAfterBattleText
+	waitbutton
+	closetext
+	end
 
 Route46Sign:
 	jumptext Route46SignText
@@ -176,6 +197,44 @@ PicnickerErin2BeatenText:
 	line "that present from"
 	cont "the other time."
 	done
+	
+YoungsterBennySeenText:
+	text "Every season is"
+	line "shorts season!"
+	done
+	
+YoungsterBennyBeatenText:
+	text "That's cold…"
+	done
+	
+YoungsterBennyAfterBattleText:
+	text "Huh? Put on some"
+	line "winter clothes?"
+	
+	para "What are you, my"
+	line "mom?"
+	done
+	
+SportsmanJaydenSeenText:
+	text "Aha! Who needs"
+	line "winter clothes"
+	cont "when you've got"
+	
+	para "the fiery spirit"
+	line "of an athlete?"
+	done
+	
+SportsmanJaydenBeatenText:
+	text "My spirit! It"
+	line "has been extin-"
+	cont "guished!"
+	done
+	
+SportsmanJaydenAfterBattleText:
+	text "The cold…it's"
+	line "finally getting"
+	cont "to me…"
+	done
 
 Route46SignText:
 	text "ROUTE 46"
@@ -195,7 +254,9 @@ Route46_MapEvents:
 	db 1 ; bg events
 	bg_event 10, 30, BGEVENT_READ, Route46Sign
 
-	db 3 ; object events
+	db 5 ; object events
 	object_event  7, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
 	object_event  9, 15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1
+	object_event 11, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBenny, -1
+	object_event  6, 27, SPRITE_SPORTSMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSportsmanJayden, -1

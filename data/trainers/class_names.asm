@@ -75,3 +75,4 @@ TrainerClassNames::
 	db "BALLSMITH@"
 	db "MYSTIC@"
 	db "ROCKCLIMBER@"
+	db "SPORTSMAN@"

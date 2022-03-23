@@ -33,6 +33,7 @@ MaleTrainers:
 	db FLEDGLING
 	db BALLSMITH
 	db ROCKCLIMBER
+	db SPORTSMAN
 .End
 
 FemaleTrainers:

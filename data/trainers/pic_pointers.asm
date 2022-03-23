@@ -76,3 +76,5 @@ TrainerPicPointers::
 	dba FledglingPic
 	dba BallsmithPic
 	dba MysticPic
+	dba RockClimberPic
+	dba SportsmanPic

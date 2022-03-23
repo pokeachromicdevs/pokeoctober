@@ -762,6 +762,14 @@ YoungsterGroup:
 	db 2
 	dw SANDSHREW
 	db -1 ; end
+	
+	next_list_item ; YOUNGSTER (1)
+	db "BENNY@", TRAINERTYPE_NORMAL
+	db 2
+	dw CLEFLING
+	db 5
+	dw LEDYBA
+	db -1 ; end
 
 	end_list_items
 
@@ -5344,6 +5352,15 @@ RockClimberGroup:
 		db -1 ;end 
 		
 		end_list_items
+		
+SportsmanGroup:
+	next_list_item; SPORTSMAN (1)
+	db "JAYDEN@", TRAINERTYPE_NORMAL
+	db 4
+	dw PONYTA
+	db -1 ;end
+	
+	end_list_items
 	
 CamperGroup:
 	next_list_item ; CAMPER (1)

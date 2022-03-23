@@ -112,4 +112,4 @@ OverworldSprites:
 	overworld_sprite BirdKeeperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite SoldierSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite FatGuySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-
+	overworld_sprite SportsmanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
