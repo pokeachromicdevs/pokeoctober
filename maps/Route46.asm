@@ -188,8 +188,7 @@ Route46_MapEvents:
 	db 3 ; warp events
 	warp_event  7, 33, ROUTE_29_ROUTE_46_GATE, 1
 	warp_event  8, 33, ROUTE_29_ROUTE_46_GATE, 2
-	warp_event  4,  7, DARK_CAVE_VIOLET_ENTRANCE, 1
-
+	warp_event  4,  7, DARK_CAVE_VIOLET_ENTRANCE, 3
 
 	db 0 ; coord events
 
@@ -197,6 +196,6 @@ Route46_MapEvents:
 	bg_event 10, 30, BGEVENT_READ, Route46Sign
 
 	db 3 ; object events
-	object_event  8, 19, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
+	object_event  7, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
 	object_event  9, 15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1

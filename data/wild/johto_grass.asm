@@ -1139,19 +1139,19 @@ JohtoGrassWildMons:
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, BIPULLA
+	dbw 3, PHANPY
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
 	dbw 2, TEDDIURSA
-	dbw 4, ZUBAT
+	dbw 4, BIPULLA
 	dbw 4, DUNSPARCE
 	; day
-	dbw 3, BIPULLA
+	dbw 3, PHANPY
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
-	dbw 2, ZUBAT
+	dbw 2, TEDDIURSA
 	dbw 4, BIPULLA
 	dbw 4, DUNSPARCE
 	; nite
@@ -1598,29 +1598,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_46
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, GEODUDE
-	dbw 2, SPEAROW
+	dbw 3, SENTRET
 	dbw 3, GEODUDE
-	dbw 3, RATTATA
-	dbw 2, PHANPY
-	dbw 2, RATTATA
-	dbw 2, RATTATA
+	dbw 4, SWINUB
+	dbw 4, RATTATA
+	dbw 3, PHANPY;WORFURS
+	dbw 3, IGGLYBUFF
+	dbw 3, CAMOUFLAKE
 	; day
-	dbw 2, GEODUDE
-	dbw 2, SPEAROW
+	dbw 3, SENTRET
+	dbw 3, SENTRET
+	dbw 4, CAMOUFLAKE
+	dbw 4, SWINUB
 	dbw 3, GEODUDE
-	dbw 3, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
+	dbw 3, IGGLYBUFF
+	dbw 3, RATTATA;WORFURS
 	; nite
-	dbw 2, GEODUDE
-	dbw 2, RATTATA
-	dbw 3, GEODUDE
 	dbw 3, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
+	dbw 3, RATTATA
+	dbw 4, GEODUDE
+	dbw 4, RATTATA;WORFURS
+	dbw 3, SWINUB
+	dbw 3, GASTLY
+	dbw 3, BIPULLA
 
 	map_id SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
