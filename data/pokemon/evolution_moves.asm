@@ -257,3 +257,6 @@ EvolutionMoves::
 	db NO_MOVE      ; MOIBELLE
 	db NO_MOVE      ; BELLEDAM
 	db NO_MOVE      ; CLEFLING
+	db NO_MOVE      ; MALLODY
+	db NO_MOVE      ; CAMOUFLAKE
+	db NO_MOVE      ; COALTA

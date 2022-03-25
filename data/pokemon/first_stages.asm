@@ -57,8 +57,8 @@ FirstEvoStages::
 	dw PSYDUCK
 	dw MANKEY     ;38
 	dw MANKEY
-	dw GROWLITHE
-	dw GROWLITHE
+	dw PUPPERON
+	dw PUPPERON
 	dw POLIWAG
 	dw POLIWAG
 	dw POLIWAG
@@ -76,8 +76,8 @@ FirstEvoStages::
 	dw GEODUDE
 	dw GEODUDE
 	dw GEODUDE
-	dw PONYTA
-	dw PONYTA
+	dw COALTA
+	dw COALTA
 	dw SLOWPOKE
 	dw SLOWPOKE   ;50
 	dw MAGNEMITE
@@ -252,3 +252,11 @@ FirstEvoStages::
 	dw HO_OH
 	dw CELEBI
 	dw COINPUR
+	dw ADBARSTORK
+	dw PUPPERON
+	dw MOIBELLE
+	dw MOIBELLE
+	dw CLEFLING
+	dw CLEFLING
+	dw CAMOUFLAKE
+	dw COALTA
