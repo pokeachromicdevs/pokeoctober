@@ -1183,32 +1183,36 @@ PonytaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 40, RAPIDASH
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 4, GROWL
-	dbw 8, TAIL_WHIP
-	dbw 13, EMBER
-	dbw 19, STOMP
-	dbw 26, FIRE_SPIN
-	dbw 34, TAKE_DOWN
-	dbw 43, AGILITY
-	dbw 53, FIRE_BLAST
-	db 0 ; no more level-up moves
-
+	dbw 1, TAIL_WHIP
+	dbw 5, GROWL
+	dbw 10, EMBER
+	dbw 14, DOUBLE_KICK
+	dbw 19, FIRE_SPIN
+	dbw 24, QUICK_ATTACK
+	dbw 28, FLAME_WHEEL
+	dbw 33, STOMP
+	dbw 38, FLAMETHROWER
+	dbw 42, AGILITY
+	dbw 47, SUNNY_DAY
+	dbw 52, FIRE_BLAST
+	db 0 ; no more level-up moves 
+	
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
-	dbw 1, EMBER
-	dbw 4, GROWL
-	dbw 8, TAIL_WHIP
-	dbw 13, EMBER
-	dbw 19, STOMP
-	dbw 26, FIRE_SPIN
-	dbw 34, TAKE_DOWN
-	dbw 39, FURY_ATTACK
-	dbw 47, AGILITY
-	dbw 61, FIRE_BLAST
-	db 0 ; no more level-up moves
+	dbw 5, GROWL
+	dbw 10, EMBER
+	dbw 14, DOUBLE_KICK
+	dbw 19, FIRE_SPIN
+	dbw 24, QUICK_ATTACK
+	dbw 28, FLAME_WHEEL
+	dbw 33, STOMP
+	dbw 38, FLAMETHROWER
+	dbw 44, AGILITY
+	dbw 49, SUNNY_DAY
+	dbw 54, FIRE_BLAST
+	db 0 ; no more level-up moves 
 
 SlowpokeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, SLOWBRO

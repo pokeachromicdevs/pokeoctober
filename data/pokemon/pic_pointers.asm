@@ -543,3 +543,5 @@ PokemonPicPointers::
 	dba MallodyBackpic
 	dba CamouflakeFrontpic
 	dba CamouflakeBackpic
+	dba CoaltaFrontpic
+	dba CoaltaBackpic

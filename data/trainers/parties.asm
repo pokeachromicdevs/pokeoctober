@@ -5352,15 +5352,6 @@ RockClimberGroup:
 		db -1 ;end 
 		
 		end_list_items
-		
-SportsmanGroup:
-	next_list_item; SPORTSMAN (1)
-	db "JAYDEN@", TRAINERTYPE_NORMAL
-	db 4
-	dw PONYTA
-	db -1 ;end
-	
-	end_list_items
 	
 CamperGroup:
 	next_list_item ; CAMPER (1)
@@ -5565,3 +5556,20 @@ CamperGroup:
 	
 	end_list_items
 	
+SportsmanGroup:
+	next_list_item; SPORTSMAN (1)
+	db "JAYDEN@", TRAINERTYPE_NORMAL
+	db 4
+	dw COALTA
+	db -1 ;end
+	
+	end_list_items
+	
+ManchildGroup:
+	next_list_item ; MANCHILD (1)
+	db "MIGUEL@", TRAINERTYPE_NORMAL
+	db 5
+	dw TOGEPI
+	db -1 ;end
+
+	end_list_items

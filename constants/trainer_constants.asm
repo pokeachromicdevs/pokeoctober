@@ -739,5 +739,8 @@ KRIS EQU __enum__
 	
 	trainerclass SPORTSMAN
 	const JAYDEN
-		
+	
+	trainerclass MANCHILD
+	const MIGUEL
+	
 NUM_TRAINER_CLASSES EQU __enum__

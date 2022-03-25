@@ -78,3 +78,4 @@ BTTrainerClassGenders:
 	db FEMALE ; MYSTIC 
 	db MALE   ; ROCKCLIMBER
 	db MALE   ; SPORTSMAN
+	db MALE   ; MANCHILD

@@ -261,10 +261,11 @@ PokemonNames::
 	db "HO-OH@@@@@"
 	db "CELEBI@@@@";insert beta sprite
 	db "COINPUR@@@";check animation
-	db "ADBARSTORK";check animation
+	db "ADBARSTORK";needs animation fully programmed in
 	db "PUPPERON@@";needs animation and palette fix
 	db "MOIBELLE@@";needs animation fully programmed in
 	db "BELLEDAM@@";needs animation
 	db "CLEFLING@@";needs animation fully programmed in
 	db "MALLODY@@@";needs animation fully programmed in
 	db "CAMOUFLAKE";needs animation fully programmed in
+	db "COALTA@@@@";needs animation fully programmed in

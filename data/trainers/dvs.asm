@@ -77,3 +77,4 @@ TrainerClassDVs:
 	dn  7,  8,  8,  8 ; MYSTIC 
 	dn  9,  9,  8,  8 ; ROCKCLIMBER
 	dn  9,  8,  8,  8 ; SPORTSMAN
+	dn  7,  8,  8,  8 ; MANCHILD

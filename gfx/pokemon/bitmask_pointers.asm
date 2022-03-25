@@ -264,3 +264,4 @@ BitmasksPointers:
 	dw CleflingBitmasks
 	dw MallodyBitmasks
 	dw CamouflakeBitmasks
+	dw CoaltaBitmasks

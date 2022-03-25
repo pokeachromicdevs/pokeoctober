@@ -270,7 +270,7 @@ PokemonCries::
 	mon_cry CRY_SPEAROW,     185,   $100 ; CLEFLING
 	mon_cry CRY_SPEAROW,     185,   $100 ; MALLODY
 	mon_cry CRY_PICHU,       $000,  $150 ; CAMOUFLAKE
-
+	mon_cry CRY_MARILL,      $0c0,  $090 ; COALTA
 
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake

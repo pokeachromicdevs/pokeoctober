@@ -265,3 +265,4 @@ PokedexDataPointerTable:
 	dba CleflingPokedexEntry
 	dba MallodyPokedexEntry
 	dba CamouflakePokedexEntry
+	dba CoaltaPokedexEntry

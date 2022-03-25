@@ -76,7 +76,7 @@ EggMovePointers1:
 	dw GeodudeEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
-	dw PonytaEggMoves
+	dw NoEggMoves1
 	dw NoEggMoves1
 	dw SlowpokeEggMoves
 	dw NoEggMoves1
@@ -352,15 +352,6 @@ TentacoolEggMoves:
 GeodudeEggMoves:
 	dw MEGA_PUNCH
 	dw ROCK_SLIDE
-	dw -1 ; end
-
-PonytaEggMoves:
-	dw FLAME_WHEEL
-	dw THRASH
-	dw DOUBLE_KICK
-	dw HYPNOSIS
-	dw CHARM
-	dw QUICK_ATTACK
 	dw -1 ; end
 
 SlowpokeEggMoves:

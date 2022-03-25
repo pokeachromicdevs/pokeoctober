@@ -34,6 +34,7 @@ MaleTrainers:
 	db BALLSMITH
 	db ROCKCLIMBER
 	db SPORTSMAN
+	db MANCHILD
 .End
 
 FemaleTrainers:

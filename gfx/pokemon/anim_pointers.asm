@@ -264,3 +264,4 @@ AnimationPointers:
 	dw CleflingAnimation
 	dw MallodyAnimation
 	dw CamouflakeAnimation
+	dw CoaltaAnimation

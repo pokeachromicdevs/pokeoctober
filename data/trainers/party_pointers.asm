@@ -78,3 +78,4 @@ TrainerGroups:
 	dba MysticGroup
 	dba RockClimberGroup
 	dba SportsmanGroup
+	dba ManchildGroup

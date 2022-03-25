@@ -37,6 +37,7 @@ AlphabeticalPokedexOrder:
 	dw CLEFFA
 	dw CLEFLING
 	dw CLOYSTER
+	dw COALTA
 	dw COINPUR
 	dw CORSOLA
 	dw CROBAT

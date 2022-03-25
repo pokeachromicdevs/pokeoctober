@@ -76,3 +76,4 @@ TrainerClassNames::
 	db "MYSTIC@"
 	db "ROCKCLIMBER@"
 	db "SPORTSMAN@"
+	db "MANCHILD@"

@@ -264,3 +264,4 @@ FramesPointers:
 	dba CleflingFrames
 	dba MallodyFrames
 	dba CamouflakeFrames
+	dba CoaltaFrames

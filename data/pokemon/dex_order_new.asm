@@ -215,6 +215,7 @@ NewPokedexOrder:
 	dw SKARMORY
 	dw DODUO
 	dw DODRIO
+	dw COALTA
 	dw PONYTA
 	dw RAPIDASH
 	dw CUBONE

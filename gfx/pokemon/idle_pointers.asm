@@ -264,3 +264,4 @@ AnimationIdlePointers:
 	dw CleflingAnimationIdle
 	dw MallodyAnimationIdle
 	dw CamouflakeAnimationIdle
+	dw CoaltaAnimationIdle

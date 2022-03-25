@@ -79,7 +79,8 @@ INCBIN "gfx/trainers/professor.gbcpal", middle_colors
 INCBIN "gfx/trainers/prodigy.gbcpal", middle_colors
 INCBIN "gfx/trainers/soldier.gbcpal", middle_colors
 INCBIN "gfx/trainers/fledgling.gbcpal", middle_colors
-INCBIN "gfx/trainers/kurt.2bpp.lz", middle_colors
-INCBIN "gfx/trainers/mystic.2bpp.lz", middle_colors
-INCBIN "gfx/trainers/rockclimber.2bpp.lz", middle_colors
-INCBIN "gfx/trainers/sportsman.2bpp.lz", middle_colors
+INCBIN "gfx/trainers/kurt.gbcpal", middle_colors
+INCBIN "gfx/trainers/mystic.gbcpal", middle_colors
+INCBIN "gfx/trainers/rockclimber.gbcpal", middle_colors
+INCBIN "gfx/trainers/sportsman.gbcpal", middle_colors
+INCBIN "gfx/trainers/manchild.gbcpal", middle_colors

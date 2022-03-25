@@ -114,6 +114,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw CoaltaEggMoves
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -496,4 +497,13 @@ NoEggMoves2:
 	
 MoibelleEggMoves:
 	dw LICK
+	dw -1 ; end
+	
+CoaltaEggMoves:
+	dw FLAME_WHEEL
+	dw THRASH
+	dw DOUBLE_KICK
+	dw HYPNOSIS
+	dw CHARM
+	dw QUICK_ATTACK
 	dw -1 ; end

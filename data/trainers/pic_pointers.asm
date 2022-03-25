@@ -78,3 +78,4 @@ TrainerPicPointers::
 	dba MysticPic
 	dba RockClimberPic
 	dba SportsmanPic
+	dba ManchildPic

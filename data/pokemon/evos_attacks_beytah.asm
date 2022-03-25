@@ -9,6 +9,7 @@ EvosAttacksPointers3::
 	dw CleflingEvosAttacks
 	dw MallodyEvosAttacks
 	dw CamouflakeEvosAttacks
+	dw CoaltaEvosAttacks
 
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -130,3 +131,20 @@ CamouflakeEvosAttacks:
 	dbw 45, GIGA_DRAIN
 	db 0 ; no more level-up moves
 	
+CoaltaEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_ANYTIME, PONYTA
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 5, GROWL
+	dbw 10, EMBER
+	dbw 14, DOUBLE_KICK
+	dbw 19, FIRE_SPIN
+	dbw 24, QUICK_ATTACK
+	dbw 28, FLAME_WHEEL
+	dbw 33, STOMP
+	dbw 38, FLAMETHROWER
+	dbw 42, AGILITY
+	dbw 47, SUNNY_DAY
+	dbw 52, FIRE_BLAST
+	db 0 ; no more level-up moves 
