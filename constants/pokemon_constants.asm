@@ -286,6 +286,7 @@ JOHTO_POKEMON EQU const_value
 	const MALLODY
 	const CAMOUFLAKE
 	const COALTA
+	const BURGELA
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

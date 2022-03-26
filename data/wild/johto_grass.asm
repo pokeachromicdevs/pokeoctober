@@ -1653,10 +1653,10 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, PIDGEY;PIDGEY
-	dbw 3, TANGELA;BURGELA
-	dbw 4, YANMA;LEDYBA
+	dbw 3, BURGELA;BURGELA
+	dbw 4, YANMA
 	dbw 3, CLEFLING
-	dbw 3, YANMA;YANMA
+	dbw 3, YANMA
 	dbw 4, LEDYBA
 	dbw 4, FARFETCH_D
 	
@@ -1674,6 +1674,6 @@ JohtoGrassWildMons:
 	dbw 3, GASTLY
 	dbw 3, SPINARAK
 	dbw 4, MOIBELLE
-	dbw 4, PARAS
+	dbw 4, PARAS;baby Paras when added
 	
 	db -1 ; end

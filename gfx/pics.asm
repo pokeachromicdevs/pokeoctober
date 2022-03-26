@@ -740,10 +740,13 @@ MallodyFrontpic: INCBIN "gfx/pokemon/mallody/front.animated.2bpp.lz"
 MallodyBackpic:  INCBIN "gfx/pokemon/mallody/back.2bpp.lz"
 CamouflakeFrontpic: INCBIN "gfx/pokemon/camouflake/front.animated.2bpp.lz"
 CamouflakeBackpic:  INCBIN "gfx/pokemon/camouflake/back.2bpp.lz"
-CoaltaFrontpic: INCBIN "gfx/pokemon/coalta/front.animated.2bpp.lz"
-CoaltaBackpic:  INCBIN "gfx/pokemon/coalta/back.2bpp.lz"
+
 
 SECTION "Pics 21", ROMX
 
 SportsmanPic:  INCBIN "gfx/trainers/sportsman.2bpp.lz"
 ManchildPic: INCBIN "gfx/trainers/manchild.2bpp.lz"
+CoaltaFrontpic: INCBIN "gfx/pokemon/coalta/front.animated.2bpp.lz"
+CoaltaBackpic:  INCBIN "gfx/pokemon/coalta/back.2bpp.lz"
+BurgelaFrontpic: INCBIN "gfx/pokemon/burgela/front.animated.2bpp.lz"
+BurgelaBackpic:  INCBIN "gfx/pokemon/burgela/back.2bpp.lz"

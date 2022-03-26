@@ -22,6 +22,7 @@ AlphabeticalPokedexOrder:
 	dw BLASTOISE
 	dw BLISSEY
 	dw BULBASAUR
+	dw BURGELA
 	dw BUTTERFREE
 	dw CAMOUFLAKE
 	dw CATERPIE

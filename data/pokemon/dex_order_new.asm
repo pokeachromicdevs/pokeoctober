@@ -192,6 +192,7 @@ NewPokedexOrder:
 	dw SEEL
 	dw DEWGONG
 	dw LICKITUNG
+	dw BURGELA
 	dw TANGELA
 	dw EEVEE
 	dw VAPOREON

@@ -1,9 +1,9 @@
-; Every Pokémon sorted in New Pokédex Order.
+; Every Pokémon sorted in Old Pokédex Order.
 
-NewPokedexOrder:
-	dw CHIKORITA
-	dw PETAMOLE
-	dw MEGANIUM
+OldPokedexOrder:
+	dw BULBASAUR
+	dw IVYSAUR
+	dw VENUSAUR
 	dw CYNDAQUIL
 	dw QUILAVA
 	dw TYPHLOSION
@@ -188,6 +188,7 @@ NewPokedexOrder:
 	dw SEEL
 	dw DEWGONG
 	dw LICKITUNG
+	dw BURGELA
 	dw TANGELA
 	dw EEVEE
 	dw VAPOREON
@@ -235,9 +236,9 @@ NewPokedexOrder:
 	dw KABUTOPS
 	dw AERODACTYL
 	dw SNORLAX
-	dw BULBASAUR
-	dw IVYSAUR
-	dw VENUSAUR
+	dw CHIKORITA
+	dw PETAMOLE
+	dw MEGANIUM
 	dw CHARMANDER
 	dw CHARMELEON
 	dw CHARIZARD

@@ -266,5 +266,6 @@ MonMenuIcons:
 	db ICON_PIDGEY      ; CLEFLING
 	db ICON_FEAROW      ; MALLODY
 	db ICON_VOLTORB     ; CAMOUFLAKE
-	db ICON_PONYTA      ; COALTA  
+	db ICON_PONYTA      ; COALTA
+	db ICON_TANGELA     ; BURGELA
 	db ICON_EGG         ; EGG

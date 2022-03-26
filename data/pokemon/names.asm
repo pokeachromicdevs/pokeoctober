@@ -269,3 +269,4 @@ PokemonNames::
 	db "MALLODY@@@";needs animation fully programmed in
 	db "CAMOUFLAKE";needs animation fully programmed in
 	db "COALTA@@@@";needs animation fully programmed in
+	db "BURGELA@@@";needs animation fully programmed in

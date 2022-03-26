@@ -113,7 +113,7 @@ EggMovePointers1:
 	dw RhyhornEggMoves
 	dw NoEggMoves1
 	dw ChanseyEggMoves
-	dw TangelaEggMoves
+	dw NoEggMoves1
 	dw KangaskhanEggMoves
 	dw HorseaEggMoves
 	dw NoEggMoves1
@@ -469,14 +469,6 @@ ChanseyEggMoves:
 	dw PRESENT
 	dw METRONOME
 	dw HEAL_BELL
-	dw -1 ; end
-
-TangelaEggMoves:
-	dw FLAIL
-	dw CONFUSION
-	dw MEGA_DRAIN
-	dw REFLECT
-	dw AMNESIA
 	dw -1 ; end
 
 KangaskhanEggMoves:

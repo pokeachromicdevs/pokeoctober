@@ -197,7 +197,7 @@ Rival1Group:
 	db 12
 	dw SENTRET
 	db 12
-	dw TANGELA
+	dw BURGELA
 	db 13
 	dw ZUBAT
 	db 14

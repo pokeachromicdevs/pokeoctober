@@ -265,3 +265,4 @@ AnimationPointers:
 	dw MallodyAnimation
 	dw CamouflakeAnimation
 	dw CoaltaAnimation
+	dw BurgelaAnimation

@@ -115,6 +115,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw CoaltaEggMoves
+	dw BurgelaEggMoves
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -506,4 +507,12 @@ CoaltaEggMoves:
 	dw HYPNOSIS
 	dw CHARM
 	dw QUICK_ATTACK
+	dw -1 ; end
+	
+BurgelaEggMoves:
+	dw FLAIL
+	dw CONFUSION
+	dw MEGA_DRAIN
+	dw REFLECT
+	dw AMNESIA
 	dw -1 ; end

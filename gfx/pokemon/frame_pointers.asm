@@ -265,3 +265,4 @@ FramesPointers:
 	dba MallodyFrames
 	dba CamouflakeFrames
 	dba CoaltaFrames
+	dba BurgelaFrames

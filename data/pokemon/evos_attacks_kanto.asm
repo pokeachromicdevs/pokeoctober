@@ -1714,15 +1714,18 @@ ChanseyEvosAttacks:
 TangelaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, CONSTRICT
-	dbw 4, SLEEP_POWDER
-	dbw 10, ABSORB
-	dbw 13, POISONPOWDER
-	dbw 19, VINE_WHIP
-	dbw 25, BIND
-	dbw 31, MEGA_DRAIN
-	dbw 34, STUN_SPORE
-	dbw 40, SLAM
-	dbw 46, GROWTH
+	dbw 1, STUN_SPORE
+	dbw 5, ABSORB
+	dbw 8, GROWTH
+	dbw 13, BIND
+	dbw 17, VINE_WHIP
+	dbw 22, POISONPOWDER
+	dbw 25, MEGA_DRAIN
+	dbw 30, SLAM
+	dbw 33, ANCIENTPOWER
+	dbw 38, GIGA_DRAIN
+	dbw 41, SLEEP_POWDER
+	dbw 46, ROLLOUT
 	db 0 ; no more level-up moves
 
 KangaskhanEvosAttacks:
