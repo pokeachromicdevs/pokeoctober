@@ -633,22 +633,34 @@ VulpixEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
-	dbw 7, QUICK_ATTACK
-	dbw 13, ROAR
-	dbw 19, CONFUSE_RAY
-	dbw 25, SAFEGUARD
-	dbw 31, FLAMETHROWER
-	dbw 37, FIRE_SPIN
+	dbw 6, QUICK_ATTACK
+	dbw 11, TEMPT
+	dbw 17, SPITE
+	dbw 22, FIRE_SPIN
+	dbw 28, CONFUSION
+	dbw 33, FLAMETHROWER
+	dbw 39, FAINT_ATTACK
+	dbw 44, CONFUSE_RAY
+	dbw 50, FIRE_BLAST
+	dbw 55, PSYCHIC
 	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, EMBER
-	dbw 1, QUICK_ATTACK
-	dbw 1, CONFUSE_RAY
-	dbw 1, SAFEGUARD
-	dbw 43, FIRE_SPIN
+	dbw 1, TAIL_WHIP
+	dbw 6, QUICK_ATTACK
+	dbw 11, TEMPT
+	dbw 17, SPITE
+	dbw 22, FIRE_SPIN
+	dbw 28, CONFUSION
+	dbw 33, FLAMETHROWER
+	dbw 39, FAINT_ATTACK
+	dbw 44, CONFUSE_RAY
+	dbw 50, FIRE_BLAST
+	dbw 55, PSYCHIC
 	db 0 ; no more level-up moves
+
 
 JigglypuffEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, WIGGLYTUFF

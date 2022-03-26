@@ -272,6 +272,7 @@ PokemonCries::
 	mon_cry CRY_PICHU,       $000,  $150 ; CAMOUFLAKE
 	mon_cry CRY_MARILL,      $0c0,  $090 ; COALTA
 	mon_cry CRY_MARILL,      $f4c,  $110 ; BURGELA
+	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; VULPIII
 
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake

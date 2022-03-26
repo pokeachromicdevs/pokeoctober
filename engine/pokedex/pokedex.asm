@@ -1905,25 +1905,37 @@ Pokedex_PrintListing:
 	pop de
 	pop hl
 	jp PlaceString
-
+	
 Pokedex_PrintNumberIfOldMode:
 	ld a, [wCurDexMode]
 	cp DEXMODE_OLD
-	ret nz
+	jr z, .printnum
+	ret
+
+.printnum
 	push hl
-	push de
-	ld bc, -SCREEN_WIDTH
-	add hl, bc
-	ld a, e
-	ld [wPokedexDisplayNumber + 1], a
-	ld a, d
-	ld de, wPokedexDisplayNumber
-	ld [de], a
-	lb bc, PRINTNUM_LEADINGZEROS | 2, 3
+	ld de, -SCREEN_WIDTH
+	add hl, de
+	call Pokedex_GetDexNumber
+	ld de, wUnusedBCDNumber
+	
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	call PrintNum
-	pop de
 	pop hl
 	ret
+	
+; Print dex number
+	hlcoord 2, 8
+	ld a, $5c ; No
+	ld [hli], a
+	ld a, $5d ; .
+	ld [hli], a
+	;ld de, wTempSpecies
+	call Pokedex_GetDexNumber
+	ld de, wUnusedBCDNumber
+	
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
+	call PrintNum
 
 Pokedex_PlaceCaughtSymbolIfCaught:
 	push hl
@@ -3167,3 +3179,25 @@ Pokedex_ResetBGMapMode:
 	xor a
 	ldh [hBGMapMode], a
 	ret
+	
+Pokedex_GetDexNumber:
+; Get the intended number of the selected Pokémon.
+	push bc
+	push hl
+	
+	ld a, [wTempSpecies] ;a = current mon (internal number)
+	ld b, a ;b = Needed mon (a and b must be matched)
+	ld c, 0 ;c = index
+	ld hl,OldPokedexOrder
+	
+.loop
+	inc c
+	ld a, [hli]
+	cp b
+	jr nz, .loop
+	ld a, c
+	ld [wUnusedBCDNumber], a
+	pop hl
+	pop bc
+	ret
+

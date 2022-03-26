@@ -11,6 +11,7 @@ EvosAttacksPointers3::
 	dw CamouflakeEvosAttacks
 	dw CoaltaEvosAttacks
 	dw BurgelaEvosAttacks 
+	dw VupiiiEvosAttacks
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -167,3 +168,21 @@ BurgelaEvosAttacks:
 	dbw 41, SLEEP_POWDER
 	dbw 46, ROLLOUT
 	db 0 ; no more level-up moves
+	
+VupiiiEvosAttacks:
+	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, VULPIX
+	db 0 ; no more evolutions
+	dbw 1, EMBER
+	dbw 1, TAIL_WHIP
+	dbw 6, QUICK_ATTACK
+	dbw 11, TEMPT
+	dbw 17, SPITE
+	dbw 22, FIRE_SPIN
+	dbw 28, CONFUSION
+	dbw 33, FLAMETHROWER
+	dbw 39, FAINT_ATTACK
+	dbw 44, CONFUSE_RAY
+	dbw 50, FIRE_BLAST
+	dbw 55, PSYCHIC
+	db 0 ; no more level-up moves
+	

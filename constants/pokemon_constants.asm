@@ -287,6 +287,8 @@ JOHTO_POKEMON EQU const_value
 	const CAMOUFLAKE
 	const COALTA
 	const BURGELA
+	const VULPIII
+	
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

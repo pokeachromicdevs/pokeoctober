@@ -37,7 +37,7 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
-	dw VulpixEggMoves
+	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -235,14 +235,6 @@ NidoranMEggMoves:
 	dw AMNESIA
 	dw COUNTER
 	dw BEAT_UP
-	dw -1 ; end
-
-VulpixEggMoves:
-	dw FAINT_ATTACK
-	dw HYPNOSIS
-	dw FLAIL
-	dw SPITE
-	dw DISABLE
 	dw -1 ; end
 
 ZubatEggMoves:

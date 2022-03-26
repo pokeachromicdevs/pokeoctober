@@ -128,6 +128,7 @@ OldPokedexOrder:
 	dw AIPOM
 	dw SNUBBULL
 	dw GRANBULL
+	dw VULPIII
 	dw VULPIX
 	dw NINETALES
 	dw PUPPERON

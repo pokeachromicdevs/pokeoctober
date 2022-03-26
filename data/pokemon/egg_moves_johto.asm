@@ -116,6 +116,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw CoaltaEggMoves
 	dw BurgelaEggMoves
+	dw VulpiiiEggMoves
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -515,4 +516,12 @@ BurgelaEggMoves:
 	dw MEGA_DRAIN
 	dw REFLECT
 	dw AMNESIA
+	dw -1 ; end
+	
+VulpiiiEggMoves:
+	dw FAINT_ATTACK
+	dw HYPNOSIS
+	dw FLAIL
+	dw SPITE
+	dw DISABLE
 	dw -1 ; end

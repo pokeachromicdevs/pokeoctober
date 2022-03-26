@@ -266,3 +266,4 @@ FramesPointers:
 	dba CamouflakeFrames
 	dba CoaltaFrames
 	dba BurgelaFrames
+	dba VulpiiiFrames

@@ -256,6 +256,7 @@ AlphabeticalPokedexOrder:
 	dw VICTREEBEL
 	dw VILEPLUME
 	dw VOLTORB
+	dw VULPIII
 	dw VULPIX
 	dw WARTORTLE
 	dw WEEDLE

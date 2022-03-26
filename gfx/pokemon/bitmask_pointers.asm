@@ -266,3 +266,4 @@ BitmasksPointers:
 	dw CamouflakeBitmasks
 	dw CoaltaBitmasks
 	dw BurgelaBitmasks
+	dw VulpiiiBitmasks

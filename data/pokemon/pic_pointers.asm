@@ -547,3 +547,5 @@ PokemonPicPointers::
 	dba CoaltaBackpic
 	dba BurgelaFrontpic
 	dba BurgelaBackpic
+	dba VulpiiiFrontpic
+	dba VulpiiiBackpic

@@ -179,6 +179,7 @@ SECTION "bank11", ROMX
 
 INCLUDE "engine/events/fruit_trees.asm"
 INCLUDE "engine/battle/ai/move.asm"
+INCLUDE "engine/pokedex/pokedex.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
 INCLUDE "engine/pokemon/mail.asm"
 
@@ -717,7 +718,3 @@ INCLUDE "engine/16/table_functions.asm"
 
 ; own section
 INCLUDE "data/trainers/parties.asm"
-
-SECTION "Pokedex", ROMX
-
-INCLUDE "engine/pokedex/pokedex.asm"

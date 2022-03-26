@@ -267,3 +267,4 @@ PokedexDataPointerTable:
 	dba CamouflakePokedexEntry
 	dba CoaltaPokedexEntry
 	dba BurgelaPokedexEntry
+	dba VulpiiiPokedexEntry

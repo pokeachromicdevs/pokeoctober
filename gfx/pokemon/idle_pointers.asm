@@ -266,3 +266,4 @@ AnimationIdlePointers:
 	dw CamouflakeAnimationIdle
 	dw CoaltaAnimationIdle
 	dw BurgelaAnimationIdle
+	dw VulpiiiAnimationIdle
