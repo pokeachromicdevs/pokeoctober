@@ -36,8 +36,8 @@ FirstEvoStages::
 	dw NIDORAN_M
 	dw CLEFFA
 	dw CLEFFA
-	dw VULPIX
-	dw VULPIX
+	dw VULPIII
+	dw VULPIII
 	dw IGGLYBUFF
 	dw IGGLYBUFF  ;28
 	dw ZUBAT
@@ -113,7 +113,7 @@ FirstEvoStages::
 	dw RHYHORN
 	dw RHYHORN    ;70
 	dw CHANSEY
-	dw TANGELA
+	dw BURGELA
 	dw KANGASKHAN
 	dw HORSEA
 	dw HORSEA
@@ -260,3 +260,5 @@ FirstEvoStages::
 	dw CLEFLING
 	dw CAMOUFLAKE
 	dw COALTA
+	dw BURGELA
+	dw VULPIII
