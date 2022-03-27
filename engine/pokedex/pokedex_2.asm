@@ -90,6 +90,7 @@ DisplayDexEntry:
 	ld h, b
 	ld l, c
 	push de
+	
 ; Print dex number
 	hlcoord 2, 8
 	ld a, $5c ; No
@@ -102,6 +103,7 @@ DisplayDexEntry:
 	
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	call PrintNum
+	
 ; Check to see if we caught it.  Get out of here if we haven't.
 	ld a, [wTempSpecies]
 	call CheckCaughtMon
