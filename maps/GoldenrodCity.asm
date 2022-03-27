@@ -252,9 +252,6 @@ GoldenrodCityBikeShopSign:
 GoldenrodCityGameCornerSign:
 	jumptext GoldenrodCityGameCornerSignText
 
-GoldenrodCityNameRaterSign:
-	jumptext GoldenrodCityNameRaterSignText
-
 GoldenrodCityUndergroundSignNorth:
 	jumptext GoldenrodCityUndergroundSignNorthText
 
@@ -459,12 +456,6 @@ GoldenrodCityGameCornerSignText:
 	line "GAME CORNER"
 	done
 
-GoldenrodCityNameRaterSignText:
-	text "NAME RATER"
-
-	para "Get Your #MON"
-	line "Nicknames Rated"
-	done
 
 GoldenrodCityUndergroundSignNorthText:
 	text "UNDERGROUND"
@@ -570,7 +561,7 @@ GoldenrodCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 12 ; bg events
+	db 11 ; bg events
 	bg_event 10, 14, BGEVENT_READ, GoldenrodCityStationSign
 	bg_event  4, 17, BGEVENT_READ, GoldenrodCityRadioTowerSign
 	bg_event 26, 27, BGEVENT_READ, GoldenrodDeptStoreSign
@@ -578,7 +569,6 @@ GoldenrodCity_MapEvents:
 	bg_event 22, 18, BGEVENT_READ, GoldenrodCitySign
 	bg_event 28, 30, BGEVENT_READ, GoldenrodCityBikeShopSign
 	bg_event 16, 22, BGEVENT_READ, GoldenrodCityGameCornerSign
-	bg_event 12,  7, BGEVENT_READ, GoldenrodCityNameRaterSign
 	bg_event  8,  6, BGEVENT_READ, GoldenrodCityUndergroundSignNorth
 	bg_event 12, 30, BGEVENT_READ, GoldenrodCityUndergroundSignSouth
 	bg_event 16, 27, BGEVENT_UP, GoldenrodCityPokecenterSign

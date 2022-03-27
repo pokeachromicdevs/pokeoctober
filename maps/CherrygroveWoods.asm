@@ -174,6 +174,9 @@ TrainerBugCatcherLenny:
 	closetext
 	end
 	
+CherrygroveWoodsNameRaterSign:
+	jumptext CherrygroveWoodsNameRaterSignText
+	
 YoungsterJoey1SeenText:
 	text "I just lost, so"
 	line "I'm trying to find"
@@ -257,6 +260,13 @@ BugCatcherLennyAfterText:
 	para "Nice job, idiot!"
 	done
 
+CherrygroveWoodsNameRaterSignText:
+	text "NAME RATER"
+
+	para "Get Your #MON"
+	line "Nicknames Rated"
+	done
+
 .DummyScene0:
 	end
  
@@ -266,14 +276,16 @@ BugCatcherLennyAfterText:
 CherrygroveWoods_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 4 ; warp events
 	warp_event 57,  7, CHERRYGROVE_WOODS_GATE, 3
 	warp_event 2,   9, CHERRYGROVE_WOODS_EXIT_GATE, 1
 	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 3
+	warp_event 19,  7, GOLDENROD_NAME_RATER, 1
 	
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 17,  7, BGEVENT_READ, CherrygroveWoodsNameRaterSign
 
 	db 3 ; object events
 	object_event 36, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerYoungsterJoey, -1
