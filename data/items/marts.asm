@@ -37,7 +37,8 @@ Marts:
 .End
 
 MartCherrygrove:
-	db 4 ; # items
+	db 5 ; # items
+	db POKE_BALL
 	db POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
