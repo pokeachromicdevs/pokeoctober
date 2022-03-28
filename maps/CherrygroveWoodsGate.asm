@@ -42,7 +42,7 @@ CherrygroveWoodsGateLassText:
 	line "and I've been too"
 	cont "scared to enter"
 	
-	para "because of it."
+	para "because of that."
 	line "So scared, in"
 	cont "fact, that I've"
 	

@@ -1355,6 +1355,15 @@ LassGroup:
 	dw SWINUB
 	db -1 ; end
 	
+	next_list_item ; LASS (20)
+	db "HELEN@", TRAINERTYPE_NORMAL
+	db 14
+	dw COINPUR
+	db 15
+	dw SENTRET
+	db 15
+	dw FURRET
+	db -1 ; end
 	
 	end_list_items
 

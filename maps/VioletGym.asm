@@ -32,7 +32,6 @@ GoldenrodGymWhitneyScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY
-	setevent EVENT_MADE_WHITNEY_CRY
 	setscene SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
 	setevent EVENT_BEAT_BEAUTY_VICTORIA
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
@@ -40,9 +39,7 @@ GoldenrodGymWhitneyScript:
 	setevent EVENT_BEAT_LASS_BRIDGET
 .FightDone:
 	opentext
-	checkevent EVENT_MADE_WHITNEY_CRY
-	iffalse .StoppedCrying
-	writetext WhitneyYouMeanieText
+	writetext WhitneyYouMeanieText 
 	waitbutton
 	closetext
 	end
@@ -126,7 +123,7 @@ TrainerLassBridget:
 	end
 
 TrainerBeautyVictoria:
-	trainer BEAUTY, VICTORIA, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText, 0, .Script
+	trainer LASS, HELEN, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -334,22 +331,20 @@ BridgetWhitneyCriesText:
 	done
 
 BeautyVictoriaSeenText:
-	text "Oh, you are a cute"
-	line "little trainer! "
-
-	para "I like you, but I"
-	line "won't hold back!"
+	text "Woah! You're cute!"
+	line "We should go out!"
 	done
 
 BeautyVictoriaBeatenText:
-	text "Let's see… Oops,"
-	line "it's over?"
+	text "Cute AND strong!"
 	done
 
 BeautyVictoriaAfterBattleText:
-	text "Wow, you must be"
-	line "good to beat me!"
-	cont "Keep it up!"
+	text "C'mon, let's hang"
+	line "out! What?! Am I"
+	cont "not cute enough"
+	
+	para "for you?!"
 	done
 
 BeautySamanthaSeenText:
@@ -406,6 +401,6 @@ VioletGym_MapEvents:
 	object_event  8,  3, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymWhitneyScript, -1
 	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassCarrie, -1
 	object_event  9,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassBridget, -1
-	object_event  0,  2, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyVictoria, -1
+	object_event  0,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyVictoria, -1
 	object_event 19,  5, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautySamantha, -1
 	object_event  5, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymGuyScript, -1
