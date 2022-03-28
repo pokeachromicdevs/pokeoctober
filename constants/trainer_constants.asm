@@ -194,6 +194,7 @@ KRIS EQU __enum__
 	const ARIEL
 	const LASS_SAM
 	const NIECHELLE
+	const YURI
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -609,6 +610,7 @@ KRIS EQU __enum__
 	const TODD4
 	const TODD5
 	const QUENTIN
+	const CRAIG
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1

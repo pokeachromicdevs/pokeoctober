@@ -153,6 +153,28 @@ TrainerSportsmanJayden:
 	waitbutton
 	closetext
 	end
+	
+TrainerLassYuri:	
+	trainer LASS, YURI, EVENT_BEAT_LASS_YURI, LassYuriSeenText, LassYuriBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext LassYuriAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerCamperCraig:	
+	trainer CAMPER, CRAIG, EVENT_BEAT_CAMPER_CRAIG, CamperCraigSeenText, CamperCraigBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CamperCraigAfterBattleText
+	waitbutton
+	closetext
+	end
 
 Route46Sign:
 	jumptext Route46SignText
@@ -235,6 +257,52 @@ SportsmanJaydenAfterBattleText:
 	line "finally getting"
 	cont "to me…"
 	done
+	
+LassYuriSeenText:
+	text "Ah…Nothing beats"
+	line "the lovely snow"
+	cont "that falls here…"
+	done
+	
+LassYuriBeatenText:
+	text "It's so soothing…"
+	done
+	
+LassYuriAfterBattleText:
+	text "Sometimes the snow"
+	line "is a little too"
+	cont "soothing. I some-"
+	
+	para "times end up stay-"
+	line "ing here so late"
+	cont "because I lose"
+	
+	para "track of time."
+	done
+
+CamperCraigSeenText:	
+	text "Let's see if you"
+	line "have what it takes"
+	cont "to survive the"
+	
+	para "wilderness of"
+	line "JOHTO!"
+	done
+	
+CamperCraigBeatenText:
+	text "Nice! You've got"
+	line "what it takes!"
+	done
+	
+CamperCraigAfterBattleText:
+	text "It's always so"
+	line "pleasing to see"
+	cont "others explore the"
+	
+	para "natural wonders"
+	line "JOHTO has to"
+	cont "offer."
+	done
 
 Route46SignText:
 	text "ROUTE 46"
@@ -254,9 +322,12 @@ Route46_MapEvents:
 	db 1 ; bg events
 	bg_event 10, 30, BGEVENT_READ, Route46Sign
 
-	db 5 ; object events
+	db 7 ; object events
 	object_event 11, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBenny, -1
 	object_event  7, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
 	object_event  9, 15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1
 	object_event  6, 27, SPRITE_SPORTSMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSportsmanJayden, -1
+	object_event  4, 17, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassYuri, -1
+	object_event  4, 12, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperCraig, -1
+

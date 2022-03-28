@@ -109,6 +109,8 @@
 	const SPRITE_SOLDIER
 	const SPRITE_FAT_GUY
 	const SPRITE_SPORTSMAN
+	const SPRITE_CAMPER
+	const SPRITE_HIKER
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

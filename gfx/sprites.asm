@@ -114,4 +114,7 @@ BirdKeeperSpriteGFX::          INCBIN "gfx/sprites/bird_keeper.2bpp"
 SoldierSpriteGFX::             INCBIN "gfx/sprites/soldier.2bpp"
 FatGuySpriteGFX::              INCBIN "gfx/sprites/fat_guy.2bpp"
 SportsmanSpriteGFX::           INCBIN "gfx/sprites/sportsman.2bpp"
+CamperSpriteGFX::              INCBIN "gfx/sprites/camper.2bpp"
+HikerSpriteGFX::               INCBIN "gfx/sprites/hiker.2bpp"
+
 

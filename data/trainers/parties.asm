@@ -1337,12 +1337,22 @@ LassGroup:
 	dw SENTRET
 	db -1 ; end
 	
-	next_list_item ; LASS (18)
+	next_list_item ; LASS (19)
 	db "NIECHELLE@", TRAINERTYPE_NORMAL
 	db 3
 	dw CAMOUFLAKE
 	db 4
 	dw CAMOUFLAKE
+	db -1 ; end
+	
+	next_list_item ; LASS (20)
+	db "YURI@", TRAINERTYPE_NORMAL
+	db 2
+	dw CAMOUFLAKE
+	db 3
+	dw MARILL
+	db 4
+	dw SWINUB
 	db -1 ; end
 	
 	
@@ -5554,7 +5564,20 @@ CamperGroup:
 	dw TAUROS
 	db -1 ; end
 	
+	next_list_item ; CAMPER (23)
+	db "CRAIG@", TRAINERTYPE_NORMAL
+	db 3
+	dw MAREEP
+	db 3
+	dw SPEAROW
+	db 3
+	dw VULPIII
+	db 4
+	dw MARILL
+	db -1 ; end
+	
 	end_list_items
+	
 	
 SportsmanGroup:
 	next_list_item; SPORTSMAN (1)

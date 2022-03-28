@@ -10,28 +10,31 @@ Route29Route46Gate_MapScripts:
 Route29Route46GateOfficerScript:
 	jumptextfaceplayer Route29Route46GateOfficerText
 
-Route29Route46GateYoungsterScript:
-	jumptextfaceplayer Route29Route46GateYoungsterText
+Route29Route46GateHikerScript:
+	jumptextfaceplayer Route29Route46GateHikerText
 
 Route29Route46GateOfficerText:
-	text "You can't climb"
-	line "ledges."
+	text "You can never"
+	line "wear too many"
+	cont "clothes for the"
 
-	para "But you can jump"
-	line "down from them to"
-	cont "take a shortcut."
+	para "snow up ahead."
+	line "ROUTE 46 isn't"
+	cont "too bad, but"
+	
+	para "ROUTE 45 is a"
+	line "bone-chilling"
+	cont "nightmare."
 	done
 
-Route29Route46GateYoungsterText:
-	text "Different kinds of"
-	line "#MON appear"
-	cont "past here."
+Route29Route46GateHikerText:
+	text "There's nothing"
+	line "like chugging"
+	cont "down a cup of hot"
 
-	para "If you want to"
-	line "catch them all,"
-
-	para "you have to look"
-	line "everywhere."
+	para "chocolate after a"
+	line "trek down a chilly"
+	cont "mountain path."
 	done
 
 Route29Route46Gate_MapEvents:
@@ -49,4 +52,4 @@ Route29Route46Gate_MapEvents:
 
 	db 2 ; object events
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route29Route46GateOfficerScript, -1
-	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29Route46GateYoungsterScript, -1
+	object_event  6,  4, SPRITE_HIKER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route29Route46GateHikerScript, -1

@@ -6,7 +6,7 @@ ErinAskNumber1Text:
 	line "much harder…"
 
 	para "Here's my number."
-	line "I'm NICHELLE-"
+	line "I'm NIECHELLE-"
 
 	para "don't forget!"
 	line "Want to battle"
