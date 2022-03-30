@@ -99,82 +99,6 @@ CherrygroveCityGuideGent:
 	closetext
 	end
 
-CherrygroveSilverSceneSouth:
-	moveobject CHERRYGROVECITY_SILVER, 39, 24
-CherrygroveSilverSceneNorth:
-	turnobject PLAYER, RIGHT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special FadeOutMusic
-	pause 15
-	appear CHERRYGROVECITY_SILVER
-	applymovement CHERRYGROVECITY_SILVER, CherrygroveCity_RivalWalksToYou
-	turnobject PLAYER, RIGHT
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	opentext
-	writetext CherrygroveRivalText_Seen
-	waitbutton
-	closetext
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Chikorita
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
-	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.Totodile:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
-	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.Chikorita:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
-	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.AfterVictorious:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext CherrygroveRivalText_YouWon
-	waitbutton
-	closetext
-	sjump .FinishRival
-
-.AfterYourDefeat:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext CherrygroveRivalText_YouLost
-	waitbutton
-	closetext
-.FinishRival:
-	playsound SFX_TACKLE
-	applymovement PLAYER, CherrygroveCity_RivalPushesYouOutOfTheWay
-	turnobject PLAYER, LEFT
-	applymovement CHERRYGROVECITY_SILVER, CherrygroveCity_RivalExitsStageLeft
-	disappear CHERRYGROVECITY_SILVER
-	setscene SCENE_CHERRYGROVECITY_NOTHING
-	special HealParty
-	playmapmusic
-	end
-
 CherrygroveTeacherScript:
 	faceplayer
 	opentext
@@ -588,9 +512,7 @@ CherrygroveCity_MapEvents:
 	warp_event 37, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
 	warp_event 37, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
 
-	db 2 ; coord events
-	coord_event 36, 24, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveSilverSceneNorth
-	coord_event 36, 25, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveSilverSceneSouth
+	db 0 ; coord events
 
 	db 4 ; bg events
 	bg_event 30, 26, BGEVENT_READ, CherrygroveCitySign
