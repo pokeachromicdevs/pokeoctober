@@ -149,12 +149,11 @@ MysticWaterGuy:
 	end
 	
 BirdKeeperBlockage:
+	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	iffalse .gone
 	opentext
 	writetext BirdKeeperBlocking
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .doHide
-.doHide
-	moveobject CHERRYGROVECITY_YOUNGSTER, 26, 6
+.gone
 	disappear CHERRYGROVECITY_YOUNGSTER
 	return
 

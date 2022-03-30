@@ -217,18 +217,18 @@ CherrygrovePokecenter1FGentleman2Text:
 	
 	para "such rough battles"
 	line "that everyone at"
-	cont "the DOJO frequently"
+	cont "the DOJO frequent-"
 	
-	para "frequently comes"
-	line "and heals their"
-	cont "#MON all at once."
+	para "ly comes and heals"
+	line "their #MON all"
+	cont "at once."
 	
 	para "The lines that"
 	line "form when that"
-	cont "happens…those lines"
+	cont "happens…those"
 	
-	para "are so dreadfully"
-	line "long…"
+	para "lines are so dread-"
+	line "fully long…"
 	done
 	
 CherrygrovePokecenter1FBeautyText:
