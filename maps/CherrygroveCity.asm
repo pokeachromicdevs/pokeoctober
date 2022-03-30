@@ -239,14 +239,6 @@ GuideGentMovement6:
 	step UP
 	step_end
 
-CherrygroveCity_RivalWalksToYou:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
 CherrygroveCity_RivalPushesYouOutOfTheWay:
 	big_step DOWN
 	turn_head UP
@@ -365,59 +357,6 @@ GuideGentNoText:
 	line "when you like."
 	done
 
-CherrygroveRivalText_Seen:
-	text "<……> <……> <……>"
-
-	para "You got a #MON"
-	line "at the LAB."
-
-	para "What a waste."
-	line "A wimp like you."
-
-	para "<……> <……> <……>"
-
-	para "Don't you get what"
-	line "I'm saying?"
-
-	para "Well, I too, have"
-	line "a good #MON."
-
-	para "I'll show you"
-	line "what I mean!"
-	done
-
-SilverCherrygroveWinText:
-	text "Humph. Are you"
-	line "happy you won?"
-	done
-
-CherrygroveRivalText_YouLost:
-	text "<……> <……> <……>"
-
-	para "My name's ???."
-
-	para "I'm going to be"
-	line "the world's great-"
-	cont "est #MON"
-	cont "trainer."
-	done
-
-SilverCherrygroveLossText:
-	text "Humph. That was a"
-	line "waste of time."
-	done
-
-CherrygroveRivalText_YouWon:
-	text "<……> <……> <……>"
-
-	para "My name's ???."
-
-	para "I'm going to be"
-	line "the world's great-"
-	cont "est #MON"
-	cont "trainer."
-	done
-
 CherrygroveTeacherText_NoMapCard:
 	text "Did you talk to"
 	line "the old man by the"
@@ -520,9 +459,8 @@ CherrygroveCity_MapEvents:
 	bg_event 24, 21, BGEVENT_READ, CherrygroveCityMartSign
 	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 
-	db 6 ; object events
+	db 5 ; object events
 	object_event 36, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
-	object_event 39, 24, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
