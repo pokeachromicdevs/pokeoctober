@@ -399,23 +399,23 @@ Pokegear_FinishTilemap:
 	ld a, [de]
 	bit POKEGEAR_RADIO_CARD_F, a
 	call nz, .PlaceRadioIcon
-	hlcoord 0, 0
+	hlcoord 6, 0
 	ld a, $46
 	call .PlacePokegearCardIcon
 	ret
 
 .PlaceMapIcon:
-	hlcoord 2, 0
+	hlcoord 0, 0
 	ld a, $40
 	jr .PlacePokegearCardIcon
 
 .PlacePhoneIcon:
-	hlcoord 4, 0
+	hlcoord 2, 0
 	ld a, $44
 	jr .PlacePokegearCardIcon
 
 .PlaceRadioIcon:
-	hlcoord 6, 0
+	hlcoord 8, 0
 	ld a, $42
 .PlacePokegearCardIcon:
 	ld [hli], a
