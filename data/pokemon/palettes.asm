@@ -566,3 +566,5 @@ INCBIN "gfx/pokemon/burgela/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/burgela/shiny.pal"
 INCBIN "gfx/pokemon/vulpiii/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/vulpiii/shiny.pal"
+INCBIN "gfx/pokemon/worfurs/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/worfurs/shiny.pal"

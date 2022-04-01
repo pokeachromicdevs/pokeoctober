@@ -268,3 +268,4 @@ PokedexDataPointerTable:
 	dba CoaltaPokedexEntry
 	dba BurgelaPokedexEntry
 	dba VulpiiiPokedexEntry
+	dba WorfursPokedexEntry

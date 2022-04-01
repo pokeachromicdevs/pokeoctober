@@ -269,4 +269,5 @@ MonMenuIcons:
 	db ICON_PONYTA      ; COALTA
 	db ICON_TANGELA     ; BURGELA
 	db ICON_VULPIX      ; VULPIII
+	db ICON_SWINUB      ; WORFURS
 	db ICON_EGG         ; EGG

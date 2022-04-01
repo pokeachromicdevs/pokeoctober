@@ -117,6 +117,7 @@ EggMovePointers2::
 	dw CoaltaEggMoves
 	dw BurgelaEggMoves
 	dw VulpiiiEggMoves
+	dw WorfursEggMoves
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -525,3 +526,9 @@ VulpiiiEggMoves:
 	dw SPITE
 	dw DISABLE
 	dw -1 ; end
+	
+WorfursEggMoves:
+	db PURSUIT
+	db OUTRAGE
+	db MIST
+	db -1 ; end

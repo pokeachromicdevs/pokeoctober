@@ -105,7 +105,7 @@ ItemNames::
 	db "PINK BOW@"
 	db "STICK@"
 	db "SMOKE BALL@"
-	db "NEVERMELTICE@"
+	db "ICE FANG@"
 	db "MIRACLEBERRY@"
 	db "THUNDER FANG@"
 	db "PEARL@"

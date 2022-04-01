@@ -273,7 +273,7 @@ PokemonCries::
 	mon_cry CRY_MARILL,      $0c0,  $090 ; COALTA
 	mon_cry CRY_MARILL,      $f4c,  $110 ; BURGELA
 	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; VULPIII
-
+	mon_cry CRY_RAIKOU,     -$0b0,  $120 ; WORFURS
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

@@ -12,6 +12,7 @@ EvosAttacksPointers3::
 	dw CoaltaEvosAttacks
 	dw BurgelaEvosAttacks 
 	dw VupiiiEvosAttacks
+	dw WorfursEvosAttacks
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -186,3 +187,17 @@ VupiiiEvosAttacks:
 	dbw 55, PSYCHIC
 	db 0 ; no more level-up moves
 	
+WorfursEvosAttacks:
+	db 0 ; no more evolutions, will evolve at level 31 once Wearlycan is in
+	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 7, POWDER_SNOW
+	dbw 12, FURY_SWIPES
+	dbw 18, SAFEGUARD
+	dbw 23, LOW_KICK
+	dbw 29, ICY_WIND
+	dbw 34, SLASH
+	dbw 40, SCREECH
+	dbw 45, CONFUSE_RAY
+	dbw 51, BLIZZARD
+	db 0 ; no more level-up moves

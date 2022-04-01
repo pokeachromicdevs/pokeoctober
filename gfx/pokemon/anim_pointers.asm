@@ -267,3 +267,4 @@ AnimationPointers:
 	dw CoaltaAnimation
 	dw BurgelaAnimation
 	dw VulpiiiAnimation
+	dw WorfursAnimation

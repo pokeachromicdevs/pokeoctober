@@ -1602,7 +1602,7 @@ JohtoGrassWildMons:
 	dbw 3, GEODUDE
 	dbw 4, SWINUB
 	dbw 4, RATTATA
-	dbw 3, PHANPY;WORFURS
+	dbw 3, WORFURS
 	dbw 3, IGGLYBUFF
 	dbw 3, CAMOUFLAKE
 	; day
@@ -1612,12 +1612,12 @@ JohtoGrassWildMons:
 	dbw 4, SWINUB
 	dbw 3, GEODUDE
 	dbw 3, IGGLYBUFF
-	dbw 3, RATTATA;WORFURS
+	dbw 3, WORFURS
 	; nite
 	dbw 3, RATTATA
 	dbw 3, RATTATA
 	dbw 4, GEODUDE
-	dbw 4, RATTATA;WORFURS
+	dbw 4, WORFURS
 	dbw 3, SWINUB
 	dbw 3, GASTLY
 	dbw 3, BIPULLA

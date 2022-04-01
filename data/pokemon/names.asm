@@ -271,3 +271,4 @@ PokemonNames::
 	db "COALTA@@@@";needs animation fully programmed in
 	db "BURGELA@@@";needs animation fully programmed in
 	db "VULPIII@@@";needs animation fully programmed in
+	db "WORFURS@@@";needs animation fully programmed in

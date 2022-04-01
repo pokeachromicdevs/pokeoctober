@@ -267,3 +267,4 @@ AnimationIdlePointers:
 	dw CoaltaAnimationIdle
 	dw BurgelaAnimationIdle
 	dw VulpiiiAnimationIdle
+	dw WorfursAnimationIdle

@@ -549,3 +549,5 @@ PokemonPicPointers::
 	dba BurgelaBackpic
 	dba VulpiiiFrontpic
 	dba VulpiiiBackpic
+	dba WorfursFrontpic
+	dba WorfursBackpic

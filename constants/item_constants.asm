@@ -112,7 +112,7 @@
 	const PINK_BOW     ; 68
 	const STICK        ; 69
 	const SMOKE_BALL   ; 6a
-	const NEVERMELTICE ; 6b
+	const ICE_FANG     ; 6b
 	const THUNDER_FANG ; 6c
 	const MIRACLEBERRY ; 6d
 	const PEARL        ; 6e

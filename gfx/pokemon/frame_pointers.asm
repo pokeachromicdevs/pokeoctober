@@ -267,3 +267,4 @@ FramesPointers:
 	dba CoaltaFrames
 	dba BurgelaFrames
 	dba VulpiiiFrames
+	dba WorfursFrames

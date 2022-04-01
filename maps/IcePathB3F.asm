@@ -8,7 +8,7 @@ IcePathB3F_MapScripts:
 	db 0 ; callbacks
 
 IcePathB3FNevermeltice:
-	itemball NEVERMELTICE
+	itemball ICE_FANG
 
 IcePathB3FRock:
 	jumpstd smashrock
