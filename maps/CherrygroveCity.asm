@@ -11,8 +11,18 @@ CherrygroveCity_MapScripts:
 	scene_script .DummyScene0 ; SCENE_CHERRYGROVECITY_NOTHING
 	scene_script .DummyScene1 ; SCENE_CHERRYGROVECITY_MEET_RIVAL
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	callback MAPCALLBACK_OBJECTS, .birdkeepergone
+	
+.birdkeepergone
+	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	iffalse .gone
+	return
+	
+.gone
+	disappear CHERRYGROVECITY_YOUNGSTER
+	return
 
 .DummyScene0:
 	end
