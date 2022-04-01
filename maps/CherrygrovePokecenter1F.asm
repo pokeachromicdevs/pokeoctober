@@ -227,8 +227,8 @@ CherrygrovePokecenter1FGentleman2Text:
 	line "form when that"
 	cont "happens…those"
 	
-	para "lines are so dread-"
-	line "fully long…"
+	para "lines are so"
+	line "dreadfully long…"
 	done
 	
 CherrygrovePokecenter1FBeautyText:
