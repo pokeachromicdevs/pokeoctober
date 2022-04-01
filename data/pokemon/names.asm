@@ -155,7 +155,7 @@ PokemonNames::
 	db "MEWTWO@@@@"
 	db "MEW@@@@@@@"
 	db "CHIKORITA@"
-	db "BLOSSOMOLE";needs animation
+	db "BLOSSOMOLE";needs animation fully programmed in
 	db "BLOSSOMITE";insert GS sprite
 	db "CYNDAQUIL@"
 	db "QUILAVA@@@"
@@ -231,7 +231,7 @@ PokemonNames::
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
 	db "CORSOLA@@@"
-	db "REMORAID@@";insert beta sprite
+	db "REMORAID@@";needs animation fully programmed in
 	db "OCTILLERY@";insert beta sprite
 	db "DELIBIRD@@";insert beta sprite
 	db "MANTINE@@@";insert beta sprite
