@@ -1,5 +1,3 @@
-; TODO: have the rival battle you
-
 	object_const_def ; object_event constants
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
@@ -10,9 +8,9 @@
 	
 NewBarkTown_MapScripts:
 	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
-	scene_script .SilentTownSilverBattleScript
+	scene_script .DummyScene0 ; SCENE_TEACHER_STOPS
+	scene_script .DummyScene1 ; SCENE_NEW_BARK_NOTHING
+	scene_script .SilentTownSilverBattleScript ; SCENE_ELM_ENTRANCE_BATTLE
 	
 
 	db 1 ; callbacks
@@ -34,6 +32,9 @@ NewBarkTown_MapScripts:
 	end
 	
 NewBarkTown_RivalGreets:
+	setevent EVENT_ELM_NOT_IN_LAB
+	disappear NEWBARKTOWN_SILVER_2
+
 	applymovement NEWBARKTOWN_SILVER, RivalMeetsPlayer
 	turnobject PLAYER, RIGHT
 	special FadeOutMusic
@@ -171,20 +172,23 @@ NewBarkTownTeacherScript:
 	end
 	
 SilentTownSilverBattleScript:
-	moveobject NEWBARKTOWN_SILVER_2, 7, 14
+	moveobject NEWBARKTOWN_SILVER_2, 13, 13
 	appear NEWBARKTOWN_SILVER_2
+	playsound SFX_ENTER_DOOR
 	applymovement NEWBARKTOWN_SILVER_2, MovementBattle
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	turnobject PLAYER, LEFT
+	turnobject PLAYER, RIGHT
 	opentext
 	writetext TimeToBattle
 	waitbutton
 	closetext
+; player has:
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .TOTODILE
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .CHIKORITA
+; has cyndaquil
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
 	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
@@ -215,23 +219,19 @@ SilentTownSilverBattleScript:
 	jump .AfterYourDefeat
 
 .AfterVictorious:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext EntranceRivalText_YouWon
-	waitbutton
-	closetext
-	jump .FinishRival
-
 .AfterYourDefeat:
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext EntranceRivalText_YouLost
+	writetext EntranceRivalText_EitherResult
 	waitbutton
 	closetext
 .FinishRival:
+	applymovement PLAYER, PlayerMovesOutOfWay
 	applymovement ELMENTRANCE_SILVER, SilverAfterBattle
 	disappear NEWBARKTOWN_SILVER_2
 	special HealParty
+	setscene SCENE_NEW_BARK_NOTHING
+	setevent EVENT_RIVAL_ELMS_LAB
 	playmapmusic
 	end
 
@@ -252,19 +252,21 @@ NewBarkTownElmsLabSign:
 
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
-	
+
+PlayerMovesOutOfWay:
+	step UP
+	turn_head DOWN
+	step_end
+
 SilverAfterBattle:
-	step UP
-	step UP
-	step UP
-	step UP
+	rept 7
+	step LEFT
+	endr
 	step_end
 	
 MovementBattle:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
+	step DOWN
+	step LEFT
 	step_end
 	
 ElmTakesPlayerToLab1:
@@ -568,22 +570,12 @@ SilverEntranceWinText:
 	para "been the best!"
 	done
 
-EntranceRivalText_YouLost:
-	text "<PLAY_G>! I'm"
-	line "so ready to show"
-	para "the world how"
-	line "great my #MON"
-	cont "is!"
-	para "I'll see you"
-	line "around soon!"
-	done
-
 SilverEntranceLossText:
 	text "Alright! My"
 	line "#MON rules!"
 	done
 
-EntranceRivalText_YouWon:
+EntranceRivalText_EitherResult:
 	text "<PLAY_G>! I'm"
 	line "so ready to show"
 	para "the world how"
@@ -618,7 +610,7 @@ NewBarkTown_MapEvents:
 	coord_event  1,  6, SCENE_TEACHER_STOPS, ElmStopsYouScene1
 	coord_event  1,  7, SCENE_TEACHER_STOPS, ElmStopsYouScene2
 	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
-	coord_event 12, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
+	coord_event 11, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
 	
 	db 4 ; bg events
@@ -633,4 +625,4 @@ NewBarkTown_MapEvents:
 	object_event  7, 11, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
 	object_event  7,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_APPEARED_NEW_BARK_TOWN
 	object_event 19,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisher2Script, -1
-	object_event  7, 14, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, SCENE_ELM_ENTRANCE_BATTLE
+	object_event  7, 14, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, EVENT_FOUGHT_RIVAL_NEW_BARK_TOWN

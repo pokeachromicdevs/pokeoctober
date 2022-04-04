@@ -360,7 +360,7 @@ InitPokegearTilemap:
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
-	call .PlacePhoneBars
+	;call .PlacePhoneBars
 	call PokegearPhone_UpdateDisplayList
 	ret
 
@@ -817,6 +817,8 @@ PokegearPhone_Init:
 	ret
 
 PokegearPhone_Joypad:
+	call .UpdatePhoneClock
+; joypad
 	ld hl, hJoyPressed
 	ld a, [hl]
 	and B_BUTTON
@@ -891,6 +893,52 @@ PokegearPhone_Joypad:
 	ld a, POKEGEARSTATE_PHONEJOYPAD
 	ld [wJumptableIndex], a
 	ret
+
+.UpdatePhoneClock:
+	hlcoord 9, 1
+	lb bc, 2, 10
+	call ClearBox
+	ldh a, [hHours]
+	ld b, a
+	ldh a, [hMinutes]
+	ld c, a
+	decoord 11, 1
+	farcall PrintHoursMins
+	ret
+
+; not enough space
+	call GetWeekday
+	ld c, a
+	ld b, 0
+	ld hl, .Days
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld d, h
+	ld e, l
+	hlcoord 9,1
+	call PlaceString
+	ret
+
+.Days:
+	dw .Sun
+	dw .Mon
+	dw .Tue
+	dw .Wed
+	dw .Thu
+	dw .Fri
+	dw .Sat
+
+.Sun:    db "SUN@"
+.Mon:    db "MON@"
+.Tue:   db "TUE@"
+.Wed: db "WED@"
+.Thu:  db "THU@"
+.Fri:    db "FRI@"
+.Sat:  db "SAT@"
+
 
 PokegearPhone_MakePhoneCall:
 	call GetMapPhoneService

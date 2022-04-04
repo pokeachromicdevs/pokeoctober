@@ -216,6 +216,7 @@ TyphlosionEvosAttacks:
 
 TotodileEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, CROCONAW
+	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
 	dbw 6, RAGE 
