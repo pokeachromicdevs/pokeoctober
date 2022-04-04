@@ -1673,8 +1673,8 @@
 	const EVENT_63B
 	const EVENT_63C
 	const EVENT_63D
-	const EVENT_63E
-	const EVENT_63F
+	const EVENT_ELM_NOT_IN_LAB
+	const EVENT_FOUGHT_RIVAL_NEW_BARK_TOWN
 ; Sprite visibility flags
 ; When these events are cleared, the sprite becomes visible; when set, the sprite is hidden.
 ; The map script command macros `disappear` and `appear` set/clear these flags and immediately apply the effect on visibility.

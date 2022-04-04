@@ -7,14 +7,13 @@
 	const ELMENTRANCE_SILVER
 
 ElmsLab_MapScripts:
-	db 7 ; scene scripts
-	scene_script .DummyScene1 ; SCENE_DEFAULT
+	db 6 ; scene scripts
+	scene_script .DummyScene1 ; SCENE_ELMSLAB_NOTHING
 	scene_script .MeetElm ; SCENE_MEETELM
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_CANT_LEAVE
-	scene_script .DummyScene1 ; SCENE_ELMSLAB_NOTHING
-	scene_script .DummyScene1 ; SCENE_ELMSLAB_MEET_OFFICER
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_UNUSED
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_AIDE_GIVES_POTION
+	scene_script .DummyScene1 ; SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .MoveElmCallback
@@ -27,22 +26,18 @@ ElmsLab_MapScripts:
 	end
 
 .MoveElmCallback:
-	checkscene 
-	iffalse .HideElm
-	checkscene SCENE_MEETELM
+	checkscene
 	iftrue .doMove
 	return
 .doMove
 	moveobject ELMSLAB_ELM, 4, 10
 	return
-.HideElm
-	applymovement ELMSLAB_ELM, HidePersonMovement
-	return
-	
+
 .WalkUpToElm:
-	moveobject ELMSLAB_ELM, 4, 10
+	appear ELMSLAB_ELM
 	follow ELMSLAB_ELM, PLAYER
 	applymovement ELMSLAB_ELM, ElmsLab_WalkUpToPCMovement
+	clearevent EVENT_ELM_NOT_IN_LAB
 	stopfollow
 	applymovement ELMSLAB_ELM, ElmsLab_WalkUpToPC2Movement
 	applymovement PLAYER, ElmsLab_CantLeaveMovement
@@ -74,13 +69,12 @@ ElmsLab_MapScripts:
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext ElmText_ChooseAPokemon
-	writetext ElmsLabSilverText2
 	waitbutton
 	setscene SCENE_ELMSLAB_CANT_LEAVE
 	closetext
 	end
 	
-.ElmsLabSilverScript3:
+ElmsLabSilverScript3:
 	jumptextfaceplayer Text_Best
 
 .ElmGetsEmail:
@@ -322,7 +316,6 @@ ElmDirectionsScript:
 	setscene SCENE_ELM_ENTRANCE_BATTLE 
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
 	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
-	reloadmap
 	end
 
 ElmDescribesMrPokemonScript:
@@ -527,6 +520,7 @@ AideScript_GivePotion:
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOTHING
+	setmapscene NEW_BARK_TOWN, SCENE_ELM_ENTRANCE_BATTLE
 	end
 
 AideScript_WalkBalls1:
@@ -581,10 +575,7 @@ ElmsAideScript:
 	end
 
 ElmsLabWindow:
-	opentext
-	writetext ElmsLabWindowText1
-	waitbutton
-	closetext
+	jumptext ElmsLabWindowText1
 
 ElmsLabTravelTip1:
 	jumptext ElmsLabTravelTip1Text
@@ -634,14 +625,18 @@ ElmsLabBookshelf:
 ElmsLabSilverScript:
 	checkscene
 	iftrue .letPlayerChoose
+	checkevent EVENT_ELM_NOT_IN_LAB
+	iftrue .elmNotInLab
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue .gotPoke
+	return
+
+.elmNotInLab
 	jumptextfaceplayer ElmsLabSilverText
+.gotPoke
+	jumptextfaceplayer Text_Best
 .letPlayerChoose
 	jumptextfaceplayer ElmsLabSilverText2
-	
-ElmsLabSilverScript3:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue ElmsLabSilverScript3
-	jumptextfaceplayer Text_Best
 	
 SilverLeavesLab:
 	step LEFT
@@ -1440,7 +1435,7 @@ ElmsLab_MapEvents:
 	bg_event  3,  5, BGEVENT_DOWN, ElmsLabPC
 
 	db 6 ; object events
-	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
+	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, EVENT_ELM_NOT_IN_LAB
 	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
