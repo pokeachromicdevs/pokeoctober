@@ -11,6 +11,7 @@ Music_MainMenu_Ch1:
 	tone $0001
 	vibrato $10, $15
 	stereopanning $f0
+	pitchoffset 0, 2
 	notetype $c, $f
 	octave 3
 	note D_, 8
@@ -44,6 +45,7 @@ Music_MainMenu_branch_f791d:
 Music_MainMenu_Ch2:
 	dutycycle $3
 	stereopanning $f
+	pitchoffset 0, 2
 	notetype $c, $f
 	octave 3
 	note G_, 8
@@ -73,6 +75,7 @@ Music_MainMenu_branch_f7949:
 
 Music_MainMenu_Ch3:
 	stereopanning $f0
+	pitchoffset 0, 2
 	notetype $c, $25
 	note __, 8
 Music_MainMenu_branch_f796f:
