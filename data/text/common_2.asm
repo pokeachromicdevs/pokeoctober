@@ -1597,9 +1597,8 @@ _OakText7a::
 	para "Before you start"
 	line "your journey,"
 
-	para "you'll have to"
-	line "set the date and"
-	cont "time."
+	para "you take note of"
+	line "when you began."
 	
 	prompt
 _OakText7::
