@@ -650,14 +650,14 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 OakSpeech:
-	call RotateFourPalettesLeft
+	call RotateThreePalettesRight
 	call ClearTileMap
 
 	ld de, MUSIC_ROUTE_30
 	call PlayMusic
 
 	;call RotateFourPalettesRight
-	call RotateThreePalettesRight
+	;call RotateThreePalettesRight
 	xor a
 	ld [wCurPartySpecies], a
 	ld a, POKEMON_PROF
@@ -782,7 +782,7 @@ OakText1:
 OakText2:
 	text_far _OakText2
 	text_asm
-	ld hl, WOOPER
+	ld hl, PICHU
 	call GetPokemonIDFromIndex
 	call PlayMonCry
 	call WaitSFX
