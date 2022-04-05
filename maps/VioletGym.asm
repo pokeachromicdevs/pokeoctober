@@ -122,24 +122,24 @@ TrainerLassBridget:
 	closetext
 	end
 
-TrainerBeautyVictoria:
-	trainer LASS, HELEN, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText, 0, .Script
+TrainerLassHelen:
+	trainer LASS, HELEN, EVENT_BEAT_BEAUTY_VICTORIA, LassHelenSeenText, LassHelenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BeautyVictoriaAfterBattleText
+	writetext LassHelenAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBeautySamantha:
-	trainer BEAUTY, SAMANTHA, EVENT_BEAT_BEAUTY_SAMANTHA, BeautySamanthaSeenText, BeautySamanthaBeatenText, 0, .Script
+TrainerFledglingTerry:
+	trainer FLEDGLING, TERRY, EVENT_BEAT_BEAUTY_SAMANTHA, FledglingTerrySeenText, FledglingTerryBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BeautySamanthaAfterBattleText
+	writetext FledglingTerryAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -330,16 +330,16 @@ BridgetWhitneyCriesText:
 	line "she loses."
 	done
 
-BeautyVictoriaSeenText:
+LassHelenSeenText:
 	text "Woah! You're cute!"
 	line "We should go out!"
 	done
 
-BeautyVictoriaBeatenText:
+LassHelenBeatenText:
 	text "Cute AND strong!"
 	done
 
-BeautyVictoriaAfterBattleText:
+LassHelenAfterBattleText:
 	text "C'mon, let's hang"
 	line "out! What?! Am I"
 	cont "not cute enough"
@@ -347,21 +347,18 @@ BeautyVictoriaAfterBattleText:
 	para "for you?!"
 	done
 
-BeautySamanthaSeenText:
-	text "Give it your best"
-	line "shot, or I'll take"
-	cont "you down!"
+FledglingTerrySeenText:
+	text "I just think"
+	line "normal-types are"
+	cont "neat."
 	done
 
-BeautySamanthaBeatenText:
-	text "No! Oh, MEOWTH,"
-	line "I'm so sorry!"
+FledglingTerryBeatenText:
+	text "You're not neat…"
 	done
 
-BeautySamanthaAfterBattleText:
-	text "I taught MEOWTH"
-	line "moves for taking"
-	cont "on any type…"
+FledglingTerryAfterBattleText:
+	text "Go away…"
 	done
 
 GoldenrodGymGuyText:
@@ -401,6 +398,6 @@ VioletGym_MapEvents:
 	object_event  8,  3, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymWhitneyScript, -1
 	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassCarrie, -1
 	object_event  9,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassBridget, -1
-	object_event  0,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyVictoria, -1
-	object_event 19,  5, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautySamantha, -1
+	object_event  0,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassHelen, -1
+	object_event 19,  5, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFledglingTerry, -1
 	object_event  5, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymGuyScript, -1

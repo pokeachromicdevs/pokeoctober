@@ -1359,7 +1359,7 @@ LassGroup:
 	db "HELEN@", TRAINERTYPE_NORMAL
 	db 14
 	dw COINPUR
-	db 15
+	db 14
 	dw SENTRET
 	db 15
 	dw FURRET
@@ -5329,6 +5329,20 @@ FledglingGroup:
 	dw HOPPIP
 	db 6
 	dw PIDGEY
+	db -1 ;end
+	
+	next_list_item; FLEDGLING (1)
+	db "TERRY@", TRAINERTYPE_NORMAL
+	db 13
+	dw IGGLYBUFF
+	db 13
+	dw CLEFFA
+	db 14
+	dw PIDGEY
+	db 14
+	dw SPEAROW
+	db 15
+	dw DODAERIE
 	db -1 ;end
 	
 	end_list_items

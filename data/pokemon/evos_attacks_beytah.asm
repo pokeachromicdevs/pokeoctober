@@ -13,19 +13,24 @@ EvosAttacksPointers3::
 	dw BurgelaEvosAttacks 
 	dw VupiiiEvosAttacks
 	dw WorfursEvosAttacks
+	dw DodaerieEvosAttacks
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, GROWL
-	dbw 7, BITE
-	dbw 13, PAY_DAY
-	dbw 19, FURY_SWIPES
-	dbw 25, FAINT_ATTACK
-	dbw 31, COIN_HURL
-	dbw 37, SCREECH
-	dbw 43, SLASH
+	dbw 1, TAIL_WHIP
+	dbw 6, BITE
+	dbw 12, TEMPT
+	dbw 16, PAY_DAY
+	dbw 22, FAINT_ATTACK
+	dbw 28, FURY_SWIPES
+	dbw 32, SCREECH
+	dbw 38, COIN_HURL
+	dbw 44, CHARM
+	dbw 48, SWAGGER
+	dbw 54, SLASH
 	db 0 ; no more level-up moves
 	
 AdbarstorkEvosAttacks:
@@ -191,13 +196,29 @@ WorfursEvosAttacks:
 	db 0 ; no more evolutions, will evolve at level 31 once Wearlycan is in
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 7, POWDER_SNOW
-	dbw 12, FURY_SWIPES
-	dbw 18, SAFEGUARD
-	dbw 23, LOW_KICK
-	dbw 29, ICY_WIND
-	dbw 34, SLASH
-	dbw 40, SCREECH
-	dbw 45, CONFUSE_RAY
-	dbw 51, BLIZZARD
+	dbw 5, QUICK_ATTACK
+	dbw 10, POWDER_SNOW
+	dbw 19, DEFENSE_CURL
+	dbw 24, ICY_WIND
+	dbw 29, MIMIC
+	dbw 33, ICE_PUNCH
+	dbw 38, DIG
+	dbw 43, ROAR
+	dbw 47, THRASH
+	dbw 52, BLIZZARD
+	db 0 ; no more level-up moves
+	
+DodaerieEvosAttacks:
+	dbbw EVOLVE_LEVEL, 18, DODUO
+	dbw 1,	QUICK_ATTACK
+	dbw 1,	GROWL
+	dbw 6,	PECK
+	dbw 12,	PURSUIT
+	dbw 18,	CHARM
+	dbw 24,	FURY_ATTACK
+	dbw 30,	RAGE
+	dbw 36,	JUMP_KICK
+	dbw 42,	DRILL_PECK
+	dbw 48,	AGILITY
+	dbw 54,	EXTREMESPEED
 	db 0 ; no more level-up moves

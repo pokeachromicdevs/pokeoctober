@@ -210,6 +210,7 @@ OldPokedexOrder:
 	dw DONPHAN
 	dw MANTINE
 	dw SKARMORY
+	dw DODAERIE
 	dw DODUO
 	dw DODRIO
 	dw PONYTA

@@ -49,6 +49,7 @@ AlphabeticalPokedexOrder:
 	dw DEWGONG
 	dw DIGLETT
 	dw DITTO
+	dw DODAERIE
 	dw DODRIO
 	dw DODUO
 	dw DONPHAN

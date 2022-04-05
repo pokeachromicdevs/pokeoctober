@@ -268,3 +268,4 @@ FramesPointers:
 	dba BurgelaFrames
 	dba VulpiiiFrames
 	dba WorfursFrames
+	dba DodaerieFrames

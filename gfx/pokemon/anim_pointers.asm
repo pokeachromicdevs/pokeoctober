@@ -268,3 +268,4 @@ AnimationPointers:
 	dw BurgelaAnimation
 	dw VulpiiiAnimation
 	dw WorfursAnimation
+	dw DodaerieAnimation

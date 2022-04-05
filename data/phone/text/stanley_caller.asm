@@ -1,5 +1,5 @@
 StanleyAreYouGrowingText:
-	text "How are your #MON"
+	text "How are your"
 	line "#MON faring?"
 
 	para "Mine are lively"
@@ -18,7 +18,6 @@ UnknownText_0x175869:
 	line "encountered a"
 	cont "wild @"
 	text_ram wStringBuffer4
-	text_start
 	para "just a little"
 	line "bit ago."
 

@@ -118,6 +118,7 @@ EggMovePointers2::
 	dw BurgelaEggMoves
 	dw VulpiiiEggMoves
 	dw WorfursEggMoves
+	dw DodaerieEggMoves
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -532,3 +533,10 @@ WorfursEggMoves:
 	db OUTRAGE
 	db MIST
 	db -1 ; end
+	
+DodaerieEggMoves:
+	dw SUPERSONIC
+	dw HAZE
+	dw FAINT_ATTACK
+	dw FLAIL
+	dw -1 ; end

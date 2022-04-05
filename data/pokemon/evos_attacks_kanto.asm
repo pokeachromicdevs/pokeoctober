@@ -159,16 +159,17 @@ BulbasaurEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, IVYSAUR
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 4, GROWL
-	dbw 7, LEECH_SEED
+	dbw 1, GROWL
+	dbw 6, LEECH_SEED
 	dbw 10, VINE_WHIP
-	dbw 15, POISONPOWDER
 	dbw 15, SLEEP_POWDER
-	dbw 20, RAZOR_LEAF
-	dbw 25, SWEET_SCENT
-	dbw 32, GROWTH
-	dbw 39, SYNTHESIS
-	dbw 46, SOLARBEAM
+	dbw 21, RAZOR_LEAF
+	dbw 25, STUN_SPORE
+	dbw 30, TAKE_DOWN
+	dbw 36, POISONPOWDER
+	dbw 40, DOUBLE_EDGE
+	dbw 45, SYNTHESIS
+	dbw 51, SOLARBEAM
 	db 0 ; no more level-up moves
 
 IvysaurEvosAttacks:
@@ -176,35 +177,32 @@ IvysaurEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 1, LEECH_SEED
-	dbw 4, GROWL
-	dbw 7, LEECH_SEED
+	dbw 6, LEECH_SEED
 	dbw 10, VINE_WHIP
-	dbw 15, POISONPOWDER
 	dbw 15, SLEEP_POWDER
-	dbw 22, RAZOR_LEAF
-	dbw 29, SWEET_SCENT
-	dbw 38, GROWTH
+	dbw 23, RAZOR_LEAF
+	dbw 27, STUN_SPORE
+	dbw 32, TAKE_DOWN
+	dbw 38, POISONPOWDER
+	dbw 42, DOUBLE_EDGE
 	dbw 47, SYNTHESIS
-	dbw 56, SOLARBEAM
+	dbw 53, SOLARBEAM
 	db 0 ; no more level-up moves
 
 VenusaurEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 1, LEECH_SEED
-	dbw 1, VINE_WHIP
-	dbw 4, GROWL
-	dbw 7, LEECH_SEED
+	dbw 6, LEECH_SEED
 	dbw 10, VINE_WHIP
-	dbw 15, POISONPOWDER
 	dbw 15, SLEEP_POWDER
-	dbw 22, RAZOR_LEAF
-	dbw 29, SWEET_SCENT
-	dbw 41, GROWTH
-	dbw 53, SYNTHESIS
-	dbw 65, SOLARBEAM
+	dbw 23, RAZOR_LEAF
+	dbw 27, STUN_SPORE
+	dbw 32, TAKE_DOWN
+	dbw 40, POISONPOWDER
+	dbw 44, DOUBLE_EDGE
+	dbw 49, SYNTHESIS
+	dbw 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CharmanderEvosAttacks:

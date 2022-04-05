@@ -336,9 +336,9 @@ InitPokegearTilemap:
 	farcall PokegearMap
 	ld a, $07
 	ld bc, SCREEN_WIDTH - 2
-	hlcoord 12, 2
+	hlcoord 12, 1
 	call ByteFill
-	hlcoord 0, 2
+	hlcoord 1, 2
 	ld [hl], $06
 	hlcoord 19, 2
 	ld [hl], $17

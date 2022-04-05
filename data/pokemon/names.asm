@@ -272,3 +272,4 @@ PokemonNames::
 	db "BURGELA@@@";needs animation fully programmed in
 	db "VULPIII@@@";needs animation fully programmed in
 	db "WORFURS@@@";needs animation fully programmed in
+	db "DODAERIE@@";Needs animation fully programmed in
