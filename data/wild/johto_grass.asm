@@ -1222,18 +1222,18 @@ JohtoGrassWildMons:
 	; morn
 	dbw 4, LEDYBA
 	dbw 4, CATERPIE
-	dbw 5, CATERPIE
+	dbw 5, WOOPER
 	dbw 4, PIDGEY
 	dbw 4, WEEDLE
-	dbw 5, HOPPIP
+	dbw 5, SUNKERN
 	dbw 5, HOPPIP
 	; day
-	dbw 4, PIDGEY
+	dbw 4, HOPPIP
 	dbw 4, CATERPIE
-	dbw 5, CATERPIE
+	dbw 5, SUNKERN
 	dbw 4, PIDGEY
 	dbw 4, WEEDLE
-	dbw 5, HOPPIP
+	dbw 5, WOOPER
 	dbw 5, HOPPIP
 	; nite
 	dbw 4, SPINARAK
@@ -1251,14 +1251,14 @@ JohtoGrassWildMons:
 	dbw 4, CATERPIE
 	dbw 5, BELLSPROUT
 	dbw 5, PIDGEY
-	dbw 4, WEEDLE
+	dbw 4, PHANPY
 	dbw 5, HOPPIP
 	dbw 5, HOPPIP
 	; day
 	dbw 4, PIDGEY
 	dbw 4, CATERPIE
 	dbw 5, BELLSPROUT
-	dbw 5, PIDGEY
+	dbw 5, PHANPY
 	dbw 4, WEEDLE
 	dbw 5, HOPPIP
 	dbw 5, HOPPIP

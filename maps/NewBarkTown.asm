@@ -553,7 +553,7 @@ NewBarkTownElmsHouseSignText:
 KantoRockText:
 	text "Hngh…"
 	
-	para "Sorry kid, the"
+	para "Sorry, kid. The"
 	line "route to KANTO" 
 	cont "all blocked off"
 	
@@ -586,15 +586,20 @@ EntranceRivalText_EitherResult:
 	done
 
 TimeToBattle:
-	text "<PLAY_G>!"
+	text "Hey, wait up!"
+	
+	para "<PLAY_G>!"
+	
 	para "You're not getting"
 	line "off that easy!"
+	
 	para "ELM gave us these"
 	line "#MON, so now"
-	para "we gotta battle"
-	line "them!"
-	para "I'm not gonna hold"
-	line "back!"
+	cont "we gotta battle"
+	
+	para "them!"
+	line "I'm not gonna hold"
+	cont "back!"
 	done
 	
 NewBarkTown_MapEvents:
