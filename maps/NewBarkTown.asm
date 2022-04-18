@@ -181,7 +181,9 @@ SilentTownSilverBattleScript:
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext TimeToBattle
-	waitbutton
+	yesorno
+	iffalse .no
+	writetext RivalYesText
 	closetext
 ; player has:
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
@@ -233,6 +235,24 @@ SilentTownSilverBattleScript:
 	setscene SCENE_NEW_BARK_NOTHING
 	setevent EVENT_RIVAL_ELMS_LAB
 	playmapmusic
+	end
+	
+.no:
+	writetext RivalNoText
+; player has:
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .TOTODILE
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .CHIKORITA
+; has cyndaquil
+	winlosstext SilverEntranceWinText, SilverEntranceLossText
+	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	iftrue .AfterVictorious
+	jump .AfterYourDefeat
 	end
 
 NewBarkTownFisherScript:
@@ -588,19 +608,31 @@ EntranceRivalText_EitherResult:
 TimeToBattle:
 	text "Hey, wait up!"
 	
-	para "<PLAY_G>!"
+	para "You have a #-"
+	line "MON…And so do I."
+	cont "You know what"
 	
-	para "You're not getting"
-	line "off that easy!"
-	
-	para "ELM gave us these"
-	line "#MON, so now"
-	cont "we gotta battle"
-	
-	para "them!"
-	line "I'm not gonna hold"
-	cont "back!"
+	para "this means,"
+	line "right?"
 	done
+	
+RivalYesText:
+	text "That's right. We"
+	
+	line "battle, and you"
+	cont "become my first"
+	para "step on my stair-"
+	
+	line "way to the top!"
+	done
+	
+RivalNoText:
+	text "Hehe. Looks like"
+	
+	line "it's time for"
+	cont "some show and"
+	para "tell!"
+	done 
 	
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler

@@ -430,7 +430,6 @@ INCLUDE "maps/Route12.asm"
 
 SECTION "Map Scripts 23", ROMX
 
-INCLUDE "maps/NewBarkTown.asm"
 INCLUDE "maps/VioletCity.asm"
 INCLUDE "maps/OlivineCity.asm"
 INCLUDE "maps/Route37.asm"
@@ -478,6 +477,7 @@ SECTION "Map Scripts 25", ROMX
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/CherrygroveWoods.asm"
+INCLUDE "maps/NewBarkTown.asm"
 
 
 SECTION "Map Scripts 26", ROMX
