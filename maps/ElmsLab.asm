@@ -371,15 +371,22 @@ ElmAfterTheftScript:
 	writetext ElmAfterTheftText2
 	waitbutton
 	takeitem ELMS_EGG
-	scall ElmJumpBackScript1
 	writetext ElmAfterTheftText3
 	waitbutton
-	scall ElmJumpBackScript2
 	writetext ElmAfterTheftText4
-	buttonsound
+	waitbutton
+	takeitem OAKS_PARCEL
 	writetext ElmAfterTheftText5
+	waitsfx
+	waitbutton
+	writetext ElmGivesPokedexText
+	playsound SFX_FANFARE_2
+	waitsfx
+	setflag ENGINE_POKEDEX
 	buttonsound
 	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	setevent EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM
+	clearevent EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE
 	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES
 	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
 	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
@@ -457,44 +464,6 @@ ElmGiveTicketScript:
 	writetext ElmGiveTicketText2
 	waitbutton
 	closetext
-	end
-
-ElmJumpBackScript1:
-	closetext
-	readvar VAR_FACING
-	ifequal DOWN, ElmJumpDownScript
-	ifequal UP, ElmJumpUpScript
-	ifequal LEFT, ElmJumpLeftScript
-	ifequal RIGHT, ElmJumpRightScript
-	end
-
-ElmJumpBackScript2:
-	closetext
-	readvar VAR_FACING
-	ifequal DOWN, ElmJumpUpScript
-	ifequal UP, ElmJumpDownScript
-	ifequal LEFT, ElmJumpRightScript
-	ifequal RIGHT, ElmJumpLeftScript
-	end
-
-ElmJumpUpScript:
-	applymovement ELMSLAB_ELM, ElmJumpUpMovement
-	opentext
-	end
-
-ElmJumpDownScript:
-	applymovement ELMSLAB_ELM, ElmJumpDownMovement
-	opentext
-	end
-
-ElmJumpLeftScript:
-	applymovement ELMSLAB_ELM, ElmJumpLeftMovement
-	opentext
-	end
-
-ElmJumpRightScript:
-	applymovement ELMSLAB_ELM, ElmJumpRightMovement
-	opentext
 	end
 
 AideScript_WalkPotion1:
@@ -1052,66 +1021,83 @@ ElmsLabHealingMachineText2:
 	done
 
 ElmAfterTheftText1:
-	text "ELM: <PLAY_G>, this"
-	line "is terrible…"
-
-	para "Oh, yes, what was"
-	line "MR.#MON's big"
-	cont "discovery?"
+	text "Ah, you've re-"
+	line "turned! Do you"
+	cont "have the EGG?"
 	done
 
 ElmAfterTheftText2:
-	text "<PLAYER> handed"
-	line "the MYSTERY EGG to"
-	cont "PROF.ELM."
+	text "<PLAYER> gave"
+	line "ELM'S EGG back."
 	done
 
 ElmAfterTheftText3:
-	text "ELM: This?"
+	text "ELM: Indeed you"
+	line "do! Thank you so"
+	cont "much! Did MR."
+	
+	para "#MON have any-"
+	line "thing to say"
+	cont "about the EGG?"
 	done
 
 ElmAfterTheftText4:
-	text "But… Is it a"
-	line "#MON EGG?"
+	text "Huh? He thinks it"
+	line "houses a never"
+	cont "before seen #-"
 
-	para "If it is, it is a"
-	line "great discovery!"
+	para "MON? If that's"
+	line "true, then histo-"
+	cont "ry's in the mak-"
+	
+	para "ing! This reminds"
+	line "me of when I first"
+	cont "discovered PICHU,"
+	para "haha."
+	
+	para "ELM: Huh? What's"
+	line "that? OAK was at"
+	cont "MR. #MON's"
+	
+	para "house, and he has"
+	line "a PARCEL for me?"
+	
+	para "<PLAYER> handed"
+	line "over OAK'S PARCEL."
 	done
 
 ElmAfterTheftText5:
-	text "ELM: What?!?"
+	text "Hmm…let's see"
+	line "what's inside here…"
 
-	para "PROF.OAK gave you"
-	line "a #DEX?"
-
-	para "<PLAY_G>, is that"
-	line "true? Th-that's"
-	cont "incredible!"
-
-	para "He is superb at"
-	line "seeing the poten-"
-	cont "tial of people as"
-	cont "trainers."
-
-	para "Wow, <PLAY_G>. You"
-	line "may have what it"
-
-	para "takes to become"
-	line "the CHAMPION."
-
-	para "You seem to be"
-	line "getting on great"
-	cont "with #MON too."
-
-	para "You should take"
-	line "the #MON GYM"
-	cont "challenge."
-
-	para "The closest GYM"
-	line "would be the one"
-	cont "in CHERRYGROVE"
+	para "Oh! Several new"
+	line "#DEXs! I needed"
+	cont "some of these!"
 	
-	para "CITY."
+	para "Bless OAK for"
+	line "going out of his"
+	cont "way for me! Come"
+	
+	para "to think of it,"
+	line "would you take"
+	cont "one of these and"
+	
+	para "record #MON"
+	line "data with it? It's"
+	cont "always been OAK's"
+	
+	para "dream to know of"
+	line "every #MON in"
+	cont "existance, and"
+	
+	para "OAK's dreams are"
+	line "my dreams!"
+	done
+	
+ElmGivesPokedexText:
+	text "<PLAYER> received"
+	line "a #DEX from"
+	cont "PROF. ELM."
 	done
 
 ElmAfterTheftText6:
