@@ -294,16 +294,14 @@ ElmTakesPlayerToLab1:
 	step RIGHT
 	step RIGHT
 	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
 	step RIGHT
 	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -317,15 +315,13 @@ ElmTakesPlayerToLab2:
 	step RIGHT
 	step RIGHT
 	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
 	step RIGHT
 	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -335,7 +331,6 @@ ElmTakesPlayerToLab2:
 	step_end
 	
 ElmStopsPlayer1:
-	step UP
 	step LEFT
 	step LEFT
 	step LEFT
@@ -344,6 +339,7 @@ ElmStopsPlayer1:
 	step_end
 
 ElmStopsPlayer2:
+	step DOWN
 	step LEFT
 	step LEFT
 	step LEFT
@@ -644,8 +640,8 @@ NewBarkTown_MapEvents:
 	warp_event 11,  5, ELMS_HOUSE, 1
 
 	db 4 ; coord events
-	coord_event  1,  6, SCENE_TEACHER_STOPS, ElmStopsYouScene1
-	coord_event  1,  7, SCENE_TEACHER_STOPS, ElmStopsYouScene2
+	coord_event  1,  8, SCENE_TEACHER_STOPS, ElmStopsYouScene1
+	coord_event  1,  9, SCENE_TEACHER_STOPS, ElmStopsYouScene2
 	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
 	coord_event 11, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
@@ -653,13 +649,13 @@ NewBarkTown_MapEvents:
 	db 4 ; bg events
 	bg_event 10, 12, BGEVENT_READ, NewBarkTownSign
 	bg_event  3,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
-	bg_event 14, 13, BGEVENT_READ, NewBarkTownElmsLabSign
+	bg_event 11, 13, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9,  5, BGEVENT_READ, NewBarkTownElmsHouseSign
 
 	db 6 ; object events
 	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 13,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  7, 11, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event  7,  7, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_APPEARED_NEW_BARK_TOWN
+	object_event  7,  8, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_APPEARED_NEW_BARK_TOWN
 	object_event 19,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisher2Script, -1
 	object_event  7, 14, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, EVENT_FOUGHT_RIVAL_NEW_BARK_TOWN

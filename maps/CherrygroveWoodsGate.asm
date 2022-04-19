@@ -15,7 +15,21 @@ CherrygroveWoodsGateLassScript:
 	jumptextfaceplayer CherrygroveWoodsGateLassText
 	
 CherrygroveWoodsGateYoungsterScript:
-	jumptextfaceplayer CherrygroveWoodsGateYoungsterText
+	faceplayer
+	opentext
+	writetext CherrygroveWoodsGateYoungsterText
+	yesorno
+	iffalse .no
+	writetext CherrygroveWoodsYoungsterYesText
+	waitbutton
+	closetext
+	end
+
+.no:
+	writetext CherrygroveWoodsYoungsterNoText
+	waitbutton
+	closetext
+	end
 
 CherrygroveWoodsGateOfficerText:
 	text "You know, with"
@@ -60,6 +74,21 @@ CherrygroveWoodsGateYoungsterText:
 	
 	para "tried one?"
 	done
+	
+CherrygroveWoodsYoungsterYesText:
+	text "Oh, you look fine."
+	line "I'll have to give it"
+	cont "a try some time!"
+	done
+	
+CherrygroveWoodsYoungsterNoText:
+	text "Really? Our #-"
+	line "MON gobble these"
+	cont "right up! Aren't"
+	
+	para "you even a little"
+	line "curious?"
+	done 
 
 CherrygroveWoodsGate_MapEvents:
 	db 0, 0 ; filler
