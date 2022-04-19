@@ -16,6 +16,16 @@ CherrygroveCity_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 	callback MAPCALLBACK_OBJECTS, .birdkeepergone
 	
+.DummyScene0:
+	end
+
+.DummyScene1:
+	end
+	
+.FlyPoint:
+	setflag ENGINE_FLYPOINT_CHERRYGROVE
+	return
+	
 .birdkeepergone
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iffalse .gone
@@ -23,16 +33,6 @@ CherrygroveCity_MapScripts:
 	
 .gone
 	disappear CHERRYGROVECITY_BIRD_KEEPER
-	return
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
-
-.FlyPoint:
-	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	return
 
 CherrygroveCityGuideGent:
@@ -474,4 +474,4 @@ CherrygroveCity_MapEvents:
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
-	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE, -1
+	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE
