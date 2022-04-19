@@ -636,8 +636,8 @@ NewBarkTown_MapEvents:
 	db 4 ; warp events
 	warp_event 13, 13, ELMS_LAB, 1
 	warp_event  5,  5, PLAYERS_HOUSE_1F, 1
-	warp_event  3, 13, PLAYERS_NEIGHBORS_HOUSE, 1
-	warp_event 11,  5, ELMS_HOUSE, 1
+	warp_event  3, 13, ELMS_HOUSE, 1
+	warp_event 11,  5, SILENT_POKECENTER_1F, 2
 
 	db 4 ; coord events
 	coord_event  1,  8, SCENE_TEACHER_STOPS, ElmStopsYouScene1
@@ -647,14 +647,14 @@ NewBarkTown_MapEvents:
 
 	
 	db 4 ; bg events
-	bg_event 10, 12, BGEVENT_READ, NewBarkTownSign
+	bg_event 12,  8, BGEVENT_READ, NewBarkTownSign
 	bg_event  3,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
 	bg_event 11, 13, BGEVENT_READ, NewBarkTownElmsLabSign
-	bg_event  9,  5, BGEVENT_READ, NewBarkTownElmsHouseSign
+	bg_event  7, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
 
 	db 6 ; object events
-	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
-	object_event 13,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
+	object_event  8,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
+	object_event 15,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  7, 11, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
 	object_event  7,  8, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_APPEARED_NEW_BARK_TOWN
 	object_event 19,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisher2Script, -1

@@ -158,6 +158,7 @@ INCLUDE "maps/ElmsHouse.asm"
 INCLUDE "maps/Route26HealHouse.asm"
 INCLUDE "maps/DayOfWeekSiblingsHouse.asm"
 INCLUDE "maps/Route27SandstormHouse.asm"
+INCLUDE "maps/SilentPokecenter1F.asm"
 INCLUDE "maps/Route29Route46Gate.asm"
 
 
@@ -490,3 +491,4 @@ INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
 INCLUDE "maps/Route30BerryHouse.asm"
 INCLUDE "maps/MrPokemonsHouse.asm"
 INCLUDE "maps/Route31VioletGate.asm"
+
