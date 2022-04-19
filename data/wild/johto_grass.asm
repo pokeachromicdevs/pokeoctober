@@ -1656,15 +1656,15 @@ JohtoGrassWildMons:
 	dbw 3, BURGELA;BURGELA
 	dbw 4, YANMA
 	dbw 3, CLEFLING
-	dbw 3, YANMA
-	dbw 4, LEDYBA
+	dbw 3, LEDYBA
+	dbw 4, FARFETCH_D
 	dbw 4, FARFETCH_D
 	
 	dbw 3, PIDGEY;SAME AS ABOVE
 	dbw 3, BELLSPROUT
-	dbw 4, LEDYBA
+	dbw 4, YANMA
 	dbw 3, CLEFLING
-	dbw 3, YANMA
+	dbw 3, FARFETCH_D
 	dbw 4, LEDYBA
 	dbw 4, FARFETCH_D
 	; nite
