@@ -4,7 +4,6 @@
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
 	const CHERRYGROVECITY_FISHER
-	const CHERRGROVECITY_YOUNGSTER2
 	const CHERRYGROVECITY_BIRD_KEEPER
 
 CherrygroveCity_MapScripts:
@@ -16,6 +15,15 @@ CherrygroveCity_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 	callback MAPCALLBACK_OBJECTS, .birdkeepergone
 	
+.birdkeepergone
+	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	iffalse .gone
+	return
+	
+.gone
+	disappear CHERRYGROVECITY_BIRD_KEEPER
+	return
+	
 .DummyScene0:
 	end
 
@@ -24,15 +32,6 @@ CherrygroveCity_MapScripts:
 	
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
-	return
-	
-.birdkeepergone
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iffalse .gone
-	return
-	
-.gone
-	disappear CHERRYGROVECITY_BIRD_KEEPER
 	return
 
 CherrygroveCityGuideGent:
@@ -160,13 +159,11 @@ MysticWaterGuy:
 	end
 	
 BirdKeeperBlockage:
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iffalse .gone
 	opentext
 	writetext BirdKeeperBlocking
-.gone
-	disappear CHERRYGROVECITY_YOUNGSTER
-	return
+	waitbutton
+	closetext
+	end
 
 CherrygroveCitySign:
 	jumptext CherrygroveCitySignText
@@ -249,25 +246,9 @@ GuideGentMovement6:
 	step UP
 	step_end
 
-CherrygroveCity_RivalPushesYouOutOfTheWay:
-	big_step DOWN
-	turn_head UP
-	step_end
-
 CherrygroveCity_UnusedMovementData:
 	step LEFT
 	turn_head DOWN
-	step_end
-
-CherrygroveCity_RivalExitsStageLeft:
-	big_step LEFT
-	big_step LEFT
-	big_step LEFT
-	big_step LEFT
-	big_step UP
-	big_step UP
-	big_step LEFT
-	big_step LEFT
 	step_end
 
 GuideGentIntroText:
@@ -474,4 +455,4 @@ CherrygroveCity_MapEvents:
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
-	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE
+	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE, -1
