@@ -394,6 +394,15 @@ ElmAfterTheftScript:
 	writetext ElmAfterTheftText6
 	waitbutton
 	closetext
+	applymovement ELMSLAB_ELM, ElmMovement
+	disappear ELMSLAB_POKE_BALL1
+	disappear ELMSLAB_POKE_BALL2
+	disappear ELMSLAB_POKE_BALL3
+	faceplayer
+	opentext
+	writetext ElmTakesMonText
+	waitbutton
+	closetext
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 	end
 
@@ -729,6 +738,30 @@ AfterChikoritaMovement:
 	step LEFT
 	step UP
 	step UP
+	step_end
+	
+ElmMovement:
+	turn_head LEFT
+	step LEFT
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head UP
+	
+	turn_head DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	
+	step UP
+	step UP
+	step UP
+	step UP
+	step RIGHT
+	step DOWN
 	step_end
 	
 Text_SilverTakeThisOne:
@@ -1101,15 +1134,50 @@ ElmGivesPokedexText:
 	done
 
 ElmAfterTheftText6:
-	text "…<PLAY_G>. The"
-	line "road to the"
-
-	para "championship will"
-	line "be a long one."
-
-	para "Before you leave,"
-	line "make sure that you"
-	cont "talk to your mom."
+	text "Thank you! Since"
+	line "<RIVAL> is"
+	cont "nowhere near here,"
+	
+	para "I think I'll have"
+	line "to send my aide"
+	cont "to deliver a #-"
+	
+	para "DEX to him. Heck,"
+	line "even I might as"
+	cont "well take a #-"
+	
+	para "DEX as well!"
+	line "Having to write"
+	cont "down all of my"
+	
+	para "notes is annoy-"
+	line "ing, and this is"
+	cont "a great excuse to"
+	
+	para "get out of the"
+	line "LAB every once"
+	cont "in a while!"
+	
+	para "And come to think"
+	line "of it…"
+	done
+	
+ElmTakesMonText:
+	text "This little #-"
+	line "MON needs a"
+	cont "reason to get"
+	
+	para "and see the"
+	line "world instead of"
+	cont "being cooped up in"
+	
+	para "here too."
+	
+	para "So long,"
+	line "<PLAYER>!"
+	
+	para "Have fun on your"
+	line "journey!"
 	done
 
 ElmStudyingEggText:

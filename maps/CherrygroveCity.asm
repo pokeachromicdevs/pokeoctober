@@ -450,7 +450,7 @@ CherrygroveCity_MapEvents:
 
 	db 4 ; bg events
 	bg_event 30, 26, BGEVENT_READ, CherrygroveCitySign
-	bg_event 23, 27, BGEVENT_READ, GuideGentsHouseSign 
+	bg_event 23, 27, BGEVENT_READ, GuideGentsHouseSign
 	bg_event 24, 21, BGEVENT_READ, CherrygroveCityMartSign
 	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 
@@ -459,6 +459,6 @@ CherrygroveCity_MapEvents:
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
-	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE, -1
+	object_event 25,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE, -1
 	object_event 15,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM, -1
 
