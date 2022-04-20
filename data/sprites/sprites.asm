@@ -115,3 +115,4 @@ OverworldSprites:
 	overworld_sprite SportsmanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite CamperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite HikerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite GameboyGirlSpriteGFX, 12, STANDING_SPRITE, PAL_OW_GREEN
