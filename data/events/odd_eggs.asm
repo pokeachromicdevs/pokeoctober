@@ -6,25 +6,25 @@ ENDM
 OddEggProbabilities:
 prob_total = 0
 ; Pichu
-	prob 8
+	prob 10
 	prob 1
 ; Cleffa
-	prob 16
+	prob 14
 	prob 3
 ; Igglybuff
-	prob 16
+	prob 12
 	prob 3
 ; Smoochum
 	prob 14
 	prob 2
 ; Magby
-	prob 10
+	prob 12
 	prob 2
 ; Elekid
 	prob 12
 	prob 2
 ; Tyrogue
-	prob 10
+	prob 12
 	prob 1
 
 OddEggSpecies:
