@@ -458,8 +458,6 @@ ENDM
 	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ; 10
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
-	map_const SILENT_POKECENTER_1F,                         8,  4 ; 13
-
 	
 	newgroup                                                      ; 25
 
@@ -496,4 +494,5 @@ ENDM
 	map_const CHERRYGROVE_WOODS_GATE,                       5,  4 ; 22
 	map_const CHERRYGROVE_WOODS,                           30,  9
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
+	map_const SILENT_POKECENTER_1F,                         8,  4 ; 13
 
