@@ -221,7 +221,7 @@ DoAnimFrame:
 	ret
 
 .GameFreakLogo:
-	callfar GameFreakLogoJumper
+	callfar GameFreakPresents_UpdateLogoPal
 	ret
 
 .GSIntroStar
@@ -230,6 +230,7 @@ DoAnimFrame:
 	ld a, [hl]
 	and a
 	jr z, .asm_8d3ba
+
 	dec [hl]
 	dec [hl]
 	ld d, a

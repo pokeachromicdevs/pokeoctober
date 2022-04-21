@@ -1,6 +1,7 @@
 Copyright_GFPresents:
 	ld de, MUSIC_NONE
 	call PlayMusic
+
 	call ClearBGPalettes
 	call ClearTileMap
 	ld a, HIGH(vBGMap0)
@@ -13,322 +14,333 @@ Copyright_GFPresents:
 	ld a, $90
 	ldh [hWY], a
 	call WaitBGMap
+
 	ld b, SCGB_GAMEFREAK_LOGO
 	call GetSGBLayout
 	call SetPalettes
 	ld c, 10
 	call DelayFrames
+
 	callfar Copyright
 	call WaitBGMap
 	ld c, 100
 	call DelayFrames
 	call ClearTileMap
-	farcall GBCOnlyScreen
-	call .GetGFLogoGFX
-.joy_loop
-	call JoyTextDelay
-	ldh a, [hJoyLast]
-	and BUTTONS
-	jr nz, .pressed_button
+
+	;farcall GBCOnlyScreen
+	;ret
+
+; Play GameFreak logo animation
+	call GameFreakPresentsInit
+.loop
+	call GameFreakPresentsFrame
+	jr nc, .loop
+
+; high bits of wJumptableIndex are recycled for some flags
+; this was set if user canceled by pressing a button
 	ld a, [wJumptableIndex]
-	bit 7, a
-	jr nz, .finish
-	call PlaceGameFreakPresents
-	farcall PlaySpriteAnimations
-	call DelayFrame
-	jr .joy_loop
+	bit 6, a
+	jr nz, .canceled
 
-.pressed_button
-	call .StopGamefreakAnim
-	scf
-	ret
-
-.finish
-	call .StopGamefreakAnim
+; clear carry flag from GameFreakPresents_PlayFrame
 	and a
 	ret
 
-.GetGFLogoGFX:
-	ld de, GameFreakLogo
-	ld hl, vTiles2
-	lb bc, BANK(GameFreakLogo), 28
+.canceled
+	scf
+	ret
+
+GameFreakPresentsInit:
+	ld de, GameFreakLogoGFX
+	ld hl, vTiles1
+	lb bc, BANK(GameFreakLogoGFX), 28
 	call Get1bpp
 
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wDecompressScratch)
-	ldh [rSVBK], a
-
-	ld hl, IntroLogoGFX
-	ld de, wDecompressScratch
-	ld a, BANK(IntroLogoGFX)
-	call FarDecompress
-
-	ld hl, vTiles0
-	ld de, wDecompressScratch
-	lb bc, 1, 8 tiles
+	ld de, GameFreakLogoStarsGFX
+	ld hl, vTiles1 tile 28
+	lb bc, BANK(GameFreakLogoStarsGFX), 5
 	call Request2bpp
-
-	ld hl, vTiles1
-	ld de, wDecompressScratch + $80 tiles
-	lb bc, 1, 8 tiles
-	call Request2bpp
-
-	pop af
-	ldh [rSVBK], a
 
 	farcall ClearSpriteAnims
-	depixel 10, 11, 4, 0
-	ld a, SPRITE_ANIM_INDEX_GAMEFREAK_LOGO
-	call _InitSpriteAnimStruct
-	ld hl, SPRITEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], $a0
-	ld hl, SPRITEANIMSTRUCT_0C
-	add hl, bc
-	ld [hl], $60
-	ld hl, SPRITEANIMSTRUCT_0D
-	add hl, bc
-	ld [hl], $30
+
+	ld hl, wSpriteAnimDict
+	ld a, SPRITE_ANIM_DICT_GS_SPLASH
+	ld [hli], a
+	ld a, $8d
+	ld [hl], a
 	xor a
 	ld [wJumptableIndex], a
 	ld [wIntroSceneFrameCounter], a
 	ld [wIntroSceneTimer], a
 	ldh [hSCX], a
 	ldh [hSCY], a
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
-	ld a, $90
+	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
-	lb de, %11100100, %11100100
+	lb de, %00100100, %11111000
 	call DmgToCgbObjPals
 	ret
 
-.StopGamefreakAnim:
-	farcall ClearSpriteAnims
-	call ClearTileMap
-	call ClearSprites
-	ld c, 16
-	call DelayFrames
+GameFreakPresentsFrame:
+; Play one frame of GameFreakPresents sequence.
+; Return carry when the sequence completes or is canceled.
+
+	call JoyTextDelay
+	ldh a, [hJoyLast]
+	and BUTTONS
+	jr nz, .pressed_button
+
+; high bits of wJumptableIndex are recycled for some flags
+; this is set when the sequence finished
+	ld a, [wJumptableIndex]
+	bit 7, a
+	jr nz, .finish
+
+	farcall PlaySpriteAnimations
+
+	call GameFreakPresentsScene
+	call DelayFrame
+
+; ensure carry is cleared
+	and a
 	ret
 
-PlaceGameFreakPresents:
-	ld a, [wJumptableIndex]
-	ld e, a
-	ld d, 0
-	ld hl, .dw
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp hl
+.pressed_button
+; high bits of wJumptableIndex are recycled for some flags
+	ld hl, wJumptableIndex
+	set 6, [hl]
 
-.dw
-	dw PlaceGameFreakPresents_0
-	dw PlaceGameFreakPresents_1
-	dw PlaceGameFreakPresents_2
-	dw PlaceGameFreakPresents_3
+.finish
+	callfar ClearSpriteAnims
+	call ClearTileMap
+	call ClearSprites
 
-PlaceGameFreakPresents_AdvanceIndex:
+	ld c, 16
+	call DelayFrames
+
+	scf
+	ret
+
+GameFreakPresentsScene:
+	jumptable .scenes, wJumptableIndex
+
+.scenes
+	dw GameFreakPresents_Star
+	dw GameFreakPresents_PlaceLogo
+	dw GameFreakPresents_LogoSparkles
+	dw GameFreakPresents_PlacePresents
+	dw GameFreakPresents_WaitForTimer
+	dw GameFreakPresents_SetDoneFlag
+
+GameFreakPresents_NextScene:
 	ld hl, wJumptableIndex
 	inc [hl]
 	ret
 
-PlaceGameFreakPresents_0:
+GameFreakPresents_Wait64Frames: ; unreferenced
+	ld c, 64
+	call DelayFrames
+	call GameFreakPresents_NextScene
 	ret
 
-PlaceGameFreakPresents_1:
+GameFreakPresents_Star:
+; tell GameFreakPresents_PlaceLogo we haven't finished yet
+	xor a
+	ld [wIntroSceneFrameCounter], a
+
+	depixel 10, 11, 4, 0
+	ld a, SPRITE_ANIM_INDEX_GS_INTRO_STAR
+	call _InitSpriteAnimStruct
+
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	ld [hl], $80
+
+	ld de, SFX_GAME_FREAK_LOGO_GS
+	call PlaySFX
+
+	call GameFreakPresents_NextScene
+	ret
+
+GameFreakPresents_PlaceLogo:
+; Draw the Game Freak logo (may be initially invisible due to palette)
+
+; wait until the star animation completed
+; this counter is set in DoAnimFrame.GSIntroStar in engine/gfx/sprite_anims.asm
+	ld a, [wIntroSceneFrameCounter]
+	and a
+	ret z
+
+	depixel 10, 11, 4, 0
+	ld a, SPRITE_ANIM_INDEX_GAMEFREAK_LOGO
+	call _InitSpriteAnimStruct
+
+	call GameFreakPresents_NextScene
+
+; set timer for GameFreakPresents_LogoSparkles
+	ld a, 128
+	ld [wIntroSceneTimer], a
+	ret
+
+GameFreakPresents_LogoSparkles:
 	ld hl, wIntroSceneTimer
 	ld a, [hl]
-	cp $20
-	jr nc, .PlaceGameFreak
-	inc [hl]
+	and a
+	jr z, .done
+	dec [hl]
+
+; add first text when timer passes half
+	cp 63
+	call z, GameFreakPresents_PlaceGameFreak
+
+; add sparkles continuously
+	call GameFreakPresents_Sparkle
 	ret
 
-.PlaceGameFreak:
-	ld [hl], 0
-	ld hl, .GAME_FREAK
-	decoord 5, 10
-	ld bc, .end - .GAME_FREAK
-	call CopyBytes
-	call PlaceGameFreakPresents_AdvanceIndex
-	ld de, SFX_GAME_FREAK_PRESENTS
-	call PlaySFX
+.done
+; go to the next scene
+	ld [hl], 128
+	call GameFreakPresents_NextScene
 	ret
 
-.GAME_FREAK:
-	;  G  A  M  E   _  F  R  E  A  K
-	db 0, 1, 2, 3, 13, 4, 5, 3, 1, 6
-.end
+GameFreakPresents_PlaceGameFreak:
+	hlcoord 5, 12
+	ld de, .game_freak
+	call PlaceString
+	ret
+
+.game_freak
+	db $80, $81, $82, $83, $8d, $84, $85, $83, $81, $86
 	db "@"
 
-PlaceGameFreakPresents_2:
-	ld hl, wIntroSceneTimer
-	ld a, [hl]
-	cp $40
-	jr nc, .place_presents
-	inc [hl]
-	ret
+GameFreakPresents_PlacePresents:
+	hlcoord 7, 13
+	ld de, .presents
+	call PlaceString
 
-.place_presents
-	ld [hl], 0
-	ld hl, .presents
-	decoord 7, 11
-	ld bc, .end - .presents
-	call CopyBytes
-	call PlaceGameFreakPresents_AdvanceIndex
+	call GameFreakPresents_NextScene
+
+; set timer for GameFreakPresents_WaitForTimer
+	ld a, 128
+	ld [wIntroSceneTimer], a
 	ret
 
 .presents
-	db 7, 8, 9, 10, 11, 12
-.end
+	db $87, $88, $89, $8a, $8b, $8c
 	db "@"
 
-PlaceGameFreakPresents_3:
-	ld hl, wIntroSceneTimer
-	ld a, [hl]
-	cp $80
-	jr nc, .finish
-	inc [hl]
-	ret
+GameFreakPresents_SetDoneFlag:
+; Tell GameFreakPresents_PlayFrame and TitleScreenFrame that we're finished.
 
-.finish
 	ld hl, wJumptableIndex
 	set 7, [hl]
 	ret
 
-GameFreakLogoJumper:
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	ld e, [hl]
-	ld d, 0
-	ld hl, GameFreakLogoScenes
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp hl
-
-GameFreakLogoScenes:
-	dw GameFreakLogoScene1
-	dw GameFreakLogoScene2
-	dw GameFreakLogoScene3
-	dw GameFreakLogoScene4
-	dw GameFreakLogoScene5
-
-GameFreakLogoScene1:
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	inc [hl]
-	ret
-
-GameFreakLogoScene2:
-	ld hl, SPRITEANIMSTRUCT_0C
-	add hl, bc
+GameFreakPresents_WaitForTimer:
+	ld hl, wIntroSceneTimer
 	ld a, [hl]
 	and a
-	jr z, .asm_e4747
-	ld d, a
-	ld hl, SPRITEANIMSTRUCT_0D
-	add hl, bc
-	ld a, [hl]
-	and %111111
-	cp %100000
-	jr nc, .asm_e4723
-	add %100000
-.asm_e4723
-	ld e, a
-	farcall BattleAnim_Sine_e
-	ld hl, SPRITEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], e
-	ld hl, SPRITEANIMSTRUCT_0D
-	add hl, bc
-	ld a, [hl]
+	jr z, .done
 	dec [hl]
-	and $1f
+	ret
+.done
+	call GameFreakPresents_NextScene
+	ret
+
+GameFreakPresents_UpdateLogoPal:
+; called from DoAnimFrame.GameFreakLogo
+; OBP1 was initialized at end of GameFreakPresents_Init
+
+; once we reached the final state, leave it alone
+	ldh a, [rOBP1]
+	cp %10010000
+	ret z
+
+; wait 16 frames before next change
+	ld a, [wIntroSceneTimer]
+	and $f
 	ret nz
+
+; rotate OBP1 by one color slot (2 bits)
+; DMG: logo is white, then light gray, then dark gray
+; CGB: logo is white, then yellow
+	ldh a, [rOBP1]
+	rrca
+	rrca
+	call DmgToCgbObjPal1
+	ret
+
+GameFreakPresents_Sparkle:
+; Initialize and configure a sparkle sprite.
+	
+; run only every second frame
+	ld d, a
+	and 1
+	ret nz
+
+; shift over so our index is still changing by 1 each time
+	ld a, d
+	srl a
+
+; set up a new sparkle sprite
+	push af
+	depixel 11, 11
+	ld a, SPRITE_ANIM_INDEX_GS_INTRO_SPARKLE
+	call _InitSpriteAnimStruct
+	pop af
+
+; take the bottom 4 bits of a as an index into
+; sparkle_vectors (16 entries)
+	and %00001111
+	ld e, a
+	ld d, 0
+	ld hl, .sparkle_vectors
+	add hl, de
+	add hl, de
+
+; set the angle and distance for this sprite
+	ld e, l
+	ld d, h
+	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
+	add hl, bc
+	ld a, [de]
+	ld [hl], a ; angle
+	inc de
 	ld hl, SPRITEANIMSTRUCT_0C
 	add hl, bc
-	ld a, [hl]
-	sub $30
-	ld [hl], a
-	ld de, SFX_DITTO_BOUNCE
-	call PlaySFX
+	ld [hl], 0
+	inc hl ; SPRITEANIMSTRUCT_0D
+	ld a, [de]
+	ld [hl], a ; distance
 	ret
 
-.asm_e4747
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	inc [hl]
-	ld hl, SPRITEANIMSTRUCT_0D
-	add hl, bc
-	ld [hl], $0
-	ld de, SFX_DITTO_POP_UP
-	call PlaySFX
-	ret
+.sparkle_vectors
+; values control final position of each sparkle
+; position is automatically animated along the vector
+; each entry emits two sparkles in opposite directions
+; angle (6 bits) and distance (tiles?)
+	db $00, $03
+	db $08, $04
+	db $04, $03
+	db $0c, $02
+	db $10, $02
+	db $18, $03
+	db $14, $04
+	db $1c, $03
+	db $20, $02
+	db $28, $02
+	db $24, $03
+	db $2c, $04
+	db $30, $04
+	db $38, $03
+	db $34, $02
+	db $3c, $04
 
-GameFreakLogoScene3:
-	ld hl, SPRITEANIMSTRUCT_0D
-	add hl, bc
-	ld a, [hl]
-	cp $20
-	jr nc, .asm_e4764
-	inc [hl]
-	ret
-
-.asm_e4764
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	inc [hl]
-	ld hl, SPRITEANIMSTRUCT_0D
-	add hl, bc
-	ld [hl], $0
-	ld de, SFX_DITTO_TRANSFORM
-	call PlaySFX
-	ret
-
-GameFreakLogoScene4:
-	ld hl, SPRITEANIMSTRUCT_0D
-	add hl, bc
-	ld a, [hl]
-	cp $40
-	jr z, .asm_e47a3
-	inc [hl]
-	srl a
-	srl a
-	ld e, a
-	ld d, $0
-	ld hl, GameFreakLogoPalettes
-	add hl, de
-	add hl, de
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wOBPals2)
-	ldh [rSVBK], a
-	ld a, [hli]
-	ld [wOBPals2 + 12], a
-	ld a, [hli]
-	ld [wOBPals2 + 13], a
-	pop af
-	ldh [rSVBK], a
-	ld a, $1
-	ldh [hCGBPalUpdate], a
-	ret
-
-.asm_e47a3
-	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
-	add hl, bc
-	inc [hl]
-	call PlaceGameFreakPresents_AdvanceIndex
-GameFreakLogoScene5:
-	ret
-
-GameFreakLogoPalettes:
-INCLUDE "gfx/intro/gamefreak_logo.pal"
-
-GameFreakLogo:
+GameFreakLogoGFX:
 INCBIN "gfx/splash/logo1.1bpp"
 INCBIN "gfx/splash/logo2.1bpp"
+
+GameFreakLogoStarsGFX:
+INCBIN "gfx/splash/logo_star.2bpp"
+INCBIN "gfx/splash/logo_sparkle.2bpp"

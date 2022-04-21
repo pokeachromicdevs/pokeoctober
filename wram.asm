@@ -216,7 +216,7 @@ UNION ; c300
 ; wSpriteAnimDict is a 10x2 dictionary
 ; keys: taken from third column of SpriteAnimSeqData
 ; values: vTiles
-wSpriteAnimDict:: ds 10 * 2
+wSpriteAnimDict:: ds NUM_SPRITEANIMDICT_ENTRIES * 2
 
 wSpriteAnimationStructs::
 ; field  0:   index
