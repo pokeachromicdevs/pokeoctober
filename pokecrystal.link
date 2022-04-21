@@ -48,7 +48,6 @@ ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
 	"Egg Move Pointers"
-	"Egg Moves 1"
 ROMX $09
 	"bank9"
 ROMX $0a
@@ -57,6 +56,7 @@ ROMX $0b
 	"bankB"
 ROMX $0c
 	"Tileset Data 4"
+	"Egg Moves 1"
 ROMX $0d
 	"Effect Commands"
 ROMX $0e
