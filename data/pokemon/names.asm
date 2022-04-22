@@ -15,7 +15,7 @@ PokemonNames::
 	db "CATERPIE@@";needs animation
 	db "METAPOD@@@"
 	db "BUTTERFREE"
-	db "WEEDLE@@@@"
+	db "WEEDLE@@@@";needs animation
 	db "KAKUNA@@@@"
 	db "BEEDRILL@@"
 	db "PIDGEY@@@@"
@@ -200,7 +200,7 @@ PokemonNames::
 	db "AIPOM@@@@@";insert beta sprite
 	db "SUNKERN@@@";insert beta sprite
 	db "SUNFLORA@@"
-	db "LUXSWAN@@@";needs animation fully programmed in
+	db "LUXSWAN@@@";needs animation
 	db "WOOPER@@@@";insert beta sprite
 	db "QUAGSIRE@@"
 	db "ESPEON@@@@";insert beta sprite
