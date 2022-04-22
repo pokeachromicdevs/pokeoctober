@@ -51,9 +51,9 @@ PokemonNames::
 	db "PARAS@@@@@"
 	db "PARASECT@@"
 	db "VENONAT@@@"
-	db "VENOMOTH@@"
+	db "VENOMOTH@@";needs animation
 	db "DIGLETT@@@"
-	db "DUGTRIO@@@"
+	db "DUGTRIO@@@";needs animation
 	db "MEOWTH@@@@"
 	db "PERSIAN@@@"
 	db "PSYDUCK@@@"
@@ -107,7 +107,7 @@ PokemonNames::
 	db "EXEGGCUTE@"
 	db "EXEGGUTOR@"
 	db "CUBONE@@@@"
-	db "MAROWAK@@@"
+	db "MAROWAK@@@";needs finalized shading and animation
 	db "HITMONLEE@"
 	db "HITMONCHAN"
 	db "LICKITUNG@"
