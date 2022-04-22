@@ -76,7 +76,7 @@ PokemonNames::
 	db "VICTREEBEL"
 	db "TENTACOOL@"
 	db "TENTACRUEL"
-	db "GEODUDE@@@"
+	db "GEODUDE@@@";needs animation
 	db "GRAVELER@@"
 	db "GOLEM@@@@@"
 	db "PONYTA@@@@"
