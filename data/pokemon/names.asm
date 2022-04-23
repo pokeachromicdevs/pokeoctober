@@ -11,7 +11,7 @@ PokemonNames::
 	db "CHARIZARD@"
 	db "SQUIRTLE@@"
 	db "WARTORTLE@"
-	db "BLASTOISE@"
+	db "BLASTOISE@";needs animation
 	db "CATERPIE@@";needs animation
 	db "METAPOD@@@"
 	db "BUTTERFREE"
@@ -52,7 +52,7 @@ PokemonNames::
 	db "PARASECT@@"
 	db "VENONAT@@@"
 	db "VENOMOTH@@";needs animation
-	db "DIGLETT@@@"
+	db "DIGLETT@@@";needs animation
 	db "DUGTRIO@@@";needs animation
 	db "MEOWTH@@@@"
 	db "PERSIAN@@@"
@@ -113,7 +113,7 @@ PokemonNames::
 	db "LICKITUNG@"
 	db "KOFFING@@@"
 	db "WEEZING@@@"
-	db "RHYHORN@@@"
+	db "RHYHORN@@@";needs animation
 	db "RHYDON@@@@"
 	db "CHANSEY@@@"
 	db "TANGELA@@@"
@@ -125,14 +125,14 @@ PokemonNames::
 	db "STARYU@@@@"
 	db "STARMIE@@@"
 	db "MIMENTOR@@"
-	db "SCYTHER@@@"
-	db "JYNX@@@@@@"
+	db "SCYTHER@@@";needs animation
+	db "JYNX@@@@@@";check Shiny
 	db "ELECTABUZZ"
 	db "MAGMAR@@@@"
 	db "PINSIR@@@@"
 	db "TAUROS@@@@"
 	db "MAGIKARP@@"
-	db "GYARADOS@@"
+	db "GYARADOS@@";needs animation
 	db "LAPRAS@@@@"
 	db "DITTO@@@@@"
 	db "EEVEE@@@@@"
@@ -162,7 +162,7 @@ PokemonNames::
 	db "TYPHLOSION"
 	db "TOTODILE@@"
 	db "CROCONAW@@"
-	db "FERALIGATR";insert beta sprite
+	db "FERALIGATR";needs animation
 	db "BAYLEEF@@@"
 	db "SENTRET@@@"
 	db "FURRET@@@@";needs animation fully programmed in
@@ -189,7 +189,7 @@ PokemonNames::
 	db "MAREEP@@@@"
 	db "FLAAFFY@@@"
 	db "AMPHAROS@@"
-	db "BELLOSSOM@";swap regular and shiny palettes
+	db "BELLOSSOM@"
 	db "MARILL@@@@"
 	db "AZUMARILL@";insert beta sprite
 	db "SUDOWOODO@"
