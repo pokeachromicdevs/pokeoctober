@@ -267,7 +267,8 @@ MoveDescriptions1:
 	dw CoinHurlDescription
 	dw BounceDescription
 	dw RockSlashDescription
-
+	dw InkSprayDescription
+	
 InvalidMoveDescription:
 	db "?@"
 
@@ -1029,6 +1030,7 @@ SludgeBombDescription:
 	db   "An attack that may"
 	next "poison the foe.@"
 
+InkSprayDescription:
 MudSlapDescription:
 	db   "Reduces the foe's"
 	next "accuracy.@"

@@ -2366,7 +2366,7 @@ TeacherGroup:
 	db 2
 	dw HOOTHOOT
 	db 4 
-	dw PHANPY
+	dw MOIBELLE
 	db -1 ; end
 
 	end_list_items
@@ -5133,11 +5133,11 @@ OfficerGroup:
 	
 	next_list_item ; OFFICER (2)
 	db "MATT@", TRAINERTYPE_NORMAL
-	db 2
+	db 6
 	dw HOOTHOOT
-	db 3
+	db 7
 	dw PUPPERON
-	db 3
+	db 9
 	dw REMORAID
 	db -1 ; end
 	

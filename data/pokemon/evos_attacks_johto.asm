@@ -1216,26 +1216,35 @@ RemoraidEvosAttacks:
 	dbbw EVOLVE_LEVEL, 25, OCTILLERY
 	db 0 ; no more evolutions
 	dbw 1, WATER_GUN
-	dbw 11, LOCK_ON
-	dbw 22, PSYBEAM
-	dbw 22, AURORA_BEAM
-	dbw 22, BUBBLEBEAM
-	dbw 33, FOCUS_ENERGY
-	dbw 44, ICE_BEAM
-	dbw 55, HYPER_BEAM
+	dbw 1, LEER
+	dbw 6, INK_SPRAY
+	dbw 11, HAZE
+	dbw 16, PSYBEAM
+	dbw 21, BUBBLEBEAM
+	dbw 26, AURORA_BEAM
+	dbw 31, FOCUS_ENERGY
+	dbw 36, SLUDGE_BOMB
+	dbw 41, LOCK_ON
+	dbw 46, ICE_BEAM
+	dbw 51, HYDRO_PUMP
+	dbw 56, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 OctilleryEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, WATER_GUN
-	dbw 11, CONSTRICT
-	dbw 22, PSYBEAM
-	dbw 22, AURORA_BEAM
-	dbw 22, BUBBLEBEAM
-	dbw 24, OCTAZOOKA
-	dbw 38, FOCUS_ENERGY
-	dbw 54, ICE_BEAM
-	dbw 70, HYPER_BEAM
+	dbw 1, LEER
+	dbw 8, INK_SPRAY
+	dbw 13, HAZE
+	dbw 18, PSYBEAM
+	dbw 23, BUBBLEBEAM
+	dbw 28, AURORA_BEAM
+	dbw 33, FOCUS_ENERGY
+	dbw 38, SLUDGE_BOMB
+	dbw 43, LOCK_ON
+	dbw 48, ICE_BEAM
+	dbw 53, HYDRO_PUMP
+	dbw 58, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 DelibirdEvosAttacks:

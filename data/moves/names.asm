@@ -261,3 +261,4 @@ MoveNames::
 	db "COIN HURL@"
 	db "BOUNCE@"
 	db "ROCK SLASH@"
+	db "INK SPRAY@"
