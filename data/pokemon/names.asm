@@ -11,11 +11,11 @@ PokemonNames::
 	db "CHARIZARD@"
 	db "SQUIRTLE@@"
 	db "WARTORTLE@"
-	db "BLASTOISE@"
+	db "BLASTOISE@";needs animation
 	db "CATERPIE@@";needs animation
 	db "METAPOD@@@"
 	db "BUTTERFREE"
-	db "WEEDLE@@@@"
+	db "WEEDLE@@@@";needs animation
 	db "KAKUNA@@@@"
 	db "BEEDRILL@@"
 	db "PIDGEY@@@@"
@@ -51,9 +51,9 @@ PokemonNames::
 	db "PARAS@@@@@"
 	db "PARASECT@@"
 	db "VENONAT@@@"
-	db "VENOMOTH@@"
-	db "DIGLETT@@@"
-	db "DUGTRIO@@@"
+	db "VENOMOTH@@";needs animation
+	db "DIGLETT@@@";needs animation
+	db "DUGTRIO@@@";needs animation
 	db "MEOWTH@@@@"
 	db "PERSIAN@@@"
 	db "PSYDUCK@@@"
@@ -76,7 +76,7 @@ PokemonNames::
 	db "VICTREEBEL"
 	db "TENTACOOL@"
 	db "TENTACRUEL"
-	db "GEODUDE@@@"
+	db "GEODUDE@@@";needs animation
 	db "GRAVELER@@"
 	db "GOLEM@@@@@"
 	db "PONYTA@@@@"
@@ -107,13 +107,13 @@ PokemonNames::
 	db "EXEGGCUTE@"
 	db "EXEGGUTOR@"
 	db "CUBONE@@@@"
-	db "MAROWAK@@@"
+	db "MAROWAK@@@";needs finalized shading and animation
 	db "HITMONLEE@"
 	db "HITMONCHAN"
 	db "LICKITUNG@"
 	db "KOFFING@@@"
 	db "WEEZING@@@"
-	db "RHYHORN@@@"
+	db "RHYHORN@@@";needs animation
 	db "RHYDON@@@@"
 	db "CHANSEY@@@"
 	db "TANGELA@@@"
@@ -125,14 +125,14 @@ PokemonNames::
 	db "STARYU@@@@"
 	db "STARMIE@@@"
 	db "MIMENTOR@@"
-	db "SCYTHER@@@"
-	db "JYNX@@@@@@"
+	db "SCYTHER@@@";needs animation
+	db "JYNX@@@@@@";check Shiny
 	db "ELECTABUZZ"
 	db "MAGMAR@@@@"
 	db "PINSIR@@@@"
 	db "TAUROS@@@@"
 	db "MAGIKARP@@"
-	db "GYARADOS@@"
+	db "GYARADOS@@";needs animation
 	db "LAPRAS@@@@"
 	db "DITTO@@@@@"
 	db "EEVEE@@@@@"
@@ -162,7 +162,7 @@ PokemonNames::
 	db "TYPHLOSION"
 	db "TOTODILE@@"
 	db "CROCONAW@@"
-	db "FERALIGATR";insert beta sprite
+	db "FERALIGATR";needs animation
 	db "BAYLEEF@@@"
 	db "SENTRET@@@"
 	db "FURRET@@@@";needs animation fully programmed in
@@ -189,7 +189,7 @@ PokemonNames::
 	db "MAREEP@@@@"
 	db "FLAAFFY@@@"
 	db "AMPHAROS@@"
-	db "BELLOSSOM@";swap regular and shiny palettes
+	db "BELLOSSOM@"
 	db "MARILL@@@@"
 	db "AZUMARILL@";insert beta sprite
 	db "SUDOWOODO@"
@@ -200,7 +200,7 @@ PokemonNames::
 	db "AIPOM@@@@@";insert beta sprite
 	db "SUNKERN@@@";insert beta sprite
 	db "SUNFLORA@@"
-	db "LUXSWAN@@@";needs animation fully programmed in
+	db "LUXSWAN@@@";needs animation
 	db "WOOPER@@@@";insert beta sprite
 	db "QUAGSIRE@@"
 	db "ESPEON@@@@";insert beta sprite

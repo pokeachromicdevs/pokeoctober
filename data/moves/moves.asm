@@ -279,3 +279,4 @@ Moves1:
 	move EFFECT_COIN_HURL,          40, NORMAL,   100, 20,   0 ;COIN_HURL
 	move EFFECT_BOUNCE,             70, WATER,     95, 15,  30 ;BOUNCE 
 	move EFFECT_NORMAL_HIT,        140, ROCK,      70,  5,   0 ;ROCK_SLASH
+	move EFFECT_ACCURACY_DOWN_HIT,  20, WATER,   100, 10, 100  ;INK_SPRAY

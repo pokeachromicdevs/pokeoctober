@@ -286,6 +286,7 @@ BattleAnimations::
 	dw BattleAnim_CoinHurl
 	dw BattleAnim_Bounce
 	dw BattleAnim_RockSlash
+	dw BattleAnim_InkSpray
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -2784,6 +2785,7 @@ BattleAnim_Conversion2:
 	anim_wait 48
 	anim_ret
 
+BattleAnim_InkSpray:
 BattleAnim_Smokescreen:
 	anim_3gfx ANIM_GFX_HAZE, ANIM_GFX_EGG, ANIM_GFX_SMOKE
 	anim_sound 6, 2, SFX_THROW_BALL
