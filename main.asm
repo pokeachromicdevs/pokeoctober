@@ -492,7 +492,8 @@ CopyrightGFX::
 INCBIN "gfx/splash/copyright.2bpp"
 
 INCLUDE "engine/menus/options_menu.asm"
-INCLUDE "engine/movie/crystal_intro.asm"
+INCLUDE "engine/movie/gf_splash.asm"
+INCLUDE "engine/movie/gs_intro.asm"
 
 
 SECTION "bank3E", ROMX
@@ -533,13 +534,6 @@ INCLUDE "engine/gfx/load_overworld_font.asm"
 SECTION "Mobile 42", ROMX
 
 INCLUDE "mobile/mobile_42.asm"
-
-
-SECTION "Intro Logo", ROMX
-
-IntroLogoGFX:
-INCBIN "gfx/intro/logo.2bpp.lz"
-
 
 SECTION "Title", ROMX
 

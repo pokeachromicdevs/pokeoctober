@@ -166,7 +166,7 @@ _ResetWRAM:
 
 	ld hl, wNumPCItems
 	call .InitList
-	
+
 	ld hl, wTMsHMs
 	xor a
 rept ((NUM_TMS + NUM_HMS) + 7) / 8
@@ -1095,7 +1095,7 @@ Intro_PlacePlayerSprite:
 CrystalIntroSequence:
 	callfar Copyright_GFPresents
 	jr c, StartTitleScreen
-	;farcall CrystalIntro
+	farcall GoldSilverIntro
 
 StartTitleScreen:
 	ldh a, [rSVBK]

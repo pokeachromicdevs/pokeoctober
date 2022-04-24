@@ -27,8 +27,7 @@ Copyright_GFPresents:
 	call DelayFrames
 	call ClearTileMap
 
-	;farcall GBCOnlyScreen
-	;ret
+	farcall GBCOnlyScreen
 
 ; Play GameFreak logo animation
 	call GameFreakPresentsInit
@@ -273,7 +272,7 @@ GameFreakPresents_UpdateLogoPal:
 
 GameFreakPresents_Sparkle:
 ; Initialize and configure a sparkle sprite.
-	
+
 ; run only every second frame
 	ld d, a
 	and 1

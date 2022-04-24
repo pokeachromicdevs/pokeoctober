@@ -7,6 +7,13 @@ InitTitleScreen::
 ; Turn BG Map update off
 	xor a
 	ldh [hBGMapMode], a
+	ldh [hMapAnims], a
+	ldh [hSCY], a
+	ldh [hSCX], a
+	ld hl, vTiles0
+	ld bc, $200 tiles
+	xor a
+	call ByteFill
 
 ; Reset timing variables
 	ld hl, wJumptableIndex
