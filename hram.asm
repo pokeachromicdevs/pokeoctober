@@ -95,7 +95,8 @@ hMGStatusFlags:: db ; ffbc
 ENDU ; ffbd
 
 hUsedSpriteIndex:: db ; ffbd
-hCurSpriteYCoord::
+hCurSpriteYCoord::  db
+hCurSpriteYPixel::   db
 hUsedSpriteTile::  db ; ffbe
 hFFBF::            db ; ffbf
 hFFC0::            db ; ffc0
