@@ -28,6 +28,8 @@ Copyright_GFPresents:
 	call ClearTileMap
 
 	farcall GBCOnlyScreen
+	
+	call WarningScreen
 
 ; Play GameFreak logo animation
 	call GameFreakPresentsInit
@@ -48,6 +50,50 @@ Copyright_GFPresents:
 .canceled
 	scf
 	ret
+
+WarningScreen:
+	call ClearTileMap
+	call LoadStandardFont
+	call ClearSprites
+	hlcoord 3, 1
+	ld de, .Header
+	call PlaceString
+	hlcoord 2, 6
+	ld de, .Body
+	call PlaceString
+	hlcoord 0, 13
+	ld de, .URL
+	call PlaceString
+	hlcoord 4, 16
+	ld de, .PressStart
+	call PlaceString
+.loop
+	call JoyTextDelay
+	ldh a, [hJoyLast]
+	and START | A_BUTTON | B_BUTTON | SELECT
+	jr z, .loop
+	call ClearTileMap
+	ret
+	
+.Header:
+	db   " This game is"
+	next "NOT FOR PROFIT!"
+	db   "@"
+
+.Body:
+	db   "If you have paid"
+	next "for this, demand"
+	next "your money back."
+	db "@"
+
+.URL:
+	db " discord.gg/        "
+	db "         Fc4M7cJMjC "
+	db "@"
+
+.PressStart:
+	db "-PRESS START-"
+	db "@"
 
 GameFreakPresentsInit:
 	ld de, GameFreakLogoGFX

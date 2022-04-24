@@ -661,36 +661,7 @@ Text_YouCantUseItInABattle::
 	prompt
 
 Text_AreYouABoyOrAreYouAGirl::
-	text "If you bought this"
-	line "with real-world"
-	cont "money, you have"
-	
-	para "been scammed."
-	
-	para "Demand your money"
-	line "back as soon as"
-	cont "possible."
-	
-	para "Do not distribute"
-	line "this game without"
-	cont "crediting the devs"
-	
-	para "and linking back"
-	line "to the #COMMU-"
-	cont "NITY page and DIS-"
-	    
-	para "CORD server."
-	
-	para "For questions,"
-	line "visit the GOLD '98"
-	cont "DISCORD server at:"
-	
-	para "https://discord.gg"
-	line "/Fc4M7cJMjC"
-	
-	para "Now…"
-	
-	para"Are you a boy?"
+	text "Are you a boy?"
 	line "Or are you a girl?"
 	done
 
