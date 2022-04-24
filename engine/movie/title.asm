@@ -10,10 +10,6 @@ InitTitleScreen::
 	ldh [hMapAnims], a
 	ldh [hSCY], a
 	ldh [hSCX], a
-	ld hl, vTiles0
-	ld bc, $200 tiles
-	xor a
-	call ByteFill
 
 ; Reset timing variables
 	ld hl, wJumptableIndex
@@ -24,6 +20,12 @@ InitTitleScreen::
 
 ; Turn LCD off
 	call DisableLCD
+
+; clear tiles
+	ld hl, vTiles0
+	ld bc, $200 tiles
+	xor a
+	call ByteFill
 
 ; title screen GFX
 	ld hl, G98T

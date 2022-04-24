@@ -32,6 +32,7 @@ GoldSilverIntro:
 .Finish:
 	callfar ClearSpriteAnims
 	call ClearSprites
+	call Intro_ResetLYOverrides
 	call DelayFrame
 	xor a
 	ldh [hSCX], a
@@ -111,11 +112,11 @@ IntroScene1:
 	ld de, vTiles0 tile $00
 	ld hl, Intro_WaterGFX2
 	call Decompress
-	ld hl, wSpriteAnimDict
-	ld a, SPRITE_ANIM_DICT_DEFAULT
-	ld [hli], a
-	ld a, $00
-	ld [hli], a
+	;ld hl, wSpriteAnimDict
+	;ld a, SPRITE_ANIM_DICT_DEFAULT
+	;ld [hli], a
+	;ld a, $00
+	;ld [hli], a
 	xor a
 	ldh [hSCY], a
 	ld [wGlobalAnimYOffset], a
@@ -350,7 +351,7 @@ Intro_InitBubble:
 	inc hl
 	ld d, [hl]
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_BUBBLE
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 .pixel_table
@@ -395,7 +396,7 @@ Intro_InitMagikarps:
 
 .InitAnim:
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_MAGIKARP
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_InitShellders:
@@ -407,7 +408,7 @@ Intro_InitShellders:
 
 .InitAnim:
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_SHELLDER
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_InitLapras:
@@ -416,13 +417,13 @@ Intro_InitLapras:
 	ret nz
 	depixel 16, 24
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_LAPRAS
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_UnusedInitAerodactyl: ; unreferenced
 	depixel 2, 0
 	ld a, SPRITE_ANIM_INDEX_UNUSED_INTRO_AERODACTYL
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_UpdateTilemapAndBGMap:
@@ -524,7 +525,6 @@ rept 8
 endr
 
 Intro_InitSineLYOverrides:
-	ret
 	ld bc, wLYOverrides2
 	ld a, wLYOverrides2End - wLYOverrides2
 	ld de, vBGMap1 - vBGMap0
@@ -544,7 +544,6 @@ Intro_InitSineLYOverrides:
 	ret
 
 Intro_UpdateLYOverrides:
-	ret
 	ld bc, wLYOverrides
 	ld e, $10
 
@@ -610,11 +609,11 @@ IntroScene6:
 	ld de, vTiles0
 	ld hl, Intro_GrassGFX2
 	call Decompress
-	ld hl, wSpriteAnimDict
-	ld a, SPRITE_ANIM_DICT_GS_INTRO
-	ld [hli], a
-	ld a, $00
-	ld [hli], a
+	;ld hl, wSpriteAnimDict
+	;ld a, SPRITE_ANIM_DICT_GS_INTRO
+	;ld [hli], a
+	;ld a, $00
+	;ld [hli], a
 	xor a
 	ldh [hSCY], a
 	ld [wGlobalAnimYOffset], a
@@ -737,28 +736,28 @@ Intro_InitNote:
 	jr z, .invisible
 	depixel 11, 6, 4, 0
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_NOTE
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 .invisible
 	depixel 10, 6, 4, 0
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_INVISIBLE_NOTE
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_InitJigglypuff:
 	depixel 14, 6
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_JIGGLYPUFF
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_InitPikachu:
 	depixel 14, 24
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_PIKACHU
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	depixel 14, 24
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_PIKACHU_TAIL
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 IntroScene10:
@@ -791,11 +790,11 @@ IntroScene10:
 	ld de, vTiles0 tile $42
 	farcall Intro_GetMonFrontpic
 
-	ld hl, wSpriteAnimDict
-	ld a, SPRITE_ANIM_DICT_GS_INTRO
-	ld [hli], a
-	ld a, $00
-	ld [hli], a
+	;ld hl, wSpriteAnimDict
+	;ld a, SPRITE_ANIM_DICT_GS_INTRO
+	;ld [hli], a
+	;ld a, $00
+	;ld [hli], a
 	call EnableLCD
 	ld a, 0
 	call DrawIntroCharizardGraphic
@@ -1022,7 +1021,7 @@ Intro_ChikoritaAppears:
 	call PlaySFX
 	depixel 22, 1
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_CHIKORITA
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_CyndaquilAppears:
@@ -1030,7 +1029,7 @@ Intro_CyndaquilAppears:
 	call PlaySFX
 	depixel 22, 20
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_CYNDAQUIL
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_TotodileAppears:
@@ -1038,7 +1037,7 @@ Intro_TotodileAppears:
 	call PlaySFX
 	depixel 22, 1
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_TOTODILE
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_FlashMonPalette:
@@ -1153,23 +1152,11 @@ Intro_AnimateFireball:
 	ret nz
 	depixel 12, 10, 4, 4
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_FIREBALL
-	call InitSpriteAnimStruct
+	call _InitSpriteAnimStruct
 	ld hl, hSCX
 	dec [hl]
 	ld hl, wGlobalAnimXOffset
 	inc [hl]
-	ret
-
-Copy128Tiles: ; unreferenced
-	ld bc, 128 tiles
-.loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	dec bc
-	ld a, c
-	or b
-	jr nz, .loop
 	ret
 
 Intro_DrawBackground:
@@ -1237,8 +1224,13 @@ Intro_Draw2x2Tiles:
 
 Intro_ResetLYOverrides:
 	ld hl, wLYOverrides
+	call .reset
+	call .reset
+	ld hl, wLYOverridesBackup
+	call .reset
+.reset
 	xor a
-	ld c, wLYOverrides2 - wLYOverrides
+	ld c, $90
 .loop
 	ld [hli], a
 	dec c
