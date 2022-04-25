@@ -1,4 +1,5 @@
 GoldSilverIntro:
+	ret
 	call .Init
 .Loop:
 	call .PlayFrame
