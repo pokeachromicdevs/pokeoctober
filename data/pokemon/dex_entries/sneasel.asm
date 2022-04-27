@@ -1,4 +1,4 @@
-	db "SHARP CLAW@" ; species name
+	db "WEASEL@" ; species name
 	dw 211, 620 ; height, weight
 
 	db "Its sharp claws"

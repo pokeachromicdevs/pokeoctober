@@ -1,4 +1,4 @@
-	db "MOLD@" ; species name
+	db "POTTERY@" ; species name
 	dw 200, 450 ; height, weight
 
 	db "It sneaks into jars"
