@@ -1,10 +1,10 @@
 	db "MYSTIC@" ; species name
 	dw 411, 330 ; height, weight
 
-	db   "Once it begins to"
-	next "meditate at sun-"
-	next "rise, the entire"
-
-	page "day will pass"
-	next "before it will"
-	next "move again.@"
+	db "It stands still all"
+	next "day long, with"
+	next "hardly a twitch or"
+	
+	page "a peep, because it"
+	next "is waiting for a"
+	next "divine revelation.@"

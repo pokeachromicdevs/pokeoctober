@@ -1,10 +1,10 @@
 	db "COTTONWEED@" ; species name
 	dw 200, 20 ; height, weight
 
-	db   "As soon as it"
-	next "rains, it closes"
-	next "its flower and"
-
-	page "hides in the shade"
-	next "of a tree to avoid"
-	next "getting wet.@"
+	db   "When the wind"
+	next "blows it around,"
+	next "a seed-like sub-"
+	
+	page "stance is dis-"
+	next "persed from the"
+	next "top of its head.@"

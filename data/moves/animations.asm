@@ -72,7 +72,6 @@ BattleAnimations::
 	dw BattleAnim_Roar
 	dw BattleAnim_Sing
 	dw BattleAnim_Supersonic
-	dw BattleAnim_Sonicboom
 	dw BattleAnim_Disable
 	dw BattleAnim_Acid
 	dw BattleAnim_Ember
@@ -287,6 +286,7 @@ BattleAnimations::
 	dw BattleAnim_Bounce
 	dw BattleAnim_RockSlash
 	dw BattleAnim_InkSpray
+	dw BattleAnim_Sonicboom
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -2097,7 +2097,7 @@ BattleAnim_Tackle:
 	anim_wait 4
 	anim_sound 0, 1, SFX_TACKLE
 	anim_obj ANIM_OBJ_00, 136, 48, $0
-	anim_wait 8
+	anim_wait 8 
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 

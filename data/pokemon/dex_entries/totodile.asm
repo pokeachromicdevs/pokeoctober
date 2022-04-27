@@ -1,10 +1,10 @@
 	db "BIG JAW@" ; species name
 	dw 200, 210 ; height, weight
 
-	db   "This rough critter"
-	next "chomps at any"
-	next "moving object it"
-
-	page "sees. Turning your"
-	next "back on it is not"
-	next "recommended.@"
+	db "It is very rough."
+	next "When it bites some-"
+	next "thing, any fangs"
+	
+	page "that fall out will"
+	next "will grow back one"
+	next "after the other.@"

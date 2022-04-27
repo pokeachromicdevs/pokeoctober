@@ -1,10 +1,10 @@
 	db "FIVE STAR@" ; species name
 	dw 303, 240 ; height, weight
 
-	db   "It is timid and"
-	next "clusters together"
-	next "with others. The"
-
-	page "fluid secreted by"
-	next "its feet indicates"
-	next "its location.@"
+	db   "When it senses"
+	next "enemies approa-"
+	next "ching, it re-"
+	
+	page "leases an orange"
+	next "fluid from its"
+	next "legs and flees.@"
