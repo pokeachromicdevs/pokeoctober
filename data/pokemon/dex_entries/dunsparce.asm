@@ -1,10 +1,10 @@
 	db "LAND SNAKE@" ; species name
 	dw 411, 310 ; height, weight
 
-	db   "When it attacks"
-	next "its prey, it"
-	next "strikes them with"
+	db "It has a vindictive"
+	next "personality. Once"
+	next "it has its sights"
 	
-	page "its head so hard"
-	next "that it knocks"
-	next "them senseless.@" 
+	page "on its prey, it"
+	next "will hunt them"
+	next "unceasingly.@"
