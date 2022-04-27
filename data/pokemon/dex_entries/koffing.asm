@@ -1,10 +1,10 @@
 	db "POISON GAS@" ; species name
 	dw 200, 20 ; height, weight
 
-	db   "If one gets close"
-	next "enough to it when"
-	next "it expels poison-"
+	db   "Its thin, filmy"
+	next "body is filled"
+	next "with gases that"
 
-	page "ous gas, the gas"
-	next "swirling inside it"
-	next "can be seen.@"
+	page "cause nonstop"
+	next "sniffles, coughs"
+	next "and crying.@"

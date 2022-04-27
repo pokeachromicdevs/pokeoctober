@@ -1,10 +1,10 @@
 	db "CLASSY CAT@" ; species name
 	dw 303, 710 ; height, weight
 
-	db   "Behind its lithe,"
-	next "elegant appearance"
-	next "lies a barbaric"
-
-	page "side. It will tear"
-	next "apart its prey on"
-	next "a mere whim.@"
+	db "Many women admire"
+	next "the elegance that"
+	next "oozes from its"
+	
+	page "body. It's also"
+	next "great at climbing"
+	next "trees and swimming.@"

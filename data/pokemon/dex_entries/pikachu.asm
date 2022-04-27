@@ -1,10 +1,9 @@
 	db "MOUSE@" ; species name
 	dw 104, 130 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
-
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+	db "It also has a gour-"
+	next "met side: It roasts"
+	next "hard BERRIES with"
+	
+	page "thunder jolts be-"
+	next "fore eating them.@"
