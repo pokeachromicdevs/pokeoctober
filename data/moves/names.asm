@@ -264,3 +264,4 @@ MoveNames::
 	db "INK SPRAY@"
 	db "MEGAPHONE@"
 	db "AMBUSH@"
+	db "WILL-O-WISP@"

@@ -418,7 +418,6 @@ INCLUDE "engine/events/trainer_scripts.asm"
 SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
-INCLUDE "data/moves/animations.asm"
 INCLUDE "engine/events/poisonstep_pals.asm"
 
 TheEndGFX::
@@ -693,7 +692,7 @@ INCLUDE "data/battle_tower/unknown.asm"
 
 SECTION "Mobile News Data", ROMX
 
-INCLUDE "mobile/news/news.asm"
+INCLUDE "data/moves/animations.asm"
 
 
 SECTION "Crystal Events", ROMX

@@ -1318,3 +1318,7 @@ RockSlashDescription:
 MegaphoneDescription:
 	db   "A loud noise that"
 	next "lowers SPCL.ATK.@"
+	
+WillOWispDescription:
+	db "An attack that may"
+	next "burn the foe.@"
