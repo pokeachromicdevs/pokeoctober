@@ -228,7 +228,7 @@ Moves1:
 	move EFFECT_PARALYZE_HIT,       65, ELECTRIC, 100, 20,  30 ;SPARK
 	move EFFECT_FURY_CUTTER,        10, BUG,       95, 20,   0 ;FURY_CUTTER
 	move EFFECT_DEFENSE_UP_HIT,     70, STEEL,     90, 25,  10 ;STEEL_WING
-	move EFFECT_MEAN_LOOK,           0, NORMAL,   100,  5,   0 ;MEAN_LOOK
+	move EFFECT_MEAN_LOOK,           0, PSYCHIC,  100,  5,   0 ;MEAN_LOOK
 	move EFFECT_ATTRACT,             0, NORMAL,   100, 15,   0 ;ATTRACT
 	move EFFECT_SLEEP_TALK,          0, NORMAL,   100, 10,   0 ;SLEEP_TALK
 	move EFFECT_HEAL_BELL,           0, NORMAL,   100,  5,   0 ;HEAL_BELL
