@@ -262,3 +262,4 @@ MoveNames::
 	db "BOUNCE@"
 	db "ROCK SLASH@"
 	db "INK SPRAY@"
+	db "MEGAPHONE@"

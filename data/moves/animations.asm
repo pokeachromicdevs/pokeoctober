@@ -72,6 +72,7 @@ BattleAnimations::
 	dw BattleAnim_Roar
 	dw BattleAnim_Sing
 	dw BattleAnim_Supersonic
+	dw BattleAnim_Sonicboom
 	dw BattleAnim_Disable
 	dw BattleAnim_Acid
 	dw BattleAnim_Ember
@@ -286,7 +287,7 @@ BattleAnimations::
 	dw BattleAnim_Bounce
 	dw BattleAnim_RockSlash
 	dw BattleAnim_InkSpray
-	dw BattleAnim_Sonicboom
+	dw BattleAnim_Megaphone
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -4743,6 +4744,22 @@ BattleAnim_WindRide:
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
 	anim_wait 32
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
+
+BattleAnim_Megaphone:
+	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NOISE
+	anim_battlergfx_2row
+	anim_obj ANIM_OBJ_MEGAPHONE, 64, 88, $0
+	anim_wait 16
+.loop
+	anim_sound 0, 1, SFX_BOAT
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_obj ANIM_OBJ_4B, 64, 76, $0
+	anim_obj ANIM_OBJ_4B, 64, 88, $1
+	anim_obj ANIM_OBJ_4B, 64, 100, $2
+	anim_wait 16
+	anim_loop 2, .loop
+	anim_wait 8
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

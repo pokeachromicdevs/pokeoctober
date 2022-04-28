@@ -268,6 +268,7 @@ MoveDescriptions1:
 	dw BounceDescription
 	dw RockSlashDescription
 	dw InkSprayDescription
+	dw MegaphoneDescription
 	
 InvalidMoveDescription:
 	db "?@"
@@ -1311,3 +1312,7 @@ BounceDescription:
 RockSlashDescription:
 	db "Attacks the enemy"
 	next "with extreme vigor."
+	
+MegaphoneDescription:
+	db   "A loud noise that"
+	next "lowers SPCL.ATK.@"

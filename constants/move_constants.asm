@@ -269,6 +269,7 @@
 	const BOUNCE       ; 105
 	const ROCK_SLASH   ; 106
 	const INK_SPRAY
+	const MEGAPHONE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff
