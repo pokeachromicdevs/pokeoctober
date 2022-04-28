@@ -269,6 +269,7 @@ MoveDescriptions1:
 	dw RockSlashDescription
 	dw InkSprayDescription
 	dw MegaphoneDescription
+	dw AmbushDescription
 	
 InvalidMoveDescription:
 	db "?@"
@@ -1015,6 +1016,7 @@ ScaryFaceDescription:
 	db   "Sharply reduces"
 	next "the foe's SPEED.@"
 
+AmbushDescription:
 FaintAttackDescription:
 	db   "An attack that"
 	next "never misses.@"

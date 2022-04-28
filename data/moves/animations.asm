@@ -288,6 +288,7 @@ BattleAnimations::
 	dw BattleAnim_RockSlash
 	dw BattleAnim_InkSpray
 	dw BattleAnim_Megaphone
+	dw BattleAnim_Ambush
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -3437,6 +3438,7 @@ BattleAnim_ScaryFace:
 	anim_wait 64
 	anim_ret
 
+BattleAnim_Ambush:
 BattleAnim_FaintAttack:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_CURSE
