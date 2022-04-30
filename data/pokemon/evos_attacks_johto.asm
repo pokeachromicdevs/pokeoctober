@@ -114,10 +114,10 @@ ChikoritaEvosAttacks:
 	dbw 1, POUND
 	dbw 1, GROWL
 	dbw 6, LEECH_SEED
-	dbw 10, RAZOR_LEAF
+	dbw 10, VINE_WHIP
 	dbw 15, GROWTH
-	dbw 21, REFLECT
-	dbw 25, SWEET_SCENT
+	dbw 21, SWEET_SCENT
+	dbw 25, RAZOR_LEAF
 	dbw 30, LIGHT_SCREEN
 	dbw 36, SAFEGUARD
 	dbw 40, GIGA_DRAIN
