@@ -212,43 +212,39 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
+	text "<PLAYER>!"
+	line "Today's the day!"
 
-	para "ELM, was looking"
-	line "for you."
+	para "You're finally"
+	line "going to get your"
+	cont "own #MON!"
 
-	para "He said he wanted"
-	line "you to do some-"
-	cont "thing for him."
+	para "I know it'll be an"
+	line "exciting adventure"
+	cont "for you, but"
 
-	para "Oh! I almost for-"
-	line "got! Your #MON"
+	para "please don't forget"
+	line "about your own"
+	cont "mother."
 
-	para "GEAR is back from"
-	line "the repair shop."
-
-	para "Here you go!"
+	para "Oh! I nearly for-"
+	line "got! Your #GEAR"
+	cont "just returned from"
+	
+	para "the repair shop"
+	line "this morning!"
 	done
 
 MomGivesPokegearText:
-	text "#MON GEAR, or"
-	line "just #GEAR."
-
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
-
-	para "Oh, there's one"
-	line "thing I forgot to"
+	text "What a perfect"
+	line "day for your #-"
+	cont "GEAR to be re-"
 	
-	para "ask you!"
+	para "paired! Oh, by"
+	line "the way, is DAY-"
+	cont "LIGHT SAVINGS TIME"
 	
-	para "Can you please set"
-	line "your #GEAR"
-	
-	para "for Daylight"
-	line "Saving Time?"
+	para "on right now?"
 	done
 
 IsItDSTText:
@@ -257,46 +253,53 @@ IsItDSTText:
 	done
 
 ComeHomeForDSTText:
-	text "Come home to"
-	line "adjust your clock"
+	text "Either way, if"
+	line "DAYLIGHT SAVINGS"
+	cont "TIME does change,"
 
-	para "for Daylight"
-	line "Saving Time."
+	para "please come back"
+	line "home and remind me"
+	cont "to change the"
+	
+	para "clocks."
 
-	para "By the way, do you"
-	line "know how to use"
-	cont "the PHONE?"
+	para "Now, you do remem-"
+	line "ber how to use the"
+	cont "phone, right?"
 	done
 
 KnowTheInstructionsText:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
+	text "Haha, of course"
+	line "you do!"
 	done
 
 DontKnowTheInstructionsText:
-	text "I'll read the"
-	line "instructions."
+	text "Well, it's all"
+	line "very simple,"
+	cont "sweetie."
 
-	para "Turn the #GEAR"
-	line "on and select the"
-	cont "PHONE icon."
-	done
-
-InstructionsNextText:
-	text "Phone numbers are"
-	line "stored in memory."
-
-	para "Just choose a name"
-	line "you want to call."
-
+	para "Turn on the #-"
+	line "GEAR and select"
+	cont "the PHONE icon."
+	
+	para "Then choose what-"
+	line "ever stored name"
+	cont "you wish to call!"
+	
 	para "Gee, isn't that"
 	line "convenient?"
 	done
 
-HurryUpElmIsWaitingText:
+InstructionsNextText:
+	text "Anyways, I should"
+	line "let you go off on"
+	cont "your adventure."
+	
+	para "Have fun, and stay"
+	line "safe!"
+	done
+
+HurryUpElmIsWaitingText: 
 	text "PROF.ELM is wait-"
 	line "ing for you."
 
