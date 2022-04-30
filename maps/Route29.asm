@@ -218,8 +218,8 @@ Route29_MapEvents:
 	coord_event 42,  4, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
 
 	db 1 ; bg events
-	bg_event 54,  6, BGEVENT_READ, Route29Sign1
+	bg_event 53,  7, BGEVENT_READ, Route29Sign1
 
 	db 2 ; object events
-	object_event 50, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
+	object_event 51,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	object_event 49,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
