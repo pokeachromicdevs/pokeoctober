@@ -477,14 +477,6 @@ PokegearClock_Joypad:
 	and D_LEFT
 	ret z
 	ld a, [wPokegearFlags]
-	bit POKEGEAR_MAP_CARD_F, a
-	jr z, .no_map_card
-	ld c, POKEGEARSTATE_MAPCHECKREGION
-	ld b, POKEGEARCARD_MAP
-	jr .done
-
-.no_map_card
-	ld a, [wPokegearFlags]
 	bit POKEGEAR_PHONE_CARD_F, a
 	jr z, .no_phone_card
 	ld c, POKEGEARSTATE_PHONEINIT
@@ -829,10 +821,10 @@ PokegearPhone_Joypad:
 	jr nz, .a
 	ld hl, hJoyLast
 	ld a, [hl]
-	and D_RIGHT
+	and D_LEFT
 	jr nz, .gotomap
 	ld a, [hl]
-	and D_LEFT
+	and D_RIGHT
 	jr nz, .gotoclock
 	call PokegearPhone_GetDPad
 	ret
@@ -840,22 +832,22 @@ PokegearPhone_Joypad:
 .gotomap
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_MAP_CARD_F, a
-	jr z, .no_map
+	ret z
 	ld c, POKEGEARSTATE_MAPCHECKREGION
 	ld b, POKEGEARCARD_MAP
-	jr .switch_page
-
-.no_map
-	ld c, POKEGEARSTATE_CLOCKINIT
-	ld b, POKEGEARCARD_CLOCK
 	jr .switch_page
 
 .gotoclock
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_RADIO_CARD_F, a
-	ret z
+	jr z, .no_radio
 	ld c, POKEGEARSTATE_RADIOINIT
 	ld b, POKEGEARCARD_RADIO
+	jr .switch_page
+
+.no_radio
+	ld c, POKEGEARSTATE_CLOCKINIT
+	ld b, POKEGEARCARD_CLOCK
 .switch_page
 	call Pokegear_SwitchPage
 	ret
@@ -1173,7 +1165,7 @@ PokegearPhoneContactSubmenu:
 	ld h, a
 	inc de
 	push hl
-	ld bc, hBGMapAddress + 1
+	ld bc, hBGMapAddress - 1
 	add hl, bc
 	ld a, [de]
 	inc de
