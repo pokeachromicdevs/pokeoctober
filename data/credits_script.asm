@@ -273,6 +273,9 @@ CreditsScript:
 	db     HIROSHI_YAMAUCHI, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_CLEAR
+	db CREDITS_WAIT, 1
+	db CREDITS_SCENE, 3 ; Igglybuff
 
 	db            COPYRIGHT, 1
 
