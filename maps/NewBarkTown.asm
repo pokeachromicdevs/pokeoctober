@@ -278,13 +278,22 @@ PlayerMovesOutOfWay:
 	step_end
 
 SilverAfterBattle:
-	rept 7
 	step LEFT
-	endr
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step LEFT
+	step LEFT
+	step LEFT
 	step_end
 	
 MovementBattle:
 	step DOWN
+	step LEFT
 	step LEFT
 	step_end
 	
@@ -604,7 +613,7 @@ TimeToBattle:
 	text "Hey, wait up!"
 	
 	para "You have a #-"
-	line "MON…And so do I."
+	line "MON… And so do I."
 	cont "You know what"
 	
 	para "this means,"
@@ -642,7 +651,7 @@ NewBarkTown_MapEvents:
 	coord_event  1,  8, SCENE_TEACHER_STOPS, ElmStopsYouScene1
 	coord_event  1,  9, SCENE_TEACHER_STOPS, ElmStopsYouScene2
 	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
-	coord_event 11, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
+	coord_event 10, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
 	
 	db 4 ; bg events
