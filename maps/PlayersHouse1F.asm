@@ -212,43 +212,39 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
+	text "<PLAYER>!"
+	line "Today's the day!"
 
-	para "ELM, was looking"
-	line "for you."
+	para "You're finally"
+	line "going to get your"
+	cont "own #MON!"
 
-	para "He said he wanted"
-	line "you to do some-"
-	cont "thing for him."
+	para "I know it'll be an"
+	line "exciting adventure"
+	cont "for you, but"
 
-	para "Oh! I almost for-"
-	line "got! Your #MON"
+	para "please don't forget"
+	line "about your own"
+	cont "mother."
 
-	para "GEAR is back from"
-	line "the repair shop."
-
-	para "Here you go!"
+	para "Oh! I nearly for-"
+	line "got! Your #GEAR"
+	cont "just returned from"
+	
+	para "the repair shop"
+	line "this morning!"
 	done
 
 MomGivesPokegearText:
-	text "#MON GEAR, or"
-	line "just #GEAR."
-
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
-
-	para "Oh, there's one"
-	line "thing I forgot to"
+	text "What a perfect"
+	line "day for your #-"
+	cont "GEAR to be re-"
 	
-	para "ask you!"
+	para "paired! Oh, by"
+	line "the way, is DAY-"
+	cont "LIGHT SAVINGS TIME"
 	
-	para "Can you please set"
-	line "your #GEAR"
-	
-	para "for Daylight"
-	line "Saving Time?"
+	para "on right now?"
 	done
 
 IsItDSTText:
@@ -296,7 +292,7 @@ InstructionsNextText:
 	line "convenient?"
 	done
 
-HurryUpElmIsWaitingText:
+HurryUpElmIsWaitingText: 
 	text "PROF.ELM is wait-"
 	line "ing for you."
 

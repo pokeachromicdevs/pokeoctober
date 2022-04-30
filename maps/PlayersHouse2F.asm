@@ -104,8 +104,13 @@ PlayersRadioText2:
 	done
 
 PlayersRadioText3:
-	text "This is DJ MARY,"
-	line "your co-host!"
+	text "Hello, boys and"
+	line "girls! This is"
+	cont "IMAKUNI, your co-"
+	
+	para "host! I'll catch"
+	line "your heart with"
+	cont "my special talk!"
 	done
 
 PlayersRadioText4:
