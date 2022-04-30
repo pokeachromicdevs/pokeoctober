@@ -54,7 +54,7 @@ MovePlayerPic:
 	pop bc
 	pop hl
 	jr .loop
-	
+
 ShowPlayerNamingChoices:
 	ld hl, ChrisNameMenuHeader
 	ld a, [wPlayerGender]
@@ -80,8 +80,19 @@ ShowRivalNamingChoices:
 	call CloseWindow
 	ret
 
+ShowMomNamingChoices:
+	ld hl, MomNameMenuHeader
+	call LoadMenuHeader
+	call VerticalMenu
+	ld a, [wMenuCursorY]
+	dec a
+	call CopyNameFromMenu
+	call CloseWindow
+	ret
+
 INCLUDE "data/player_names.asm"
 INCLUDE "data/rival_names.asm"
+INCLUDE "data/mom_names.asm"
 
 Unreferenced_GetPlayerNameArray:
 	ld hl, wPlayerName

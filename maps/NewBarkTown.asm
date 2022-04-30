@@ -46,7 +46,6 @@ NewBarkTown_RivalGreets:
 	opentext
 	writetext NewBarkTownRivalText2
 	special NameMom
-	waitbutton
 	closetext 
 	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
 	opentext
@@ -530,7 +529,7 @@ NewBarkTownRivalText2:
 	para "What is it that"
 	line "you call your" 
 	cont "mother again?"
-	prompt
+	done
 
 NewBarkTownRivalText3:
 	text "Bahaha!"
