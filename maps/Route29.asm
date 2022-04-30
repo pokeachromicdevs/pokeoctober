@@ -125,7 +125,7 @@ Route29PokeBall:
 	itemball POKE_BALL
 	
 Route29FruitTree:
-	fruittree FRUITTREE_ROUTE_29
+	fruittree FRUITTREE_ROUTE_29  
 
 	
 DudeMovementData1a:

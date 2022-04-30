@@ -123,6 +123,6 @@
 	tilecoll WATER, WATER, WATER, WATER ; 7a
 	tilecoll WALL, WALL, DOOR, WALL ; 7b
 	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 7c
-	tilecoll WALL, WALL, WALL, WALL ; 7d
+	tilecoll WALL, WALL, TALL_GRASS, TALL_GRASS ; 7d
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 7e
 	tilecoll WALL, WALL, WALL, WALL ; 7f
