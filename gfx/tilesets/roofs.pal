@@ -103,7 +103,7 @@
 	RGB 13,13,01, 08,08,01 ; nite
 
 ; group 26 (Cherrygrove)
-	RGB 31,14,28, 31,05,21 ; morn/day
+	RGB 14,31,31, 04,17,31 ; morn/day
 	RGB 14,07,17, 13,00,08 ; nite
 	
 ; group 27 (Snow)
