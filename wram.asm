@@ -3070,9 +3070,7 @@ wOBPals2:: ds 8 palettes ; d0c0
 
 wLYOverrides:: ds SCREEN_HEIGHT_PX ; d100
 wLYOverridesEnd:: ; d190
-
-wLYOverrides2:: ds SCREEN_HEIGHT_PX
-wLYOverrides2End::
+	ds 1
 
 wMagnetTrain:: ; used only for BANK(wMagnetTrain)
 wMagnetTrainDirection:: db
@@ -3080,10 +3078,9 @@ wMagnetTrainInitPosition:: db
 wMagnetTrainHoldPosition:: db
 wMagnetTrainFinalPosition:: db
 wMagnetTrainPlayerSpriteInitX:: db
-
+	ds 106
 wLYOverridesBackup:: ds SCREEN_HEIGHT_PX ; d200
 wLYOverridesBackupEnd::
-
 
 SECTION "Battle Animations", WRAMX
 
@@ -3183,6 +3180,9 @@ wScratchAttrMap:: ds BG_MAP_WIDTH * BG_MAP_HEIGHT
 
 NEXTU ; d000
 wDecompressScratch:: ds $100 tiles
+NEXTU
+wLYOverrides2:: ds SCREEN_HEIGHT_PX ; d100
+wLYOverrides2End:: ; d190
 ENDU ; e000
 
 
