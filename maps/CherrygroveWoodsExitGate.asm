@@ -35,8 +35,8 @@ CherrygroveWoodsExitGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  9,  4, CHERRYGROVE_WOODS, 2
-	warp_event  9,  5, CHERRYGROVE_WOODS, 2
+	warp_event  9,  7, CHERRYGROVE_WOODS, 2
+	warp_event 10,  7, CHERRYGROVE_WOODS, 2
 	warp_event  0,  4, CHERRYGROVE_CITY, 7
 	warp_event  0,  5, CHERRYGROVE_CITY, 8
 

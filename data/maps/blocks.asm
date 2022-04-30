@@ -258,7 +258,6 @@ PlayersHouse1F_Blocks:
 
 Route38EcruteakGate_Blocks:
 Route42EcruteakGate_Blocks:
-CherrygroveWoodsExitGate_Blocks:
 IlexForestAzaleaGate_Blocks:
 Route15FuchsiaGate_Blocks:
 Route8SaffronGate_Blocks:
@@ -266,8 +265,13 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
-CherrygroveWoodsGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
+
+CherrygroveWoodsGate_Blocks:
+	INCBIN "maps/CherrygroveWoodsGate.blk"
+
+CherrygroveWoodsExitGate_Blocks:
+	INCBIN "maps/CherrygroveWoodsExitGate.blk"
 
 VermilionCity_Blocks:
 	INCBIN "maps/VermilionCity.blk"
