@@ -60,11 +60,10 @@ CherrygroveCityGuideGent:
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement3
 	turnobject PLAYER, UP
 	opentext
-	writetext GuideGentRoute30Text
+	writetext GuideGentGymText
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement4
-	turnobject PLAYER, LEFT
 	opentext
 	writetext GuideGentSeaText
 	waitbutton
@@ -184,7 +183,10 @@ CherrygroveCityMartSign:
 GuideGentMovement1:
 	step LEFT
 	step LEFT
-	step UP
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
 	step LEFT
 	turn_head UP
 	step_end
@@ -200,43 +202,49 @@ GuideGentMovement2:
 	step_end
 
 GuideGentMovement3:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
 	step_end
 
 GuideGentMovement4:
-	step LEFT
-	step LEFT
-	step LEFT
+	step RIGHT
+	rept 20
 	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step DOWN
-	turn_head LEFT
+	endr
 	step_end
 
 GuideGentMovement5:
-	step DOWN
-	step DOWN
+	step LEFT
+	step UP
 	step RIGHT
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
 	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step DOWN
-	step DOWN
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -299,9 +307,9 @@ GuideGentMartText:
 	line "useful items."
 	done
 
-GuideGentRoute30Text:
-	text "ROUTE 30 is out"
-	line "this way."
+GuideGentGymText:
+	text "This is a #MON"
+	line "GYM."
 
 	para "Trainers will be"
 	line "battling their"
