@@ -121,6 +121,13 @@ Route29Sign1:
 Route29Potion:
 	itemball MASTER_BALL
 	
+Route29PokeBall:
+	itemball POKE_BALL
+	
+Route29FruitTree:
+	fruittree FRUITTREE_ROUTE_29
+
+	
 DudeMovementData1a:
 	step UP
 	step UP
@@ -220,6 +227,10 @@ Route29_MapEvents:
 	db 1 ; bg events
 	bg_event 53,  7, BGEVENT_READ, Route29Sign1
 
-	db 2 ; object events
+	db 4 ; object events
 	object_event 51,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	object_event 49,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
+	object_event 27,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29PokeBall, EVENT_ROUTE_31_POKE_BALL
+	object_event 21,  1, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route29FruitTree, -1
+
+
