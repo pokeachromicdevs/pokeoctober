@@ -3120,6 +3120,8 @@ AI_Status:
 	jr z, .typeimmunity
 	cp EFFECT_PARALYZE
 	jr z, .typeimmunity
+	cp EFFECT_BURN
+	jr z, .typeimmunity
 
 	ld a, [wEnemyMoveStruct + MOVE_POWER]
 	and a

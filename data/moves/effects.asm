@@ -2142,3 +2142,13 @@ SpeedDown2Hit:
 	speeddown2
 	statdownmessage
 	endmove
+	
+DoBurn:
+	checkobedience
+	usedmovetext
+	doturn
+	stab
+	checkhit
+	checksafeguard
+	burntarget
+	endmove
