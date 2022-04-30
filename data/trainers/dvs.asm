@@ -16,7 +16,7 @@ TrainerClassDVs:
 	dn 13, 12, 13, 13 ; BRUNO
 	dn  7, 15, 13, 15 ; KAREN
 	dn 13, 12, 13, 13 ; KOGA
-	dn 13, 12, 13, 13 ; CHAMPION
+	dn 15, 15, 15, 15 ; CHAMPION
 	dn  9,  8,  8,  8 ; BROCK
 	dn  7,  8,  8,  8 ; MISTY
 	dn  9,  8,  8,  8 ; LT_SURGE

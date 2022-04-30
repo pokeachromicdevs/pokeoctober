@@ -160,3 +160,4 @@ MoveEffectsPointers:
 	dw CoinHurl
 	dw Bounce
 	dw SpeedDown2Hit
+	dw DoBurn
