@@ -1347,6 +1347,7 @@ Pack_InitGFX:
 	call ByteFill
 	call DrawPocketName
 	call PlacePackGFX
+	call ClearPocketList
 ; Place the textbox for displaying the item description
 	hlcoord 0, SCREEN_HEIGHT - 4 - 2
 	lb bc, 4, SCREEN_WIDTH - 2
@@ -1449,8 +1450,8 @@ Unreferenced_Pack_ClearTilemap:
 	ret
 
 ClearPocketList:
-	hlcoord 0, 0
-	lb bc, 12, SCREEN_WIDTH - 5
+	hlcoord 0, 2
+	lb bc, 10, SCREEN_WIDTH - 5
 	call ClearBox
 	ret
 
