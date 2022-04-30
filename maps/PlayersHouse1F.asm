@@ -253,43 +253,50 @@ IsItDSTText:
 	done
 
 ComeHomeForDSTText:
-	text "Come home to"
-	line "adjust your clock"
+	text "Either way, if"
+	line "DAYLIGHT SAVINGS"
+	cont "TIME does change,"
 
-	para "for Daylight"
-	line "Saving Time."
+	para "please come back"
+	line "home and remind me"
+	cont "to change the"
+	
+	para "clocks."
 
-	para "By the way, do you"
-	line "know how to use"
-	cont "the PHONE?"
+	para "Now, you do remem-"
+	line "ber how to use the"
+	cont "phone, right?"
 	done
 
 KnowTheInstructionsText:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
+	text "Haha, of course"
+	line "you do!"
 	done
 
 DontKnowTheInstructionsText:
-	text "I'll read the"
-	line "instructions."
+	text "Well, it's all"
+	line "very simple,"
+	cont "sweetie."
 
-	para "Turn the #GEAR"
-	line "on and select the"
-	cont "PHONE icon."
+	para "Turn on the #-"
+	line "GEAR and select"
+	cont "the PHONE icon."
+	
+	para "Then choose what-"
+	line "ever stored name"
+	cont "you wish to call!"
+	
+	para "Gee, isn't that"
+	line "convenient?"
 	done
 
 InstructionsNextText:
-	text "Phone numbers are"
-	line "stored in memory."
-
-	para "Just choose a name"
-	line "you want to call."
-
-	para "Gee, isn't that"
-	line "convenient?"
+	text "Anyways, I should"
+	line "let you go off on"
+	cont "your adventure."
+	
+	para "Have fun, and stay"
+	line "safe!"
 	done
 
 HurryUpElmIsWaitingText: 
