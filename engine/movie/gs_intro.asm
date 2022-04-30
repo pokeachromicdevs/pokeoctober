@@ -1,5 +1,4 @@
 GoldSilverIntro:
-	ret
 	call .Init
 .Loop:
 	call .PlayFrame
@@ -456,7 +455,7 @@ Intro_UpdateTilemapAndBGMap:
 	ld e, a
 	ld a, [wIntroBGMapPointer + 1]
 	ld d, a
-	ld hl, hCurSpriteYPixel
+	ld hl, hCurSpriteYCoord
 	add hl, de
 	ld a, l
 	ld [wIntroBGMapPointer + 0], a
@@ -781,21 +780,16 @@ IntroScene10:
 	ld bc, vTiles1 - vTiles0
 	call Decompress
 
-	ld c, CHIKORITA
-	ld de, vTiles0 tile $10
-	farcall Intro_GetMonFrontpic
-	ld c, CYNDAQUIL
-	ld de, vTiles0 tile $29
-	farcall Intro_GetMonFrontpic
-	ld c, TOTODILE
-	ld de, vTiles0 tile $42
-	farcall Intro_GetMonFrontpic
+	;ld c, CHIKORITA
+	;ld de, vTiles0 tile $10
+	;farcall Intro_GetMonFrontpic
+	;ld c, CYNDAQUIL
+	;ld de, vTiles0 tile $29
+	;farcall Intro_GetMonFrontpic
+	;ld c, TOTODILE
+	;ld de, vTiles0 tile $42
+	;farcall Intro_GetMonFrontpic
 
-	;ld hl, wSpriteAnimDict
-	;ld a, SPRITE_ANIM_DICT_GS_INTRO
-	;ld [hli], a
-	;ld a, $00
-	;ld [hli], a
 	call EnableLCD
 	ld a, 0
 	call DrawIntroCharizardGraphic
@@ -1002,18 +996,18 @@ Intro_CheckSCYEvent:
 	jp hl
 
 .scy_jumptable
-	dbw $86, Intro_LoadChikoritaPalette
-	dbw $87, Intro_ChikoritaAppears
-	dbw $88, Intro_FlashMonPalette
-	dbw $98, Intro_FlashSilhouette
-	dbw $99, Intro_LoadCyndaquilPalette
-	dbw $af, Intro_CyndaquilAppears
-	dbw $b0, Intro_FlashMonPalette
-	dbw $c0, Intro_FlashSilhouette
-	dbw $c1, Intro_LoadTotodilePalette
-	dbw $d7, Intro_TotodileAppears
-	dbw $d8, Intro_FlashMonPalette
-	dbw $e8, Intro_FlashSilhouette
+	;dbw $86, Intro_LoadChikoritaPalette
+	;dbw $87, Intro_ChikoritaAppears
+	;dbw $88, Intro_FlashMonPalette
+	;dbw $98, Intro_FlashSilhouette
+	;dbw $99, Intro_LoadCyndaquilPalette
+	;dbw $af, Intro_CyndaquilAppears
+	;dbw $b0, Intro_FlashMonPalette
+	;dbw $c0, Intro_FlashSilhouette
+	;dbw $c1, Intro_LoadTotodilePalette
+	;dbw $d7, Intro_TotodileAppears
+	;dbw $d8, Intro_FlashMonPalette
+	;dbw $e8, Intro_FlashSilhouette
 	dbw $e9, Intro_LoadCharizardPalette
 	db -1
 
