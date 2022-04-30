@@ -157,16 +157,8 @@ MysticWaterGuy:
 	end
 	
 BirdKeeperBlockage:
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iffalse .gone
-	opentext
-	writetext BirdKeeperBlocking
-.gone
-	disappear CHERRYGROVECITY_BIRD_KEEPER
-	return
-	waitbutton
-	closetext
-	end
+	faceplayer
+	jumptext BirdKeeperBlocking
 
 CherrygroveCitySign:
 	jumptext CherrygroveCitySignText
@@ -205,6 +197,7 @@ GuideGentMovement3:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	step RIGHT
 	step UP
 	step UP
 	step UP
@@ -225,16 +218,15 @@ GuideGentMovement3:
 	step_end
 
 GuideGentMovement4:
-	step RIGHT
+	step LEFT
 	rept 20
 	step DOWN
 	endr
 	step_end
 
 GuideGentMovement5:
-	step LEFT
-	step UP
 	step RIGHT
+	step UP
 	step UP
 	step UP
 	step UP
@@ -419,22 +411,25 @@ CherrygroveCitySignText:
 	
 BirdKeeperBlocking:
 	text "Heya. I'm watching"
-	
-	para "over this place"
-	line "while FALKNER is"
-	cont "gone. Apparently,"
-	
-	para "someone claims"
-	line "they saw some"
-	cont "ROCKET goons"
-	
+	line "over this place"
+
+	para "while FALKNER is"
+	line "gone."
+
+	para "Apparently,"
+	line "someone claims"
+
+	para "they saw some"
+	line "ROCKET goons"
+
 	para "wandering around"
 	line "here, so FALKNER"
-	cont "decided to scout"
-	
-	para "for those criminals"
-	line "from the sky. He'll"
-	cont "be back soon."
+
+	para "decided to scout"
+	line "for the criminals"
+	cont "from the sky."
+
+	para "He'll be back soon."
 	done
 
 GuideGentsHouseSignText:
@@ -467,6 +462,6 @@ CherrygroveCity_MapEvents:
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
-	object_event 25,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE, -1
-	object_event 15,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM, -1
+	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	;object_event 15,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM, -1
 
