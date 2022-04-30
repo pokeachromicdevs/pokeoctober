@@ -1128,9 +1128,8 @@ ElmAfterTheftText5:
 	done
 	
 ElmGivesPokedexText:
-	text "<PLAYER> received"
-	line "a #DEX from"
-	cont "PROF. ELM."
+	text "<PLAYER> got a"
+	line "#DEX from ELM."
 	done
 
 ElmAfterTheftText6:
