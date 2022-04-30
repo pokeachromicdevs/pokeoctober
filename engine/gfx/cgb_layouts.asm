@@ -860,26 +860,31 @@ _CGB_PackPals:
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
 	call WipeAttrMap
+
+; (ITEMS)
 	hlcoord 0, 0, wAttrMap
-	lb bc, 1, 10
-	ld a, $1
+	lb bc, 2, 5
+	ld a, 1
 	call FillBoxCGB
+
+; (BALLS)
+	hlcoord 5, 0, wAttrMap
+	lb bc, 2, 5
+	ld a, 2
+	call FillBoxCGB
+
+; (KEY ITEMS)
 	hlcoord 10, 0, wAttrMap
-	lb bc, 1, 10
-	ld a, $2
+	lb bc, 2, 5
+	ld a, 3
 	call FillBoxCGB
-	hlcoord 7, 2, wAttrMap
-	lb bc, 9, 1
-	ld a, $3
+
+; (TM/HM)
+	hlcoord 15, 0, wAttrMap
+	lb bc, 2, 5
+	ld a, 4
 	call FillBoxCGB
-	hlcoord 0, 7, wAttrMap
-	lb bc, 3, 5
-	ld a, $4
-	call FillBoxCGB
-	hlcoord 0, 3, wAttrMap
-	lb bc, 3, 5
-	ld a, $5
-	call FillBoxCGB
+
 	call ApplyAttrMap
 	call ApplyPals
 	ld a, $1

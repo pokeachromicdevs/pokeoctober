@@ -15,9 +15,10 @@ TMHM_PocketLoop:
 	xor a
 	ldh [hBGMapMode], a
 	call TMHM_DisplayPocketItems
-	ld a, 2
+	ld a, 3
 	ld [w2DMenuCursorInitY], a
-	ld a, 7
+	ld a, 2
+	;ld a, 7
 	ld [w2DMenuCursorInitX], a
 	ld a, 1
 	ld [w2DMenuNumCols], a
@@ -161,10 +162,11 @@ TMHM_DisplayPocketItems:
 	cp BATTLETYPE_TUTORIAL
 	jp z, Tutorial_TMHMPocket
 
-	hlcoord 5, 2
+	hlcoord 0, 2
 	lb bc, 10, 15
 	ld a, " "
 	call ClearBox
+
 	call TMHM_GetCurrentPocketPosition
 	ld d, $5
 .loop2
@@ -232,7 +234,8 @@ TMHM_DisplayPocketItems:
 	ret
 
 TMHMPocket_GetCurrentLineCoord:
-	hlcoord 5, 0
+	;hlcoord 5,0
+	hlcoord 0, 1
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, 6
 	sub d

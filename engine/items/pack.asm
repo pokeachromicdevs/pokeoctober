@@ -1335,24 +1335,16 @@ Pack_InitGFX:
 	ld bc, $60 tiles
 	ld a, BANK(PackMenuGFX)
 	call FarCopyBytes
+
+	ld a, BANK(PackExtraGFX)
+	ld hl, PackExtraGFX
+	ld bc, $1 tiles
+	call FarCopyBytes
 ; Background (blue if male, pink if female)
 	hlcoord 0, 1
 	ld bc, 11 * SCREEN_WIDTH
-	ld a, $24
+	ld a, $60
 	call ByteFill
-; This is where the items themselves will be listed.
-	hlcoord 5, 1
-	lb bc, 11, 15
-	call ClearBox
-; ◀▶ POCKET       ▼▲ ITEMS
-	hlcoord 0, 0
-	ld a, $28
-	ld c, SCREEN_WIDTH
-.loop
-	ld [hli], a
-	inc a
-	dec c
-	jr nz, .loop
 	call DrawPocketName
 	call PlacePackGFX
 ; Place the textbox for displaying the item description
@@ -1364,7 +1356,7 @@ Pack_InitGFX:
 	ret
 
 PlacePackGFX:
-	hlcoord 0, 3
+	hlcoord 15, 3
 	ld a, $50
 	ld de, SCREEN_WIDTH - 5
 	ld b, 3
@@ -1381,52 +1373,66 @@ PlacePackGFX:
 	ret
 
 DrawPocketName:
-	ld a, [wCurPocket]
-	; * 15
-	ld d, a
-	swap a
-	sub d
-	ld d, 0
-	ld e, a
-	ld hl, .tilemap
-	add hl, de
-	ld d, h
-	ld e, l
-	hlcoord 0, 7
-	ld c, 3
-.row
-	ld b, 5
-.col
+; draw entire menu first
+	hlcoord 0, 0
+	ld de, .BaseTilemap
+.draw_base
 	ld a, [de]
-	inc de
+	cp -1
+	jr z, .base_done
 	ld [hli], a
-	dec b
-	jr nz, .col
-	ld a, c
-	ld c, SCREEN_WIDTH - 5
-	add hl, bc
-	ld c, a
-	dec c
-	jr nz, .row
+	inc de
+	jr .draw_base
+.base_done
+	ld a, [wCurPocket]
+	and %11
+	ld e, a
+	ld d, 0
+	ld hl, .Positions
+	add hl, de
+	add hl, de
+; determine starting point
+	decoord 0, 0
+	ld a, [hli]
+	ld l, [hl]
+	ld h, 0
+	add hl, de
+; draw the actual map
+	call .draw_map
+.draw_map
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld de, SCREEN_WIDTH - 5
+	add hl, de
 	ret
 
-.tilemap
-; ITEM_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $06, $07, $08, $09, $0a ; Items
-	db $02, $05, $05, $05, $03 ; bottom border
-; BALL_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $15, $16, $17, $18, $19 ; Balls
-	db $02, $05, $05, $05, $03 ; bottom border
-; KEY_ITEM_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $0b, $0c, $0d, $0e, $0f ; Key Items
-	db $02, $05, $05, $05, $03 ; bottom border
-; TM_HM_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $10, $11, $12, $13, $14 ; TM/HM
-	db $02, $05, $05, $05, $03 ; bottom border
+.BaseTilemap:
+; top half
+	db $28,$29,$2a,$2b,$2c ; items
+	db $46,$47,$48,$49,$4a ; balls
+	db $32,$33,$34,$35,$36 ; key items
+	db $3c,$3d,$3e,$3f,$40 ; tm/hm
+; bottom half
+	db $2d,$2e,$2f,$30,$31 ; items
+	db $4b,$4c,$4d,$4e,$4f ; balls
+	db $37,$38,$39,$3a,$3b ; key items
+	db $41,$42,$43,$44,$45 ; tm/hm
+	db -1
+
+.Positions:
+	;  starting tile, offset
+	db $00,            0 ; items
+	db $1e,            5 ; balls
+	db $0a,           10 ; key items
+	db $14,           15
 
 Pack_GetItemName:
 	ld a, [wCurItem]
@@ -1443,8 +1449,8 @@ Unreferenced_Pack_ClearTilemap:
 	ret
 
 ClearPocketList:
-	hlcoord 5, 2
-	lb bc, 10, SCREEN_WIDTH - 5
+	hlcoord 0, 0
+	lb bc, 12, SCREEN_WIDTH - 5
 	call ClearBox
 	ret
 
@@ -1458,7 +1464,8 @@ Pack_InitColors:
 
 ItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	;menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1488,7 +1495,8 @@ PC_Mart_ItemsPocketMenuHeader:
 
 KeyItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	;menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1518,7 +1526,8 @@ PC_Mart_KeyItemsPocketMenuHeader:
 
 BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	;menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1606,3 +1615,5 @@ PackMenuGFX:
 INCBIN "gfx/pack/pack_menu.2bpp"
 PackGFX:
 INCBIN "gfx/pack/pack.2bpp"
+PackExtraGFX:
+INCBIN "gfx/pack/extras.2bpp"
