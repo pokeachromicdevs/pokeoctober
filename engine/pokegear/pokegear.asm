@@ -360,8 +360,9 @@ InitPokegearTilemap:
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
-	;call .PlacePhoneBars
 	call PokegearPhone_UpdateDisplayList
+	call PokegearPhone_UpdatePhoneClock
+	;call .PlacePhoneBars
 	ret
 
 .PlacePhoneBars:
@@ -473,7 +474,7 @@ PokegearClock_Joypad:
 	and A_BUTTON | B_BUTTON | START | SELECT
 	jr nz, .quit
 	ld a, [hl]
-	and D_RIGHT
+	and D_LEFT
 	ret z
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_MAP_CARD_F, a
@@ -817,7 +818,7 @@ PokegearPhone_Init:
 	ret
 
 PokegearPhone_Joypad:
-	call .UpdatePhoneClock
+	call PokegearPhone_UpdatePhoneClock
 ; joypad
 	ld hl, hJoyPressed
 	ld a, [hl]
@@ -828,15 +829,15 @@ PokegearPhone_Joypad:
 	jr nz, .a
 	ld hl, hJoyLast
 	ld a, [hl]
-	and D_LEFT
-	jr nz, .left
-	ld a, [hl]
 	and D_RIGHT
-	jr nz, .right
+	jr nz, .gotomap
+	ld a, [hl]
+	and D_LEFT
+	jr nz, .gotoclock
 	call PokegearPhone_GetDPad
 	ret
 
-.left
+.gotomap
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_MAP_CARD_F, a
 	jr z, .no_map
@@ -849,7 +850,7 @@ PokegearPhone_Joypad:
 	ld b, POKEGEARCARD_CLOCK
 	jr .switch_page
 
-.right
+.gotoclock
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_RADIO_CARD_F, a
 	ret z
@@ -894,19 +895,13 @@ PokegearPhone_Joypad:
 	ld [wJumptableIndex], a
 	ret
 
-.UpdatePhoneClock:
-	hlcoord 9, 1
-	lb bc, 2, 10
-	call ClearBox
+PokegearPhone_UpdatePhoneClock:
 	ldh a, [hHours]
 	ld b, a
 	ldh a, [hMinutes]
 	ld c, a
-	decoord 11, 1
+	decoord 11, 2 
 	farcall PrintHoursMins
-	ret
-
-; not enough space
 	call GetWeekday
 	ld c, a
 	ld b, 0
@@ -918,7 +913,7 @@ PokegearPhone_Joypad:
 	ld l, a
 	ld d, h
 	ld e, l
-	hlcoord 9,1
+	hlcoord 16,1
 	call PlaceString
 	ret
 
@@ -931,13 +926,13 @@ PokegearPhone_Joypad:
 	dw .Fri
 	dw .Sat
 
-.Sun:    db "SUN@"
-.Mon:    db "MON@"
-.Tue:   db "TUE@"
+.Sun: db "SUN@"
+.Mon: db "MON@"
+.Tue: db "TUE@"
 .Wed: db "WED@"
-.Thu:  db "THU@"
-.Fri:    db "FRI@"
-.Sat:  db "SAT@"
+.Thu: db "THU@"
+.Fri: db "FRI@"
+.Sat: db "SAT@"
 
 
 PokegearPhone_MakePhoneCall:
