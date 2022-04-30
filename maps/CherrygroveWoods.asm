@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
-	const CHERRYGROVEWOODS_YOUNGSTER
+	const CHERRYGROVEWOODS_BUG_CATCHER1
+	const CHERRYGROVEWOODS_BUG_CATCHER2
 
 CherrygroveWoods_MapScripts:
 	db 0 ; scene scripts
@@ -13,6 +14,17 @@ TrainerBugCatcherLenny:
 	endifjustbattled
 	opentext
 	writetext BugCatcherLennyAfterText
+	waitbutton
+	closetext
+	end
+	
+TrainerBugCatcherTimothy:
+	trainer BUG_CATCHER, BC_TIMOTHY, EVENT_BEAT_BUG_CATCHER_TIMOTHY, BugCatcherTimothySeenText, BugCatcherTimothyBeatenText, 0, .Script
+	
+.Script:
+	endifjustbattled
+	opentext
+	writetext BugCatcherTimothyAfterText
 	waitbutton
 	closetext
 	end
@@ -44,6 +56,26 @@ CherrygroveWoodsNameRaterSignText:
 	para "Get Your #MON"
 	line "Nicknames Rated"
 	done
+	
+BugCatcherTimothySeenText:
+	text "Have you seen any"
+	line "PINSIR around"
+	cont "here?"
+	done
+	
+BugCatcherTimothyBeatenText:
+	text "No? Dang…"
+	done
+	
+BugCatcherTimothyAfterText:
+	text "Some people said"
+	line "there's a weird"
+	cont "PINSIR around"
+	
+	para "here. Its body is"
+	line "supposed to be"
+	cont "shiny like steel!"
+	done 
 
 .DummyScene0:
 	end
@@ -65,5 +97,6 @@ CherrygroveWoods_MapEvents:
 	db 1 ; bg events
 	bg_event 17,  7, BGEVENT_READ, CherrygroveWoodsNameRaterSign
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event 10, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherLenny, -1
+	object_event  42, 8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherTimothy, -1

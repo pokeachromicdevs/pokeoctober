@@ -37,17 +37,6 @@ TrainerFisherBilly:
 	closetext
 	end
 	
-TrainerBugCatcherTimothy:
-	trainer BUG_CATCHER, BC_TIMOTHY, EVENT_BEAT_BUG_CATCHER_TIMOTHY, BugCatcherTimothySeenText, BugCatcherTimothyBeatenText, 0, .Script
-	
-.Script:
-	endifjustbattled
-	opentext
-	writetext BugCatcherTimothyAfterText
-	waitbutton
-	closetext
-	end
-	
 Route30YoungsterScript:
 	faceplayer
 	opentext
@@ -150,26 +139,6 @@ FisherBillyAfterText:
 	line "tain twerps."
 	done
 	
-BugCatcherTimothySeenText:
-	text "Have you seen any"
-	line "PINSIR around"
-	cont "here?"
-	done
-	
-BugCatcherTimothyBeatenText:
-	text "No? Dang…"
-	done
-	
-BugCatcherTimothyAfterText:
-	text "Some people said"
-	line "there's a weird"
-	cont "PINSIR around"
-	
-	para "here. Its body is"
-	line "supposed to be"
-	cont "shiny like steel!"
-	done 
-	
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
 	text "MR.#MON's"
 	line "house? It's a bit"
@@ -229,11 +198,10 @@ Route30_MapEvents:
 	bg_event 13,  5, BGEVENT_READ, Route30TrainerTips
 	bg_event  6, 15, BGEVENT_ITEM, Route30HiddenPotion
 
-	db 7 ; object events
+	db 6 ; object events
 	object_event  8, 22, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSoldierDwight, -1
 	object_event  8,  19, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerFisherBilly, -1
 	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
 	object_event 12,  15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
 	object_event 13,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
 	object_event  5, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE
-	object_event  12, 14, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherTimothy, -1

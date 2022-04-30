@@ -1,5 +1,8 @@
 	object_const_def ; object_event constants
 	const ROUTE29_COOLTRAINER_M1
+	const ROUTE_29_POKE_BALL
+	const ROUTE_29_POKE_BALL2
+	const ROUTE_29_FRUIT_TREE
 	const ROUTE29_YOUNGSTER
 	const ROUTE29_YOUNGSTER2
 
