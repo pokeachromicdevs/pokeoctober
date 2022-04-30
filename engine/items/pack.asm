@@ -1481,7 +1481,7 @@ ItemsPocketMenuHeader:
 
 PC_Mart_ItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1512,7 +1512,7 @@ KeyItemsPocketMenuHeader:
 
 PC_Mart_KeyItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1543,7 +1543,7 @@ BallsPocketMenuHeader:
 
 PC_Mart_BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
