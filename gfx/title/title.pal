@@ -6,7 +6,7 @@
 ; Pokemon
 	RGB 30, 20, 00
 	RGB 12, 14, 12
-	RGB 00, 00, 17
+	RGB 04, 04, 23
 	RGB 00, 00, 00
 ; Gold Version
 	RGB 31, 31, 31
@@ -30,9 +30,9 @@
 	RGB 00, 00, 00
 ; Ho-oh
 	RGB 31, 31, 31
-	RGB 20, 20, 00
-	RGB 12, 03, 00
-	RGB 00, 00, 00
+	RGB 08, 07, 03
+	RGB 07, 04, 03
+	RGB 01, 01, 03
 ; Sparkle
 	RGB 31, 31, 31
 	RGB 30, 30, 00

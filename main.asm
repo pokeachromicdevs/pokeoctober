@@ -494,6 +494,8 @@ INCLUDE "engine/menus/options_menu.asm"
 INCLUDE "engine/movie/gf_splash.asm"
 INCLUDE "engine/movie/gs_intro.asm"
 
+Copyright2GFX::
+INCBIN "gfx/splash/copyright_octo.2bpp"
 
 SECTION "bank3E", ROMX
 

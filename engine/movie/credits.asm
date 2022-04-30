@@ -153,15 +153,15 @@ Credits_Jumptable:
 
 .Jumptable:
 	dw ParseCredits
-	dw Credits_Next
+	dw Credits_LYOverride
 	dw Credits_Next
 	dw Credits_PrepBGMapUpdate
 	dw Credits_UpdateGFXRequestPath
 	dw Credits_RequestGFX
 	dw Credits_LYOverride
-	dw Credits_Next
-	dw Credits_Next
-	dw Credits_Next
+	dw Credits_LYOverride
+	dw Credits_LYOverride
+	dw Credits_LYOverride
 	dw Credits_UpdateGFXRequestPath
 	dw Credits_RequestGFX
 	dw Credits_LoopBack
@@ -181,7 +181,7 @@ Credits_LoopBack:
 Credits_PrepBGMapUpdate:
 	xor a
 	ldh [hBGMapMode], a
-	jp Credits_Next
+	jp Credits_LYOverride
 
 Credits_UpdateGFXRequestPath:
 	call Credits_LoadBorderGFX
@@ -200,14 +200,10 @@ Credits_RequestGFX:
 	ldh [hBGMapMode], a
 	ld a, $8
 	ld [wRequested2bpp], a
-	jp Credits_Next
+	;jp Credits_Next
 
 Credits_LYOverride:
-	ldh a, [rLY]
-	cp $30
-	jr c, Credits_LYOverride
 	ld a, [wCreditsLYOverride]
-	dec a
 	dec a
 	ld [wCreditsLYOverride], a
 	ld hl, wLYOverrides + $1f
@@ -258,17 +254,17 @@ ParseCredits:
 	cp CREDITS_END
 	jp z, .end
 	cp CREDITS_WAIT
-	jr z, .wait
+	jp z, .wait
 	cp CREDITS_SCENE
-	jr z, .scene
+	jp z, .scene
 	cp CREDITS_CLEAR
-	jr z, .clear
+	jp z, .clear
 	cp CREDITS_MUSIC
-	jr z, .music
+	jp z, .music
 	cp CREDITS_WAIT2
-	jr z, .wait2
+	jp z, .wait2
 	cp CREDITS_THEEND
-	jr z, .theend
+	jp z, .theend
 
 ; If it's not a command, it's a string identifier.
 
@@ -297,7 +293,16 @@ ParseCredits:
 	jr .print
 
 .copyright
-	hlcoord 2, 6
+	push de
+	push bc
+	ld de, Copyright2GFX
+	ld hl, vTiles1
+	lb bc, BANK(Copyright2GFX), 12
+	call Request2bpp
+	pop bc
+	pop de
+
+	hlcoord 2, 5
 	jr .print
 
 .staff
@@ -330,7 +335,7 @@ ParseCredits:
 ; Clear the banner.
 	ld a, $ff
 	ld [wCreditsBorderFrame], a ; frame
-	jr .loop
+	jp .loop
 
 .music
 ; Play the credits music.

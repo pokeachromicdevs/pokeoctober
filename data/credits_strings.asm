@@ -179,7 +179,7 @@ CreditsStrings:
 .KazuyoshiOsawa:      db "  KAZUYOSHI OSAWA@"
 .KimikoNakamichi:     db "  KIMIKO NAKAMICHI@"
 .Staff:               db "      #MON"                 ; "ポケットモンスター"
-                    next "  CRYSTAL VERSION"          ; "　　クりスタル　バージョン"
+                    next "  OCTOBER / 98plus"         ; "　　クりスタル　バージョン"
                     next "       STAFF@"              ; "　　　　スタッフ@"
 .Director:            db "      DIRECTOR@"            ; "エグゼクティブ　ディレクター@"
 .CoDirector:          db "    CO-DIRECTOR@"           ; "ディレクター@"
@@ -218,4 +218,6 @@ CreditsStrings:
 	next $60,$61,$62,$63,$64,$65,$66,$6d,$6e,$6f,$70,$71,$72,  $7a,$7b,$7c
 	;    (C) 1  9  9  5 - 2  0  0  1  G  A  M  E  F  R  E  A  K     i  n  c .
 	next $60,$61,$62,$63,$64,$65,$66,$73,$74,$75,$76,$77,$78,$79,  $7a,$7b,$7c
+	; ©2022 ACHROMICDEVS
+	next $7f, $60, $80, $81, $82, $83, $84, $85, $86, $87, $88, $89, $8a, $8b
 	db "@"
