@@ -2280,7 +2280,7 @@ wMonTriedToEvolve:: db
 
 wTimeOfDay:: db ; d269
 
-	ds 1
+wTMHMsCount:: db
 
 
 SECTION "Enemy Party", WRAMX

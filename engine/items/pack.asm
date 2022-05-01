@@ -134,18 +134,8 @@ Pack:
 	ld c, PACKSTATE_INITITEMSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
-	farcall _CheckTossableItem
-	ld a, [wItemAttributeParamBuffer]
-	and a
-	jr nz, .use_quit
-	ld hl, .MenuHeader2
-	ld de, .Jumptable2
-	jr .load_jump
-
-.use_quit
 	ld hl, .MenuHeader1
 	ld de, .Jumptable1
-.load_jump
 	push de
 	call LoadMenuHeader
 	call VerticalMenu
@@ -173,27 +163,7 @@ Pack:
 	dw .UseItem
 	dw QuitItemSubmenu
 
-.MenuHeader2:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 5, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
-	dw .MenuData_2
-	db 1 ; default option
-
-.MenuData_2:
-	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
-	db 3 ; items
-	db "USE@"
-	db "GIVE@"
-	db "QUIT@"
-
-.Jumptable2:
-	dw .UseItem
-	dw GiveItem
-	dw QuitItemSubmenu
-
 .UseItem:
-	ld a, [wCurTMHM]
-	ld [wTempTMHM], a
 	farcall AskTeachTMHM
 	ret c
 	farcall ChooseMonToLearnTMHM

@@ -8,7 +8,6 @@ TMHMPocket:
 	call PlaceHollowCursor
 	call WaitBGMap
 	ld a, [wCurTMHM]
-	scf
 	ret
 
 TMHM_PocketLoop:
@@ -87,14 +86,14 @@ TMHM_ShowTMMoveDescription:
 
 TMHM_ChooseTMorHM:
 	call TMHM_PlaySFX_ReadText2
-	call CountwTMsHMs ; This stores the count to wTempTMHM.
+	call CountwTMsHMs ; This stores the count to wTMHMsCount.
 	ld a, [wMenuCursorY]
 	dec a
 	ld b, a
 	ld a, [wTMHMPocketScrollPosition]
 	add b
 	ld b, a
-	ld a, [wTempTMHM]
+	ld a, [wTMHMsCount]
 	cp b
 	jr z, _TMHM_ExitPack ; our cursor was hovering over CANCEL
 TMHM_CheckHoveringOverCancel:
@@ -106,6 +105,7 @@ TMHM_CheckHoveringOverCancel:
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, .okay
+
 	call CheckTMHM
 	jr z, .loop
 	dec b
@@ -319,18 +319,23 @@ TMHM_PlaySFX_ReadText2:
 
 CountwTMsHMs: ; 2cb2a (b:4b2a)
 	ld hl, wTMsHMs
-	ld b, 0
-	ld c, ((NUM_TMS + NUM_HMS) + 7) / 8
-.loop
+	ld b, wTMsHMsEnd - wTMsHMs
+	ld c, 0
+.next
 	ld a, [hli]
-	call CountSetBitsInByte
-	add b
-	ld b, a
-	dec c
-	jr nz, .loop
-	ld a, b
-	ld [wd265], a
-	pop de
+	ld e, a
+	ld d, 8
+.count
+	srl e
+	jr nc, .no_carry
+	inc c
+.no_carry
+	dec d
+	jr nz, .count
+	dec b
+	jr nz, .next
+	ld a, c
+	ld [wTMHMsCount], a
 	ret
 
 CountSetBitsInByte:
@@ -395,16 +400,15 @@ CheckTMHM:
 	pop bc
 	and a
 	ret
-	
+
 AskTeachTMHM: ; 2c7bf (b:47bf)
 	ld hl, wOptions
 	ld a, [hl]
 	push af
 	res NO_TEXT_SCROLL, [hl]
 	ld a, [wCurTMHM]
-	ld [wCurTMHM], a
+	ld [wTempTMHM], a
 	predef GetTMHMMove
-	ld a, [wCurTMHM]
 	ld [wPutativeTMHMMove], a
 	call GetMoveName
 	call CopyName1
