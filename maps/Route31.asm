@@ -1,17 +1,29 @@
 	object_const_def ; object_event constants
 	const ROUTE31_FISHER
-	const ROUTE31_YOUNGSTER
 	const ROUTE31_SUPER_NERD
-	const ROUTE31_COOLTRAINER_M
 	const ROUTE31_FRUIT_TREE
 	const ROUTE31_POKE_BALL1
-	const ROUTE31_POKE_BALL2
+	const ROUTE31_YOUNGSTER
+	const ROUTE31_LASS
+	const ROUTE31_TEACHER
+	const ROUTE31_OFFICER1
+	const ROUTE31_OFFICER2
 
 Route31_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .CheckMomCall
+	callback MAPCALLBACK_OBJECTS, .MoveOfficerCallback
+	
+.MoveOfficerCallback:
+	checkevent EVENT_BEAT_FALKNER
+	iftrue .doMove
+	return
+.doMove
+	moveobject ROUTE31_OFFICER1, 4, 10
+	moveobject ROUTE31_OFFICER2, 4, 10
+	return
 
 .CheckMomCall:
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -293,6 +305,14 @@ Route31Potion:
 
 Route31PokeBall:
 	itemball POKE_BALL
+	
+Route31OfficerBlock:
+	faceplayer
+	jumptext OfficerBlocking
+	
+Route31OfficerBlock2:
+	faceplayer
+	jumptext OfficerBlocking2
 
 Route31CooltrainerMText:
 	text "DARK CAVE…"
@@ -483,6 +503,32 @@ TeacherAnnAfterText:
 	line "learned from our"
 	cont "battle."
 	done
+	
+OfficerBlocking:
+	text "I really hope that"
+	line "TEAM ROCKET isn't"
+	cont "actually back. I"
+	
+	para "had to deal with"
+	line "those freaks three"
+	cont "years ago back in"
+	
+	para "KANTO, and they"
+	line "drove me nuts."
+	done
+	
+OfficerBlocking2:
+	text "Blasted ROCKETS…"
+	line "I remember what"
+	cont "they did near"
+	
+	para "LAVENDER TOWN…"
+	line "I'm going to"
+	cont "make sure nothing"
+	
+	para "like that happens"
+	line "again."
+	done 
 
 Route31_MapEvents:
 	db 0, 0 ; filler
@@ -497,7 +543,7 @@ Route31_MapEvents:
 	db 1 ; bg events
 	bg_event 19,  3, BGEVENT_READ, MrPokemonHouseText
 
-	db 7 ; object events
+	db 9 ; object events
 	object_event  8,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
 	object_event 23,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorStanley, -1
 	object_event 10,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
@@ -505,3 +551,5 @@ Route31_MapEvents:
 	object_event 13, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
 	object_event 27, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassSam, -1
 	object_event 16,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerTeacherAnn, -1
+	object_event  2,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock, EVENT_BEAT_FALKNER
+	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock2, EVENT_BEAT_FALKNER
