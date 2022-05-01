@@ -27,6 +27,7 @@ VioletPokecenter1F_ElmsAideScript:
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
 	giveegg TOGEPI, 5
+	verbosegivetmhm UPROOT_TMNUM
 	getstring STRING_BUFFER_4, .eggname
 	scall .AideGivesEgg
 	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
