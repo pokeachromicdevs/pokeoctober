@@ -5,6 +5,7 @@
 	const CHERRYGROVEPOKECENTER1F_TEACHER
 	const CHERRYGROVEPOKECENTER1F_SWIMMER_GIRL
 	const CHERRYGROVEPOKECENTER1F_GENTLEMAN_2
+	const CHERRYGROVEPOKECENTER1F_LASS
 	const CHERRYGROVEPOKECENTER1F_SCIENTIST
 
 CherrygrovePokecenter1F_MapScripts:
@@ -15,19 +16,15 @@ CherrygrovePokecenter1F_MapScripts:
 CherrygrovePokecenter1FNurseScript:
 	jumpstd pokecenternurse
 	
-VioletPokecenter1F_ElmsAideScript:
+CherrygrovePokecenter1F_ElmsAideScript:
 	faceplayer
 	opentext
-	checkevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
-	iftrue .SecondTimeAsking
 	writetext UnknownText_0x69555
-.AskTakeEgg:
-	yesorno
-	iffalse .RefusedEgg
+	verbosegivetmhm UPROOT_TMNUM
+	writetext GotUprootText
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
 	giveegg TOGEPI, 5
-	verbosegivetmhm UPROOT_TMNUM
 	getstring STRING_BUFFER_4, .eggname
 	scall .AideGivesEgg
 	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
@@ -67,17 +64,6 @@ VioletPokecenter1F_ElmsAideScript:
 	waitbutton
 	closetext
 	end
-
-.RefusedEgg:
-	writetext UnknownText_0x696f2
-	waitbutton
-	closetext
-	setevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
-	end
-
-.SecondTimeAsking:
-	writetext UnknownText_0x69712
-	sjump .AskTakeEgg
 
 CherrygrovePokecenter1FFisherScript:
 	jumptextfaceplayer CherrygrovePokecenter1FFisherText
@@ -126,17 +112,14 @@ MovementData_AideFinishesLeavingPokecenter:
 	step_end
 
 UnknownText_0x69555:
-	text "<PLAY_G>, long"
-	line "time, no see."
+	text "Ah, there you"
+	line "are, <PLAYER>."
 
-	para "PROF.ELM asked me"
-	line "to find you."
-
-	para "He has another"
-	line "favor to ask."
-
-	para "Would you take the"
-	line "#MON EGG?"
+	para "PROF.ELM has en-"
+	line "trusted me to"
+	cont "deliver two things"
+	
+	para "to you. Firstly…"
 	done
 
 UnknownText_0x695c5:
@@ -246,7 +229,24 @@ CherrygrovePokecenter1FBeautyText:
 	
 	para "How annoying…"
 	done
-
+	
+GotUprootText:
+	text "HM 01, UPROOT."
+	
+	para "Unlike TMs, HMs"
+	line "can be be used as"
+	cont "much as your heart"
+	
+	para "desires. UPROOT"
+	line "can yank small"
+	cont "trees blocking"
+	
+	para "your path out of"
+	line "the ground. And"
+	cont "now for the second"
+	para "item…"
+	done
+	
 CherrygrovePokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -266,4 +266,4 @@ CherrygrovePokecenter1F_MapEvents:
 	object_event  2,  6, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FTeacherScript, -1
 	object_event  10, 2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FGentleman2Script, -1
 	object_event  13, 5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FBeautyScript, -1
-	object_event  6, 3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
+	object_event  6, 3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
