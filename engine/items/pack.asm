@@ -192,6 +192,8 @@ Pack:
 	dw QuitItemSubmenu
 
 .UseItem:
+	ld a, [wCurTMHM]
+	ld [wTempTMHM], a
 	farcall AskTeachTMHM
 	ret c
 	farcall ChooseMonToLearnTMHM

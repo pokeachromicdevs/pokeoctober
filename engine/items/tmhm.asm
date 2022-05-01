@@ -380,6 +380,8 @@ CountSetBitsInByte:
 	db 5, 6, 6, 7, 6, 7, 7, 8
 
 CheckTMHM:
+	and a
+	ret z
 	push bc
 	push de
 	dec a
