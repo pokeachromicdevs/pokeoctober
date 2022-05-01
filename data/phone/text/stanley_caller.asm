@@ -31,8 +31,7 @@ UnknownText_0x175869:
 
 UnknownText_0x1758e4:
 	text "By the way, a"
-	line "wild"
-	cont "@"
+	line "wild @"
 	text_ram wStringBuffer4
 	para "slipped from my"
 

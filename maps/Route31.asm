@@ -1,17 +1,28 @@
 	object_const_def ; object_event constants
-	const ROUTE31_FISHER
-	const ROUTE31_YOUNGSTER
 	const ROUTE31_SUPER_NERD
-	const ROUTE31_COOLTRAINER_M
 	const ROUTE31_FRUIT_TREE
 	const ROUTE31_POKE_BALL1
-	const ROUTE31_POKE_BALL2
+	const ROUTE31_YOUNGSTER
+	const ROUTE31_LASS
+	const ROUTE31_TEACHER
+	const ROUTE31_OFFICER1
+	const ROUTE31_OFFICER2
 
 Route31_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .CheckMomCall
+	callback MAPCALLBACK_OBJECTS, .MoveOfficerCallback
+	
+.MoveOfficerCallback:
+	checkevent EVENT_BEAT_FALKNER
+	iftrue .doMove
+	return
+.doMove
+	moveobject ROUTE31_OFFICER1, 4, 10
+	moveobject ROUTE31_OFFICER2, 4, 10
+	return
 
 .CheckMomCall:
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -212,70 +223,6 @@ TrainerTeacherAnn:
 	closetext
 	end
 
-Route31MailRecipientScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_TM50_NIGHTMARE
-	iftrue .DescribeNightmare
-	checkevent EVENT_GOT_KENYA
-	iftrue .TryGiveKenya
-	writetext Text_Route31SleepyMan
-	waitbutton
-	closetext
-	end
-
-.TryGiveKenya:
-	writetext Text_Route31SleepyManGotMail
-	buttonsound
-	checkpokemail ReceivedSpearowMailText
-	ifequal POKEMAIL_WRONG_MAIL, .WrongMail
-	ifequal POKEMAIL_REFUSED, .Refused
-	ifequal POKEMAIL_NO_MAIL, .NoMail
-	ifequal POKEMAIL_LAST_MON, .LastMon
-	; POKEMAIL_CORRECT
-	writetext Text_Route31HandOverMailMon
-	buttonsound
-	writetext Text_Route31ReadingMail
-	buttonsound
-	setevent EVENT_GAVE_KENYA
-	verbosegiveitem TM_NIGHTMARE
-	iffalse .NoRoomForItems
-	setevent EVENT_GOT_TM50_NIGHTMARE
-.DescribeNightmare:
-	writetext Text_Route31DescribeNightmare
-	waitbutton
-.NoRoomForItems:
-	closetext
-	end
-
-.WrongMail:
-	writetext Text_Route31WrongMail
-	waitbutton
-	closetext
-	end
-
-.NoMail:
-	writetext Text_Route31MissingMail
-	waitbutton
-	closetext
-	end
-
-.Refused:
-	writetext Text_Route31DeclinedToHandOverMail
-	waitbutton
-	closetext
-	end
-
-.LastMon:
-	writetext Text_Route31CantTakeLastMon
-	waitbutton
-	closetext
-	end
-
-ReceivedSpearowMailText:
-	db   "DARK CAVE leads"
-	next "to another road@"
-
 Route31Sign:
 	jumptext Route31SignText
 
@@ -293,6 +240,14 @@ Route31Potion:
 
 Route31PokeBall:
 	itemball POKE_BALL
+	
+Route31OfficerBlock:
+	faceplayer
+	jumptext OfficerBlocking
+	
+Route31OfficerBlock2:
+	faceplayer
+	jumptext OfficerBlocking2
 
 Route31CooltrainerMText:
 	text "DARK CAVE…"
@@ -320,102 +275,6 @@ InstructorStanley1AfterText:
 	line "the real world"
 
 	para "pretty frequently."
-	done
-
-Text_Route31SleepyMan:
-	text "… Hnuurg… Huh?"
-
-	para "I walked too far"
-	line "today looking for"
-	cont "#MON."
-
-	para "My feet hurt and"
-	line "I'm sleepy…"
-
-	para "If I were a wild"
-	line "#MON, I'd be"
-	cont "easy to catch…"
-
-	para "…Zzzz…"
-	done
-
-Text_Route31SleepyManGotMail:
-	text "…Zzzz… Huh?"
-
-	para "What's that? You"
-	line "have MAIL for me?"
-	done
-
-Text_Route31HandOverMailMon:
-	text "<PLAYER> handed"
-	line "over the #MON"
-	cont "holding the MAIL."
-	done
-
-Text_Route31ReadingMail:
-	text "Let's see…"
-
-	para "…DARK CAVE leads"
-	line "to another road…"
-
-	para "That's good to"
-	line "know."
-
-	para "Thanks for bring-"
-	line "ing this to me."
-
-	para "My friend's a good"
-	line "guy, and you're"
-	cont "swell too!"
-
-	para "I'd like to do"
-	line "something good in"
-	cont "return too!"
-
-	para "I know! I want you"
-	line "to have this!"
-	done
-
-Text_Route31DescribeNightmare:
-	text "TM50 is NIGHTMARE."
-
-	para "It's a wicked move"
-	line "that steadily cuts"
-
-	para "the HP of a sleep-"
-	line "ing enemy."
-
-	para "Ooooh…"
-	line "That's scary…"
-
-	para "I don't want to"
-	line "have bad dreams."
-	done
-
-Text_Route31WrongMail:
-	text "This MAIL isn't"
-	line "for me."
-	done
-
-Text_Route31MissingMail:
-	text "Why is this #-"
-	line "MON so special?"
-
-	para "It doesn't have"
-	line "any MAIL."
-	done
-
-Text_Route31DeclinedToHandOverMail:
-	text "What? You don't"
-	line "want anything?"
-	done
-
-Text_Route31CantTakeLastMon:
-	text "If I take that"
-	line "#MON from you,"
-
-	para "what are you going"
-	line "to use in battle?"
 	done
 
 Route31SignText:
@@ -483,6 +342,32 @@ TeacherAnnAfterText:
 	line "learned from our"
 	cont "battle."
 	done
+	
+OfficerBlocking:
+	text "I really hope that"
+	line "TEAM ROCKET isn't"
+	cont "actually back. I"
+	
+	para "had to deal with"
+	line "those freaks three"
+	cont "years ago back in"
+	
+	para "KANTO, and they"
+	line "drove me nuts."
+	done
+	
+OfficerBlocking2:
+	text "Blasted ROCKETS…"
+	line "I remember what"
+	cont "they did near"
+	
+	para "LAVENDER TOWN…"
+	line "I'm going to"
+	cont "make sure nothing"
+	
+	para "like that happens"
+	line "again."
+	done 
 
 Route31_MapEvents:
 	db 0, 0 ; filler
@@ -497,11 +382,12 @@ Route31_MapEvents:
 	db 1 ; bg events
 	bg_event 19,  3, BGEVENT_READ, MrPokemonHouseText
 
-	db 7 ; object events
-	object_event  8,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
+	db 8 ; object events
 	object_event 23,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorStanley, -1
 	object_event 10,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
 	object_event 36,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL
 	object_event 13, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
 	object_event 27, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassSam, -1
 	object_event 16,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerTeacherAnn, -1
+	object_event  2,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock, EVENT_BEAT_FALKNER
+	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock2, EVENT_BEAT_FALKNER
