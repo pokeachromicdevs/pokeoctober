@@ -265,20 +265,23 @@ CherrygroveCity_UnusedMovementData:
 	step_end
 
 GuideGentIntroText:
-	text "Ah, another rook-"
-	line "ie, eh? Haha! Don't"
-	cont "sweat it! Everyone"
+	text "Ah, another"
+	line "rookie, eh?"
+	
+	para "Haha!"
+	line "Don't sweat it!"
 
-	para "starts out as a"
-	line "rookie, after all!"
+	para "Everyone starts"
+	line "out as a rookie,"
+	cont "after all!"
 
 	para "Anyways, want me"
 	line "to show you the"
-	cont "ropes?"
+	cont "ropes? They don't"
 	
-	para "They don't call me"
-	line "the GUIDE GENT for"
-	cont "no reason!"
+	para "call me the GUIDE"
+	line "GENT for no"
+	cont "reason!"
 	done
 
 GuideGentTourText1:
@@ -288,61 +291,90 @@ GuideGentTourText1:
 
 GuideGentPokecenterText:
 	text "This here is the"
-	line "#MON CENTER, as"
-	line "you might have"
+	line "#MON CENTER,"
+	cont "as you might have"
 	
-	para "guessed."
-
-	para "your #MON in no"
-	line "time at all."
-
-	para "You'll be relying"
-	line "on them a lot, so"
-
-	para "you better learn"
-	line "about them."
+	para "guessed. For no"
+	line "charge at all,"
+	cont "the nurse inside"
+	
+	para "will heal your"
+	line "#MON back to"
+	cont "normal for free!"
+	
+	para "It's so wonderful!"
 	done
 
+
 GuideGentMartText:
-	text "This here is the"
-	line "MART."
+	text "And this is the"
+	line "# MART."
 
-	para "They sell BALLS"
-	line "for catching wild"
-
-	para "#MON and other"
-	line "useful items."
+	para "They have all"
+	line "sorts of useful"
+	cont "items for your" 
+	
+	para "journey…for a"
+	line "price. They're"
+	cont "slightly less"
+	
+	para "wonderful than the"
+	line "#MON CENTER."
+	
+	para "They did finally"
+	line "restock on #-"
+	cont "BALLS, however,"
+	
+	para  "so that is"
+	line "wonderful!"
 	done
 
 GuideGentGymText:
-	text "This is a #MON"
-	line "GYM."
+	text "Umm…yeah. That"
+	line "large building"
 
-	para "Trainers will be"
-	line "battling their"
+	para "over there is"
+	line "something that"
+	cont "I'd like to avoid."
 
-	para "prized #MON"
-	line "there."
+	para "Things get so"
+    line "rough in there"
+    cont "that #MON are"
+	
+	para "sent flying out"
+	line "of it! It's insane!"
 	done
 
 GuideGentSeaText:
-	text "This is the sea,"
-	line "as you can see."
-
-	para "Some #MON are"
-	line "found only in"
-	cont "water."
+	text "Ah, the" 
+	line "CHERRYGROVE CITY"
+	cont "GYM! GYMs are"
+	
+	para "where GYM LEADERS"
+	line "are, of course!"
+	cont "And you won't get"
+	
+	para "very far as a"
+	line "trainer if you"
+	cont "don't defeat the"
+	
+	para "GYM LEADERS!"
 	done
 
 GuideGentGiftText:
-	text "Here…"
-
-	para "It's my house!"
-	line "Thanks for your"
-	cont "company."
-
-	para "Let me give you a"
-	line "small gift."
+	text "And this here…is"
+	line "my house! Haha!"
+	cont "You've kept up"
+	
+	para "with me quite"
+	line "well! Most of the"
+	cont "time, people are"
+	
+	para "straggling behind"
+	line "me in these tours!"
+	cont "Here, have a small"
+	
+	para "gift as well."
 	done
 
 GotMapCardText:
@@ -351,22 +383,32 @@ GotMapCardText:
 	done
 
 GuideGentPokegearText:
-	text "#GEAR becomes"
-	line "more useful as you"
-	cont "add CARDS."
-
-	para "I wish you luck on"
-	line "your journey!"
+	text "Ah, the #GEAR!"
+	line "Such a lovely"
+	cont "tool!" 
+	
+	para "It seems you only"
+	line "have one more CARD"
+	cont "necessary to"
+	
+	para "complete yours!"
+	line "Best of luck"
+	cont "finding it!"	
 	done
 
 GuideGentNoText:
-	text "Oh… It's something"
-	line "I enjoy doing…"
-
-	para "Fine. Come see me"
-	line "when you like."
+	text "Oh…but it's"
+	line "basically my" 
+	cont "passion to show"
+	
+	para "people around"
+	line "town…and the only"
+	cont "thing I can"
+	
+	para "contribute to"
+	line "society anymore…"
 	done
-
+	
 CherrygroveTeacherText_NoMapCard:
 	text "Did you talk to"
 	line "the old man by the"

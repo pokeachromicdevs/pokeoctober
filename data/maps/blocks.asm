@@ -30,9 +30,6 @@ Route2_Blocks:
 ElmsHouse_Blocks:
 	INCBIN "maps/ElmsHouse.blk"
 
-BetaSproutTower1_Blocks:
-	INCBIN "maps/unused/BetaSproutTower1.blk"
-
 Route11_Blocks:
 	INCBIN "maps/Route11.blk"
 

@@ -55,7 +55,7 @@ ENDM
 
 	newgroup                                                      ;  3
 
-	map_const SPROUT_TOWER_1F,                             10,  8 ;  1
+	map_const SPROUT_TOWER_1F,                             10,  9 ;  1
 	map_const SPROUT_TOWER_2F,                             10,  8 ;  2
 	map_const SPROUT_TOWER_3F,                             10,  8 ;  3
 	map_const TIN_TOWER_1F,                                10,  9 ;  4
