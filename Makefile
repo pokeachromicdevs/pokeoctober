@@ -53,7 +53,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(crystal_obj): RGBASMFLAGS =
+$(crystal_obj): RGBASMFLAGS = -DGIT_VERSION="\"$(shell git describe --always)"\"
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.

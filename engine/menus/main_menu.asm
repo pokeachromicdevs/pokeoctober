@@ -191,6 +191,7 @@ MainMenu_GetWhichMenu:
 MainMenuJoypadLoop:
 	call SetUpMenu
 .loop
+	call MainMenu_PrintCurrentVersion
 	call MainMenu_PrintCurrentTimeAndDay
 	ld a, [w2DMenuFlags1]
 	set 5, a
@@ -211,6 +212,16 @@ MainMenuJoypadLoop:
 .b_button
 	scf
 	ret
+
+MainMenu_PrintCurrentVersion:
+	hlcoord 0, 13
+	ld de, .VersionString
+	jp PlaceString
+
+.VersionString:
+	db "v. "
+	db GIT_VERSION
+	db "@"
 
 MainMenu_PrintCurrentTimeAndDay:
 	ld a, [wSaveFileExists]
