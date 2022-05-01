@@ -47,7 +47,7 @@ TryResetFruitTrees:
 	jp ResetFruitTrees
 
 CheckFruitTree:
-	ld b, 2
+	ld b, CHECK_FLAG
 	call GetFruitTreeFlag
 	ld a, c
 	ld [wScriptVar], a
@@ -55,7 +55,7 @@ CheckFruitTree:
 
 PickedFruitTree:
 	farcall StubbedTrainerRankings_FruitPicked
-	ld b, 1
+	ld b, SET_FLAG
 	jp GetFruitTreeFlag
 
 ResetFruitTrees:
