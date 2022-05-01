@@ -47,6 +47,7 @@ CherrygroveCityGuideGent:
 	playmusic MUSIC_SHOW_ME_AROUND
 	follow CHERRYGROVECITY_GRAMPS, PLAYER
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement1
+	turnobject PLAYER, UP
 	opentext
 	writetext GuideGentPokecenterText
 	waitbutton
@@ -58,12 +59,13 @@ CherrygroveCityGuideGent:
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement3
-	turnobject PLAYER, UP
+	turnobject PLAYER, LEFT
 	opentext
 	writetext GuideGentGymText
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement4
+	turnobject PLAYER, UP
 	opentext
 	writetext GuideGentSeaText
 	waitbutton
@@ -175,6 +177,7 @@ CherrygroveCityMartSign:
 GuideGentMovement1:
 	step LEFT
 	step LEFT
+	step UP
 	step LEFT
 	step LEFT
 	step LEFT
@@ -194,10 +197,9 @@ GuideGentMovement2:
 	step_end
 
 GuideGentMovement3:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
+	step LEFT
+	step LEFT
+	step LEFT
 	step UP
 	step UP
 	step UP
@@ -212,30 +214,36 @@ GuideGentMovement3:
 	step UP
 	step UP
 	step UP
-	step UP
-	step UP
-	step UP
+	turn_head LEFT
 	step_end
 
 GuideGentMovement4:
-	step LEFT
-	rept 20
+	step UP
+	step UP
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
 	step DOWN
-	endr
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head UP
 	step_end
 
 GuideGentMovement5:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step RIGHT
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -247,6 +255,7 @@ GuideGentMovement5:
 
 GuideGentMovement6:
 	step UP
+	step LEFT
 	step UP
 	step_end
 
@@ -256,27 +265,33 @@ CherrygroveCity_UnusedMovementData:
 	step_end
 
 GuideGentIntroText:
-	text "You're a rookie"
-	line "trainer, aren't"
-	cont "you? I can tell!"
+	text "Ah, another rook-"
+	line "ie, eh? Haha! Don't"
+	cont "sweat it! Everyone"
 
-	para "That's OK! Every-"
-	line "one is a rookie"
-	cont "at some point!"
+	para "starts out as a"
+	line "rookie, after all!"
 
-	para "If you'd like, I"
-	line "can teach you a"
-	cont "few things."
+	para "Anyways, want me"
+	line "to show you the"
+	cont "ropes?"
+	
+	para "They don't call me"
+	line "the GUIDE GENT for"
+	cont "no reason!"
 	done
 
 GuideGentTourText1:
-	text "OK, then!"
-	line "Follow me!"
+	text "Splendid!"
+	line "Come with me!"
 	done
 
 GuideGentPokecenterText:
-	text "This is a #MON"
-	line "CENTER. They heal"
+	text "This here is the"
+	line "#MON CENTER, as"
+	line "you might have"
+	
+	para "guessed."
 
 	para "your #MON in no"
 	line "time at all."
@@ -289,7 +304,7 @@ GuideGentPokecenterText:
 	done
 
 GuideGentMartText:
-	text "This is a #MON"
+	text "This here is the"
 	line "MART."
 
 	para "They sell BALLS"
