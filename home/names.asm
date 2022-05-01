@@ -176,7 +176,7 @@ GetTMHMName::
 	push af
 
 ; TM/HM prefix
-	cp HM01
+	cp NUM_TMS
 	push af
 	jr c, .TM
 
