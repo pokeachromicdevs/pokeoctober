@@ -40,7 +40,7 @@ CherrygroveGymFalknerScript:
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound
-	verbosegivetmhm TM_MUD_SLAP
+	verbosegivetmhm MUD_SLAP_TMNUM
 	iffalse .NoRoomForMudSlap
 	setevent EVENT_GOT_TM31_MUD_SLAP
 	writetext FalknerTMMudSlapText
