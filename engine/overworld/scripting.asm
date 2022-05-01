@@ -626,6 +626,7 @@ CurItemName:
 	
 CurTMHMName:
 	ld a, [wCurTMHM]
+	inc a
 	ld [wd265], a
 	call GetTMHMName
 	ret
@@ -2888,6 +2889,7 @@ Script_givetmhm:
 ;     tmhm (TMHMLabelByte)
 
 	call GetScriptByte
+	dec a
 	ld [wCurTMHM], a
 	ld [wItemQuantityChangeBuffer], a
 	call ReceiveTMHM
@@ -2962,7 +2964,7 @@ GiveTMHMScript:
 Script_tmhmnotify:
 ; script command 0xb1
 
-	call wGetTMHMPocketName
+	call GetTMHMPocketName
 	call CurTMHMName
 	ld b, BANK(PutItemInPocketText)
 	ld hl, PutItemInPocketText
@@ -2993,8 +2995,12 @@ wConvertMemToText:
 	xor a
 .ok
 
-wGetTMHMPocketName:
+GetTMHMPocketName:
 	ld hl, TMHMPocketName
+	ld d, h
+	ld e, l
+	ld hl, wStringBuffer3
+	jp CopyName2
 
 TMHMPocketName:
 	db "TM POCKET@"
