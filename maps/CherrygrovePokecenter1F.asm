@@ -122,25 +122,67 @@ UnknownText_0x69555:
 	
 	para "to you. Firstly…"
 	done
-
+	
+GotUprootText:
+	text "HM 01, UPROOT."
+	
+	para "Unlike TMs, HMs"
+	line "can be be used as"
+	cont "much as your heart"
+	
+	para "desires. UPROOT"
+	line "can yank small"
+	cont "trees blocking"
+	
+	para "your path out of"
+	line "the ground. And"
+	cont "now for the second"
+	para "item…"
+	done
+	
 UnknownText_0x695c5:
-	text "We discovered that"
-	line "a #MON will not"
+	text "Yes, the EGG that"
+	line "you retrieved for"
+	cont "ELM is now yours."
 
-	para "hatch until it"
-	line "grows in the EGG."
-
-	para "It also has to be"
-	line "with other active"
-	cont "#MON to hatch."
-
-	para "<PLAY_G>, you're"
-	line "the only person"
-	cont "we can rely on."
-
-	para "Please call PROF."
-	line "ELM when that EGG"
-	cont "hatches!"
+	para "From all the stud-"
+	line "ies ELM has per-"
+	cont "formed on EGGs,"
+	
+	para "he's discovered"
+	line "that EGGs hatch"
+	cont "faster when sur-"
+	
+	para "rounded with other"
+	line "#MON."
+	
+	para "Therefore, leaving"
+	line "it in the LAB"
+	cont "would mean it"
+	
+	para "would take ages to"
+	line "hatch. Thus, ELM"
+	cont "wants you to care"
+	
+	para "of the EGG. Raise"
+	line "that little #-"
+	cont "MON well."
+	
+	para "Anyways, I suppose"
+	line "I better get go-"
+	cont "ing. ELM's getting"
+	cont "ready for a trip,"
+	
+	para "and he needs me"
+	line "to watch over the"
+	cont "LAB while he's"
+	
+	para "gone. We don't want"
+	line "anyone breaking"
+	cont "into to the LAB,"
+	
+	para "after all. Fare-"
+	line "well for now."
 	done
 
 UnknownText_0x69693:
@@ -229,23 +271,6 @@ CherrygrovePokecenter1FBeautyText:
 	line "it at all."
 	
 	para "How annoying…"
-	done
-	
-GotUprootText:
-	text "HM 01, UPROOT."
-	
-	para "Unlike TMs, HMs"
-	line "can be be used as"
-	cont "much as your heart"
-	
-	para "desires. UPROOT"
-	line "can yank small"
-	cont "trees blocking"
-	
-	para "your path out of"
-	line "the ground. And"
-	cont "now for the second"
-	para "item…"
 	done
 	
 CherrygrovePokecenter1F_MapEvents:
