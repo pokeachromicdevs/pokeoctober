@@ -3,7 +3,6 @@
 	const CHERRYGROVEPOKECENTER1F_FISHER
 	const CHERRYGROVEPOKECENTER1F_GENTLEMAN
 	const CHERRYGROVEPOKECENTER1F_TEACHER
-	const CHERRYGROVEPOKECENTER1F_SWIMMER_GIRL
 	const CHERRYGROVEPOKECENTER1F_GENTLEMAN_2
 	const CHERRYGROVEPOKECENTER1F_LASS
 	const CHERRYGROVEPOKECENTER1F_SCIENTIST
@@ -20,8 +19,10 @@ CherrygrovePokecenter1F_ElmsAideScript:
 	faceplayer
 	opentext
 	writetext UnknownText_0x69555
+	waitbutton
 	verbosegivetmhm UPROOT_TMNUM
 	writetext GotUprootText
+	waitbutton
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
 	giveegg TOGEPI, 5
