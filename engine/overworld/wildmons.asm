@@ -312,9 +312,14 @@ ChooseWildEncounter:
 	add hl, bc ; this selects our mon
 	ld a, [hli]
 	ld b, a
-; If the Pokemon is encountered by surfing, we need to give the levels some variety.
+; If the Pokemon is encountered by surfing or in a really tall grass tile,
+; we need to give the levels some variety.
+	ld a, [wPlayerStandingTile]
+	call CheckSuperTallGrassTile
+	jr z, .buff_wild_mon
 	call CheckOnWater
 	jr nz, .ok
+.buff_wild_mon
 ; Check if we buff the wild mon, and by how much.
 	call Random
 	cp 35 percent
