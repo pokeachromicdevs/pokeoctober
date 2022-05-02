@@ -706,4 +706,5 @@ ENDM
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes SilentPokecenter1F, SILENT_POKECENTER_1F, $00, 0
+	map_attributes AlderPokecenter1F, ALDER_POKECENTER_1F, $00, 0
 

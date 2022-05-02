@@ -317,6 +317,7 @@ CherrygroveMart_Blocks:
 Route10North_Blocks:
 	INCBIN "maps/Route10North.blk"
 
+AlderPokecenter1F_Blocks:
 OlivinePokecenter1F_Blocks:
 MahoganyPokecenter1F_Blocks:
 EcruteakPokecenter1F_Blocks:
