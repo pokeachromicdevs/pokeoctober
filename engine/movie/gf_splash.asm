@@ -52,6 +52,10 @@ Copyright_GFPresents:
 	ret
 
 WarningScreen:
+	ld a, [wAPScreenTriggered]
+	and a
+	ret nz
+
 	call ClearTileMap
 	call LoadStandardFont
 	call ClearSprites
@@ -73,6 +77,9 @@ WarningScreen:
 	and START | A_BUTTON | B_BUTTON | SELECT
 	jr z, .loop
 	call ClearTileMap
+
+	ld a, 1
+	ld [wAPScreenTriggered], a
 	ret
 	
 .Header:

@@ -1301,6 +1301,7 @@ wcd85:: ds 4
 wcd89:: ds 1
 wcd8a:: ds 1
 wcd8b:: ds 1
+wAPScreenTriggered::
 wcd8c:: ds 1
 wcd8d:: ds 11
 ENDU ; cd98
