@@ -13,6 +13,7 @@ MainMenu:
 	call MainMenu_GetWhichMenu
 	ld [wWhichIndexSet], a
 	call MainMenu_PrintCurrentTimeAndDay
+	call MainMenu_PrintCurrentVersion
 	ld hl, .MenuHeader
 	call LoadMenuHeader
 	call MainMenuJoypadLoop
@@ -191,7 +192,6 @@ MainMenu_GetWhichMenu:
 MainMenuJoypadLoop:
 	call SetUpMenu
 .loop
-	call MainMenu_PrintCurrentVersion
 	call MainMenu_PrintCurrentTimeAndDay
 	ld a, [w2DMenuFlags1]
 	set 5, a
@@ -214,13 +214,23 @@ MainMenuJoypadLoop:
 	ret
 
 MainMenu_PrintCurrentVersion:
-	hlcoord 0, 13
+	hlcoord 0, 12
 	ld de, .VersionString
+	call PlaceString
+	hlcoord 0, 13
+	ld de, .CommitString
 	jp PlaceString
 
 .VersionString:
-	db "v. "
+	db "ver."
 	db GIT_VERSION
+	db "."
+	db GIT_OFFSET
+	db "@"
+
+.CommitString:
+	db "rev."
+	db GIT_COMMIT
 	db "@"
 
 MainMenu_PrintCurrentTimeAndDay:
