@@ -279,7 +279,7 @@ endchannel: MACRO
 	db endchannel_cmd
 ENDM
 
-; forward compat
+; --- forward compat ---
 
 pitch_offset: MACRO
 	db tone_cmd
@@ -327,3 +327,16 @@ channel: MACRO
 	dw \2 ; address
 _num_channels = 0
 ENDM
+
+sound_jump: MACRO
+	jumpchannel \1
+ENDM
+
+sound_call: MACRO
+	callchannel \1
+ENDM
+
+sound_loop: MACRO
+	loopchannel \1, \2
+ENDM
+
