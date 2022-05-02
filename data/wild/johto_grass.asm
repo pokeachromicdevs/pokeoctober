@@ -1193,9 +1193,9 @@ JohtoGrassWildMons:
 	map_id ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, PUPPERON
+	dbw 2, PIDGEY
 	dbw 2, RATTATA
-	dbw 3, PUPPERON
+	dbw 3, SENTRET
 	dbw 3, PUPPERON
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
@@ -1204,7 +1204,7 @@ JohtoGrassWildMons:
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
 	dbw 3, PIDGEY
-	dbw 3, SENTRET
+	dbw 3, VULPIII
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
