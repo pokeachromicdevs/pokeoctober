@@ -214,10 +214,25 @@ MainMenuJoypadLoop:
 	ret
 
 MainMenu_PrintCurrentVersion:
+	ld a, [wSaveFileExists]
+	and a
+	jr nz, .continue1
+	hlcoord 0, 16
+	jr .no_continue1
+.continue1
 	hlcoord 0, 12
+.no_continue1
 	ld de, .VersionString
 	call PlaceString
+
+	ld a, [wSaveFileExists]
+	and a
+	jr nz, .continue2
+	hlcoord 0, 17
+	jr .no_continue2
+.continue2
 	hlcoord 0, 13
+.no_continue2
 	ld de, .CommitString
 	jp PlaceString
 
