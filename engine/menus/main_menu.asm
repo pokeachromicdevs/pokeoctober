@@ -224,13 +224,13 @@ MainMenu_PrintCurrentVersion:
 .VersionString:
 	db "ver."
 	db GIT_VERSION
-	db "."
-	db GIT_OFFSET
 	db "@"
 
 .CommitString:
 	db "rev."
 	db GIT_COMMIT
+	db "/"
+	db GIT_OFFSET
 	db "@"
 
 MainMenu_PrintCurrentTimeAndDay:
