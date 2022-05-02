@@ -30,6 +30,8 @@ RGBFIX  ?= $(RGBDS)rgbfix
 RGBGFX  ?= $(RGBDS)rgbgfx
 RGBLINK ?= $(RGBDS)rgblink
 
+IPSPATCH ?= tools/ipspatch
+
 
 ### Build targets
 
@@ -78,7 +80,13 @@ $(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 
 endif
 
+patch: pokeoctober-v.$(GIT_VERSION).ips
 
+pokeoctober-v.$(GIT_VERSION).ips: all baserom.gbc $(IPSPATCH)
+# check if baserom == crystal 1.1
+	[ $(shell sha1sum -b baserom.gbc | cut -c 1-40) = f2f52230b536214ef7c9924f483392993e226cfb ]
+	$(IPSPATCH) create baserom.gbc pokeoctober.gbc $@
+	
 pokeoctober.gbc: $(crystal_obj) pokeoctober.link
 	$(RGBLINK) -n pokeoctober.sym -m pokeoctober.map -l pokeoctober.link -o $@ $(crystal_obj)
 	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_OCTOBER $@
@@ -86,7 +94,6 @@ pokeoctober.gbc: $(crystal_obj) pokeoctober.link
 
 %.lz: %
 	tools/lzcomp -- $< $@
-
 
 ### Pokemon pic animation rules
 

@@ -11,6 +11,7 @@ tools := \
 	pokemon_animation \
 	pokemon_animation_graphics \
 	gfx \
+	ipspatch \
 	md5
 all: $(tools)
 	@:

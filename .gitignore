@@ -1,6 +1,7 @@
 # generated
 *.tx
 *.o
+*.ips
 
 # precompiled python
 *.pyc
