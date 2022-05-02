@@ -14,16 +14,6 @@ InitClock:
 	ld a, $0
 	ld [wSpriteUpdatesEnabled], a
 
-
-
-
-
-
-
-
-
-
-
 	xor a
 	ldh [hBGMapMode], a
 
@@ -36,10 +26,6 @@ InitClock:
 	lb bc, BANK(TimeSetDownArrowGFX), 1
 	call Request1bpp
 
-
-
-
-
 	ld hl, wTimeSetBuffer
 	ld bc, wTimeSetBufferEnd - wTimeSetBuffer
 	xor a
@@ -50,8 +36,6 @@ InitClock:
 .loop
 	ld hl, Text_WhatTimeIsIt
 	call PrintText
-
-
 
 ; render arrows inside the textbox
 	hlcoord $12, $0e
@@ -64,7 +48,7 @@ InitClock:
 	call DelayFrames
 
 .SetHourLoop:
-	call JoyTextDelay
+	call Timeset_UpdateState
 	call SetHour
 	jr nc, .SetHourLoop
 
@@ -91,7 +75,7 @@ InitClock:
 	call DelayFrames
 
 .SetMinutesLoop:
-	call JoyTextDelay
+	call Timeset_UpdateState
 	call SetMinutes
 	jr nc, .SetMinutesLoop
 
@@ -191,32 +175,6 @@ DisplayHourOClock:
 	call PlaceString
 	pop hl
 	ret
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 SetMinutes:
 	ldh a, [hJoyPressed]
@@ -359,6 +317,28 @@ INCBIN "gfx/new_game/up_arrow.1bpp"
 TimeSetDownArrowGFX:
 INCBIN "gfx/new_game/down_arrow.1bpp"
 
+Timeset_UpdateState:
+; blink the arrows
+; because someone apparently can't figure out how to
+; set the time
+	ld a, [wInitTimeFrameCounter]
+	inc a
+	ld [wInitTimeFrameCounter], a
+	and (1 << 4) ; blinking speed
+	jr nz, .hide_arrows
+	hlcoord $12, $0e
+	ld [hl], TIMESET_UP_ARROW
+	hlcoord $12, $10
+	ld [hl], TIMESET_DOWN_ARROW
+	jr .update_ok
+.hide_arrows
+	hlcoord $12, $0e
+	ld [hl], " "
+	hlcoord $12, $10
+	ld [hl], " "
+.update_ok
+	jp JoyTextDelay
+
 SetDayOfWeek:
 	ldh a, [hInMenu]
 	push af
@@ -406,10 +386,8 @@ SetDayOfWeek:
 	hlcoord 10, 5
 	call .PlaceWeekdayString
 	call ApplyTilemap
-	ld c, 10
-	call DelayFrames
 .loop2
-	call JoyTextDelay
+	call Timeset_UpdateState
 	call .PutWeekdayString
 	call .GetJoypadAction
 	jr nc, .loop2
@@ -437,10 +415,8 @@ SetDayOfWeek:
 	hlcoord $1, $10
 	call .PlaceWeekdayString
 	call ApplyTilemap
-	ld c, 10
-	call DelayFrames
 .loop2_
-	call JoyTextDelay
+	call Timeset_UpdateState
 	call .PutWeekdayString_InTextBox
 	call .GetJoypadAction
 	jr nc, .loop2_
@@ -503,26 +479,22 @@ SetDayOfWeek:
 	ret
 
 .PutWeekdayString:
-	xor a
-	ldh [hBGMapMode], a
 	hlcoord 10, 4
 	lb bc, 2, 9
 	call ClearBox
 	hlcoord 10, 5
 	call .PlaceWeekdayString
-	call WaitBGMap
+	call DelayFrame
 	and a
 	ret
 
 .PutWeekdayString_InTextBox:
-	xor a
-	ldh [hBGMapMode], a
 	hlcoord 1, $10
 	lb bc, 1, 9
 	call ClearBox
 	hlcoord 1, $10
 	call .PlaceWeekdayString
-	call WaitBGMap
+	call DelayFrame
 	and a
 	ret
 

@@ -2280,6 +2280,7 @@ wMonTriedToEvolve:: db
 
 wTimeOfDay:: db ; d269
 
+wInitTimeFrameCounter::
 wTMHMsCount:: db
 
 
