@@ -989,3 +989,6 @@ Section "Map Blocks 4", ROMX
 
 CherrygroveWoods_Blocks:
 	INCBIN "maps/CherrygroveWoods.blk"
+	
+CherrygroveShrine_Blocks:
+	INCBIN "maps/CherrygroveShrine.blk"
