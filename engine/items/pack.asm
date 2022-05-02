@@ -1069,7 +1069,7 @@ TutorialPack:
 
 .ItemsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .ItemsMenuData
 	db 1 ; default option
 
@@ -1089,7 +1089,7 @@ TutorialPack:
 
 .KeyItemsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .KeyItemsMenuData
 	db 1 ; default option
 
@@ -1118,7 +1118,7 @@ TutorialPack:
 
 .BallsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, SCREEN_WIDTH - 6, TEXTBOX_Y - 1
 	dw .BallsMenuData
 	db 1 ; default option
 
