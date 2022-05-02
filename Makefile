@@ -81,7 +81,7 @@ endif
 
 pokeoctober.gbc: $(crystal_obj) pokeoctober.link
 	$(RGBLINK) -n pokeoctober.sym -m pokeoctober.map -l pokeoctober.link -o $@ $(crystal_obj)
-	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t POKE_OCTO $@
+	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_OCTOBER $@
 	tools/sort_symfile.sh pokeoctober.sym
 
 %.lz: %
