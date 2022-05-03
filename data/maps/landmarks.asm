@@ -10,19 +10,19 @@ Landmarks:
 ; entries correspond to constants/landmark_constants.asm
 	dbbw       0,   0, SpecialMapName
 	landmark 140, 100, NewBarkTownName
-	landmark 128, 100, Route29Name
-	landmark 100, 100, CherrygroveWoodsName
-	landmark 100, 150, CherrygroveCityName
-	landmark 100,  80, Route30Name
-	landmark  96,  60, Route31Name
+	landmark 124, 100, Route29Name
+	landmark 116, 100, CherrygroveWoodsName
+	landmark 100, 100, CherrygroveCityName
+	landmark 100,  84, Route30Name
+	landmark 100,  60, Route31Name
 	landmark  84,  60, VioletCityName
 	landmark  85,  58, SproutTowerName
 	landmark  84,  92, Route32Name
-	landmark  44,  92, AlderTownName
-	landmark  76,  76, RuinsOfAlphName
+	landmark  84, 124, AlderTownName
+	landmark  68, 124, RuinsOfAlphName
 	landmark  84, 124, UnionCaveName
 	landmark  82, 124, Route33Name
-	landmark  68, 124, AzaleaTownName
+	landmark  52, 124, AzaleaTownName
 	landmark  70, 122, SlowpokeWellName
 	landmark  52, 120, IlexForestName
 	landmark  52, 112, Route34Name
@@ -57,6 +57,7 @@ Landmarks:
 	landmark 112,  72, DarkCaveName
 	landmark 124,  88, Route46Name
 	landmark 148,  68, SilverCaveName
+
 	landmark  52, 108, PalletTownName
 	landmark  52,  92, Route1Name
 	landmark  52,  76, ViridianCityName
