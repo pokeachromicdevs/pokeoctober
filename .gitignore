@@ -51,4 +51,4 @@ gfx/pokemon/*/frames.asm
 
 # :(
 *.cheats
-pokeoctober-*.png
+pokeoctober*-*.png

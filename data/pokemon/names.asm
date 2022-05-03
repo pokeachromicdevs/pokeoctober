@@ -177,10 +177,10 @@ PokemonNames::
 	db "TONBOSS@@@";needs animation fully programmed in
 	db "BELLIGNAN@";needs animation fully programmed in
 	db "CHINCHOU@@"
-	db "LANTURN@@@";insert beta sprite
+	db "LANTURN@@@";needs animation fully programmed in
 	db "PICHU@@@@@";check animation
 	db "CLEFFA@@@@"
-	db "IGGLYBUFF@";insert beta sprite 
+	db "IGGLYBUFF@"
 	db "TOGEPI@@@@"
 	db "TOGETIC@@@"
 	db "NATU@@@@@@"
@@ -191,21 +191,21 @@ PokemonNames::
 	db "AMPHAROS@@"
 	db "BELLOSSOM@"
 	db "MARILL@@@@"
-	db "AZUMARILL@";insert beta sprite
+	db "AZUMARILL@";needs animation
 	db "SUDOWOODO@"
 	db "POLITOED@@";needs beta sprite
 	db "HOPPIP@@@@";needs animation fully programmed in
 	db "SKIPLOOM@@";insert beta sprite
 	db "JUMPLUFF@@";insert beta sprite
 	db "AIPOM@@@@@";insert beta sprite
-	db "SUNKERN@@@";insert beta sprite
+	db "SUNKERN@@@";needs animation fully programmed in
 	db "SUNFLORA@@"
 	db "LUXSWAN@@@";needs animation
-	db "WOOPER@@@@";insert beta sprite
+	db "WOOPER@@@@";needs animation fully programmed in
 	db "QUAGSIRE@@"
 	db "ESPEON@@@@";insert beta sprite
 	db "UMBREON@@@";insert beta sprite
-	db "MURKROW@@@";insert beta sprite
+	db "MURKROW@@@";needs animation
 	db "SLOWKING@@"
 	db "MISDREAVUS"
 	db "UNOWN@@@@@"
@@ -214,7 +214,7 @@ PokemonNames::
 	db "GIRAFARIG@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
-	db "SHUCKLE@@@";insert beta sprite
+	db "SHUCKLE@@@";needs animation fully programmed in
 	db "DUNSPARCE@";insert beta sprite
 	db "GLIGAR@@@@";insert beta sprite
 	db "STEELIX@@@"
@@ -222,7 +222,7 @@ PokemonNames::
 	db "GRANBULL@@"
 	db "QWILFISH@@"
 	db "SCIZOR@@@@";insert beta sprite
-	db "HERACROSS@"
+	db "HERACROSS@";needs animation
 	db "SNEASEL@@@";insert beta sprite
 	db "TEDDIURSA@";insert beta sprite
 	db "URSARING@@"
@@ -232,7 +232,7 @@ PokemonNames::
 	db "PILOSWINE@"
 	db "CORSOLA@@@"
 	db "REMORAID@@";needs animation fully programmed in
-	db "OCTILLERY@";insert beta sprite
+	db "OCTILLERY@";needs animation fully programmed in
 	db "DELIBIRD@@";insert beta sprite
 	db "MANTINE@@@";insert beta sprite
 	db "SKARMORY@@"
