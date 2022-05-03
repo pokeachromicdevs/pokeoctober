@@ -232,7 +232,7 @@ PokemonNames::
 	db "PILOSWINE@"
 	db "CORSOLA@@@"
 	db "REMORAID@@";needs animation fully programmed in
-	db "OCTILLERY@";insert beta sprite
+	db "OCTILLERY@";needs animation fully programmed in
 	db "DELIBIRD@@";insert beta sprite
 	db "MANTINE@@@";insert beta sprite
 	db "SKARMORY@@"
