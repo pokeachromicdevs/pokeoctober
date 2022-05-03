@@ -62,6 +62,9 @@ Route30Sign:
 MrPokemonsHouseDirectionsSign:
 	jumptext MrPokemonsHouseDirectionsSignText
 
+R30_NothingScript:
+	end
+
 MrPokemonsHouseSign:
 	jumptext MrPokemonsHouseSignText
 
@@ -114,10 +117,10 @@ SoldierDwightBeatenText:
 	
 SoldierDwightAfterText:
 	text "Alright, I'll let"
-	line "you sneak by. Now"
-	cont "shoo, get out of"
-	
-	para "my face!"
+	line "you sneak by."
+
+	para "Now shoo, get out"
+	line "of my face!"
 	done
 	
 FisherBillySeenText:
@@ -132,11 +135,12 @@ FisherBillyBeatenText:
 	
 FisherBillyAfterText:
 	text "Alright, you won."
-	line "Now leave. I got"
-	cont "better things to"
-	
-	para "do than to enter-"
-	line "tain twerps."
+	line "Now leave."
+
+	para "I got better"
+	line "things to do than"
+	para "to entertain"
+	line "twerps like you."
 	done
 	
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
@@ -196,12 +200,13 @@ Route30_MapEvents:
 	db 3 ; bg events
 	bg_event 11, 23, BGEVENT_READ, Route30Sign
 	bg_event 13,  5, BGEVENT_READ, Route30TrainerTips
-	bg_event  6, 15, BGEVENT_ITEM, Route30HiddenPotion
+	bg_event  6, 16, BGEVENT_ITEM, Route30HiddenPotion
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event  8, 22, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSoldierDwight, -1
 	object_event  8,  19, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerFisherBilly, -1
-	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
+	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
 	object_event 12,  15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
-	object_event 13,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
+	object_event  4,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, -1, OBJECTTYPE_3, 0, -1, -1
+	object_event 12, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
 	object_event  5, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE
