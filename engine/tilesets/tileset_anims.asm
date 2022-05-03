@@ -36,7 +36,7 @@ _AnimateTileset::
 Tileset0Anim:
 TilesetJohtoModernAnim:
 TilesetKantoAnim:
-	dw vTiles2 tile $14, AnimateWaterTile
+	dw vTiles2 tile $14, AnimateKantoWaterTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
@@ -478,8 +478,43 @@ AnimateWaterTile:
 
 	jp WriteTile
 
+AnimateKantoWaterTile:
+; Draw a water tile for the current frame in VRAM tile at de.
+
+; Save sp in bc (see WriteTile).
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+	ld a, [wTileAnimationTimer]
+
+; 4 tile graphics, updated every other frame.
+	and %110
+
+; 2 x 8 = 16 bytes per tile
+	add a
+	add a
+	add a
+
+	add LOW(KantoWaterTileFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(KantoWaterTileFrames)
+	ld h, a
+
+; The stack now points to the start of the tile for this frame.
+	ld sp, hl
+
+	ld l, e
+	ld h, d
+
+	jp WriteTile
+
 WaterTileFrames:
 	INCBIN "gfx/tilesets/water/water.2bpp"
+
+KantoWaterTileFrames:
+	INCBIN "gfx/tilesets/water/water-kanto.2bpp"
 
 ForestTreeLeftAnimation:
 	ld hl, sp+0
@@ -911,10 +946,20 @@ AnimateWaterPalette:
 	ldh [rBGPD], a
 	ld a, [hli]
 	ldh [rBGPD], a
+	ld hl, wBGPals1 palette PAL_BG_WATER color 2
+	ld a, [hli]
+	ldh [rBGPD], a
+	ld a, [hli]
+	ldh [rBGPD], a
 	jr .end
 
 .color0
 	ld hl, wBGPals1 palette PAL_BG_WATER color 0
+	ld a, [hli]
+	ldh [rBGPD], a
+	ld a, [hli]
+	ldh [rBGPD], a
+	ld hl, wBGPals1 palette PAL_BG_WATER color 1
 	ld a, [hli]
 	ldh [rBGPD], a
 	ld a, [hli]
