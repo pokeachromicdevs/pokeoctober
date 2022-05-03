@@ -32,6 +32,23 @@ DoPlayerMovement::
 	ret
 
 .TranslateIntoMovement:
+IF DEF(_DEBUG)
+	ld a, [wCurInput]
+	and B_BUTTON
+	jr z, .regular_move
+	call .GetAction
+	ld a, [wWalkingTile]
+	cp -1
+	ld a, STEP_BACK_LEDGE
+	jr z, .hopback
+	ld a, STEP_BIKE
+.hopback
+	call .DoStep
+	scf
+	ret
+.regular_move
+ENDC
+
 	ld a, [wPlayerState]
 	cp PLAYER_NORMAL
 	jr z, .Normal

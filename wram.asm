@@ -235,6 +235,10 @@ wSpriteAnimationStructsEnd::
 
 NEXTU ; c300
 ; mobile data
+if DEF(_DEBUG)
+wDebugColorPickerPal:: ds 1 palettes
+endc
+NEXTU
 wc300:: ds 1
 wc301:: ds 1
 wc302:: ds 1
