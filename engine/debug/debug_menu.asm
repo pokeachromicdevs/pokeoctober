@@ -174,7 +174,16 @@ Debug_SoundTest:
 .left
 	call .get_value
 .left_loop
+	push af
+	ld a, e
+	or d
+	jr nz, .dec_music
+	ld de, NUM_MUSIC_TRACKS - 1
+	jr .left_cont
+.dec_music
 	dec de
+.left_cont
+	pop af
 	dec a
 	jr nz, .left_loop
 	call .put_value
@@ -185,6 +194,20 @@ Debug_SoundTest:
 	call .get_value
 .right_loop
 	inc de
+
+	push af
+	ld a, d
+	cp HIGH(NUM_MUSIC_TRACKS)
+	jr c, .right_cont
+	jr nz, .right_cont
+	ld a, e
+	cp LOW(NUM_MUSIC_TRACKS)
+	jr c, .right_cont
+	xor a
+	ld d, a
+	ld e, a
+.right_cont
+	pop af
 	dec a
 	jr nz, .right_loop
 	call .put_value
@@ -239,7 +262,7 @@ Debug_SoundTest:
 	ld hl, Debug_MusicNames
 	ld bc, 18
 	ldh a, [hDebugMenuDataBuffer + 1]
-	cp a, 103
+	cp a, NUM_MUSIC_TRACKS
 	jp nc, .loop
 	call AddNTimes
 	ld d, h
