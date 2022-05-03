@@ -256,7 +256,7 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
-	dba MeowsyFrames
+	dba CoinpurFrames
 	dba AdbarstorkFrames
 	dba PupperonFrames
 	dba MoibelleFrames

@@ -256,7 +256,7 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
-	dw MeowsyBitmasks
+	dw CoinpurBitmasks
 	dw AdbarstorkBitmasks
 	dw PupperonBitmasks
 	dw MoibelleBitmasks

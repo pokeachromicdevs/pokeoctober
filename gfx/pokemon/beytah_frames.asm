@@ -1,6 +1,6 @@
 BeytahFrames: ; used only for BANK(Beytah Frames)
 
-MeowsyFrames:     INCLUDE "gfx/pokemon/meowsy/frames.asm"
+CoinpurFrames:     INCLUDE "gfx/pokemon/coinpur/frames.asm"
 AdbarstorkFrames: INCLUDE "gfx/pokemon/adbarstork/frames.asm"
 PupperonFrames:   INCLUDE "gfx/pokemon/pupperon/frames.asm"
 BipullaFrames:    INCLUDE "gfx/pokemon/bipulla/frames.asm"
