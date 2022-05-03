@@ -13,7 +13,7 @@ CherrygroveWoodsGateOfficerScript:
 
 CherrygroveWoodsGateLassScript:
 	jumptextfaceplayer CherrygroveWoodsGateLassText
-	
+
 CherrygroveWoodsGateYoungsterScript:
 	faceplayer
 	opentext
@@ -34,61 +34,63 @@ CherrygroveWoodsGateYoungsterScript:
 CherrygroveWoodsGateOfficerText:
 	text "You know, with"
 	line "how little crime"
-	cont "happens here, do"
-	
-	para "I really need to"
-	line "be cooped up in"
-	cont "this gate? Who's"
-	
-	para "gonna cause trou-"
-	line "ble in SILENT"
+
+	para "happens here, do"
+	line "I really need to"
+
+	para "be cooped up in"
+	line "this gate?"
+
+	para "Who's gonna cause"
+	line "trouble in SILENT"
 	cont "TOWN of all"
-	
-	para "places?"
+	cont "places?"
 	done
 
 CherrygroveWoodsGateLassText:
 	text "I heard there's"
 	line "some crazy old"
-	cont "man living out"
 
-	para "in the woods,"
-	line "and I've been too"
-	cont "scared to enter"
-	
-	para "because of that."
-	line "So scared, in"
-	cont "fact, that I've"
-	
+	para "man living out"
+	line "in the woods,"
+
+	para "and I've been too"
+	line "scared to enter"
+	cont "because of that."
+
+	para "So scared, in"
+	line "fact, that I've"
+
 	para "been hanging out"
 	line "in here for weeks,"
-	cont "unable to advance"
-	
-	para "on my journey."
+
+	para "unable to advance"
+	line "on my journey."
 	done
-	
+
 CherrygroveWoodsGateYoungsterText:
 	text "I always wondered"
 	line "what BERRIES taste"
-	cont "like. You ever"
+	cont "like."
 	
-	para "tried one?"
+	para "You ever tried"
+	line "one?"
 	done
 	
 CherrygroveWoodsYoungsterYesText:
 	text "Oh, you look fine."
-	line "I'll have to give it"
-	cont "a try some time!"
+	para "I'll have to give"
+	line "it a try sometime!"
 	done
 	
 CherrygroveWoodsYoungsterNoText:
 	text "Really? Our #-"
 	line "MON gobble these"
-	cont "right up! Aren't"
+	cont "right up!"
 	
-	para "you even a little"
-	line "curious?"
-	done 
+	para "Aren't you even a"
+	line "little curious?"
+	done
 
 CherrygroveWoodsGate_MapEvents:
 	db 0, 0 ; filler
