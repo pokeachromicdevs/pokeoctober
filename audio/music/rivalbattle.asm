@@ -4,10 +4,10 @@
 ; https://hax.iimarckus.org/topic/6777/3/
 
 Music_RivalBattle:
-	musicheader 4, 1, Music_RivalBattle_Ch1
+	musicheader 3, 1, Music_RivalBattle_Ch1
 	musicheader 1, 2, Music_RivalBattle_Ch2
 	musicheader 1, 3, Music_RivalBattle_Ch3
-	musicheader 1, 4, Music_RivalBattle_Ch4
+	;musicheader 1, 4, Music_RivalBattle_Ch4
 
 Music_RivalBattle_Ch1:
 	tempo 116
@@ -201,7 +201,7 @@ Music_RivalBattle_Ch2:
 	note __, 16
 	note __, 16
 Music_RivalBattle_Ch2_loop:
-	dutycycle $0
+	dutycycle 2
 	callchannel Music_RivalBattle_Ch2_branch_1
 	note F_, 4
 	note D#, 4
@@ -214,6 +214,7 @@ Music_RivalBattle_Ch2_loop:
 	note F_, 4
 	note G_, 4
 	octave 3
+	dutycycle 3
 	intensity $d0
 	note F_, 16
 	note C#, 8
@@ -366,7 +367,7 @@ Music_RivalBattle_Ch2_branch_2:
 	endchannel
 
 Music_RivalBattle_Ch3:
-	notetype $c, $19
+	notetype $c, $14
 	octave 2
 	note A_, 1
 	note __, 1
@@ -379,24 +380,19 @@ Music_RivalBattle_Ch3:
 	note A#, 1
 Music_RivalBattle_Ch3_loop_main:
 Music_RivalBattle_Ch3_loop_1:
-	note C_, 1
-	note __, 1
-	note C_, 1
-	note __, 1
+	octave 2
+	note C_, 2
+	octave 3
+	note C_, 2
 	loopchannel 13, Music_RivalBattle_Ch3_loop_1
-	note G_, 1
-	note __, 1
-	note F_, 1
-	note __, 1
-	note G_, 1
-	note __, 1
-	note F_, 1
-	note __, 1
-	note E_, 1
-	note __, 1
+	octave 2
+	note G_, 2
+	note F_, 2
+	note G_, 2
+	note F_, 2
+	note E_, 2
 	octave 1
-	note B_, 1
-	note __, 1
+	note B_, 2
 	callchannel Music_RivalBattle_Ch3_branch_1
 	callchannel Music_RivalBattle_Ch3_branch_2
 	callchannel Music_RivalBattle_Ch3_branch_1
@@ -422,41 +418,32 @@ Music_RivalBattle_Ch3_loop_1:
 	note D_, 4
 	note C_, 2
 	octave 2
-	note G#, 1
-	note __, 1
-	note A#, 1
-	note __, 1
-	note B_, 1
-	note __, 1
+	note G#, 2
+	note A#, 2
+	note B_, 2
 	loopchannel 0, Music_RivalBattle_Ch3_loop_main
 
 Music_RivalBattle_Ch3_branch_1:
 	octave 2
-	note C_, 1
-	note __, 1
+	note C_, 2
 	octave 3
-	note C_, 1
-	note __, 1
+	note C_, 2
 	loopchannel 8, Music_RivalBattle_Ch3_branch_1
 	endchannel
 
 Music_RivalBattle_Ch3_branch_2:
 	octave 2
-	note D#, 1
-	note __, 1
+	note D#, 2
 	octave 3
-	note D#, 1
-	note __, 1
+	note D#, 2
 	loopchannel 8, Music_RivalBattle_Ch3_branch_2
 	endchannel
 
 Music_RivalBattle_Ch3_branch_3:
 	octave 2
-	note C#, 1
-	note __, 1
+	note C#, 2
 	octave 3
-	note C#, 1
-	note __, 1
+	note C#, 2
 	loopchannel 7, Music_RivalBattle_Ch3_branch_3
 	octave 2
 	note C#, 2
@@ -465,15 +452,12 @@ Music_RivalBattle_Ch3_branch_3:
 
 Music_RivalBattle_Ch3_branch_4:
 	octave 2
-	note D#, 1
-	note __, 1
+	note D#, 2
 	octave 3
-	note D#, 1
-	note __, 1
+	note D#, 2
 	loopchannel 4, Music_RivalBattle_Ch3_branch_4
 	octave 2
-	note D#, 1
-	note __, 1
+	note D#, 2
 	note D#, 2
 	note A#, 2
 	note G_, 2
