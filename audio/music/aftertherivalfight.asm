@@ -1,3 +1,8 @@
+; Pokémon HG/SS - Encounter! Lyra (Departure)
+; Demixed by Mmmmmm
+; https://pastebin.com/0PPUz32D
+; https://hax.iimarckus.org/topic/6777/3/
+
 Music_AfterTheRivalFight:
 	musicheader 4, 1, Music_AfterTheRivalFight_Ch1
 	musicheader 1, 2, Music_AfterTheRivalFight_Ch2
@@ -5,60 +10,28 @@ Music_AfterTheRivalFight:
 	musicheader 1, 4, Music_AfterTheRivalFight_Ch4
 
 Music_AfterTheRivalFight_Ch1:
-	tempo 112
-	volume $77
-	dutycycle $0
-	tone $0001
-	vibrato $8, $14
-	stereopanning $f0
-	notetype $c, $b2
-	octave 2
-	note G#, 4
-	note G#, 4
-	intensity $82
-	octave 3
-	note G#, 2
-	note G#, 2
-	note G#, 2
-	note G#, 2
-	loopchannel 0, Music_AfterTheRivalFight_branch_f4fb1
+	tempo 184
+	dutycycle 1
+	notetype $c, $85
+	note __, 4
+	loopchannel 0, Music_LookRival_Ch1_loop
 
 Music_AfterTheRivalFight_Ch2:
-	dutycycle $1
-	vibrato $6, $35
-	stereopanning $f
-	notetype $c, $c2
-	octave 4
-	note G#, 4
-	note G#, 4
-	intensity $a2
-	note G#, 2
-	note G#, 2
-	note G#, 2
-	note G#, 2
-	loopchannel 0, Music_AfterTheRivalFight_branch_f502e
+	dutycycle 2
+	notetype $c, $b4
+	note __, 4
+	loopchannel 0, Music_LookRival_Ch2_loop
 
 Music_AfterTheRivalFight_Ch3:
-	notetype $c, $28
-	octave 3
-	note D#, 2
-	note __, 2
-	note D#, 2
-	note __, 2
-	note G#, 2
-	note F#, 2
-	note F_, 2
-	note D#, 2
-	loopchannel 0, Music_AfterTheRivalFight_branch_f509d
+	notetype $c, $15
+	intensity $10
+	note __, 4
+	loopchannel 0, Music_LookRival_Ch3_loop
 
 Music_AfterTheRivalFight_Ch4:
 	togglenoise $3
-	stereopanning $f
-	notetype $c
-	note D_, 4
-	note D_, 4
-	note D#, 2
-	note D_, 2
-	note D_, 2
-	note D_, 2
-	loopchannel 0, Music_AfterTheRivalFight_branch_f5118
+	notetype $6
+	note C_, 2
+	note C_, 2
+	note D#, 4
+	loopchannel 0, Music_LookRival_Ch4_loop
