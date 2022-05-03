@@ -246,6 +246,9 @@ MainMenu_PrintCurrentVersion:
 	db GIT_COMMIT
 	db "/"
 	db GIT_OFFSET
+IF DEF(_DEBUG)
+	db "-d"
+endc
 	db "@"
 
 MainMenu_PrintCurrentTimeAndDay:
