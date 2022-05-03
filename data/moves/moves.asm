@@ -282,4 +282,4 @@ Moves1:
 	move EFFECT_ACCURACY_DOWN_HIT,  20, WATER,   100, 10, 100  ;INK_SPRAY
 	move EFFECT_SP_ATK_DOWN,         0, NORMAL,  100, 40,    0 ;MEGAPHONE
 	move EFFECT_ALWAYS_HIT,         80, DARK,    100, 20,    0 ;AMBUSH
-	move EFFECT_BURN_HIT,            0, FIRE,     85, 15,    0 ;WILL_O_WISP 
+	move EFFECT_BURN_HIT,                0, FIRE,     85, 15,    0 ;WILL_O_WISP 
