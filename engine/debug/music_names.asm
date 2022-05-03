@@ -102,3 +102,4 @@ Debug_MusicNames::
 	db "Battle Legendary@@"
 	db "Battle Tower Int.@"
 	db "PokeCom Center@@@@"
+	db "Diglett's Cave@@@@@"
