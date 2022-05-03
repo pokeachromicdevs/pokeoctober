@@ -108,6 +108,7 @@
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
 	const MUSIC_DIGLETTS_CAVE                ; 67
+	const MUSIC_CERULEAN_CITY                ; 68
 
 NUM_MUSIC_TRACKS EQU const_value
 

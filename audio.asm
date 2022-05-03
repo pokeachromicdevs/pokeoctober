@@ -144,6 +144,7 @@ INCLUDE "data/pokemon/cries_beytah.asm"
 SECTION "New Songs", ROMX
 
 INCLUDE "audio/music/diglettscave.asm"
+INCLUDE "audio/music/ceruleancity.asm"
 
 
 SECTION "Sound Effects", ROMX
