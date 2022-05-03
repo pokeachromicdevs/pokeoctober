@@ -61,7 +61,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-GIT_DESCRIBE := $(shell git describe --always --long)
+GIT_DESCRIBE := $(shell git describe --always --long --dirty='!')
 GIT_VERSION  := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$1}')
 GIT_OFFSET   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$2}')
 GIT_COMMIT   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$3}' | cut -c2-)
