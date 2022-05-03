@@ -334,13 +334,14 @@ InitPokegearTilemap:
 	ld e, 1
 .ok
 	farcall PokegearMap
-	ld a, $07
-	ld bc, SCREEN_WIDTH - 2
-	hlcoord 12, 1
-	call ByteFill
-	hlcoord 1, 2
+
+	hlcoord 0, 2
 	ld [hl], $06
-	hlcoord 19, 2
+	hlcoord 1, 2
+	ld a, $07
+	ld bc, 18
+	call ByteFill
+	hlcoord $13, 2
 	ld [hl], $17
 	ld a, [wPokegearMapCursorLandmark]
 	call PokegearMap_UpdateLandmarkName
@@ -416,7 +417,7 @@ Pokegear_FinishTilemap:
 	jr .PlacePokegearCardIcon
 
 .PlaceRadioIcon:
-	hlcoord 8, 0
+	hlcoord 4, 0
 	ld a, $42
 .PlacePokegearCardIcon:
 	ld [hli], a
@@ -476,19 +477,28 @@ PokegearClock_Joypad:
 	ld a, [hl]
 	and D_LEFT
 	ret z
+
+; check radio first
 	ld a, [wPokegearFlags]
+	bit POKEGEAR_RADIO_CARD_F, a
+	jr z, .no_radio
+	ld c, POKEGEARSTATE_RADIOINIT
+	ld b, POKEGEARCARD_RADIO
+	jr .done
+
+.no_radio
 	bit POKEGEAR_PHONE_CARD_F, a
-	jr z, .no_phone_card
+	jr z, .no_phone
 	ld c, POKEGEARSTATE_PHONEINIT
 	ld b, POKEGEARCARD_PHONE
 	jr .done
 
-.no_phone_card
-	ld a, [wPokegearFlags]
-	bit POKEGEAR_RADIO_CARD_F, a
+.no_phone
+	bit POKEGEAR_MAP_CARD_F, a
 	ret z
-	ld c, POKEGEARSTATE_RADIOINIT
-	ld b, POKEGEARCARD_RADIO
+	ld c, POKEGEARSTATE_MAPCHECKREGION
+	ld b, POKEGEARCARD_MAP
+
 .done
 	call Pokegear_SwitchPage
 	ret
@@ -577,7 +587,7 @@ PokegearMap_ContinueMap:
 	jr nz, .right
 	ld a, [hl]
 	and D_LEFT
-	jr nz, .left
+	ret nz
 	call .DPad
 	ret
 
@@ -592,12 +602,12 @@ PokegearMap_ContinueMap:
 .no_phone
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_RADIO_CARD_F, a
-	ret z
+	jr z, .no_radio
 	ld c, POKEGEARSTATE_RADIOINIT
 	ld b, POKEGEARCARD_RADIO
 	jr .done
 
-.left
+.no_radio
 	ld c, POKEGEARSTATE_CLOCKINIT
 	ld b, POKEGEARCARD_CLOCK
 .done
@@ -758,6 +768,9 @@ PokegearRadio_Joypad:
 	ld a, [hl]
 	and D_LEFT
 	jr nz, .left
+	ld a, [hl]
+	and D_RIGHT
+	jr nz, .right
 	ld a, [wPokegearRadioChannelAddr]
 	ld l, a
 	ld a, [wPokegearRadioChannelAddr + 1]
@@ -774,6 +787,11 @@ PokegearRadio_Joypad:
 	jr z, .no_phone
 	ld c, POKEGEARSTATE_PHONEINIT
 	ld b, POKEGEARCARD_PHONE
+	jr .switch_page
+
+.right
+	ld c, POKEGEARSTATE_CLOCKINIT
+	ld b, POKEGEARCARD_CLOCK
 	jr .switch_page
 
 .no_phone
