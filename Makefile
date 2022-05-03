@@ -1,6 +1,6 @@
-roms := pokeoctober.gbc
+roms := pokeoctober.gbc pokeoctober_debug.gbc
 
-crystal_obj := \
+rom_obj := \
 audio.o \
 home.o \
 main.o \
@@ -15,6 +15,9 @@ engine/overworld/events.o \
 gfx/pics.o \
 gfx/sprites.o \
 lib/mobile/main.o
+
+october_obj       := $(rom_obj:.o=.o)
+october_debug_obj := $(rom_obj:.o=_debug.o)
 
 ### Build tools
 
@@ -41,14 +44,17 @@ IPSPATCH ?= tools/ipspatch
 .PRECIOUS:
 .SECONDARY:
 
-all: pokeoctober.gbc
+all: main
+
+main: pokeoctober.gbc
+debug: pokeoctober_debug.gbc
 
 clean: tidy
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" \) -delete
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
-	rm -f $(roms) $(crystal_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(roms) $(october_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
 	$(MAKE) clean -C tools/
 
 tools:
@@ -60,7 +66,10 @@ GIT_VERSION  := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$1}')
 GIT_OFFSET   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$2}')
 GIT_COMMIT   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$3}' | cut -c2-)
 
-$(crystal_obj): RGBASMFLAGS = -DGIT_VERSION="\"$(GIT_VERSION)"\" -DGIT_OFFSET="\"$(GIT_OFFSET)"\" -DGIT_COMMIT="\"$(GIT_COMMIT)"\"
+RGBASMFLAGS = -DGIT_VERSION="\"$(GIT_VERSION)"\" -DGIT_OFFSET="\"$(GIT_OFFSET)"\" -DGIT_COMMIT="\"$(GIT_COMMIT)"\" 
+
+$(october_obj): RGBASMFLAGS += 
+$(october_debug_obj): RGBASMFLAGS += -D_DEBUG
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -76,19 +85,20 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
-$(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(october_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(october_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
 
 endif
 
 patch: pokeoctober-v.$(GIT_VERSION).ips
 
-pokeoctober-v.$(GIT_VERSION).ips: all baserom.gbc $(IPSPATCH)
+pokeoctober-v.$(GIT_VERSION).ips: pokeoctober.gbc baserom.gbc $(IPSPATCH)
 # check if baserom == crystal 1.1
 	[ $(shell sha1sum -b baserom.gbc | cut -c 1-40) = f2f52230b536214ef7c9924f483392993e226cfb ]
 	$(IPSPATCH) create baserom.gbc pokeoctober.gbc $@
 	
-pokeoctober.gbc: $(crystal_obj) pokeoctober.link
-	$(RGBLINK) -n pokeoctober.sym -m pokeoctober.map -l pokeoctober.link -o $@ $(crystal_obj)
+poke%.gbc: $$(%_obj) pokeoctober.link
+	$(RGBLINK) -n poke$*.sym -m poke$*.map -l pokeoctober.link -o $@ $(filter %.o,$^)
 	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_OCTOBER $@
 	tools/sort_symfile.sh pokeoctober.sym
 

@@ -167,6 +167,7 @@ ROMX $3e
 	"bank3E"
 ROMX $3f
 	"bank3F"
+	"Debug Menu"
 ROMX $40
 	"mobile_40"
 	"tetsuji"
