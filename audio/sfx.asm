@@ -830,7 +830,7 @@ Sfx_DexFanfare80109_Ch8:
 Sfx_Fanfare2:
 	musicheader 3, 5, Sfx_Fanfare2_Ch5
 	musicheader 1, 6, Sfx_Fanfare2_Ch6
-	musicheader 1, 8, Sfx_Fanfare2_Ch8
+	musicheader 1, 7, Sfx_Fanfare2_Ch8
 
 UnusedSfx:
 	musicheader 4, 5, UnusedSfx_Ch5
@@ -912,7 +912,7 @@ UnusedSfx_Ch8:
 Sfx_Fanfare:
 	musicheader 3, 5, Sfx_Fanfare_Ch5
 	musicheader 1, 6, Sfx_Fanfare_Ch6
-	musicheader 1, 8, Sfx_Fanfare_Ch8
+	musicheader 1, 7, Sfx_Fanfare_Ch8
 
 Sfx_RegisterPhoneNumber:
 	musicheader 4, 5, Sfx_RegisterPhoneNumber_Ch5
@@ -4846,22 +4846,20 @@ Sfx_Fanfare2_Ch6:
 
 Sfx_Fanfare2_Ch8:
 	togglesfx
-	notetype $6
-	note C_, 1
-	octave 5
+	notetype $6, $25
+	octave 4
 	note C#, 2
 	note __, 2
 	note C#, 2
 	note __, 2
-	notetype $4
-	note C_, 1
+	notetype $4, $25
 	note C#, 2
 	note __, 2
 	note C#, 2
 	note D#, 2
 	note __, 2
 	note F_, 2
-	note G#, 6
+	note G#, 10
 	endchannel
 
 Sfx_Fanfare_Ch5:
@@ -4932,27 +4930,29 @@ Sfx_Fanfare_Ch6:
 
 Sfx_Fanfare_Ch8:
 	togglesfx
-	notetype $6
-	note C_, 1
-	octave 4
+	notetype $6, $25
+	octave 3
 	note A#, 4
-	note __, 4
+	note F#, 4
 	note B_, 4
-	note __, 4
-	octave 5
+	note G#, 4
+	octave 4
 	note C#, 4
-	note __, 4
+	octave 3
+	note A#, 4
+	octave 4
 	note D#, 4
-	note __, 4
-	notetype $4
-	note C_, 1
+	octave 3
+	note B_, 4
+	notetype $4, $25
+	octave 3
 	note F_, 4
 	note D#, 4
 	note C#, 4
 	note A#, 4
 	note G#, 4
 	note F_, 4
-	note F#, 6
+	note F#, 8
 	endchannel
 
 Sfx_HangUp_Ch5:
