@@ -527,8 +527,8 @@ PokemonPicPointers::
 	dba HoOhBackpic
 	dba CelebiFrontpic
 	dba CelebiBackpic
-	dba MeowsyFrontpic
-	dba MeowsyBackpic
+	dba CoinpurFrontpic
+	dba CoinpurBackpic
 	dba AdbarstorkFrontpic
 	dba AdbarstorkBackpic
 	dba PupperonFrontpic

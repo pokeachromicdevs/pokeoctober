@@ -255,7 +255,7 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
-	dw MeowsyAnimation
+	dw CoinpurAnimation
 	dw AdbarstorkAnimation
 	dw PupperonAnimation
 	dw BipullaAnimation

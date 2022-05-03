@@ -692,8 +692,8 @@ UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 SECTION "Pics 19", ROMX
 
 FurretFrontpic: INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
-MeowsyFrontpic: INCBIN "gfx/pokemon/meowsy/front.animated.2bpp.lz"
-MeowsyBackpic:  INCBIN "gfx/pokemon/meowsy/back.2bpp.lz"
+CoinpurFrontpic: INCBIN "gfx/pokemon/coinpur/front.animated.2bpp.lz"
+CoinpurBackpic:  INCBIN "gfx/pokemon/coinpur/back.2bpp.lz"
 WooperFrontpic: INCBIN "gfx/pokemon/wooper/front.animated.2bpp.lz"
 KatuFrontpic:   INCBIN "gfx/pokemon/katu/front.animated.2bpp.lz"
 KatuBackpic:    INCBIN "gfx/pokemon/katu/back.2bpp.lz"
