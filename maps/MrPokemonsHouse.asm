@@ -30,7 +30,7 @@ MrPokemonsHouse_MapScripts:
 	waitsfx
 	giveitem ELMS_EGG
 	writetext MrPokemonsHouse_GotEggText
-	playsound SFX_FANFARE
+	playsound SFX_FANFARE_2
 	waitsfx
 	itemnotify
 	setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON

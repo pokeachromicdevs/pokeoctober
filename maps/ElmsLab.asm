@@ -380,7 +380,7 @@ ElmAfterTheftScript:
 	waitsfx
 	waitbutton
 	writetext ElmGivesPokedexText
-	playsound SFX_FANFARE_2
+	playsound SFX_FANFARE
 	waitsfx
 	setflag ENGINE_POKEDEX
 	buttonsound
