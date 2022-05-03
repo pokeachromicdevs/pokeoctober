@@ -93,9 +93,15 @@ ENDM
 
 	enum vibrato_cmd ; $e1
 vibrato: MACRO
+if _NARG > 2
+	db vibrato_cmd
+	db \1 ; delay
+	dn \2, \3 ; extent
+else
 	db vibrato_cmd
 	db \1 ; delay
 	db \2 ; extent
+endc
 ENDM
 
 	enum unknownmusic0xe2_cmd ; $e2
