@@ -486,6 +486,7 @@ SECTION "Map Scripts 26", ROMX
 INCLUDE "maps/CherrygroveMart.asm"
 INCLUDE "maps/CherrygrovePokecenter1F.asm"
 INCLUDE "maps/CherrygroveGymSpeechHouse.asm"
+INCLUDE "maps/CherrygroveFisherHouse.asm"
 INCLUDE "maps/GuideGentsHouse.asm"
 INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
 INCLUDE "maps/Route30BerryHouse.asm"

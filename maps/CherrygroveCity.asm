@@ -495,7 +495,7 @@ GuideGentsHouseSignText:
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 8 ; warp events
+	db 9 ; warp events
 	warp_event 23, 21, CHERRYGROVE_MART, 2
 	warp_event 29, 21, CHERRYGROVE_POKECENTER_1F, 1
 	warp_event 23, 15, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
@@ -504,12 +504,13 @@ CherrygroveCity_MapEvents:
 	warp_event 26,  5, CHERRYGROVE_GYM, 1
 	warp_event 37, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
 	warp_event 37, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
+	warp_event 25, 27, CHERRYGROVE_FISHER_HOUSE, 1
 
 	db 0 ; coord events
 
 	db 4 ; bg events
-	bg_event 30, 26, BGEVENT_READ, CherrygroveCitySign
-	bg_event 23, 27, BGEVENT_READ, GuideGentsHouseSign
+	bg_event 33, 27, BGEVENT_READ, CherrygroveCitySign
+	bg_event 37, 15, BGEVENT_READ, GuideGentsHouseSign
 	bg_event 24, 21, BGEVENT_READ, CherrygroveCityMartSign
 	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 

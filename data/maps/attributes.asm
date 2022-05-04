@@ -700,6 +700,7 @@ ENDM
 	map_attributes CherrygroveMart, CHERRYGROVE_MART, $00, 0
 	map_attributes CherrygrovePokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0
 	map_attributes CherrygroveGymSpeechHouse, CHERRYGROVE_GYM_SPEECH_HOUSE, $00, 0
+	map_attributes CherrygroveFisherHouse, CHERRYGROVE_FISHER_HOUSE, $00, 0
 	map_attributes GuideGentsHouse, GUIDE_GENTS_HOUSE, $00, 0
 	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0

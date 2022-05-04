@@ -186,6 +186,7 @@ Route27SandstormHouse_Blocks:
 MrPsychicsHouse_Blocks:
 Route5CleanseTagHouse_Blocks:
 CherrygroveGymSpeechHouse_Blocks:
+CherrygroveFisherHouse_Blocks:
 GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
