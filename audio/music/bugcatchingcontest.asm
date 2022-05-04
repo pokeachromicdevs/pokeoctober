@@ -11,7 +11,6 @@ Music_BugCatchingContest_Ch1:
 	vibrato $8, $24
 	dutycycle $2
 	notetype $c, $b7
-	note __, 8
 	octave 4
 	note C#, 1
 	note __, 1
@@ -192,7 +191,6 @@ Music_BugCatchingContest_Ch2:
 	vibrato $8, $23
 	dutycycle $1
 	notetype $c, $c7
-	note __, 8
 Music_BugCatchingContest_branch_f7cff:
 	octave 4
 	note A_, 1
@@ -203,7 +201,7 @@ Music_BugCatchingContest_branch_f7cff:
 	note A_, 1
 	loopchannel 4, Music_BugCatchingContest_branch_f7cff
 Music_BugCatchingContest_branch_f7d0a:
-	dutycycle $0
+	dutycycle $3
 	callchannel Music_BugCatchingContest_branch_f7d8e
 	octave 2
 	note E_, 2
@@ -373,8 +371,7 @@ Music_BugCatchingContest_branch_f7d8e:
 Music_BugCatchingContest_Ch3:
 	stereopanning $ff
 	vibrato $10, $23
-	notetype $c, $14
-	note __, 8
+	notetype $c, $16
 	octave 3
 	note A_, 1
 	note __, 1
@@ -502,61 +499,38 @@ Music_BugCatchingContest_branch_f7dda:
 	note A_, 1
 	octave 6
 	note C_, 8
+	intensity $16
 	octave 3
-	note G_, 2
-	note __, 2
-	note B_, 2
-	note __, 2
-	note D_, 2
-	note __, 2
-	note B_, 2
-	note __, 2
-	note E_, 2
-	note __, 2
-	note B_, 2
-	note __, 2
-	note G_, 2
-	note __, 2
-	note B_, 2
-	note __, 2
-	note D_, 2
-	note __, 2
-	note F#, 2
-	note __, 2
+	note G_, 4
+	note B_, 4
+	note D_, 4
+	note B_, 4
+	note E_, 4
+	note B_, 4
+	note G_, 4
+	note B_, 4
+	note D_, 4
+	note F#, 4
 	octave 2
-	note A_, 2
-	note __, 2
+	note A_, 4
 	octave 3
-	note F#, 2
-	note __, 2
-	note D#, 2
-	note __, 2
+	note F#, 4
+	note D#, 4
 	octave 4
-	note C_, 2
-	note __, 2
+	note C_, 4
 	octave 3
-	note A_, 2
-	note __, 2
+	note A_, 4
 	octave 4
-	note C_, 2
-	note __, 2
+	note C_, 4
 	octave 3
-	note G_, 2
-	note __, 2
-	note B_, 2
-	note __, 2
-	note D_, 2
-	note __, 2
-	note B_, 2
-	note __, 2
-	note G#, 2
-	note __, 2
-	note B_, 2
-	note __, 2
-	note E_, 2
-	note __, 2
-	note B_, 2
-	note __, 2
+	note G_, 4
+	note B_, 4
+	note D_, 4
+	note B_, 4
+	note G#, 4
+	note B_, 4
+	note E_, 4
+	note B_, 4
 	note A_, 2
 	note __, 2
 	note A_, 6
@@ -587,20 +561,6 @@ Music_BugCatchingContest_branch_f7dda:
 Music_BugCatchingContest_Ch4:
 	togglenoise $4
 	notetype $6
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note E_, 2
-	note E_, 2
 	callchannel Music_BugCatchingContest_branch_f7ee2
 Music_BugCatchingContest_branch_f7eaf:
 	note D_, 4
