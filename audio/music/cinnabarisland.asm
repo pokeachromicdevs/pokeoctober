@@ -27,8 +27,9 @@ Music_CinnabarIsland_Ch1:
 	stereo_panning TRUE, FALSE
 	sound_call .pattern5b
 	sound_call .pattern0b
-	sound_call .pattern6b
-	sound_call .pattern7b
+	stereo_panning TRUE, TRUE
+	sound_call .pattern5a
+	sound_call .pattern0a
 	sound_loop 0, .loop
 
 .pattern1
@@ -93,13 +94,136 @@ Music_CinnabarIsland_Ch1:
 	note F#, 4
 	note G_, 16
 	note F#, 4
-	note E_, 8
+	note E_, 12
+	sound_ret
+
+.pattern0a
+	octave 1
+	note G_, 4
+	rest 4
+	note G_, 4
+	octave 2
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	rest 2
+	note D_, 4
+	note F#, 4
+	note D_, 4
+	octave 1
+	note G_, 4
+	rest 4
+	note G_, 4
+	rest 4
+	note D_, 4
+	note A_, 4
+	note F#, 4
+	note C_, 4
+	sound_ret
+
+.pattern5a
+	duty_cycle 2
+	note_type 12, 10, 3
+	octave 1
+	note G_, 4
+	rest 4
+	note G_, 4
+	note B_, 2
+	note B_, 2
+	note B_, 2
+	rest 2
+	note B_, 4
+	octave 2
+	note C_, 4
+	octave 1
+	note B_, 4
+	note G_, 4
+	rest 4
+	note G_, 4
+	octave 2
+	note C_, 2
+	note C_, 2
+	note C_, 2
+	rest 2
+	note C_, 4
+	note E_, 4
+	note C_, 4
+	sound_ret
+
+
+Music_CinnabarIsland_Ch2:
+	vibrato 18, 3, 4
+	note_type 12, 15, 0
+.loop
+	stereo_panning FALSE, TRUE
+	sound_call .pattern1
+	sound_call .pattern2
+	sound_call .pattern3
+	sound_call .pattern4
+	stereo_panning FALSE, TRUE
+	sound_call .pattern5a
+	sound_call .pattern0a
+	sound_call .pattern6b
+	sound_call .pattern7b
+	sound_loop 0, .loop
+
+.pattern0a
+	octave 1
+	note G_, 4
+	rest 4
+	note G_, 4
+	octave 2
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	rest 2
+	note D_, 4
+	note F#, 4
+	note D_, 4
+	octave 1
+	note G_, 4
+	rest 4
+	note G_, 4
+	rest 4
+	note D_, 4
+	note A_, 4
+	note F#, 4
+	duty_cycle 3
 	stereo_panning TRUE, FALSE
 	note_type 12, 12, 2
 	octave 4
 	note B_, 2
 	octave 5
 	note C_, 2
+	sound_ret
+
+.pattern5a
+	duty_cycle 2
+	note_type 12, 10, 3
+	octave 1
+	note G_, 4
+	rest 4
+	note G_, 4
+	note B_, 2
+	note B_, 2
+	note B_, 2
+	rest 2
+	note B_, 4
+	octave 2
+	note C_, 4
+	octave 1
+	note B_, 4
+	note G_, 4
+	rest 4
+	note G_, 4
+	octave 2
+	note C_, 2
+	note C_, 2
+	note C_, 2
+	rest 2
+	note C_, 4
+	note E_, 4
+	note C_, 4
 	sound_ret
 
 .pattern6b
@@ -144,78 +268,6 @@ Music_CinnabarIsland_Ch1:
 	octave 3
 	note E_, 4
 	note F#, 4
-	sound_ret
-
-
-Music_CinnabarIsland_Ch2:
-	vibrato 18, 3, 4
-	note_type 12, 15, 0
-.loop
-	stereo_panning FALSE, TRUE
-	sound_call .pattern1
-	sound_call .pattern2
-	sound_call .pattern3
-	sound_call .pattern4
-	stereo_panning FALSE, TRUE
-	sound_call .pattern5a
-	sound_call .pattern0a
-	stereo_panning TRUE, TRUE
-	sound_call .pattern5a
-	sound_call .pattern0a
-	sound_loop 0, .loop
-
-.pattern0a
-	octave 1
-	note G_, 4
-	rest 4
-	note G_, 4
-	octave 2
-	note D_, 2
-	note D_, 2
-	note D_, 2
-	rest 2
-	note D_, 4
-	note F#, 4
-	note D_, 4
-	octave 1
-	note G_, 4
-	rest 4
-	note G_, 4
-	rest 4
-	note D_, 4
-	note A_, 4
-	note F#, 4
-	octave 2
-	note C_, 4
-	sound_ret
-
-.pattern5a
-	duty_cycle 2
-	note_type 12, 10, 3
-	octave 1
-	note G_, 4
-	rest 4
-	note G_, 4
-	note B_, 2
-	note B_, 2
-	note B_, 2
-	rest 2
-	note B_, 4
-	octave 2
-	note C_, 4
-	octave 1
-	note B_, 4
-	note G_, 4
-	rest 4
-	note G_, 4
-	octave 2
-	note C_, 2
-	note C_, 2
-	note C_, 2
-	rest 2
-	note C_, 4
-	note E_, 4
-	note C_, 4
 	sound_ret
 
 .pattern1
@@ -324,7 +376,6 @@ Music_CinnabarIsland_Ch3:
 	sound_loop 0, .loop
 
 .pattern0
-	note_type 12, 1, 0
 	octave 5
 	note A_, 12
 	note F#, 4
@@ -343,7 +394,7 @@ Music_CinnabarIsland_Ch3:
 	sound_ret
 
 .pattern1
-	note_type 12, 1, 6
+	note_type 12, 2, 5
 	octave 3
 	note D_, 8
 	octave 2
@@ -443,7 +494,7 @@ Music_CinnabarIsland_Ch3:
 	sound_ret
 
 .pattern5
-	note_type 12, 1, 1
+	note_type 12, 1, 4
 	octave 5
 	note D_, 12
 	octave 4
@@ -457,7 +508,7 @@ Music_CinnabarIsland_Ch3:
 	sound_ret
 
 .pattern6
-	note_type 12, 2, 5
+	note_type 12, 2, 6
 	octave 4
 	note D_, 4
 	rest 4
@@ -492,7 +543,7 @@ Music_CinnabarIsland_Ch3:
 	sound_ret
 
 .pattern7
-	note_type 12, 2, 5
+	note_type 12, 2, 6
 	octave 4
 	note D_, 4
 	rest 2
