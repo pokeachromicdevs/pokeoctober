@@ -103,4 +103,6 @@ Debug_MusicNames::
 	db "Battle Tower Int.@"
 	db "PokeCom Center@@@@"
 	db "Diglett's Cave@@@@@"
-	db "Cerulean City@@@@@@"
+	db "Cerulean City@@@@@"
+	db "Cinnabar Island@@@"
+

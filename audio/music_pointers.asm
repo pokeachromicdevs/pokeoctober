@@ -108,3 +108,4 @@ Music:
 	dba Music_MobileCenter
 	dba Music_DiglettsCaveRBY
 	dba Music_CeruleanCity
+	dba Music_CinnabarIsland

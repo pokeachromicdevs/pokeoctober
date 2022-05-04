@@ -145,6 +145,7 @@ SECTION "New Songs", ROMX
 
 INCLUDE "audio/music/diglettscave.asm"
 INCLUDE "audio/music/ceruleancity.asm"
+INCLUDE "audio/music/cinnabarisland.asm"
 
 
 SECTION "Sound Effects", ROMX
