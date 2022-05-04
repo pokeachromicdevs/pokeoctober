@@ -376,6 +376,8 @@ Debug_Warp:
 	ld hl, .SpawnTable
 	add hl, bc
 	ld a, [hl]
+	cp -1
+	ret z
 	ld [wDefaultSpawnpoint], a
 	farcall FlyFunction.DoFly
 	ld a, HMENURETURN_SCRIPT
@@ -385,6 +387,7 @@ Debug_Warp:
 .LocNames:
 	db "HOME@@@@@@@@@"
 	db "DEBUG@@@@@@@@"
+	db " -- JOHTO --@"
 	db "SILENT@@@@@@@"
 	db "CG WOODS@@@@@"
 	db "CHERRYGROVE@@"
@@ -400,10 +403,24 @@ Debug_Warp:
 	db "LAKE BIWAKO@@"
 	db "BLACKTHORN@@@"
 	db "MOUNT FUJI@@@"
+	db " -- KANTO --@"
+	db "PALLET@@@@@@@"
+	db "VIRIDIAN@@@@@"
+	db "PEWTER@@@@@@@"
+	db "CERULEAN@@@@@"
+	db "ROCK TUNNEL@@"
+	db "VERMILION@@@@"
+	db "LAVENDER@@@@@"
+	db "SAFFRON@@@@@@"
+	db "CELADON@@@@@@"
+	db "FUCHSIA@@@@@@"
+	db "CINNABAR@@@@@"
+	db "INDIGO@@@@@@@"
 
 .SpawnTable:
 	db SPAWN_HOME
 	db SPAWN_DEBUG
+	db -1
 	db SPAWN_NEW_BARK
 	db SPAWN_CHERRYGROVE_WOODS
 	db SPAWN_CHERRYGROVE
@@ -419,6 +436,19 @@ Debug_Warp:
 	db SPAWN_LAKE_OF_RAGE
 	db SPAWN_BLACKTHORN
 	db SPAWN_MT_SILVER
+	db -1
+	db SPAWN_PALLET
+	db SPAWN_VIRIDIAN
+	db SPAWN_PEWTER
+	db SPAWN_CERULEAN
+	db SPAWN_ROCK_TUNNEL
+	db SPAWN_VERMILION
+	db SPAWN_LAVENDER
+	db SPAWN_SAFFRON
+	db SPAWN_CELADON
+	db SPAWN_FUCHSIA
+	db SPAWN_CINNABAR
+	db SPAWN_INDIGO
 .SpawnTableEnd:
 
 NUM_DEBUG_SPAWNS EQU Debug_Warp.SpawnTableEnd - Debug_Warp.SpawnTable
