@@ -1514,42 +1514,36 @@ _OakText1::
 _OakText2::
 	text "Before we go any"
 	line "further, I'd like"
-	cont "to tell you a few"
-	cont "things that you"
-	
+	para "to tell you a few"
+	line "things that you"
 	para "should know about"
 	line "this world."
-	
+
 	para "This world is in-"
 	line "habited by"
-	cont "creatures known"
-	
-	para "as #MON."
+	para "creatures known"
+	line "as #MON."
 	text_end
 
 _OakText3::
 	text_waitbutton
 	text_end
 
-	text_end ; unused
-
 _OakText4::
 	text "We humans live"
-	line "alongside"
+	line "alongside #MON"
+	cont "as friends."
 
-	para "#MON as"
-	line "friends. At times"
+	para "At times we play"
+	line "together,"
+	para "and other times we"
+	line "work together."
 
-	para "we play together,"
-	line "and other times we"
-	cont "work together."
-	
 	para "Some people use"
 	line "their #MON to"
-	cont "battle and develop"
-	
-	para "closer bonds with"
-	line "them."
+	para "battle and develop"
+	line "closer bonds with"
+	cont "them."
 	prompt
 
 _OakText5::
@@ -1578,8 +1572,8 @@ _OakText6a::
 _OakText6b::
 	text "This boy has been"
 	line "friends with you"
-	cont "since childhood,"
-	cont "is that right?"
+	para "since childhood,"
+	line "is that right?"
 
 	para "…Erm, what was"
 	line "his name again?"
@@ -1593,35 +1587,34 @@ _OakText6c::
 
 _OakText7a::
 	text "<PLAYER>!"
-	
-	para "Before you start"
-	line "your journey,"
 
-	para "you take note of"
-	line "when you began."
-	
+	para "Before you start"
+	line "your journey, you"
+
+	para "should take note"
+	line "of when you began."
+
 	prompt
 _OakText7::
 	text "<PLAYER>! Are you"
 	line "ready?"
-	
+
 	para "Your very own"
 	line "tale of grand"
-	cont "adventure is" 
-	
-	para "about to unfold."
-	
+	para "adventure is"
+	line "about to unfold."
+
 	para "Fun experiences,"
-	line "difficult experi-"
-	cont "ences, there's so"
-	
+
+	para "difficult experi-"
+	line "ences, there's so"
 	para "much waiting for"
-	line "you!" 
-	
+	line "you!"
+
 	para "Dreams! Adventure!"
-	
+
 	para "Let's go to the"
 	line "world of #MON!"
-	
+
 	para "I'll see you later!"
 	done

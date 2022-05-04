@@ -221,30 +221,28 @@ ElmsLookingForYouText:
 
 	para "I know it'll be an"
 	line "exciting adventure"
-	cont "for you, but"
+	para "for you, but"
+	line "please don't forget"
+	para "about your own"
+	line "mother."
 
-	para "please don't forget"
-	line "about your own"
-	cont "mother."
+	para "Oh! I nearly"
+	line "forgot!"
 
-	para "Oh! I nearly for-"
-	line "got! Your #GEAR"
-	cont "just returned from"
-	
-	para "the repair shop"
-	line "this morning!"
+	para "Your #GEAR just"
+	line "returned from the"
+	para "repair shop this"
+	line "morning!"
 	done
 
 MomGivesPokegearText:
-	text "What a perfect"
-	line "day for your #-"
-	cont "GEAR to be re-"
-	
-	para "paired! Oh, by"
-	line "the way, is DAY-"
-	cont "LIGHT SAVINGS TIME"
-	
-	para "on right now?"
+	text "What a perfect day"
+	line "for your #GEAR"
+	cont "to be repaired!"
+
+	para "Oh, by the way, is"
+	line "DAYLIGHT SAVINGS"
+	cont "TIME on right now?"
 	done
 
 IsItDSTText:
@@ -255,17 +253,16 @@ IsItDSTText:
 ComeHomeForDSTText:
 	text "Either way, if"
 	line "DAYLIGHT SAVINGS"
-	cont "TIME does change,"
+	para "TIME does change,"
+	line "please come back"
+	para "home and remind me"
+	line "to change the"
+	cont "clocks."
 
-	para "please come back"
-	line "home and remind me"
-	cont "to change the"
-	
-	para "clocks."
-
-	para "Now, you do remem-"
-	line "ber how to use the"
-	cont "phone, right?"
+	para "Now, you do"
+	line "remember how to"
+	para "use the phone,"
+	line "right?"
 	done
 
 KnowTheInstructionsText:
@@ -281,11 +278,11 @@ DontKnowTheInstructionsText:
 	para "Turn on the #-"
 	line "GEAR and select"
 	cont "the PHONE icon."
-	
+
 	para "Then choose what-"
 	line "ever stored name"
 	cont "you wish to call!"
-	
+
 	para "Gee, isn't that"
 	line "convenient?"
 	done
@@ -294,12 +291,12 @@ InstructionsNextText:
 	text "Anyways, I should"
 	line "let you go off on"
 	cont "your adventure."
-	
+
 	para "Have fun, and stay"
 	line "safe!"
 	done
 
-HurryUpElmIsWaitingText: 
+HurryUpElmIsWaitingText:
 	text "PROF.ELM is wait-"
 	line "ing for you."
 
