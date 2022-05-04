@@ -19,6 +19,10 @@ Flypoints:
 	flypoint LAKE_OF_RAGE, LAKE_OF_RAGE
 	flypoint BLACKTHORN,   BLACKTHORN_CITY
 	flypoint MT_SILVER,    SILVER_CAVE
+; kansai
+	flypoint CHERRYGROVE_WOODS, CHERRYGROVE_WOODS
+	;flypoint CHERRYGROVE_SHRINE, CHERRYGROVE_SHRINE ; no landmark yet
+	flypoint ALDER, ALDER_TOWN
 
 ; Kanto
 KANTO_FLYPOINT EQU const_value

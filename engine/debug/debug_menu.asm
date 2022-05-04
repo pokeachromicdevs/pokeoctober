@@ -382,10 +382,45 @@ Debug_Warp:
 	ldh [hMenuReturn], a
 	ret
 
-.SpawnTable
+.LocNames:
+	db "HOME@@@@@@@@@"
+	db "DEBUG@@@@@@@@"
+	db "SILENT@@@@@@@"
+	db "CG WOODS@@@@@"
+	db "CHERRYGROVE@@"
+	db "CG SHRINE@@@@"
+	db "VIOLET@@@@@@@"
+	db "ROUTE 32@@@@@"
+	db "ALDER@@@@@@@@"
+	db "AZALEA@@@@@@@"
+	db "GOLDENROD@@@@"
+	db "ECRUTEAK@@@@@"
+	db "OLIVINE@@@@@@"
+	db "MAHOGANY@@@@@"
+	db "LAKE BIWAKO@@"
+	db "BLACKTHORN@@@"
+	db "MOUNT FUJI@@@"
+
+.SpawnTable:
 	db SPAWN_HOME
 	db SPAWN_DEBUG
-.SpawnTableEnd
+	db SPAWN_NEW_BARK
+	db SPAWN_CHERRYGROVE_WOODS
+	db SPAWN_CHERRYGROVE
+	db SPAWN_CHERRYGROVE_SHRINE
+	db SPAWN_VIOLET
+	db SPAWN_ROUTE_32
+	db SPAWN_ALDER
+	db SPAWN_AZALEA
+	db SPAWN_GOLDENROD
+	db SPAWN_ECRUTEAK
+	db SPAWN_OLIVINE
+	db SPAWN_MAHOGANY
+	db SPAWN_LAKE_OF_RAGE
+	db SPAWN_BLACKTHORN
+	db SPAWN_MT_SILVER
+.SpawnTableEnd:
+
 NUM_DEBUG_SPAWNS EQU Debug_Warp.SpawnTableEnd - Debug_Warp.SpawnTable
 
 .MenuHeader:
@@ -424,29 +459,6 @@ endr
 	call PlaceString
 	ret
 
-.LocNames:
-	db "HOME@@@@@@@@@"
-	db "DEBUG@@@@@@@@"
-	db "02@@@@@"
-	db "03@@@@@@"
-	db "04@@@@@"
-	db "05@@@@@"
-	db "06@@@@@@@@@@@@"
-	db "07@@@@@@@@@@@@"
-	db "08@@@@@@@@@@@@"
-	db "09@@@@@@@@@@@@"
-	db "10@@@@@@@@@@@"
-	db "11@@@@@@@@@@@"
-	db "12@@@@@@@@@@@"
-	db "13@@@@@@@@@@@"
-	db "14@@@@@@@@@@@"
-	db "15@@@@@@@@@@@"
-	db "16@@@@@@@@@@@"
-	db "17@@@@@@@@@@@"
-	db "18@@@@@@@@@@@"
-	db "19@@@@@@@@@@@"
-	db "20@@@@@@@@@@@"
-	db "21@@@@@@@@@@@"
 
 Debug_ColorPicker:
 	ldh a, [hMapAnims]

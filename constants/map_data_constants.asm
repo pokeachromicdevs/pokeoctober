@@ -86,7 +86,7 @@ const_value = -1
 	const SPAWN_NEW_BARK
 	const SPAWN_CHERRYGROVE
 	const SPAWN_VIOLET
-	const SPAWN_UNION_CAVE
+	const SPAWN_ROUTE_32
 	const SPAWN_AZALEA
 	const SPAWN_CIANWOOD
 	const SPAWN_GOLDENROD
@@ -97,6 +97,11 @@ const_value = -1
 	const SPAWN_BLACKTHORN
 	const SPAWN_MT_SILVER
 	const SPAWN_FAST_SHIP
+; kansai
+	const SPAWN_CHERRYGROVE_WOODS
+	const SPAWN_CHERRYGROVE_SHRINE
+	const SPAWN_ALDER
+
 NUM_SPAWNS EQU const_value
 
 MAX_OUTDOOR_SPRITES EQU 23 ; see engine/overworld/overworld.asm
