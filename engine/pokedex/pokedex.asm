@@ -640,27 +640,27 @@ Pokedex_UpdateOptionScreen:
 	ret
 
 .NoUnownModeArrowCursorData:
-	db D_UP | D_DOWN, 5
-	dwcoord 2,  3 ; NEW
-	dwcoord 2,  4 ; OLD
-	dwcoord 2,  5 ; ABC
-	dwcoord 2,  6 ; HABITAT
-	dwcoord 2,  7 ; COLOR
+	db D_UP | D_DOWN, 1
+	;dwcoord 2,  3 ; NEW
+	;dwcoord 2,  4 ; OLD
+	;dwcoord 2,  5 ; ABC
+	;dwcoord 2,  6 ; HABITAT
+	dwcoord 2,  3 ; COLOR
 
 .ArrowCursorData:
-	db D_UP | D_DOWN, 6
-	dwcoord 2,  3 ; NEW
-	dwcoord 2,  4 ; OLD
-	dwcoord 2,  5 ; ABC
-	dwcoord 2,  6 ; HABITAT
-	dwcoord 2,  7 ; COLOR
-	dwcoord 2,  8 ; UNOWN
+	db D_UP | D_DOWN, 2
+	;dwcoord 2,  3 ; NEW
+	;dwcoord 2,  4 ; OLD
+	;dwcoord 2,  5 ; ABC
+	;dwcoord 2,  6 ; HABITAT
+	dwcoord 2,  3 ; COLOR
+	dwcoord 2,  4 ; UNOWN
 
 .MenuActionJumptable:
-	dw .MenuAction_NewMode
-	dw .MenuAction_OldMode
-	dw .MenuAction_ABCMode
-	dw .MenuAction_HabitatMode
+	;dw .MenuAction_NewMode
+	;dw .MenuAction_OldMode
+	;dw .MenuAction_ABCMode
+	;dw .MenuAction_HabitatMode
 	dw .MenuAction_ColorOption
 	dw .MenuAction_UnownMode
 
@@ -1358,25 +1358,25 @@ Pokedex_DrawOptionScreenBG:
 	hlcoord 0, 1
 	ld de, .Title
 	call Pokedex_PlaceString
+;	hlcoord 3, 3
+;	ld de, .NewMode
+;	call PlaceString
+;	hlcoord 3, 4
+;	ld de, .OldMode
+;	call PlaceString
+;	hlcoord 3, 5
+;	ld de, .AtoZMode
+;	call PlaceString
+;	hlcoord 3, 6
+;	ld de, .HabitatMode
+;	call PlaceString
 	hlcoord 3, 3
-	ld de, .NewMode
-	call PlaceString
-	hlcoord 3, 4
-	ld de, .OldMode
-	call PlaceString
-	hlcoord 3, 5
-	ld de, .AtoZMode
-	call PlaceString
-	hlcoord 3, 6
-	ld de, .HabitatMode
-	call PlaceString
-	hlcoord 3, 7
 	ld de, .Color
 	call PlaceString
 	ld a, [wUnlockedUnownMode]
 	and a
 	ret z
-	hlcoord 3, 8
+	hlcoord 3, 4
 	ld de, .UnownMode
 	call PlaceString
 	ret
@@ -2216,10 +2216,10 @@ Pokedex_DisplayModeDescription:
 	ret
 
 .Modes:
-	dw .NewMode
-	dw .OldMode
-	dw .ABCMode
-	dw .HabitatMode
+;	dw .NewMode
+;	dw .OldMode
+;	dw .ABCMode
+;	dw .HabitatMode
 	dw .Color
 	dw .UnownMode
 
