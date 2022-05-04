@@ -110,6 +110,7 @@
 	const MUSIC_DIGLETTS_CAVE                ; 67
 	const MUSIC_CERULEAN_CITY                ; 68
 	const MUSIC_CINNABAR_ISLAND              ; 69
+	const MUSIC_ROUTE_24                     ; 6a
 
 NUM_MUSIC_TRACKS EQU const_value
 

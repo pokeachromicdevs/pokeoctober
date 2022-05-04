@@ -105,4 +105,5 @@ Debug_MusicNames::
 	db "Diglett's Cave@@@@@"
 	db "Cerulean City@@@@@"
 	db "Cinnabar Island@@@"
+	db "Routes 24, 25@@@@@"
 

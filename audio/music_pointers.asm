@@ -109,3 +109,4 @@ Music:
 	dba Music_DiglettsCaveRBY
 	dba Music_CeruleanCity
 	dba Music_CinnabarIsland
+	dba Music_Route24
