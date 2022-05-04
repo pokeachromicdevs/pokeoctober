@@ -255,8 +255,6 @@ INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
-INCLUDE "data/pokemon/base_stats.asm"
-INCLUDE "data/pokemon/names.asm"
 
 UnknownEggPic::
 ; Another egg pic. This is shifted up a few pixels.
@@ -541,12 +539,6 @@ SECTION "Title", ROMX
 INCLUDE "engine/movie/title.asm"
 
 
-INCLUDE "mobile/mobile_45.asm"
-
-
-INCLUDE "mobile/mobile_46.asm"
-
-
 SECTION "Battle Tower", ROMX
 
 INCLUDE "engine/events/battle_tower/trainer_text.asm"
@@ -558,11 +550,6 @@ INCLUDE "mobile/mobile_5b.asm"
 INCLUDE "engine/link/link_trade.asm"
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/battle/link_result.asm"
-
-
-SECTION "Mobile 5C", ROMX
-
-INCLUDE "mobile/mobile_5c.asm"
 
 
 SECTION "Crystal Phone Text 2", ROMX
@@ -587,16 +574,6 @@ INCLUDE "data/phone/text/gina_caller.asm"
 SECTION "UpdateBattleHUDs", ROMX
 
 INCLUDE "engine/battle/update_battle_huds.asm"
-
-
-SECTION "Mobile 5E", ROMX
-
-INCLUDE "mobile/mobile_5e.asm"
-
-
-SECTION "Mobile 5F", ROMX
-
-INCLUDE "mobile/mobile_5f.asm"
 
 
 SECTION "Phone Text 2", ROMX
@@ -705,7 +682,8 @@ INCLUDE "engine/events/odd_egg.asm"
 
 SECTION "Mobile Stadium 2", ROMX
 
-INCBIN "mobile/stadium/stadium2.bin"
+INCLUDE "data/pokemon/base_stats.asm"
+INCLUDE "data/pokemon/names.asm"
 
 SECTION "16-bit ID stuff", ROMX
 
@@ -713,7 +691,6 @@ INCLUDE "engine/16/table_functions.asm"
 
 ; own section
 INCLUDE "data/trainers/parties.asm"
-
 
 SECTION "Debug Menu", ROMX
 if DEF(_DEBUG)

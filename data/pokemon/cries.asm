@@ -214,6 +214,7 @@ PokemonCries::
 	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET
 	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; BIPULLA (use until base cries are added)
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
+	mon_cry CRY_GIRAFARIG,   $3fc,  $210 ; TOPSYSPOT
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
 	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
 	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; SHUCKLE

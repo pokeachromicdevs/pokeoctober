@@ -431,6 +431,8 @@ PokemonPicPointers::
 	dba BipullaBackpic
 	dba GirafarigFrontpic
 	dba GirafarigBackpic
+	dba TopsyspotFrontic
+	dba TopsyspotBackpic
 	dba PinecoFrontpic
 	dba PinecoBackpic
 	dba ForretressFrontpic

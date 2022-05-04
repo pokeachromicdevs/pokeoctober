@@ -208,6 +208,7 @@ AnimationIdlePointers:
 	dw WobbuffetAnimationIdle
 	dw BipullaAnimationIdle
 	dw GirafarigAnimationIdle
+	dw TopsyspotAnimationIdle
 	dw PinecoAnimationIdle
 	dw ForretressAnimationIdle
 	dw ShuckleAnimationIdle
