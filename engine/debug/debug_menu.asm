@@ -96,22 +96,22 @@ DebugMenu::
 	db "SUBGAME (SOON)@"
 	db "WARP!@"
 	db "COLOR@"
-	db "FILL DEX (SOON)@"
+	db "FILL DEX@"
 	db "TEACH MOVE@"
 	db "GIVE #@"
 	db "MAX ¥@"
 	db "WARP ANY@"
 	db "PC@"
 	db "FILL BAG@"
-	db "FILL TM/HM (SOON)@"
+	db "FILL TM/HM@"
 	db "PLAY CRY@"
 	db "TRAINERS@"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 11
-	db 0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13
+	db 13
+	db 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 	db -1
 
 .Jumptable
@@ -459,7 +459,6 @@ endr
 	call PlaceString
 	ret
 
-
 Debug_ColorPicker:
 	ldh a, [hMapAnims]
 	push af
@@ -474,7 +473,6 @@ Debug_ColorPicker:
 INCLUDE "engine/debug/color_picker.asm"
 
 Debug_FillDex:
-	ret ; TODO
 ; give pokedex
 	ld de, ENGINE_POKEDEX
 	ld b, SET_FLAG
@@ -483,8 +481,17 @@ Debug_FillDex:
 	ld hl, 0
 .loop
 	inc hl
+	ld a, h
+	cp HIGH(NUM_POKEMON)
+	jr nz, .setflag
+	ld a, l
+	cp LOW(NUM_POKEMON)
+	ret z
+.setflag
+	push hl
 	call GetPokemonIDFromIndex
 	call SetSeenAndCaughtMon
+	pop hl
 	jr .loop
 
 Debug_TeachMove:
@@ -1133,21 +1140,19 @@ Debug_FillBag:
 	ret
 
 Debug_FillTMHM:
-	ret ; TODO
-	ld hl, wTMsHMs
 	ld e, NUM_TMS + NUM_HMS
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wTMsHMs)
-	ldh [rSVBK], a
-	ld a, 99
-.loop
-	ld [hli], a
+	ld d, 0
+.fill_loop
+	push de
+		call .give_tm
+	pop de
 	dec e
-	jr nz, .loop
-	pop af
-	ldh [rSVBK], a
-	ret
+	jr z, .give_tm
+	jr .fill_loop
+.give_tm
+	ld b, SET_FLAG
+	ld hl, wTMsHMs
+	jp FlagAction
 
 Debug_PlayCry:
 	ld de, MUSIC_NONE
