@@ -290,6 +290,10 @@ InitializeMagikarpHouse:
 	db "RALPH@"
 
 InitializeNPCNames:
+	ld hl, .Player
+	ld de, wPlayerName
+	call .Copy
+
 	ld hl, .Rival
 	ld de, wRivalName
 	call .Copy
@@ -314,6 +318,7 @@ InitializeNPCNames:
 .Red:    db "RED@"
 .Green:  db "GREEN@"
 .Mom:    db "MOM@"
+.Player: db "GABE@"
 
 InitializeWorld:
 	call ShrinkPlayer
@@ -649,12 +654,19 @@ Continue_DisplayGameTime:
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	jp PrintNum
 
+DefaultPlayerName:
+	db "GABE@@@@"
+
 OakSpeech:
 	call RotateThreePalettesRight
 	call ClearTileMap
 
 	ld de, MUSIC_ROUTE_30
 	call PlayMusic
+
+IF DEF(_DEBUG)
+	jp .skip_intro
+ENDC
 
 	;call RotateFourPalettesRight
 	;call RotateThreePalettesRight
@@ -760,6 +772,7 @@ OakSpeech:
 	call PrintText
 	farcall InitClock	; set time
 
+.skip_intro
 ; flash in the player pic again
 	call RotateThreePalettesRight	; fade out
 	call ClearTileMap
@@ -770,6 +783,11 @@ OakSpeech:
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetSGBLayout
 	call Intro_RotatePalettesLeftFrontpic	; fade in
+
+IF DEF(_DEBUG)
+	ret
+ENDC
+
 ; player! are you ready?
 	ld hl, OakText7
 	call PrintText
