@@ -10,7 +10,7 @@ Music_RivalBattle:
 	;musicheader 1, 4, Music_RivalBattle_Ch4
 
 Music_RivalBattle_Ch1:
-	tempo 116
+	tempo 110
 	volume $77
 	dutycycle $3
 	tone $0002
@@ -367,7 +367,7 @@ Music_RivalBattle_Ch2_branch_2:
 	endchannel
 
 Music_RivalBattle_Ch3:
-	notetype $c, $14
+	notetype $c, $19
 	octave 2
 	note A_, 1
 	note __, 1
