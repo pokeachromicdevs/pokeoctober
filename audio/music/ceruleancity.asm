@@ -27,6 +27,7 @@ Music_CeruleanCity_Ch1:
 	sound_call .pattern1
 	sound_call .pattern2
 	sound_call .pattern3
+	sound_call .pattern8
 	sound_call .pattern4
 	sound_call .pattern5
 	sound_call .pattern6
@@ -117,7 +118,7 @@ Music_CeruleanCity_Ch1:
 .pattern3
 	duty_cycle 1
 	stereo_panning TRUE, FALSE
-	note_type 12, 10, 1
+	note_type 12, 11, 1
 	octave 3
 	note G#, 2
 	note G#, 2
@@ -125,7 +126,7 @@ Music_CeruleanCity_Ch1:
 	note G#, 2
 	note G#, 8
 	duty_cycle 0
-	note_type 12, 13, 1
+	note_type 12, 10, 2
 	note G#, 4
 	note E_, 2
 	note C#, 2
@@ -141,8 +142,15 @@ Music_CeruleanCity_Ch1:
 	note B_, 4
 	note D#, 2
 	note F#, 2
+	note B_, 4
+	note D#, 2
+	note F#, 2
+	sound_ret
+
+.pattern8
 	duty_cycle 1
-	note_type 12, 10, 3
+	note_type 12, 12, 3
+	octave 3
 	note E_, 4
 	note F#, 4
 	sound_ret
@@ -238,6 +246,7 @@ Music_CeruleanCity_Ch2:
 	sound_call .pattern2
 	sound_call .pattern3
 	sound_call .pattern4
+	sound_call .pattern9
 	sound_call .pattern5
 	sound_call .pattern6
 	sound_call .pattern7
@@ -339,7 +348,7 @@ Music_CeruleanCity_Ch2:
 .pattern4
 	duty_cycle 2
 	stereo_panning FALSE, TRUE
-	note_type 12, 14, 1
+	note_type 12, 13, 1
 	octave 4
 	note E_, 2
 	note E_, 2
@@ -351,7 +360,7 @@ Music_CeruleanCity_Ch2:
 	note E_, 2
 	octave 3
 	note B_, 2
-	note_type 12, 14, 2
+	note_type 12, 13, 2
 	octave 4
 	note C#, 4
 	note D#, 4
@@ -359,15 +368,19 @@ Music_CeruleanCity_Ch2:
 	note F#, 2
 	note G#, 2
 	note A_, 2
-	note_type 12, 14, 4
+	note_type 12, 13, 4
 	note G#, 12
-	note_type 12, 14, 1
+	note_type 12, 13, 1
 	note E_, 2
 	note G#, 2
-	note_type 12, 14, 4
-	note B_, 8
+	note_type 12, 13, 4
+	note B_, 16
+	sound_ret
+
+.pattern9
 	duty_cycle 2
-	note_type 12, 14, 5
+	note_type 12, 10, 6
+	octave 4
 	note C#, 2
 	octave 3
 	note B_, 2
@@ -468,6 +481,7 @@ Music_CeruleanCity_Ch3:
 	sound_call .pattern1
 	sound_call .pattern1
 	sound_call .pattern1
+	sound_call .pattern2
 	sound_call .pattern3
 	sound_call .pattern6
 	sound_call .pattern4
@@ -520,6 +534,13 @@ Music_CeruleanCity_Ch3:
 	note F#, 4
 	sound_ret
 
+.pattern2
+	note_type 12, 2, 5
+	octave 2
+	note E_, 4
+	note F#, 4
+	sound_ret
+
 .pattern3
 	octave 2
 	note G#, 4
@@ -563,7 +584,7 @@ Music_CeruleanCity_Ch3:
 	sound_ret
 
 .pattern4
-	note_type 12, 1, 9
+	note_type 12, 1, 1
 	octave 5
 	note E_, 14
 	note D#, 1
@@ -629,6 +650,7 @@ Music_CeruleanCity_Ch4:
 	sound_call .pattern1
 	sound_call .pattern1
 	sound_call .pattern2
+	sound_call .pattern6
 	sound_call .pattern1
 	sound_call .pattern3
 	sound_call .pattern5
@@ -685,6 +707,12 @@ Music_CeruleanCity_Ch4:
 	drum_note DRUM_CERULEAN_CITY_0e, 4
 	drum_note DRUM_CERULEAN_CITY_0a, 4
 	drum_note DRUM_CERULEAN_CITY_0e, 4
+	drum_note DRUM_CERULEAN_CITY_09, 4
+	drum_note DRUM_CERULEAN_CITY_0e, 2
+	drum_note DRUM_CERULEAN_CITY_09, 2
+	sound_ret
+
+.pattern6
 	drum_note DRUM_CERULEAN_CITY_09, 2
 	drum_note DRUM_CERULEAN_CITY_09, 2
 	drum_note DRUM_CERULEAN_CITY_0e, 2
