@@ -229,6 +229,7 @@ JOHTO_POKEMON EQU const_value
 	const WOBBUFFET  ; ca
 	const BIPULLA  
 	const GIRAFARIG  ; cb
+	const TOPSYSPOT  
 	const PINECO     ; cc
 	const FORRETRESS ; cd
 	const SHUCKLE

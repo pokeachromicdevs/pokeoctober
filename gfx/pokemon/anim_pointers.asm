@@ -207,6 +207,7 @@ AnimationPointers:
 	dw UnownAnimation
 	dw WobbuffetAnimation
 	dw GirafarigAnimation
+	dw TopsyspotAnimation
 	dw PinecoAnimation
 	dw ForretressAnimation
 	dw ShuckleAnimation

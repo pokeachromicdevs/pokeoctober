@@ -209,6 +209,7 @@ PokedexDataPointerTable:
 	dba WobbuffetPokedexEntry
 	dba BipullaPokedexEntry
 	dba GirafarigPokedexEntry
+	dba TopsyspotPokedexEntry
 	dba PinecoPokedexEntry
 	dba ForretressPokedexEntry
 	dba ShucklePokedexEntry

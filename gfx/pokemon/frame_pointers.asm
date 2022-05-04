@@ -208,6 +208,7 @@ FramesPointers:
 	dba WobbuffetFrames
 	dba BipullaFrames
 	dba GirafarigFrames
+	dba TopsyspotFrames
 	dba PinecoFrames
 	dba ForretressFrames
 	dba ShuckleFrames

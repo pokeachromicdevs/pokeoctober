@@ -59,6 +59,7 @@ EvosAttacksPointers2::
 	dw WobbuffetEvosAttacks
 	dw BipullaEvosAttacks
 	dw GirafarigEvosAttacks
+	dw TopsyspotEvosAttacks
 	dw PinecoEvosAttacks
 	dw ForretressEvosAttacks
 	dw ShuckleEvosAttacks
@@ -929,19 +930,28 @@ BipullaEvosAttacks:
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks:
+	dbbw EVOLVE_LEVEL, 34, TOPSYSPOT
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, GROWL
-	dbw 1, CONFUSE_RAY
-	dbw 1, STOMP
-	dbw 7, SPITE
-	dbw 13, STOMP
-	dbw 16, DOUBLE_KICK
-	dbw 20, NIGHT_SHADE
-	dbw 30, BATON_PASS
-	dbw 41, SHADOW_BALL
-	dbw 45, AGILITY
-	dbw 54, CRUNCH
+	dbw 30, STOMP
+	dbw 30, PSYBEAM
+	dbw 38, PSYBEAM
+	dbw 38, SHADOW_BALL
+	dbw 46, FAINT_ATTACK
+	dbw 46, PAIN_SPLIT
+	dbw 52, SCARY_FACE
+	dbw 52, PSYCHIC_M
+	db 0 ; no more level-up moves
+	
+TopsyspotEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 32, STOMP
+	dbw 32, PSYBEAM
+	dbw 40, PSYBEAM
+	dbw 40, SHADOW_BALL
+	dbw 48, FAINT_ATTACK
+	dbw 48, PAIN_SPLIT
+	dbw 54, SCARY_FACE
+	dbw 54, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 PinecoEvosAttacks:
