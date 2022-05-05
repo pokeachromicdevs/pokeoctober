@@ -1,11 +1,11 @@
 	db "FISH@" ; species name
 	dw 211, 220 ; height, weight
 
-	db "Wherever there's"
-	next "water, it can be"
-	next "seen jumping a-"
+	db "It jumps regard-"
+	next "less. It jumps"
+	next "at random. Some-"
 	
-	page "around. Sometimes"
-	next "it jumps too high"
-	next "and ends up flailing.@"
+	page "times it jumps so"
+	next "high it surprises"
+	next "itself.@"
 

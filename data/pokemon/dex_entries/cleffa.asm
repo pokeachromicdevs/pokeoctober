@@ -1,10 +1,10 @@
 	db "STARSHAPE@" ; species name
 	dw 100, 70 ; height, weight
 
-	db "It has a star-shaped"
-	next "silhouette. Due to"
-	next "its appearance,"
+	db "Its star-shaped"
+	next "appearance and"
+	next "shadow has made"
 	
-	page "it's believed to"
-	next "be the true form of"
+	page "people think it's"
+	next "the true form of"
 	next "a shooting star.@"

@@ -1,10 +1,10 @@
 	db "LAND SNAKE@" ; species name
 	dw 411, 310 ; height, weight
 
-	db "It has a vindictive"
-	next "personality. Once"
-	next "it has its sights"
+	db "It has a vindic-"
+	next "tive personality."
+	next "Once it has its"
 	
-	page "on its prey, it"
-	next "will hunt them"
-	next "unceasingly.@"
+	page "sights on its"
+	next "prey, it won't"
+	next "stop chasing them.@"
