@@ -106,12 +106,13 @@ DebugMenu::
 	db "FILL TM/HM@"
 	db "PLAY CRY@"
 	db "TRAINERS@"
+	db "HELP@"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 13
-	db 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+	db 14
+	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 	db -1
 
 .Jumptable
@@ -129,6 +130,123 @@ DebugMenu::
 	dw Debug_FillTMHM
 	dw Debug_PlayCry
 	dw Debug_Trainer
+	dw Debug_Help
+
+Debug_Help:
+; load header only once so we don't allocate
+; too much memory and corrupt shit
+	ld hl, .MenuHeader
+	call LoadMenuHeader
+.loop
+	lb bc, SCREEN_HEIGHT - 2, SCREEN_WIDTH - 2
+	hlcoord 0, 0
+	call Textbox
+	call ScrollingMenu
+	and B_BUTTON
+	ret nz
+	ld a, [wMenuSelection]
+	cp -1
+	ret z
+	dec a
+	ld e, a
+	ld d, 0
+	ld hl, .Dialogs
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	call PrintText
+	jr .loop
+
+.Dialogs:
+	dw .MenuOpen
+	dw .SoundTest
+	dw .ColorMenu
+	dw .TrainerMenu
+.Dialogs_End:
+
+DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
+
+.MenuOpen:
+	text "If you're reading"
+	line "this, you've most"
+	para "certainly got it"
+	line "figured out."
+
+	para "But for reference,"
+	line "it's B plus START."
+
+	para "While you're in the"
+	line "overworld, hold B"
+	cont "to run."
+
+	para "Hold START while a"
+	line "textbox is open to"
+	cont "advance instantly."
+	prompt
+.SoundTest:
+	text "1st line is MUSIC,"
+	line "2nd line is SFX."
+	prompt
+.ColorMenu:
+	text "Press START to"
+	line "play a #MON's"
+	cont "animation."
+
+	para "Hold A, then press"
+	line "START to edit the"
+	cont "palette."
+
+	para "Press B to exit."
+	prompt
+.TrainerMenu:
+	text "1st line is class,"
+	line "2nd line is which"
+	cont "party to set."
+	prompt
+
+.MenuHeader:
+	db MENU_BACKUP_TILES
+	menu_coords 1, 1, SCREEN_WIDTH - 2, SCREEN_HEIGHT - 2
+	dw .MenuData
+	db 1
+
+.MenuData:
+	db 0
+	db 8, 0
+	db SCROLLINGMENU_ITEMS_NORMAL
+	dba .Items
+	dba .DrawItem
+	dba NULL
+
+.Items:
+	db DEBUG_NUM_HELP_ITEMS
+x = 1
+rept DEBUG_NUM_HELP_ITEMS
+	db x
+x = x + 1
+endr
+	db -1
+
+.DrawItem:
+	push de
+	ld a, [wMenuSelection]
+	dec a
+	ld hl, .ItemNames
+	ld bc, 13
+	call AddNTimes
+	ld d, h
+	ld e, l
+	pop hl
+	call PlaceString
+	ret
+
+.ItemNames:
+	db "MENU@@@@@@@@@"
+	db "SOUND TEST@@@"
+	db "COLOR@@@@@@@@"
+	db "TRAINERS@@@@@"
 
 Debug_SoundTest:
 	ld de, MUSIC_NONE
