@@ -101,7 +101,7 @@ ENDM
 	connection east, Route27, ROUTE_27, 0
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | WEST | EAST 
-	connection north, Route30, ROUTE_30, 5
+	connection north, Route30, ROUTE_30, 6
 	connection west, CherrygroveShrine, CHERRYGROVE_SHRINE, 0
 	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, 9
 	
@@ -173,7 +173,7 @@ ENDM
 
 	map_attributes Route30, ROUTE_30, $35, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -10
-	connection south, CherrygroveCity, CHERRYGROVE_CITY, -5
+	connection south, CherrygroveCity, CHERRYGROVE_CITY, -6
 
 	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
 	connection south, Route30, ROUTE_30, 10
