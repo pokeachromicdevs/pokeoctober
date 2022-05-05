@@ -240,6 +240,7 @@ JOHTO_POKEMON EQU const_value
 	const GRANBULL   ; d2
 	const QWILFISH   ; d3
 	const SCIZOR     ; d4
+	const TRICULES
 	const HERACROSS  ; d6
 	const SNEASEL    ; d7
 	const TEDDIURSA  ; d8

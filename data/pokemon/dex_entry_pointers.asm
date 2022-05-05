@@ -220,6 +220,7 @@ PokedexDataPointerTable:
 	dba GranbullPokedexEntry
 	dba QwilfishPokedexEntry
 	dba ScizorPokedexEntry
+	dba TriculesPokedexEntry
 	dba HeracrossPokedexEntry
 	dba SneaselPokedexEntry
 	dba TeddiursaPokedexEntry

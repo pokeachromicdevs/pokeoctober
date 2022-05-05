@@ -223,6 +223,7 @@ PokemonNames::
 	db "GRANBULL@@"
 	db "QWILFISH@@"
 	db "SCIZOR@@@@";insert beta sprite
+	db "TRICULES@@"
 	db "HERACROSS@";needs animation
 	db "SNEASEL@@@";insert beta sprite
 	db "TEDDIURSA@";insert beta sprite

@@ -218,6 +218,7 @@ AnimationPointers:
 	dw GranbullAnimation
 	dw QwilfishAnimation
 	dw ScizorAnimation
+	dw TriculesAnimation
 	dw HeracrossAnimation
 	dw SneaselAnimation
 	dw TeddiursaAnimation

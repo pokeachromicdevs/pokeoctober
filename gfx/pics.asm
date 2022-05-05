@@ -740,6 +740,8 @@ SkiploomFrontpic:    INCBIN "gfx/pokemon/skiploom/front.animated.2bpp.lz"
 TopsyspotFrontpic: INCBIN "gfx/pokemon/topsyspot/front.animated.2bpp.lz"
 TopsyspotBackpic:  INCBIN "gfx/pokemon/topsyspot/back.2bpp.lz"
 KabutoFrontpic:      INCBIN "gfx/pokemon/kabuto/front.animated.2bpp.lz"
+TriculesFrontpic: INCBIN "gfx/pokemon/tricules/front.animated.2bpp.lz"
+TriculesBackpic:  INCBIN "gfx/pokemon/tricules/back.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 
@@ -761,3 +763,4 @@ RemoraidBackpic:     INCBIN "gfx/pokemon/remoraid/back.2bpp.lz"
 DittoFrontpic:       INCBIN "gfx/pokemon/ditto/front.animated.2bpp.lz"
 KingdraBackpic:      INCBIN "gfx/pokemon/kingdra/back.2bpp.lz"
 CamperPic:           INCBIN "gfx/trainers/camper.2bpp.lz"
+

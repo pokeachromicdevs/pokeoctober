@@ -245,6 +245,7 @@ AlphabeticalPokedexOrder:
 	dw TONBOSS
 	dw TOPSYSPOT
 	dw TOTODILE
+	dw TRICULES
 	dw TYPHLOSION
 	dw TYRANITAR
 	dw TYROGUE

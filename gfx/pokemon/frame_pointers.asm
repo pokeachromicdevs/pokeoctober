@@ -219,6 +219,7 @@ FramesPointers:
 	dba GranbullFrames
 	dba QwilfishFrames
 	dba ScizorFrames
+	dba TriculesFrames
 	dba HeracrossFrames
 	dba SneaselFrames
 	dba TeddiursaFrames
