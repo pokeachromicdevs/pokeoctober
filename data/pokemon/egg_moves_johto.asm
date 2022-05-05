@@ -69,6 +69,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw QwilfishEggMoves
 	dw NoEggMoves2
+	dw NoEggMoves2
 	dw HeracrossEggMoves
 	dw SneaselEggMoves
 	dw TeddiursaEggMoves

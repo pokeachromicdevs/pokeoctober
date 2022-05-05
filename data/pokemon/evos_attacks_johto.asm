@@ -70,6 +70,7 @@ EvosAttacksPointers2::
 	dw GranbullEvosAttacks
 	dw QwilfishEvosAttacks
 	dw ScizorEvosAttacks
+	dw TriculesEvosAttacks
 	dw HeracrossEvosAttacks
 	dw SneaselEvosAttacks
 	dw TeddiursaEvosAttacks
@@ -1093,6 +1094,21 @@ ScizorEvosAttacks:
 	dbw 36, SLASH
 	dbw 42, SWORDS_DANCE
 	dbw 48, DOUBLE_TEAM
+	db 0 ; no more level-up moves
+	
+TriculesEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, VICEGRIP
+	dbw 1, HARDEN
+	dbw 5, BIND
+	dbw 11, FURY_CUTTER
+	dbw 17, SEISMIC_TOSS
+	dbw 23, FOCUS_ENERGY
+	dbw 29, CROSS_CUTTER
+	dbw 35, DIG
+	dbw 40, SUBMISSION
+	dbw 46, SWORDS_DANCE
+	dbw 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:

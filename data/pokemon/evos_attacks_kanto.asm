@@ -1906,16 +1906,19 @@ MagmarEvosAttacks:
 	db 0 ; no more level-up moves
 
 PinsirEvosAttacks:
+	dbbw EVOLVE_TRADE, METAL_COAT, TRICULES
 	db 0 ; no more evolutions
 	dbw 1, VICEGRIP
-	dbw 7, FOCUS_ENERGY
-	dbw 13, BIND
-	dbw 19, SEISMIC_TOSS
-	dbw 25, HARDEN
-	dbw 31, GUILLOTINE
-	dbw 35, CROSS_CUTTER
-	dbw 37, SUBMISSION
-	dbw 43, SWORDS_DANCE
+	dbw 1, HARDEN
+	dbw 5, BIND
+	dbw 11, FURY_CUTTER
+	dbw 17, SEISMIC_TOSS
+	dbw 23, FOCUS_ENERGY
+	dbw 29, CROSS_CUTTER
+	dbw 35, DIG
+	dbw 40, SUBMISSION
+	dbw 46, SWORDS_DANCE
+	dbw 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 TaurosEvosAttacks:

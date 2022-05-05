@@ -119,6 +119,7 @@ NewPokedexOrder:
 	dw SCYTHER
 	dw SCIZOR
 	dw PINSIR
+	dw TRICULES
 	dw HERACROSS
 	dw KOFFING
 	dw WEEZING

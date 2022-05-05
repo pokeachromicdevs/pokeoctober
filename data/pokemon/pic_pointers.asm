@@ -453,6 +453,8 @@ PokemonPicPointers::
 	dba QwilfishBackpic
 	dba ScizorFrontpic
 	dba ScizorBackpic
+	dba TriculesFrontpic
+	dba TriculesBackpic
 	dba HeracrossFrontpic
 	dba HeracrossBackpic
 	dba SneaselFrontpic
