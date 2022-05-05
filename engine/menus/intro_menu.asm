@@ -665,7 +665,11 @@ OakSpeech:
 	call PlayMusic
 
 IF DEF(_DEBUG)
-	jp .skip_intro
+	call DelayFrame
+	call GetJoypad
+	ldh a, [hJoyDown]
+	bit A_BUTTON_F, a
+	jp nz, .skip_intro
 ENDC
 
 	;call RotateFourPalettesRight
