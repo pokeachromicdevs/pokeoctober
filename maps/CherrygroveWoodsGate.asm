@@ -43,8 +43,8 @@ CherrygroveWoodsGateOfficerText:
 
 	para "Who's gonna cause"
 	line "trouble in SILENT"
-	cont "TOWN of all"
-	cont "places?"
+	para "TOWN of all"
+	line "places?"
 	done
 
 CherrygroveWoodsGateLassText:
