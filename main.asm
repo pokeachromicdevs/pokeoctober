@@ -255,13 +255,15 @@ INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
-INCLUDE "data/pokemon/base_stats.asm"
-INCLUDE "data/pokemon/names.asm"
 
 UnknownEggPic::
 ; Another egg pic. This is shifted up a few pixels.
 INCBIN "gfx/unknown/unknown_egg.2bpp.lz"
 
+SECTION "Pokemon", ROMX
+
+INCLUDE "data/pokemon/base_stats.asm"
+INCLUDE "data/pokemon/names.asm"
 
 SECTION "Crystal Phone Text", ROMX
 
