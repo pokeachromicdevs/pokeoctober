@@ -5,6 +5,6 @@
 	next "tht a HAUNTER who's"
 	next "been to the spirit"
 	
-	page "world can turn"
-	next "into a GENGAR? That"
-	next "is what rumors say.@"
+	page "world can turn in-"
+	next "to a GENGAR? That's"
+	next "what rumors say.@"
