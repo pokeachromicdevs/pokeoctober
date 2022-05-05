@@ -79,6 +79,7 @@ EvosAttacksPointers2::
 	dw MagcargoEvosAttacks
 	dw SwinubEvosAttacks
 	dw PiloswineEvosAttacks
+	dw ChomoswineEvosAttacks
 	dw CorsolaEvosAttacks
 	dw RemoraidEvosAttacks
 	dw OctilleryEvosAttacks
@@ -1198,29 +1199,56 @@ MagcargoEvosAttacks:
 	db 0 ; no more level-up moves
 
 SwinubEvosAttacks:
-	dbbw EVOLVE_LEVEL, 15, PILOSWINE
+	dbbw EVOLVE_LEVEL, 22, PILOSWINE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 10, POWDER_SNOW
-	dbw 19, ENDURE
-	dbw 28, TAKE_DOWN
-	dbw 37, MIST
-	dbw 46, BLIZZARD
-	dbw 55, AMNESIA
+	dbw 1, GROWL
+	dbw 5, MUD_SLAP
+	dbw 11, POWDER_SNOW
+	dbw 14, ENDURE
+	dbw 19, DIG
+	dbw 25, MIST
+	dbw 28, ICY_WIND
+	dbw 33, ANCIENTPOWER
+	dbw 39, CURSE
+	dbw 42, ICE_BEAM
+	dbw 47, AMNESIA
+	dbw 53, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 PiloswineEvosAttacks:
+	dbbw EVOLVE_LEVEL, 42, CHOMOSWINE
 	db 0 ; no more evolutions
-	dbw 1, HORN_ATTACK
-	dbw 1, POWDER_SNOW
-	dbw 1, ENDURE
-	dbw 10, POWDER_SNOW
-	dbw 14, FURY_ATTACK
-	dbw 19, ENDURE
-	dbw 28, TAKE_DOWN
-	dbw 42, MIST
-	dbw 56, BLIZZARD
-	dbw 70, AMNESIA
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 7, MUD_SLAP
+	dbw 13, POWDER_SNOW
+	dbw 16, ENDURE
+	dbw 21, DIG
+	dbw 27, MIST
+	dbw 30, ICY_WIND
+	dbw 35, ANCIENTPOWER
+	dbw 41, CURSE
+	dbw 44, ICE_BEAM
+	dbw 49, AMNESIA
+	dbw 55, EARTHQUAKE
+	db 0 ; no more level-up moves
+
+ChomoswineEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 9, MUD_SLAP
+	dbw 15, POWDER_SNOW
+	dbw 18, ENDURE
+	dbw 23, DIG
+	dbw 29, MIST
+	dbw 32, ICY_WIND
+	dbw 37, ANCIENTPOWER
+	dbw 43, CURSE
+	dbw 46, ICE_BEAM
+	dbw 51, AMNESIA
+	dbw 57, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 CorsolaEvosAttacks:

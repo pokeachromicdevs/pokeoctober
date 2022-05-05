@@ -229,6 +229,7 @@ PokedexDataPointerTable:
 	dba MagcargoPokedexEntry
 	dba SwinubPokedexEntry
 	dba PiloswinePokedexEntry
+	dba ChomoswinePokedexEntry
 	dba CorsolaPokedexEntry
 	dba RemoraidPokedexEntry
 	dba OctilleryPokedexEntry

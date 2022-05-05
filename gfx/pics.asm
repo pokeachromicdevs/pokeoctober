@@ -742,6 +742,8 @@ TopsyspotBackpic:  INCBIN "gfx/pokemon/topsyspot/back.2bpp.lz"
 KabutoFrontpic:      INCBIN "gfx/pokemon/kabuto/front.animated.2bpp.lz"
 TriculesFrontpic: INCBIN "gfx/pokemon/tricules/front.animated.2bpp.lz"
 TriculesBackpic:  INCBIN "gfx/pokemon/tricules/back.2bpp.lz"
+ChomoswineFrontpic: INCBIN "gfx/pokemon/chomoswine/front.animated.2bpp.lz"
+ChomoswineBackpic:  INCBIN "gfx/pokemon/chomoswine/back.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 

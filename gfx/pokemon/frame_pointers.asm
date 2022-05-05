@@ -228,6 +228,7 @@ FramesPointers:
 	dba MagcargoFrames
 	dba SwinubFrames
 	dba PiloswineFrames
+	dba ChomoswineFrames
 	dba CorsolaFrames
 	dba RemoraidFrames
 	dba OctilleryFrames

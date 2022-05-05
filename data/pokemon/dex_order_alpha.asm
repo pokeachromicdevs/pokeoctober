@@ -33,6 +33,7 @@ AlphabeticalPokedexOrder:
 	dw CHARMELEON
 	dw CHIKORITA
 	dw CHINCHOU
+	dw CHOMOSWINE
 	dw CLEFABLE
 	dw CLEFAIRY
 	dw CLEFFA

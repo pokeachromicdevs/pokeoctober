@@ -206,6 +206,7 @@ OldPokedexOrder:
 	dw DELIBIRD
 	dw SWINUB
 	dw PILOSWINE
+	dw CHOMOSWINE
 	dw TEDDIURSA
 	dw URSARING
 	dw PHANPY

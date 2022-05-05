@@ -232,6 +232,7 @@ PokemonNames::
 	db "MAGCARGO@@";change cry
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
+	db "CHOMOSWINE"
 	db "CORSOLA@@@"
 	db "REMORAID@@";needs animation fully programmed in
 	db "OCTILLERY@";needs animation fully programmed in

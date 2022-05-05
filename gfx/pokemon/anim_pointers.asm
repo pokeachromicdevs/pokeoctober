@@ -227,6 +227,7 @@ AnimationPointers:
 	dw MagcargoAnimation
 	dw SwinubAnimation
 	dw PiloswineAnimation
+	dw ChomoswineAnimation
 	dw CorsolaAnimation
 	dw RemoraidAnimation
 	dw OctilleryAnimation
