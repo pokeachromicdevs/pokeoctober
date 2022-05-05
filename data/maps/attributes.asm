@@ -100,9 +100,9 @@ ENDM
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | WEST |EAST 
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | WEST | EAST 
 	connection north, Route30, ROUTE_30, 5
-	connection west, CherrygroveShrine, CHERRYGROVE_SHRINE, 11
+	connection west, CherrygroveShrine, CHERRYGROVE_SHRINE, 0
 	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, 9
 	
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
@@ -169,7 +169,7 @@ ENDM
 	connection east, Route29, ROUTE_29, 0
 	
 	map_attributes CherrygroveShrine, CHERRYGROVE_SHRINE, $05, EAST
-	connection east, CherrygroveCity, CHERRYGROVE_CITY, -11
+	connection east, CherrygroveCity, CHERRYGROVE_CITY, 0
 
 	map_attributes Route30, ROUTE_30, $35, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -10
@@ -711,4 +711,5 @@ ENDM
 	map_attributes SilentPokecenter1F, SILENT_POKECENTER_1F, $00, 0
 	map_attributes AlderPokecenter1F, ALDER_POKECENTER_1F, $00, 0
 	map_attributes AlderMart, ALDER_MART, $00, 0
+	map_attributes CherrygroveShrineGate, CHERRYGROVE_SHRINE_GATE, $00, 0
 

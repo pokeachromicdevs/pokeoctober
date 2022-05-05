@@ -495,4 +495,5 @@ INCLUDE "maps/Route31VioletGate.asm"
 INCLUDE "maps/CherrygroveShrine.asm"
 INCLUDE "maps/AlderPokecenter1F.asm"
 INCLUDE "maps/AlderMart.asm"
+INCLUDE "maps/CherrygroveShrineGate.asm"
 

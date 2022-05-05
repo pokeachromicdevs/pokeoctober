@@ -6,7 +6,9 @@ CherrygroveShrine_MapScripts:
 CherrygroveShrine_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 2 ; warp events
+	warp_event 33, 22, CHERRYGROVE_SHRINE_GATE, 3
+	warp_event 33, 23, CHERRYGROVE_SHRINE_GATE, 4
 
 	db 0 ; coord events
 

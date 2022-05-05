@@ -495,30 +495,32 @@ GuideGentsHouseSignText:
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 9 ; warp events
-	warp_event 23, 21, CHERRYGROVE_MART, 2
-	warp_event 29, 21, CHERRYGROVE_POKECENTER_1F, 1
-	warp_event 23, 15, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
-	warp_event 33, 15, GUIDE_GENTS_HOUSE, 1
-	warp_event 29, 15, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
-	warp_event 26,  5, CHERRYGROVE_GYM, 1
-	warp_event 37, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
-	warp_event 37, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
-	warp_event 25, 27, CHERRYGROVE_FISHER_HOUSE, 1
+	db 11 ; warp events
+	warp_event 25, 21, CHERRYGROVE_MART, 2
+	warp_event 31, 21, CHERRYGROVE_POKECENTER_1F, 1
+	warp_event 25, 15, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
+	warp_event 35, 15, GUIDE_GENTS_HOUSE, 1
+	warp_event 31, 15, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
+	warp_event 28,  5, CHERRYGROVE_GYM, 1
+	warp_event 39, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
+	warp_event 39, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
+	warp_event 27, 27, CHERRYGROVE_FISHER_HOUSE, 1
+	warp_event  4, 22, CHERRYGROVE_SHRINE_GATE, 1
+	warp_event  4, 23, CHERRYGROVE_SHRINE_GATE, 2
 
 	db 0 ; coord events
 
 	db 4 ; bg events
-	bg_event 33, 27, BGEVENT_READ, CherrygroveCitySign
-	bg_event 37, 15, BGEVENT_READ, GuideGentsHouseSign
-	bg_event 24, 21, BGEVENT_READ, CherrygroveCityMartSign
-	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
+	bg_event 35, 27, BGEVENT_READ, CherrygroveCitySign
+	bg_event 39, 15, BGEVENT_READ, GuideGentsHouseSign
+	bg_event 26, 21, BGEVENT_READ, CherrygroveCityMartSign
+	bg_event 32, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 
 	db 5 ; object events
-	object_event 36, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
-	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
-	object_event 15, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
-	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
-	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	object_event 38, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
+	object_event 24,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
+	object_event 17, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
+	object_event 20, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
+	object_event 28,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	;object_event 15,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM, -1
 
