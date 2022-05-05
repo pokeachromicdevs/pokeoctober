@@ -48,10 +48,20 @@ DebugMenu_PokePics:
 	bit A_BUTTON_F, a
 	jr nz, .a_held
 	ldh a, [hJoyPressed]
+	bit D_LEFT_F, a
+	jr nz, .left
+	bit D_RIGHT_F, a
+	jr nz, .right
+	bit START_F, a	; START = play anim
+	call nz, .play_animation
+	bit B_BUTTON_F, a	; exit
+	ret nz
+	jr .input
 .a_held
+	ldh a, [hJoyPressed]
 	bit START_F, a
-	jr nz, .toggle_edit_mode
-	bit B_BUTTON_F, a
+	jr nz, .toggle_edit_mode	; A + START = edit/view
+	bit B_BUTTON_F, a	; exit
 	ret nz
 	bit D_LEFT_F, a
 	jr nz, .left
@@ -179,6 +189,23 @@ DebugMenu_PokePics:
 	call PlaceString
 	call EnableLCD
 	call DelayFrame
+	ret
+
+.play_animation
+	ld de, vTiles2
+	predef GetAnimatedFrontpic
+	hlcoord 1, 1
+	lb de, $0, ANIM_MON_MENU
+	predef LoadMonAnimation
+	ld hl, wcf64
+	set 6, [hl]
+.anim_loop
+	callba StatsScreen_WaitAnim
+	ld a, [wcf64]
+	bit 6, a
+	jr nz, .anim_loop
+	ld a, 1
+	ld [hBGMapMode], a
 	ret
 
 .left_pal
