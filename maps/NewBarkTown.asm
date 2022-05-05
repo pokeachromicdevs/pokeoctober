@@ -186,6 +186,7 @@ SilentTownSilverBattleScript:
 	yesorno
 	iffalse .no
 	writetext RivalYesText
+	waitbutton
 	closetext
 ; player has:
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
@@ -244,6 +245,7 @@ SilentTownSilverBattleScript:
 	
 .no:
 	writetext RivalNoText
+	waitbutton
 ; player has:
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .TOTODILE

@@ -1,9 +1,10 @@
 	db "MOUSE@" ; species name
 	dw 104, 130 ; height, weight
 
-	db "It also has a gour-"
-	next "met side: It roasts"
-	next "hard BERRIES with"
+	db "It also has a"
+	next "gourmet side: It"
+	next "roasts hard BER-"
 	
-	page "thunder jolts be-"
-	next "fore eating them.@"
+	page "RIES with thunder"
+	next "jolts before" 
+	next "eating them.@"
