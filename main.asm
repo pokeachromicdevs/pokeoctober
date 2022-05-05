@@ -192,9 +192,7 @@ INCLUDE "engine/events/move_tutor.asm"
 INCLUDE "engine/gfx/crystal_layouts.asm"
 INCLUDE "engine/events/celebi.asm"
 INCLUDE "engine/menus/main_menu.asm"
-INCLUDE "mobile/mobile_menu.asm"
 INCLUDE "engine/pokemon/search.asm"
-INCLUDE "mobile/mobile_12_2.asm"
 INCLUDE "engine/events/buena_menu.asm"
 
 
@@ -232,7 +230,6 @@ INCLUDE "engine/movie/evolution_animation.asm"
 INCLUDE "engine/movie/init_hof_credits.asm"
 INCLUDE "engine/events/battle_tower/get_trainer_class.asm"
 INCLUDE "engine/battle/sliding_intro.asm"
-INCLUDE "mobile/print_opp_message.asm"
 INCLUDE "engine/battle/check_battle_scene.asm"
 INCLUDE "engine/movie/gbc_only.asm"
 INCLUDE "engine/events/poke_seer.asm"
@@ -299,12 +296,10 @@ SECTION "Crystal Features 2", ROMX
 
 INCLUDE "engine/events/kurt.asm"
 INCLUDE "engine/gfx/player_gfx.asm"
-INCLUDE "mobile/mobile_22.asm"
 INCLUDE "engine/events/unown_walls.asm"
 INCLUDE "engine/events/buena.asm"
 INCLUDE "engine/events/dratini.asm"
 INCLUDE "engine/events/battle_tower/rules.asm"
-INCLUDE "mobile/mobile_22_2.asm"
 
 
 SECTION "bank23", ROMX
@@ -516,9 +511,6 @@ INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
 
 
-INCLUDE "mobile/mobile_40.asm"
-
-
 SECTION "bank41", ROMX
 
 INCLUDE "engine/gfx/dma_transfer.asm"
@@ -526,13 +518,10 @@ INCLUDE "gfx/emotes.asm"
 INCLUDE "engine/overworld/warp_connection.asm"
 INCLUDE "engine/link/mystery_gift.asm"
 INCLUDE "engine/battle/used_move_text.asm"
-INCLUDE "mobile/mobile_41.asm"
 INCLUDE "engine/gfx/load_overworld_font.asm"
 
 
 SECTION "Mobile 42", ROMX
-
-INCLUDE "mobile/mobile_42.asm"
 
 SECTION "Title", ROMX
 
@@ -546,7 +535,6 @@ INCLUDE "engine/events/battle_tower/trainer_text.asm"
 
 SECTION "bank5B", ROMX
 
-INCLUDE "mobile/mobile_5b.asm"
 INCLUDE "engine/link/link_trade.asm"
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/battle/link_result.asm"
@@ -680,7 +668,7 @@ INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"
 
 
-SECTION "Mobile Stadium 2", ROMX
+SECTION "Pokemon", ROMX
 
 INCLUDE "data/pokemon/base_stats.asm"
 INCLUDE "data/pokemon/names.asm"

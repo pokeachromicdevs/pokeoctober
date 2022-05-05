@@ -302,6 +302,7 @@ ROMX $7d
 	"Cries"
 ROMX $7e
 	"Crystal Events"
+	"Pokemon"
 ROMX $7f
 	org $7de0
 WRAM0
