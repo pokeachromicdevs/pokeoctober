@@ -52,6 +52,10 @@ DebugMenu_PokePics:
 	jr nz, .left
 	bit D_RIGHT_F, a
 	jr nz, .right
+	bit D_DOWN_F, a
+	jr nz, .down
+	bit D_UP_F, a
+	jr nz, .up
 	bit START_F, a	; START = play anim
 	call nz, .play_animation
 	bit B_BUTTON_F, a	; exit
