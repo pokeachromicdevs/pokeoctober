@@ -243,7 +243,6 @@ AlphabeticalPokedexOrder:
 	dw TOGEPI
 	dw TOGETIC
 	dw TONBOSS
-	dw TOPSYSPOT
 	dw TOTODILE
 	dw TYPHLOSION
 	dw TYRANITAR

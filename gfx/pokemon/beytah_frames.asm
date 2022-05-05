@@ -18,4 +18,3 @@ WorfursFrames:    INCLUDE "gfx/pokemon/worfurs/frames.asm"
 DodaerieFrames:   INCLUDE "gfx/pokemon/dodaerie/frames.asm"
 
 
-

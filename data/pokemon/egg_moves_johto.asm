@@ -58,7 +58,6 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw BipullaEggMoves
 	dw NoEggMoves2
-	dw NoEggMoves2
 	dw PinecoEggMoves
 	dw NoEggMoves2
 	dw ShuckleEggMoves

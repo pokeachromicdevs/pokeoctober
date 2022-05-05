@@ -212,7 +212,6 @@ PokemonNames::
 	db "WOBBUFFET@"
 	db "BIPULLA@@@";needs animation fully programmed in
 	db "GIRAFARIG@"
-	db "TOPSYSPOT@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
 	db "SHUCKLE@@@";needs animation fully programmed in

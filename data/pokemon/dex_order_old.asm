@@ -157,7 +157,6 @@ OldPokedexOrder:
 	dw HITMONTOP
 	dw BIPULLA
 	dw GIRAFARIG
-	dw TOPSYSPOT
 	dw TAUROS
 	dw MILTANK
 	dw MAGBY

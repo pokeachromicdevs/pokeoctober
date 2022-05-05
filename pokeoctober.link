@@ -184,7 +184,13 @@ ROMX $43
 	"Title"
 ROMX $44
 	"Mobile Adapter SDK"
+ROMX $45
+	"Mobile 45"
+	"Mobile Stadium"
 ROMX $46
+	"Mobile 46"
+	"Mobile 46 ASCII"
+ROMX $47
 	"Battle Tower"
 ROMX $48
 	"Pic Pointers"
@@ -229,6 +235,8 @@ ROMX $5a
 	"Pics 19"
 ROMX $5b
 	"bank5B"
+ROMX $5c
+	"Mobile 5C"
 ROMX $5d
 	"Crystal Phone Text 2"
 	"Enemy Trainer Parties 3"
@@ -236,6 +244,9 @@ ROMX $5e
 	"UpdateBattleHUDs"
 	"Songs 5"
 	"Crystal Sound Effects"
+	"Mobile 5E"
+ROMX $5f
+	"Mobile 5F"
 ROMX $60
 	"Map Scripts 13"
 	"Pokedex Entries 001-064"
@@ -302,9 +313,9 @@ ROMX $7d
 	"Cries"
 ROMX $7e
 	"Crystal Events"
-	"Pokemon"
 ROMX $7f
 	org $7de0
+	"Mobile Stadium 2"
 WRAM0
 	"Stack"
 	"Audio RAM"

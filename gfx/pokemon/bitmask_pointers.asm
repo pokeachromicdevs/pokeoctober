@@ -208,7 +208,6 @@ BitmasksPointers:
 	dw WobbuffetBitmasks
 	dw BipullaBitmasks
 	dw GirafarigBitmasks
-	dw TopsyspotBitmasks
 	dw PinecoBitmasks
 	dw ForretressBitmasks
 	dw ShuckleBitmasks

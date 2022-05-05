@@ -19,6 +19,8 @@ InitCrystalData:
 	ld [wd479], a
 	ret
 
+INCLUDE "mobile/mobile_12.asm"
+
 InitGender:
 	call InitGenderScreen
 	call LoadGenderScreenPal
