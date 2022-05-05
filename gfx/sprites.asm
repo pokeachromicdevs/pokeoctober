@@ -117,6 +117,3 @@ SportsmanSpriteGFX::           INCBIN "gfx/sprites/sportsman.2bpp"
 CamperSpriteGFX::              INCBIN "gfx/sprites/camper.2bpp"
 HikerSpriteGFX::               INCBIN "gfx/sprites/hiker.2bpp"
 GameboyGirlSpriteGFX::         INCBIN "gfx/sprites/gameboy_girl.2bpp"
-
-
-
