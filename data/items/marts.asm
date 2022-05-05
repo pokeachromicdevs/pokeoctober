@@ -34,17 +34,10 @@ Marts:
 	dw MartMtMoon
 	dw MartIndigoPlateau
 	dw MartUnderground
+	dw MartAlder
 .End
 
 MartCherrygrove:
-	db 5 ; # items
-	db POKE_BALL
-	db POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db AWAKENING
-	db -1 ; end
-
 MartCherrygroveDex:
 	db 5 ; # items
 	db POKE_BALL
@@ -82,6 +75,7 @@ MartAzalea:
 	db -1 ; end
 
 MartCianwood:
+MartAlder:
 	db 5 ; # items
 	db POTION
 	db SUPER_POTION

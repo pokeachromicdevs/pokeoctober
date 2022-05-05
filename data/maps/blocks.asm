@@ -313,6 +313,7 @@ LavenderMart_Blocks:
 ViridianMart_Blocks:
 SaffronMart_Blocks:
 CherrygroveMart_Blocks:
+AlderMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
 Route10North_Blocks:

@@ -70,16 +70,19 @@ HappinessRatersHouseRadio:
 	jumpstd radio2
 
 GoldenrodHappinessRaterTeacherText:
-	text "If you treat your"
-	line "#MON nicely,"
-
-	para "they will love you"
-	line "in return."
-
-	para "Oh? Let me see"
+	text "Oh? Let me see"
 	line "your @"
 	text_ram wStringBuffer3
 	text "…"
+
+	para "Hmm…"
+
+	para "Your @"
+	text_ram wStringBuffer3
+	text
+	line "scores @"
+	text_decimal wScriptVar, 1, 0
+	text "/255."
 	done
 
 GoldenrodHappinessRatingText_LovesYouALot:
@@ -138,8 +141,8 @@ GoldenrodHappinessRater_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, GOLDENROD_CITY, 3
-	warp_event  3,  7, GOLDENROD_CITY, 3
+	warp_event  2,  7, ALDER_TOWN, 2
+	warp_event  3,  7, ALDER_TOWN, 2
 
 	db 0 ; coord events
 

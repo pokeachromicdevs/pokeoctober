@@ -214,6 +214,7 @@ ENDM
 	map_const AZALEA_TOWN,                                 10,  9 ;  7
 	map_const ALDER_TOWN,                                  10,  9 ;  8
 	map_const ALDER_POKECENTER_1F,                          8,  4 ;  9
+	map_const ALDER_MART,                                   6,  4 ;  10
 
 	newgroup                                                      ;  9
 
