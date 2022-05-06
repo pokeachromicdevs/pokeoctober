@@ -1,10 +1,10 @@
 	db "LAVA@" ; species name
 	dw 207, 1210 ; height, weight
 
-	db "Its body is similar"
-	next "to lava. For un-"
-	next "known reasons, its"
+	db "Its body is simi-"
+	next "lar to lava. For"
+	next "unknown reasons,"
 	
-	page "skin hardens when"
-	next "exposed to sun-"
-	next "light.@"
+	page "its skin hardens"
+	next "when exposed"
+	next "to sunlight.@"

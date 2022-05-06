@@ -1,10 +1,10 @@
 	db "JELLYFISH@" ; species name
 	dw 211, 1000 ; height, weight
 
-	db "Any part that's hit by"
-	next "its toxic stingers will"
-	next "be red, swollen, and"
+	db "Any part that's hit"
+	next "by its toxic sting"
+	next "will be red, swol-"
 	
-	page "very painful, with an"
-	next "itchiness that lingers"
-	next "forever.@"
+	page "len, and painful,"
+	next "with an itch that"
+	next "lingers forever.@"

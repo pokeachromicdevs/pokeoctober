@@ -2,7 +2,8 @@
 	dw 311, 660 ; height, weight
 
 	db "Various toxins mix"
-	next "together in its body"
-	next "and end up producing"
+	next "together in its"
+	next "body and end up"
 	
-	page "new types of toxins.@"
+	page "producing new" 
+	next "types of toxins.@"

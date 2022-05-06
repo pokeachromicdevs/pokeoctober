@@ -1,9 +1,10 @@
 	db "POTTERY@" ; species name
 	dw 200, 450 ; height, weight
 
-	db "It sneaks into jars"
-	next "unnoticed. Nobody"
-	next "knows what its"
+	db "It sneaks into"
+	next "jars unnoticed."
+	next "Nobody knows"
 	
-	page "true form looks"
+	page "what its true"
+	next "form looks"
 	next "like.@"

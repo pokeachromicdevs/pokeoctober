@@ -2,9 +2,9 @@
 	dw 200, 210 ; height, weight
 
 	db "It is very rough."
-	next "When it bites some-"
-	next "thing, any fangs"
-	
-	page "that fall out will"
-	next "will grow back one"
+	next "When it bites"
+	next "something, any"
+	 
+	page "fangs that fall"
+	next "out grow back one"
 	next "after the other.@"

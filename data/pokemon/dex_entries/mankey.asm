@@ -1,10 +1,10 @@
 	db "PIG MONKEY@" ; species name
 	dw 108, 620 ; height, weight
 
-	db "It stands up to oppo-"
-	next "nents stronger than it"
-	next "is by throwing many"
+	db "It stands up to"
+	next "foes stronger than"
+	next "it is by throwing"
 	
-	page "different things down"
-	next "at them from the"
-	next "treetops.@"
+	page "various things"
+	next "down at them from"
+	next "the treetops.@"
