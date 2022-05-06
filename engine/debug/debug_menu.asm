@@ -534,7 +534,6 @@ Debug_Warp:
 	db "FUCHSIA@@@@@@"
 	db "CINNABAR@@@@@"
 	db "INDIGO@@@@@@@"
-	db "-KANTO 1992-@"
 	db "CITRINE@@@@@@"
 
 .SpawnTable:
@@ -569,7 +568,6 @@ Debug_Warp:
 	db SPAWN_FUCHSIA
 	db SPAWN_CINNABAR
 	db SPAWN_INDIGO
-	db -1
 	db SPAWN_CITRINE
 .SpawnTableEnd:
 

@@ -107,7 +107,7 @@ Landmarks:
 	landmark  12, 100, TohjoFallsName
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
-	landmark 140, 116, CitrineIslandsName
+	landmark 140, 132, CitrineIslandsName
 
 NewBarkTownName:     db "SILENT¯TOWN@"       ; Shizuoka
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"    ; Nagoya
@@ -212,4 +212,4 @@ UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"
 CherrygroveWoodsName:db "CHERRYGROVE¯WOODS@"
-CitrineIslandsName: db "CITRINE¯ISLANDS@"
+CitrineIslandsName:  db "CITRINE¯ISLAND@"
