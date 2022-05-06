@@ -1,10 +1,10 @@
 	db "SWINE@" ; species name
-	dw 307, 1230 ; height, weight
+	dw 507, 1520 ; height, weight
 
-	db   "Although its legs"
-	next "are short, its"
-	next "rugged hooves"
+	db   "It uses its thick"
+	next "tusks to find food"
+	next "buried under ice,"
 
-	page "prevent it from"
-	next "slipping, even on"
-	next "icy ground.@"
+	page "and to defend it-"
+	next "self from enemies"
+	next "like WEARLYCAN.@"

@@ -1,7 +1,7 @@
 	db "WILD DUCK@" ; species name
 	dw 311, 595 ; height, weight
 
-	db   "Is extremely"
+	db   "It's extremely"
 	next "rare. Recent"
 	next "studies have"
 

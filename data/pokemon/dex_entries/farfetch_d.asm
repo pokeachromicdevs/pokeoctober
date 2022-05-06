@@ -5,6 +5,6 @@
 	next "has lost its stalk"
 	next "will enter a state"
 	
-	page "of panic, so appro-"
-	next "ching it carelessly"
-	next "is dangerous.@"
+	page "of panic. Appro-"
+	next "ching it during"
+	next "this is dangerous.@"

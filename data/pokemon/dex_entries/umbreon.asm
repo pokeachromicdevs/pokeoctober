@@ -1,9 +1,10 @@
 	db "POISON@" ; species name
 	dw 303, 600 ; height, weight
 
-	db   "When agitated, this"
-	next "#MON protects"
-	next "itself by spraying"
+	db   "When agitated,"
+	next "this #MON pro-"
+	next "tects itself by"
 
-	page "poisonous sweat"
-	next "from its pores."
+	page "spraying poisonous"
+	next "sweat from its"
+	next "pores.@"

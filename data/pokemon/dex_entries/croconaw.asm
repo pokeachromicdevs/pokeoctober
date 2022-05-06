@@ -2,8 +2,9 @@
 	dw 307, 550 ; height, weight
 
 	db "It spends most of"
-	next "the day underwater,"
-	next "with only its eyes"
+	next "the day under-"
+	next "water, with only"
 	
-	page "and nose sticking"
-	next "above the surface.@"
+	page "its eyes and nose"
+	next "sticking above"
+	next "the surface.@"

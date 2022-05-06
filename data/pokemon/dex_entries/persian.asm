@@ -6,5 +6,5 @@
 	next "oozes from its"
 	
 	page "body. It's also"
-	next "great at climbing"
-	next "trees and swimming.@"
+	next "good at climbing"
+	next "and swimming.@"
