@@ -46,7 +46,10 @@ CitrineInn2F_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  5,  1, BGEVENT_RIGHT, CitrineInn2F_HealMons
-	bg_event  5,  2, BGEVENT_RIGHT, CitrineInn2F_HealMons
+	bg_event  3,  1, BGEVENT_LEFT, CitrineInn2F_HealMons
+	bg_event  3,  2, BGEVENT_LEFT, CitrineInn2F_HealMons
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event  8,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 12,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+
