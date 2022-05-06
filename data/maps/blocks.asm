@@ -996,3 +996,6 @@ CherrygroveWoods_Blocks:
 	
 CherrygroveShrine_Blocks:
 	INCBIN "maps/CherrygroveShrine.blk"
+
+CitrineIsland_Blocks:
+	INCBIN "maps/capumon/CitrineIsland.blk"

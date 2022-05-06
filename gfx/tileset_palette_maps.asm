@@ -112,7 +112,7 @@ INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 TilesetSnowPalMap:
 INCLUDE "gfx/tilesets/snow_palette_map.asm"
 
-; unused
-rept 26
-	db $06
-endr
+TilesetCapumonOverworldPalMap:: INCLUDE "gfx/tilesets/capumon_overworld_palette_map.asm"
+TilesetCapumonInnPalMap::       INCLUDE "gfx/tilesets/capumon_inn_palette_map.asm"
+TilesetCapumonMartPalMap::      INCLUDE "gfx/tilesets/capumon_mart_palette_map.asm"
+TilesetCapumonChampCupPalMap::  INCLUDE "gfx/tilesets/capumon_champ_cup_palette_map.asm"

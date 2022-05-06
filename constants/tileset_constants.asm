@@ -36,7 +36,11 @@
 	const TILESET_KABUTO_WORD_ROOM     ; 22
 	const TILESET_OMANYTE_WORD_ROOM    ; 23
 	const TILESET_AERODACTYL_WORD_ROOM ; 24
-	const TILESET_SNOW
+	const TILESET_SNOW                 ; 25
+	const TILESET_CAPUMON_OVERWORLD    ; 26
+	const TILESET_CAPUMON_INN          ; 27
+	const TILESET_CAPUMON_MART         ; 28
+	const TILESET_CAPUMON_CHAMP_CUP    ; 29
 
 ; bg palette values (see gfx/tilesets/*_palette_map.asm)
 ; TilesetBGPalette indexes (see gfx/tilesets/bg_tiles.pal)

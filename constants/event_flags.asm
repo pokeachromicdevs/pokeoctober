@@ -1672,7 +1672,7 @@
 	const EVENT_63A
 	const EVENT_63B
 	const EVENT_63C
-	const EVENT_63D
+	const EVENT_GOT_MEW_IN_CITRINE
 	const EVENT_ELM_NOT_IN_LAB
 	const EVENT_FOUGHT_RIVAL_NEW_BARK_TOWN
 ; Sprite visibility flags

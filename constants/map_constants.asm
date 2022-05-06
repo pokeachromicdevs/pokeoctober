@@ -501,3 +501,6 @@ ENDM
 	map_const CHERRYGROVE_FISHER_HOUSE,                     4,  4 ;  8
 	map_const CHERRYGROVE_SHRINE_GATE,                      5,  4 ; 19
 
+	newgroup                                                      ; 27
+	map_const CITRINE_ISLAND,                              20, 18 ;  1
+

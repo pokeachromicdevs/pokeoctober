@@ -43,6 +43,7 @@ MapGroupPointers::
 	dw MapGroup_Saffron     ; 25
 	dw MapGroup_Cherrygrove ; 26
 	dw MapGroup_Snow        ; 27
+	dw MapGroup_Citrine     ; 28
 
 MapGroup_Olivine:
 	map OlivinePokecenter1F, TILESET_POKECENTER, INDOOR, OLIVINE_CITY, MUSIC_POKEMON_CENTER, FALSE, PALETTE_DAY, FISHGROUP_SHORE
@@ -495,3 +496,6 @@ MapGroup_Cherrygrove:
 	map CherrygroveShrineGate, TILESET_GATE, GATE, CHERRYGROVE_CITY, MUSIC_CHERRYGROVE_CITY, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 
 MapGroup_Snow:
+
+MapGroup_Citrine:
+	map CitrineIsland, TILESET_CAPUMON_OVERWORLD, TOWN, CITRINE_ISLAND, MUSIC_VIRIDIAN_CITY, FALSE, PALETTE_AUTO, FISHGROUP_SHORE

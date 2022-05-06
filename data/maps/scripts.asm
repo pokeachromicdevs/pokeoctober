@@ -497,3 +497,5 @@ INCLUDE "maps/AlderPokecenter1F.asm"
 INCLUDE "maps/AlderMart.asm"
 INCLUDE "maps/CherrygroveShrineGate.asm"
 
+INCLUDE "maps/capumon/CitrineIsland.asm"
+
