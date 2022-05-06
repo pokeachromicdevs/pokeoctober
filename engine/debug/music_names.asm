@@ -106,5 +106,6 @@ Debug_MusicNames::
 	db "Cerulean City@@@@@"
 	db "Cinnabar Island@@@"
 	db "Routes 24, 25@@@@@"
+	db "Battle! Oak, Elm@@"
 	db "Citrine Inn Rest@@"
 

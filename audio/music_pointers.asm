@@ -110,4 +110,5 @@ Music:
 	dba Music_CeruleanCity
 	dba Music_CinnabarIsland
 	dba Music_Route24
+	dba Music_ProfBattle
 	dba Music_CitrineInnRest
