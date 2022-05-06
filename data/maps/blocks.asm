@@ -999,3 +999,12 @@ CherrygroveShrine_Blocks:
 
 CitrineIsland_Blocks:
 	INCBIN "maps/capumon/CitrineIsland.blk"
+
+CitrineMart_Blocks:
+	INCBIN "maps/capumon/CitrineMart.blk"
+
+CitrineInn1F_Blocks:
+	INCBIN "maps/capumon/CitrineInn1F.blk"
+
+CitrineInn2F_Blocks:
+	INCBIN "maps/capumon/CitrineInn2F.blk"

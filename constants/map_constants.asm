@@ -503,4 +503,7 @@ ENDM
 
 	newgroup                                                      ; 27
 	map_const CITRINE_ISLAND,                              20, 18 ;  1
+	map_const CITRINE_MART,                                12,  4 ;  2
+	map_const CITRINE_INN_1F,                               7,  4 ;  3
+	map_const CITRINE_INN_2F,                               7,  4 ;  4
 

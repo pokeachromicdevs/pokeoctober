@@ -714,4 +714,7 @@ ENDM
 	map_attributes CherrygroveShrineGate, CHERRYGROVE_SHRINE_GATE, $00, 0
 
 	map_attributes CitrineIsland, CITRINE_ISLAND, $41, 0
+	map_attributes CitrineMart, CITRINE_MART, $00, 0
+	map_attributes CitrineInn1F, CITRINE_INN_1F, $00, 0
+	map_attributes CitrineInn2F, CITRINE_INN_2F, $00, 0
 

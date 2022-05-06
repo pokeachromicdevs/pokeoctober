@@ -124,7 +124,9 @@ CitrineIsland_HiddenMew:
 CitrineIsland_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 2 ; warp events
+	warp_event 24, 27, CITRINE_INN_1F, 1
+	warp_event 30, 15, CITRINE_MART, 2
 
 	db 0 ; coord events
 
