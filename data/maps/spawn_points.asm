@@ -46,5 +46,5 @@ SpawnPoints:
 	spawn ALDER_TOWN,                  3,  6
 
 ; '92 kanto
-	spawn CITRINE_ISLAND,             28, 10
+	spawn CITRINE_ISLAND,             24, 28
 	spawn N_A,                        -1, -1

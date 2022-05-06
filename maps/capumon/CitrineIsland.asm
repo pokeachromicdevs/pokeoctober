@@ -129,14 +129,14 @@ CitrineIsland_MapEvents:
 	db 0 ; coord events
 
 	db 9 ; bg events
-	bg_event 23,  9, BGEVENT_READ, CitrineIsland_Sign
-	bg_event 27,  9, BGEVENT_READ, CitrineIsland_LargeBuildingSign
-	bg_event 23, 29, BGEVENT_READ, CitrineIsland_InnSign
-	bg_event  9, 13, BGEVENT_READ, CitrineIsland_BattlePlaceSign
-	bg_event 17, 23, BGEVENT_READ, CitrineIsland_GFSign
-	bg_event 13, 29, BGEVENT_READ, CitrineIsland_MonsterSign
-	bg_event 25, 17, BGEVENT_READ, CitrineIsland_TownCenterSign
-	bg_event 29, 19, BGEVENT_READ, CitrineIsland_CVSSign
-	bg_event 19, 10, BGEVENT_UP, CitrineIsland_HiddenMew
+	bg_event 25, 15, BGEVENT_READ, CitrineIsland_Sign
+	bg_event 27,  7, BGEVENT_READ, CitrineIsland_LargeBuildingSign
+	bg_event 23, 27, BGEVENT_READ, CitrineIsland_InnSign
+	bg_event  9, 11, BGEVENT_READ, CitrineIsland_BattlePlaceSign
+	bg_event 17, 21, BGEVENT_READ, CitrineIsland_GFSign
+	bg_event 13, 27, BGEVENT_READ, CitrineIsland_MonsterSign
+	bg_event 21, 33, BGEVENT_READ, CitrineIsland_TownCenterSign
+	bg_event 29, 15, BGEVENT_READ, CitrineIsland_CVSSign
+	bg_event 19,  6, BGEVENT_UP, CitrineIsland_HiddenMew
 
 	db 0 ; object events
