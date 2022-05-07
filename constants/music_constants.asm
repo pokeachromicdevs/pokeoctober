@@ -112,6 +112,7 @@
 	const MUSIC_CINNABAR_ISLAND              ; 69
 	const MUSIC_ROUTE_24                     ; 6a
 	const MUSIC_PROF_BATTLE                  ; 6b
+	const MUSIC_POKEMON_TOWER                ; 6c
 
 NUM_MUSIC_TRACKS EQU const_value
 

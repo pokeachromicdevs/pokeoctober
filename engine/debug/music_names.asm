@@ -107,4 +107,5 @@ Debug_MusicNames::
 	db "Cinnabar Island@@@"
 	db "Routes 24, 25@@@@@"
 	db "Battle! Oak, Elm@@"
+	db "Pokemon Tower@@@@@"
 
