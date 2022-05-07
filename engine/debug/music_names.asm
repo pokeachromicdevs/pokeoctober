@@ -110,4 +110,5 @@ Debug_MusicNames::
 	db "Pokemon Tower@@@@@"
 	db "Alder Town@@@@@@@@"
 	db "Route 32@@@@@@@@@@"
+	db "Giovanni Encounter"
 

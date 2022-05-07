@@ -115,6 +115,7 @@
 	const MUSIC_POKEMON_TOWER                ; 6c
 	const MUSIC_ALDER_TOWN                   ; 6d
 	const MUSIC_ROUTE_32                     ; 6e
+	const MUSIC_GIOVANNI_ENCOUNTER           ; 6f
 
 NUM_MUSIC_TRACKS EQU const_value
 
