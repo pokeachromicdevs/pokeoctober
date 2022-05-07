@@ -1,7 +1,7 @@
 	db "LONG NOSE@" ; species name
 	dw 108, 740 ; height, weight
 
-	db "Though still a"
+	db "Although still"
 	next "young, it grows"
 	next "bigger and big-"
 	
