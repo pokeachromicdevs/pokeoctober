@@ -2042,7 +2042,7 @@ ShakeGrass:
 	ret
 
 .GrassObject
-	db $00, PAL_OW_TREE, SPRITEMOVEDATA_GRASS
+	db $00, PAL_OW_RED, SPRITEMOVEDATA_GRASS
 
 ShakeScreen:
 	push bc
