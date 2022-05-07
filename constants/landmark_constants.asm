@@ -7,10 +7,12 @@
 	const ROUTE_29          ; 02
 	const CHERRYGROVE_WOODS 
 	const CHERRYGROVE_CITY  ; 03
+	const SAKURA_SHRINE
 	const ROUTE_30          ; 04
 	const ROUTE_31          ; 05
 	const VIOLET_CITY       ; 06
 	const SPROUT_TOWER      ; 07
+	const ZEN_GARDEN
 	const ROUTE_32          ; 08
 	const DREAD_WOODS
 	const ALDER_TOWN

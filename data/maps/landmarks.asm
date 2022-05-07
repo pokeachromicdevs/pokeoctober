@@ -13,10 +13,12 @@ Landmarks:
 	landmark 124, 100, Route29Name
 	landmark 116, 100, CherrygroveWoodsName
 	landmark 100, 100, CherrygroveCityName
+	landmark 100,  98, SakuraShrineName
 	landmark 100,  84, Route30Name
 	landmark 100,  60, Route31Name
 	landmark  84,  60, VioletCityName
-	landmark  85,  58, SproutTowerName
+	landmark  84,  60, SproutTowerName
+	landmark  85,  58, ZenGardenName
 	landmark  84,  92, Route32Name
 	landmark  82,  92, DreadWoodsName
 	landmark  84, 124, AlderTownName
@@ -123,6 +125,7 @@ BlackthornCityName:  db "BLACKTHORN¯CITY@"     ; Yamanashi
 LakeOfRageName:      db "LAKE OF¯RAGE@"        ; Biwako / lake Biwa
 SilverCaveName:      db "SILVER CAVE@"
 SproutTowerName:     db "SPROUT¯TOWER@"
+ZenGardenName:       db "ZEN¯GARDEN@"
 RuinsOfAlphName:     db "RUINS¯OF ALPH@"
 UnionCaveName:       db "UNION CAVE@"
 SlowpokeWellName:    db "SLOWPOKE¯WELL@"
@@ -215,3 +218,4 @@ SpecialMapName:      db "SPECIAL@"
 CherrygroveWoodsName:db "CHERRYGROVE¯WOODS@"
 CitrineIslandsName:  db "CITRINE¯ISLAND@"
 DreadWoodsName:  db "DREAD WOODS@"
+SakuraShrineName: db "SAKURA¯SHRINE@"
