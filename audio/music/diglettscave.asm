@@ -20,6 +20,7 @@ Digda01_Ch1:
 
 	tempo 144
 	volume 7, 7
+	pitch_offset 1
     duty_cycle 1
 	note_type 12, 11, 3
 .loop
