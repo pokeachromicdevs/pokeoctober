@@ -2035,13 +2035,26 @@ SpawnEmote:
 
 ShakeGrass:
 	push bc
+	ld a, [wMapTileset]
+
+	cp TILESET_PARK
+	jr nz, .normal
+
+	ld de, .RedGrassObject
+
+	jr .finish
+.normal
 	ld de, .GrassObject
+.finish
 	call CopyTempObjectData
 	call InitTempObject
 	pop bc
 	ret
 
 .GrassObject
+	db $00, PAL_OW_TREE, SPRITEMOVEDATA_GRASS
+
+.RedGrassObject
 	db $00, PAL_OW_RED, SPRITEMOVEDATA_GRASS
 
 ShakeScreen:
