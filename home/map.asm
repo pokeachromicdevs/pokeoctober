@@ -145,10 +145,10 @@ LoadMetatiles::
 	; Set hl to the address of the current metatile data ([wTilesetBlocksAddress] + (a) tiles).
 	; This is buggy; it wraps around past 128 blocks.
 	; To fix, uncomment the line below.
-	add a ; Comment or delete this line to fix the above bug.
+	; add a ; Comment or delete this line to fix the above bug.
 	ld l, a
 	ld h, 0
-	; add hl, hl
+	add hl, hl
 	add hl, hl
 	add hl, hl
 	add hl, hl
