@@ -243,7 +243,11 @@ ENDM
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 15
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 16
-	map_const VIOLET_GYM,                                  10,  9 ;  3
+	map_const VIOLET_GYM,                                  10,  9 ; 17
+	map_const DREAD_WOODS,                                 16, 20 ; 18
+	map_const ZEN_GARDEN,                                  20, 18 ; 19
+	map_const VIOLET_HERB_SHOP,                             9,  5 ; 20
+	map_const ZEN_GARDEN_GATE,                              5,  4 ; 21
 
 	
 	newgroup                                                      ; 11

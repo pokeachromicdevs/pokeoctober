@@ -204,6 +204,7 @@ Route40BattleTowerGate_Blocks:
 Route2Gate_Blocks:
 Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
+ZenGardenGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 	
 BetaEcruteakCity_Blocks:
@@ -1008,3 +1009,13 @@ CitrineInn1F_Blocks:
 
 CitrineInn2F_Blocks:
 	INCBIN "maps/capumon/CitrineInn2F.blk"
+
+DreadWoods_Blocks:
+	INCBIN "maps/DreadWoods.blk"
+
+ZenGarden_Blocks:
+	INCBIN "maps/ZenGarden.blk"
+
+VioletHerbShop_Blocks:
+	INCBIN "maps/VioletHerbShop.blk"
+

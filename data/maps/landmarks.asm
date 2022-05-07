@@ -18,6 +18,7 @@ Landmarks:
 	landmark  84,  60, VioletCityName
 	landmark  85,  58, SproutTowerName
 	landmark  84,  92, Route32Name
+	landmark  82,  92, DreadWoodsName
 	landmark  84, 124, AlderTownName
 	landmark  68, 124, RuinsOfAlphName
 	landmark  84, 124, UnionCaveName
@@ -213,3 +214,4 @@ BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"
 CherrygroveWoodsName:db "CHERRYGROVE¯WOODS@"
 CitrineIslandsName:  db "CITRINE¯ISLAND@"
+DreadWoodsName:  db "DREAD WOODS@"

@@ -105,10 +105,14 @@ ENDM
 	connection west, CherrygroveShrine, CHERRYGROVE_SHRINE, 0
 	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, 9
 	
-	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
+	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST | NORTH
+	connection north, ZenGarden, ZEN_GARDEN, -1
 	connection south, Route32, ROUTE_32, 0
 	connection west, Route36, ROUTE_36, 0
 	connection east, Route31, ROUTE_31, 9
+
+	map_attributes ZenGarden, ZEN_GARDEN, $05, SOUTH
+	connection south, VioletCity, VIOLET_CITY, 1
 	
 	map_attributes AlderTown, ALDER_TOWN, $35, NORTH | WEST
 	connection north, Route32, ROUTE_32, 0
@@ -717,4 +721,9 @@ ENDM
 	map_attributes CitrineMart, CITRINE_MART, $00, 0
 	map_attributes CitrineInn1F, CITRINE_INN_1F, $00, 0
 	map_attributes CitrineInn2F, CITRINE_INN_2F, $00, 0
+
+	map_attributes DreadWoods, DREAD_WOODS, $05, 0
+	map_attributes VioletHerbShop, VIOLET_HERB_SHOP, $00, 0
+
+	map_attributes ZenGardenGate, ZEN_GARDEN_GATE, $00, 0
 

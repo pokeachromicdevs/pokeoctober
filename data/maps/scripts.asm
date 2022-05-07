@@ -502,3 +502,8 @@ INCLUDE "maps/capumon/CitrineMart.asm"
 INCLUDE "maps/capumon/CitrineInn1F.asm"
 INCLUDE "maps/capumon/CitrineInn2F.asm"
 
+INCLUDE "maps/DreadWoods.asm"
+INCLUDE "maps/ZenGarden.asm"
+INCLUDE "maps/ZenGardenGate.asm"
+INCLUDE "maps/VioletHerbShop.asm"
+
