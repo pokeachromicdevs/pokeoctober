@@ -1,541 +1,333 @@
 Music_LookGiovanni:
 	channel_count 4
-	channel 1, Sakaki01_Ch1
-	channel 2, Sakaki01_Ch2
-	channel 3, Sakaki01_Ch3
-	channel 4, Sakaki01_Ch4
+	channel 1, Music_LookGiovanni_Ch1
+	channel 2, Music_LookGiovanni_Ch2
+	channel 3, Music_LookGiovanni_Ch3
+	channel 4, Music_LookGiovanni_Ch4
 
-
-
-;----------------------------------------
-Sakaki01_Ch1:
-;----------------------------------------
-	tempo 144
+Music_LookGiovanni_Ch1::
+	tempo 140
 	volume 7, 7
 	duty_cycle 3
 	vibrato 8, 1, 4
-; P1-1
-	note_type 8, 11, 3
+	note_type 8, 11, 2
 	octave 3
-	note A_,2
-	rest 4
-	note A_,2
-	note A_,2
-	note A_,2
-	note A#,2
-	rest 4
-	note A#,2
-	rest 4
-; P1-2
-	note G_,2
-	rest 4
-	note G_,2
-	rest 4
-	note A_,2
-	rest 4
-	note E_,2
-	rest 4
-; P1-3
-	note A_,2
-	rest 4
-	note A_,2
-	note A_,2
-	note A_,2
-	note A#,2
-	rest 4
-	note A#,2
-	rest 4
-; P1-4
-	note A_,2
-	rest 4
-	note G_,2
-	rest 4
-	note A_,2
-	rest 10
-; P1-5
-	note A_,2
-	rest 4
-	note A_,2
-	note A_,2
-	note A_,2
-	note A#,2
-	rest 4
-	note A#,2
-	rest 4
-; P1-6
-	note G_,2
-	rest 4
-	note G_,2
-	rest 4
-	note A_,2
-	rest 4
-	note E_,2
-	rest 4
-; P1-7
-	note A_,2
-	rest 4
-	note A_,2
-	note A_,2
-	note A_,2
-	note A#,2
-	rest 4
-	note A#,2
-	rest 4
-; P1-8
-	note G_,2
-	rest 4
+	note A_, 6
+	note A_, 2
+	note A_, 2
+	note A_, 2
+	note A#, 6
+	note A#, 6
+	note G_, 6
+	note G_, 6
+	note A_, 6
+	note E_, 6
+	note A_, 6
+	note A_, 2
+	note A_, 2
+	note A_, 2
+	note A#, 6
+	note A#, 6
+	note A_, 6
+	note G_, 6
+	note A_, 12
+
+Music_LookGiovanni_branch_82fde::
+	note A_, 6
+	note A_, 2
+	note A_, 2
+	note A_, 2
+	note A#, 6
+	note A#, 6
+	note G_, 6
+	note G_, 6
+	note A_, 6
+	note E_, 6
+	note A_, 6
+	note A_, 2
+	note A_, 2
+	note A_, 2
+	note A#, 6
+	note A#, 6
+	note G_, 6
 	octave 4
-	note D#,2
-	rest 4
-	note D_,2
-	rest 16
-; P1-9 -
+	note D#, 6
+	note D_, 12
 	rest 16
 	rest 16
-; P1-10 -
 	rest 16
 	rest 16
-; P1-11 -
 	rest 16
-	rest 10
-; P1-12
+	rest 16
 	octave 3
-	note A_,2
-	rest 4
-; P1-13 --- tied
-	note A_,2
-	note A_,2
-	note A_,2
-	note A#,2
-	rest 4
-	note A#,2
-	rest 4
-; P1-14
-	note G_,2
-	rest 4
-	note G_,2
-	rest 4
-	note A_,2
-	rest 4
-	note E_,2
-	rest 4
-; P1-15
-	note A_,2
-	rest 4
-	note A_,2
-	note A_,2
-	note A_,2
-	note A#,2
-	rest 4
-	note A#,2
-	rest 4
-; P1-16
-	note A_,2
-	rest 4
-	note G_,2
-	rest 4
-	note A_,2
-	rest 16
-; P1-17 -
-	rest 16
-	rest 2
-	sound_ret
-;----------------------------------------
-Sakaki01_Ch2:
-;----------------------------------------
+	note A_, 6
+	note A_, 2
+	note A_, 2
+	note A_, 2
+	note A#, 6
+	note A#, 6
+	note G_, 6
+	note G_, 6
+	note A_, 6
+	note E_, 6
+	note A_, 6
+	note A_, 2
+	note A_, 2
+	note A_, 2
+	note A#, 6
+	note A#, 6
+	note A_, 6
+	note G_, 6
+	note A_, 12
+	sound_loop 0, Music_LookGiovanni_branch_82fde
+
+
+Music_LookGiovanni_Ch2::
 	duty_cycle 2
-	vibrato 6, 1, 5
-; P2-1
-	note_type 8, 13, 3
+	note_type 8, 12, 2
 	octave 4
-	note D_,2
-	rest 4
-	note D_,2
-	note D_,2
-	note D_,2
-	note D#,2
-	rest 4
-	note D#,2
-	rest 4
-; P2-2
-	note C_,2
-	rest 4
-	note C_,2
-	rest 4
-	note D_,2
-	rest 4
+	note D_, 6
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	note D#, 6
+	note D#, 6
+	note C_, 6
+	note C_, 6
+	note D_, 6
 	octave 3
-	note A_,2
-	rest 4
-; P2-3
+	note A_, 6
 	octave 4
-	note D_,2
-	rest 4
-	note D_,2
-	note D_,2
-	note D_,2
-	note D#,2
-	rest 4
-	note D#,2
-	rest 4
-; P2-4
-	note D_,2
-	rest 4
-	note A#,2
-	rest 4
-	note A_,2
-	rest 10
-; P2-5
-	note D_,2
-	rest 4
-	note D_,2
-	note D_,2
-	note D_,2
-	note D#,2
-	rest 4
-	note D#,2
-	rest 4
-; P2-6
-	note C_,2
-	rest 4
-	note C_,2
-	rest 4
-	note D_,2
-	rest 4
+	note D_, 6
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	note D#, 6
+	note D#, 6
+	note D_, 6
+	note A#, 6
+	note A_, 12
+
+Music_LookGiovanni_branch_8302a::
+	note D_, 6
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	note D#, 6
+	note D#, 6
+	note C_, 6
+	note C_, 6
+	note D_, 6
 	octave 3
-	note A_,2
-	rest 4
-; P2-7
+	note A_, 6
 	octave 4
-	note D_,2
-	rest 4
-	note D_,2
-	note D_,2
-	note D_,2
-	note D#,2
-	rest 4
-	note D#,2
-	rest 4
-; P2-8
-	note C_,2
-	rest 4
-	note G#,2
-	rest 4
-	note G_,2
-	rest 10
-; P2-9
+	note D_, 6
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	note D#, 6
+	note D#, 6
+	note C_, 6
+	note G#, 6
+	note G_, 12
+	note_type 8, 9, 0
 	octave 3
-	note D#,16
-	note D#,8
-; P2-10
-	note D#,16
-	note D#,8
-; P2-11
+	note D#, 16
+	note D#, 8
+	note D#, 16
+	note D#, 8
 	octave 2
-	note A#,16
-	note A#,8
-; P2-12
+	note A#, 16
+	note A#, 8
 	octave 3
-	note D#,12
-	note F_,12
-; P2-13
+	note D#, 12
+	note F_, 12
+	note_type 8, 12, 2
 	octave 4
-	note D_,2
-	rest 4
-	note D_,2
-	note D_,2
-	note D_,2
-	note D#,2
-	rest 4
-	note D#,2
-	rest 4
-; P2-14
-	note C_,2
-	rest 4
-	note C_,2
-	rest 4
-	note D_,2
-	rest 4
+	note D_, 6
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	note D#, 6
+	note D#, 6
+	note C_, 6
+	note C_, 6
+	note D_, 6
 	octave 3
-	note A_,2
-	rest 4
-; P2-15
+	note A_, 6
 	octave 4
-	note D_,2
-	rest 4
-	note D_,2
-	note D_,2
-	note D_,2
-	note D#,2
-	rest 4
-	note D#,2
-	rest 4
-; P2-16
-	note D_,2
-	rest 4
-	note A#,2
-	rest 4
-	note A_,2
-	rest 16
-; P2-17 -
-	rest 16
-	rest 2
-	sound_ret
-;----------------------------------------
-Sakaki01_Ch3:
-;----------------------------------------
+	note D_, 6
+	note D_, 2
+	note D_, 2
+	note D_, 2
+	note D#, 6
+	note D#, 6
+	note D_, 6
+	note A#, 6
+	note A_, 12
+	sound_loop 0, Music_LookGiovanni_branch_8302a
+
+
+Music_LookGiovanni_Ch3::
 	note_type 12, 1, 0
-; P3-1 -
+	vibrato 2, 1, 5
 	rest 16
-; P3-2 -
 	rest 12
 	octave 4
-	note C_,4
-; P3-3
-	note D_,8
-	note D#,8
-; P3-4
-	note G_,8
-	note A#,8
-; P3-5
-	note A_,8
-	note A#,8
-; P3-6
-	note G_,8
-	note A_,4
-	note D_,4
-; P3-7
-	note A_,8
-	note A#,8
-; P3-8
+	note C_, 4
+	note D_, 8
+	note D#, 8
+	note G_, 8
+	note A#, 8
+
+Music_LookGiovanni_branch_83075::
+	note A_, 8
+	note A#, 8
+	note G_, 8
+	note A_, 4
+	note D_, 4
+	note A_, 8
+	note A#, 8
 	octave 5
-	note C#,8
-	note D_,8
-; P3-9
-	note D#,16
-; P3-10
-	note D#,16
-; P3-11
+	note C#, 8
+	note D_, 8
+	note D#, 16
+	note D#, 16
 	octave 4
-	note A#,16
-; P3-12
+	note A#, 16
 	octave 5
-	note D#,8
-	note F_,8
-; P3-13
-	note D_,16
-; P3-14
-	note D_,16
-; P3-15
+	note D#, 8
+	note F_, 8
 	octave 4
-	note D_,8
-	note D#,8
-; P3-16
-	note G_,8
-	note A#,8
-; P3-17 -
-	rest 16
-	sound_ret
-;----------------------------------------
-Sakaki01_Ch4:
-;----------------------------------------
-; P4-1
-	togglenoise 0
+	note D_, 16
+	note D_, 16
+	octave 4
+	note D_, 8
+	note D#, 8
+	note G_, 8
+	note A#, 8
+	sound_loop 0, Music_LookGiovanni_branch_83075
+
+
+Music_LookGiovanni_Ch4::
 	drum_speed 12
-	note D_,1
-	rest 3
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-2
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-3
-	note D_,1
-	rest 3
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-4
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-5
-	note D_,1
-	rest 3
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 4
+	drum_note 3, 4
+
+Music_LookGiovanni_branch_830c3::
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-6
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-7
-	note D_,1
-	rest 3
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-8
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-9
-	note D_,1
-	rest 3
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
-; P4-10
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
-	note D_,2
-	note D_,2
-	note D_,2
-	note D_,2
-	note D_,2
-	note D_,2
-; P4-11
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-12
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 3
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-; P4-13
-	note D_,1
-	rest 3
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 4
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-14
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-15
-	note D_,1
-	rest 3
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 4
 	drum_speed 8
-	note D_,2
-	note D_,2
-	note D_,2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
 	drum_speed 12
-	note D_,1
-	rest 3
-	note D_,1
-	rest 3
-; P4-16
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 1
-	note D_,1
-	rest 3
-	note D_,1
-; P4-17 -
-	rest 16
-; P4-18 -
-	rest 3
-	sound_ret
+	drum_note 3, 4
+	drum_note 3, 4
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 2
+	drum_note 3, 4
+	drum_note 3, 4
+	sound_loop 0, Music_LookGiovanni_branch_830c3
