@@ -31,6 +31,7 @@ OutdoorSprites:
 	dw CherrygroveGroupSprites
 	dw SnowGroupSprites
 	dw CitrineGroupSprites
+	dw ShrineGroupSprites
 
 PalletGroupSprites:
 	db SPRITE_SUICUNE
@@ -609,6 +610,31 @@ CitrineGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_FRUIT_TREE
 	db SPRITE_POKE_BALL
+	
+ShrineGroupSprites:
+	db SPRITE_SUICUNE
+	db SPRITE_SILVER_TROPHY
+	db SPRITE_FAMICOM
+	db SPRITE_POKEDEX
+	db SPRITE_WILL
+	db SPRITE_KAREN
+	db SPRITE_NURSE
+	db SPRITE_FISHER
+	db SPRITE_BIG_LAPRAS
+	db SPRITE_BIG_ONIX
+	db SPRITE_SUDOWOODO
+	db SPRITE_BIG_SNORLAX
+	db SPRITE_SOLDIER
+	db SPRITE_TEACHER
+	db SPRITE_GRANNY
+	db SPRITE_SUPER_NERD
+	db SPRITE_YOUNGSTER
+	db SPRITE_SAGE
+	db SPRITE_GRAMPS
+	db SPRITE_BUG_CATCHER
+	db SPRITE_LASS
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
 
 DungeonsGroupSprites:
 	db SPRITE_SUICUNE
@@ -672,3 +698,4 @@ CableClubGroupSprites:
 	db SPRITE_FISHING_GURU
 	db SPRITE_POKE_BALL
 	db SPRITE_POKEDEX
+
