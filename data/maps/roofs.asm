@@ -36,9 +36,8 @@ MapGroupRoofs:
 	db ROOF_NEW_BARK  ; 24 (New Bark)
 	db -1             ; 25
 	db -1             ; 26 (Cherrygrove)
-	db ROOF_NEW_BARK  ; 27 (Snow)
-	db -1             ; 28 (Citrine)
-	db -1             ; 29 (Shrine)
+	db -1             ; 27 (Citrine)
+	db -1             ; 28 (Shrine)
 Roofs:
 ; entries correspond to ROOF_* constants
 INCBIN "gfx/tilesets/roofs/new_bark.2bpp"

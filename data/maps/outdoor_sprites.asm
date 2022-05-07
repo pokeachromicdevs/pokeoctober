@@ -29,7 +29,6 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
-	dw SnowGroupSprites
 	dw CitrineGroupSprites
 	dw ShrineGroupSprites
 
