@@ -497,7 +497,7 @@ ENDM
 	map_const CHERRYGROVE_WOODS,                           30,  9
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
 	map_const SILENT_POKECENTER_1F,                         8,  4 ; 14
-	map_const CHERRYGROVE_SHRINE,                          18,  18 ;15
+	map_const CHERRYGROVE_SHRINE,                         14,  18 ;15
 	map_const CHERRYGROVE_FISHER_HOUSE,                     4,  4 ;  8
 	map_const CHERRYGROVE_SHRINE_GATE,                      5,  4 ; 19
 

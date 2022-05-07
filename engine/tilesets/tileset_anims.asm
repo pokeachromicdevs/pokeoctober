@@ -49,13 +49,13 @@ TilesetKantoAnim:
 	dw NULL,  DoneTileAnimation
 
 TilesetParkAnim:
-	dw vTiles2 tile $14, AnimateWaterTile
+	;dw vTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
-	dw vTiles2 tile $5f, AnimateFountain
+	;dw vTiles2 tile $5f, AnimateFountain
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateFlowerTile
+	;dw NULL,  AnimateFlowerTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  StandingTileFrame8
