@@ -13,8 +13,8 @@ CGShrineGateOfficerScript:
 	para "Out of all places"
 	line "you could possibly"
 	para "mess around, it"
-	line "better not be here"
-	cont "kid."
+	line "better not be"
+	cont "here, kid."
 	done
 
 CGShrineGateMysticScript:
@@ -50,4 +50,4 @@ CherrygroveShrineGate_MapEvents:
 
 	db 2 ; object events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CGShrineGateOfficerScript, -1
-	object_event  1,  2, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CGShrineGateMysticScript, -1
+	object_event  1,  2, SPRITE_MYSTIC, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CGShrineGateMysticScript, -1
