@@ -149,6 +149,7 @@ INCLUDE "audio/music/cinnabarisland.asm"
 INCLUDE "audio/music/route24.asm"
 INCLUDE "audio/music/profbattle.asm"
 INCLUDE "audio/music/pokemontower.asm"
+INCLUDE "audio/music/aldertown.asm"
 
 
 SECTION "Sound Effects", ROMX

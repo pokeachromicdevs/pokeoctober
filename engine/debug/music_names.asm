@@ -108,4 +108,5 @@ Debug_MusicNames::
 	db "Routes 24, 25@@@@@"
 	db "Battle! Oak, Elm@@"
 	db "Pokemon Tower@@@@@"
+	db "Alder Town@@@@@@@@"
 

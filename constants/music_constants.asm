@@ -113,6 +113,7 @@
 	const MUSIC_ROUTE_24                     ; 6a
 	const MUSIC_PROF_BATTLE                  ; 6b
 	const MUSIC_POKEMON_TOWER                ; 6c
+	const MUSIC_ALDER_TOWN                   ; 6d
 
 NUM_MUSIC_TRACKS EQU const_value
 

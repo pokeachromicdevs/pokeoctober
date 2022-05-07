@@ -112,3 +112,4 @@ Music:
 	dba Music_Route24
 	dba Music_ProfBattle
 	dba Music_PokemonTower
+	dba Music_AlderTown
