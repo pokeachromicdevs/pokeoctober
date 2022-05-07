@@ -113,3 +113,4 @@ Music:
 	dba Music_ProfBattle
 	dba Music_PokemonTower
 	dba Music_AlderTown
+	dba Music_Route32

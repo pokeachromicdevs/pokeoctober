@@ -150,7 +150,7 @@ INCLUDE "audio/music/route24.asm"
 INCLUDE "audio/music/profbattle.asm"
 INCLUDE "audio/music/pokemontower.asm"
 INCLUDE "audio/music/aldertown.asm"
-
+INCLUDE "audio/music/route32.asm"
 
 SECTION "Sound Effects", ROMX
 
