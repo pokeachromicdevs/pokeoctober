@@ -12,6 +12,7 @@
 	const VIOLET_CITY       ; 06
 	const SPROUT_TOWER      ; 07
 	const ROUTE_32          ; 08
+	const DREAD_WOODS
 	const ALDER_TOWN
 	const RUINS_OF_ALPH     ; 09
 	const UNION_CAVE        ; 0a
@@ -51,7 +52,6 @@
 	const DARK_CAVE         ; 2c
 	const ROUTE_46          ; 2d
 	const SILVER_CAVE       ; 2e
-	const DREAD_WOODS       ; 2f
 
 KANTO_LANDMARK EQU const_value
 	const PALLET_TOWN       ; 2f
