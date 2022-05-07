@@ -101,6 +101,8 @@ const_value = -1
 	const SPAWN_CHERRYGROVE_WOODS
 	const SPAWN_CHERRYGROVE_SHRINE
 	const SPAWN_ALDER
+; '92 kanto
+	const SPAWN_CITRINE
 
 NUM_SPAWNS EQU const_value
 

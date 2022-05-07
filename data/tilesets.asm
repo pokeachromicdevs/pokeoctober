@@ -50,3 +50,7 @@ Tilesets::
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetSnow
+	tileset TilesetCapumonOverworld
+	tileset TilesetCapumonInn
+	tileset TilesetCapumonMart
+	tileset TilesetCapumonChampCup

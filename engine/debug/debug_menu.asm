@@ -534,6 +534,7 @@ Debug_Warp:
 	db "FUCHSIA@@@@@@"
 	db "CINNABAR@@@@@"
 	db "INDIGO@@@@@@@"
+	db "CITRINE@@@@@@"
 
 .SpawnTable:
 	db SPAWN_HOME
@@ -567,6 +568,7 @@ Debug_Warp:
 	db SPAWN_FUCHSIA
 	db SPAWN_CINNABAR
 	db SPAWN_INDIGO
+	db SPAWN_CITRINE
 .SpawnTableEnd:
 
 NUM_DEBUG_SPAWNS EQU Debug_Warp.SpawnTableEnd - Debug_Warp.SpawnTable

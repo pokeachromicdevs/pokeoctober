@@ -344,3 +344,19 @@ INCBIN "data/tilesets/snow_metatiles.bin"
 
 TilesetSnowColl::
 INCLUDE "data/tilesets/snow_collision.asm"
+
+TilesetCapumonOverworldGFX::  INCBIN  "gfx/tilesets/capumon_overworld.2bpp.lz"
+TilesetCapumonOverworldMeta:: INCBIN  "data/tilesets/capumon_overworld_metatiles.bin"
+TilesetCapumonOverworldColl:: INCLUDE "data/tilesets/capumon_overworld_collision.asm"
+
+TilesetCapumonInnGFX::  INCBIN  "gfx/tilesets/capumon_inn.2bpp.lz"
+TilesetCapumonInnMeta:: INCBIN  "data/tilesets/capumon_inn_metatiles.bin"
+TilesetCapumonInnColl:: INCLUDE "data/tilesets/capumon_inn_collision.asm"
+
+TilesetCapumonMartGFX::  INCBIN  "gfx/tilesets/capumon_mart.2bpp.lz"
+TilesetCapumonMartMeta:: INCBIN  "data/tilesets/capumon_mart_metatiles.bin"
+TilesetCapumonMartColl:: INCLUDE "data/tilesets/capumon_mart_collision.asm"
+
+TilesetCapumonChampCupGFX::  INCBIN  "gfx/tilesets/capumon_champ_cup.2bpp.lz"
+TilesetCapumonChampCupMeta:: INCBIN  "data/tilesets/capumon_champ_cup_metatiles.bin"
+TilesetCapumonChampCupColl:: INCLUDE "data/tilesets/capumon_champ_cup_collision.asm"

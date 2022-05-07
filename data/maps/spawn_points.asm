@@ -44,4 +44,7 @@ SpawnPoints:
 	spawn CHERRYGROVE_WOODS,          29,  2
 	spawn CHERRYGROVE_SHRINE,         33, 23
 	spawn ALDER_TOWN,                  3,  6
+
+; '92 kanto
+	spawn CITRINE_ISLAND,             24, 28
 	spawn N_A,                        -1, -1
