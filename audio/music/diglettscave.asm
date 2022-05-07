@@ -7,9 +7,11 @@
 ;
 
 Music_DiglettsCaveRBY:
-	musicheader 4, 1, Digda01_Ch1
-	musicheader 1, 2, Digda01_Ch2
-	musicheader 1, 3, Digda01_Ch3
+	channel_count 3
+	channel 1, Digda01_Ch1
+	channel 2, Digda01_Ch2
+	channel 3, Digda01_Ch3
+
 
 
 
@@ -20,7 +22,7 @@ Digda01_Ch1:
 
 	tempo 144
 	volume 7, 7
-	pitch_offset 1
+	pitch_offset 3
     duty_cycle 1
 	note_type 12, 11, 3
 .loop
