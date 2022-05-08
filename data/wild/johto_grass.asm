@@ -1676,4 +1676,31 @@ JohtoGrassWildMons:
 	dbw 4, MOIBELLE
 	dbw 4, PARAS;baby Paras when added
 	
+	map_id CHERRYGROVE_SHRINE
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, PIDGEY
+	dbw 2, NATU
+	dbw 2, RATTATA
+	dbw 4, NATU
+	dbw 2, RATTATA
+	dbw 4, PIDGEY
+	dbw 4, RATTATA
+	; day
+	dbw 3, PIDGEY
+	dbw 2, NATU
+	dbw 2, RATTATA
+	dbw 4, PIDGEY
+	dbw 2, BULBASAUR
+	dbw 4, NATU
+	dbw 4, BULBASAUR
+	; nite
+	dbw 3, HOOTHOOT
+	dbw 2, BIPULLA
+	dbw 2, HOOTHOOT
+	dbw 4, ZUBAT
+	dbw 2, ZUBAT
+	dbw 4, BIPULLA
+	dbw 4, ODDISH
+	
 	db -1 ; end
