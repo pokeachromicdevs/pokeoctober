@@ -1691,9 +1691,9 @@ JohtoGrassWildMons:
 	dbw 2, NATU
 	dbw 2, RATTATA
 	dbw 4, PIDGEY
-	dbw 2, BULBASAUR
+	dbw 2, SUNKERN
 	dbw 4, NATU
-	dbw 4, BULBASAUR
+	dbw 4, SUNKERN
 	; nite
 	dbw 3, HOOTHOOT
 	dbw 2, BIPULLA
