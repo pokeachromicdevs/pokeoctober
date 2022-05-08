@@ -145,3 +145,4 @@
 	tilecoll WALL, WALL, WALL, WALL ; 90
 	tilecoll WALL, WALL, WALL, WALL ; 91
 	tilecoll WALL, WALL, WALL, WALL ; 92
+	tilecoll WALL, WALL, HOP_UP, HOP_UP ; 93
