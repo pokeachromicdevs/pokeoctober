@@ -52,8 +52,7 @@ SakuraShrineGrampText:
 	
 	para "blossom home to"
 	line "my wife when the"
-	
-	para "trees bloom."
+	cont "trees bloom."
 	
 	para "Thirty years and"
 	line "it still makes"
