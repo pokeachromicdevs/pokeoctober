@@ -149,28 +149,19 @@ Cry_Hoothoot_2ch:
 	musicheader 1, 6, Cry_Hoothoot_Ch6
 
 Cry_Entei_Ch5:
-	soundinput $ff
-	sound_duty 3, 0, 2, 1
-	sound __,  2, $f8, $05f8
-	sound __,  9, $9f, $04d8
-	sound __,  7, $f8, $05c4
-	sound C_,  5, $f2, $0574
-	soundinput $88
-	endchannel
-
+	; soundinput $ff
+	tone $20
 Cry_Entei_Ch6:
-	sound_duty 3, 0, 3, 0
-	sound __,  2, $c8, $0640
-	sound __,  7, $ff, $0668
-	sound __,  8, $a8, $0534
-	sound C_,  5, $a2, $04a4
+	sound_duty 3, 2, 2, 0
+	sound __,  5, $f7, $455
+	sound __,  9, $f2, $5c8
+	sound __, 17, $f1, $5b0
 	endchannel
 
 Cry_Entei_Ch8:
-	noise __, 11, $d6, $6a
-	noise __,  7, $bc, $6c
-	noise __,  7, $e2, $5c
-	noise C#,  1, $b4, $6c
+	noise __, 8, $87, $4c
+	noise __, 8, $6c, $3f
+	noise __, 8, $52, $4f
 	endchannel
 
 Cry_Magcargo_Ch5:
@@ -365,37 +356,18 @@ Cry_Spinarak_Ch8:
 	endchannel
 
 Cry_Raikou_Ch5:
-	sound_duty 0, 2, 3, 3
-	sound __,  3, $f1, $04b0
-	sound __,  3, $f7, $0590
-	sound __,  9, $f8, $0510
-	sound __,  4, $f2, $06c0
-	sound __,  4, $f8, $06ba
-	sound __,  4, $f2, $06b0
-	sound C_,  1, $f2, $0690
-	endchannel
-
+	tone $20
 Cry_Raikou_Ch6:
-	sound_duty 2, 0, 3, 3
-	sound __,  3, $f1, $0720
-	sound __,  3, $e1, $0650
-	sound __,  5, $f1, $0750
-	sound __,  5, $d1, $03a0
-	sound __,  4, $f1, $0670
-	sound __,  4, $e1, $0680
-	sound __,  4, $f2, $0690
-	sound C_,  1, $e2, $06a0
+	sound_duty 2, 1, 0, 1
+	sound __,  3, $f1, $720
+	sound __,  5, $f7, $758
+	sound __, 17, $f2, $720
 	endchannel
 
 Cry_Raikou_Ch8:
-	noise __,  3, $89, $2e
-	noise __,  3, $99, $1f
-	noise __,  5, $89, $4e
-	noise __,  5, $89, $7b
-	noise __,  4, $d8, $4b
-	noise __,  4, $e7, $4c
-	noise __,  4, $ec, $4d
-	noise C_,  1, $d2, $4f
+	noise __,  3, $81, $4c
+	noise __,  5, $97, $5a
+	noise __, 17, $92, $3e
 	endchannel
 
 Cry_Hoothoot_Ch5:

@@ -256,12 +256,12 @@ PokemonCries::
 	mon_cry CRY_TEDDIURSA,   $176,  $03a ; MAGBY
 	mon_cry CRY_GLIGAR,     -$1cd,  $1a0 ; MILTANK
 	mon_cry CRY_SLOWKING,    $293,  $140 ; BLISSEY
-	mon_cry CRY_RAIKOU,      $22e,  $120 ; RAIKOU
-	mon_cry CRY_ENTEI,       $000,  $1a0 ; ENTEI
-	mon_cry CRY_MAGCARGO,    $000,  $180 ; SUICUNE
+	mon_cry CRY_RAIKOU,      $001,  $140 ; RAIKOU
+	mon_cry CRY_ENTEI,       $123,  $071 ; ENTEI
+	mon_cry CRY_RAIKOU,      $04b,  $0a8 ; SUICUNE
 	mon_cry CRY_RAIKOU,      $05f,  $0d0 ; LARVITAR
 	mon_cry CRY_SPINARAK,   -$1db,  $150 ; PUPITAR
-	mon_cry CRY_RAIKOU,     -$100,  $180 ; TYRANITAR
+	mon_cry CRY_ENTEI,       $153,  $180 ; TYRANITAR
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
