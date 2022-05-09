@@ -100,9 +100,8 @@ Cry_Sunflora:
 	musicheader 1, 8, Cry_Sunflora_Ch8
 
 Cry_Ampharos:
-	musicheader 3, 5, Cry_Ampharos_Ch5
+	musicheader 2, 5, Cry_Ampharos_Ch5
 	musicheader 1, 6, Cry_Ampharos_Ch6
-	musicheader 1, 8, Cry_Ampharos_Ch8
 
 Cry_Totodile:
 	musicheader 3, 5, Cry_Totodile_Ch5
@@ -670,33 +669,19 @@ Cry_Mantine_Ch8:
 	endchannel
 
 Cry_Ampharos_Ch5:
-	sound_duty 2, 3, 1, 3
-.loop
-	sound __,  2, $c1, $0520
-	sound __,  2, $a1, $0420
-	loopchannel 4, .loop
-	dutycycle $0
-	sound __,  5, $78, $0760
-	sound __,  5, $78, $0730
-	sound C_,  9, $c2, $0420
-	endchannel
-
+	tone $20
+	dutycycle 0
+	jumpchannel Cry_Ampharos_Ch6.branch
 Cry_Ampharos_Ch6:
-	sound_duty 2, 0, 3, 0
-	sound __,  9, $f8, $0700
-	sound __,  8, $f8, $0720
-	sound __,  5, $f8, $0790
-	sound __,  5, $f8, $0760
-	sound C_,  9, $f2, $0730
+	sound_duty 1, 0, 0, 0
+.branch:
+	sound __, 5, $3a, $73d
+	sound __, 7, $f8, $762
+	sound __, 7, $f8, $760
+	sound __, 7, $f1, $75e
 	endchannel
 
 Cry_Ampharos_Ch8:
-	noise __,  5, $88, $6d
-	noise __,  5, $d8, $68
-	noise __,  8, $c8, $69
-	noise __,  5, $98, $3a
-	noise __,  5, $98, $3c
-	noise C_,  9, $d2, $5b
 	endchannel
 
 Cry_Cleffa_Ch5:

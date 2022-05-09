@@ -190,7 +190,7 @@ PokemonCries::
 	mon_cry CRY_NATU,       -$0a7,  $168 ; XATU
 	mon_cry CRY_MAREEP,      $022,  $0d8 ; MAREEP
 	mon_cry CRY_MAREEP,     -$007,  $180 ; FLAAFFY
-	mon_cry CRY_AMPHAROS,   -$07c,  $0e8 ; AMPHAROS
+	mon_cry CRY_AMPHAROS,   -$024,  $240 ; AMPHAROS
 	mon_cry CRY_CLEFFA,      $084,  $150 ; BELLOSSOM
 	mon_cry CRY_MARILL,      $11b,  $120 ; MARILL
 	mon_cry CRY_MARILL,      $0b6,  $180 ; AZUMARILL
@@ -240,7 +240,7 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,    $000,  $180 ; OCTILLERY
 	mon_cry CRY_TEDDIURSA,   $002,  $06a ; DELIBIRD
 	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE
-	mon_cry CRY_AMPHAROS,    $8a9,  $180 ; SKARMORY
+	mon_cry CRY_RAIKOU,      $06b,  $280 ; SKARMORY
 	mon_cry CRY_CYNDAQUIL,     0,  288   ; HOUNDOUR 
 	mon_cry CRY_CYNDAQUIL,   531,  128   ; HOUNDOOM 
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
