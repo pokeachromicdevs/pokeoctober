@@ -365,7 +365,3 @@ square_note: MACRO
 	endc
 	dw \4 ; frequency
 ENDM
-
-duty_cycle_pattern: MACRO
-	db (\1 << 6) | (\2 << 4) | (\3 << 2) | (\4 << 0) ; duty cycle pattern
-ENDM

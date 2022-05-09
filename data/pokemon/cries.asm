@@ -212,7 +212,7 @@ PokemonCries::
 	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; MISDREAVUS
 	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
 	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET
-	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; BIPULLA (use until base cries are added)
+	mon_cry CRY_CLEFFA,     -264,  320 ; TWINZ (unique!)
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_GIRAFARIG,   $3fc,  $210 ; TOPSYSPOT
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
