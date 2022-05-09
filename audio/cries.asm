@@ -143,11 +143,6 @@ Cry_Mantine:
 	musicheader 3, 5, Cry_Mantine_Ch5
 	musicheader 1, 6, Cry_Mantine_Ch6
 	musicheader 1, 8, Cry_Mantine_Ch8
-	
-Cry_BetaTotodile:
-	musicheader 3, 5, Cry_BetaTotodile_Ch5
-	musicheader 1, 6, Cry_BetaTotodile_Ch6
-	musicheader 1, 8, Cry_BetaTotodile_Ch8
 
 Cry_Entei_Ch5:
 	soundinput $ff
@@ -738,31 +733,6 @@ Cry_Ampharos_Ch8:
 	noise __,  5, $98, $3a
 	noise __,  5, $98, $3c
 	noise C_,  9, $d2, $5b
-	endchannel
-
-Cry_Totodile_Ch5:
-	sound_duty 2, 0, 3, 0
-	sound __,  9, $f8, $0330
-	sound __,  9, $f8, $0340
-	sound __,  9, $c8, $07b2
-	sound __,  9, $b8, $07b3
-	sound C#,  1, $b2, $07b4
-	endchannel
-
-Cry_Totodile_Ch6:
-	sound_duty 2, 0, 1, 0
-	sound __,  9, $e8, $0320
-	sound __,  9, $e8, $0328
-	sound __,  9, $98, $0780
-	sound __,  9, $88, $0782
-	sound C#,  1, $72, $0784
-	endchannel
-
-Cry_Totodile_Ch8:
-	noise __,  3, $be, $49
-	noise __,  6, $be, $3a
-	noise __,  3, $be, $29
-	noise C#,  9, $d3, $6e
 	endchannel
 
 Cry_Cleffa_Ch5:
@@ -2050,28 +2020,19 @@ Cry_Rattata_Ch8:
 	noise __,  2, $a2, $39
 	noise __,  9, $91, $49
 	endchannel
-	
-Cry_BetaTotodile_Ch5:
-	duty_cycle_pattern 0, 3, 0, 2
-	square_note 8, 15, 8, 816
-	square_note 8, 15, 8, 832
-	square_note 8, 12, 8, 1970
-	square_note 8, 11, 8, 1971
-	square_note 32, 11, 2, 1972
-	sound_ret
 
-Cry_BetaTotodile_Ch6:
-	duty_cycle_pattern 0, 1, 0, 2
-	square_note 8, 14, 8, 800
-	square_note 8, 14, 8, 808
-	square_note 8, 9, 8, 1920
-	square_note 8, 8, 8, 1922
-	square_note 32, 7, 2, 1924
-	sound_ret
+Cry_Totodile_Ch5:
+	tone $0020
 
-Cry_BetaTotodile_Ch8:
-	noise_note 2, 11, -6, 73
-	noise_note 5, 11, -6, 58
-	noise_note 2, 11, -6, 41
-	noise_note 40, 13, 3, 110
-	sound_ret
+Cry_Totodile_Ch6:
+	sound_duty 1, 0, 2, 2
+	sound __,  9, $2b, $0741
+	sound __,  5, $f8, $06f6
+	sound __, 11, $f2, $06e0
+	endchannel
+
+Cry_Totodile_Ch8:
+	noise __,  9, $3d, $50
+	noise __, 15, $72, $42
+	endchannel
+
