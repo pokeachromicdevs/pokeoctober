@@ -144,6 +144,10 @@ Cry_Mantine:
 	musicheader 1, 6, Cry_Mantine_Ch6
 	musicheader 1, 8, Cry_Mantine_Ch8
 
+Cry_Hoothoot_2ch:
+	musicheader 2, 5, Cry_Hoothoot_Ch5
+	musicheader 1, 6, Cry_Hoothoot_Ch6
+
 Cry_Entei_Ch5:
 	soundinput $ff
 	sound_duty 3, 0, 2, 1
@@ -395,34 +399,22 @@ Cry_Raikou_Ch8:
 	endchannel
 
 Cry_Hoothoot_Ch5:
-	sound_duty 2, 1, 2, 1
-	sound __,  5, $78, $0650
-	sound __,  5, $f8, $0660
-	sound __,  5, $f8, $065c
-	sound __,  2, $f8, $067c
-	sound __,  5, $f8, $0680
-	sound __,  5, $f8, $067c
-	sound __,  5, $f8, $0678
-	sound __,  5, $f1, $0674
-	endchannel
+	tone $0020
+	dutycycle 2
+	jumpchannel Cry_Hoothoot_Ch6.branch
 
 Cry_Hoothoot_Ch6:
-	sound_duty 2, 0, 2, 0
-.loop1
-	sound __,  3, $a1, $0600
-	loopchannel 3, .loop1
-.loop2
-	sound __,  3, $a1, $0630
-	loopchannel 4, .loop2
-	sound __,  5, $a2, $0634
-	sound __,  5, $91, $0638
+	sound_duty 3, 2, 1, 0
+.branch:
+	callchannel Cry_Sentret_branch_f312b
+	sound __, 5, 0, 0
+	loopchannel 2, .branch
 	endchannel
 
 Cry_Hoothoot_Ch8:
-	noise __,  2, $68, $36
-	noise C_,  1, $88, $6a
-	noise __,  2, $98, $5e
-	noise C_,  1, $a7, $6e
+	callchannel Cry_Sentret_Ch8
+	noise __, 5, 0, 0
+	loopchannel 2, Cry_Hoothoot_Ch8
 	endchannel
 
 Cry_Sentret_Ch5:

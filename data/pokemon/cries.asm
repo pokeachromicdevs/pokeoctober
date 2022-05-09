@@ -168,8 +168,8 @@ PokemonCries::
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
 	mon_cry CRY_SENTRET,     $08a,  $0b8 ; SENTRET
 	mon_cry CRY_SENTRET,     $06b,  $102 ; FURRET
-	mon_cry CRY_HOOTHOOT,    $091,  $0d8 ; HOOTHOOT
-	mon_cry CRY_HOOTHOOT,    $000,  $1a0 ; NOCTOWL
+	mon_cry CRY_HOOTHOOT_2CH,    $000,  $0a0 ; HOOTHOOT (diff)
+	mon_cry CRY_HOOTHOOT,   -$08e,  $100 ; NOCTOWL (diff)
 	mon_cry CRY_LEDYBA,      $000,  $0de ; LEDYBA
 	mon_cry CRY_LEDYBA,     -$096,  $138 ; LEDIAN
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
