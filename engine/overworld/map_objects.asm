@@ -2041,8 +2041,9 @@ ShakeGrass:
 	jr nz, .normal
 
 	ld de, .RedGrassObject
-
+	
 	jr .finish
+	
 .normal
 	ld de, .GrassObject
 .finish
@@ -2056,6 +2057,9 @@ ShakeGrass:
 
 .RedGrassObject
 	db $00, PAL_OW_RED, SPRITEMOVEDATA_GRASS
+	
+.SnowGrassObject
+	db $00, PAL_OW_SILVER, SPRITEMOVEDATA_GRASS
 
 ShakeScreen:
 	push bc

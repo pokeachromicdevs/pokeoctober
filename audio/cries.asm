@@ -2052,26 +2052,26 @@ Cry_Rattata_Ch8:
 	endchannel
 	
 Cry_BetaTotodile_Ch5:
-	sound_duty  0, 3,  0, 2
-	sound __, 8, 15, 8, 816
-	sound __, 8, 15, 8, 832
-	sound __, 8, 12, 8, 1970
-	sound __, 8, 11, 8, 1971
-	sound __, 32, 11, 2, 1972
+	duty_cycle_pattern 0, 3, 0, 2
+	square_note 8, 15, 8, 816
+	square_note 8, 15, 8, 832
+	square_note 8, 12, 8, 1970
+	square_note 8, 11, 8, 1971
+	square_note 32, 11, 2, 1972
 	sound_ret
 
 Cry_BetaTotodile_Ch6:
-	sound_duty  0, 1,  0, 2
-	sound __, 8, 14, 8, 800
-	sound __, 8, 14, 8, 808
-	sound __, 8, 9, 8, 1920
-	sound __, 8, 8, 8, 1922
-	sound __, 32, 7, 2, 1924
+	duty_cycle_pattern 0, 1, 0, 2
+	square_note 8, 14, 8, 800
+	square_note 8, 14, 8, 808
+	square_note 8, 9, 8, 1920
+	square_note 8, 8, 8, 1922
+	square_note 32, 7, 2, 1924
 	sound_ret
 
 Cry_BetaTotodile_Ch8:
-	noise __, 2, 11, -6, 73
-	noise __, 5, 11, -6, 58
-	noise __, 2, 11, -6, 41
-	noise __,  40, 13, 3, 110
+	noise_note 2, 11, -6, 73
+	noise_note 5, 11, -6, 58
+	noise_note 2, 11, -6, 41
+	noise_note 40, 13, 3, 110
 	sound_ret
