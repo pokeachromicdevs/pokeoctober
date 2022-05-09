@@ -2038,14 +2038,22 @@ ShakeGrass:
 	ld a, [wMapTileset]
 
 	cp TILESET_PARK
-	jr nz, .normal
+	jr z, .redgrass
 
-	ld de, .RedGrassObject
-	
-	jr .finish
-	
-.normal
+	cp TILESET_SNOW
+	jr z, .whitegrass
+
 	ld de, .GrassObject
+	jr .finish
+
+.redgrass
+	ld de, .RedGrassObject
+	jr .finish
+
+.whitegrass
+	ld de, .SnowGrassObject
+	; jr .finish
+
 .finish
 	call CopyTempObjectData
 	call InitTempObject
