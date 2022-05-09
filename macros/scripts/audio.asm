@@ -346,3 +346,26 @@ sound_loop: MACRO
 	loopchannel \1, \2
 ENDM
 
+noise_note: MACRO
+	db \1 ; length
+	if \3 < 0
+		dn \2, %1000 | (\3 * -1) ; volume envelope
+	else
+		dn \2, \3 ; volume envelope
+	endc
+	db \4 ; frequency
+ENDM
+
+square_note: MACRO
+	db \1 ; length
+	if \3 < 0
+		dn \2, %1000 | (\3 * -1) ; volume envelope
+	else
+		dn \2, \3 ; volume envelope
+	endc
+	dw \4 ; frequency
+ENDM
+
+duty_cycle_pattern: MACRO
+	db (\1 << 6) | (\2 << 4) | (\3 << 2) | (\4 << 0) ; duty cycle pattern
+ENDM
