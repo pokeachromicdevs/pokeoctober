@@ -111,4 +111,5 @@ Debug_MusicNames::
 	db "Alder Town@@@@@@@@"
 	db "Route 32@@@@@@@@@@"
 	db "Giovanni Encounter@"
-	db "Citrine Inn Rest@@"
+	db "Citrine Inn Rest@@@"
+	db "Blue Battle@@@@@@@@"

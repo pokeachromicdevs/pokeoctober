@@ -153,6 +153,7 @@ INCLUDE "audio/music/aldertown.asm"
 INCLUDE "audio/music/route32.asm"
 INCLUDE "audio/music/lookgiovanni.asm"
 INCLUDE "audio/music/citrineinnrest.asm"
+INCLUDE "audio/music/bluebattle.asm"
 
 
 SECTION "Sound Effects", ROMX

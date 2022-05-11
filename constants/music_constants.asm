@@ -117,6 +117,7 @@
 	const MUSIC_ROUTE_32                     ; 6e
 	const MUSIC_GIOVANNI_ENCOUNTER           ; 6f
 	const MUSIC_CITRINE_INN_REST             ; 6c
+	const MUSIC_BLUE_BATTLE                  ; 6d
 
 NUM_MUSIC_TRACKS EQU const_value
 

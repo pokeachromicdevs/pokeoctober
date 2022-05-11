@@ -116,3 +116,4 @@ Music:
 	dba Music_Route32
 	dba Music_LookGiovanni
 	dba Music_CitrineInnRest
+	dba Music_BlueBattle
