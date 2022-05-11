@@ -75,6 +75,7 @@ NewPokedexOrder:
 	dw HOPPIP
 	dw SKIPLOOM
 	dw JUMPLUFF
+	dw PARASPOR
 	dw PARAS
 	dw PARASECT
 	dw POLIWAG
@@ -183,6 +184,7 @@ NewPokedexOrder:
 	dw KRABBY
 	dw KINGLER
 	dw SHUCKLE
+	dw SHUQLOUR
 	dw STARYU
 	dw STARMIE
 	dw SHELLDER

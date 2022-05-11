@@ -62,6 +62,7 @@ EggMovePointers2::
 	dw PinecoEggMoves
 	dw NoEggMoves2
 	dw ShuckleEggMoves
+	dw NoEggMoves2
 	dw DunsparceEggMoves
 	dw GligarEggMoves
 	dw NoEggMoves2
@@ -122,7 +123,8 @@ EggMovePointers2::
 	dw VulpiiiEggMoves
 	dw WorfursEggMoves
 	dw DodaerieEggMoves
-
+	dw ParasporEggMoves
+	
 ChikoritaEggMoves:
 	dw VINE_WHIP
 	dw COUNTER
@@ -503,7 +505,9 @@ NoEggMoves2:
 	dw -1 ; end
 	
 MoibelleEggMoves:
-	dw LICK
+	dw BEAT_UP
+	dw SING
+	dw SWEET_KISS
 	dw -1 ; end
 	
 CoaltaEggMoves:
@@ -542,4 +546,14 @@ DodaerieEggMoves:
 	dw HAZE
 	dw FAINT_ATTACK
 	dw FLAIL
+	dw -1 ; end
+	
+ParasporEggMoves:
+	dw FALSE_SWIPE
+	dw SCREECH
+	dw COUNTER
+	dw PSYBEAM
+	dw FLAIL
+	dw LIGHT_SCREEN
+	dw PURSUIT
 	dw -1 ; end

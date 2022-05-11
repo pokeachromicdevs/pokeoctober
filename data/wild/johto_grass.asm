@@ -1671,10 +1671,10 @@ JohtoGrassWildMons:
 	dbw 3, ODDISH
 	dbw 3, MOIBELLE
 	dbw 4, VENONAT
-	dbw 3, GASTLY
+	dbw 3, PARASPOR
 	dbw 3, SPINARAK
 	dbw 4, MOIBELLE
-	dbw 4, PARAS;baby Paras when added
+	dbw 4, PARASPOR
 	
 	map_id CHERRYGROVE_SHRINE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

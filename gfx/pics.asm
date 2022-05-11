@@ -744,6 +744,11 @@ TriculesFrontpic: INCBIN "gfx/pokemon/tricules/front.animated.2bpp.lz"
 TriculesBackpic:  INCBIN "gfx/pokemon/tricules/back.2bpp.lz"
 ChomoswineFrontpic: INCBIN "gfx/pokemon/chomoswine/front.animated.2bpp.lz"
 ChomoswineBackpic:  INCBIN "gfx/pokemon/chomoswine/back.2bpp.lz"
+ShuqlourFrontpic: INCBIN "gfx/pokemon/shuqlour/front.animated.2bpp.lz"
+ShuqlourBackpic:  INCBIN "gfx/pokemon/shuqlour/back.2bpp.lz"
+ParasporFrontpic: INCBIN "gfx/pokemon/paraspor/front.animated.2bpp.lz"
+ParasporBackpic:  INCBIN "gfx/pokemon/paraspor/back.2bpp.lz"
+
 
 SECTION "Pics 22", ROMX
 

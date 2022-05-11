@@ -750,31 +750,34 @@ VileplumeEvosAttacks:
 
 ParasEvosAttacks:
 	dbbw EVOLVE_LEVEL, 24, PARASECT
-	db 0 ; no more evolutions
 	dbw 1, SCRATCH
-	dbw 7, STUN_SPORE
-	dbw 13, POISONPOWDER
-	dbw 19, LEECH_LIFE
-	dbw 25, SPORE
-	dbw 31, SLASH
-	dbw 33, METAL_CLAW
-	dbw 37, GROWTH
-	dbw 43, GIGA_DRAIN
+	dbw 1, ABSORB
+	dbw 6, POISONPOWDER
+	dbw 10, LEECH_LIFE
+	dbw 15, MEGA_DRAIN
+	dbw 21, STUN_SPORE
+	dbw 25, TACKLE ; DUAL_PINCER
+	dbw 30, GIGA_DRAIN
+	dbw 36, SPORE
+	dbw 40, GROWTH
+	dbw 45, SLASH
+	dbw 51, TACKLE ; LUNGE
 	db 0 ; no more level-up moves
 
 ParasectEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
-	dbw 1, STUN_SPORE
-	dbw 1, POISONPOWDER
-	dbw 7, STUN_SPORE
-	dbw 13, POISONPOWDER
-	dbw 19, LEECH_LIFE
-	dbw 28, SPORE
-	dbw 37, SLASH
-	dbw 42, METAL_CLAW
-	dbw 46, GROWTH
-	dbw 55, GIGA_DRAIN
+	dbw 1, ABSORB
+	dbw 6, POISONPOWDER
+	dbw 10, LEECH_LIFE
+	dbw 15, MEGA_DRAIN
+	dbw 21, STUN_SPORE
+	dbw 25, TACKLE ; DUAL_PINCER
+	dbw 30, GIGA_DRAIN
+	dbw 36, SPORE
+	dbw 40, GROWTH
+	dbw 45, SLASH
+	dbw 51, TACKLE ; LUNGE
 	db 0 ; no more level-up moves
 
 VenonatEvosAttacks:
@@ -930,18 +933,18 @@ PrimeapeEvosAttacks:
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
 	db 0 ; no more evolutions
-	db 1, BITE
-	db 1, ROAR
-	db 6, EMBER
-	db 12, LEER
-	db 17, FLAME_WHEEL
-	db 23, REVERSAL
-	db 28, TAKE_DOWN
-	db 34, FLAMETHROWER
-	db 39, AGILITY
-	db 45, CRUNCH
-	db 50, OUTRAGE
-	db 56, FIRE_BLAST
+	dbw 1, BITE
+	dbw 1, ROAR
+	dbw 6, EMBER
+	dbw 12, LEER
+	dbw 17, FLAME_WHEEL
+	dbw 23, REVERSAL
+	dbw 28, TAKE_DOWN
+	dbw 34, FLAMETHROWER
+	dbw 39, AGILITY
+	dbw 45, CRUNCH
+	dbw 50, OUTRAGE
+	dbw 56, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 ArcanineEvosAttacks:

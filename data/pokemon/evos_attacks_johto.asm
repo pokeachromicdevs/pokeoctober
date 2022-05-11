@@ -63,6 +63,7 @@ EvosAttacksPointers2::
 	dw PinecoEvosAttacks
 	dw ForretressEvosAttacks
 	dw ShuckleEvosAttacks
+	dw ShuqlourEvosAttacks
 	dw DunsparceEvosAttacks
 	dw GligarEvosAttacks
 	dw SteelixEvosAttacks
@@ -987,14 +988,35 @@ ForretressEvosAttacks:
 	db 0 ; no more level-up moves
 	
 ShuckleEvosAttacks:
+	dbbw EVOLVE_LEVEL, 22, SHUQLOUR
 	db 0 ; no more evolutions
 	dbw 1, CONSTRICT
 	dbw 1, WITHDRAW
-	dbw 9, WRAP
-	dbw 14, ENCORE
-	dbw 23, SAFEGUARD
-	dbw 28, BIDE
-	dbw 37, REST
+	dbw 4, WRAP
+	dbw 9, ROCK_THROW
+	dbw 13, HEADBUTT
+	dbw 18, RECOVER
+	dbw 22, ROLLOUT 
+	dbw 27, ACID
+	dbw 31, PROTECT
+	dbw 35, ROCK_SLIDE
+	dbw 40, SLUDGE_BOMB
+	db 0 ; no more level-up moves
+	
+ShuqlourEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, CONSTRICT
+	dbw 1, WITHDRAW
+	dbw 6, WRAP
+	dbw 11, ROCK_THROW
+	dbw 15, HEADBUTT
+	dbw 20, RECOVER
+	dbw 22, TOXIC
+	dbw 24, ROLLOUT 
+	dbw 29, ACID
+	dbw 33, PROTECT
+	dbw 37, ROCK_SLIDE
+	dbw 42, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 DunsparceEvosAttacks:

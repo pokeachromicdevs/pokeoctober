@@ -11,11 +11,11 @@ PokemonNames::
 	db "CHARIZARD@"
 	db "SQUIRTLE@@"
 	db "WARTORTLE@"
-	db "BLASTOISE@";needs animation
-	db "CATERPIE@@";needs animation
+	db "BLASTOISE@"
+	db "CATERPIE@@"
 	db "METAPOD@@@"
 	db "BUTTERFREE"
-	db "WEEDLE@@@@";needs animation
+	db "WEEDLE@@@@"
 	db "KAKUNA@@@@"
 	db "BEEDRILL@@"
 	db "PIDGEY@@@@"
@@ -51,9 +51,9 @@ PokemonNames::
 	db "PARAS@@@@@"
 	db "PARASECT@@"
 	db "VENONAT@@@"
-	db "VENOMOTH@@";needs animation
-	db "DIGLETT@@@";needs animation
-	db "DUGTRIO@@@";needs animation
+	db "VENOMOTH@@"
+	db "DIGLETT@@@"
+	db "DUGTRIO@@@"
 	db "MEOWTH@@@@"
 	db "PERSIAN@@@"
 	db "PSYDUCK@@@"
@@ -76,7 +76,7 @@ PokemonNames::
 	db "VICTREEBEL"
 	db "TENTACOOL@"
 	db "TENTACRUEL"
-	db "GEODUDE@@@";needs animation
+	db "GEODUDE@@@"
 	db "GRAVELER@@"
 	db "GOLEM@@@@@"
 	db "PONYTA@@@@"
@@ -107,13 +107,13 @@ PokemonNames::
 	db "EXEGGCUTE@"
 	db "EXEGGUTOR@"
 	db "CUBONE@@@@"
-	db "MAROWAK@@@";needs finalized shading and animation
+	db "MAROWAK@@@"
 	db "HITMONLEE@"
 	db "HITMONCHAN"
 	db "LICKITUNG@"
 	db "KOFFING@@@"
 	db "WEEZING@@@"
-	db "RHYHORN@@@";needs animation
+	db "RHYHORN@@@"
 	db "RHYDON@@@@"
 	db "CHANSEY@@@"
 	db "TANGELA@@@"
@@ -125,14 +125,14 @@ PokemonNames::
 	db "STARYU@@@@"
 	db "STARMIE@@@"
 	db "MIMENTOR@@"
-	db "SCYTHER@@@";needs animation
-	db "JYNX@@@@@@";check Shiny
+	db "SCYTHER@@@"
+	db "JYNX@@@@@@"
 	db "ELECTABUZZ"
 	db "MAGMAR@@@@"
 	db "PINSIR@@@@"
 	db "TAUROS@@@@"
 	db "MAGIKARP@@"
-	db "GYARADOS@@";needs animation
+	db "GYARADOS@@"
 	db "LAPRAS@@@@"
 	db "DITTO@@@@@"
 	db "EEVEE@@@@@"
@@ -155,30 +155,30 @@ PokemonNames::
 	db "MEWTWO@@@@"
 	db "MEW@@@@@@@"
 	db "CHIKORITA@"
-	db "BLOSSOMOLE";needs animation fully programmed in
-	db "BLOSSOMITE";insert GS sprite
+	db "BLOSSOMOLE" 
+	db "BLOSSOMITE"
 	db "CYNDAQUIL@"
 	db "QUILAVA@@@"
 	db "TYPHLOSION"
 	db "TOTODILE@@"
 	db "CROCONAW@@"
-	db "FERALIGATR";needs animation
+	db "FERALIGATR"
 	db "BAYLEEF@@@"
 	db "SENTRET@@@"
-	db "FURRET@@@@";needs animation fully programmed in
+	db "FURRET@@@@" 
 	db "HOOTHOOT@@"
 	db "NOCTOWL@@@"
 	db "LEDYBA@@@@"
 	db "LEDIAN@@@@"
 	db "SPINARAK@@"
-	db "ARIADOS@@@";needs animation fully programmed in
+	db "ARIADOS@@@" 
 	db "CROBAT@@@@"
 	db "YANMA@@@@@"
-	db "TONBOSS@@@";needs animation fully programmed in
-	db "BELLIGNAN@";needs animation fully programmed in
+	db "TONBOSS@@@"
+	db "BELLIGNAN@"
 	db "CHINCHOU@@"
-	db "LANTURN@@@";needs animation fully programmed in
-	db "PICHU@@@@@";check animation
+	db "LANTURN@@@"
+	db "PICHU@@@@@"
 	db "CLEFFA@@@@"
 	db "IGGLYBUFF@"
 	db "TOGEPI@@@@"
@@ -191,69 +191,70 @@ PokemonNames::
 	db "AMPHAROS@@"
 	db "BELLOSSOM@"
 	db "MARILL@@@@"
-	db "AZUMARILL@";needs animation
+	db "AZUMARILL@"
 	db "SUDOWOODO@"
-	db "POLITOED@@";needs beta sprite
-	db "HOPPIP@@@@";needs animation fully programmed in
-	db "SKIPLOOM@@";insert beta sprite
-	db "JUMPLUFF@@";insert beta sprite
-	db "AIPOM@@@@@";insert beta sprite
-	db "SUNKERN@@@";needs animation fully programmed in
+	db "POLITOED@@" 
+	db "HOPPIP@@@@" 
+	db "SKIPLOOM@@"
+	db "JUMPLUFF@@"
+	db "AIPOM@@@@@"
+	db "SUNKERN@@@" 
 	db "SUNFLORA@@"
-	db "LUXSWAN@@@";needs animation
-	db "WOOPER@@@@";needs animation fully programmed in
+	db "LUXSWAN@@@"
+	db "WOOPER@@@@" 
 	db "QUAGSIRE@@"
-	db "ESPEON@@@@";insert beta sprite
-	db "UMBREON@@@";insert beta sprite
-	db "MURKROW@@@";needs animation
+	db "ESPEON@@@@"
+	db "UMBREON@@@"
+	db "MURKROW@@@"
 	db "SLOWKING@@"
 	db "MISDREAVUS"
 	db "UNOWN@@@@@"
 	db "WOBBUFFET@"
-	db "BIPULLA@@@";needs animation fully programmed in
+	db "BIPULLA@@@" 
 	db "GIRAFARIG@"
 	db "TOPSYSPOT@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
-	db "SHUCKLE@@@";needs animation fully programmed in
-	db "DUNSPARCE@";insert beta sprite
-	db "GLIGAR@@@@";insert beta sprite
+	db "SHUCKLE@@@" 
+	db "SHUQLOUR@@"
+	db "DUNSPARCE@"
+	db "GLIGAR@@@@"
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"
 	db "QWILFISH@@"
-	db "SCIZOR@@@@";insert beta sprite
+	db "SCIZOR@@@@"
 	db "TRICULES@@"
-	db "HERACROSS@";needs animation
-	db "SNEASEL@@@";insert beta sprite
-	db "TEDDIURSA@";insert beta sprite
+	db "HERACROSS@"
+	db "SNEASEL@@@"
+	db "TEDDIURSA@"
 	db "URSARING@@"
-	db "SLUGMA@@@@";insert beta sprite
-	db "MAGCARGO@@";change cry
+	db "SLUGMA@@@@"
+	db "MAGCARGO@@"
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
 	db "CHOMOSWINE"
 	db "CORSOLA@@@"
-	db "REMORAID@@";needs animation fully programmed in
-	db "OCTILLERY@";needs animation fully programmed in
-	db "DELIBIRD@@";insert beta sprite
-	db "MANTINE@@@";insert beta sprite
+	db "REMORAID@@" 
+	db "OCTILLERY@" 
+	db "DELIBIRD@@"
+	db "MANTINE@@@"
 	db "SKARMORY@@"
 	db "HOUNDOUR@@"
 	db "HOUNDOOM@@"
-	db "KINGDRA@@@";insert beta sprite
-	db "PHANPY@@@@";needs animation fully programmed in
+	db "KINGDRA@@@"
+	db "PHANPY@@@@" 
 	db "DONPHAN@@@"
 	db "PORYGON2@@"
-	db "STANTLER@@";insert beta sprite
+	db "STANTLER@@"
 	db "SMEARGLE@@"
-	db "TYROGUE@@@";needs animation fully programmed in
-	db "HITMONTOP@";needs animation fully programmed in
+	db "TYROGUE@@@" 
+	db "HITMONTOP@" 
 	db "SMOOCHUM@@"
 	db "ELEKID@@@@"
 	db "MAGBY@@@@@"
 	db "MILTANK@@@"
-	db "BLISSEY@@@";insert beta sprite
+	db "BLISSEY@@@"
 	db "RAIKOU@@@@"
 	db "ENTEI@@@@@"
 	db "SUICUNE@@@"
@@ -262,17 +263,18 @@ PokemonNames::
 	db "TYRANITAR@"
 	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"
-	db "CELEBI@@@@";insert beta sprite
-	db "COINPUR@@@";check animation
-	db "ADBARSTORK";needs animation fully programmed in
-	db "PUPPERON@@";needs animation and palette fix
-	db "MOIBELLE@@";needs animation fully programmed in
-	db "BELLEDAM@@";needs animation
-	db "CLEFLING@@";needs animation fully programmed in
-	db "MALLODY@@@";needs animation fully programmed in
-	db "CAMOUFLAKE";needs animation fully programmed in
-	db "COALTA@@@@";needs animation fully programmed in
-	db "BURGELA@@@";needs animation fully programmed in
-	db "VULPIII@@@";needs animation fully programmed in
-	db "WORFURS@@@";needs animation fully programmed in
-	db "DODAERIE@@";Needs animation fully programmed in
+	db "CELEBI@@@@"
+	db "COINPUR@@@"
+	db "ADBARSTORK" 
+	db "PUPPERON@@" 
+	db "MOIBELLE@@" 
+	db "BELLEDAM@@"
+	db "CLEFLING@@" 
+	db "MALLODY@@@" 
+	db "CAMOUFLAKE" 
+	db "COALTA@@@@" 
+	db "BURGELA@@@" 
+	db "VULPIII@@@" 
+	db "WORFURS@@@" 
+	db "DODAERIE@@" 
+	db "PARASPOR@@"

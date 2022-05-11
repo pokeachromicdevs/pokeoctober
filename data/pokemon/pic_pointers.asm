@@ -439,6 +439,8 @@ PokemonPicPointers::
 	dba ForretressBackpic
 	dba ShuckleFrontpic
 	dba ShuckleBackpic
+	dba ShuqlourFrontpic
+	dba ShuqlourBackpic
 	dba DunsparceFrontpic
 	dba DunsparceBackpic
 	dba GligarFrontpic
@@ -559,3 +561,5 @@ PokemonPicPointers::
 	dba WorfursBackpic
 	dba DodaerieFrontpic
 	dba DodaerieBackpic
+	dba ParasporFrontpic
+	dba ParasporBackpic

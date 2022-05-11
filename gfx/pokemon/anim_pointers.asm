@@ -211,6 +211,7 @@ AnimationPointers:
 	dw PinecoAnimation
 	dw ForretressAnimation
 	dw ShuckleAnimation
+	dw ShuqlourAnimation
 	dw DunsparceAnimation
 	dw GligarAnimation
 	dw SteelixAnimation
@@ -272,3 +273,4 @@ AnimationPointers:
 	dw VulpiiiAnimation
 	dw WorfursAnimation
 	dw DodaerieAnimation
+	dw ParasporAnimation

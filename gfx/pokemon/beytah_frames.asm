@@ -16,6 +16,8 @@ BurgelaFrames:    INCLUDE "gfx/pokemon/burgela/frames.asm"
 VulpiiiFrames:    INCLUDE "gfx/pokemon/vulpiii/frames.asm"
 WorfursFrames:    INCLUDE "gfx/pokemon/worfurs/frames.asm"
 DodaerieFrames:   INCLUDE "gfx/pokemon/dodaerie/frames.asm"
+ShuqlourFrames:   INCLUDE "gfx/pokemon/shuqlour/frames.asm"
+ParasporFrames:   INCLUDE "gfx/pokemon/paraspor/frames.asm"
 
 
 

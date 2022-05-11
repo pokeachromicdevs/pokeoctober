@@ -170,6 +170,7 @@ AlphabeticalPokedexOrder:
 	dw ONIX
 	dw PARAS
 	dw PARASECT
+	dw PARASPOR
 	dw PERSIAN
 	dw PETAMOLE
 	dw PHANPY
@@ -213,6 +214,7 @@ AlphabeticalPokedexOrder:
 	dw SENTRET
 	dw SHELLDER
 	dw SHUCKLE
+	dw SHUQLOUR
 	dw SKARMORY
 	dw SKIPLOOM
 	dw SLOWBRO

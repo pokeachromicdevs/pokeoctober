@@ -456,6 +456,8 @@ INCBIN "gfx/pokemon/forretress/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/forretress/shiny.pal"
 INCBIN "gfx/pokemon/shuckle/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/shuckle/shiny.pal"
+INCBIN "gfx/pokemon/shuqlour/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/shuqlour/shiny.pal"
 INCBIN "gfx/pokemon/dunsparce/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/dunsparce/shiny.pal"
 INCBIN "gfx/pokemon/gligar/front.gbcpal", middle_colors
@@ -576,3 +578,5 @@ INCBIN "gfx/pokemon/worfurs/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/worfurs/shiny.pal"
 INCBIN "gfx/pokemon/dodaerie/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/dodaerie/shiny.pal"
+INCBIN "gfx/pokemon/paraspor/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/paraspor/shiny.pal"

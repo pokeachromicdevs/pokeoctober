@@ -212,6 +212,7 @@ FramesPointers:
 	dba PinecoFrames
 	dba ForretressFrames
 	dba ShuckleFrames
+	dba ShuqlourFrames
 	dba DunsparceFrames
 	dba GligarFrames
 	dba SteelixFrames
@@ -272,3 +273,4 @@ FramesPointers:
 	dba VulpiiiFrames
 	dba WorfursFrames
 	dba DodaerieFrames
+	dba ParasporFrames

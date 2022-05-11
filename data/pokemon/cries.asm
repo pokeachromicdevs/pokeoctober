@@ -218,6 +218,7 @@ PokemonCries::
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
 	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
 	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; SHUCKLE
+	mon_cry CRY_DUNSPARCE,  -$0b7,  $200 ; SHUQLOUR
 	mon_cry CRY_GIRAFARIG,  -138,  320   ; DUNSPARCE
 	mon_cry CRY_GLIGAR,     -$102,  $100 ; GLIGAR
 	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELIX
@@ -278,6 +279,8 @@ PokemonCries::
 	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; VULPIII
 	mon_cry CRY_RAIKOU,     -$0b0,  $120 ; WORFURS
 	mon_cry CRY_DIGLETT,     $0cb,  $061 ; DODAERIE
+	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARA
+
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

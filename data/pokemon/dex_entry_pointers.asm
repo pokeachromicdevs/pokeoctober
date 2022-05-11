@@ -213,6 +213,7 @@ PokedexDataPointerTable:
 	dba PinecoPokedexEntry
 	dba ForretressPokedexEntry
 	dba ShucklePokedexEntry
+	dba ShuqlourPokedexEntry
 	dba DunsparcePokedexEntry
 	dba GligarPokedexEntry
 	dba SteelixPokedexEntry
@@ -273,3 +274,4 @@ PokedexDataPointerTable:
 	dba VulpiiiPokedexEntry
 	dba WorfursPokedexEntry
 	dba DodaeriePokedexEntry
+	dba ParasporPokedexEntry

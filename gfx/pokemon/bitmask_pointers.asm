@@ -212,6 +212,7 @@ BitmasksPointers:
 	dw PinecoBitmasks
 	dw ForretressBitmasks
 	dw ShuckleBitmasks
+	dw ShuqlourBitmasks
 	dw DunsparceBitmasks
 	dw GligarBitmasks
 	dw SteelixBitmasks
@@ -272,3 +273,4 @@ BitmasksPointers:
 	dw VulpiiiBitmasks
 	dw WorfursBitmasks
 	dw DodaerieBitmasks
+	dw ParasporBitmasks

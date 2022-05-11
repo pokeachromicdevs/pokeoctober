@@ -233,6 +233,7 @@ JOHTO_POKEMON EQU const_value
 	const PINECO     ; cc
 	const FORRETRESS ; cd
 	const SHUCKLE
+	const SHUQLOUR
 	const DUNSPARCE  ; ce
 	const GLIGAR     ; cf
 	const STEELIX    ; d0
@@ -293,6 +294,7 @@ JOHTO_POKEMON EQU const_value
 	const VULPIII
 	const WORFURS
 	const DODAERIE
+	const PARASPOR
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

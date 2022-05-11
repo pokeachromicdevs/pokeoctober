@@ -14,6 +14,7 @@ EvosAttacksPointers3::
 	dw VupiiiEvosAttacks
 	dw WorfursEvosAttacks
 	dw DodaerieEvosAttacks
+	dw ParasporEvosAttacks
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -67,19 +68,18 @@ PupperonEvosAttacks:
 MoibelleEvosAttacks:
 	dbbw EVOLVE_LEVEL, 28, BELLEDAM
 	db 0 ; no more evolutions
-	dbw 1, SCRATCH
-	dbw 1, GROWL
-	dbw 7, PURSUIT
-	dbw 12, BITE
-	dbw 18, COIN_HURL
-	dbw 23, FURY_SWIPES
-	dbw 27, HEAL_BELL
-	dbw 30, FAINT_ATTACK
-	dbw 34, LOVELY_KISS
-	dbw 34, SWEET_KISS
-	dbw 40, CONFUSE_RAY
-	dbw 45, ATTRACT
-	dbw 50, SLASH
+	dbw 1, LICK
+	dbw 1, TAIL_WHIP
+	dbw 4, QUICK_ATTACK
+	dbw 10, FAINT_ATTACK
+	dbw 14, MEGAPHONE
+	dbw 20, HEAL_BELL
+	dbw 24, NIGHT_SHADE
+	dbw 30, TEMPT
+	dbw 34, CRUNCH
+	dbw 40, SLASH
+	dbw 44, MOONLIGHT
+	dbw 50, SHADOW_BALL
 	db 0 ; no more level-up moves
 	
 BelledamEvosAttacks:
@@ -221,4 +221,20 @@ DodaerieEvosAttacks:
 	dbw 42,	DRILL_PECK
 	dbw 48,	AGILITY
 	dbw 54,	EXTREMESPEED
+	db 0 ; no more level-up moves
+	
+ParasporEvosAttacks:
+	dbbw EVOLVE_LEVEL, 12, PARAS
+	dbw 1, SCRATCH
+	dbw 1, ABSORB
+	dbw 6, POISONPOWDER
+	dbw 10, LEECH_LIFE
+	dbw 15, MEGA_DRAIN
+	dbw 21, STUN_SPORE
+	dbw 25, TACKLE ; DUAL_PINCER
+	dbw 30, GIGA_DRAIN
+	dbw 36, SPORE
+	dbw 40, GROWTH
+	dbw 45, SLASH
+	dbw 51, TACKLE ; LUNGE
 	db 0 ; no more level-up moves

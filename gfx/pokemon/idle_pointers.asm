@@ -212,6 +212,7 @@ AnimationIdlePointers:
 	dw PinecoAnimationIdle
 	dw ForretressAnimationIdle
 	dw ShuckleAnimationIdle
+	dw ShuqlourAnimationIdle
 	dw DunsparceAnimationIdle
 	dw GligarAnimationIdle
 	dw SteelixAnimationIdle
@@ -272,3 +273,4 @@ AnimationIdlePointers:
 	dw VulpiiiAnimationIdle
 	dw WorfursAnimationIdle
 	dw DodaerieAnimationIdle
+	dw ParasporAnimationIdle

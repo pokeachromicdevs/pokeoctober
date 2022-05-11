@@ -46,7 +46,7 @@ EggMovePointers1:
 	dw OddishEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
-	dw ParasEggMoves
+	dw NoEggMoves1
 	dw NoEggMoves1
 	dw VenonatEggMoves
 	dw NoEggMoves1
@@ -250,16 +250,6 @@ OddishEggMoves:
 	dw RAZOR_LEAF
 	dw FLAIL
 	dw SYNTHESIS
-	dw -1 ; end
-
-ParasEggMoves:
-	dw FALSE_SWIPE
-	dw SCREECH
-	dw COUNTER
-	dw PSYBEAM
-	dw FLAIL
-	dw LIGHT_SCREEN
-	dw PURSUIT
 	dw -1 ; end
 
 VenonatEggMoves:
