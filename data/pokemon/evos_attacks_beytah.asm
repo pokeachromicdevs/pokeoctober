@@ -210,6 +210,7 @@ WorfursEvosAttacks:
 	
 DodaerieEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, DODUO
+	db 0 ; no more evolutions
 	dbw 1,	QUICK_ATTACK
 	dbw 1,	GROWL
 	dbw 6,	PECK
@@ -225,6 +226,7 @@ DodaerieEvosAttacks:
 	
 ParasporEvosAttacks:
 	dbbw EVOLVE_LEVEL, 12, PARAS
+	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, ABSORB
 	dbw 6, POISONPOWDER
