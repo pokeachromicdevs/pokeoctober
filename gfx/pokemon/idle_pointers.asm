@@ -272,5 +272,6 @@ AnimationIdlePointers:
 	dw BurgelaAnimationIdle
 	dw VulpiiiAnimationIdle
 	dw WorfursAnimationIdle
+	dw WearlycanAnimationIdle
 	dw DodaerieAnimationIdle
 	dw ParasporAnimationIdle

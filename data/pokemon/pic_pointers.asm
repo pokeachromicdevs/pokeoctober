@@ -559,6 +559,8 @@ PokemonPicPointers::
 	dba VulpiiiBackpic
 	dba WorfursFrontpic
 	dba WorfursBackpic
+	dba WearlycanFrontpic
+	dba WearlycanBackpic
 	dba DodaerieFrontpic
 	dba DodaerieBackpic
 	dba ParasporFrontpic

@@ -272,5 +272,6 @@ FramesPointers:
 	dba BurgelaFrames
 	dba VulpiiiFrames
 	dba WorfursFrames
+	dba WearlycanFrames
 	dba DodaerieFrames
 	dba ParasporFrames

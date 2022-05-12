@@ -13,6 +13,7 @@ EvosAttacksPointers3::
 	dw BurgelaEvosAttacks 
 	dw VupiiiEvosAttacks
 	dw WorfursEvosAttacks
+	dw WearlycanEvosAttacks
 	dw DodaerieEvosAttacks
 	dw ParasporEvosAttacks
 	
@@ -193,7 +194,7 @@ VupiiiEvosAttacks:
 	db 0 ; no more level-up moves
 	
 WorfursEvosAttacks:
-	db 0 ; no more evolutions, will evolve at level 31 once Wearlycan is in
+	dbbw EVOLVE_LEVEL, 31, WEARLYCAN
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 5, QUICK_ATTACK
@@ -206,6 +207,22 @@ WorfursEvosAttacks:
 	dbw 43, ROAR
 	dbw 47, THRASH
 	dbw 52, BLIZZARD
+	db 0 ; no more level-up moves
+	
+WearlycanEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 7, QUICK_ATTACK
+	dbw 12, POWDER_SNOW
+	dbw 21, DEFENSE_CURL
+	dbw 26, ICY_WIND
+	dbw 30, MIMIC
+	dbw 35, ICE_PUNCH
+	dbw 40, DIG
+	dbw 45, ROAR
+	dbw 49, THRASH
+	dbw 54, BLIZZARD
 	db 0 ; no more level-up moves
 	
 DodaerieEvosAttacks:

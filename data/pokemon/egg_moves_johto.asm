@@ -122,6 +122,7 @@ EggMovePointers2::
 	dw BurgelaEggMoves
 	dw VulpiiiEggMoves
 	dw WorfursEggMoves
+	dw NoEggMoves2
 	dw DodaerieEggMoves
 	dw ParasporEggMoves
 	

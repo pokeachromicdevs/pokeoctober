@@ -265,6 +265,7 @@ AlphabeticalPokedexOrder:
 	dw VULPIII
 	dw VULPIX
 	dw WARTORTLE
+	dw WEARLYCAN
 	dw WEEDLE
 	dw WEEPINBELL
 	dw WEEZING

@@ -293,6 +293,7 @@ JOHTO_POKEMON EQU const_value
 	const BURGELA
 	const VULPIII
 	const WORFURS
+	const WEARLYCAN
 	const DODAERIE
 	const PARASPOR
 NUM_POKEMON EQU const_value + -1

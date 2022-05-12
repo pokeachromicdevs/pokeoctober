@@ -748,6 +748,9 @@ ShuqlourFrontpic: INCBIN "gfx/pokemon/shuqlour/front.animated.2bpp.lz"
 ShuqlourBackpic:  INCBIN "gfx/pokemon/shuqlour/back.2bpp.lz"
 ParasporFrontpic: INCBIN "gfx/pokemon/paraspor/front.animated.2bpp.lz"
 ParasporBackpic:  INCBIN "gfx/pokemon/paraspor/back.2bpp.lz"
+WearlycanFrontpic: INCBIN "gfx/pokemon/wearlycan/front.animated.2bpp.lz"
+WearlycanBackpic:  INCBIN "gfx/pokemon/wearlycan/back.2bpp.lz"
+
 
 
 SECTION "Pics 22", ROMX

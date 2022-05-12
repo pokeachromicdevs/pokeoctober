@@ -275,6 +275,7 @@ PokemonNames::
 	db "COALTA@@@@" 
 	db "BURGELA@@@" 
 	db "VULPIII@@@" 
-	db "WORFURS@@@" 
+	db "WORFURS@@@"
+	db "WEARLYCAN@"
 	db "DODAERIE@@" 
 	db "PARASPOR@@"

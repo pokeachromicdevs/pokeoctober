@@ -231,6 +231,8 @@ OldPokedexOrder:
 	dw SLUGMA
 	dw MAGCARGO
 	dw SNEASEL
+	dw WORFURS
+	dw WEARLYCAN
 	dw MISDREAVUS
 	dw PORYGON
 	dw PORYGON2

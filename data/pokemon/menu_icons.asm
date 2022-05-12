@@ -274,6 +274,7 @@ MonMenuIcons:
 	db ICON_TANGELA     ; BURGELA
 	db ICON_VULPIX      ; VULPIII
 	db ICON_SWINUB      ; WORFURS
+	db ICON_PILOSWINE   ; WEARLYCAN
 	db ICON_DODUO       ; DODAERIE
 	db ICON_PARAS       ; PARASPOR
 	db ICON_EGG         ; EGG

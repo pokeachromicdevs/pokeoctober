@@ -272,5 +272,6 @@ BitmasksPointers:
 	dw BurgelaBitmasks
 	dw VulpiiiBitmasks
 	dw WorfursBitmasks
+	dw WearlycanBitmasks
 	dw DodaerieBitmasks
 	dw ParasporBitmasks

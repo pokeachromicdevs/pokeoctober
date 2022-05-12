@@ -278,8 +278,9 @@ PokemonCries::
 	mon_cry CRY_MARILL,      $f4c,  $110 ; BURGELA
 	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; VULPIII
 	mon_cry CRY_RAIKOU,     -$0b0,  $120 ; WORFURS
+	mon_cry CRY_TYPHLOSION, -$0b7,  $120 ; WEARLYCAN
 	mon_cry CRY_DIGLETT,     $0cb,  $061 ; DODAERIE
-	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARA
+	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARASPOR
 
 	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake

@@ -273,5 +273,6 @@ PokedexDataPointerTable:
 	dba BurgelaPokedexEntry
 	dba VulpiiiPokedexEntry
 	dba WorfursPokedexEntry
+	dba WearlycanPokedexEntry
 	dba DodaeriePokedexEntry
 	dba ParasporPokedexEntry

@@ -272,5 +272,6 @@ AnimationPointers:
 	dw BurgelaAnimation
 	dw VulpiiiAnimation
 	dw WorfursAnimation
+	dw WearlycanAnimation
 	dw DodaerieAnimation
 	dw ParasporAnimation
