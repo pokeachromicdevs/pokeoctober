@@ -146,6 +146,11 @@ Cry_Mantine:
 Cry_Hoothoot_2ch:
 	musicheader 2, 5, Cry_Hoothoot_Ch5
 	musicheader 1, 6, Cry_Hoothoot_Ch6
+	
+Cry_Worfurs:
+	musicheader 3, 5, Cry_Worfurs_Ch5
+	musicheader 1, 6, Cry_Worfurs_Ch6
+	musicheader 1, 8, Cry_Worfurs_Ch8
 
 Cry_Entei_Ch5:
 	; soundinput $ff
@@ -1985,3 +1990,36 @@ Cry_Totodile_Ch8:
 	noise __, 15, $72, $42
 	endchannel
 
+Cry_Worfurs_Ch5:
+	sound_duty 0, 2, 3, 3
+	sound __,  3, $f1, $04b0
+	sound __,  3, $f7, $0590
+	sound __,  9, $f8, $0510
+	sound __,  4, $f2, $06c0
+	sound __,  4, $f8, $06ba
+	sound __,  4, $f2, $06b0
+	sound C_,  1, $f2, $0690
+	endchannel
+
+Cry_Worfurs_Ch6:
+	sound_duty 2, 0, 3, 3
+	sound __,  3, $f1, $0720
+	sound __,  3, $e1, $0650
+	sound __,  5, $f1, $0750
+	sound __,  5, $d1, $03a0
+	sound __,  4, $f1, $0670
+	sound __,  4, $e1, $0680
+	sound __,  4, $f2, $0690
+	sound C_,  1, $e2, $06a0
+	endchannel
+
+Cry_Worfurs_Ch8:
+	noise __,  3, $89, $2e
+	noise __,  3, $99, $1f
+	noise __,  5, $89, $4e
+	noise __,  5, $89, $7b
+	noise __,  4, $d8, $4b
+	noise __,  4, $e7, $4c
+	noise __,  4, $ec, $4d
+	noise C_,  1, $d2, $4f
+	endchannel

@@ -175,8 +175,8 @@ PokemonCries::
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
-	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
-	mon_cry CRY_TOTODILE,   -$022,  $200 ; TONBOSS
+	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA, fix
+	mon_cry CRY_TOTODILE,   -$022,  $200 ; TONBOSS, fix
 	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
@@ -260,9 +260,9 @@ PokemonCries::
 	mon_cry CRY_RAIKOU,      $001,  $140 ; RAIKOU
 	mon_cry CRY_ENTEI,       $123,  $071 ; ENTEI
 	mon_cry CRY_RAIKOU,      $04b,  $0a8 ; SUICUNE
-	mon_cry CRY_RAIKOU,      $05f,  $0d0 ; LARVITAR
+	mon_cry CRY_RAIKOU,      $05f,  $0d0 ; LARVITAR, needs fixing
 	mon_cry CRY_SPINARAK,   -$1db,  $150 ; PUPITAR
-	mon_cry CRY_ENTEI,       $153,  $180 ; TYRANITAR
+	mon_cry CRY_ENTEI,       $153,  $180 ; TYRANITAR, needs fixing
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
@@ -277,8 +277,8 @@ PokemonCries::
 	mon_cry CRY_MARILL,      $0c0,  $090 ; COALTA
 	mon_cry CRY_MARILL,      $f4c,  $110 ; BURGELA
 	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; VULPIII
-	mon_cry CRY_RAIKOU,     -$0b0,  $120 ; WORFURS
-	mon_cry CRY_TYPHLOSION, -$0b7,  $120 ; WEARLYCAN
+	mon_cry CRY_WORFURS,     -$0b0,  $120 ; WORFURS
+	mon_cry CRY_WORFURS,     -$1db,  $150 ; WEARLYCAN
 	mon_cry CRY_DIGLETT,     $0cb,  $061 ; DODAERIE
 	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARASPOR
 

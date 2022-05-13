@@ -73,3 +73,4 @@
 	const CRY_DUNSPARCE
 	const CRY_DONPHAN
 	const CRY_HOOTHOOT_2CH
+	const CRY_WORFURS
