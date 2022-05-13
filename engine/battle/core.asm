@@ -4727,16 +4727,12 @@ PrintPlayerHUD:
 	ld a, TEMPMON
 	ld [wMonType], a
 	callfar GetGender
-	ld a, " "
 	jr c, .got_gender_char
-	ld a, "♂"
 	jr nz, .got_gender_char
-	ld a, "♀"
 
 .got_gender_char
-	hlcoord 17, 8
+	hlcoord 13, 8
 	ld [hl], a
-	hlcoord 14, 8
 	push af ; back up gender
 	push hl
 	ld de, wBattleMonStatus
@@ -4805,14 +4801,9 @@ DrawEnemyHUD:
 	callfar GetGender
 	ld a, " "
 	jr c, .got_gender
-	ld a, "♂"
 	jr nz, .got_gender
-	ld a, "♀"
 
 .got_gender
-	hlcoord 9, 1
-	ld [hl], a
-
 	hlcoord 6, 1
 	push af
 	push hl
