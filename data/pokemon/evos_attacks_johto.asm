@@ -1368,7 +1368,7 @@ SkarmoryEvosAttacks:
 	db 0 ; no more level-up moves
 
 HoundourEvosAttacks:
-	dbbw EVOLVE_LEVEL, 24, HOUNDOOM
+	dbbw EVOLVE_LEVEL, 35, HOUNDOOM
 	db 0 ; no more evolutions
 	dbw 1, LEER
 	dbw 1, EMBER
@@ -1376,7 +1376,7 @@ HoundourEvosAttacks:
 	dbw 13, SMOG
 	dbw 20, BITE
 	dbw 27, FAINT_ATTACK
-	dbw 35, FLAMETHROWER
+	dbw 36, FLAMETHROWER
 	dbw 43, CRUNCH
 	db 0 ; no more level-up moves
 
@@ -1388,7 +1388,7 @@ HoundoomEvosAttacks:
 	dbw 13, SMOG
 	dbw 20, BITE
 	dbw 30, FAINT_ATTACK
-	dbw 41, FLAMETHROWER
+	dbw 35, FLAMETHROWER
 	dbw 52, CRUNCH
 	db 0 ; no more level-up moves
 
