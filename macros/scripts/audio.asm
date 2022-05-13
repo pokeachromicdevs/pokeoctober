@@ -365,3 +365,7 @@ square_note: MACRO
 	endc
 	dw \4 ; frequency
 ENDM
+
+transpose: MACRO
+	pitchoffset \1, \2 + 1
+ENDM
