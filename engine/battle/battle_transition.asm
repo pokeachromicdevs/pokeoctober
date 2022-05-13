@@ -4,10 +4,21 @@ BATTLETRANSITION_CAVE_STRONGER    EQU $09
 BATTLETRANSITION_NO_CAVE          EQU $10
 BATTLETRANSITION_NO_CAVE_STRONGER EQU $18
 BATTLETRANSITION_FINISH           EQU $20
+BATTLETRANSITION_SPECIAL          EQU $21
 BATTLETRANSITION_END              EQU $80
 
 BATTLETRANSITION_SQUARE EQU "8" ; $fe
 BATTLETRANSITION_BLACK  EQU "9" ; $ff
+
+BattleTransition_ClearLYOverrides:
+	ld hl, wLYOverrides
+	ld c, SCREEN_HEIGHT_PX
+	xor a
+.clr
+	ld [hli], a
+	dec c
+	jr nz, .clr
+	ret
 
 DoBattleTransition:
 	call .InitGFX
@@ -44,6 +55,7 @@ DoBattleTransition:
 
 	pop af
 	ldh [rSVBK], a
+	call BattleTransition_ClearLYOverrides
 
 	ld a, %11111111
 	ld [wBGP], a
@@ -198,6 +210,16 @@ BattleTransitionJumptable:
 	; BATTLETRANSITION_FINISH
 	dw StartTrainerBattle_Finish ; 20
 
+	; BATTLETRANSITION_SPECIAL
+	dw StartTrainerBattle_LoadPokeBallGraphics ; 21
+	dw StartTrainerBattle_SetUpBGMap ; 22
+	dw StartTrainerBattle_Flash ; 23
+	dw StartTrainerBattle_Flash ; 24
+	dw StartTrainerBattle_Flash ; 25
+	dw StartTrainerBattle_NextScene ; 26
+	dw StartTrainerBattle_SetUpForWipeOutro ; 27
+	dw StartTrainerBattle_WipeOutro ; 28
+
 ; transition animations
 	const_def
 	const TRANS_CAVE
@@ -210,6 +232,12 @@ TRANS_STRONGER_F EQU 0 ; bit set in TRANS_CAVE_STRONGER and TRANS_NO_CAVE_STRONG
 TRANS_NO_CAVE_F EQU 1 ; bit set in TRANS_NO_CAVE and TRANS_NO_CAVE_STRONGER
 
 StartTrainerBattle_DetermineWhichAnimation:
+; Check for overrides if trainer battle
+	ld a, [wOtherTrainerClass]
+	and a
+	jr nz, .check_trainer
+
+.regular
 ; The screen flashes a different number of times depending on the level of
 ; your lead Pokemon relative to the opponent's.
 ; BUG: wBattleMonLevel and wEnemyMonLevel are not set at this point, so whatever
@@ -237,12 +265,72 @@ StartTrainerBattle_DetermineWhichAnimation:
 	ld [wJumptableIndex], a
 	ret
 
+.check_trainer
+	ld a, [wOtherTrainerClass]
+	cp POKEMON_PROF
+	jr z, .prof_transition
+	jr .regular
+
+.prof_transition
+	ld a, BATTLETRANSITION_SPECIAL
+	ld [wJumptableIndex], a
+	ret
+
 .StartingPoints:
 ; entries correspond to TRANS_* constants
 	db BATTLETRANSITION_CAVE
 	db BATTLETRANSITION_CAVE_STRONGER
 	db BATTLETRANSITION_NO_CAVE
 	db BATTLETRANSITION_NO_CAVE_STRONGER
+
+StartTrainerBattle_SetUpForWipeOutro:
+	call StartTrainerBattle_NextScene
+	call BattleTransition_ClearLYOverrides
+	ld a, LOW(rSCY)
+	ldh [hLCDCPointer], a
+	xor a
+	ldh [hLYOverrideStart], a
+	;ld a, SCREEN_HEIGHT_PX
+	;ldh [hLYOverrideEnd], a
+	xor a
+	ld [wd004], a
+	;ld a, SCREEN_HEIGHT_PX + 1
+	;ldh [hSCY], a
+	ret
+
+StartTrainerBattle_WipeOutro:
+	ld hl, wd004
+	ld a, [hl]
+	cp $48
+	jr nc, .end
+	inc [hl]
+	srl a
+	ld e, a
+	ld d, 0
+	ld hl, wLYOverrides
+	add hl, de
+	call .DoWipeOutro
+	ret
+
+.end
+	ld a, BATTLETRANSITION_FINISH
+	ld [wJumptableIndex], a
+	ret
+
+.DoWipeOutro:
+	ld c, 4
+	ld de, SCREEN_HEIGHT_PX / 4
+	ld b, SCREEN_HEIGHT_PX + 1
+.loop
+	ld a, b
+	sub l
+	ld [hl], a
+	add hl, de
+	dec c
+	jr nz, .loop
+	ld hl, wLYOverridesEnd + 1
+	ld [hl], SCREEN_HEIGHT_PX + 1
+	ret
 
 StartTrainerBattle_Finish:
 	call ClearSprites

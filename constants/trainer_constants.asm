@@ -67,6 +67,7 @@ KRIS EQU __enum__
 	const RIVAL1_5_TOTODILE
 
 	trainerclass POKEMON_PROF ; a
+	const ELM1
 
 	trainerclass WILL ; b
 	const WILL1

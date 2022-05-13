@@ -378,6 +378,12 @@ Rival1Group:
 	end_list_items
 
 PokemonProfGroup:
+	next_list_item ; ELM (1)
+	db "ELM@", TRAINERTYPE_MOVES
+	dbw 66, TAUROS
+	dw  RAGE, EARTHQUAKE, THRASH, SWAGGER
+	db -1 ; end
+	end_list_items
 
 WillGroup:
 	next_list_item ; WILL (1)
