@@ -3,6 +3,8 @@ VioletHerbShop_MapScripts:
 
 	db 0 ; callbacks
 
+; scripts here
+
 VioletHerbShop_MapEvents:
 	db 0, 0 ; filler
 

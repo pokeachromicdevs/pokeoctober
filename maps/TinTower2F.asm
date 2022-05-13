@@ -3,12 +3,12 @@ TinTower2F_MapScripts:
 
 	db 0 ; callbacks
 
+; scripts here
+
 TinTower2F_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event 10, 14, TIN_TOWER_3F, 1
-	warp_event 10,  2, TIN_TOWER_1F, 3
+	db 0 ; warp events
 
 	db 0 ; coord events
 
