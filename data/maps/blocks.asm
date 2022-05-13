@@ -672,8 +672,8 @@ BrunosRoom_Blocks:
 KarensRoom_Blocks:
 	INCBIN "maps/KarensRoom.blk"
 
-AzaleaGym_Blocks:
-	INCBIN "maps/AzaleaGym.blk"
+AlderGym_Blocks:
+	INCBIN "maps/AlderGym.blk"
 
 CherrygroveGym_Blocks:
 	INCBIN "maps/CherrygroveGym.blk"

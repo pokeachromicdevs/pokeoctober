@@ -23,10 +23,11 @@ AlderTownSign:
 AlderTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 4 ; warp events
 	warp_event  3,  5, ALDER_POKECENTER_1F, 1
 	warp_event 15,  3, GOLDENROD_HAPPINESS_RATER, 1
 	warp_event 11,  5, ALDER_MART, 1
+	warp_event  4, 11, ALDER_GYM, 1
 
 	db 0 ; coord events
 

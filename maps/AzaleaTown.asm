@@ -456,12 +456,11 @@ AzaleaTownIlexForestSignText:
 AzaleaTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 8 ; warp events
+	db 7 ; warp events
 	warp_event 15,  9, AZALEA_POKECENTER_1F, 1
 	warp_event 21, 13, CHARCOAL_KILN, 1
 	warp_event 21,  5, AZALEA_MART, 2
 	warp_event  9,  5, KURTS_HOUSE, 1
-	warp_event 10, 15, AZALEA_GYM, 1
 	warp_event 31,  7, SLOWPOKE_WELL_B1F, 1
 	warp_event  2, 10, CHERRYGROVE_WOODS_GATE, 3
 	warp_event  2, 11, CHERRYGROVE_WOODS_GATE, 4
