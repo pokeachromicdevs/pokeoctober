@@ -27,7 +27,7 @@ MomPhoneLandmark:
 
 MomPhonePalette1:
 	readvar VAR_MAPGROUP
-	ifequal GROUP_NEW_BARK_TOWN, .newbark
+	ifequal GROUP_SILENT_TOWN, .newbark
 	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
 	ifequal GROUP_VIOLET_CITY, .violet
 	ifequal GROUP_AZALEA_TOWN, .azalea
@@ -37,7 +37,7 @@ MomPhonePalette1:
 	sjump MomSavingMoney
 
 .newbark
-	farwritetext MomPhoneNewBarkText
+	farwritetext MomPhoneSilentText
 	buttonsound
 	sjump MomSavingMoney
 

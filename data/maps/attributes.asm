@@ -96,7 +96,7 @@ endc
 ENDM
 
 
-	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, WEST | EAST
+	map_attributes SilentTown, SILENT_TOWN, $05, WEST | EAST
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 
@@ -157,7 +157,7 @@ ENDM
 	connection west, Route27, ROUTE_27, 45
 
 	map_attributes Route27, ROUTE_27, $35, WEST | EAST
-	connection west, NewBarkTown, NEW_BARK_TOWN, 0
+	connection west, SilentTown, SILENT_TOWN, 0
 	connection east, Route26, ROUTE_26, -45
 
 	map_attributes Route28, ROUTE_28, $2c, WEST
@@ -165,7 +165,7 @@ ENDM
 
 	map_attributes Route29, ROUTE_29, $05, WEST | EAST
 	connection west, CherrygroveWoods, CHERRYGROVE_WOODS, 0
-	connection east, NewBarkTown, NEW_BARK_TOWN, 0
+	connection east, SilentTown, SILENT_TOWN, 0
 	
 	map_attributes CherrygroveWoods, CHERRYGROVE_WOODS, $05, NORTH | WEST | EAST
 	connection north, Route46, ROUTE_46, 11

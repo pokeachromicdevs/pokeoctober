@@ -271,7 +271,7 @@
 	const EVENT_TULLY_GAVE_WATER_STONE
 	const EVENT_TIFFANY_GAVE_PINK_BOW
 ; ???
-	const EVENT_ELM_APPEARED_NEW_BARK_TOWN
+	const EVENT_ELM_APPEARED_SILENT_TOWN
 	const EVENT_106
 	const EVENT_107
 	const EVENT_108
@@ -1674,7 +1674,7 @@
 	const EVENT_63C
 	const EVENT_GOT_MEW_IN_CITRINE
 	const EVENT_ELM_NOT_IN_LAB
-	const EVENT_FOUGHT_RIVAL_NEW_BARK_TOWN
+	const EVENT_FOUGHT_RIVAL_SILENT_TOWN
 ; Sprite visibility flags
 ; When these events are cleared, the sprite becomes visible; when set, the sprite is hidden.
 ; The map script command macros `disappear` and `appear` set/clear these flags and immediately apply the effect on visibility.
@@ -1807,7 +1807,7 @@
 	const EVENT_ROUTE_46_X_SPEED
 	const EVENT_ROUTE_29_POKE_BALL
 ; Johto people
-	const EVENT_RIVAL_NEW_BARK_TOWN
+	const EVENT_RIVAL_SILENT_TOWN
 	const EVENT_RIVAL_CHERRYGROVE_CITY
 	const EVENT_RIVAL_AZALEA_TOWN
 	const EVENT_RIVAL_TEAM_ROCKET_BASE
@@ -2087,7 +2087,7 @@
 	const EVENT_RADIO_TOWER_5F_ULTRA_BALL
 	const EVENT_DARK_CAVE_VIOLET_ENTRANCE_DIRE_HIT
 	const EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
-	const EVENT_ELM_NEW_BARK_TOWN
+	const EVENT_ELM_SILENT_TOWN
 	const EVENT_RIVAL_ELMS_LAB
 ;Instructor
 	const EVENT_BEAT_INSTRUCTOR_STANLEY	

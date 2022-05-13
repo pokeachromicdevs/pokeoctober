@@ -176,7 +176,7 @@ JohtoWaterWildMons:
 	dbw 15, MAGIKARP
 	dbw 5, MAGIKARP
 
-	map_id NEW_BARK_TOWN
+	map_id SILENT_TOWN
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 15, TENTACOOL

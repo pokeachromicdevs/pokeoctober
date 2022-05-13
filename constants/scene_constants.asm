@@ -34,10 +34,10 @@ SCENE_FINISHED EQU 1
 	const_def 1
 	const SCENE_LANCESROOM_APPROACH_LANCE ; 1
 	
-; wNewBarkSceneID
+; wSilentSceneID
 	const_def 1
 	const SCENE_TEACHER_STOPS
-	const SCENE_NEW_BARK_NOTHING
+	const SCENE_SILENT_NOTHING
 	const SCENE_ELM_ENTRANCE_BATTLE
 
 ; wElmsLabSceneID

@@ -315,7 +315,7 @@ ElmDirectionsScript:
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
 	setscene SCENE_ELM_ENTRANCE_BATTLE 
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
-	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	setmapscene SILENT_TOWN, SCENE_FINISHED
 	end
 
 ElmDescribesMrPokemonScript:
@@ -498,7 +498,7 @@ AideScript_GivePotion:
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOTHING
-	setmapscene NEW_BARK_TOWN, SCENE_ELM_ENTRANCE_BATTLE
+	setmapscene SILENT_TOWN, SCENE_ELM_ENTRANCE_BATTLE
 	end
 
 AideScript_WalkBalls1:
@@ -1458,8 +1458,8 @@ ElmsLab_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 11, NEW_BARK_TOWN, 1
-	warp_event  5, 11, NEW_BARK_TOWN, 1
+	warp_event  4, 11, SILENT_TOWN, 1
+	warp_event  5, 11, SILENT_TOWN, 1
 
 	db 6 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript

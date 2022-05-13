@@ -122,7 +122,7 @@ MrPokemonsHouse_OakScript:
 	writetext MrPokemonText_ImDependingOnYou
 	waitbutton
 	closetext
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	setevent EVENT_RIVAL_SILENT_TOWN
 	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
 	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	setscene SCENE_FINISHED

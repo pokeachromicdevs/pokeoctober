@@ -224,7 +224,7 @@ TownMap_InitCursorAndPlayerIconPositions:
 
 .FastShip:
 	ld [wPokegearMapPlayerIconLandmark], a
-	ld a, NEW_BARK_TOWN
+	ld a, SILENT_TOWN
 	ld [wPokegearMapCursorLandmark], a
 	ret
 
@@ -576,7 +576,7 @@ PokegearMap_KantoMap:
 
 PokegearMap_JohtoMap:
 	ld d, SILVER_CAVE
-	ld e, NEW_BARK_TOWN
+	ld e, SILENT_TOWN
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
 	ld a, [hl]
@@ -2339,7 +2339,7 @@ FlyMap:
 ; Note that .NoKanto should be modified in tandem with this branch
 	push af
 ; Start from New Bark Town
-	ld a, FLY_NEW_BARK
+	ld a, FLY_SILENT
 	ld [wTownMapPlayerIconLandmark], a
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
@@ -2389,7 +2389,7 @@ FlyMap:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
 
 ; Start from New Bark Town
-	ld a, FLY_NEW_BARK
+	ld a, FLY_SILENT
 	ld [wTownMapPlayerIconLandmark], a
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a

@@ -9,7 +9,7 @@ Landmarks:
 
 ; entries correspond to constants/landmark_constants.asm
 	dbbw       0,   0, SpecialMapName
-	landmark 140, 100, NewBarkTownName
+	landmark 140, 100, SilentTownName
 	landmark 124, 100, Route29Name
 	landmark 116, 100, CherrygroveWoodsName
 	landmark 100, 100, CherrygroveCityName
@@ -112,7 +112,7 @@ Landmarks:
 	landmark 140, 116, FastShipName
 	landmark 140, 132, CitrineIslandsName
 
-NewBarkTownName:     db "SILENT¯TOWN@"       ; Shizuoka
+SilentTownName:     db "SILENT¯TOWN@"       ; Shizuoka
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"    ; Nagoya
 VioletCityName:      db "VIOLET CITY@"        ; Nara
 AzaleaTownName:      db "AZALEA TOWN@"        ; Arida

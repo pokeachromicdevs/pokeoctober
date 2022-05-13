@@ -6,10 +6,10 @@
 	const NEWBARKTOWN_FISHER_2
 	const NEWBARKTOWN_SILVER_2
 	
-NewBarkTown_MapScripts:
+SilentTown_MapScripts:
 	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_TEACHER_STOPS
-	scene_script .DummyScene1 ; SCENE_NEW_BARK_NOTHING
+	scene_script .DummyScene1 ; SCENE_SILENT_NOTHING
 	scene_script .SilentTownSilverBattleScript ; SCENE_ELM_ENTRANCE_BATTLE
 	
 
@@ -23,15 +23,15 @@ NewBarkTown_MapScripts:
 	end
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_NEW_BARK
+	setflag ENGINE_FLYPOINT_SILENT
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
-	setevent EVENT_ELM_APPEARED_NEW_BARK_TOWN
+	setevent EVENT_ELM_APPEARED_SILENT_TOWN
 	return
 	
 .SilentTownSilverBattleScript:
 	end
 	
-NewBarkTown_RivalGreets:
+SilentTown_RivalGreets:
 	setevent EVENT_ELM_NOT_IN_LAB
 	disappear NEWBARKTOWN_SILVER_2
 
@@ -43,16 +43,16 @@ NewBarkTown_RivalGreets:
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext NewBarkTownRivalText1
+	writetext SilentTownRivalText1
 	waitbutton
 	closetext
 	opentext
-	writetext NewBarkTownRivalText2
+	writetext SilentTownRivalText2
 	special NameMom
 	closetext 
 	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
 	opentext
-	writetext NewBarkTownRivalText3
+	writetext SilentTownRivalText3
 	closetext
 	applymovement NEWBARKTOWN_SILVER, RivalGoesToLab
 	disappear NEWBARKTOWN_SILVER
@@ -60,13 +60,13 @@ NewBarkTown_RivalGreets:
 	special FadeOutMusic
 	pause 15
 	special RestartMapMusic
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	setevent EVENT_RIVAL_SILENT_TOWN
 	end
 
 ElmStopsYouScene1:
-	checkevent EVENT_ELM_NEW_BARK_TOWN
+	checkevent EVENT_ELM_SILENT_TOWN
 	iftrue .skip
-	setevent EVENT_ELM_NEW_BARK_TOWN
+	setevent EVENT_ELM_SILENT_TOWN
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEETELM
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
@@ -81,7 +81,7 @@ ElmStopsYouScene1:
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	setevent EVENT_RIVAL_SILENT_TOWN
 	follow NEWBARKTOWN_ELM, PLAYER
 	applymovement NEWBARKTOWN_ELM, ElmTakesPlayerToLab1
 	stopfollow
@@ -95,9 +95,9 @@ ElmStopsYouScene1:
 	end
 
 ElmStopsYouScene2:
-	checkevent EVENT_ELM_NEW_BARK_TOWN
+	checkevent EVENT_ELM_SILENT_TOWN
 	iftrue .skip
-	setevent EVENT_ELM_NEW_BARK_TOWN
+	setevent EVENT_ELM_SILENT_TOWN
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEETELM
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
@@ -112,7 +112,7 @@ ElmStopsYouScene2:
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	setevent EVENT_RIVAL_SILENT_TOWN
 	follow NEWBARKTOWN_ELM, PLAYER
 	applymovement NEWBARKTOWN_ELM, ElmTakesPlayerToLab2
 	stopfollow
@@ -126,7 +126,7 @@ ElmStopsYouScene2:
 .skip
 	end
 	
-NewBarkTownRivalScript:
+SilentTownRivalScript:
 	faceplayer
 	opentext
 	writetext Text_GearIsImpressive
@@ -134,14 +134,14 @@ NewBarkTownRivalScript:
 	closetext
 	end
 	
-NewBarkTownElmScript:
+SilentTownElmScript:
 	opentext
 	writetext Text_Study101
 	waitbutton
 	closetext
 	end
 
-NewBarkTownTeacherScript:
+SilentTownTeacherScript:
 	faceplayer
 	opentext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -235,7 +235,7 @@ SilentTownSilverBattleScript:
 	applymovement ELMENTRANCE_SILVER, SilverAfterBattle
 	disappear NEWBARKTOWN_SILVER_2
 	special HealParty
-	setscene SCENE_NEW_BARK_NOTHING
+	setscene SCENE_SILENT_NOTHING
 	setevent EVENT_RIVAL_ELMS_LAB
 	playmapmusic
 	
@@ -262,23 +262,23 @@ SilentTownSilverBattleScript:
 	jump .AfterYourDefeat
 	end
 
-NewBarkTownFisherScript:
+SilentTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
 	
-NewBarkTownFisher2Script:
+SilentTownFisher2Script:
 	jumptextfaceplayer KantoRockText
 
-NewBarkTownSign:
-	jumptext NewBarkTownSignText
+SilentTownSign:
+	jumptext SilentTownSignText
 
-NewBarkTownPlayersHouseSign:
-	jumptext NewBarkTownPlayersHouseSignText
+SilentTownPlayersHouseSign:
+	jumptext SilentTownPlayersHouseSignText
 
-NewBarkTownElmsLabSign:
-	jumptext NewBarkTownElmsLabSignText
+SilentTownElmsLabSign:
+	jumptext SilentTownElmsLabSignText
 
-NewBarkTownElmsHouseSign:
-	jumptext NewBarkTownElmsHouseSignText
+SilentTownElmsHouseSign:
+	jumptext SilentTownElmsHouseSignText
 
 PlayerMovesOutOfWay:
 	step UP
@@ -504,7 +504,7 @@ Text_ElmDiscoveredNewMon:
 	cont "new #MON."
 	done
 
-NewBarkTownRivalText1:
+SilentTownRivalText1:
 	text "<PLAY_G>!" 
 	
 	para "I've been waiting"
@@ -532,7 +532,7 @@ NewBarkTownRivalText1:
     line "LAB was boring!"
 	done
 
-NewBarkTownRivalText2:
+SilentTownRivalText2:
 	text "All that boredom's"
 	line "the only reason I" 
 	cont "left to check on"
@@ -548,7 +548,7 @@ NewBarkTownRivalText2:
 	cont "mother again?"
 	done
 
-NewBarkTownRivalText3:
+SilentTownRivalText3:
 	text "Bahaha!"
 
 	para "Don't make me"
@@ -565,20 +565,20 @@ NewBarkTownRivalText3:
 	line "back to ELM's!"
 	done
 
-NewBarkTownSignText:
+SilentTownSignText:
 	text "Forever peaceful"
 	line "SILENT TOWN"
 	done
 
-NewBarkTownPlayersHouseSignText:
+SilentTownPlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-NewBarkTownElmsLabSignText:
+SilentTownElmsLabSignText:
 	text "ELM #MON LAB"
 	done
 
-NewBarkTownElmsHouseSignText:
+SilentTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 	
@@ -646,7 +646,7 @@ RivalNoText:
 	para "tell!"
 	done 
 	
-NewBarkTown_MapEvents:
+SilentTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -658,20 +658,20 @@ NewBarkTown_MapEvents:
 	db 4 ; coord events
 	coord_event  1,  8, SCENE_TEACHER_STOPS, ElmStopsYouScene1
 	coord_event  1,  9, SCENE_TEACHER_STOPS, ElmStopsYouScene2
-	coord_event  5,  6, SCENE_DEFAULT, NewBarkTown_RivalGreets
+	coord_event  5,  6, SCENE_DEFAULT, SilentTown_RivalGreets
 	coord_event 10, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
 	
 	db 4 ; bg events
-	bg_event 12,  8, BGEVENT_READ, NewBarkTownSign
-	bg_event  3,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
-	bg_event 11, 13, BGEVENT_READ, NewBarkTownElmsLabSign
-	bg_event  7, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
+	bg_event 12,  8, BGEVENT_READ, SilentTownSign
+	bg_event  3,  5, BGEVENT_READ, SilentTownPlayersHouseSign
+	bg_event 11, 13, BGEVENT_READ, SilentTownElmsLabSign
+	bg_event  7, 13, BGEVENT_READ, SilentTownElmsHouseSign
 
 	db 6 ; object events
-	object_event  8,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
-	object_event 15,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  7, 11, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event  7,  8, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NewBarkTownElmScript, EVENT_ELM_APPEARED_NEW_BARK_TOWN
-	object_event 19,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisher2Script, -1
-	object_event  7, 14, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, EVENT_FOUGHT_RIVAL_NEW_BARK_TOWN
+	object_event  8,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownTeacherScript, -1
+	object_event 15,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentTownFisherScript, -1
+	object_event  7, 11, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownRivalScript, EVENT_RIVAL_SILENT_TOWN
+	object_event  7,  8, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SilentTownElmScript, EVENT_ELM_APPEARED_SILENT_TOWN
+	object_event 19,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownFisher2Script, -1
+	object_event  7, 14, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, EVENT_FOUGHT_RIVAL_SILENT_TOWN

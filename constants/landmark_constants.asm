@@ -3,7 +3,7 @@
 
 ; Johto landmarks
 	const SPECIAL_MAP       ; 00
-	const NEW_BARK_TOWN     ; 01
+	const SILENT_TOWN     ; 01
 	const ROUTE_29          ; 02
 	const CHERRYGROVE_WOODS 
 	const CHERRYGROVE_CITY  ; 03

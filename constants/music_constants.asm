@@ -62,7 +62,7 @@
 	const MUSIC_ROCKET_ENCOUNTER             ; 39
 	const MUSIC_POKEMANIAC_ENCOUNTER         ; 3a
 	const MUSIC_SAGE_ENCOUNTER               ; 3b
-	const MUSIC_NEW_BARK_TOWN                ; 3c
+	const MUSIC_SILENT_TOWN                ; 3c
 	const MUSIC_GOLDENROD_CITY               ; 3d
 	const MUSIC_VERMILION_CITY               ; 3e
 	const MUSIC_POKEMON_CHANNEL              ; 3f

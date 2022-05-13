@@ -26,7 +26,7 @@ OutdoorSprites:
 	dw CeladonGroupSprites
 	dw CianwoodGroupSprites
 	dw ViridianGroupSprites
-	dw NewBarkGroupSprites
+	dw SilentGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
 	dw CitrineGroupSprites
@@ -308,7 +308,7 @@ IndigoGroupSprites:
 	db SPRITE_BOULDER
 
 CherrygroveWoodsSprites:
-NewBarkGroupSprites:
+SilentGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY
 	db SPRITE_FAMICOM

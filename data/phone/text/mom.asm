@@ -30,7 +30,7 @@ MomPhoneGenericAreaText:
 	cont "of neat, <PLAYER>."
 	done
 
-MomPhoneNewBarkText:
+MomPhoneSilentText:
 	text "What? You're in"
 	line "@"
 	text_ram wStringBuffer3
