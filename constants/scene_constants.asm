@@ -87,10 +87,10 @@ SCENE_FINISHED EQU 1
 	const SCENE_AZALEATOWN_RIVAL_BATTLE         ; 1
 	const SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL ; 2
 
-; wGoldenrodGymSceneID
+; wVioletGymSceneID
 	const_def
-	const SCENE_GOLDENRODGYM_NOTHING              ; 0
-	const SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING ; 1
+	const SCENE_VIOLETGYM_NOTHING              ; 0
+	const SCENE_VIOLETGYM_WHITNEY_STOPS_CRYING ; 1
 
 ; wRoute42SceneID
 	const_def

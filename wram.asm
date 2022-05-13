@@ -2638,7 +2638,7 @@ wRoute35NationalParkGateSceneID::                 db ; d98d
 wRoute36SceneID::                                 db ; d98e
 wRoute36NationalParkGateSceneID::                 db ; d98f
 wAzaleaTownSceneID::                              db ; d990
-wGoldenrodGymSceneID::                            db ; d991
+wVioletGymSceneID::                            db ; d991
 wGoldenrodMagnetTrainStationSceneID::             db ; d992
 wGoldenrodPokecenter1FSceneID::                   db ; d993
 wOlivineCitySceneID::                             db ; d994
