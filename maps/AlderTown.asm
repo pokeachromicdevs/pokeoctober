@@ -17,8 +17,11 @@ AlderTownSign:
 	jumptext .SignContents
 .SignContents:
 	text "ALDER TOWN"
+
+	para "The Quiet Town of"
+	line "Aging Grace"
 	done
-	; TODO: slogan
+	done
 
 AlderTown_MapEvents:
 	db 0, 0 ; filler
