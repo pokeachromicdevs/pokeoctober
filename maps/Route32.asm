@@ -1,18 +1,4 @@
 	object_const_def ; object_event constants
-	;const ROUTE32_FISHER1
-	;const ROUTE32_FISHER2
-	;const ROUTE32_FISHER3
-	;const ROUTE32_YOUNGSTER1
-	;const ROUTE32_YOUNGSTER2
-	;const ROUTE32_YOUNGSTER3
-	;const ROUTE32_LASS1
-	;const ROUTE32_COOLTRAINER_M
-	;const ROUTE32_YOUNGSTER4
-	;const ROUTE32_FISHER4
-	;const ROUTE32_POKE_BALL1
-	;const ROUTE32_FISHER5
-	;const ROUTE32_FRIEDA
-	;const ROUTE32_POKE_BALL2
 
 Route32_MapScripts:
 	db 3 ; scene scripts

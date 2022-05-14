@@ -34,4 +34,4 @@ _CardKey:
 
 .CardKeyScript:
 	closetext
-	farsjump CardKeySlotScript
+	;farsjump CardKeySlotScript ; TODO: Find replacement script

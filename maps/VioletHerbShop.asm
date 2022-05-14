@@ -3,10 +3,14 @@ VioletHerbShop_MapScripts:
 
 	db 0 ; callbacks
 
+; scripts here
+
 VioletHerbShop_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 2 ; warp events
+	warp_event  9,  9, VIOLET_CITY, 8
+	warp_event 10,  9, VIOLET_CITY, 8
 
 	db 0 ; coord events
 

@@ -174,6 +174,18 @@ CherrygroveCityPokecenterSign:
 CherrygroveCityMartSign:
 	jumpstd martsign
 
+CherrygroveCityGymSign:
+	jumptext .Text
+
+.Text:
+	text "CHERRYGROVE CITY"
+	line "#MON GYM"
+	cont "LEADER: FALKNER"
+
+	para "The Elegant Master"
+	line "of Flying #MON"
+	done
+
 GuideGentMovement1:
 	step LEFT
 	step LEFT
@@ -510,11 +522,12 @@ CherrygroveCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event 35, 27, BGEVENT_READ, CherrygroveCitySign
 	bg_event 39, 15, BGEVENT_READ, GuideGentsHouseSign
 	bg_event 26, 21, BGEVENT_READ, CherrygroveCityMartSign
 	bg_event 32, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
+	bg_event 25,  5, BGEVENT_READ, CherrygroveCityGymSign
 
 	db 5 ; object events
 	object_event 38, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE

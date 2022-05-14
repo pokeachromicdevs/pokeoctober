@@ -89,18 +89,6 @@ Route30_MikeysRattataAttacksMovement:
 	big_step UP
 	step_end
 
-Text_UseTackle:
-	text "Go, RATTATA!"
-
-	para "TACKLE!"
-	done
-
-Text_ThisIsABigBattle:
-	text "What? This is a"
-	line "big battle!"
-	cont "Leave me alone!"
-	done
-	
 SoldierDwightSeenText:
 	text "Don't think you"
 	line "can just wander"
