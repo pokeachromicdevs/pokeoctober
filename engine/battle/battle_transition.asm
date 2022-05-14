@@ -809,6 +809,8 @@ INCLUDE "gfx/overworld/trainer_battle_nite.pal"
 	ret z
 	cp SCIENTIST
 	ret z
+	cp KAREN
+	ret z
 	ld de, PokeBallTransition
 	ret
 

@@ -13,9 +13,7 @@ GymLeaders:
 	db JASMINE
 	db CHUCK
 	db CLAIR
-	db WILL
 	db BRUNO
-	db KAREN
 	db KOGA
 	db CHAMPION
 	db RED
