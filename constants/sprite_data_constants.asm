@@ -36,4 +36,3 @@ NUM_SPRITEDATA_FIELDS EQU const_value
 	const PAL_NPC_SILVER ; d
 	const PAL_NPC_TREE   ; e
 	const PAL_NPC_ROCK   ; f
-	const PAL_NPC_PURPLE
