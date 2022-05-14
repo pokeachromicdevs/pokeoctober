@@ -215,6 +215,7 @@ ENDM
 	map_const ALDER_TOWN,                                  10,  9 ;  8
 	map_const ALDER_POKECENTER_1F,                          8,  4 ;  9
 	map_const ALDER_MART,                                   6,  4 ;  10
+	map_const ALDER_HAPPINESS_RATER,                        4,  4 ;  5
 
 	newgroup                                                      ;  9
 
@@ -255,12 +256,10 @@ ENDM
 	map_const ROUTE_34,                                    10, 18 ;  1
 	map_const GOLDENROD_CITY,                              20, 18 ;  2
 	map_const GOLDENROD_BIKE_SHOP,                          4,  4 ;  4
-	map_const GOLDENROD_HAPPINESS_RATER,                    4,  4 ;  5
 	map_const BILLS_FAMILYS_HOUSE,                          4,  4 ;  6
 	map_const GOLDENROD_MAGNET_TRAIN_STATION,              10,  9 ;  7
 	map_const GOLDENROD_FLOWER_SHOP,                        4,  4 ;  8
 	map_const GOLDENROD_PP_SPEECH_HOUSE,                    4,  4 ;  9
-	map_const GOLDENROD_NAME_RATER,                         4,  4 ; 10
 	map_const GOLDENROD_DEPT_STORE_1F,                      8,  4 ; 11
 	map_const GOLDENROD_DEPT_STORE_2F,                      8,  4 ; 12
 	map_const GOLDENROD_DEPT_STORE_3F,                      8,  4 ; 13
@@ -502,6 +501,7 @@ ENDM
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
 	map_const SILENT_POKECENTER_1F,                         8,  4 ; 14
 	map_const CHERRYGROVE_FISHER_HOUSE,                     4,  4 ;  8
+	map_const CHERRYGROVE_WOODS_NAME_RATER,                 4,  4 ; 10
 
 	newgroup                                                      ; 27
 	map_const CITRINE_ISLAND,                              20, 18 ;  1

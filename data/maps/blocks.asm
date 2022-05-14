@@ -155,10 +155,10 @@ BillsHouse_Blocks:
 CharcoalKiln_Blocks:
 LakeOfRageHiddenPowerHouse_Blocks:
 LakeOfRageMagikarpHouse_Blocks:
-GoldenrodHappinessRater_Blocks:
+AlderHappinessRater_Blocks:
 BillsFamilysHouse_Blocks:
 GoldenrodPPSpeechHouse_Blocks:
-GoldenrodNameRater_Blocks:
+CherrygroveWoodsNameRater_Blocks:
 VermilionFishingSpeechHouse_Blocks:
 VermilionMagnetTrainSpeechHouse_Blocks:
 VermilionDiglettsCaveSpeechHouse_Blocks:

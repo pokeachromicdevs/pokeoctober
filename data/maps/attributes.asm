@@ -551,12 +551,12 @@ ENDM
 	map_attributes Route36NationalParkGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
 	map_attributes VioletGym, VIOLET_GYM, $00, 0
 	map_attributes GoldenrodBikeShop, GOLDENROD_BIKE_SHOP, $00, 0
-	map_attributes GoldenrodHappinessRater, GOLDENROD_HAPPINESS_RATER, $00, 0
+	map_attributes AlderHappinessRater, ALDER_HAPPINESS_RATER, $00, 0
 	map_attributes BillsFamilysHouse, BILLS_FAMILYS_HOUSE, $00, 0
 	map_attributes GoldenrodMagnetTrainStation, GOLDENROD_MAGNET_TRAIN_STATION, $00, 0
 	map_attributes GoldenrodFlowerShop, GOLDENROD_FLOWER_SHOP, $00, 0
 	map_attributes GoldenrodPPSpeechHouse, GOLDENROD_PP_SPEECH_HOUSE, $00, 0
-	map_attributes GoldenrodNameRater, GOLDENROD_NAME_RATER, $00, 0
+	map_attributes CherrygroveWoodsNameRater, CHERRYGROVE_WOODS_NAME_RATER, $00, 0
 	map_attributes GoldenrodDeptStore1F, GOLDENROD_DEPT_STORE_1F, $00, 0
 	map_attributes GoldenrodDeptStore2F, GOLDENROD_DEPT_STORE_2F, $00, 0
 	map_attributes GoldenrodDeptStore3F, GOLDENROD_DEPT_STORE_3F, $00, 0
