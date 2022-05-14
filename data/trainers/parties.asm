@@ -5123,6 +5123,14 @@ OfficerGroup:
 	
 	next_list_item ; OFFICER (2)
 	db "MATT@", TRAINERTYPE_NORMAL
+	db 8
+	dw SPINARAK
+	db 10
+	dw PUPPERON
+	db -1 ; end
+	
+	next_list_item ; OFFICER (2)
+	db "SAMSON@", TRAINERTYPE_NORMAL
 	db 6
 	dw HOOTHOOT
 	db 7
@@ -5136,7 +5144,7 @@ OfficerGroup:
 GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	;dbw 14, MONJA
+	dbw 14, BURGELA
 	;dbw 18, SMUJI
 	dbw 20, GRIMER
 	dbw 21, TANGELA

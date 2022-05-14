@@ -281,7 +281,7 @@ Route29Sign1:
 	jumptext Route29Sign1Text
 
 Route29Potion:
-	itemball MASTER_BALL
+	itemball POTION
 	
 Route29PokeBall:
 	itemball POKE_BALL
