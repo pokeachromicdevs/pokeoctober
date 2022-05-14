@@ -49,10 +49,11 @@ SilentTown_RivalGreets:
 	opentext
 	writetext SilentTownRivalText2
 	special NameMom
-	closetext 
+	closetext
 	showemote EMOTE_SHOCK, NEWBARKTOWN_SILVER, 15
 	opentext
 	writetext SilentTownRivalText3
+	waitbutton
 	closetext
 	applymovement NEWBARKTOWN_SILVER, RivalGoesToLab
 	disappear NEWBARKTOWN_SILVER
@@ -505,59 +506,55 @@ Text_ElmDiscoveredNewMon:
 	done
 
 SilentTownRivalText1:
-	text "<PLAY_G>!" 
-	
+	text "<PLAY_G>!"
+
 	para "I've been waiting"
 	line "at the LAB for"
-	cont "hours, and you're"
-	
-	para "just coming out"
-	line "of your house?"
-	
+	para "hours, and you're"
+	line "just coming out"
+	cont "of your house?"
+
 	para "Man, are you not"
-	line "excited to get" 
-	cont "your first" 
-	
-	para "#MON?" 
-	
+	line "excited to get"
+	para "your first"
+	line "#MON?"
+
 	para "Although, you"
 	line "might've had the"
-	cont "right idea to stay"
-	
-	para "home for so long."
-	line "ELM's been gone,"
-	cont "and all that"
-	
+	para "right idea to stay"
+	line "home for so long."
+	para "ELM's been gone,"
+	line "and all that"
 	para "waiting in the"
     line "LAB was boring!"
 	done
 
 SilentTownRivalText2:
 	text "All that boredom's"
-	line "the only reason I" 
-	cont "left to check on"
-	
-	para "you!"
+	line "the only reason I"
+	para "left to check on"
+	line "you!"
 
 	para "Anyways… "
 
 	para "Well, you, uhh…"
 
 	para "What is it that"
-	line "you call your" 
+	line "you call your"
 	cont "mother again?"
 	done
 
 SilentTownRivalText3:
 	text "Bahaha!"
 
+	para "'<MOM>'?"
 	para "Don't make me"
 	line "laugh!"
 
 	para "Calling her"
 	line "something so"
-	cont "childish is"
-	cont "hilarious!"
+	para "childish is"
+	line "hilarious!"
 
 	para "Well, see ya!"
 
