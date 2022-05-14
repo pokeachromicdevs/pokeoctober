@@ -112,11 +112,136 @@ TrainerRoute33Hyuck:
 	para "Hyuck!"
 	done
 
-Route33_EncounterKaren:
-	jumptext .Text
+Route33_EncounterKaren1:
+	scall Route33_EncounterKarenIntro
+	applymovement ROUTE33_KAREN, .MoveToPlayer
+	sjump Route33_EncounterKarenEnd
 
-.Text
-	text "Coord event"
+.MoveToPlayer
+	step RIGHT
+	step UP
+	turn_head RIGHT
+	step_end
+
+Route33_EncounterKaren2:
+	scall Route33_EncounterKarenIntro
+	applymovement ROUTE33_KAREN, .MoveToPlayer
+	sjump Route33_EncounterKarenEnd
+
+.MoveToPlayer
+	step RIGHT
+	step_end
+
+Route33_EncounterKaren3:
+	scall Route33_EncounterKarenIntro
+	applymovement ROUTE33_KAREN, .MoveToPlayer
+	sjump Route33_EncounterKarenEnd
+
+.MoveToPlayer
+	step RIGHT
+	step DOWN
+	turn_head RIGHT
+	step_end
+
+Route33_EncounterKaren4:
+	scall Route33_EncounterKarenIntro
+	applymovement ROUTE33_KAREN, .MoveToPlayer
+	sjump Route33_EncounterKarenEnd
+
+.MoveToPlayer
+	step RIGHT
+	step DOWN
+	step DOWN
+	turn_head RIGHT
+	step_end
+
+Route33_EncounterKarenIntro:
+	playmusic MUSIC_ROCKET_ENCOUNTER
+
+	opentext
+	writetext Route33_KarenText1
+	waitbutton
+	closetext
+
+	opentext
+	writetext Route33_KurtText
+	waitbutton
+	closetext
+
+	opentext
+	writetext Route33_KarenText2
+	waitbutton
+	closetext
+
+	turnobject ROUTE33_KAREN, RIGHT
+	showemote EMOTE_SHOCK, ROUTE33_KAREN, 15
+	end
+
+Route33_EncounterKarenEnd:
+	opentext
+	writetext Route33_KarenText3
+	waitbutton
+	closetext
+	end
+
+Route33_KarenText1:
+	text "KAREN: Look, I may"
+	line "be in a generous"
+	para "mood, but that"
+	line "doesn't mean I'm"
+	para "going to accept"
+	line "your nonsense, old"
+	cont "man!"
+
+	para "Now you're going"
+	line "to make us some"
+	para "# BALLS that"
+	line "can master the"
+	para "likes of MASTER"
+	line "BALLs, and you're"
+	cont "going to like it!"
+	done
+
+Route33_KurtText:
+	text "KURT: I already"
+	line "told you!"
+
+	para "I refuse to make"
+	line "fiendish tools!"
+
+	para "# BALLS that"
+	line "not only guarantee"
+	para "capture, as well"
+	line "as corrupt the"
+	para "poor #MON that"
+	line "they capture<...>"
+
+	para "Such vile weapons"
+	line "should not exist!"
+	done
+
+Route33_KarenText2:
+	text "KAREN: Keep saying"
+	line "that, and I'll have"
+	para "my SNEASEL come"
+	line "back out to cut"
+	cont "you up some more!"
+	done
+
+Route33_KarenText3:
+	text "Oh great, now a"
+	line "kid insists on"
+	para "getting in the"
+	line "way?"
+
+	para "That's it!"
+
+	para "My generous mood"
+	line "is gone!"
+
+	para "Face the fiery"
+	line "wrath of TEAM"
+	cont "ROCKET, twerp!"
 	done
 
 Route33_Sign:
@@ -135,10 +260,10 @@ Route33_MapEvents:
 	db 0 ; warp events
 
 	db 4 ; coord events
-	coord_event  4,  6, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
-	coord_event  4,  7, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
-	coord_event  4,  9, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
-	coord_event  4,  8, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
+	coord_event  4,  6, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren1
+	coord_event  4,  7, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren2
+	coord_event  4,  8, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren3
+	coord_event  4,  9, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren4
 
 	db 1 ; bg events
 	bg_event 36,  6, BGEVENT_READ, Route33_Sign
