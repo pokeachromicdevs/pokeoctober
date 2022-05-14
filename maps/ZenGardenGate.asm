@@ -3,12 +3,14 @@ ZenGardenGate_MapScripts:
 
 	db 0 ; callbacks
 
-; scripts here
-
 ZenGardenGate_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 4 ; warp events
+	warp_event  4,  0, ZEN_GARDEN, 1
+	warp_event  5,  0, ZEN_GARDEN, 1
+	warp_event  4,  7, VIOLET_CITY, 7
+	warp_event  5,  7, VIOLET_CITY, 7
 
 	db 0 ; coord events
 
