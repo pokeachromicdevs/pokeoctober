@@ -226,7 +226,7 @@ TrainerTeacherAnn:
 Route31Sign:
 	jumptext Route31SignText
 
-DarkCaveSign:
+MrPokemonHouseSign:
 	jumptext MrPokemonHouseText
 
 Route31CooltrainerMScript:
@@ -242,11 +242,9 @@ Route31PokeBall:
 	itemball POKE_BALL
 	
 Route31OfficerBlock:
-	faceplayer
 	jumptext OfficerBlocking
 	
 Route31OfficerBlock2:
-	faceplayer
 	jumptext OfficerBlocking2
 
 Route31CooltrainerMText:
@@ -380,7 +378,7 @@ Route31_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 19,  3, BGEVENT_READ, MrPokemonHouseText
+	bg_event 19,  3, BGEVENT_READ, MrPokemonHouseSign
 
 	db 8 ; object events
 	object_event 23,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorStanley, -1
@@ -389,5 +387,5 @@ Route31_MapEvents:
 	object_event 13, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterMax, -1
 	object_event 27, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassSam, -1
 	object_event 16,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerTeacherAnn, -1
-	object_event  2,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock, EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock2, EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	object_event  2,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock, EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route31OfficerBlock2, EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
