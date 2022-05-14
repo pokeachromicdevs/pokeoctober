@@ -563,8 +563,8 @@ SilentTownRivalText3:
 	done
 
 SilentTownSignText:
-	text "Forever peaceful"
-	line "SILENT TOWN"
+	text "SILENT TOWN"
+	para "Forever Peaceful"
 	done
 
 SilentTownPlayersHouseSignText:
