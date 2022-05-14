@@ -2045,4 +2045,4 @@
 NUM_EVENTS EQU const_value ; 7d0
 
 ; forgive me, but this is for the save files' own good
-assert NUM_EVENTS == $7d0, "\n\t\tNumber of total events must be 2000; you have {u:NUM_EVENTS}.\n\t\tAdd or remove a constant in constants/event_flags.asm to fix this"
+assert NUM_EVENTS == $7d0, "\n\t\tNumber of total events must be 2000; you have {d:NUM_EVENTS}.\n\t\tAdd or remove a constant in constants/event_flags.asm to fix this"
