@@ -302,12 +302,6 @@ ElmDirectionsScript:
 	waitsfx
 	waitbutton
 	closetext
-	turnobject ELMSLAB_ELM, LEFT
-	opentext
-	writetext ElmDirectionsText2
-	waitbutton
-	closetext
-	turnobject ELMSLAB_ELM, DOWN
 	opentext
 	writetext ElmDirectionsText3
 	waitbutton
@@ -333,28 +327,8 @@ LookAtElmPokeBallScript:
 
 ElmsLabHealingMachine:
 	opentext
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue .CanHeal
 	writetext ElmsLabHealingMachineText1
 	waitbutton
-	closetext
-	end
-
-.CanHeal:
-	writetext ElmsLabHealingMachineText2
-	yesorno
-	iftrue ElmsLabHealingMachine_HealParty
-	closetext
-	end
-
-ElmsLabHealingMachine_HealParty:
-	special StubbedTrainerRankings_Healings
-	special HealParty
-	playmusic MUSIC_NONE
-	setval HEALMACHINE_ELMS_LAB
-	special HealMachineAnim
-	pause 30
-	special RestartMapMusic
 	closetext
 	end
 
@@ -996,19 +970,15 @@ ElmDirectionsText1:
 	cont "up!"
 	done
 
-ElmDirectionsText2:
-	text "If your #MON is"
-	line "hurt, you should"
-
-	para "heal it with this"
-	line "machine."
-
-	para "Feel free to use"
-	line "it anytime."
-	done
-
 ElmDirectionsText3:
-	text "Good luck!"
+	text "If your #MON"
+	line "are hurt, you can"
+	para "heal them at the"
+	line "town's #MON"
+	para "CENTER, just"
+	line "behind the LAB."
+
+	para "Good luck!"
 	done
 	
 Text_Best:
@@ -1046,11 +1016,6 @@ ElmPokeBallText:
 ElmsLabHealingMachineText1:
 	text "I wonder what this"
 	line "does?"
-	done
-
-ElmsLabHealingMachineText2:
-	text "Would you like to"
-	line "heal your #MON?"
 	done
 
 ElmAfterTheftText1:
@@ -1470,7 +1435,7 @@ ElmsLab_MapEvents:
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls2
 
 	db 16 ; bg events
-	bg_event  2,  1, BGEVENT_READ, ElmsLabHealingMachine
+	bg_event  0,  1, BGEVENT_READ, ElmsLabHealingMachine
 	bg_event  6,  1, BGEVENT_READ, ElmsLabBookshelf
 	bg_event  7,  1, BGEVENT_READ, ElmsLabBookshelf
 	bg_event  8,  1, BGEVENT_READ, ElmsLabBookshelf
