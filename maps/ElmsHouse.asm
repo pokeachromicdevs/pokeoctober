@@ -86,8 +86,8 @@ ElmsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  6,  7, SILENT_TOWN, 4
-	warp_event  7,  7, SILENT_TOWN, 4
+	warp_event  6,  7, SILENT_TOWN, 3
+	warp_event  7,  7, SILENT_TOWN, 3
 
 	db 0 ; coord events
 
