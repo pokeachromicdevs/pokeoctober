@@ -301,9 +301,9 @@ SilverAfterBattle:
 	step_end
 	
 MovementBattle:
-	step DOWN
-	step LEFT
-	step LEFT
+	big_step DOWN
+	big_step LEFT
+	big_step LEFT
 	step_end
 	
 ElmTakesPlayerToLab1:
