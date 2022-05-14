@@ -64,6 +64,16 @@ SCENE_FINISHED EQU 1
 	const SCENE_ROUTE32_OFFER_SLOWPOKETAIL ; 1
 	const SCENE_ROUTE32_NOTHING            ; 2
 
+; wAlderTownSceneID
+	const_def
+	const SCENE_ALDER_TOWN_NOTHING ; 0
+	const SCENE_ALDER_TOWN_GYM_UNLOCKED ; 1
+
+; wRoute33SceneID
+	const_def
+	const SCENE_ROUTE33_NOTHING ; 0
+	const SCENE_ROUTE33_BATTLED_KAREN ; 1
+
 ; wRoute35NationalParkGateSceneID
 	const_def
 	const SCENE_ROUTE35NATIONALPARKGATE_NOTHING             ; 0

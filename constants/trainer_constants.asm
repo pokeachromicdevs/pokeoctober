@@ -283,8 +283,8 @@ KRIS EQU __enum__
 	const MILLER
 
 	trainerclass GRUNTM ; 1f
-	const GRUNTM_1
-	const GRUNTM_2
+	const GRUNTM_ROUTE_33
+	const GRUNTM_ROUTE_33_HYUCK
 	const GRUNTM_3
 	const GRUNTM_4
 	const GRUNTM_5
@@ -702,7 +702,7 @@ KRIS EQU __enum__
 	const MATT
 
 	trainerclass GRUNTF ; 42
-	const GRUNTF_1
+	const GRUNTF_ROUTE_33
 	const GRUNTF_2
 	const GRUNTF_3
 	const GRUNTF_4

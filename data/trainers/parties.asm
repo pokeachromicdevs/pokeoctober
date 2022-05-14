@@ -2038,18 +2038,14 @@ PokemaniacGroup:
 GruntMGroup:
 	next_list_item ; GRUNTM (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 14
-	dw KOFFING
+	dbw 19, RATTATA
+	;dbw 20, BALLERINE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 7
-	dw RATTATA
-	db 9
-	dw ZUBAT
-	db 9
-	dw ZUBAT
+	dbw 20, SMEARGLE
+	dbw 20, RATICATE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (3)
@@ -5152,10 +5148,10 @@ OfficerGroup:
 GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 9
-	dw ZUBAT
-	db 11
-	dw EKANS
+	;dbw 14, MONJA
+	;dbw 18, SMUJI
+	dbw 20, GRIMER
+	dbw 21, TANGELA
 	db -1 ; end
 
 	next_list_item ; GRUNTF (2)
