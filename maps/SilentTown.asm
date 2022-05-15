@@ -418,24 +418,19 @@ Movement_TeacherBringsYouBack2_NBT:
 	step RIGHT
 	turn_head LEFT
 	step_end
-	
+
 Text_Study101:
 	text "…And if we spend"
 	line "just a few more"
-	
 	para "days observing the"
-	
 	line "#MON living in"
-	
-	para "ROUTE 101…"
-	
-	para "…"
-	
+	cont "ROUTE 29<...>"
+
+	para "<...>"
+
 	para "He seems to be"
-	
 	line "completely"
-	cont "occupied…"
-	
+	cont "occupied<...>"
 	done
 
 Text_GearIsImpressive:
@@ -453,23 +448,20 @@ Text_WaitPlayer:
 Text_ItsDangerousToGoAlone:
 	text "Hold your"
 	line "RAPIDASH!"
-	
+
 	para "<PLAY_G>, don't"
 	line "you know that it's"
-	cont "a bad idea to just"
+	para "a bad idea to just"
+	line "wander out into"
+	para "ROUTE 29 without"
+	line "a #MON? Wild"
+	para "#MON live in"
+	line "the tall grass,"
+	para "and who knows"
+	line "what else could"
+	para "happen to you out"
+	line "in the wild!"
 
-	para "wander out into"
-	line "ROUTE 29 without"
-	
-	para "a #MON? Wild"
-	line "#MON live in" 
-	cont "the tall grass,"
-	cont "and who knows"
-	
-	para "what else could"
-	line "happen to you out"
-	cont "in the wild!"
-	
 	para "Come on, let's"
 	line "head to my LAB."
 	done
@@ -492,7 +484,6 @@ Text_TellMomIfLeaving:
 Text_CallMomOnGear:
 	text "Call your mom on"
 	line "your #GEAR to"
-
 	para "let her know how"
 	line "you're doing."
 	done
@@ -578,21 +569,19 @@ SilentTownElmsLabSignText:
 SilentTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
-	
+
 KantoRockText:
 	text "Hngh…"
-	
+
 	para "Sorry, kid. The"
-	line "route to KANTO" 
-	cont "all blocked off"
-	
-	para "until I can find a"
-	line "way to move this"
-	cont "rock out of the"
-	
-	para "way."
-	done 
-	
+	line "road ahead is"
+	para "all blocked off"
+	line "until I can find a"
+	para "way to move this"
+	line "rock out of the"
+	cont "way."
+	done
+
 SilverEntranceWinText:
 	text "Wow! I thought my"
 	line "#MON would have"
@@ -616,33 +605,30 @@ EntranceRivalText_EitherResult:
 
 TimeToBattle:
 	text "Hey, wait up!"
-	
+
 	para "You have a #-"
 	line "MON… And so do I."
-	cont "You know what"
-	
-	para "this means,"
-	line "right?"
+
+	para "You know what"
+	line "this means,"
+	cont "right?"
 	done
-	
+
 RivalYesText:
 	text "That's right. We"
-	
 	line "battle, and you"
-	cont "become my first"
-	para "step on my stair-"
-	
-	line "way to the top!"
+	para "become my first"
+	line "step on my stair-"
+	cont "way to the top!"
 	done
-	
+
 RivalNoText:
 	text "Hehe. Looks like"
-	
 	line "it's time for"
-	cont "some show and"
-	para "tell!"
-	done 
-	
+	para "some show and"
+	line "tell!"
+	done
+
 SilentTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -658,7 +644,6 @@ SilentTown_MapEvents:
 	coord_event  5,  6, SCENE_DEFAULT, SilentTown_RivalGreets
 	coord_event 10, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
-	
 	db 4 ; bg events
 	bg_event 12,  8, BGEVENT_READ, SilentTownSign
 	bg_event  3,  5, BGEVENT_READ, SilentTownPlayersHouseSign
