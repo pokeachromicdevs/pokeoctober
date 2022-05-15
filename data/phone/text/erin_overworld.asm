@@ -32,7 +32,8 @@ ErinNumberDeclinedText:
 	line "If you do want to"
 
 	para "battle, come see"
-	line "ERIN--that's me!"
+	line "NIECHELLE--that's"
+	cont "me!"
 	done
 
 ErinPhoneFullText:
