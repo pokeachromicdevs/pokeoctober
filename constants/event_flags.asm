@@ -232,6 +232,11 @@
 	const EVENT_VIOLET_CITY_PP_UP
 	const EVENT_VIOLET_CITY_RARE_CANDY
 	const EVENT_BEAT_OFFICER_SAMSON
+	
+; sprout tower (Floor 2)
+	const EVENT_BEAT_SAGE_NICO
+	const EVENT_BEAT_SAGE_CHOW
+	const EVENT_BEAT_BLACKBELT_GENKI
 
 ; violet gym
 	const EVENT_BEAT_WHITNEY
@@ -265,9 +270,6 @@
 	const EVENT_KURT_IN_ALDER_POKEMON_CENTER
 
 ; reserved
-	const EVENT_13a
-	const EVENT_13b
-	const EVENT_13c
 	const EVENT_13d
 	const EVENT_13e
 	const EVENT_13f

@@ -1,10 +1,46 @@
+	object_const_def ; object_event constants
+	const SPROUTTOWER_SAGE1
+	const SPROUTTOWER_SAGE2
+	const SPROUTTOWER_BLACKBELT
+
 SproutTower2F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-; scripts here
+TrainerSageNico:
+	trainer SAGE, NICO, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .AfterScript
 
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext SageNicoAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+SageNicoSeenText:
+	text "This tower has"
+	line "outlived many,"
+	
+	para "and will most"
+	line "likely outlive" 
+	cont "us."
+	done
+	
+SageNicoBeatenText:
+	text "A loss is a"
+	line "loss."
+	done
+
+SageNicoAfterBattleText:
+	text "Hopefully, one"
+	line "day, we can find"
+	
+	para "a way to achive"
+	line "immortality."
+	done 
+	
 SproutTower2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,4 +55,6 @@ SproutTower2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event 1, 5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSageNico, -1
+

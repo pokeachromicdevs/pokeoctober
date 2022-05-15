@@ -9,14 +9,14 @@ JohtoGrassWildMons:
 	dbw 4, RATTATA
 	dbw 5, RATTATA
 	dbw 3, RATTATA
-	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
 	; day
-	dbw 3, RATTATA
-	dbw 4, RATTATA
-	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
 	dbw 6, RATTATA
 	dbw 5, RATTATA
 	dbw 5, RATTATA

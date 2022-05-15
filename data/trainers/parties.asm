@@ -4561,12 +4561,12 @@ SageGroup:
 
 	next_list_item ; SAGE (2)
 	db "NICO@", TRAINERTYPE_NORMAL
-	db 3
+	db 7
 	dw BELLSPROUT
-	db 3
+	db 7
 	dw BELLSPROUT
-	db 3
-	dw BELLSPROUT
+	db 9
+	dw GASTLY
 	db -1 ; end
 
 	next_list_item ; SAGE (3)
