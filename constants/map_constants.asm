@@ -56,8 +56,15 @@ ENDM
 	newgroup                                                      ;  3
 
 	map_const SPROUT_TOWER_1F,                             10,  9 ;  1
-	map_const SPROUT_TOWER_2F,                             10,  8 ;  2
-	map_const SPROUT_TOWER_3F,                             10,  8 ;  3
+	map_const SPROUT_TOWER_2F,                             10,  9 ;  2
+	map_const SPROUT_TOWER_3F,                             10,  9 ;  3
+	map_const SPROUT_TOWER_4F,                             10,  9 ;  3
+	map_const SPROUT_TOWER_5F,                             10,  9 ;  3
+	map_const SPROUT_TOWER_6F,                             10,  9 ;  3
+	map_const SPROUT_TOWER_7F,                             10,  9 ;  3
+	map_const SPROUT_TOWER_8F,                             10,  9 ;  3
+	map_const SPROUT_TOWER_9F,                              6,  6 ;  3
+
 	map_const TIN_TOWER_1F,                                10,  9 ;  4
 	map_const TIN_TOWER_2F,                                10,  9 ;  5
 	map_const TIN_TOWER_3F,                                10,  9 ;  6
@@ -210,7 +217,7 @@ ENDM
 	map_const AZALEA_MART,                                  6,  4 ;  3
 	map_const KURTS_HOUSE,                                  8,  4 ;  4
 	map_const ALDER_GYM,                                    5,  8 ;  5
-	map_const ROUTE_33,                                    20,  9 ;  6
+	map_const ROUTE_33,                                    30,  9 ;  6
 	map_const AZALEA_TOWN,                                 10,  9 ;  7
 	map_const ALDER_TOWN,                                  10,  9 ;  8
 	map_const ALDER_POKECENTER_1F,                          8,  4 ;  9
@@ -486,7 +493,7 @@ ENDM
 
 	map_const ROUTE_30,                                    10, 18 ;  1
 	map_const ROUTE_31,                                    20,  9 ;  2
-	map_const CHERRYGROVE_CITY,                            21, 18 ;  3
+	map_const CHERRYGROVE_CITY,                            20, 18 ;  3
 	map_const CHERRYGROVE_MART,                             6,  4 ;  4
 	map_const CHERRYGROVE_POKECENTER_1F,                    8,  4 ;  5
 	map_const CHERRYGROVE_GYM_SPEECH_HOUSE,                 4,  4 ;  6
@@ -509,9 +516,3 @@ ENDM
 	map_const CITRINE_INN_1F,                               7,  4 ;  3
 	map_const CITRINE_INN_2F,                               7,  4 ;  4
 
-	newgroup
-	map_const CHERRYGROVE_SHRINE,                         14,  18 ;15
-	map_const CHERRYGROVE_SHRINE_GATE,                      5,  4 ; 19
-
-
-	

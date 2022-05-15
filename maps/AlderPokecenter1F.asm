@@ -25,5 +25,6 @@ AlderPokecenter1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 2 ; object events
 	object_event  5,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlderPokecenter1FNurseScript, -1
+	object_event  9,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_IN_ALDER_POKEMON_CENTER

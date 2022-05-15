@@ -100,9 +100,8 @@ ENDM
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | WEST | EAST 
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | EAST
 	connection north, Route30, ROUTE_30, 6
-	connection west, CherrygroveShrine, CHERRYGROVE_SHRINE, 0
 	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, 9
 	
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST | NORTH
@@ -118,8 +117,8 @@ ENDM
 	connection north, Route32, ROUTE_32, 0
 	connection west, Route33, ROUTE_33, 0
 
-	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
-	connection west, Route34, ROUTE_34, -18
+	map_attributes AzaleaTown, AZALEA_TOWN, $05, NORTH | EAST
+	connection north, Route34, ROUTE_34, 0
 	connection east, Route33, ROUTE_33, 0
 
 	map_attributes CianwoodCity, CIANWOOD_CITY, $35, EAST
@@ -171,9 +170,6 @@ ENDM
 	connection north, Route46, ROUTE_46, 11
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, -9
 	connection east, Route29, ROUTE_29, 0
-	
-	map_attributes CherrygroveShrine, CHERRYGROVE_SHRINE, $01, EAST
-	connection east, CherrygroveCity, CHERRYGROVE_CITY, 0
 
 	map_attributes Route30, ROUTE_30, $35, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -10
@@ -187,14 +183,13 @@ ENDM
 	connection north, VioletCity, VIOLET_CITY, 0
 	connection south, AlderTown, ALDER_TOWN, 0
 
-	map_attributes Route33, ROUTE_33, $05, NORTH | WEST | EAST
-	connection north, Route32, ROUTE_32, 0
+	map_attributes Route33, ROUTE_33, $05,  WEST | EAST
 	connection west, AzaleaTown, AZALEA_TOWN, 0
 	connection east, AlderTown, ALDER_TOWN, 0
 
-	map_attributes Route34, ROUTE_34, $05, NORTH | EAST
+	map_attributes Route34, ROUTE_34, $05, NORTH | SOUTH
 	connection north, GoldenrodCity, GOLDENROD_CITY, -5
-	connection east, AzaleaTown, AZALEA_TOWN, 18
+	connection south, AzaleaTown, AZALEA_TOWN, 0
 
 	map_attributes Route35, ROUTE_35, $05, NORTH | SOUTH
 	connection north, Route36, ROUTE_36, 0
@@ -395,6 +390,12 @@ ENDM
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
 	map_attributes SproutTower2F, SPROUT_TOWER_2F, $00, 0
 	map_attributes SproutTower3F, SPROUT_TOWER_3F, $00, 0
+	map_attributes SproutTower4F, SPROUT_TOWER_4F, $00, 0
+	map_attributes SproutTower5F, SPROUT_TOWER_5F, $00, 0
+	map_attributes SproutTower6F, SPROUT_TOWER_6F, $00, 0
+	map_attributes SproutTower7F, SPROUT_TOWER_7F, $00, 0
+	map_attributes SproutTower8F, SPROUT_TOWER_8F, $00, 0
+	map_attributes SproutTower9F, SPROUT_TOWER_9F, $00, 0
 	map_attributes TinTower1F, TIN_TOWER_1F, $00, 0
 	map_attributes TinTower2F, TIN_TOWER_2F, $00, 0
 	map_attributes TinTower3F, TIN_TOWER_3F, $00, 0
@@ -715,7 +716,6 @@ ENDM
 	map_attributes SilentPokecenter1F, SILENT_POKECENTER_1F, $00, 0
 	map_attributes AlderPokecenter1F, ALDER_POKECENTER_1F, $00, 0
 	map_attributes AlderMart, ALDER_MART, $00, 0
-	map_attributes CherrygroveShrineGate, CHERRYGROVE_SHRINE_GATE, $00, 0
 
 	map_attributes CitrineIsland, CITRINE_ISLAND, $41, 0
 	map_attributes CitrineMart, CITRINE_MART, $00, 0

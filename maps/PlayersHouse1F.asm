@@ -46,8 +46,7 @@ MeetMomScript:
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
 	writetext MomGivesPokegearText
 	buttonsound
-	special InitialSetDSTFlag
-	
+
 .SetDayOfWeek:
 	writetext IsItDSTText
 	yesorno
@@ -240,9 +239,7 @@ MomGivesPokegearText:
 	line "for your #GEAR"
 	cont "to be repaired!"
 
-	para "Oh, by the way, is"
-	line "DAYLIGHT SAVINGS"
-	cont "TIME on right now?"
+	para "Oh, by the way<...>"
 	done
 
 IsItDSTText:

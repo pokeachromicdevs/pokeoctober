@@ -1,11 +1,11 @@
-CherrygroveShrine_MapScripts:
+SproutTower5F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 ; scripts here
 
-CherrygroveShrine_MapEvents:
+SproutTower5F_MapEvents:
 	db 0, 0 ; filler
 
 	db 0 ; warp events

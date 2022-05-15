@@ -7,7 +7,6 @@
 	const ROUTE_29          ; 02
 	const CHERRYGROVE_WOODS 
 	const CHERRYGROVE_CITY  ; 03
-	const SAKURA_SHRINE
 	const ROUTE_30          ; 04
 	const ROUTE_31          ; 05
 	const VIOLET_CITY       ; 06

@@ -509,8 +509,8 @@ Debug_Warp:
 	db "SILENT@@@@@@@"
 	db "CG WOODS@@@@@"
 	db "CHERRYGROVE@@"
-	db "CG SHRINE@@@@"
 	db "VIOLET@@@@@@@"
+	db "ZEN GARDEN@@@"
 	db "ROUTE 32@@@@@"
 	db "ALDER@@@@@@@@"
 	db "AZALEA@@@@@@@"
@@ -543,8 +543,8 @@ Debug_Warp:
 	db SPAWN_SILENT
 	db SPAWN_CHERRYGROVE_WOODS
 	db SPAWN_CHERRYGROVE
-	db SPAWN_CHERRYGROVE_SHRINE
 	db SPAWN_VIOLET
+	db SPAWN_CHERRYGROVE_SHRINE ; ZEN GARDEN
 	db SPAWN_ROUTE_32
 	db SPAWN_ALDER
 	db SPAWN_AZALEA

@@ -18,9 +18,12 @@ ElmsHousePC:
 
 ElmsHouseBookshelf:
 	jumpstd difficultbookshelf
-	
+
 ElmsFood:
 	jumptext ElmsHouseFoodText
+
+ElmsPokemonFood:
+	jumptext ElmsHousePokemonFoodText
 
 ElmsWifeText:
 	text "Hi, <PLAY_G>! My"
@@ -49,7 +52,7 @@ ElmsSonText:
 ElmsHouseFoodText:
 	text "There's some food"
 	line "here. It must be"
-	cont "for the LAB."
+	cont "for PROF. ELM."
 	done
 
 ElmsHousePokemonFoodText:
@@ -95,8 +98,8 @@ ElmsHouse_MapEvents:
 	bg_event  6,  1, BGEVENT_READ, ElmsHousePC
 	bg_event 12,  1, BGEVENT_READ, ElmsHouseBookshelf
 	bg_event 13,  1, BGEVENT_READ, ElmsHouseBookshelf
-	bg_event  1,  1, BGEVENT_READ, ElmsHouseFoodText
-	bg_event  2,  1, BGEVENT_READ, ElmsHousePokemonFoodText
+	bg_event  0,  1, BGEVENT_READ, ElmsFood
+	bg_event  2,  1, BGEVENT_READ, ElmsPokemonFood
 	bg_event 10,  1, BGEVENT_READ, ElmsHouseBookshelf
 	bg_event 11,  1, BGEVENT_READ, ElmsHouseBookshelf
 

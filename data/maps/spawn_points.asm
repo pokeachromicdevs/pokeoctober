@@ -42,7 +42,7 @@ SpawnPoints:
 
 ; kansai
 	spawn CHERRYGROVE_WOODS,          29,  2
-	spawn CHERRYGROVE_SHRINE,         21, 23
+	spawn ZEN_GARDEN,                  9, 33
 	spawn ALDER_TOWN,                  3,  6
 
 ; '92 kanto

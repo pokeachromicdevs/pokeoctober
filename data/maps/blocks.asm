@@ -33,14 +33,8 @@ ElmsHouse_Blocks:
 Route11_Blocks:
 	INCBIN "maps/Route11.blk"
 
-BetaSproutTower5_Blocks:
-	INCBIN "maps/unused/BetaSproutTower5.blk"
-
 Route15_Blocks:
 	INCBIN "maps/Route15.blk"
-
-BetaSproutTower9_Blocks:
-	INCBIN "maps/unused/BetaSproutTower9.blk"
 
 Route19_Blocks:
 	INCBIN "maps/Route19.blk"
@@ -103,9 +97,6 @@ PewterCity_Blocks:
 BetaSilverCaveOutside_Blocks:
 	INCBIN "maps/unused/BetaSilverCaveOutside.blk"
 
-BetaSproutTower2_Blocks:
-	INCBIN "maps/unused/BetaSproutTower2.blk"
-
 Route12_Blocks:
 	INCBIN "maps/Route12.blk"
 
@@ -114,9 +105,6 @@ AlderTown_Blocks:
 
 Route20_Blocks:
 	INCBIN "maps/Route20.blk"
-
-BetaSproutTower6_Blocks:
-	INCBIN "maps/unused/BetaSproutTower6.blk"
 
 Route26_Blocks:
 	INCBIN "maps/Route26.blk"
@@ -219,9 +207,6 @@ Route4_Blocks:
 Route8_Blocks:
 	INCBIN "maps/Route8.blk"
 
-BetaSproutTower3_Blocks:
-	INCBIN "maps/unused/BetaSproutTower3.blk"
-
 ViridianCity_Blocks:
 	INCBIN "maps/ViridianCity.blk"
 
@@ -230,9 +215,6 @@ Route13_Blocks:
 
 Route21_Blocks:
 	INCBIN "maps/Route21.blk"
-
-BetaSproutTower7_Blocks:
-	INCBIN "maps/unused/BetaSproutTower7.blk"
 
 Route17_Blocks:
 	INCBIN "maps/Route17.blk"
@@ -264,7 +246,6 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
-CherrygroveShrineGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 CherrygroveWoodsGate_Blocks:
@@ -449,14 +430,15 @@ RuinsOfAlphOmanyteChamber_Blocks:
 RuinsOfAlphAerodactylChamber_Blocks:
 	INCBIN "maps/RuinsOfAlphPuzzleChamber.blk"
 
-SproutTower1F_Blocks:
-	INCBIN "maps/SproutTower1F.blk"
-
-SproutTower2F_Blocks:
-	INCBIN "maps/SproutTower2F.blk"
-
-SproutTower3F_Blocks:
-	INCBIN "maps/SproutTower3F.blk"
+SproutTower1F_Blocks: INCBIN "maps/SproutTower1F.blk"
+SproutTower2F_Blocks: INCBIN "maps/SproutTower2F.blk"
+SproutTower3F_Blocks: INCBIN "maps/SproutTower3F.blk"
+SproutTower4F_Blocks: INCBIN "maps/SproutTower4F.blk"
+SproutTower5F_Blocks: INCBIN "maps/SproutTower5F.blk"
+SproutTower6F_Blocks: INCBIN "maps/SproutTower6F.blk"
+SproutTower7F_Blocks: INCBIN "maps/SproutTower7F.blk"
+SproutTower8F_Blocks: INCBIN "maps/SproutTower8F.blk"
+SproutTower9F_Blocks: INCBIN "maps/SproutTower9F.blk"
 
 RadioTower1F_Blocks:
 	INCBIN "maps/RadioTower1F.blk"
@@ -995,9 +977,6 @@ Section "Map Blocks 4", ROMX
 CherrygroveWoods_Blocks:
 	INCBIN "maps/CherrygroveWoods.blk"
 	
-CherrygroveShrine_Blocks:
-	INCBIN "maps/CherrygroveShrine.blk"
-
 CitrineIsland_Blocks:
 	INCBIN "maps/capumon/CitrineIsland.blk"
 

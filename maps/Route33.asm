@@ -197,8 +197,11 @@ Route33_EncounterKaren:
 	closetext
 
 ; kurt 
+	applymovement PLAYER, .PlayerMovesOutOfWay
 	applymovement ROUTE33_KURT, .KurtGoingHome
 	disappear ROUTE33_KURT
+	clearevent EVENT_KURT_IN_ALDER_POKEMON_CENTER
+
 	applymovement ROUTE33_BUGSY, .BugsyToPlayer
 
 ; bugsy talks to player
@@ -208,7 +211,6 @@ Route33_EncounterKaren:
 	closetext
 
 ; bugsy goes home
-	applymovement PLAYER, .PlayerMovesOutOfWay
 	applymovement ROUTE33_BUGSY, .BugsyGoingHome
 	disappear ROUTE33_BUGSY
 
@@ -380,17 +382,6 @@ Route33_EncounterKaren:
 	step LEFT
 	step_end
 
-.KurtGoingHome:
-	step DOWN
-	step LEFT
-	step LEFT
-	step UP
-	step UP
-	step UP
-	step LEFT
-	step LEFT
-	step_end
-
 .KurtToPlayer:
 	step UP
 	step RIGHT
@@ -405,8 +396,13 @@ Route33_EncounterKaren:
 	step_end
 
 .KarenToPlayer:
+	step RIGHT
+	step_end
+
 .BugsyToPlayer:
 	step RIGHT
+	step RIGHT
+	turn_head DOWN
 	step_end
 
 .PlayerMovesOutOfWay:
@@ -414,8 +410,9 @@ Route33_EncounterKaren:
 	turn_head UP
 	step_end
 
-.BugsyGoingHome:
+.KurtGoingHome:
 	step RIGHT
+.BugsyGoingHome:
 	step UP
 	step UP
 	step UP
@@ -438,17 +435,20 @@ Route33_MapEvents:
 	db 0 ; warp events
 
 	db 1 ; coord events
-	coord_event 24, 10, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
+	coord_event 44, 10, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
 
 	db 1 ; bg events
-	bg_event 36,  6, BGEVENT_READ, Route33_Sign
+	bg_event 56,  6, BGEVENT_READ, Route33_Sign
 
-	db 6 ; object events
+	db 8 ; object events
 ; rocket grunts
-	object_event 34, 10, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
-	object_event 29,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
-	object_event 28,  4, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33Hyuck, -1
+	object_event 54, 10, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
+	object_event 49,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
+	object_event 47,  2, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33Hyuck, -1
 ; karen + kurt
-	object_event 22, 10, SPRITE_KAREN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
-	object_event 22, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
-	object_event 19,  8, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_ROUTE33_BUGSY_APPEARS
+	object_event 42, 10, SPRITE_KAREN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
+	object_event 42, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
+	object_event 39,  8, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_ROUTE33_BUGSY_APPEARS
+; bloooooooooocking
+	object_event 37,  8, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_BUGSY
+	object_event 36,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_BUGSY

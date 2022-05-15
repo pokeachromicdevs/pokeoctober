@@ -1676,7 +1676,7 @@ JohtoGrassWildMons:
 	dbw 4, MOIBELLE
 	dbw 4, PARASPOR
 	
-	map_id CHERRYGROVE_SHRINE
+	map_id ZEN_GARDEN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, PIDGEY

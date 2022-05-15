@@ -297,6 +297,8 @@ Script_TimeCapsuleClosed:
 	end
 
 LinkReceptionistScript_TimeCapsule:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iffalse Script_TimeCapsuleClosed
 	checkevent EVENT_MET_BILL
 	iftrue Script_TimeCapsuleClosed
 	checkflag ENGINE_TIME_CAPSULE
@@ -1036,8 +1038,8 @@ Pokecenter2F_MapEvents:
 	db 1 ; bg events
 	bg_event  7,  3, BGEVENT_READ, Pokecenter2FLinkRecordSign
 
-	db 4 ; object events
+	db 3 ; object events
 	object_event  5,  2, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_Trade, -1
 	object_event  9,  2, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_Battle, -1
 	object_event 13,  3, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_TimeCapsule, -1
-	object_event  1,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Pokecenter2FOfficerScript, EVENT_MYSTERY_GIFT_DELIVERY_GUY
+	;object_event  1,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Pokecenter2FOfficerScript, EVENT_MYSTERY_GIFT_DELIVERY_GUY

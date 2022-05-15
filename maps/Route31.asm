@@ -11,27 +11,7 @@
 Route31_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .CheckMomCall
-	callback MAPCALLBACK_OBJECTS, .MoveOfficerCallback
-	
-.MoveOfficerCallback:
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue .doMove
-	return
-.doMove
-	moveobject ROUTE31_OFFICER1, 4, 10
-	moveobject ROUTE31_OFFICER2, 4, 10
-	return
-
-.CheckMomCall:
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	iffalse .DoMomCall
-	return
-
-.DoMomCall:
-	specialphonecall SPECIALCALL_WORRIED
-	return
+	db 0 ; callbacks
 
 TrainerInstructorStanley:
 	trainer INSTRUCTOR, STANLEY, EVENT_BEAT_INSTRUCTOR_STANLEY, InstructorStanley1SeenText, InstructorStanley1BeatenText, 0, .Script
