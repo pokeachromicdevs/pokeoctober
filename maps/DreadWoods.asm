@@ -23,13 +23,14 @@ TrainerManchildMiguel:
 	
 ManchildMiguelSeenText:
 	text "I'm scared, but my"
-	line "mom told me to stop"
+	line "mom told me to"
 	
-	para "callig her and grow"
-	line "up<...>I haven't"
+	para "stop callig her"
+	line "and grow up<...>"
 	
-	para "moved from this"
-	line "spot since."
+	para "I haven't moved"
+	line "from this spot"
+	cont "since."
 	
 	para "Could you hold"
 	line "my hand?"
@@ -42,12 +43,12 @@ ManchildMiguelBeatenText:
 	
 ManchildMiguelAfterBattleText:
 	text "I went into the"
-	line "woods hoping to end"
+	line "woods hoping to"
 	
-	para "up in one of the"
-	line "fantasy worlds I"
+	para "end up in one of"
+	line "the fantasy worlds"
 	
-	para "always dream of,"
+	para "I always dream of,"
 	line "only to experience"
 	
 	para "horror and fright"
@@ -71,5 +72,5 @@ DreadWoods_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  22,  7, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerManchildMiguel, -1
+	object_event  22,  7, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerManchildMiguel, -1
 
