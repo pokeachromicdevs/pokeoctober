@@ -197,6 +197,7 @@ Route33_EncounterKaren:
 	closetext
 
 ; kurt 
+	applymovement PLAYER, .PlayerMovesOutOfWay
 	applymovement ROUTE33_KURT, .KurtGoingHome
 	disappear ROUTE33_KURT
 	applymovement ROUTE33_BUGSY, .BugsyToPlayer
@@ -208,7 +209,6 @@ Route33_EncounterKaren:
 	closetext
 
 ; bugsy goes home
-	applymovement PLAYER, .PlayerMovesOutOfWay
 	applymovement ROUTE33_BUGSY, .BugsyGoingHome
 	disappear ROUTE33_BUGSY
 
@@ -380,17 +380,6 @@ Route33_EncounterKaren:
 	step LEFT
 	step_end
 
-.KurtGoingHome:
-	step DOWN
-	step LEFT
-	step LEFT
-	step UP
-	step UP
-	step UP
-	step LEFT
-	step LEFT
-	step_end
-
 .KurtToPlayer:
 	step UP
 	step RIGHT
@@ -405,8 +394,13 @@ Route33_EncounterKaren:
 	step_end
 
 .KarenToPlayer:
+	step RIGHT
+	step_end
+
 .BugsyToPlayer:
 	step RIGHT
+	step RIGHT
+	turn_head DOWN
 	step_end
 
 .PlayerMovesOutOfWay:
@@ -414,8 +408,9 @@ Route33_EncounterKaren:
 	turn_head UP
 	step_end
 
-.BugsyGoingHome:
+.KurtGoingHome:
 	step RIGHT
+.BugsyGoingHome:
 	step UP
 	step UP
 	step UP
