@@ -46,6 +46,7 @@ ElmsLab_MapScripts:
 	turnobject ELMENTRANCE_SILVER, LEFT
 	opentext
 	writetext ElmText_Intro
+	waitbutton
 	closetext
 	opentext
 	writetext ElmText_ResearchAmbitions
@@ -53,10 +54,11 @@ ElmsLab_MapScripts:
 	closetext
 	playsound SFX_GLASS_TING
 	pause 30
-	showemote EMOTE_SHOCK, ELMSLAB_ELM, 10
+	showemote EMOTE_SHOCK, ELMSLAB_ELM, 15
 	turnobject ELMSLAB_ELM, DOWN
 	opentext
 	writetext SilverEmailShock
+	waitbutton
 	closetext
 	turnobject ELMSLAB_ELM, RIGHT
 	opentext
@@ -71,6 +73,7 @@ ElmsLab_MapScripts:
 	writetext ElmText_ChooseAPokemon
 	waitbutton
 	setscene SCENE_ELMSLAB_CANT_LEAVE
+	setevent EVENT_ELM_STILL_HAS_EMAIL_OPEN
 	closetext
 	end
 	
@@ -363,8 +366,6 @@ ElmAfterTheftScript:
 	clearevent EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE
 	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES
 	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
-	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
-	setevent EVENT_ROUTE_30_BATTLE
 	writetext ElmAfterTheftText6
 	waitbutton
 	closetext
@@ -472,6 +473,7 @@ AideScript_GivePotion:
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOTHING
+	clearevent EVENT_ELM_STILL_HAS_EMAIL_OPEN
 	setmapscene SILENT_TOWN, SCENE_ELM_ENTRANCE_BATTLE
 	end
 
@@ -545,8 +547,19 @@ ElmsLabTrashcan:
 	jumptext ElmsLabTrashcanText
 
 ElmsLabPC:
+	checkevent EVENT_ELM_STILL_HAS_EMAIL_OPEN
+	iftrue .CheckEmail
 	jumptext ElmsLabPCText
-	
+
+.CheckEmail:
+	jumptext .EmailText
+
+.EmailText:
+	text "The e-mail that"
+	line "PROF. ELM just"
+	cont "read is there<...>"
+	done
+
 SilverGetCyndaquilMovement:
 	step RIGHT
 	turn_head UP

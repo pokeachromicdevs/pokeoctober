@@ -483,9 +483,6 @@ InitializeEventsScript:
 	setevent EVENT_DECO_PLANT_4
 	setevent EVENT_PLAYERS_HOUSE_MOM_2
 
-; init r30
-	setevent EVENT_ROUTE_30_YOUNGSTER_JOEY
-
 ; init cherrygrove
 	setevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
 	setevent EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM
