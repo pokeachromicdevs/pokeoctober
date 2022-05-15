@@ -1698,8 +1698,8 @@ JohtoGrassWildMons:
 	dbw 3, HOOTHOOT
 	dbw 2, BIPULLA
 	dbw 2, HOOTHOOT
-	dbw 4, ZUBAT
-	dbw 2, ZUBAT
+	dbw 4, DROWZEE
+	dbw 2, DROWZEE
 	dbw 4, BIPULLA
 	dbw 4, ODDISH
 	
