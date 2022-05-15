@@ -8,8 +8,21 @@ SilentPokecenter1F_MapScripts:
 	db 0 ; callbacks
 
 SilentPokecenterNurse:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iffalse .NoMons
 	jumpstd pokecenternurse
-	
+
+.NoMons:
+	jumptext .NoMonsText
+
+.NoMonsText:
+	text "Hello!"
+	para "In order to use a"
+	line "#MON CENTER,"
+	para "you need at least"
+	line "one #MON."
+	done
+
 SilentPokecenterLassScript:
 	jumptextfaceplayer SilentPokecenterLassText
 	
