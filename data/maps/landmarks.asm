@@ -13,7 +13,6 @@ Landmarks:
 	landmark 124, 100, Route29Name
 	landmark 116, 100, CherrygroveWoodsName
 	landmark 100, 100, CherrygroveCityName
-	landmark 100,  98, SakuraShrineName
 	landmark 100,  84, Route30Name
 	landmark 100,  60, Route31Name
 	landmark  84,  60, VioletCityName

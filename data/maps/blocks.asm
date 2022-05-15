@@ -264,7 +264,6 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
-CherrygroveShrineGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 CherrygroveWoodsGate_Blocks:
@@ -995,9 +994,6 @@ Section "Map Blocks 4", ROMX
 CherrygroveWoods_Blocks:
 	INCBIN "maps/CherrygroveWoods.blk"
 	
-CherrygroveShrine_Blocks:
-	INCBIN "maps/CherrygroveShrine.blk"
-
 CitrineIsland_Blocks:
 	INCBIN "maps/capumon/CitrineIsland.blk"
 
