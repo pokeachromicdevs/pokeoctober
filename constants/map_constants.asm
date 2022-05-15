@@ -210,7 +210,7 @@ ENDM
 	map_const AZALEA_MART,                                  6,  4 ;  3
 	map_const KURTS_HOUSE,                                  8,  4 ;  4
 	map_const ALDER_GYM,                                    5,  8 ;  5
-	map_const ROUTE_33,                                    20,  9 ;  6
+	map_const ROUTE_33,                                    30,  9 ;  6
 	map_const AZALEA_TOWN,                                 10,  9 ;  7
 	map_const ALDER_TOWN,                                  10,  9 ;  8
 	map_const ALDER_POKECENTER_1F,                          8,  4 ;  9
