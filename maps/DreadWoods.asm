@@ -120,12 +120,8 @@ DreadWoods_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
-<<<<<<< HEAD
+	db 3 ; object events
 	object_event 22, 7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerSchoolboyAndy, -1
-	object_event 19, 17, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerManchildMiguel, -1
-=======
-	object_event 21,  9, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerManchildMiguel, -1
+	object_event 21, 15, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerManchildMiguel, -1
 	object_event 14, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, DreadWoods_SleepyCopScript, EVENT_BEAT_WHITNEY
->>>>>>> 4f851df50831fe8b3b63108001ec9b135617ed07
 

@@ -265,7 +265,6 @@
 	const EVENT_KURT_IN_ALDER_POKEMON_CENTER
 
 ; reserved
-	const EVENT_139
 	const EVENT_13a
 	const EVENT_13b
 	const EVENT_13c
