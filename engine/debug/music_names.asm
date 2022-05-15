@@ -113,3 +113,4 @@ Debug_MusicNames::
 	db "Giovanni@@@@@@@@@@"
 	db "Citrine Inn Rest@@"
 	db "Blue Battle@@@@@@@"
+	db "Dread Woods@@@@@@@"

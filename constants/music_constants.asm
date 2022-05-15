@@ -118,6 +118,7 @@
 	const MUSIC_GIOVANNI_ENCOUNTER           ; 6f
 	const MUSIC_CITRINE_INN_REST             ; 6c
 	const MUSIC_BLUE_BATTLE                  ; 6d
+	const MUSIC_DREAD_WOODS                  ; 6e
 
 NUM_MUSIC_TRACKS EQU const_value
 
