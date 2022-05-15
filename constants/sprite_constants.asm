@@ -113,6 +113,7 @@
 	const SPRITE_HIKER
 	const SPRITE_GAMEBOY_GIRL
 	const SPRITE_MYSTIC
+	const SPRITE_MANCHILD
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

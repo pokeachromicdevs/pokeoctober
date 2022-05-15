@@ -5612,8 +5612,12 @@ SportsmanGroup:
 ManchildGroup:
 	next_list_item ; MANCHILD (1)
 	db "MIGUEL@", TRAINERTYPE_NORMAL
-	db 5
-	dw TOGEPI
+	db 10
+	dw ELEKID
+	db 11
+	dw MAGNEMITE
+	db 12
+	dw COALTA
 	db -1 ;end
 
 	end_list_items
