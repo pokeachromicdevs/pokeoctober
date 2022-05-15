@@ -77,7 +77,7 @@ TrainerRoute33RocketGrunt2:
 
 .AfterText
 	text "Seriously, leave."
-	
+
 	para "You don't want to"
 	line "mess with KAREN."
 	para "She'll let her"
@@ -117,378 +117,43 @@ TrainerRoute33Hyuck:
 	para "Hyuck!"
 	done
 
-Route33_EncounterKaren1: ; top
-	scall Route33_EncounterKarenIntro
-	applymovement ROUTE33_KAREN, .MoveToPlayer
-	scall Route33_EncounterKarenEnd
-	applymovement ROUTE33_KAREN, .MoveAway
-	disappear ROUTE33_KAREN
-	playmapmusic
-	applymovement ROUTE33_KURT, .KurtToPlayer
-	scall Route33_KurtTalksToPlayer
-	moveobject ROUTE33_BUGSY, 0, 6
-	appear ROUTE33_BUGSY
-	applymovement ROUTE33_BUGSY, Route33_BugsyToKurt
-	scall Route33_BugsyKurtTalk
-	applymovement ROUTE33_KURT, .KurtGoingHome
-	disappear ROUTE33_KURT
-	applymovement ROUTE33_BUGSY, Route33_BugsyToPlayer
-	scall Route33BugsyPlayerTalk
-	applymovement ROUTE33_BUGSY, .BugsyGoingHome
-	disappear ROUTE33_BUGSY
-	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
-	end
-
-.MoveToPlayer:
-	step RIGHT
-	step_end
-
-.MoveAway:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-.KurtToPlayer:
-	step UP
-	step RIGHT
-	step_end
-
-.KurtGoingHome:
-	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-.BugsyGoingHome:
-	step DOWN
-	step DOWN
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step UP
-	step UP
-	step RIGHT
-	step_end
-
-Route33_EncounterKaren2: ; 2nd from north
-	scall Route33_EncounterKarenIntro
-	applymovement ROUTE33_KAREN, .MoveToPlayer
-	scall Route33_EncounterKarenEnd
-	applymovement ROUTE33_KAREN, .MoveAway
-	disappear ROUTE33_KAREN
-	playmapmusic
-	applymovement ROUTE33_KURT, .KurtToPlayer
-	scall Route33_KurtTalksToPlayer
-	moveobject ROUTE33_BUGSY, 0, 7
-	appear ROUTE33_BUGSY
-	applymovement ROUTE33_BUGSY, Route33_BugsyToKurt
-	scall Route33_BugsyKurtTalk
-	applymovement ROUTE33_KURT, .KurtGoingHome
-	disappear ROUTE33_KURT
-	applymovement ROUTE33_BUGSY, Route33_BugsyToPlayer
-	scall Route33BugsyPlayerTalk
-	applymovement ROUTE33_BUGSY, .BugsyGoingHome
-	disappear ROUTE33_BUGSY
-	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
-	end
-
-.MoveToPlayer:
-	step RIGHT
-	step DOWN
-	turn_head RIGHT
-	step_end
-
-.MoveAway:
-	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-.KurtToPlayer:
-	step RIGHT
-	step_end
-
-.KurtGoingHome:
-	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-.BugsyGoingHome:
-	step DOWN
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step UP
-	step UP
-	step RIGHT
-	step_end
-
-Route33_EncounterKaren3: ; 3rd from north
-	turnobject PLAYER, UP
-	scall Route33_EncounterKarenIntro
-	applymovement ROUTE33_KAREN, .MoveToPlayer
-	turnobject PLAYER, LEFT
-	scall Route33_EncounterKarenEnd
-	applymovement ROUTE33_KAREN, .MoveAway
-	disappear ROUTE33_KAREN
-	playmapmusic
-	applymovement ROUTE33_KURT, .KurtToPlayer
-	scall Route33_KurtTalksToPlayer
-	moveobject ROUTE33_BUGSY, 0, 8
-	appear ROUTE33_BUGSY
-	applymovement ROUTE33_BUGSY, Route33_BugsyToKurt
-	scall Route33_BugsyKurtTalk
-	applymovement ROUTE33_KURT, .KurtGoingHome
-	disappear ROUTE33_KURT
-	applymovement ROUTE33_BUGSY, Route33_BugsyToPlayer
-	scall Route33BugsyPlayerTalk
-	applymovement ROUTE33_BUGSY, .BugsyGoingHome
-	disappear ROUTE33_BUGSY
-	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
-	end
-
-.BugsyGoingHome:
-	step DOWN
-	step RIGHT
-	step RIGHT
-	step UP
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step UP
-	step UP
-	step RIGHT
-	step_end
-
-.MoveToPlayer:
-	step RIGHT
-	step DOWN
-	step DOWN
-	turn_head RIGHT
-	step_end
-
-.MoveAway:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-.KurtToPlayer:
-	step DOWN
-	step RIGHT
-	step_end
-
-.KurtGoingHome:
-	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-Route33_EncounterKaren4: ; bottom
-	turnobject PLAYER, UP
-	scall Route33_EncounterKarenIntro
-	applymovement ROUTE33_KAREN, .MoveToPlayer
-	turnobject PLAYER, LEFT
-	scall Route33_EncounterKarenEnd
-	applymovement ROUTE33_KAREN, .MoveAway
-	disappear ROUTE33_KAREN
-	playmapmusic
-	applymovement ROUTE33_KURT, .KurtToPlayer
-	scall Route33_KurtTalksToPlayer
-	moveobject ROUTE33_BUGSY, 0, 9
-	appear ROUTE33_BUGSY
-	applymovement ROUTE33_BUGSY, Route33_BugsyToKurt
-	scall Route33_BugsyKurtTalk
-	applymovement ROUTE33_KURT, .KurtGoingHome
-	disappear ROUTE33_KURT
-	applymovement ROUTE33_BUGSY, Route33_BugsyToPlayer
-	scall Route33BugsyPlayerTalk
-	applymovement ROUTE33_BUGSY, .BugsyGoingHome
-	disappear ROUTE33_BUGSY
-	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
-	end
-
-.MoveToPlayer:
-	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	turn_head RIGHT
-	step_end
-
-.MoveAway:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-.KurtToPlayer:
-	step DOWN
-	step DOWN
-	step RIGHT
-	step_end
-
-.KurtGoingHome:
-	step UP
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-.BugsyGoingHome:
-	step UP
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step UP
-	step UP
-	step RIGHT
-	step_end
-
-Route33_BugsyToKurt:
-	step RIGHT
-Route33_BugsyToPlayer:
-	step RIGHT
-	step_end
-
-Route33_KurtTalksToPlayer:
-	faceobject PLAYER, ROUTE33_KURT
-	jumptext .Text
-
-.Text:
-	text "KURT: Thank you so"
-	line "much for saving"
-	cont "me, child."
-
-	para "I was able to"
-	line "drive off a few of"
-	para "those blasted"
-	line "ROCKETs, but"
-	para "eventually I got"
-	line "overwhelmed."
-
-	para "So sorry for"
-	line "having you do what"
-	para "I should've"
-	line "accomplished."
-	done
-
-Route33_BugsyKurtTalk:
-	turnobject ROUTE33_KURT, LEFT
-	opentext
-	writetext .BugsyText
-	waitbutton
-	closetext
-	jumptext .KurtText
-
-.BugsyText:
-	text "BUGSY: Oh, hello"
-	line "KURT."
-
-	para "How are you doing"
-	line "today?"
-	done
-
-.KurtText:
-	text "KURT: Not well, I'm"
-	line "afraid."
-
-	para "I was just"
-	line "ambushed by some"
-	para "TEAM ROCKET"
-	line "hooligans, and"
-	para "their leader"
-	line "brought so much"
-	cont "pain upon my back."
-
-	para "I'm going to have"
-	line "to stay at the"
-	para "#MON CENTER"
-	line "before I make it"
-	cont "back home."
-	done
-
-Route33BugsyPlayerTalk:
-	jumptext .Text
-
-.Text:
-	text "I assume you came"
-	line "to KURT's aid, yes?"
-
-	para "I'm BUGSY."
-
-	para "I'm the GYM LEADER"
-	line "in ALDER TOWN."
-
-	para "I just finished my"
-	line "weekly outdoor"
-	para "studies on BUG"
-	line "types, so I'll be"
-	para "back at the GYM"
-	line "for a good while"
-	cont "now."
-
-	para "Hope to see you"
-	line "there."
-	done
-
-Route33_EncounterKarenIntro:
+Route33_EncounterKaren:
 	playmusic MUSIC_ROCKET_ENCOUNTER
+	turnobject PLAYER, LEFT
 
+; start dialog
 	opentext
-	writetext Route33_KarenText1
+	writetext .KarenText1
 	waitbutton
 	closetext
 
 	opentext
-	writetext Route33_KurtText
+	writetext .KurtText
 	waitbutton
 	closetext
 
 	opentext
-	writetext Route33_KarenText2
+	writetext .KarenText2
 	waitbutton
 	closetext
 
+; karen and kurt notice player
 	turnobject ROUTE33_KURT, RIGHT
 	turnobject ROUTE33_KAREN, RIGHT
 	showemote EMOTE_SHOCK, ROUTE33_KAREN, 15
-	end
+	applymovement ROUTE33_KAREN, .KarenToPlayer
 
-Route33_EncounterKarenEnd:
 	opentext
-	writetext Route33_KarenText3
+	writetext .KarenText3
 	waitbutton
 	closetext
 
 ; battle
-	winlosstext .WinText, 0
+	winlosstext .WinAgainstKarenText, 0
 	loadtrainer KAREN, KAREN1
 	startbattle
+
+; after battle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -496,19 +161,126 @@ Route33_EncounterKarenEnd:
 	setevent EVENT_BEAT_ROUTE33_KAREN
 
 	opentext
-	writetext .AfterText
+	writetext .AfterBeatingKarenText
 	waitbutton
 	closetext
 
 	setscene SCENE_ROUTE33_BATTLED_KAREN
+
+; karen goes away
+	applymovement ROUTE33_KAREN, .MoveAway
+	disappear ROUTE33_KAREN
+
+; kurt thanks player
+	playmapmusic
+	applymovement ROUTE33_KURT, .KurtToPlayer
+
+	faceobject PLAYER, ROUTE33_KURT
+	opentext
+	writetext .KurtTalksToPlayerText
+	waitbutton
+	closetext
+
+; wild bugsy appears
+	appear ROUTE33_BUGSY
+	applymovement ROUTE33_BUGSY, .BugsyToKurt
+
+	turnobject ROUTE33_KURT, LEFT
+	opentext
+	writetext .BugsyToKurtText
+	waitbutton
+	closetext
+
+	opentext
+	writetext .KurtToBugsyText
+	waitbutton
+	closetext
+
+; kurt 
+	applymovement ROUTE33_KURT, .KurtGoingHome
+	disappear ROUTE33_KURT
+	applymovement ROUTE33_BUGSY, .BugsyToPlayer
+
+; bugsy talks to player
+	opentext
+	writetext .BugsyPlayerText
+	waitbutton
+	closetext
+
+; bugsy goes home
+	applymovement PLAYER, .PlayerMovesOutOfWay
+	applymovement ROUTE33_BUGSY, .BugsyGoingHome
+	disappear ROUTE33_BUGSY
+
+	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
 	end
 
-.WinText:
+.KarenText1:
+	text "KAREN: Look, I may"
+	line "be in a generous"
+	para "mood, but that"
+	line "doesn't mean I'm"
+	para "going to accept"
+	line "your nonsense,"
+	cont "old man!"
+
+	para "Now you're going"
+	line "to make us some"
+	para "# BALLS that"
+	line "can master the"
+	para "likes of MASTER"
+	line "BALLs, and you're"
+	cont "going to like it!"
+	done
+
+.KurtText:
+	text "KURT: I already"
+	line "told you!"
+
+	para "I refuse to make"
+	line "fiendish tools!"
+
+	para "# BALLS that"
+	line "not only guarantee"
+	para "capture, as well"
+	line "as corrupt the"
+	para "poor #MON that"
+	line "they capture<...>"
+
+	para "Such vile weapons"
+	line "should not exist!"
+	done
+
+.KarenText2:
+	text "KAREN: Keep saying"
+	line "that, and I'll have"
+	para "my SNEASEL come"
+	line "back out to cut"
+	cont "you up some more!"
+	done
+
+.KarenText3:
+	text "Oh great, now a"
+	line "kid insists on"
+	para "getting in the"
+	line "way?"
+
+	para "That's it!"
+
+	para "My generous mood"
+	line "is gone!"
+
+	para "Face the fiery"
+	line "wrath of TEAM"
+	cont "ROCKET, twerp!"
+	done
+
+.WinAgainstKarenText:
 	text "What?! How'd you"
 	line "beat me?!"
 	done
 
-.AfterText:
+.AfterBeatingKarenText:
 	text "Gah!"
 
 	para "You're lucky I"
@@ -530,65 +302,125 @@ Route33_EncounterKarenEnd:
 	para "Sayonara, pest!"
 	done
 
-Route33_KarenText1:
-	text "KAREN: Look, I may"
-	line "be in a generous"
-	para "mood, but that"
-	line "doesn't mean I'm"
-	para "going to accept"
-	line "your nonsense,"
-	cont "old man!"
+.KurtTalksToPlayerText:
+	text "KURT: Thank you so"
+	line "much for saving"
+	cont "me, child."
 
-	para "Now you're going"
-	line "to make us some"
-	para "# BALLS that"
-	line "can master the"
-	para "likes of MASTER"
-	line "BALLs, and you're"
-	cont "going to like it!"
+	para "I was able to"
+	line "drive off a few of"
+	para "those blasted"
+	line "ROCKETs, but"
+	para "eventually I got"
+	line "overwhelmed."
+
+	para "So sorry for"
+	line "having you do what"
+	para "I should've"
+	line "accomplished."
 	done
 
-Route33_KurtText:
-	text "KURT: I already"
-	line "told you!"
+.BugsyToKurtText:
+	text "BUGSY: Oh, hello"
+	line "KURT."
 
-	para "I refuse to make"
-	line "fiendish tools!"
-
-	para "# BALLS that"
-	line "not only guarantee"
-	para "capture, as well"
-	line "as corrupt the"
-	para "poor #MON that"
-	line "they capture<...>"
-
-	para "Such vile weapons"
-	line "should not exist!"
+	para "How are you doing"
+	line "today?"
 	done
 
-Route33_KarenText2:
-	text "KAREN: Keep saying"
-	line "that, and I'll have"
-	para "my SNEASEL come"
-	line "back out to cut"
-	cont "you up some more!"
+.KurtToBugsyText:
+	text "KURT: Not well, I'm"
+	line "afraid."
+
+	para "I was just"
+	line "ambushed by some"
+	para "TEAM ROCKET"
+	line "hooligans, and"
+	para "their leader"
+	line "brought so much"
+	cont "pain upon my back."
+
+	para "I'm going to have"
+	line "to stay at the"
+	para "#MON CENTER"
+	line "before I make it"
+	cont "back home."
 	done
 
-Route33_KarenText3:
-	text "Oh great, now a"
-	line "kid insists on"
-	para "getting in the"
-	line "way?"
+.BugsyPlayerText:
+	text "I assume you came"
+	line "to KURT's aid, yes?"
 
-	para "That's it!"
+	para "I'm BUGSY."
 
-	para "My generous mood"
-	line "is gone!"
+	para "I'm the GYM LEADER"
+	line "in ALDER TOWN."
 
-	para "Face the fiery"
-	line "wrath of TEAM"
-	cont "ROCKET, twerp!"
+	para "I just finished my"
+	line "weekly outdoor"
+	para "studies on BUG"
+	line "types, so I'll be"
+	para "back at the GYM"
+	line "for a good while"
+	cont "now."
+
+	para "Hope to see you"
+	line "there."
 	done
+
+	step RIGHT
+	step_end
+
+.MoveAway:
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step LEFT
+	step LEFT
+	step_end
+
+.KurtGoingHome:
+	step DOWN
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step UP
+	step LEFT
+	step LEFT
+	step_end
+
+.KurtToPlayer:
+	step UP
+	step RIGHT
+	step_end
+
+.BugsyToKurt:
+	step RIGHT
+	step RIGHT
+	step DOWN
+	step DOWN
+	step RIGHT
+	step_end
+
+.KarenToPlayer:
+.BugsyToPlayer:
+	step RIGHT
+	step_end
+
+.PlayerMovesOutOfWay:
+	step DOWN
+	turn_head UP
+	step_end
+
+.BugsyGoingHome:
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
 
 Route33_Sign:
 	jumptext .Text
@@ -605,26 +437,18 @@ Route33_MapEvents:
 
 	db 0 ; warp events
 
-	db 4 ; coord events
-	coord_event  4,  6, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren1
-	coord_event  4,  7, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren2
-	coord_event  4,  8, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren3
-	coord_event  4,  9, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren4
+	db 1 ; coord events
+	coord_event 24, 10, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
 
 	db 1 ; bg events
 	bg_event 36,  6, BGEVENT_READ, Route33_Sign
 
 	db 6 ; object events
-	object_event 34, 10, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, \
-					0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
-	object_event 29,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, \
-					0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
-	object_event 13, 10, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, \
-					0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33Hyuck, -1
-
-	object_event  2,  6, SPRITE_KAREN, SPRITEMOVEDATA_STANDING_DOWN, \
-					0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
-	object_event  2,  7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, \
-					0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
-	object_event  0,  0, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_RIGHT, \
-					0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_ROUTE33_BUGSY_APPEARS
+; rocket grunts
+	object_event 34, 10, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
+	object_event 29,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
+	object_event 28,  4, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33Hyuck, -1
+; karen + kurt
+	object_event 22, 10, SPRITE_KAREN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
+	object_event 22, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
+	object_event 19,  8, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_ROUTE33_BUGSY_APPEARS
