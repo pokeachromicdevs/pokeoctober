@@ -119,3 +119,5 @@ GameboyGirlSpriteGFX::         INCBIN "gfx/sprites/gameboy_girl.2bpp"
 MysticSpriteGFX::              INCBIN "gfx/sprites/mystic.2bpp"
 KarenSpriteGFX::               INCBIN "gfx/sprites/karen.2bpp"
 ManchildSpriteGFX::            INCBIN "gfx/sprites/manchild.2bpp"
+SchoolboySpriteGFX::            INCBIN "gfx/sprites/schoolboy.2bpp"
+

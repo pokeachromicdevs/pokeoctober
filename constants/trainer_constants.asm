@@ -151,6 +151,7 @@ KRIS EQU __enum__
 	const ALAN5
 	const CHAD4
 	const CHAD5
+	const SCHOOLBOY_ANDY
 
 	trainerclass BIRD_KEEPER ; 18
 	const ROD

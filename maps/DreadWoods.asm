@@ -1,14 +1,26 @@
 	object_const_def ; object_event constants
+	const DREADWOODS_SCHOOLBOY
 	const DREADWOODS_MANCHILD
-	const DREADWOODS_BEAUTY
 	const DREADWOODS_OFFICER1
 	const DREADWOODS_SAILOR
+	const DREADWOODS_BEAUTY
 	const DREADWOODS_OFFICER2
 
 DreadWoods_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+TrainerSchoolboyAndy: 
+	trainer SCHOOLBOY, SCHOOLBOY_ANDY, EVENT_BEAT_SCHOOLBOY_ANDY, SchoolboyAndySeenText, SchoolboyAndyBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext SchoolboyAndyAfterBattleText
+	waitbutton
+	closetext
+	end
 	
 TrainerManchildMiguel:
 	trainer MANCHILD, MIGUEL, EVENT_BEAT_MANCHILD_MIGUEL, ManchildMiguelSeenText, ManchildMiguelBeatenText, 0, .AfterScript
@@ -21,11 +33,37 @@ TrainerManchildMiguel:
 	closetext
 	end
 	
+SchoolboyAndySeenText:
+	text "This forest<...>I don't"
+	line "know why, but it"
+	
+	para "sends shivers down"
+	line "my spine<...>"
+	done
+	
+SchoolboyAndyBeatenText:
+	text "I<...>I think you're"
+	line "the reason why I'm"
+	cont "afraid of this"
+	
+	para "place."
+	done
+	
+SchoolboyAndyAfterBattleText:
+	text "Sigh<...>"
+	
+	para "Maybe I'm delusion-"
+	line "al, and there's"
+	
+	para "nothing wrong with"
+	line "these woods. Haha<...>"
+	done 
+	
 ManchildMiguelSeenText:
 	text "I'm scared, but my"
-	line "mom told me to"
+	line "my mom told me to"
 	
-	para "stop callig her"
+	para "stop calling her"
 	line "and grow up<...>"
 	
 	para "I haven't moved"
@@ -71,6 +109,7 @@ DreadWoods_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
-	object_event  22,  7, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerManchildMiguel, -1
+	db 2 ; object events
+	object_event 22, 7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerSchoolboyAndy, -1
+	object_event 19, 17, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerManchildMiguel, -1
 

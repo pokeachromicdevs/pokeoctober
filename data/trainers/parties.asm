@@ -992,6 +992,16 @@ SchoolboyGroup:
 	dw MAGNETON
 	dw ZAP_CANNON, THUNDER_WAVE, LOCK_ON, SWIFT
 	db -1 ; end
+	
+	next_list_item ; SCHOOLBOY (24)
+	db "ANDY@", TRAINERTYPE_NORMAL
+	db 7
+	dw MAREEP
+	db 8
+	dw BURGELA
+	db 9
+	dw ODDISH
+	db -1 ; end
 
 	end_list_items
 
