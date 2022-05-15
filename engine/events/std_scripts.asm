@@ -488,6 +488,9 @@ InitializeEventsScript:
 	setevent EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM
 	setevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER ; hide aide
 
+; init alder
+	setevent EVENT_KURT_IN_ALDER_POKEMON_CENTER
+
 ; init flags
 	setflag ENGINE_ROCKET_SIGNAL_ON_CH20
 	setflag ENGINE_ROCKETS_IN_MAHOGANY

@@ -200,6 +200,8 @@ Route33_EncounterKaren:
 	applymovement PLAYER, .PlayerMovesOutOfWay
 	applymovement ROUTE33_KURT, .KurtGoingHome
 	disappear ROUTE33_KURT
+	clearevent EVENT_KURT_IN_ALDER_POKEMON_CENTER
+
 	applymovement ROUTE33_BUGSY, .BugsyToPlayer
 
 ; bugsy talks to player

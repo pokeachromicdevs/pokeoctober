@@ -260,8 +260,10 @@
 	const EVENT_BEAT_ROUTE33_KAREN
 	const EVENT_ROUTE33_BUGSY_APPEARS
 
+; alder pokecenter
+	const EVENT_KURT_IN_ALDER_POKEMON_CENTER
+
 ; reserved
-	const EVENT_138
 	const EVENT_139
 	const EVENT_13a
 	const EVENT_13b
