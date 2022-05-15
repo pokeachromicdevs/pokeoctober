@@ -390,6 +390,12 @@ ENDM
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
 	map_attributes SproutTower2F, SPROUT_TOWER_2F, $00, 0
 	map_attributes SproutTower3F, SPROUT_TOWER_3F, $00, 0
+	map_attributes SproutTower4F, SPROUT_TOWER_4F, $00, 0
+	map_attributes SproutTower5F, SPROUT_TOWER_5F, $00, 0
+	map_attributes SproutTower6F, SPROUT_TOWER_6F, $00, 0
+	map_attributes SproutTower7F, SPROUT_TOWER_7F, $00, 0
+	map_attributes SproutTower8F, SPROUT_TOWER_8F, $00, 0
+	map_attributes SproutTower9F, SPROUT_TOWER_9F, $00, 0
 	map_attributes TinTower1F, TIN_TOWER_1F, $00, 0
 	map_attributes TinTower2F, TIN_TOWER_2F, $00, 0
 	map_attributes TinTower3F, TIN_TOWER_3F, $00, 0

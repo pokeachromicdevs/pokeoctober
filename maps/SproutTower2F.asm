@@ -8,11 +8,12 @@ SproutTower2F_MapScripts:
 SproutTower2F_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
-	warp_event  6,  4, SPROUT_TOWER_1F, 3
-	warp_event  2,  6, SPROUT_TOWER_1F, 4
-	warp_event 17,  3, SPROUT_TOWER_1F, 5
-	warp_event 10, 14, SPROUT_TOWER_3F, 1
+	db 5 ; warp events
+	warp_event  7,  3, SPROUT_TOWER_1F, 3
+	warp_event 15, 15, SPROUT_TOWER_1F, 4
+	warp_event  9, 17, SPROUT_TOWER_3F, 1
+	warp_event 15,  7, SPROUT_TOWER_3F, 2
+	warp_event 19, 17, SPROUT_TOWER_3F, 3
 
 	db 0 ; coord events
 
