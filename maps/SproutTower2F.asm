@@ -19,6 +19,17 @@ TrainerSageNico:
 	closetext
 	end
 	
+TrainerSageChow:
+	trainer SAGE, CHOW, EVENT_BEAT_SAGE_CHOW, SageChowSeenText, SageChowBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext SageChowAfterBattleText
+	waitbutton
+	closetext
+	end
+	
 SageNicoSeenText:
 	text "This tower has"
 	line "outlived many,"
@@ -37,8 +48,33 @@ SageNicoAfterBattleText:
 	text "Hopefully, one"
 	line "day, we can find"
 	
-	para "a way to achive"
+	para "a way to achieve"
 	line "immortality."
+	done 
+	
+SageChowSeenText:
+	text "Hmm<...>it appears we"
+	line "we have another"
+		
+	para "lone child climb-"
+	line "ing the TOWER"
+	cont "today."
+	done 
+	
+SageChowBeatenText:
+	text "My second defeat"
+	line "today<...>"
+	done 
+	
+SageChowAfterBattleText:
+	text "I hope there won't"
+	line "be too many more"
+	
+	para "visitors today."
+	
+	para "This place is"
+	line "already getting"
+	cont "crowded<...>"
 	done 
 	
 SproutTower2F_MapEvents:
@@ -55,6 +91,7 @@ SproutTower2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
-	object_event 1, 5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSageNico, -1
+	db 2 ; object events
+	object_event 1,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSageNico, -1
+	object_event 12, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChow, -1
 

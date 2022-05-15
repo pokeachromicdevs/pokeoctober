@@ -4550,13 +4550,16 @@ ExecutiveFGroup:
 
 SageGroup:
 	next_list_item ; SAGE (1)
-	db "CHOW@", TRAINERTYPE_NORMAL
-	db 3
+	db "CHOW@", TRAINERTYPE_MOVES
+	db 8
 	dw BELLSPROUT
-	db 3
-	dw BELLSPROUT
-	db 3
-	dw BELLSPROUT
+	dw VINE_WHIP, GROWTH, WRAP, NO_MOVE
+	db 8
+	dw ABRA
+	dw THUNDER_WAVE, TELEPORT, FLASH, FORESIGHT
+	db 10
+	dw VULPIII
+	dw EMBER, TAIL_WHIP, QUICK_ATTACK, NO_MOVE
 	db -1 ; end
 
 	next_list_item ; SAGE (2)
