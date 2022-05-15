@@ -5123,19 +5123,19 @@ OfficerGroup:
 	
 	next_list_item ; OFFICER (2)
 	db "MATT@", TRAINERTYPE_NORMAL
-	db 8
-	dw SPINARAK
-	db 10
-	dw PUPPERON
-	db -1 ; end
-	
-	next_list_item ; OFFICER (2)
-	db "SAMSON@", TRAINERTYPE_NORMAL
 	db 6
 	dw HOOTHOOT
 	db 7
 	dw PUPPERON
 	db 9
+	dw REMORAID
+	db -1 ; end
+	
+	next_list_item ; OFFICER (2)
+	db "SAMSON@", TRAINERTYPE_NORMAL
+	db 6
+	dw SPINARAK
+	db 8
 	dw REMORAID
 	db -1 ; end
 	

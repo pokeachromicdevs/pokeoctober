@@ -62,7 +62,7 @@ VioletCity_MapEvents:
 	warp_event  3, 25, SPROUT_TOWER_1F, 1
 	warp_event 17, 31, VIOLET_POKECENTER_1F, 1
 	warp_event  7,  1, ZEN_GARDEN_GATE, 3
-	warp_event 19,  3, VIOLET_HERB_SHOP, 1 
+	warp_event 19,  3, VIOLET_HERB_SHOP, 1
 
 	db 0 ; coord events
 
@@ -70,4 +70,4 @@ VioletCity_MapEvents:
 
 	db 2 ; object events
 	object_event  34,  32, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, -1
-	object_event   4,  27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
+	object_event 10, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1

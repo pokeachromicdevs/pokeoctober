@@ -9,7 +9,7 @@ VioletMart_MapScripts:
 	db 0 ; callbacks
 
 VioletMartClerkScript:
-	opentext
+	opentext     
 	pokemart MARTTYPE_STANDARD, MART_VIOLET
 	closetext
 	end
