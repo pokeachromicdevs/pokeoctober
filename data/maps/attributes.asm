@@ -118,8 +118,8 @@ ENDM
 	connection north, Route32, ROUTE_32, 0
 	connection west, Route33, ROUTE_33, 0
 
-	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
-	connection west, Route34, ROUTE_34, -18
+	map_attributes AzaleaTown, AZALEA_TOWN, $05, NORTH | EAST
+	connection north, Route34, ROUTE_34, 0
 	connection east, Route33, ROUTE_33, 0
 
 	map_attributes CianwoodCity, CIANWOOD_CITY, $35, EAST
@@ -187,14 +187,13 @@ ENDM
 	connection north, VioletCity, VIOLET_CITY, 0
 	connection south, AlderTown, ALDER_TOWN, 0
 
-	map_attributes Route33, ROUTE_33, $05, NORTH | WEST | EAST
-	connection north, Route32, ROUTE_32, 0
+	map_attributes Route33, ROUTE_33, $05,  WEST | EAST
 	connection west, AzaleaTown, AZALEA_TOWN, 0
 	connection east, AlderTown, ALDER_TOWN, 0
 
-	map_attributes Route34, ROUTE_34, $05, NORTH | EAST
+	map_attributes Route34, ROUTE_34, $05, NORTH | SOUTH
 	connection north, GoldenrodCity, GOLDENROD_CITY, -5
-	connection east, AzaleaTown, AZALEA_TOWN, 18
+	connection south, AzaleaTown, AZALEA_TOWN, 0
 
 	map_attributes Route35, ROUTE_35, $05, NORTH | SOUTH
 	connection north, Route36, ROUTE_36, 0
