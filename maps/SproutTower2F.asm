@@ -127,7 +127,7 @@ SproutTower2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 1,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSageNico, -1
 	object_event 12, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChow, -1
 	object_event 13, 6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltGenki, -1
