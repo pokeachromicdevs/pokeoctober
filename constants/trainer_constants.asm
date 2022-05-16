@@ -541,6 +541,7 @@ KRIS EQU __enum__
 	const LUNG
 	const KENJI3
 	const WAI
+	const GENKI
 
 	trainerclass EXECUTIVEM ; 33
 	const EXECUTIVEM_1

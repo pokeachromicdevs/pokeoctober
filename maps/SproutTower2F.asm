@@ -30,6 +30,17 @@ TrainerSageChow:
 	closetext
 	end
 	
+TrainerBlackbeltGenki:
+	trainer BLACKBELT_T, GENKI, EVENT_BEAT_BLACKBELT_GENKI, BlackbeltGenkiSeenText, BlackbeltGenkiBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext BlackbeltGenkiAfterBattleText
+	waitbutton
+	closetext
+	end
+	
 SageNicoSeenText:
 	text "This tower has"
 	line "outlived many,"
@@ -77,6 +88,23 @@ SageChowAfterBattleText:
 	cont "crowded<...>"
 	done 
 	
+BlackbeltGenkiSeenText:
+	text "RAAH! I'm angrier"
+	line "er than my MANKEY!"
+	done
+
+BlackbeltGenkiBeatenText:
+	text "Even my MANKEY"
+	line "is scared of my"
+	cont "rage!"
+	done 
+	
+BlackbeltGenkiAfterBattleText:
+	text "My MANKEY drags"
+	line "me to therapy a"
+	cont "lot."
+	done 
+	
 SproutTower2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -91,7 +119,8 @@ SproutTower2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 1,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSageNico, -1
 	object_event 12, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChow, -1
+	object_event 13, 6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltGenki, -1
 

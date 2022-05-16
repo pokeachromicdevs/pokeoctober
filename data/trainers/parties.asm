@@ -4134,6 +4134,14 @@ BlackbeltGroup:
 	db 34
 	dw MACHOKE
 	db -1 ; end
+	
+	next_list_item ; BLACKBELT_T (9)
+	db "GENKI@", TRAINERTYPE_NORMAL
+	db 9
+	dw MACHOP
+	db 11
+	dw MANKEY
+	db -1 ; end
 
 	end_list_items
 

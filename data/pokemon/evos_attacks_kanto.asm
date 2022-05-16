@@ -1034,14 +1034,16 @@ MachopEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, LOW_KICK
 	dbw 1, LEER
-	dbw 7, FOCUS_ENERGY
-	dbw 13, KARATE_CHOP
-	dbw 19, SEISMIC_TOSS
-	dbw 25, FORESIGHT
-	dbw 31, VITAL_THROW
-	dbw 37, CROSS_CHOP
-	dbw 43, SCARY_FACE
-	dbw 49, SUBMISSION
+	dbw 1, ROCK_SMASH
+	dbw 5, FOCUS_ENERGY
+	dbw 12, SEISMIC_TOSS
+	dbw 17, KARATE_CHOP
+	dbw 23, FORESIGHT
+	dbw 28, STRENGTH
+	dbw 34, VITAL_THROW
+	dbw 39, SUBMISSION
+	dbw 45, SCARY_FACE
+	dbw 50, CROSS_CHOP
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
@@ -1049,31 +1051,32 @@ MachokeEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, LOW_KICK
 	dbw 1, LEER
-	dbw 1, FOCUS_ENERGY
-	dbw 8, FOCUS_ENERGY
-	dbw 15, KARATE_CHOP
-	dbw 19, SEISMIC_TOSS
-	dbw 25, FORESIGHT
-	dbw 34, VITAL_THROW
-	dbw 43, CROSS_CHOP
-	dbw 52, SCARY_FACE
-	dbw 61, SUBMISSION
+	dbw 1, ROCK_SMASH
+	dbw 5, FOCUS_ENERGY
+	dbw 12, SEISMIC_TOSS
+	dbw 17, KARATE_CHOP
+	dbw 23, FORESIGHT
+	dbw 28, STRENGTH
+	dbw 36, VITAL_THROW
+	dbw 41, SUBMISSION
+	dbw 47, SCARY_FACE
+	dbw 52, CROSS_CHOP
 	db 0 ; no more level-up moves
 
 MachampEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, LOW_KICK
 	dbw 1, LEER
-	dbw 1, FOCUS_ENERGY
-	dbw 8, FOCUS_ENERGY
-	dbw 15, KARATE_CHOP
-	dbw 19, SEISMIC_TOSS
-	dbw 25, FORESIGHT
-	dbw 27, STRENGTH
-	dbw 34, VITAL_THROW
-	dbw 43, CROSS_CHOP
-	dbw 52, SCARY_FACE
-	dbw 61, SUBMISSION
+	dbw 1, ROCK_SMASH
+	dbw 5, FOCUS_ENERGY
+	dbw 12, SEISMIC_TOSS
+	dbw 17, KARATE_CHOP
+	dbw 23, FORESIGHT
+	dbw 28, STRENGTH
+	dbw 36, VITAL_THROW
+	dbw 41, SUBMISSION
+	dbw 47, SCARY_FACE
+	dbw 52, CROSS_CHOP
 	db 0 ; no more level-up moves
 
 BellsproutEvosAttacks:
