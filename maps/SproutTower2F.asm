@@ -123,7 +123,7 @@ SproutTower2F_MapEvents:
 	warp_event 15,  7, SPROUT_TOWER_3F, 2
 	warp_event 19, 17, SPROUT_TOWER_3F, 3
 
-	db 0 ; coord events 
+	db 0 ; coord events  
 
 	db 0 ; bg events
 
