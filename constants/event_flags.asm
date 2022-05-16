@@ -237,6 +237,7 @@
 	const EVENT_BEAT_SAGE_NICO
 	const EVENT_BEAT_SAGE_CHOW
 	const EVENT_BEAT_BLACKBELT_GENKI
+	const EVENT_SPROUT_TOWER_X_DEFENSE
 
 ; violet gym
 	const EVENT_BEAT_WHITNEY
@@ -270,7 +271,6 @@
 	const EVENT_KURT_IN_ALDER_POKEMON_CENTER
 
 ; reserved
-	const EVENT_13d
 	const EVENT_13e
 	const EVENT_13f
 	const EVENT_140

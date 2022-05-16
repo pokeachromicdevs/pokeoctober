@@ -2,6 +2,8 @@
 	const SPROUTTOWER_SAGE1
 	const SPROUTTOWER_SAGE2
 	const SPROUTTOWER_BLACKBELT
+	const SPROUTTOWER_POKE_BALL1
+	const SPROUTTOWER_POKE_BALL2
 
 SproutTower2F_MapScripts:
 	db 0 ; scene scripts
@@ -40,6 +42,9 @@ TrainerBlackbeltGenki:
 	waitbutton
 	closetext
 	end
+	
+SproutTowerXDefense:
+	itemball X_DEFEND
 	
 SageNicoSeenText:
 	text "This tower has"
@@ -119,8 +124,9 @@ SproutTower2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 1,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSageNico, -1
 	object_event 12, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChow, -1
 	object_event 13, 6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltGenki, -1
+	object_event 13,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerXDefense, EVENT_SPROUT_TOWER_X_DEFENSE
 
