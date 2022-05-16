@@ -46,6 +46,9 @@ TrainerBlackbeltGenki:
 SproutTowerXDefense:
 	itemball X_DEFEND
 	
+SproutTowerF2Potion:
+	itemball POTION
+	
 SageNicoSeenText:
 	text "This tower has"
 	line "outlived many,"
@@ -120,7 +123,7 @@ SproutTower2F_MapEvents:
 	warp_event 15,  7, SPROUT_TOWER_3F, 2
 	warp_event 19, 17, SPROUT_TOWER_3F, 3
 
-	db 0 ; coord events
+	db 0 ; coord events 
 
 	db 0 ; bg events
 
@@ -129,4 +132,5 @@ SproutTower2F_MapEvents:
 	object_event 12, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChow, -1
 	object_event 13, 6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltGenki, -1
 	object_event 13,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerXDefense, EVENT_SPROUT_TOWER_X_DEFENSE
+	object_event  2, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF2Potion, EVENT_SPROUT_TOWERF2_POTION
 
