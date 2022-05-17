@@ -119,6 +119,7 @@
 	const MUSIC_CITRINE_INN_REST             ; 6c
 	const MUSIC_BLUE_BATTLE                  ; 6d
 	const MUSIC_DREAD_WOODS                  ; 6e
+	const MUSIC_CINNABAR_MANSION             ; 6f
 
 NUM_MUSIC_TRACKS EQU const_value
 

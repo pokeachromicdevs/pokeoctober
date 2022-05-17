@@ -118,3 +118,4 @@ Music:
 	dba Music_CitrineInnRest
 	dba Music_BlueBattle
 	dba Music_DreadWoods
+	dba Music_CinnabarMansion

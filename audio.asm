@@ -155,6 +155,8 @@ INCLUDE "audio/music/lookgiovanni.asm"
 INCLUDE "audio/music/citrineinnrest.asm"
 INCLUDE "audio/music/bluebattle.asm"
 INCLUDE "audio/music/dreadwoods.asm"
+INCLUDE "audio/music/cinnabarmansion.asm"
+
 
 SECTION "Sound Effects", ROMX
 
