@@ -52,7 +52,7 @@ VioletPokecenter1FGameboyKidText:
 
 VioletPokecenter1FGentlemanText:
 	text "It was around"
-	line "three years ago."
+	line "two years ago."
 
 	para "TEAM ROCKET was up"
 	line "to no good with"
