@@ -1301,29 +1301,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 6, RATTATA
-	dbw 6, SPEAROW
-	dbw 6, GEODUDE
-	dbw 6, HOPPIP
-	dbw 7, EKANS
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 10, KAKUNA;KIWACKI
+	dbw 10, METAPOD;KIWACKI
+	dbw 12, CATERPIE;98 PINECO MON
+	dbw 12, BEEDRILL
+	dbw 13, BUTTERFREE
+	dbw 14, SLUGMA
+	dbw 14, SLUGMA
 	; day
-	dbw 6, RATTATA
-	dbw 6, SPEAROW
-	dbw 6, GEODUDE
-	dbw 6, HOPPIP
-	dbw 7, EKANS
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 10, KAKUNA;KIWACKI
+	dbw 10, METAPOD;98 PINECO MON
+	dbw 12, GEODUDE;TERRACHNID
+	dbw 12, GLIGAR
+	dbw 13, HERACROSS
+	dbw 14, SLUGMA
+	dbw 14, SLUGMA
 	; nite
-	dbw 6, RATTATA
-	dbw 6, ZUBAT
-	dbw 6, GEODUDE
-	dbw 6, ZUBAT
-	dbw 7, RATTATA
-	dbw 7, RATTATA
-	dbw 7, RATTATA
+	dbw 10, 
+	dbw 10, ZUBAT; 98 PINECO MON
+	dbw 12, GEODUDE;98 PINECO MON
+	dbw 12, ZUBAT
+	dbw 13, ZUBAT
+	dbw 14, VENONAT
+	dbw 14, PARAS
 
 	map_id ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
