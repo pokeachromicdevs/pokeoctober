@@ -2655,7 +2655,7 @@ wBattleTower1FSceneID::                           db ; d99e
 wBattleTowerBattleRoomSceneID::                   db ; d99f
 wBattleTowerElevatorSceneID::                     db ; d9a0
 wBattleTowerHallwaySceneID::                      db ; d9a1
-wBattleTowerOutsideSceneID::                      db ; d9a2
+wVioletCitySceneID::                              db ; d9a2
 wRoute43GateSceneID::                             db ; d9a3
 wMountMoonSceneID::                               db ; d9a4
 wSproutTower3FSceneID::                           db ; d9a5
