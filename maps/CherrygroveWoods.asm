@@ -77,11 +77,51 @@ BugCatcherTimothyAfterText:
 	cont "shiny like steel!"
 	done 
 
-.DummyScene0:
-	end
- 
-.DummyScene1:
-	end
+CherrygroveWoods_ExitGateSign:
+	jumptext .Text
+.Text:
+	text "Now exiting"
+	line "CHERRYGROVE WOODS"
+	done
+
+CherrygroveWoods_EntryGateSign:
+	jumptext .Text
+.Text:
+	text "CHERRYGROVE WOODS"
+	done
+
+CherrygroveWoods_Sign2:
+	jumptext .Text
+.Text:
+	text "TRAINER TIPS:"
+	para "#MON gain"
+	line "experience when"
+	para "involved in a"
+	line "battle, even if it"
+	para "doesn't make a"
+	line "move."
+	done
+
+CherrygroveMinesSign:
+	jumptext .Text
+.Text:
+	text "CHERRYGROVE MINES"
+	done
+
+CherrygroveMines_Route46Sign:
+	jumptext .Text
+.Text:
+	text "ROUTE 46 AHEAD"
+	done
+
+CherrygroveWoods_MineBlockage:
+	jumptextfaceplayer .Text
+.Text:
+	text "Sorry, kid. But"
+	line "this area is"
+	para "currently off-"
+	line "limits."
+	done
 
 CherrygroveWoods_MapEvents:
 	db 0, 0 ; filler
@@ -94,9 +134,15 @@ CherrygroveWoods_MapEvents:
 	
 	db 0 ; coord events
  
-	db 1 ; bg events
+	db 6 ; bg events
 	bg_event 17,  7, BGEVENT_READ, CherrygroveWoodsNameRaterSign
+	bg_event  5,  9, BGEVENT_READ, CherrygroveWoods_ExitGateSign
+	bg_event 27,  3, BGEVENT_READ, CherrygroveMines_Route46Sign
+	bg_event 55,  7, BGEVENT_READ, CherrygroveWoods_EntryGateSign
+	bg_event 43,  5, BGEVENT_READ, CherrygroveWoods_Sign2
+	bg_event 33, 13, BGEVENT_READ, CherrygroveMinesSign
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 10, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherLenny, -1
 	object_event  42, 8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherTimothy, -1
+	object_event  30, 10, SPRITE_OFFICER,     SPRITEMOVEDATA_STANDING_DOWN,  0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT,  0, CherrygroveWoods_MineBlockage, -1
