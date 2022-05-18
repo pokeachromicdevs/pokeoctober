@@ -271,9 +271,9 @@
 ; alder pokecenter
 	const EVENT_KURT_IN_ALDER_POKEMON_CENTER
 
-; reserved
-	const EVENT_13f
-	const EVENT_140
+; sprout tower 3f
+	const EVENT_BEAT_RIVAL_AT_SPROUT_TOWER
+	const EVENT_RIVAL_BLOCKING_SPROUT_TOWER ; needed for disappear callback to work
 	const EVENT_141
 	const EVENT_142
 	const EVENT_143

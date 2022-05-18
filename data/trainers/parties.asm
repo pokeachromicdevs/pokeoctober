@@ -170,38 +170,26 @@ Rival1Group:
 
 	next_list_item ; RIVAL1 (4)
 	db "?@", TRAINERTYPE_NORMAL
-	db 12
-	dw SENTRET
-	db 12
-	dw SLUGMA
-	db 13
-	db ZUBAT
-	db 14
-	dw CHIKORITA
+	dbw 12, SENTRET
+	dbw 12, ZUBAT
+	dbw 13, PHANPY
+	dbw 13, CHIKORITA
 	db -1 ; end
 
 	next_list_item ; RIVAL1 (5)
 	db "?@", TRAINERTYPE_NORMAL
-	db 12
-	dw SENTRET
-	db 12
-	dw GOLDEEN
-	db 13
-	dw ZUBAT
-	db 14
-	dw QUILAVA
+	dbw 12, SENTRET
+	dbw 12, ZUBAT
+	dbw 13, PHANPY
+	dbw 13, CYNDAQUIL
 	db -1 ; end
 
 	next_list_item ; RIVAL1 (6)
 	db "?@", TRAINERTYPE_NORMAL
-	db 12
-	dw SENTRET
-	db 12
-	dw BURGELA
-	db 13
-	dw ZUBAT
-	db 14
-	dw TOTODILE
+	dbw 12, SENTRET
+	dbw 12, ZUBAT
+	dbw 13, PHANPY
+	dbw 13, TOTODILE
 	db -1 ; end
 
 	next_list_item ; RIVAL1 (7)
