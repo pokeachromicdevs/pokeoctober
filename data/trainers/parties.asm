@@ -4620,12 +4620,10 @@ SageGroup:
 
 	next_list_item ; SAGE (9)
 	db "LI@", TRAINERTYPE_NORMAL
-	db 7
-	dw BELLSPROUT
-	db 7
-	dw BELLSPROUT
-	db 10
-	dw HOOTHOOT
+	dbw 13, BELLSPROUT
+	dbw 13, ODDISH
+	;dbw 14, TWINZ
+	dbw 16, KADABRA
 	db -1 ; end
 
 	next_list_item ; SAGE (10)

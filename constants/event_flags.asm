@@ -274,7 +274,7 @@
 ; sprout tower 3f
 	const EVENT_BEAT_RIVAL_AT_SPROUT_TOWER
 	const EVENT_RIVAL_BLOCKING_SPROUT_TOWER ; needed for disappear callback to work
-	const EVENT_141
+	const EVENT_BEAT_SAGE_LI
 	const EVENT_142
 	const EVENT_143
 	const EVENT_144
