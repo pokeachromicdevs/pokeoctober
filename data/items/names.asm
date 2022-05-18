@@ -84,8 +84,8 @@ ItemNames::
 	db "BITTER BERRY@"
 	db "MINT BERRY@"
 	db "RED APRICORN@"
-	db "TINYMUSHROOM@"
-	db "BIG MUSHROOM@"
+	db "CORDYCEPS@"
+	db "TERU-SAMA@"
 	db "SILVERPOWDER@";change to weaken foe's bug attacks like SW97
 	db "BLU APRICORN@"
 	db "EARTHEN CLAY"
@@ -138,7 +138,7 @@ ItemNames::
 	db "TERU-SAMA@";hard stone
 	db "CHARCOAL@"
 	db "BERRY JUICE@"
-	db "TERU_SAMA@"
+	db "TERU-SAMA@"
 	db "SHARP SCYTHE@"
 	db "WOBBLY BLOON@";fire mane
 	db "METAL COAT@"
@@ -219,7 +219,7 @@ ItemNames::
 	db "OLD AMBER@"
 	db "DOME FOSSIL@"
 	db "HELIX FOSSIL@"
-	db "TERU-SAMA@"
+	db "FLEE FEATHER@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"

@@ -91,7 +91,7 @@
 	const BITTER_BERRY ; 53
 	const MINT_BERRY   ; 54
 	const RED_APRICORN ; 55
-	const TINYMUSHROOM ; 56
+	const CORDYCEPS    ; 56
 	const BIG_MUSHROOM ; 57
 	const SILVERPOWDER ; 58
 	const BLU_APRICORN ; 59
@@ -225,6 +225,7 @@
 	const OLD_AMBER
 	const DOME_FOSSIL
 	const HELIX_FOSSIL
+	const FLEE_FEATHER
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff

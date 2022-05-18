@@ -85,8 +85,8 @@ ItemDescriptions:
 	dw BitterBerryDesc
 	dw MintBerryDesc
 	dw RedApricornDesc
-	dw TinyMushroomDesc
-	dw BigMushroomDesc
+	dw CordycepsDesc
+	dw TeruSamaDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
 	dw EarthenClayDesc
@@ -219,7 +219,7 @@ ItemDescriptions:
 	dw OldAmberDesc
 	dw DomeFossilDesc
 	dw HelixFossilDesc
-	dw QuestionMarkDesc
+	dw FleeFeatherDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -575,11 +575,11 @@ MintBerryDesc:
 RedApricornDesc:
 	db   "A red APRICORN.@"
 
-TinyMushroomDesc:
-	db   "An ordinary mush-"
-	next "room. Sell low.@"
+CordycepsDesc:
+	db   "An excellent mush-"
+	next "room. Sell high.@"
 
-BigMushroomDesc:
+TeruSamaDesc:
 	db   "A rare mushroom."
 	next "Sell high.@"
 
@@ -1052,5 +1052,9 @@ HelixFossilDesc:
 WobblyBloonDesc:
 	db "Weaken a foe's"
 	next "NORMAL moves.@"
+	
+FleeFeatherDesc:
+	db "Switch without"
+	next "waste turn. (HOLD)@"
 	
 	

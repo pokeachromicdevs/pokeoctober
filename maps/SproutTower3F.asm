@@ -2,6 +2,8 @@
 	const SPROUT_TOWER_3F_SCHOOLBOY
 	const SPROUT_TOWER_3F_TEACHER
 	const SPROUT_TOWER_3F_LASS
+	const SPROUT_TOWER_3F_POKE_BALL1
+	const SPROUT_TOWER_3F_POKE_BALL2
 	const SPROUT_TOWER_3F_RIVAL
 
 SproutTower3F_MapScripts:
@@ -52,6 +54,12 @@ TrainerLassJune:
 	waitbutton
 	closetext
 	end
+	
+SproutTowerF3EscapeRope:
+	itemball ESCAPE_ROPE
+	
+SproutTowerF3FleeFeather:
+	itemball FLEE_FEATHER
 
 SproutTower3F_RivalBattle:
 .West:
@@ -280,7 +288,7 @@ SproutTower3F_MapEvents:
 	db 7 ; warp events
 
 	warp_event  9, 17, SPROUT_TOWER_2F, 3
-	warp_event 15,  7, SPROUT_TOWER_2F, 4
+	warp_event 15,  7, SPROUT_TOWER_2F, 4 
 	warp_event 19, 17, SPROUT_TOWER_2F, 5
 	warp_event  5, 15, SPROUT_TOWER_4F, 1
 	warp_event  7,  3, SPROUT_TOWER_4F, 2
@@ -294,8 +302,10 @@ SproutTower3F_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 6 ; object events
 	object_event 11,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerSchoolboyAvery, -1
 	object_event 18,  10, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerTeacherBella, -1
 	object_event 18,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassJune, -1
+	object_event 3, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF3EscapeRope, EVENT_SPROUT_TOWERF3_ESCAPE_ROPE
+	object_event 15, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF3FleeFeather, EVENT_SPROUT_TOWERF3_FLEE_FEATHER
 	object_event 13, 13, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BLOCKING_SPROUT_TOWER

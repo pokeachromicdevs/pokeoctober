@@ -188,7 +188,7 @@ MartEcruteak:
 
 MartMahogany1:
 	db 4 ; # items
-	db TINYMUSHROOM
+	db CORDYCEPS
 	db SLOWPOKETAIL
 	db POKE_BALL
 	db POTION
