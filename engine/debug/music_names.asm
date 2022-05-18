@@ -114,3 +114,5 @@ Debug_MusicNames::
 	db "Citrine Inn Rest@@"
 	db "Blue Battle@@@@@@@"
 	db "Dread Woods@@@@@@@"
+	db "Cinnabar Mansion@@"
+	db "Pokemart@@@@@@@@@@"

@@ -119,3 +119,4 @@ Music:
 	dba Music_BlueBattle
 	dba Music_DreadWoods
 	dba Music_CinnabarMansion
+	dba Music_Pokemart 

@@ -120,6 +120,7 @@
 	const MUSIC_BLUE_BATTLE                  ; 6d
 	const MUSIC_DREAD_WOODS                  ; 6e
 	const MUSIC_CINNABAR_MANSION             ; 6f
+	const MUSIC_POKEMART                     ; 70
 
 NUM_MUSIC_TRACKS EQU const_value
 
