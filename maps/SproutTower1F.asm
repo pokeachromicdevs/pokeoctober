@@ -1,7 +1,17 @@
 SproutTower1F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .CheckMomCall
+
+.CheckMomCall:
+	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	iffalse .DoMomCall
+	return
+
+.DoMomCall:
+	specialphonecall SPECIALCALL_WORRIED
+	return
 
 ; scripts here
 
