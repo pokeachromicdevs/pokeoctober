@@ -23,8 +23,8 @@ TrainerOfficerSamson:
 	end
 	
 VioletGymSageBlockText:
-	text "I'm afraid I can-"
-	line "not let you in."
+	text "I'm afraid I can't"
+	line "let you in."
 	
 	para "Not until you've"
 	line "proven yourself"
@@ -47,7 +47,7 @@ OfficerSamsonBeatenText:
 	done
 	
 OfficerSamsonAfterBattleText:
-	text "Uh<...>let's<...>not tell"
+	text "Uh<...> let's<...> not tell"
 	line "anyone about this."
 	done 
 
@@ -70,4 +70,4 @@ VioletCity_MapEvents:
 
 	db 2 ; object events
 	object_event  34,  32, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, -1
-	object_event 10, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
+	object_event  8, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
