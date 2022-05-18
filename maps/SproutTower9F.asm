@@ -8,7 +8,9 @@ SproutTower9F_MapScripts:
 SproutTower9F_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 2 ; warp events
+	warp_event  1,  9, SPROUT_TOWER_8F, 6
+	warp_event 11,  9, SPROUT_TOWER_8F, 7
 
 	db 0 ; coord events
 
