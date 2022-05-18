@@ -275,3 +275,4 @@ BitmasksPointers:
 	dw WearlycanBitmasks
 	dw DodaerieBitmasks
 	dw ParasporBitmasks
+	dw MolambinoBitmasks

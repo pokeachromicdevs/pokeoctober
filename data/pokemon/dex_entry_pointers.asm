@@ -276,3 +276,4 @@ PokedexDataPointerTable:
 	dba WearlycanPokedexEntry
 	dba DodaeriePokedexEntry
 	dba ParasporPokedexEntry
+	dba MolambinoPokedexEntry

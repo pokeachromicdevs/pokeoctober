@@ -275,3 +275,4 @@ FramesPointers:
 	dba WearlycanFrames
 	dba DodaerieFrames
 	dba ParasporFrames
+	dba MolambinoFrames

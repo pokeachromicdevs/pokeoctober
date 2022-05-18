@@ -24,7 +24,6 @@ PhoneScript_AnswerPhone_Male:
 	checktime NITE
 	iftrue PhoneScript_AnswerPhone_Male_Nite
 	readvar VAR_CALLERID
-	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
@@ -35,7 +34,6 @@ PhoneScript_AnswerPhone_Male:
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_JUGGLER_IRWIN, .Irwin
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -44,11 +42,6 @@ PhoneScript_AnswerPhone_Male:
 	ifequal PHONE_FISHER_WILTON, .Wilton
 	ifequal PHONE_BLACKBELT_KENJI, .Kenji
 	ifequal PHONE_HIKER_PARRY, .Parry
-
-.Jack:
-	farwritetext UnknownText_0x1b4dc5
-	buttonsound
-	end
 
 .Huey:
 	farwritetext UnknownText_0x1b5073
@@ -100,11 +93,6 @@ PhoneScript_AnswerPhone_Male:
 	buttonsound
 	end
 
-.Alan:
-	farwritetext UnknownText_0x1b659d
-	buttonsound
-	end
-
 .Chad:
 	farwritetext UnknownText_0x1b67e2
 	buttonsound
@@ -147,7 +135,6 @@ PhoneScript_AnswerPhone_Male:
 
 PhoneScript_AnswerPhone_Male_Day:
 	readvar VAR_CALLERID
-	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
@@ -158,7 +145,6 @@ PhoneScript_AnswerPhone_Male_Day:
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_JUGGLER_IRWIN, .Irwin
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -223,11 +209,6 @@ PhoneScript_AnswerPhone_Male_Day:
 	buttonsound
 	end
 
-.Alan:
-	farwritetext UnknownText_0x1b65c7
-	buttonsound
-	end
-
 .Chad:
 	farwritetext UnknownText_0x1b680e
 	buttonsound
@@ -270,7 +251,6 @@ PhoneScript_AnswerPhone_Male_Day:
 
 PhoneScript_AnswerPhone_Male_Nite:
 	readvar VAR_CALLERID
-	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
@@ -281,7 +261,6 @@ PhoneScript_AnswerPhone_Male_Nite:
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_JUGGLER_IRWIN, .Irwin
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -343,11 +322,6 @@ PhoneScript_AnswerPhone_Male_Nite:
 
 .Arnie:
 	farwritetext UnknownText_0x1b64a8
-	buttonsound
-	end
-
-.Alan:
-	farwritetext UnknownText_0x1b65e3
 	buttonsound
 	end
 
@@ -554,7 +528,6 @@ PhoneScript_GreetPhone_Male:
 	checktime NITE
 	iftrue PhoneScript_GreetPhone_Male_Nite
 	readvar VAR_CALLERID
-	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
@@ -565,7 +538,6 @@ PhoneScript_GreetPhone_Male:
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_JUGGLER_IRWIN, .Irwin
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -630,11 +602,6 @@ PhoneScript_GreetPhone_Male:
 	buttonsound
 	end
 
-.Alan:
-	farwritetext UnknownText_0x1b660d
-	buttonsound
-	end
-
 .Chad:
 	farwritetext UnknownText_0x1b6862
 	buttonsound
@@ -677,7 +644,6 @@ PhoneScript_GreetPhone_Male:
 
 PhoneScript_GreetPhone_Male_Day:
 	readvar VAR_CALLERID
-	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
@@ -688,7 +654,6 @@ PhoneScript_GreetPhone_Male_Day:
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_JUGGLER_IRWIN, .Irwin
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -753,11 +718,6 @@ PhoneScript_GreetPhone_Male_Day:
 	buttonsound
 	end
 
-.Alan:
-	farwritetext UnknownText_0x1b6624
-	buttonsound
-	end
-
 .Chad:
 	farwritetext UnknownText_0x1b6890
 	buttonsound
@@ -800,7 +760,6 @@ PhoneScript_GreetPhone_Male_Day:
 
 PhoneScript_GreetPhone_Male_Nite:
 	readvar VAR_CALLERID
-	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_SAILOR_HUEY, .Huey
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
@@ -811,7 +770,6 @@ PhoneScript_GreetPhone_Male_Nite:
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_JUGGLER_IRWIN, .Irwin
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -873,11 +831,6 @@ PhoneScript_GreetPhone_Male_Nite:
 
 .Arnie:
 	farwritetext UnknownText_0x1b6539
-	buttonsound
-	end
-
-.Alan:
-	farwritetext UnknownText_0x1b663b
 	buttonsound
 	end
 
@@ -1080,7 +1033,6 @@ PhoneScript_GreetPhone_Female_Nite:
 
 PhoneScript_Generic_Male:
 	readvar VAR_CALLERID
-	ifequal PHONE_SCHOOLBOY_JACK, .Jack
 	ifequal PHONE_COOLTRAINERM_GAVEN, .Gaven
 	ifequal PHONE_BIRDKEEPER_JOSE, .Jose
 	ifequal PHONE_YOUNGSTER_JOEY, .Joey
@@ -1089,7 +1041,6 @@ PhoneScript_Generic_Male:
 	ifequal PHONE_HIKER_ANTHONY, .Anthony
 	ifequal PHONE_CAMPER_TODD, .Todd
 	ifequal PHONE_BUG_CATCHER_ARNIE, .Arnie
-	ifequal PHONE_SCHOOLBOY_ALAN, .Alan
 	ifequal PHONE_SCHOOLBOY_CHAD, .Chad
 	ifequal PHONE_POKEFANM_DEREK, .Derek
 	ifequal PHONE_FISHER_TULLY, .Tully
@@ -1145,11 +1096,6 @@ PhoneScript_Generic_Male:
 
 .Arnie:
 	farwritetext UnknownText_0x1b656c
-	buttonsound
-	end
-
-.Alan:
-	farwritetext UnknownText_0x1b6652
 	buttonsound
 	end
 

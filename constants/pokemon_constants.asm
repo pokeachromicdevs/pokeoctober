@@ -296,6 +296,7 @@ JOHTO_POKEMON EQU const_value
 	const WEARLYCAN
 	const DODAERIE
 	const PARASPOR
+	const MOLAMBINO
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

@@ -750,6 +750,8 @@ ParasporFrontpic: INCBIN "gfx/pokemon/paraspor/front.animated.2bpp.lz"
 ParasporBackpic:  INCBIN "gfx/pokemon/paraspor/back.2bpp.lz"
 WearlycanFrontpic: INCBIN "gfx/pokemon/wearlycan/front.animated.2bpp.lz"
 WearlycanBackpic:  INCBIN "gfx/pokemon/wearlycan/back.2bpp.lz"
+MolambinoFrontpic: INCBIN "gfx/pokemon/molambino/front.animated.2bpp.lz"
+MolambinoBackpic:  INCBIN "gfx/pokemon/molambino/back.2bpp.lz"
 
 
 

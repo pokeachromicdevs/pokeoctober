@@ -84,6 +84,7 @@ OldPokedexOrder:
 	dw GYARADOS
 	dw GOLDEEN
 	dw SEAKING
+	dw MOLAMBINO
 	dw SLOWPOKE
 	dw SLOWBRO
 	dw SLOWKING

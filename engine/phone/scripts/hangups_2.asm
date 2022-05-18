@@ -18,11 +18,6 @@ UnknownScript_0xa0abd:
 	buttonsound
 	sjump PhoneScript_HangupText_Female
 
-UnknownScript_0xa0ac5:
-	farwritetext UnknownText_0x64f1a
-	buttonsound
-	sjump PhoneScript_HangupText_Male
-
 UnknownScript_0xa0acd:
 	farwritetext UnknownText_0x6520f
 	buttonsound

@@ -277,4 +277,5 @@ MonMenuIcons:
 	db ICON_PILOSWINE   ; WEARLYCAN
 	db ICON_DODUO       ; DODAERIE
 	db ICON_PARAS       ; PARASPOR
+	db ICON_MAGIKARP    ; MOLAMBINO
 	db ICON_EGG         ; EGG

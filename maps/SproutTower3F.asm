@@ -1,4 +1,7 @@
 	object_const_def
+	const SPROUT_TOWER_3F_SCHOOLBOY
+	const SPROUT_TOWER_3F_TEACHER
+	const SPROUT_TOWER_3F_LASS
 	const SPROUT_TOWER_3F_RIVAL
 
 SproutTower3F_MapScripts:
@@ -9,15 +12,47 @@ SproutTower3F_MapScripts:
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .Sprites
-
+	
 .Nothing:
 	end
 
 .Sprites:
 	disappear SPROUT_TOWER_3F_RIVAL
 	return
+	
+TrainerSchoolboyAvery:
+	trainer SCHOOLBOY, AVERY, EVENT_BEAT_SCHOOLBOY_AVERY, SchoolboyAverySeenText, SchoolboyAveryBeatenText, 0, .AfterScript
 
-; scripts here
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext SchoolboyAveryAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerTeacherBella:
+	trainer TEACHER, BELLA, EVENT_BEAT_TEACHER_BELLA, TeacherBellaSeenText, TeacherBellaBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext TeacherBellaAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerLassJune:
+	trainer LASS, JUNE, EVENT_BEAT_LASS_JUNE, LassJuneSeenText, LassJuneBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext LassJuneAfterBattleText
+	waitbutton
+	closetext
+	end
+
 SproutTower3F_RivalBattle:
 .West:
 	appear SPROUT_TOWER_3F_RIVAL
@@ -107,6 +142,18 @@ SproutTower3F_RivalBattle:
 
 	setscene SCENE_SPROUT_TOWER_3F_BATTLED_RIVAL
 	end
+	
+.BackOffWest:
+	fix_facing
+	step LEFT
+	remove_fixed_facing
+	step_end
+
+.BackOffEast:
+	fix_facing
+	step RIGHT
+	remove_fixed_facing
+	step_end
 
 .WinAgainstRivalText:
 	text "Shoot! You got me!"
@@ -160,19 +207,73 @@ SproutTower3F_RivalBattle:
 	para "It's been too"
 	line "long!"
 	done
+	
+SchoolboyAverySeenText:
+	text "This place is"
+	line "huge!"
+	
+	para "Can you believe"
+	line "it?!"
+	done
+	
+SchoolboyAveryBeatenText:
+	text "I can't believe I"
+	line "lost<...>"
+	done
+	
+SchoolboyAveryAfterBattleText:
+	text "This place is"
+	line "about as tall as"
+	
+	para "a STEELIX! It's"
+	line "insane!"
+	done 
+	
+TeacherBellaSeenText:
+	text "Well, since my"
+	line "students aren't"
+	
+	para "going to pay"
+	line "attention to me,"
+	
+	para "then I might as"
+	line "well have a quick"
+	cont "battle."
+	done
+	
+TeacherBellaBeatenText:
+	text "Woah! Who taught"
+	line "you that?"
+	done 
+	
+TeacherBellaAfterBattleText:
+	text "Sigh<...>well, back to"
+	line "desperately trying"
+	
+	para "to get these students"
+	line "to pay attention, I"
+	cont "suppose."
+	done 
+	
+LassJuneSeenText:
+	text "Woo! Field trip!"
+	done
+	
+LassJuneBeatenText:
+	text "You ruined it!"
+	done
 
-.BackOffWest:
-	fix_facing
-	step LEFT
-	remove_fixed_facing
-	step_end
-
-.BackOffEast:
-	fix_facing
-	step RIGHT
-	remove_fixed_facing
-	step_end
-
+LassJuneAfterBattleText:
+	text "You ruined a"
+	line "field trip for an"
+	
+	para "innocent girl."
+	
+	para "You should be"
+	line "ashamed of your-"
+	cont "self."
+	done
+	
 SproutTower3F_MapEvents:
 	db 0, 0 ; filler
 
@@ -193,5 +294,8 @@ SproutTower3F_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
+	db 4 ; object events
+	object_event 11,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerSchoolboyAvery, -1
+	object_event 18,  10, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerTeacherBella, -1
+	object_event 18,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassJune, -1
 	object_event 13, 13, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BLOCKING_SPROUT_TOWER

@@ -162,21 +162,21 @@ PokemonCries::
 	mon_cry CRY_CYNDAQUIL,   839,  128   ; CYNDAQUIL
 	mon_cry CRY_CYNDAQUIL,   $321,  $120 ; QUILAVA
 	mon_cry CRY_CYNDAQUIL,   749,   416   ; TYPHLOSION
-	mon_cry CRY_TOTODILE,    $54,   $e0 ; TOTODILE (diff)
-	mon_cry CRY_TOTODILE,      0,  $130 ; CROCONAW (diff)
-	mon_cry CRY_TOTODILE,   -232,  $1c0 ; FERALIGATR (diff)
+	mon_cry CRY_TOTODILE,    $54,   $e0 ; TOTODILE 
+	mon_cry CRY_TOTODILE,      0,  $130 ; CROCONAW
+	mon_cry CRY_TOTODILE,   -232,  $1c0 ; FERALIGATR
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
 	mon_cry CRY_SENTRET,     $08a,  $0b8 ; SENTRET
 	mon_cry CRY_SENTRET,     $06b,  $102 ; FURRET
-	mon_cry CRY_HOOTHOOT_2CH,    $000,  $0a0 ; HOOTHOOT (diff)
-	mon_cry CRY_HOOTHOOT,   -$08e,  $100 ; NOCTOWL (diff)
+	mon_cry CRY_HOOTHOOT_2CH,    $000,  $0a0 ; HOOTHOOT 
+	mon_cry CRY_HOOTHOOT,   -$08e,  $100 ; NOCTOWL
 	mon_cry CRY_LEDYBA,      $000,  $0de ; LEDYBA
 	mon_cry CRY_LEDYBA,     -$096,  $138 ; LEDIAN
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
-	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA, fix
-	mon_cry CRY_TOTODILE,   -$022,  $200 ; TONBOSS, fix
+	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA, needs fixing
+	mon_cry CRY_TOTODILE,   -$022,  $200 ; TONBOSS, needs fixing
 	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
@@ -212,7 +212,7 @@ PokemonCries::
 	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; MISDREAVUS
 	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
 	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET
-	mon_cry CRY_CLEFFA,     -264,  320 ; TWINZ (unique!)
+	mon_cry CRY_CLEFFA,     -264,  320 ; TWINZ (unique!, add this beta base cry in)
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_GIRAFARIG,   $3fc,  $210 ; TOPSYSPOT
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
@@ -281,7 +281,7 @@ PokemonCries::
 	mon_cry CRY_WORFURS,     -$1db,  $150 ; WEARLYCAN
 	mon_cry CRY_DIGLETT,     $0cb,  $061 ; DODAERIE
 	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARASPOR
+	mon_cry CRY_MOLAMBINO,    $043,  $050 ; MOLAMBINO
 
-	
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

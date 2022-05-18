@@ -98,7 +98,7 @@ SageChowAfterBattleText:
 	
 BlackbeltGenkiSeenText:
 	text "RAAH! I'm angrier"
-	line "er than my MANKEY!"
+	line "than my MANKEY!"
 	done
 
 BlackbeltGenkiBeatenText:

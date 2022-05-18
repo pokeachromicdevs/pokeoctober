@@ -16,6 +16,7 @@ EvosAttacksPointers3::
 	dw WearlycanEvosAttacks
 	dw DodaerieEvosAttacks
 	dw ParasporEvosAttacks
+	dw MolambinoEvosAttacks
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -256,4 +257,22 @@ ParasporEvosAttacks:
 	dbw 40, GROWTH
 	dbw 45, SLASH
 	dbw 51, TACKLE ; LUNGE
+	db 0 ; no more level-up moves
+	
+MolambinoEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1 , WATER_GUN
+	dbw 1 , GROWL
+	dbw 1 , TACKLE
+	dbw 10, RAGE
+	dbw 12, BUBBLE
+	dbw 13, HARDEN
+	dbw 16, SUPERSONIC
+	dbw 19, BIDE
+	dbw 23, SLAM
+	dbw 29, DOUBLE_TEAM
+	dbw 35, ACID_ARMOR
+	dbw 42, IRON_TAIL
+	dbw 47, THRASH
+	dbw 52, HYDRO_PUMP
 	db 0 ; no more level-up moves

@@ -149,7 +149,6 @@ EngineFlags:
 	engine_flag wDailyRematchFlags, 11 ; todd ; $70
 	engine_flag wDailyRematchFlags, 12 ; gina
 	engine_flag wDailyRematchFlags, 13 ; arnie
-	engine_flag wDailyRematchFlags, 14 ; alan
 	engine_flag wDailyRematchFlags, 15 ; dana
 	engine_flag wDailyRematchFlags, 16 ; chad
 	engine_flag wDailyRematchFlags, 17 ; tully
@@ -185,7 +184,6 @@ EngineFlags:
 	engine_flag wDailyPhoneTimeOfDayFlags, 11 ; todd
 	engine_flag wDailyPhoneTimeOfDayFlags, 12 ; gina
 	engine_flag wDailyPhoneTimeOfDayFlags, 13 ; arnie
-	engine_flag wDailyPhoneTimeOfDayFlags, 14 ; alan
 	engine_flag wDailyPhoneTimeOfDayFlags, 15 ; dana
 	engine_flag wDailyPhoneTimeOfDayFlags, 16 ; chad
 	engine_flag wDailyPhoneTimeOfDayFlags, 17 ; tully ; $98

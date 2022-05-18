@@ -275,3 +275,4 @@ AnimationPointers:
 	dw WearlycanAnimation
 	dw DodaerieAnimation
 	dw ParasporAnimation
+	dw MolambinoAnimation

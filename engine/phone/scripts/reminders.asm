@@ -54,10 +54,6 @@ UnknownScript_0xa0a6e:
 	farwritetext UnknownText_0x64c13
 	end
 
-UnknownScript_0xa0a73:
-	farwritetext UnknownText_0x64ed4
-	end
-
 UnknownScript_0xa0a78:
 	farwritetext UnknownText_0x651bf
 	end

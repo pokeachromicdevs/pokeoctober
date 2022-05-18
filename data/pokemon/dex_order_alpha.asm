@@ -150,6 +150,7 @@ AlphabeticalPokedexOrder:
 	dw MILTANK
 	dw MISDREAVUS
 	dw MOIBELLE
+	dw MOLAMBINO
 	dw MOLTRES
 	dw MR__MIME
 	dw MUK

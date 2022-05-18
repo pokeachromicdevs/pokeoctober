@@ -275,3 +275,4 @@ AnimationIdlePointers:
 	dw WearlycanAnimationIdle
 	dw DodaerieAnimationIdle
 	dw ParasporAnimationIdle
+	dw MolambinoAnimationIdle

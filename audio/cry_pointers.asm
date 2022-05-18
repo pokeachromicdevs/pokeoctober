@@ -69,3 +69,4 @@ Cries:
 	dba Cry_Donphan
 	dba Cry_Hoothoot_2ch
 	dba Cry_Worfurs
+	dba Cry_Molambino

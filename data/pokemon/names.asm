@@ -279,3 +279,4 @@ PokemonNames::
 	db "WEARLYCAN@"
 	db "DODAERIE@@" 
 	db "PARASPOR@@"
+	db "MOLAMBINO@"

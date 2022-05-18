@@ -125,6 +125,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw DodaerieEggMoves
 	dw ParasporEggMoves
+	dw MolambinoEggMoves
 	
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -558,3 +559,9 @@ ParasporEggMoves:
 	dw LIGHT_SCREEN
 	dw PURSUIT
 	dw -1 ; end
+	
+MolambinoEggMoves:
+	db RAIN_DANCE
+	db REVERSAL
+	db SWAGGER
+	db -1 ; end

@@ -151,6 +151,13 @@ Cry_Worfurs:
 	musicheader 3, 5, Cry_Worfurs_Ch5
 	musicheader 1, 6, Cry_Worfurs_Ch6
 	musicheader 1, 8, Cry_Worfurs_Ch8
+	
+Cry_Molambino:
+	channel_count 3
+	channel 5, Cry_Molambino_Ch5
+	channel 6, Cry_Molambino_Ch6
+	channel 8, Cry_Molambino_Ch8
+
 
 Cry_Entei_Ch5:
 	; soundinput $ff
@@ -2023,3 +2030,41 @@ Cry_Worfurs_Ch8:
 	noise __,  4, $ec, $4d
 	noise C_,  1, $d2, $4f
 	endchannel
+	
+Cry_Molambino_Ch5:
+	sound_duty 0, 1, 0, 2
+.loop1:
+	square_note 3, 12, 1, 1937
+	sound_loop 3, .loop1
+.loop2:
+	square_note 3, 13, 1, 1201
+	sound_loop 6, .loop2
+.loop3:
+	square_note 1, 13, 1, 1169
+	square_note 1, 11, 1, 1105
+	sound_loop 6, .loop3
+.loop4:
+	square_note 1, 10, 3, 1137
+	square_note 1, 8, 1, 1089
+	sound_loop 6, .loop4
+.loop5:
+	square_note 1, 4, 1, 1057
+	square_note 1, 2, 1, 1025
+	sound_loop 4, .loop5
+	sound_ret
+
+Cry_Molambino_Ch6:
+	sound_duty 1, 3, 2, 0
+	square_note 8, 9, -1, 1856
+	square_note 8, 7, -1, 1862
+	square_note 16, 15, 6, 1933
+	square_note 8, 15, 8, 1937
+	square_note 8, 15, 8, 1933
+	square_note 8, 15, 8, 1927
+	square_note 24, 14, 2, 1923
+	sound_ret
+	
+Cry_Molambino_Ch8:
+	noise_note 8, 10, 6, 58
+	noise_note 8, 10, 1, 90
+	sound_ret

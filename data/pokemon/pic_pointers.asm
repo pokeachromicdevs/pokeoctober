@@ -565,3 +565,5 @@ PokemonPicPointers::
 	dba DodaerieBackpic
 	dba ParasporFrontpic
 	dba ParasporBackpic
+	dba MolambinoFrontpic
+	dba MolambinoBackpic

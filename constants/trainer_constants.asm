@@ -100,10 +100,6 @@ KRIS EQU __enum__
 
 	trainerclass SCIENTIST ; 14
 	const ROSS
-	const MITCH
-	const JED
-	const MARC
-	const RICH
 
 	trainerclass ERIKA ; 15
 	const ERIKA1
@@ -127,9 +123,6 @@ KRIS EQU __enum__
 	const BENNY
 
 	trainerclass SCHOOLBOY ; 17
-	const JACK1
-	const KIPP
-	const ALAN1
 	const JOHNNY
 	const DANNY
 	const TOMMY
@@ -139,19 +132,12 @@ KRIS EQU __enum__
 	const CHAD1
 	const NATE
 	const RICKY
-	const JACK2
-	const JACK3
-	const ALAN2
-	const ALAN3
 	const CHAD2
 	const CHAD3
-	const JACK4
-	const JACK5
-	const ALAN4
-	const ALAN5
 	const CHAD4
 	const CHAD5
 	const SCHOOLBOY_ANDY
+	const AVERY
 
 	trainerclass BIRD_KEEPER ; 18
 	const ROD
@@ -198,6 +184,7 @@ KRIS EQU __enum__
 	const NIECHELLE
 	const YURI
 	const HELEN
+	const JUNE
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -332,6 +319,7 @@ KRIS EQU __enum__
 	const HILLARY
 	const SHIRLEY
 	const ANN
+	const BELLA
 
 	trainerclass SABRINA ; 23
 	const SABRINA1

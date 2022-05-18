@@ -73,11 +73,6 @@ UnknownScript_0xa0968:
 	buttonsound
 	sjump PhoneScript_HangupText_Male
 
-UnknownScript_0xa0970:
-	farwritetext UnknownText_0x64e90
-	buttonsound
-	sjump PhoneScript_HangupText_Male
-
 UnknownScript_0xa0978:
 	farwritetext UnknownText_0x65161
 	buttonsound

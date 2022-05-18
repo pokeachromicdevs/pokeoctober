@@ -10,7 +10,6 @@ BugContestantPointers:
 	dw BugContestant_PicnickerCindy
 	dw BugContestant_BugCatcherJosh
 	dw BugContestant_YoungsterSamuel
-	dw BugContestant_SchoolboyKipp
 
 ; contestant format:
 ;   db class, id
@@ -71,9 +70,3 @@ BugContestant_YoungsterSamuel:
 	dw WEEDLE,     270
 	dw PINSIR,     282
 	dw CATERPIE,   251
-
-BugContestant_SchoolboyKipp:
-	db SCHOOLBOY, KIPP
-	dw VENONAT,    267
-	dw PARAS,      254
-	dw KAKUNA,     259
