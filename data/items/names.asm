@@ -79,7 +79,7 @@ ItemNames::
 	db "PRZCUREBERRY@"
 	db "BURNT BERRY@"
 	db "ICE BERRY@"
-	db "POISON BARB@"
+	db "TOXIC NEEDLE@"
 	db "KING'S ROCK@"
 	db "BITTER BERRY@"
 	db "MINT BERRY@"

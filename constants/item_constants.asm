@@ -86,7 +86,7 @@
 	const PRZCUREBERRY ; 4e
 	const BURNT_BERRY  ; 4f
 	const ICE_BERRY    ; 50
-	const POISON_BARB  ; 51
+	const TOXIC_NEEDLE ; 51
 	const KINGS_ROCK   ; 52
 	const BITTER_BERRY ; 53
 	const MINT_BERRY   ; 54
