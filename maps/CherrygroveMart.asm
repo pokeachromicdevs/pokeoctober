@@ -24,14 +24,14 @@ CherrygroveMartClerkScript:
 CherrygroveMartCooltrainerMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .PokeBallsInStock
-	writetext CherrygroveMartCooltrainerMText
-	waitbutton
-	closetext
-	end
+	;checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	;iftrue .PokeBallsInStock
+	;writetext CherrygroveMartCooltrainerMText
+	;waitbutton
+	;closetext
+	;end
 
-.PokeBallsInStock:
+;.PokeBallsInStock:
 	writetext CherrygroveMartCooltrainerMText_PokeBallsInStock
 	waitbutton
 	closetext
