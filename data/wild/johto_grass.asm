@@ -21,11 +21,11 @@ JohtoGrassWildMons:
 	dbw 5, RATTATA
 	dbw 5, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
+	dbw 3, MISDREAVUS
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
 	dbw 3, RATTATA
-	dbw 6, GASTLY
+	dbw 6, MISDREAVUS
 	dbw 5, RATTATA
 	dbw 5, RATTATA
 
@@ -48,11 +48,11 @@ JohtoGrassWildMons:
 	dbw 5, RATTATA
 	dbw 5, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
+	dbw 3, MISDREAVUS
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
 	dbw 3, RATTATA
-	dbw 6, GASTLY
+	dbw 6, MISDREAVUS
 	dbw 5, RATTATA
 	dbw 5, RATTATA
 	
@@ -75,11 +75,11 @@ JohtoGrassWildMons:
 	dbw 5, RATTATA
 	dbw 5, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
+	dbw 3, MISDREAVUS
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
 	dbw 3, RATTATA
-	dbw 6, GASTLY
+	dbw 6, MISDREAVUS
 	dbw 5, RATTATA
 	dbw 5, RATTATA
 	

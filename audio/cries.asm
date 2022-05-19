@@ -157,6 +157,12 @@ Cry_Molambino:
 	channel 5, Cry_Molambino_Ch5
 	channel 6, Cry_Molambino_Ch6
 	channel 8, Cry_Molambino_Ch8
+	
+Cry_Misdreavus:
+	channel_count 3
+	channel 5, Cry_Misdreavus_Ch5
+	channel 6, Cry_Misdreavus_Ch6
+	channel 8, Cry_Misdreavus_Ch8
 
 
 Cry_Entei_Ch5:
@@ -2068,3 +2074,35 @@ Cry_Molambino_Ch8:
 	noise_note 8, 10, 6, 58
 	noise_note 8, 10, 1, 90
 	sound_ret
+	
+Cry_Misdreavus_Ch5:
+	sound_duty 1, 2, 1, 2
+	square_note 4, 7, 8, 1616
+	square_note 4, 15, 8, 1632
+	square_note 4, 15, 8, 1628
+	square_note 1, 15, 8, 1660
+	square_note 4, 15, 8, 1664
+	square_note 4, 15, 8, 1660
+	square_note 4, 15, 8, 1656
+	square_note 4, 15, 1, 1652
+	sound_ret
+
+Cry_Misdreavus_Ch6:
+	sound_duty 0, 2, 0, 2
+.loop1:
+	square_note 2, 10, 1, 1536
+	sound_loop 3, .loop1
+.loop2:
+	square_note 2, 10, 1, 1584
+	sound_loop 4, .loop2
+	square_note 4, 10, 2, 1588
+	square_note 4, 9, 1, 1592
+	sound_ret
+
+Cry_Misdreavus_Ch8:
+	noise_note 1, 6, 8, 54
+	noise_note 16, 8, 8, 106
+	noise_note 1, 9, 8, 94
+	noise_note 16, 10, 7, 110
+	sound_ret
+

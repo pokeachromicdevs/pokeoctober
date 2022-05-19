@@ -298,6 +298,7 @@ KiwackiEvosAttacks:
 	db 0 ; no more level-up moves
 	
 SilkaneEvosAttacks:
+	dbbw EVOLVE_LEVEL, 25, MORPHOBIA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, STRING_SHOT
@@ -308,6 +309,7 @@ SilkaneEvosAttacks:
 	
 MorphobiaEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 25, MEAN_LOOK
 	dbw 30, TACKLE; SHADOW PUNCH 
 	dbw 34, SCARY_FACE
 	dbw 40, SCREECH

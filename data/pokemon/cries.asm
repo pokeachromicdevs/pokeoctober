@@ -209,9 +209,9 @@ PokemonCries::
 	mon_cry CRY_GIRAFARIG,   -30,   160  ; UMBREON 
 	mon_cry CRY_MARILL,     -$01f,  $180 ; MURKROW
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
-	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; MISDREAVUS
-	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
-	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET
+	mon_cry CRY_MISDREAVUS,  $130,  $0e8 ; MISDREAVUS, needs fixing
+	mon_cry CRY_MISDREAVUS,  $162,  $100 ; UNOWN, needs fixing
+	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET, needs fixing
 	mon_cry CRY_CLEFFA,     -264,  320 ; TWINZ (unique!, add this beta base cry in)
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_GIRAFARIG,   $3fc,  $210 ; TOPSYSPOT
@@ -241,7 +241,7 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,    $000,  $180 ; OCTILLERY
 	mon_cry CRY_TEDDIURSA,   $002,  $06a ; DELIBIRD
 	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE
-	mon_cry CRY_RAIKOU,      $06b,  $280 ; SKARMORY
+	mon_cry CRY_RAIKOU,      $06b,  $280 ; SKARMORY, needs fixing
 	mon_cry CRY_CYNDAQUIL,     0,  288   ; HOUNDOUR 
 	mon_cry CRY_CYNDAQUIL,   531,  128   ; HOUNDOOM 
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA

@@ -70,3 +70,4 @@ Cries:
 	dba Cry_Hoothoot_2ch
 	dba Cry_Worfurs
 	dba Cry_Molambino
+	dba Cry_Misdreavus
