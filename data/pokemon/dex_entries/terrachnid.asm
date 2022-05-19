@@ -3,7 +3,7 @@
 
 	db   "It injects its"
 	next "foes with a"
-	next "lethal poison."
+	next "lethal venom."
 
 	page "This #MON"
 	next "shares ancestry"
