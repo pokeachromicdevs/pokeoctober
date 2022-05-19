@@ -258,9 +258,11 @@ TeacherBellaAfterBattleText:
 	text "Sigh<...>well, back to"
 	line "desperately trying"
 	
-	para "to get these students"
-	line "to pay attention, I"
-	cont "suppose."
+	para "to get these"
+	line "students to pay"
+	
+	para "attention, I"
+	line "suppose."
 	done 
 	
 LassJuneSeenText:
