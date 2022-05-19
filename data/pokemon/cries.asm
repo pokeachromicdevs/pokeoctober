@@ -282,7 +282,7 @@ PokemonCries::
 	mon_cry CRY_DIGLETT,     $0cb,  $061 ; DODAERIE
 	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARASPOR
 	mon_cry CRY_MOLAMBINO,    $043,  $050 ; MOLAMBINO
-	mon_cry CRY_NIDORAN_M,      0,     0 ; KIWACKI (placeholder)
+	mon_cry CRY_CHIKORITA,    80,    $200 ; KIWACKI
  	mon_cry CRY_NIDORAN_M,      0,     0 ; SILKANE (placeholder)
  	mon_cry CRY_NIDORAN_M,      0,     0 ; MORPHOBIA (placeholder)
  	mon_cry CRY_NIDORAN_M,      0,     0 ; TERRACHNID (placeholder)
