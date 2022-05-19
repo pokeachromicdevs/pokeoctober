@@ -120,3 +120,4 @@ Music:
 	dba Music_DreadWoods
 	dba Music_CinnabarMansion
 	dba Music_Pokemart 
+	dba Music_CeruleanCave

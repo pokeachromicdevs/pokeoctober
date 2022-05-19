@@ -157,6 +157,8 @@ INCLUDE "audio/music/bluebattle.asm"
 INCLUDE "audio/music/dreadwoods.asm"
 INCLUDE "audio/music/cinnabarmansion.asm"
 INCLUDE "audio/music/pokemart.asm"
+INCLUDE "audio/music/ceruleancave.asm"
+
 
 
 SECTION "Sound Effects", ROMX
