@@ -225,9 +225,9 @@ PokemonCries::
 	mon_cry CRY_DUNSPARCE,   $112,  $0e8 ; SNUBBULL
 	mon_cry CRY_DUNSPARCE,   $000,  $180 ; GRANBULL
 	mon_cry CRY_SLOWKING,    $160,  $0e0 ; QWILFISH
-	mon_cry CRY_AMPHAROS,    $000,  $160 ; SCIZOR
-	mon_cry CRY_AMPHAROS,    555,  336   ; TRICULES
-	mon_cry CRY_AMPHAROS,    $035,  $0e0 ; HERACROSS
+	mon_cry CRY_AMPHAROS,    $000,  $160 ; SCIZOR, needs fixing
+	mon_cry CRY_AMPHAROS,    555,  336   ; TRICULES, needs fixing
+	mon_cry CRY_AMPHAROS,    $035,  $0e0 ; HERACROSS, needs fixing
 	mon_cry CRY_WOOPER,       15,   191  ; SNEASEL
 	mon_cry CRY_TEDDIURSA,   $7a2,  $06e ; TEDDIURSA
 	mon_cry CRY_TEDDIURSA,   $640,  $0d8 ; URSARING
