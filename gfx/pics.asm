@@ -753,8 +753,6 @@ WearlycanBackpic:  INCBIN "gfx/pokemon/wearlycan/back.2bpp.lz"
 MolambinoFrontpic: INCBIN "gfx/pokemon/molambino/front.animated.2bpp.lz"
 MolambinoBackpic:  INCBIN "gfx/pokemon/molambino/back.2bpp.lz"
 
-
-
 SECTION "Pics 22", ROMX
 
 ClefairyBackpic:     INCBIN "gfx/pokemon/clefairy/back.2bpp.lz"
@@ -775,4 +773,13 @@ RemoraidBackpic:     INCBIN "gfx/pokemon/remoraid/back.2bpp.lz"
 DittoFrontpic:       INCBIN "gfx/pokemon/ditto/front.animated.2bpp.lz"
 KingdraBackpic:      INCBIN "gfx/pokemon/kingdra/back.2bpp.lz"
 CamperPic:           INCBIN "gfx/trainers/camper.2bpp.lz"
+KiwackiFrontpic: INCBIN "gfx/pokemon/kiwacki/front.animated.2bpp.lz"
+KiwackiBackpic:  INCBIN "gfx/pokemon/kiwacki/back.2bpp.lz"
+SilkaneFrontpic: INCBIN "gfx/pokemon/silkane/front.animated.2bpp.lz"
+SilkaneBackpic:  INCBIN "gfx/pokemon/silkane/back.2bpp.lz"
+MorphobiaFrontpic: INCBIN "gfx/pokemon/morphobia/front.animated.2bpp.lz"
+MorphobiaBackpic:  INCBIN "gfx/pokemon/morphobia/back.2bpp.lz"
+TerrachnidFrontpic: INCBIN "gfx/pokemon/terrachnid/front.animated.2bpp.lz"
+TerrachnidBackpic:  INCBIN "gfx/pokemon/terrachnid/back.2bpp.lz"
+
 

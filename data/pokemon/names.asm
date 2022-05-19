@@ -280,3 +280,7 @@ PokemonNames::
 	db "DODAERIE@@" 
 	db "PARASPOR@@"
 	db "MOLAMBINO@"
+	db "KIWACKI@@@"
+	db "SILKANE@@@"
+	db "MORPHOBIA@"
+	db "TERRACHNID"

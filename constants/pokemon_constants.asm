@@ -297,6 +297,10 @@ JOHTO_POKEMON EQU const_value
 	const DODAERIE
 	const PARASPOR
 	const MOLAMBINO
+	const KIWACKI
+	const SILKANE
+	const MORPHOBIA
+	const TERRACHNID
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

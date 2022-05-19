@@ -276,3 +276,7 @@ AnimationIdlePointers:
 	dw DodaerieAnimationIdle
 	dw ParasporAnimationIdle
 	dw MolambinoAnimationIdle
+	dw KiwackiAnimationIdle
+	dw SilkaneAnimationIdle
+	dw MorphobiaAnimationIdle
+	dw TerrachnidAnimationIdle

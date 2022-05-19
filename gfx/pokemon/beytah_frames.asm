@@ -19,7 +19,11 @@ WearlycanFrames:  INCLUDE "gfx/pokemon/wearlycan/frames.asm"
 DodaerieFrames:   INCLUDE "gfx/pokemon/dodaerie/frames.asm"
 ShuqlourFrames:   INCLUDE "gfx/pokemon/shuqlour/frames.asm"
 ParasporFrames:   INCLUDE "gfx/pokemon/paraspor/frames.asm"
-MolambinoFrames:   INCLUDE "gfx/pokemon/molambino/frames.asm"
+MolambinoFrames:  INCLUDE "gfx/pokemon/molambino/frames.asm"
+KiwackiFrames:    INCLUDE "gfx/pokemon/kiwacki/frames.asm"
+SilkaneFrames:    INCLUDE "gfx/pokemon/silkane/frames.asm"
+MorphobiaFrames:   INCLUDE "gfx/pokemon/morphobia/frames.asm"
+TerrachnidFrames:   INCLUDE "gfx/pokemon/terrachnid/frames.asm"
 
 
 

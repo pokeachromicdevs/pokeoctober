@@ -584,3 +584,11 @@ INCBIN "gfx/pokemon/paraspor/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/paraspor/shiny.pal"
 INCBIN "gfx/pokemon/molambino/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/molambino/shiny.pal"
+INCBIN "gfx/pokemon/kiwacki/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/kiwacki/shiny.pal"
+INCBIN "gfx/pokemon/silkane/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/silkane/shiny.pal"
+INCBIN "gfx/pokemon/morphobia/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/morphobia/shiny.pal"
+INCBIN "gfx/pokemon/terrachnid/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/terrachnid/shiny.pal"

@@ -20,6 +20,7 @@ OldPokedexOrder:
 	dw NOCTOWL
 	dw CLEFLING
 	dw ADBARSTORK
+	dw KIWACKI
 	dw RATTATA
 	dw RATICATE
 	dw SENTRET
@@ -100,6 +101,8 @@ OldPokedexOrder:
 	dw DITTO
 	dw PINECO
 	dw FORRETRESS
+	dw SILKANE
+	dw MORPHOBIA
 	dw NIDORAN_F
 	dw NIDORINA
 	dw NIDOQUEEN
@@ -206,6 +209,7 @@ OldPokedexOrder:
 	dw SEADRA
 	dw KINGDRA
 	dw GLIGAR
+	dw TERRACHNID
 	dw DELIBIRD
 	dw SWINUB
 	dw PILOSWINE

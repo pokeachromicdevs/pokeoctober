@@ -117,6 +117,7 @@ AlphabeticalPokedexOrder:
 	dw KATU
 	dw KINGDRA
 	dw KINGLER
+	db KIWACKI
 	dw KOFFING
 	dw KRABBY
 	dw LANTURN
@@ -152,6 +153,7 @@ AlphabeticalPokedexOrder:
 	dw MOIBELLE
 	dw MOLAMBINO
 	dw MOLTRES
+	dw MORPHOBIA
 	dw MR__MIME
 	dw MUK
 	dw MURKROW
@@ -216,6 +218,7 @@ AlphabeticalPokedexOrder:
 	dw SHELLDER
 	dw SHUCKLE
 	dw SHUQLOUR
+	dw SILKANE
 	dw SKARMORY
 	dw SKIPLOOM
 	dw SLOWBRO
@@ -244,6 +247,7 @@ AlphabeticalPokedexOrder:
 	dw TEDDIURSA
 	dw TENTACOOL
 	dw TENTACRUEL
+	dw TERRACHNID
 	dw TOGEPI
 	dw TOGETIC
 	dw TONBOSS

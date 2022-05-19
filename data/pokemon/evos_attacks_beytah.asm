@@ -17,6 +17,10 @@ EvosAttacksPointers3::
 	dw DodaerieEvosAttacks
 	dw ParasporEvosAttacks
 	dw MolambinoEvosAttacks
+	dw KiwackiEvosAttacks
+	dw SilkaneEvosAttacks
+	dw MorphobiaEvosAttacks
+	dw TerrachnidEvosAttacks
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -276,3 +280,57 @@ MolambinoEvosAttacks:
 	dbw 47, THRASH
 	dbw 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
+	
+KiwackiEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, DEFENSE_CURL
+	dbw 7, ABSORB
+	dbw 12, LEER
+	dbw 17, MUD_SLAP
+	dbw 24, RAZOR_LEAF
+	dbw 29, MIRROR_MOVE
+	dbw 34, JUMP_KICK
+	dbw 41, GIGA_DRAIN
+	dbw 46, DRILL_PECK
+	dbw 51, SWORDS_DANCE
+	dbw 58, TACKLE; EARTH DRILL 
+	db 0 ; no more level-up moves
+	
+SilkaneEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, STRING_SHOT
+	dbw 5, LEECH_LIFE
+	dbw 15, MIMIC
+	dbw 20, HIDDEN_POWER
+	db 0 ; no more level-up moves
+	
+MorphobiaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 30, TACKLE; SHADOW PUNCH 
+	dbw 34, SCARY_FACE
+	dbw 40, SCREECH
+	dbw 44, SHADOW_BALL
+	dbw 48, FLY
+	dbw 54, TACKLE;LUNGE 
+	db 0 ; no more level-up moves
+	
+TerrachnidEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POISON_STING
+	dbw 1, LEER
+	dbw 7, FOCUS_ENERGY
+	dbw 11, MUD_SLAP
+	dbw 15, MACH_PUNCH
+	dbw 22, CURSE
+	dbw 26, CROSS_CUTTER
+	dbw 30, CUT; STUN CUT
+	dbw 37, TOXIC
+	dbw 41, TACKLE;LUNGE
+	dbw 45, EARTHQUAKE
+	dbw 52, FISSURE
+	db 0 ; no more level-up moves 
+	
+	
+	

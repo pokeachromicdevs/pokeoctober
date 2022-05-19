@@ -277,3 +277,7 @@ PokedexDataPointerTable:
 	dba DodaeriePokedexEntry
 	dba ParasporPokedexEntry
 	dba MolambinoPokedexEntry
+	dba KiwackiPokedexEntry
+	dba SilkanePokedexEntry
+	dba MorphobiaPokedexEntry
+	dba TerrachnidPokedexEntry

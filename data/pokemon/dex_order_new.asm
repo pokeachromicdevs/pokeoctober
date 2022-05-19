@@ -21,6 +21,7 @@ NewPokedexOrder:
 	dw CLEFLING
 	dw MALLODY
 	dw ADBARSTORK
+	dw KIWACKI
 	dw RATTATA
 	dw RATICATE
 	dw SENTRET
@@ -102,6 +103,8 @@ NewPokedexOrder:
 	dw DITTO
 	dw PINECO
 	dw FORRETRESS
+	dw SILKANE
+	dw MORPHOBIA
 	dw NIDORAN_F
 	dw NIDORINA
 	dw NIDOQUEEN
@@ -210,6 +213,7 @@ NewPokedexOrder:
 	dw SEADRA
 	dw KINGDRA
 	dw GLIGAR
+	dw TERRACHNID
 	dw DELIBIRD
 	dw SWINUB
 	dw PILOSWINE

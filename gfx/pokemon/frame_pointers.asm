@@ -276,3 +276,7 @@ FramesPointers:
 	dba DodaerieFrames
 	dba ParasporFrames
 	dba MolambinoFrames
+	dba KiwackiFrames
+	dba SilkaneFrames
+	dba MorphobiaFrames
+	dba TerrachnidFrames

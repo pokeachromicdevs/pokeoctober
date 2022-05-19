@@ -276,3 +276,7 @@ BitmasksPointers:
 	dw DodaerieBitmasks
 	dw ParasporBitmasks
 	dw MolambinoBitmasks
+	dw KiwackiBitmasks
+	dw SilkaneBitmasks
+	dw MorphobiaBitmasks
+	dw TerrachnidBitmasks

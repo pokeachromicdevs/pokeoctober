@@ -272,7 +272,7 @@ PokemonCries::
 	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
 	mon_cry CRY_RATTATA,     $065,  $180 ; BELLEDAM
 	mon_cry CRY_SPEAROW,     185,   $100 ; CLEFLING
-	mon_cry CRY_SPEAROW,     185,   $100 ; MALLODY
+	mon_cry CRY_SPEAROW,     185,   $100 ; MALLODY (placeholder)
 	mon_cry CRY_PICHU,       $000,  $150 ; CAMOUFLAKE
 	mon_cry CRY_MARILL,      $0c0,  $090 ; COALTA
 	mon_cry CRY_MARILL,      $f4c,  $110 ; BURGELA
@@ -282,6 +282,10 @@ PokemonCries::
 	mon_cry CRY_DIGLETT,     $0cb,  $061 ; DODAERIE
 	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARASPOR
 	mon_cry CRY_MOLAMBINO,    $043,  $050 ; MOLAMBINO
+	mon_cry CRY_NIDORAN_M,      0,     0 ; KIWACKI (placeholder)
+ 	mon_cry CRY_NIDORAN_M,      0,     0 ; SILKANE (placeholder)
+ 	mon_cry CRY_NIDORAN_M,      0,     0 ; MORPHOBIA (placeholder)
+ 	mon_cry CRY_NIDORAN_M,      0,     0 ; TERRACHNID (placeholder)
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

@@ -276,3 +276,7 @@ AnimationPointers:
 	dw DodaerieAnimation
 	dw ParasporAnimation
 	dw MolambinoAnimation
+	dw KiwackiAnimation
+	dw SilkaneAnimation
+	dw MorphobiaAnimation
+	dw TerrachnidAnimation

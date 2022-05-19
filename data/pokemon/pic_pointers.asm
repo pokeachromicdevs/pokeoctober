@@ -567,3 +567,11 @@ PokemonPicPointers::
 	dba ParasporBackpic
 	dba MolambinoFrontpic
 	dba MolambinoBackpic
+	dba KiwackiFrontpic
+	dba KiwackiBackpic
+	dba SilkaneFrontpic
+	dba SilkaneBackpic
+	dba MorphobiaFrontpic
+	dba MorphobiaBackpic
+	dba TerrachnidFrontpic
+	dba TerrachnidBackpic
