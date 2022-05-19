@@ -36,14 +36,176 @@ JohtoGrassWildMons:
 	dbw 4, RATTATA
 	dbw 5, RATTATA
 	dbw 3, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
+	; day
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
 	dbw 6, RATTATA
 	dbw 5, RATTATA
 	dbw 5, RATTATA
-	; day
+	; nite
+	dbw 3, GASTLY
+	dbw 4, GASTLY
+	dbw 5, GASTLY
+	dbw 3, RATTATA
+	dbw 6, GASTLY
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	
+	map_id SPROUT_TOWER_4F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
 	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
 	dbw 3, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
+	; day
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
+	dbw 6, RATTATA
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	; nite
+	dbw 3, GASTLY
+	dbw 4, GASTLY
+	dbw 5, GASTLY
+	dbw 3, RATTATA
+	dbw 6, GASTLY
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	
+	map_id SPROUT_TOWER_5F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, RATTATA
+	dbw 4, RATTATA
+	dbw 5, RATTATA
+	dbw 3, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
+	; day
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
+	dbw 6, RATTATA
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	; nite
+	dbw 3, GASTLY
+	dbw 4, GASTLY
+	dbw 5, GASTLY
+	dbw 3, RATTATA
+	dbw 6, GASTLY
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	
+	map_id SPROUT_TOWER_6F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, RATTATA
+	dbw 4, RATTATA
+	dbw 5, RATTATA
+	dbw 3, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
+	; day
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
+	dbw 6, RATTATA
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	; nite
+	dbw 3, GASTLY
+	dbw 4, GASTLY
+	dbw 5, GASTLY
+	dbw 3, RATTATA
+	dbw 6, GASTLY
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	
+	map_id SPROUT_TOWER_7F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, RATTATA
+	dbw 4, RATTATA
+	dbw 5, RATTATA
+	dbw 3, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
+	; day
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
+	dbw 6, RATTATA
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	; nite
+	dbw 3, GASTLY
+	dbw 4, GASTLY
+	dbw 5, GASTLY
+	dbw 3, RATTATA
+	dbw 6, GASTLY
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	
+	map_id SPROUT_TOWER_8F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, RATTATA
+	dbw 4, RATTATA
+	dbw 5, RATTATA
+	dbw 3, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
+	; day
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
+	dbw 6, RATTATA
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	; nite
+	dbw 3, GASTLY
+	dbw 4, GASTLY
+	dbw 5, GASTLY
+	dbw 3, RATTATA
+	dbw 6, GASTLY
+	dbw 5, RATTATA
+	dbw 5, RATTATA
+	
+	map_id SPROUT_TOWER_9F
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, RATTATA
+	dbw 4, RATTATA
+	dbw 5, RATTATA
+	dbw 3, RATTATA
+	dbw 6, NATU
+	dbw 5, NATU
+	dbw 5, NATU
+	; day
+	dbw 3, NATU
+	dbw 4, NATU
+	dbw 5, NATU
+	dbw 3, NATU
 	dbw 6, RATTATA
 	dbw 5, RATTATA
 	dbw 5, RATTATA
