@@ -107,12 +107,13 @@ DebugMenu::
 	db "PLAY CRY@"
 	db "TRAINERS@"
 	db "HELP@"
+	db "FIX EVENTS@"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 14
-	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+	db 15
+	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15
 	db -1
 
 .Jumptable
@@ -131,6 +132,55 @@ DebugMenu::
 	dw Debug_PlayCry
 	dw Debug_Trainer
 	dw Debug_Help
+	dw Debug_FixEvents
+
+Debug_FixEvents:
+	ld hl, .FixEventsText
+	call PrintText
+	call .YesNo
+	ret nz
+; reset events
+	xor a
+	ld hl, wEventFlags
+	ld bc, wEventFlagsEnd - wEventFlags
+	call ByteFill
+	
+	ld a, BANK(.Init1)
+	ld hl, .Init1
+	call CallScript
+	
+	ld hl, .EventsFixedText
+	call PrintText
+	ret
+
+.Init1
+	scall .Init2
+	end
+
+.Init2
+	jumpstd initializeevents
+	
+.YesNo
+	lb bc, 0, 7
+	call PlaceYesNoBox
+	ld a, [wMenuCursorY]
+	dec a
+	and a
+	ret
+
+.FixEventsText
+	text "Would you like to"
+	line "reset all events?"
+	done
+
+.EventsFixedText
+	text "All events are"
+	line "initialized."
+
+	para "Warp back to HOME"
+	line "to progress"
+	cont "through events."
+	prompt
 
 Debug_Help:
 ; load header only once so we don't allocate

@@ -2723,6 +2723,7 @@ wErinFightCount::    db
 	ds 100
 
 wEventFlags:: flag_array NUM_EVENTS ; da72
+wEventFlagsEnd::
 ; db6c
 
 	ds 6
