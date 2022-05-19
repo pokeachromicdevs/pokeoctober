@@ -145,6 +145,10 @@ Debug_FixEvents:
 	ld bc, wEventFlagsEnd - wEventFlags
 	call ByteFill
 	
+	ld hl, wSceneIDs
+	ld bc, wSceneIDsEnd - wSceneIDs
+	call ByteFill
+	
 	ld a, BANK(.Init1)
 	ld hl, .Init1
 	call CallScript
@@ -174,8 +178,10 @@ Debug_FixEvents:
 	done
 
 .EventsFixedText
-	text "All events are"
-	line "initialized."
+	text "All events and"
+	line "scenes are"
+	cont "initialized."
+	done
 
 	para "Warp back to HOME"
 	line "to progress"

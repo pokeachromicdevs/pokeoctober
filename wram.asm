@@ -2607,6 +2607,8 @@ wFarfetchdPosition:: db ; d964
 	ds 13
 
 ; map scene ids
+wSceneIDs::
+
 wPokecenter2FSceneID::                            db ; d972
 wTradeCenterSceneID::                             db ; d973
 wColosseumSceneID::                               db ; d974
@@ -2686,6 +2688,8 @@ wFastShipB1FSceneID::                             db ; d9bd
 wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
+
+wSceneIDsEnd::
 
 	ds 49
 
