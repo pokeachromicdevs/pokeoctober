@@ -4510,7 +4510,7 @@ SageGroup:
 	db "LI@", TRAINERTYPE_NORMAL
 	dbw 13, BELLSPROUT
 	dbw 13, ODDISH
-	;dbw 14, TWINZ
+	dbw 14, BIPULLA
 	dbw 16, KADABRA
 	db -1 ; end
 
