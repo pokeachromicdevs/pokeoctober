@@ -283,9 +283,11 @@ PokemonCries::
 	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARASPOR
 	mon_cry CRY_MOLAMBINO,    $043,  $050 ; MOLAMBINO
 	mon_cry CRY_CHIKORITA,    $040,    $200 ; KIWACKI
- 	 mon_cry CRY_DIGLETT,     $010,   $010 ; MORPHOBIA
+ 	mon_cry CRY_DIGLETT,     $010,   $010 ; MORPHOBIA
  	mon_cry CRY_DIGLETT,     $020,   $040 ; MORPHOBIA
- 	mon_cry CRY_NIDORAN_M,      0,     0 ; TERRACHNID (placeholder)
+	mon_cry CRY_GLIGAR,     -$045,  $120  ; TERRACHNID
+ 	;mon_cry CRY_GLIGAR,     $090,  $095 ; TERRACHNID (beta cry)
+
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle
