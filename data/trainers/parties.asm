@@ -719,6 +719,19 @@ YoungsterGroup:
 	db 5
 	dw LEDYBA
 	db -1 ; end
+	
+	next_list_item ; YOUNGSTER (1)
+	db "DAN@", TRAINERTYPE_NORMAL
+	db 10
+	dw RATTATA
+	db 11
+	dw HOOTHOOT
+	db 12
+	dw MAREEP
+	db 12
+	dw RATTATA 
+	db -1 ; end
+
 
 	end_list_items
 
@@ -4018,6 +4031,24 @@ BlackbeltGroup:
 	db 11
 	dw MANKEY
 	db -1 ; end
+	
+	next_list_item ; BLACKBELT_T (9)
+	db "HITOSHI@", TRAINERTYPE_NORMAL
+	db 12
+	dw MACHOP
+	db 15
+	dw TYROGUE
+	db -1 ; end
+	
+	next_list_item ; BLACKBELT_T (9)
+	db "LEE@", TRAINERTYPE_NORMAL
+	db 12
+	dw GEODUDE
+	db 13
+	dw MACHOP
+	db 13
+	dw MANKEY 
+	db -1 ; end
 
 	end_list_items
 
@@ -5143,7 +5174,7 @@ InstructorGroup:
 	next_list_item ; INSTRUCTOR (5)
 	db "STANLEY@", TRAINERTYPE_MOVES
 	db 46
-	dw SHUCKLE
+	dw SHUQLOUR
 	dw TOXIC, EARTHQUAKE, ROLLOUT, REST
 	db 48
 	dw ALAKAZAM
@@ -5155,6 +5186,16 @@ InstructorGroup:
 	dw NOCTOWL
 	dw FLY, TAKE_DOWN, HYPNOSIS, DREAM_EATER
 	db -1 ; end
+	
+	next_list_item ; INSTRUCTOR (6)
+	db "CURTIS@", TRAINERTYPE_NORMAL
+	db 11
+	dw RATTATA
+	db 12
+	dw WOOPER
+	db 13
+	dw GASTLY
+	db -1 ;end
 	
 	end_list_items
 
@@ -5193,18 +5234,18 @@ ProfessorGroup:
 
 ProdigyGroup:
 	next_list_item ; PRODIGY (1)
-		db "AXEL@", TRAINERTYPE_NORMAL
-		db 8
-		dw CHIKORITA
-		db 8
-		dw CYNDAQUIL
-		db 8
-		dw TOTODILE
-		db 9
-		dw CUBONE
-		db -1 ;end
+	db "AXEL@", TRAINERTYPE_NORMAL
+	db 8
+	dw CHIKORITA
+	db 8
+	dw CYNDAQUIL
+	db 8
+	dw TOTODILE
+	db 9
+	dw CUBONE
+	db -1 ;end
 		
-		end_list_items
+	end_list_items
 		
 SoldierGroup:
 	next_list_item; SOLDIER (1)

@@ -121,6 +121,7 @@ KRIS EQU __enum__
 	const JOEY5
 	const MAX
 	const BENNY
+	const DAN 
 
 	trainerclass SCHOOLBOY ; 17
 	const JOHNNY
@@ -530,6 +531,8 @@ KRIS EQU __enum__
 	const KENJI3
 	const WAI
 	const GENKI
+	const HITOSHI
+	const LEE
 
 	trainerclass EXECUTIVEM ; 33
 	const EXECUTIVEM_1
@@ -708,6 +711,7 @@ KRIS EQU __enum__
 	const STANLEY3
 	const STANLEY4
 	const STANLEY5
+	const CURTIS
 	
 	trainerclass PROFESSOR   ; 45
 	const OAK1_1_BULBASAUR

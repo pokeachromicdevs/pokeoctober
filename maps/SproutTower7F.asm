@@ -1,9 +1,13 @@
+	object_const_def
+	const SPROUT_TOWER_7F_POKE_BALL1
+
 SproutTower7F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-; scripts here
+SproutTowerF7EscapeRope:
+	itemball ESCAPE_ROPE
 
 SproutTower7F_MapEvents:
 	db 0, 0 ; filler
@@ -24,4 +28,5 @@ SproutTower7F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event 17, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF7EscapeRope, EVENT_SPROUT_TOWERF7_ESCAPE_ROPE
