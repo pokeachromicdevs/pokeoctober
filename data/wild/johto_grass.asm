@@ -88,7 +88,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 6 RATTATA
+	dbw 6, RATTATA
 	dbw 4, RATTATA
 	dbw 7, NATU
 	dbw 6, NATU

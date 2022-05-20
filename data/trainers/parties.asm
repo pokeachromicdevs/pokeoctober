@@ -4458,8 +4458,10 @@ SageGroup:
 
 	next_list_item ; SAGE (3)
 	db "JIN@", TRAINERTYPE_NORMAL
-	db 6
+	db 11
 	dw BELLSPROUT
+	db 13
+	dw HOOTHOOT
 	db -1 ; end
 
 	next_list_item ; SAGE (4)
@@ -4492,12 +4494,12 @@ SageGroup:
 
 	next_list_item ; SAGE (7)
 	db "EDMOND@", TRAINERTYPE_NORMAL
-	db 3
+	db 10
 	dw BELLSPROUT
-	db 3
-	dw BELLSPROUT
-	db 3
-	dw BELLSPROUT
+	db 12
+	dw VULPIII
+	db 12
+	dw MOIBELLE
 	db -1 ; end
 
 	next_list_item ; SAGE (8)
