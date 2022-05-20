@@ -119,5 +119,6 @@ OverworldSprites:
 	overworld_sprite MysticSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PINK
 	overworld_sprite ManchildSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite SchoolboySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite RockClimberSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 
 
