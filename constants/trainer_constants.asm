@@ -732,6 +732,7 @@ KRIS EQU __enum__
 	
 	trainerclass ROCKCLIMBER
 	const HENRY_T
+	const LOID 
 	
 	trainerclass SPORTSMAN
 	const JAYDEN

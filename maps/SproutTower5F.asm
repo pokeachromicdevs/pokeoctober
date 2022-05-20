@@ -1,10 +1,43 @@
+	object_const_def
+	const SPROUT_TOWER5F_ROCKCLIMBER
+
 SproutTower5F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-; scripts here
+TrainerRockClimberLoid:
+	trainer ROCKCLIMBER, LOID, EVENT_BEAT_ROCKCLIMBER_LOID, RockClimberLoidSeenText, RockClimberLoidBeatenText, 0, .AfterScript
 
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext RockClimberAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+RockClimberLoidSeenText:
+	text "What?"
+	
+	para "Never heard of"
+	line "a ROCKCLIMBER"
+	
+	para "climbing a"
+	line "tower before?"
+	done 
+	
+RockClimberLoidBeatenText:
+	text "Haha!"
+	done 
+	
+RockClimberAfterBattleText:
+	text "Towers are basically"
+	line "just manmade moun-"
+	
+	para "tains in my eyes."
+	done 
+	
 SproutTower5F_MapEvents:
 	db 0, 0 ; filler
 
@@ -26,4 +59,6 @@ SproutTower5F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event  1, 15, SPRITE_ROCKCLIMBER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerRockClimberLoid, -1
+

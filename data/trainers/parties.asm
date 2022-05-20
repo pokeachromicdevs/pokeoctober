@@ -5244,42 +5244,52 @@ FledglingGroup:
 	
 BallsmithGroup:
 	next_list_item; BALLSMITH (1)
-		db "KURT@", TRAINERTYPE_NORMAL
-		db 21
-		dw VOLTORB
-		db 21
-		dw SANDSHREW
-		db 22
-		dw LICKITUNG
-		db 24
-		dw GLOOM
-		db 24
-		dw SLOWPOKE
-		db -1 ;end
+	db "KURT@", TRAINERTYPE_NORMAL
+	db 21
+	dw VOLTORB
+	db 21
+	dw SANDSHREW
+	db 22
+	dw LICKITUNG
+	db 24
+	dw GLOOM
+	db 24
+	dw SLOWPOKE
+	db -1 ;end
 		
-		end_list_items
+	end_list_items
 		
 MysticGroup:
 	next_list_item; MYSTIC (1)
-		db "STELLA@", TRAINERTYPE_NORMAL
-		db 12
-		dw ABRA
-		db 13
-		dw GASTLY
-		db 14
-		dw NATU 
-		db -1 ;end
+	db "STELLA@", TRAINERTYPE_NORMAL
+	db 12
+	dw ABRA
+	db 13
+	dw GASTLY
+	db 14
+	dw NATU 
+	db -1 ;end
 		
-		end_list_items
+	end_list_items
 		
 RockClimberGroup:
 	next_list_item; ROCKCLIMBER (1)
-		db "HENRY@", TRAINERTYPE_NORMAL
-		db 7
-		dw MACHOP
-		db -1 ;end 
+	db "HENRY@", TRAINERTYPE_NORMAL
+	db 7
+	dw MACHOP
+	db -1 ;end
+
+	next_list_item; ROCKCLIMBER (2)
+	db "LOID@", TRAINERTYPE_NORMAL
+	db 12
+	dw GEODUDE
+	db 12
+	dw BELLSPROUT
+	db 13
+	dw BURGELA 
+	db -1 ;end 
 		
-		end_list_items
+	end_list_items
 	
 CamperGroup:
 	next_list_item ; CAMPER (1)

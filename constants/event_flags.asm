@@ -286,7 +286,9 @@
 	const EVENT_BEAT_SAGE_JIN
 	const EVENT_SPROUT_TOWERF4_POTION
 	const EVENT_SPROUT_TOWERF4_FULL_HEAL
-	const EVENT_14b
+	
+; sprout tower 5f
+	const EVENT_BEAT_ROCKCLIMBER_LOID 
 	const EVENT_14c
 	const EVENT_14d
 	const EVENT_14e
