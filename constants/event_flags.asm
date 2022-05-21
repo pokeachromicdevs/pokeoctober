@@ -302,7 +302,7 @@
 	
 ; sprout tower 7f
 	const EVENT_SPROUT_TOWERF7_ESCAPE_ROPE
-	const EVENT_155
+	const EVENT_BEAT_MYSTIC_STELLA
 	const EVENT_156
 	const EVENT_157
 	const EVENT_158

@@ -42,7 +42,7 @@ BlackbeltHitoshiSeenText:
 	done
 	
 BlackbeltHitoshiBeatenText:
-	text "No, TYROGUE!"
+	text "No! TYROGUE!"
 	done 
 	
 BlackbeltHitoshiAfterBattleText:
