@@ -30,13 +30,50 @@ TrainerBlackbeltLee:
 	trainer BLACKBELT_T, LEE, EVENT_BEAT_BLACKBELT_LEE, BlackbeltLeeSeenText, BlackbeltLeeBeatenText, 0, .AfterScript
 
 .AfterScript:
-	endifjustbattled
 	opentext
 	writetext BlackbeltLeeAfterBattleText
 	waitbutton
 	closetext
+	callasm .CheckIfPlayerAtNorth ; jank
+	iftrue .AtNorth
+	applymovement SPROUT_TOWER6F_BLACKBELT2, .LeeGTFOFromWest
+	disappear SPROUT_TOWER6F_BLACKBELT2
 	end
-	
+
+.AtNorth:
+	applymovement SPROUT_TOWER6F_BLACKBELT2, .LeeGTFOFromNorth
+	disappear SPROUT_TOWER6F_BLACKBELT2
+	end
+
+.CheckIfPlayerAtNorth:
+	ld hl, wScriptVar
+	ld a, [wSeenTrainerDirection]
+; direction == $FF if player engages with Lee manually,
+; which can only be from north, so check for that
+	cp -1
+	jr z, .yes
+	ld [hl], 0
+	ret
+.yes
+	ld [hl], 1
+	ret
+
+.LeeGTFOFromWest:
+	step UP
+	rept 6
+	step RIGHT
+	endr
+	step_end
+
+.LeeGTFOFromNorth:
+	step LEFT
+	step UP
+	step UP
+	rept 7
+	step RIGHT
+	endr
+	step_end
+
 BlackbeltHitoshiSeenText:
 	text "Let's go, TYROGUE!"
 	done
@@ -103,6 +140,6 @@ SproutTower6F_MapEvents:
 	object_event 0, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF6Potion, EVENT_SPROUT_TOWERF6_POTION
 	object_event 15, 7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF6Ether, EVENT_SPROUT_TOWERF6_ETHER
 	object_event 17, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltHitoshi, -1
-	object_event 1,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBlackbeltLee, -1
+	object_event 1,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBlackbeltLee, EVENT_BEAT_BLACKBELT_LEE
 
 
