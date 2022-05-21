@@ -15,6 +15,9 @@ DRUM_POKEMART_0f	EQU	4 ;
 ; Drumset to use, replace with the proper value
 DRUMSET_POKEMART	EQU	3
 
+; idk
+VOLGAIN_POKEMART EQU 2
+
 Music_Pokemart_Ch1:
 	tempo 69
 	volume 7, 7
@@ -40,7 +43,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern0
-	note_type 12, 11, 1
+	note_type 12, 11+VOLGAIN_POKEMART, 1
 	octave 4
 	note A#, 4
 	note C#, 4
@@ -50,10 +53,10 @@ Music_Pokemart_Ch1:
 	note G#, 4
 	note A#, 4
 	duty_cycle 3
-	note_type 12, 8, 2
+	note_type 12, 8+VOLGAIN_POKEMART, 2
 	note E_, 4
 	note E_, 8
-	note_type 12, 8, 4
+	note_type 12, 8+VOLGAIN_POKEMART, 4
 	note C#, 16
 	rest 4
 	sound_ret
@@ -62,7 +65,7 @@ Music_Pokemart_Ch1:
 	pitch_offset 1
 	duty_cycle 3
 	stereo_panning TRUE, FALSE
-	note_type 12, 8, 2
+	note_type 12, 8+VOLGAIN_POKEMART, 2
 	octave 4
 	note C#, 8
 	note C#, 8
@@ -70,7 +73,7 @@ Music_Pokemart_Ch1:
 	note C_, 8
 	octave 3
 	note B_, 12
-	note_type 12, 8, 5
+	note_type 12, 8+VOLGAIN_POKEMART, 5
 	note A#, 10
 	rest 14
 	sound_ret
@@ -78,7 +81,7 @@ Music_Pokemart_Ch1:
 .pattern2
 	duty_cycle 0
 	stereo_panning TRUE, FALSE
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 1
 	note B_, 4
 	octave 2
@@ -104,7 +107,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern3
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 1
 	note B_, 4
 	octave 2
@@ -129,7 +132,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern4
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 2
 	note E_, 4
 	note B_, 4
@@ -155,7 +158,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern5
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 1
 	note F#, 4
 	octave 2
@@ -172,15 +175,15 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern6
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 3
 	note B_, 8
 	note B_, 4
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note E_, 8
 	note B_, 8
 	note E_, 8
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 2
 	note F#, 4
 	octave 3
@@ -191,10 +194,10 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern7
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 3
 	note B_, 8
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	note F#, 4
 	octave 4
 	note C#, 2
@@ -225,7 +228,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern8
-	note_type 12, 11, 1
+	note_type 12, 11+VOLGAIN_POKEMART, 1
 	octave 4
 	note D#, 4
 	note G_, 4
@@ -250,7 +253,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern9
-	note_type 12, 11, 1
+	note_type 12, 11+VOLGAIN_POKEMART, 1
 	octave 3
 	note G#, 4
 	octave 4
@@ -282,7 +285,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern10
-	note_type 12, 11, 1
+	note_type 12, 11+VOLGAIN_POKEMART, 1
 	octave 3
 	note G#, 4
 	octave 4
@@ -315,7 +318,7 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern11
-	note_type 12, 11, 1
+	note_type 12, 11+VOLGAIN_POKEMART, 1
 	octave 4
 	note E_, 4
 	note G#, 4
@@ -342,23 +345,23 @@ Music_Pokemart_Ch1:
 .pattern12
 	duty_cycle 3
 	stereo_panning FALSE, TRUE
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 3
 	note A#, 8
 	note B_, 4
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note D#, 8
 	note F#, 8
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	note D#, 2
 	note F#, 2
 	note B_, 4
 	note F#, 4
 	note B_, 4
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 4
 	note C#, 8
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 3
 	note B_, 4
 	octave 4
@@ -367,14 +370,14 @@ Music_Pokemart_Ch1:
 	sound_ret
 
 .pattern13
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	octave 3
 	note A_, 8
 	note B_, 4
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note D#, 8
 	note F#, 8
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	note D#, 2
 	note F#, 2
 	note A_, 4
@@ -411,27 +414,27 @@ Music_Pokemart_Ch2:
 .pattern1
 	duty_cycle 3
 	stereo_panning FALSE, TRUE
-	note_type 12, 10, 1
+	note_type 12, 10+VOLGAIN_POKEMART, 1
 	octave 4
 	note F#, 8
 	note F#, 8
 	note F#, 4
 	note F#, 8
 	note F#, 12
-	note_type 12, 10, 4
+	note_type 12, 10+VOLGAIN_POKEMART, 4
 	note F#, 10
 	rest 2
 	stereo_panning TRUE, TRUE
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 3
 	note F#, 4
-	note_type 12, 10, 1
+	note_type 12, 10+VOLGAIN_POKEMART, 1
 	note G#, 4
 	note A#, 4
 	sound_ret
 
 .pattern2
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 4
 	note C#, 6
 	octave 3
@@ -439,10 +442,10 @@ Music_Pokemart_Ch2:
 	octave 4
 	note D#, 2
 	rest 2
-	note_type 12, 10, 4
+	note_type 12, 10+VOLGAIN_POKEMART, 4
 	octave 3
 	note B_, 16
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note B_, 2
 	octave 4
 	note C#, 2
@@ -451,9 +454,9 @@ Music_Pokemart_Ch2:
 	rest 2
 	note D#, 2
 	rest 2
-	note_type 12, 10, 4
+	note_type 12, 10+VOLGAIN_POKEMART, 4
 	note E_, 12
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note D#, 2
 	note E_, 2
 	note F#, 2
@@ -461,7 +464,7 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern3
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 4
 	note C#, 6
 	octave 3
@@ -469,10 +472,10 @@ Music_Pokemart_Ch2:
 	octave 4
 	note D#, 2
 	rest 2
-	note_type 12, 10, 4
+	note_type 12, 10+VOLGAIN_POKEMART, 4
 	octave 3
 	note B_, 16
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note B_, 2
 	octave 4
 	note C#, 2
@@ -481,9 +484,9 @@ Music_Pokemart_Ch2:
 	rest 2
 	note D#, 2
 	rest 2
-	note_type 12, 10, 4
+	note_type 12, 10+VOLGAIN_POKEMART, 4
 	note G#, 12
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note E_, 2
 	note D#, 2
 	note C#, 2
@@ -491,7 +494,7 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern4
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 4
 	note D#, 6
 	octave 3
@@ -499,22 +502,22 @@ Music_Pokemart_Ch2:
 	octave 4
 	note E_, 2
 	rest 2
-	note_type 12, 10, 4
+	note_type 12, 10+VOLGAIN_POKEMART, 4
 	note C#, 16
 	rest 8
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 3
 	note G#, 12
-	note_type 12, 10, 2
+	note_type 12, 10+VOLGAIN_POKEMART, 2
 	note A#, 8
 	note B_, 8
 	sound_ret
 
 .pattern5
-	note_type 12, 10, 4
+	note_type 12, 10+VOLGAIN_POKEMART, 4
 	octave 4
 	note D#, 12
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	note E_, 2
 	note D#, 2
 	note C#, 4
@@ -526,17 +529,17 @@ Music_Pokemart_Ch2:
 	note C#, 15
 	duty_cycle 2
 	stereo_panning TRUE, FALSE
-	note_type 12, 12, 1
+	note_type 12, 12+VOLGAIN_POKEMART, 1
 	note A#, 1
 	note B_, 4
-	note_type 12, 12, 2
+	note_type 12, 12+VOLGAIN_POKEMART, 2
 	note F#, 4
 	note E_, 4
 	note D#, 4
 	sound_ret
 
 .pattern6
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	octave 4
 	note C#, 6
 	octave 3
@@ -544,23 +547,23 @@ Music_Pokemart_Ch2:
 	octave 4
 	note D#, 2
 	rest 2
-	note_type 12, 12, 4
+	note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 3
 	note B_, 16
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	note B_, 2
 	octave 4
 	note C#, 2
 	note D#, 12
 	note E_, 8
 	note D#, 4
-	note_type 12, 12, 1
+	note_type 12, 12+VOLGAIN_POKEMART, 1
 	note E_, 4
 	note F#, 4
 	sound_ret
 
 .pattern7
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	octave 4
 	note C#, 6
 	octave 3
@@ -568,18 +571,18 @@ Music_Pokemart_Ch2:
 	octave 4
 	note D#, 2
 	rest 2
-	note_type 12, 12, 4
+	note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 3
 	note B_, 16
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	note B_, 2
 	octave 4
 	note C#, 2
 	note D#, 12
-	note_type 12, 12, 2
+	note_type 12, 12+VOLGAIN_POKEMART, 2
 	note G#, 8
 	note F#, 8
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	octave 3
 	note B_, 2
 	octave 4
@@ -587,10 +590,10 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern8
-	note_type 12, 12, 4
+	note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 4
 	note D#, 12
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	note E_, 2
 	note D#, 2
 	note C#, 4
@@ -602,14 +605,14 @@ Music_Pokemart_Ch2:
 	note C#, 16
 	duty_cycle 3
 	stereo_panning TRUE, FALSE
-	note_type 12, 9, 4
+	note_type 12, 9+VOLGAIN_POKEMART, 4
 	octave 1
 	note C#, 8
 	note F#, 8
 	sound_ret
 
 .pattern9
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	octave 4
 	note D#, 6
 	octave 3
@@ -617,10 +620,10 @@ Music_Pokemart_Ch2:
 	octave 4
 	note E_, 2
 	rest 2
-	note_type 12, 12, 4
+	note_type 12, 12+VOLGAIN_POKEMART, 4
 	note C#, 16
 	rest 8
-	note_type 12, 12, 3
+	note_type 12, 12+VOLGAIN_POKEMART, 3
 	octave 3
 	note G#, 4
 	note G_, 4
@@ -632,7 +635,7 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern10
-	;note_type 12, 12, 4
+	;note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 1
 	note D#, 12
 	note D#, 2
@@ -648,7 +651,7 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern11
-	;note_type 12, 12, 4
+	;note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 1
 	note G#, 12
 	note G#, 2
@@ -665,7 +668,7 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern12
-	;note_type 12, 12, 4
+	;note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 1
 	note G_, 12
 	note G_, 2
@@ -680,7 +683,7 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern13
-	;note_type 12, 12, 4
+	;note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 1
 	note E_, 12
 	note E_, 2
@@ -697,7 +700,7 @@ Music_Pokemart_Ch2:
 	sound_ret
 
 .pattern14
-	;note_type 12, 12, 4
+	;note_type 12, 12+VOLGAIN_POKEMART, 4
 	octave 1
 	note F#, 12
 	note F#, 2
@@ -710,10 +713,10 @@ Music_Pokemart_Ch2:
 	note F#, 2
 	rest 6
 	note C#, 8
-	note_type 12, 10, 3
+	note_type 12, 10+VOLGAIN_POKEMART, 3
 	octave 3
 	note F#, 4
-	note_type 12, 10, 1
+	note_type 12, 10+VOLGAIN_POKEMART, 1
 	note G#, 4
 	note A#, 4
 	sound_ret
@@ -741,7 +744,7 @@ Music_Pokemart_Ch3:
 	sound_ret
 
 .pattern0
-	note_type 12, 2, 4
+	note_type 12, 1, 4
 	octave 4
 	note D#, 2
 	rest 6
@@ -756,6 +759,8 @@ Music_Pokemart_Ch3:
 	octave 3
 	note F#, 10
 	rest 2
+
+	note_type 12, 2, 4
 	note F#, 4
 	octave 4
 	note C#, 2
