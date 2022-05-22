@@ -1285,6 +1285,32 @@ Debug_FillBag:
 	xor a
 	call ByteFill
 
+IF 1
+; reset scroll position every time
+	ld a, 1
+	ld [wItemsPocketCursor], a
+	xor a
+	ld [wItemsPocketScrollPosition], a
+
+; fill bag, incrementing the item ID
+	ld hl, wNumItems
+	ld c, MAX_ITEMS
+	ld [hl], c
+	inc hl
+	ld a, [wDebugItemPickerBuffer]
+.loop
+	inc a
+	ld [hli], a
+	ld [hl], 99
+	ld [wDebugItemPickerBuffer], a
+	inc hl
+	dec c
+	jr nz, .loop
+	ld [hl], -1
+	ret
+
+ELSE
+; just fills the bag no questions asked
 	ld a, -1
 	ld hl, wItems
 	ld [hl], a
@@ -1334,6 +1360,7 @@ Debug_FillBag:
 .full_break
 ; set breakpoint to check if full
 	ret
+ENDC
 
 Debug_FillTMHM:
 	ld e, NUM_TMS + NUM_HMS

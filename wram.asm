@@ -284,6 +284,9 @@ wSpriteAnimsEnd::
 	ds 11
 
 ; mobile data
+if DEF(_DEBUG)
+wDebugItemPickerBuffer::
+endc
 wc3cc:: ds 1
 wc3cd:: ds 31
 wc3ec:: ds 1
