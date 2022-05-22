@@ -237,6 +237,8 @@ INCLUDE "engine/battle/check_battle_scene.asm"
 INCLUDE "engine/movie/gbc_only.asm"
 INCLUDE "engine/events/poke_seer.asm"
 
+INCLUDE "engine/movie/october_credits.asm"
+
 
 SECTION "bank14", ROMX
 
