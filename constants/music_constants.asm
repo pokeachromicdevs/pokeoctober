@@ -123,6 +123,7 @@
 	const MUSIC_POKEMART                     ; 70
 	const CERULEAN_CAVE                      ; 71
 	const SAFARI_ZONE                        ; 72
+	const MUSIC_CREDITS_G1                   ; 73
 
 NUM_MUSIC_TRACKS EQU const_value
 
