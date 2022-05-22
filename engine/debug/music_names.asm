@@ -117,3 +117,4 @@ Debug_MusicNames::
 	db "Cinnabar Mansion@@"
 	db "Pokemart@@@@@@@@@@"
 	db "Cerulean Cave@@@@@"
+	db "Safari Zone@@@@@@@"

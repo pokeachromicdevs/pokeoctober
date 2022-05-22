@@ -122,6 +122,7 @@
 	const MUSIC_CINNABAR_MANSION             ; 6f
 	const MUSIC_POKEMART                     ; 70
 	const CERULEAN_CAVE                      ; 71
+	const SAFARI_ZONE                        ; 72
 
 NUM_MUSIC_TRACKS EQU const_value
 

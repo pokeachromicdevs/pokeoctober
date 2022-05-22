@@ -121,3 +121,4 @@ Music:
 	dba Music_CinnabarMansion
 	dba Music_Pokemart 
 	dba Music_CeruleanCave
+	dba Music_SafariZone
