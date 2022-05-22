@@ -13,6 +13,15 @@ _ReplaceKrisSprite::
 	ld a, [wUsedSprites + 1]
 	ldh [hUsedSpriteTile], a
 	call GetUsedSprite
+	call AddFollowSprite
+	ret
+
+AddFollowSprite:
+	ld a, [wUsedSprites + FOLLOWER * 2]
+	ldh [hUsedSpriteIndex], a
+	ld a, [wUsedSprites + FOLLOWER * 2 + 1]
+	ldh [hUsedSpriteTile], a
+	call GetUsedSprite
 	ret
 
 Function14146: ; mobile
@@ -118,6 +127,9 @@ AddIndoorSprites:
 	ret
 
 AddOutdoorSprites:
+	ld a, SPRITE_FOLLOWER
+	call AddSpriteGFX
+
 	ld a, [wMapGroup]
 	dec a
 	ld c, a
@@ -166,6 +178,9 @@ SafeGetSprite:
 	ret
 
 GetSprite:
+	call GetFollowingSprite
+	ret c
+
 	call GetMonSprite
 	ret c
 
@@ -258,9 +273,45 @@ GetMonSprite:
 	and a
 	ret
 
+GetFollowingSprite:
+	cp SPRITE_FOLLOWER
+	jr nz, .none
+	ld hl, OverworldSprites
+	ld a, [wFollowerSpriteID]
+	add a
+	ld e, a
+	add e
+	add e
+	ld d, 0
+	add hl, de
+	ld de, wUnusedMapBuffer
+	ld bc, 6
+	ld a, BANK(OverworldSprites)
+	call FarCopyBytes
+	ld hl, wUnusedMapBuffer
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	swap a
+	and $f
+	ld c, a
+	ld a, [hli]
+	ld b, a
+	ld l, [hl]
+	ld h, 0
+	scf
+	ret
+.none
+	and a
+	ret
+
 _DoesSpriteHaveFacings::
 ; Checks to see whether we can apply a facing to a sprite.
 ; Returns carry unless the sprite is a Pokemon or a Still Sprite.
+	cp SPRITE_FOLLOWER
+	jr z, .follower
 	cp SPRITE_POKEMON
 	jr nc, .only_down
 
@@ -280,11 +331,20 @@ _DoesSpriteHaveFacings::
 	scf
 	ret
 
+.follower
+	ld a, WALKING_SPRITE
+
 .only_down
 	and a
 	ret
 
 _GetSpritePalette::
+	ld a, c
+	push bc
+	call GetFollowingSprite
+	pop bc
+	jr c, .follower
+
 	ld a, c
 	call GetMonSprite
 	jr c, .is_pokemon
@@ -301,6 +361,10 @@ _GetSpritePalette::
 .is_pokemon
 	xor a
 	ld c, a
+	ret
+
+.follower
+	ld c, 0
 	ret
 
 LoadAndSortSprites:

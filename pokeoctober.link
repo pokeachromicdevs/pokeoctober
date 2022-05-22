@@ -28,6 +28,7 @@ ROM0
 	"Header"
 	org $0150
 	"Home"
+	"Follower Script Home"
 ROMX $01
 	"bank1"
 ROMX $02

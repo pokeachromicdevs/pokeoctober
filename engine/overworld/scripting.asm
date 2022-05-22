@@ -921,7 +921,7 @@ GetScriptObject:
 	ret z
 	cp LAST_TALKED
 	ret z
-	dec a
+	; add 3
 	ret
 
 Script_setlasttalked:

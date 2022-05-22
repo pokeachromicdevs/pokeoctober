@@ -320,9 +320,54 @@ GetNextTile:
 	push bc
 	call GetCoordTile
 	pop bc
+	call UpdateFollowerSprite
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld [hl], a
+	ret
+
+UpdateFollowerSprite:
+	ld e, a
+	ldh a, [hMapObjectIndexBuffer]
+	cp FOLLOWER
+	ld a, e
+	ret nz
+	ld hl, OBJECT_NEXT_TILE
+	add hl, bc
+	ld d, [hl]
+	ld [hl], e
+	push de
+	ld a, d ; previous
+	call GetTileCollision
+	pop de
+	ld d, a
+	push de
+	ld a, e ; next
+	call GetTileCollision
+	pop de
+	cp d
+	ret z
+	and a ; LAND_TILE = 0
+	jr z, .land_tile
+	cp WATERTILE
+	jr z, .water_tile
+	ret
+.land_tile
+	push af
+	push bc
+	push de
+	push hl
+	jr .done
+.water_tile
+	push af
+	push bc
+	push de
+	push hl
+.done
+	pop hl
+	pop de
+	pop bc
+	pop af
 	ret
 
 AddStepVector:
@@ -2493,8 +2538,18 @@ RefreshPlayerSprite:
 SpawnInFacingDown:
 	ld a, 0
 ContinueSpawnFacing:
+	push af
 	ld bc, wPlayerStruct
 	call SetSpriteDirection
+
+	ld a, FOLLOWER
+	call CheckObjectVisibility
+	jr c, .ok
+	pop af
+	push af
+	call SetSpriteDirection
+.ok
+	pop af
 	ret
 
 _SetPlayerPalette:
@@ -2618,6 +2673,16 @@ Function587a:
 	ret
 
 _SetFlagsForMovement_2::
+; unfreeze follower
+	push bc
+	ld a, FOLLOWER
+	call GetObjectStruct
+	ld hl, OBJECT_FLAGS2
+	add hl, bc
+	res OBJ_FLAGS2_5, [hl]
+	pop bc
+
+; unfreeze event follower, if exists
 	ld a, [wObjectFollow_Leader]
 	cp -1
 	ret z
@@ -3027,3 +3092,4 @@ InitSprites:
 	dw wObject10Struct
 	dw wObject11Struct
 	dw wObject12Struct
+	dw wObject13Struct

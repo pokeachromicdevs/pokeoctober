@@ -1,5 +1,6 @@
 ; person constants
 PLAYER      EQU  0
+FOLLOWER    EQU  1
 LAST_TALKED EQU -2
 
 ; string buffer constants
