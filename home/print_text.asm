@@ -6,13 +6,6 @@ PrintLetterDelay::
 ; 	mid:  3 frames
 ; 	slow: 5 frames
 
-; DEBUG: hold start to skip delay
-IF DEF(_DEBUG)
-	ldh a, [hJoyDown]
-	bit START_F, a
-	ret nz
-ENDC
-
 ; wTextboxFlags[!0] and A or B override text speed with a one-frame delay.
 ; wOptions[4] and wTextboxFlags[!1] disable the delay.
 

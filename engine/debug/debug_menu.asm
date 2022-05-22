@@ -230,10 +230,6 @@ DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
 	para "While you're in the"
 	line "overworld, hold B"
 	cont "to run."
-
-	para "Hold START while a"
-	line "textbox is open to"
-	cont "advance instantly."
 	prompt
 .SoundTest:
 	text "1st line is MUSIC,"
