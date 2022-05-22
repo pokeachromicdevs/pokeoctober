@@ -11,7 +11,7 @@ LoadBattleMenu:
 
 SafariBattleMenu:
 ; untranslated
-	ld hl, MenuHeader_0x24f4e
+	ld hl, SafariBattleMenuDataHeader
 	call LoadMenuHeader
 	jr Function24f19
 
@@ -47,7 +47,7 @@ Strings24f3d:
 	db "PACK@"
 	db "RUN@"
 
-MenuHeader_0x24f4e:
+SafariBattleMenuDataHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 12, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw MenuData_0x24f56
@@ -61,13 +61,13 @@ MenuData_0x24f56:
 	dba Function24f7c
 
 Strings24f5f:
-	db "サファりボール×　　@" ; "SAFARI BALL×  @"
-	db "エサをなげる@" ; "THROW BAIT"
-	db "いしをなげる@" ; "THROW ROCK"
-	db "にげる@" ; "RUN"
+	db "BALL×　　@" ; "SAFARI BALL×  @"
+	db "BAIT@" ; "THROW BAIT"
+	db "ROCK@" ; "THROW ROCK"
+	db "RUN@" ; "RUN"
 
 Function24f7c:
-	hlcoord 17, 13
+	hlcoord 7, 14
 	ld de, wSafariBallsRemaining
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum

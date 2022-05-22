@@ -85,21 +85,21 @@ ItemNames::
 	db "MINT BERRY@"
 	db "RED APRICORN@"
 	db "CORDYCEPS@"
-	db "TERU-SAMA@"
+	db "BIG MUSHROOM@"
 	db "SILVERPOWDER@";change to weaken foe's bug attacks like SW97
 	db "BLU APRICORN@"
-	db "EARTHEN CLAY"
+	db "EARTHEN CLAY@"
 	db "AMULET COIN@"
 	db "YLW APRICORN@"
 	db "GRN APRICORN@"
 	db "CLEANSE TAG@"
-	db "WHT APRICORN@"
 	db "AQUA HORN@"
 	db "MIGRAINESEED@"
+	db "WHT APRICORN@"
 	db "BLACKBELT@"
 	db "BLK APRICORN@"
-	db "PNK APRICORN@"
 	db "DIGGING CLAW@"
+	db "PNK APRICORN@"
 	db "BLACKGLASSES@"
 	db "SLOWPOKETAIL@"
 	db "PINK BOW@"
@@ -117,8 +117,8 @@ ItemNames::
 	db "BLUE CARD@"
 	db "MIRACLE SEED@"
 	db "THICK CLUB@"
-	db "TERU-SAMA@";mystic petal
 	db "FOCUS ORB@"
+	db "-@";mystic petal
 	db "ENERGYPOWDER@"
 	db "ENERGY ROOT@"
 	db "HEAL POWDER@"
@@ -134,26 +134,26 @@ ItemNames::
 	db "BASEMENT KEY@"
 	db "PASS@"
 	db "WOBBLY BLOON@";whitefeather
-	db "TERU_SAMA@";electric pouch
-	db "TERU-SAMA@";hard stone
+	db "-@";electric pouch
+	db "-@";hard stone
 	db "CHARCOAL@"
 	db "BERRY JUICE@"
-	db "TERU-SAMA@"
 	db "SHARP SCYTHE@"
 	db "WOBBLY BLOON@";fire mane
+	db "-@"
 	db "METAL COAT@"
 	db "DRAGON FANG@"
-	db "TERU-SAMA@";beta twistedspoon
+	db "-@";beta twistedspoon
 	db "LEFTOVERS@"
-	db "TERU-SAMA@";fossil shard
-	db "TERU-SAMA@";gross garbage
-	db "TERU-SAMA@";championbelt
+	db "-@";fossil shard
+	db "-@";gross garbage
+	db "-@";championbelt
 	db "MYSTERYBERRY@"
 	db "DRAGON SCALE@";add secondary effect to weaken Dragon moves as in SW97
 	db "BERSERK GENE@"
-	db "TERU-SAMA@";tag
-	db "TERU-SAMA@";guardthread
-	db "TERU-SAMA@";ice bikini
+	db "-@";tag
+	db "-@";guardthread
+	db "-@";ice bikini
 	db "SACRED ASH@"
 	db "HEAVY BALL@"
 	db "FLOWER MAIL@"
@@ -174,10 +174,10 @@ ItemNames::
 	db "APPLE@"
 	db "BERRY@"
 	db "SQUIRTBOTTLE@"
-	db "PARK BALL@"
 	db "WATER TAIL@"
+	db "PARK BALL@"
 	db "RAINBOW WING@"
-	db "TERU-SAMA@";countercuff
+	db "COUNTERCUFF@"
 	db "BRICK PIECE@"
 	db "SURF MAIL@"
 	db "LITEBLUEMAIL@"
@@ -187,7 +187,6 @@ ItemNames::
 	db "MORPH MAIL@"
 	db "BLUESKY MAIL@"
 	db "MUSIC MAIL@"
-	db "TERU-SAMA@"
 	db "MIRAGE MAIL@"
 	db "VOUCHER@"
 	db "TICKLE STICK@"
@@ -220,38 +219,38 @@ ItemNames::
 	db "DOME FOSSIL@"
 	db "HELIX FOSSIL@"
 	db "FLEE FEATHER@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@";PROTO CRANIDOS FOSSIL
-	db "TERU-SAMA@";SW97 MYSTIC WATER (weakens a foe's water attacks)
-	db "TERU-SAMA@";SW97 CONFUSE CLAW ("Damages foe before battle. (HOLD)")
-	db "TERU-SAMA@";SW97 FLEE FEATHER (switch without wasting a turn)
-	db "TERU-SAMA@";5 YEN COIN (weakens a foe's psychic attacks)
-	db "TERU-SAMA@";LIFE TAG ("Revives fainted PKMN post-battle. (HOLD)")
-	db "TERU-SAMA@";STRANGE POWDER ("Nullifies all type effects. (HOLD)")
-	db "TERU-SAMA@";BUG-FLYING FOSSIL
-	db "TERU-SAMA@";SKELEBRO FOSSIL
-	db "TERU-SAMA@";OLD AMBER
-	db "TERU-SAMA@";DOME FOSSIL
-	db "TERU-SAMA@";HELIX FOSSIL
-	db "TERU-SAMA@";INVISIBLE WALL ("Halves SP.ATK hits. (HOLD)")
-	db "TERU-SAMA@";SKATEBOARD (Plan to port from Reforged and add ability to go indoors, no depositing in PC)
-	db "TERU-SAMA@";MOMS LOVE ("Heals 1HP for each step taken. (HOLD)")
-	db "TERU-SAMA@";MYSTIC THREAD (Stroman valueable item)
-	db "TERU-SAMA@";MYSTIC NEEDLE (Stroman valueable item)
-	db "TERU-SAMA@";SAFARI BALL
-	db "TERU-SAMA@";FUJI'S LETTER (for Kanto postgame)
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@" ; e0
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "-@"
+	db "CRANIDOS FSL@";PROTO CRANIDOS FOSSIL
+	db "MYSTIC WATER@";SW97 MYSTIC WATER (weakens a foe's water attacks)
+	db "CONFUSE CLAW@";SW97 CONFUSE CLAW ("Damages foe before battle. (HOLD)")
+	db "?@";SW97 FLEE FEATHER (switch without wasting a turn)
+	db "5 YEN COIN@";5 YEN COIN (weakens a foe's psychic attacks)
+	db "LIFE TAG@";LIFE TAG ("Revives fainted PKMN post-battle. (HOLD)")
+	db "STRANGEPOWDR@";STRANGE POWDER ("Nullifies all type effects. (HOLD)")
+	db "BUG FOSSIL@";BUG-FLYING FOSSIL
+	db "SKELEBRO FSL@";SKELEBRO FOSSIL
+	db "?@"
+	db "?@"
+	db "?@"
+	db "INVIS. WALL@";INVISIBLE WALL ("Halves SP.ATK hits. (HOLD)")
+	db "SKATEBOARD@";SKATEBOARD (Plan to port from Reforged and add ability to go indoors, no depositing in PC)
+	db "MOM's LOVE@";MOMS LOVE ("Heals 1HP for each step taken. (HOLD)")
+	db "MYSTICTHREAD@";MYSTIC THREAD (Stroman valueable item)
+	db "MYSTICNEEDLE@";MYSTIC NEEDLE (Stroman valueable item)
+	db "SAFARI BALL@";SAFARI BALL
+	db "FUJI's LETTER@";FUJI'S LETTER (for Kanto postgame)
 	db "?@"
