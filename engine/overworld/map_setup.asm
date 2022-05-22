@@ -106,6 +106,8 @@ MapSetupCommands:
 	dba RetainOldPalettes ; 2b
 	dba DontScrollText ; 2c
 	dba ReturnFromMapSetupScript ; 2d
+	dba MapPlayerCoordWarped ; 2e
+	dba MapPlayerCoordConnected ; 2f
 
 DontScrollText:
 	xor a

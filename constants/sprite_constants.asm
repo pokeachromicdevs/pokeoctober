@@ -115,6 +115,8 @@
 	const SPRITE_SCHOOLBOY
 	const SPRITE_ROCKCLIMBER
 
+SPRITE_FOLLOWER equ SPRITE_OAK
+
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
 SPRITE_POKEMON EQU const_value

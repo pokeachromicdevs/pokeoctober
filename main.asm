@@ -646,6 +646,7 @@ INCLUDE "data/phone/text/kenji_callee.asm"
 INCLUDE "data/phone/text/parry_callee.asm"
 INCLUDE "data/phone/text/erin_callee.asm"
 INCLUDE "data/phone/text/unused.asm"
+INCLUDE "engine/events/follower.asm"
 
 
 SECTION "Miscellaneous Text", ROMX
