@@ -44,6 +44,7 @@ IF DEF(_DEBUG)
 	ld a, STEP_BIKE
 .hopback
 	call .DoStep
+	call .CheckWarp
 	scf
 	ret
 .regular_move
