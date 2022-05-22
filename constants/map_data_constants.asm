@@ -105,5 +105,3 @@ const_value = -1
 	const SPAWN_CITRINE
 
 NUM_SPAWNS EQU const_value
-
-MAX_OUTDOOR_SPRITES EQU 23 ; see engine/overworld/overworld.asm
