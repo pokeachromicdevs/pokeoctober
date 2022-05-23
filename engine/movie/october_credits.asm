@@ -7,6 +7,18 @@ OctoberCredits::
 
 	ldh a, [rSVBK]
 	push af
+
+; make sure all attrs are *CLEAR*
+	call DisableLCD
+	ld a, 1
+	ldh [rVBK], a
+	debgcoord 0, 0
+	xor a
+	ld hl, $9800
+	ld bc, $9c00 - $9800
+	call ByteFill
+	call EnableLCD
+
 	ld a, BANK(wGBCPalettes)
 	ldh [rSVBK], a
 
@@ -77,6 +89,7 @@ OctoberCredits::
 	jr .execution_loop
 
 .exit_credits
+	farcall FadeInPalettes
 	call ClearBGPalettes
 	xor a
 	ldh [hLCDCPointer], a
@@ -89,10 +102,7 @@ OctoberCredits::
 
 OctoberCredits_HandleAButton:
 	ldh a, [hJoypadDown]
-	and A_BUTTON
-	ret z
-	ld a, [wJumptableIndex]
-	bit 7, a
+	and START | A_BUTTON | B_BUTTON | SELECT
 	ret
 
 OctoberCredits_ScrollScreen:
@@ -169,10 +179,18 @@ OctoberCredits_StringTable:
 	dw .Blank, .Blank
 
 	dw .Programmers, .Blank
+	dw .Gabe, .Blank
 	dw .Zumi, .Blank
+	dw .Cybershell, .Blank
+	dw .AtmaBuster, .Blank
+
+	dw .Blank, .Blank
+	dw .Blank, .Blank
+
+	dw .CryPorts, .Blank
 	dw .AtmaBuster, .Blank
 	dw .Gabe, .Blank
-	dw .cybershell12, .Blank
+	dw .Zumi, .Blank
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -183,18 +201,21 @@ OctoberCredits_StringTable:
 	dw .Bimble, .Blank
 	dw .Pik, .Blank
 	dw .Bloodless, .Blank
-	dw .Kam, .Blank 
+	dw .Kam, .Blank
+
+	dw .Blank, .Blank
+	dw .Blank, .Blank
+
+	dw .MapDesigners, .Blank
+	dw .TMShadow, .Blank
+	dw .Traiyu, .Blank
+	dw .Zumi, .Blank
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .Music, .Blank
 	dw .Zumi, .Blank
-
-	dw .Blank, .Blank
-	dw .Blank, .Blank
-
-	dw .OtherMusPorts, .Blank
 	dw .Celadonk, .Blank
 	dw .Froggest, .Blank
 	dw .M17, .Blank
@@ -206,15 +227,23 @@ OctoberCredits_StringTable:
 	dw .Chatty, .Blank
 	dw .Polished, .Blank
 	dw .Reforged, .Blank
-	
+
 	dw .Blank, .Blank
 	dw .Blank, .Blank
-	
+
+	dw .BugTesters, .Blank
+	dw .NieNie, .Blank
+
+	dw .Blank, .Blank
+	dw .Blank, .Blank
+
 	dw .SpecialThanks, .Blank
 	dw .Gelius, .Blank
-	dw .NieNie, .Blank
-	dw .Traiyu, .Blank
+;	dw .FourCh, .Blank
+	dw .Pret, .Blank
+	dw .TCRF, .Blank
 
+; last screen
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -222,6 +251,7 @@ OctoberCredits_StringTable:
 	dw .ThanksFor2, .Blank
 	dw .ThanksFor3, .Blank
 	dw .Blank, .Blank
+	dw .PressStart, .Blank
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
@@ -230,10 +260,12 @@ OctoberCredits_StringTable:
 .Blank:         db "                    ";;
 .Directors:     db "      DIRECTORS     ";;
 .Programmers:   db "     PROGRAMMERS    ";;
-.Music:         db "        MUSIC       ";;
-.SpriteArtists: db "   SPRITE ARTISTS   ";;
+.Music:         db "    CUSTOM  MUSIC   ";;
+.SpriteArtists: db "   SPRITE  ARTISTS  ";;
+.MapDesigners:  db "    MAP DESIGNERS   ";;
+.BugTesters:    db "     BUG TESTERS    ";;
 .AssetsFrom:    db "     ASSETS FROM    ";;
-.OtherMusPorts: db "  OTHER MUSIC PORTS ";;
+.CryPorts:      db "      CRY PORTS     ";;
 .SpecialThanks: db "   SPECIAL THANKS   ";;
 .Gabe:          db "     GABE STANEK    ";;
 .TMShadow:      db "  TM 30 SHADOW BALL ";;
@@ -252,15 +284,18 @@ OctoberCredits_StringTable:
 .Soup:          db "      SOUPPOTATO    ";;
 .Froggest:      db "    FROGGESTSPIRIT  ";;
 .M17:           db "  MMMMMMMMMMMMMMMMM ";;
-.cybershell12:  db "    CYBERSHELL12    ";;
-.Gelius:        db "        GELIUS      ";;
-.NieNie:        db "        NIE NIE     ";;
-.Traiyu:        db "        TRAIYU      ";;
+.Gelius:        db "       GELIUS      ";;
+.NieNie:        db "       NIE NIE      ";;
+.Traiyu:        db "       TRAIYU       ";;
 .Kam:           db "         KAM        ";;
 .Reforged:      db "   G/S '97 REFORGED ";;
+.TCRF:          db "        TCRF        ";; no beytah, bad daytah
+;.FourCh:        db "     4CHAN /VP/     ";;
+.Pret:          db "        PRET        ";;
 .ThanksFor1:    db " THANKS FOR PLAYING!";;
 .ThanksFor2:    db "   STAY TUNED FOR   ";;
 .ThanksFor3:    db "       DEMO 2!      ";;
+.PressStart:    db "    -PRESS START-   ";;
 
 MAX_OCTOBER_CREDITS equ (OctoberCredits_StringTable.End - OctoberCredits_StringTable)/2
 
