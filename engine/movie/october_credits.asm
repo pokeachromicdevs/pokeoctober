@@ -171,77 +171,115 @@ OctoberCredits_StringTable:
 	dw .Blank, .Blank
 
 	dw .Directors, .Blank
-	dw .Gabe, .Blank
-	dw .TMShadow, .Blank
-	dw .Quent, .Blank
+		dw .Gabe, .Blank
+			; manager
+		dw .TMShadow, .Blank
+			; literally everything
+		dw .Quent, .Blank
+			; real good help
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .Programmers, .Blank
-	dw .Gabe, .Blank
-	dw .Zumi, .Blank
-	dw .Cybershell, .Blank
-	dw .AtmaBuster, .Blank
+		dw .Gabe, .Blank
+		dw .Zumi, .Blank
+		dw .Cybershell, .Blank
+			; programming help
+		dw .AtmaBuster, .Blank
+			; programming help & map rips
+			; crystalleaf follower mechanic
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .CryPorts, .Blank
-	dw .AtmaBuster, .Blank
-	dw .Gabe, .Blank
-	dw .Zumi, .Blank
+		dw .AtmaBuster, .Blank
+			; beta cry table
+		dw .Gabe, .Blank
+			; porting
+		dw .Zumi, .Blank
+			; porting
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .SpriteArtists, .Blank
-	dw .Scarlax, .Blank
-	dw .TastySnax, .Blank
-	dw .Bimble, .Blank
-	dw .Pik, .Blank
-	dw .Bloodless, .Blank
-	dw .Kam, .Blank
+		dw .Scarlax, .Blank
+			; MVP
+		dw .TastySnax, .Blank
+			; sprite help
+		dw .Bimble, .Blank
+			; female trainer sprite
+		dw .Pik, .Blank
+			; sprite help
+		dw .Bloodless, .Blank
+			; sprite help
+		dw .Kam, .Blank
+			; sprite help
+		dw .Poket, .Blank
+			; sprite help
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .MapDesigners, .Blank
-	dw .TMShadow, .Blank
-	dw .Traiyu, .Blank
-	dw .Zumi, .Blank
+		dw .TMShadow, .Blank
+			; a fuckton of maps
+		dw .Traiyu, .Blank
+			; pokecenter map
+		dw .Zumi, .Blank
+			; r29, r33+, citrine
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .Music, .Blank
-	dw .Zumi, .Blank
-	dw .Celadonk, .Blank
-	dw .Froggest, .Blank
-	dw .M17, .Blank
+		dw .Zumi, .Blank
+			; hg/ss safari zone, cerulean city, fr/lg cinnabar island
+			; hg/ss pokemart
+			; prof. battle
+			; g1 credits music
+		dw .Celadonk, .Blank
+			; foolsgold r47
+		dw .Froggest, .Blank
+			; a bunch of gen1 ports
+		dw .M17, .Blank
+			; cianwood city
+		dw .CoralDev, .Blank
+			; blue battle
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .AssetsFrom, .Blank
-	dw .Chatty, .Blank
-	dw .Polished, .Blank
-	dw .Reforged, .Blank
+		dw .Chatty, .Blank
+			; wind ride animation
+		dw .Polished, .Blank
+			; water sport, safari zone, tm/hm bitflags
+		dw .Reforged, .Blank
+			; move animations, sprites
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .BugTesters, .Blank
-	dw .NieNie, .Blank
+		dw .NieNie, .Blank
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .SpecialThanks, .Blank
-	dw .Gelius, .Blank
-;	dw .FourCh, .Blank
-	dw .Pret, .Blank
-	dw .TCRF, .Blank
+		dw .Gelius, .Blank
+			; cherrygrove woods
+	;	dw .FourCh, .Blank
+			; based leakers
+		dw .Pret, .Blank
+			; pokecrystal disassembly
+		dw .TCRF, .Blank
+			; the place where everything is compiled
+		dw .AX6, .Blank
+			; pokecrystal-16
 
 ; last screen
 	dw .Blank, .Blank
@@ -284,14 +322,17 @@ OctoberCredits_StringTable:
 .Soup:          db "      SOUPPOTATO    ";;
 .Froggest:      db "    FROGGESTSPIRIT  ";;
 .M17:           db "  MMMMMMMMMMMMMMMMM ";;
-.Gelius:        db "       GELIUS      ";;
+.Gelius:        db "       GELIUS       ";;
 .NieNie:        db "       NIE NIE      ";;
 .Traiyu:        db "       TRAIYU       ";;
 .Kam:           db "         KAM        ";;
+.Poket:         db "        POKET       ";;
+.CoralDev:      db "       CORALDEV     ";;
 .Reforged:      db "   G/S '97 REFORGED ";;
 .TCRF:          db "        TCRF        ";; no beytah, bad daytah
 ;.FourCh:        db "     4CHAN /VP/     ";;
 .Pret:          db "        PRET        ";;
+.AX6:           db "        AX6         ";;
 .ThanksFor1:    db " THANKS FOR PLAYING!";;
 .ThanksFor2:    db "   STAY TUNED FOR   ";;
 .ThanksFor3:    db "       DEMO 2!      ";;
