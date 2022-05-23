@@ -20,16 +20,13 @@ SpawnPlayer:
 	ld a, -1
 	ld [wObjectFollow_Leader], a
 	ld [wObjectFollow_Follower], a
-	ld a, $0
+	ld a, PLAYER_OBJECT
 	ld hl, PlayerObjectTemplate
 	call CopyPlayerObjectTemplate
-
-	call CheckFollowerLoaded
-	jr c, .skip_follower
 	call SpawnFollower
 
 .skip_follower
-	ld b, $0
+	ld b, PLAYER_OBJECT
 	call PlayerSpawn_ConvertCoords
 	ld a, PLAYER_OBJECT
 	call GetMapObject
@@ -78,30 +75,6 @@ SECTION "Follower Script Home", ROM0
 _FollowerScript:
 	farjump FollowerScript
 POPS
-
-CheckFollowerLoaded:
-; check if follower enabled
-;	ld a, [wFollowerFlags]
-	and a
-;	scf
-;	ret z
-;	ccf
-	ret
-	ld hl, wObjectStructs + 1
-	ld bc, OBJECT_LENGTH
-	ld d, NUM_OBJECT_STRUCTS
-.loop
-	ld a, [hl]
-	add hl, bc
-	cp FOLLOWER
-	jr z, .loaded
-	dec d
-	jr nz, .loop
-	xor a
-	ret
-.loaded
-	scf
-	ret
 
 CopyDECoordsToMapObject::
 	push de
