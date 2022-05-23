@@ -168,6 +168,7 @@ OctoberCredits_StringTable:
 	dw .Zumi, .Blank
 	dw .AtmaBuster, .Blank
 	dw .Gabe, .Blank
+	dw .cybershell12, .Blank
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -178,6 +179,7 @@ OctoberCredits_StringTable:
 	dw .Bimble, .Blank
 	dw .Pik, .Blank
 	dw .Bloodless, .Blank
+	dw .Kam, .Blank 
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -199,6 +201,15 @@ OctoberCredits_StringTable:
 	dw .AssetsFrom, .Blank
 	dw .Chatty, .Blank
 	dw .Polished, .Blank
+	dw .Reforged, .Blank
+	
+	dw .Blank, .Blank
+	dw .Blank, .Blank
+	
+	dw .SpecialThanks, .Blank
+	dw .Gelius, .Blank
+	dw .NieNie, .Blank
+	dw .Traiyu, .Blank
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -237,6 +248,12 @@ OctoberCredits_StringTable:
 .Soup:          db "      SOUPPOTATO    ";;
 .Froggest:      db "    FROGGESTSPIRIT  ";;
 .M17:           db "  MMMMMMMMMMMMMMMMM ";;
+.cybershell12:  db "    CYBERSHELL12    ";;
+.Gelius:        db "        GELIUS      ";;
+.NieNie:        db "        NIE NIE     ";;
+.Traiyu:        db "        TRAIYU      ";;
+.Kam:           db "         KAM        ";;
+.Reforged:      db "   G/S '97 REFORGED ";;
 .ThanksFor1:    db " THANKS FOR PLAYING!";;
 .ThanksFor2:    db "   STAY TUNED FOR   ";;
 .ThanksFor3:    db "       DEMO 2!      ";;

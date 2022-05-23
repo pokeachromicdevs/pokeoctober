@@ -109,15 +109,16 @@ CatchingTutorialDudeScript:
 
 .BoxFull:
 	writetext CatchingTutorialBoxFullText
-	setflag ENGINE_POKEDEX
 	waitbutton
 	closetext
+	credits
 	end
 
 .Declined:
 	writetext CatchingTutorialDeclinedText
 	waitbutton
 	closetext
+
 	end  
 	
 TrainerYoungsterJoey:
