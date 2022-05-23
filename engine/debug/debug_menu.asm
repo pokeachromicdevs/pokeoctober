@@ -109,12 +109,13 @@ DebugMenu::
 	db "HELP@"
 	db "FIX EVENTS@"
 	db "FOLLOW@"
+	db "CREDITS@"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 16
-	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16
+	db 17
+	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17
 	db -1
 
 .Jumptable
@@ -135,6 +136,15 @@ DebugMenu::
 	dw Debug_Help
 	dw Debug_FixEvents
 	dw Debug_ToggleFollow
+	dw Debug_Credits
+
+Debug_Credits:
+	ld a, BANK(.RunCredits)
+	ld hl, .RunCredits
+	jp CallScript
+.RunCredits
+	credits
+	end
 
 Debug_ToggleFollow:
 	ld hl, .ToggleFollowText
