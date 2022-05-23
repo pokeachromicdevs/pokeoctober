@@ -162,17 +162,21 @@ Debug_ToggleFollow:
 	add 4
 	ld e, a
 	farcall CopyDECoordsToMapObject
-	ld a, BANK(.FinishFollowEna)
-	ld hl, .FinishFollowEna
-	call CallScript
+	ld a, FOLLOWER
+	call _CopyObjectStruct
+	ld a, 1
+	ld [wFollowerFlags], a
+
 	ld hl, .FollowEnaText
 	call PrintText
 	ret
 
 .disable
-	ld a, BANK(.FinishFollowDisa)
-	ld hl, .FinishFollowDisa
-	call CallScript
+	ld a, FOLLOWER
+	call DeleteObjectStruct
+	xor a
+	ld [wFollowerFlags], a
+
 	ld hl, .FollowDisaText
 	call PrintText
 	ret
@@ -184,16 +188,6 @@ Debug_ToggleFollow:
 	dec a
 	and a
 	ret
-
-.FinishFollowEna:
-	appear FOLLOWER
-	loadmem wFollowerFlags, 1
-	end
-
-.FinishFollowDisa:
-	disappear FOLLOWER
-	loadmem wFollowerFlags, 0
-	end
 
 .ToggleFollowText:
 	text "Toggle following?"
