@@ -654,6 +654,13 @@ ENDM
 	farcall IsNPCAtCoord
 	jr nc, .is_npc
 
+; designated follower object should always be passsable
+	ld hl, OBJECT_MAP_OBJECT_INDEX
+	add hl, bc
+	ld a, [hl]
+	cp FOLLOWER
+	jr z, .is_npc
+
 	ld hl, OBJECT_MOVEMENTTYPE
 	add hl, bc
 	ld a, [hl]

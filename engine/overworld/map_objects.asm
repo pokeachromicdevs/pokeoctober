@@ -777,6 +777,7 @@ MapObjectMovementPattern:
 	ld a, 1
 .done
 	ld d, a
+
 	ld hl, OBJECT_DIRECTION_WALKING
 	add hl, bc
 	ld a, [hl]
@@ -787,12 +788,48 @@ MapObjectMovementPattern:
 
 .standing
 	pop bc
+
+	ld hl, OBJECT_MAP_OBJECT_INDEX
+	add hl, bc
+	ld a, [hl]
+	cp FOLLOWER
+	jr z, .pokemon_idle
+
 	ld hl, OBJECT_DIRECTION_WALKING
 	add hl, bc
 	ld [hl], STANDING
 	ld hl, OBJECT_ACTION
 	add hl, bc
 	ld [hl], OBJECT_ACTION_STAND
+	ret
+
+.pokemon_idle
+	ld hl, OBJECT_ACTION
+	add hl, bc
+	ld [hl], OBJECT_ACTION_STAND
+
+	ld hl, OBJECT_1D
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr nz, .no_idle_action
+	
+	call Random
+	ldh a, [hRandomAdd]
+	and %01111111
+	ld [hl], a
+
+	call Random
+	ldh a, [hRandomAdd]
+	and %00001100
+	ld hl, OBJECT_FACING
+	add hl, bc
+	ld [hl], a
+
+	ret
+	
+.no_idle_action
+	dec [hl]
 	ret
 
 .MovementBigStanding:
