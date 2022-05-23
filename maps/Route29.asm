@@ -111,7 +111,6 @@ CatchingTutorialDudeScript:
 	writetext CatchingTutorialBoxFullText
 	waitbutton
 	closetext
-	credits
 	end
 
 .Declined:
