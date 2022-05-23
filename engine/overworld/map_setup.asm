@@ -108,9 +108,10 @@ MapSetupCommands:
 	dba ReturnFromMapSetupScript ; 2d
 	dba MapPlayerCoordWarped ; 2e
 	dba MapPlayerCoordConnected ; 2f
-	dba UnloadOrLoadFollowerAsNeeded ; 30
+	dba UnloadFollowerAsNeeded ; 30
+	dba UpdateFollowerPositionAfterWarp ; 31
 
-UnloadOrLoadFollowerAsNeeded:
+UnloadFollowerAsNeeded:
 	ld a, [wFollowerFlags]
 	and a
 	ret nz
