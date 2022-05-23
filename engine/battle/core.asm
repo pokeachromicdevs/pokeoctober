@@ -5185,7 +5185,7 @@ BattleMenu_SafariBall:
 	cp BATTLETYPE_TUTORIAL
 	jr z, .tutorial2
 	cp BATTLETYPE_SAFARI
-	call nz, GetMonBackpic
+	call nz, GetBattleMonBackpic
 
 .tutorial2
 	call GetEnemyMonFrontpic
