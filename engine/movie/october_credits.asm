@@ -1,6 +1,10 @@
 SECTION "October Credits", ROMX
 
 OctoberCredits::
+; set spawn
+	ld a, SPAWN_RED
+	ld [wSpawnAfterChampion], a
+
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wGBCPalettes)
