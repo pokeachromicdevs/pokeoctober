@@ -258,12 +258,9 @@ CopyObjectStruct::
 	ldh a, [hMapObjectIndexBuffer]
 	cp FOLLOWER
 	jr z, .follower
-	ld hl, wObjectStructs + OBJECT_LENGTH * 2
+; load the rest of the objects starting at slot 2
+	ld hl, wObjectStructs + OBJECT_STRUCT_LENGTH * 2
 	ld a, 2
-
-
-	ld hl, wObjectStructs + OBJECT_STRUCT_LENGTH * 1
-	ld a, 1
 	ld de, OBJECT_STRUCT_LENGTH
 .loop
 	ldh [hObjectStructIndexBuffer], a
@@ -374,12 +371,6 @@ InitializeVisibleSprites:
 	ld a, [hl]
 	cp -1
 	jr nz, .next
-
-;	ld hl, MAPOBJECT_SPRITE
-;	add hl, bc
-;	ld a, [hl]
-;	cp SPRITE_FOLLOWER
-;	jr z, .next
 
 	ld a, [wXCoord]
 	ld d, a
