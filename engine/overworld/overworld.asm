@@ -13,6 +13,18 @@ _ReplaceKrisSprite::
 	ld a, [wUsedSprites + 1]
 	ldh [hUsedSpriteTile], a
 	call GetUsedSprite
+	call AddFollowSprite
+	ret
+
+AddFollowSprite:
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
+	ld a, [wUsedSprites + FOLLOWER * 2]
+	ldh [hUsedSpriteIndex], a
+	ld a, [wUsedSprites + FOLLOWER * 2 + 1]
+	ldh [hUsedSpriteTile], a
+	call GetUsedSprite
 	ret
 
 Function14146: ; mobile
@@ -118,6 +130,9 @@ AddIndoorSprites:
 	ret
 
 AddOutdoorSprites:
+	call GetFollowerOutdoorSprite
+	call AddSpriteGFX
+
 	ld a, [wMapGroup]
 	dec a
 	ld c, a
@@ -128,15 +143,50 @@ AddOutdoorSprites:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld c, MAX_OUTDOOR_SPRITES
+; add sprites until list terminates
 .loop
-	push bc
 	ld a, [hli]
+	and a
+	ret z
 	call AddSpriteGFX
-	pop bc
-	dec c
-	jr nz, .loop
+	jr .loop
+
+GetFollowerOutdoorSprite:
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
+	ld a, [wFollowerState]
+	ld c, 0
+	ld hl, .state_table
+.loop
+	cp [hl]
+	jr z, .found
+	inc c
+	inc hl
+	jr .loop
+.found
+	ld b, 0
+	ld hl, .sprite_table
+	add hl, bc
+	add hl, bc
+	;ld a, [wFollowerFlags]
+	;bit FOLLOWER_SWAPPED_F, a
+	;jr nz, .got_sprite
+	inc hl
+.got_sprite
+	ld a, [hl]
 	ret
+.state_table
+	db PLAYER_NORMAL
+	db PLAYER_BIKE
+	db PLAYER_SURF
+	db PLAYER_SURF_PIKA
+.sprite_table
+	; red,                leaf
+	db SPRITE_CHRIS,      SPRITE_MONSTER      ; walking
+	db SPRITE_CHRIS_BIKE, SPRITE_MONSTER ; bike
+	db SPRITE_SURF,       SPRITE_MONSTER      ; surf
+	db SPRITE_SURF,       SPRITE_MONSTER      ; surf pika
 
 LoadUsedSpritesGFX:
 	ld a, MAPCALLBACK_SPRITES
@@ -282,6 +332,9 @@ _DoesSpriteHaveFacings::
 	scf
 	ret
 
+.follower
+	ld a, WALKING_SPRITE
+
 .only_down
 	and a
 	ret
@@ -307,7 +360,6 @@ _GetSpritePalette::
 
 LoadAndSortSprites:
 	call LoadSpriteGFX
-	call SortUsedSprites
 	call ArrangeUsedSprites
 	ret
 
@@ -371,76 +423,6 @@ LoadSpriteGFX:
 	call GetSprite
 	pop bc
 	ld a, l
-	ret
-
-SortUsedSprites:
-; Bubble-sort sprites by type.
-
-; Run backwards through wUsedSprites to find the last one.
-
-	ld c, SPRITE_GFX_LIST_CAPACITY
-	ld de, wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 1) * 2
-.FindLastSprite:
-	ld a, [de]
-	and a
-	jr nz, .FoundLastSprite
-	dec de
-	dec de
-	dec c
-	jr nz, .FindLastSprite
-.FoundLastSprite:
-	dec c
-	jr z, .quit
-
-; If the length of the current sprite is
-; higher than a later one, swap them.
-
-	inc de
-	ld hl, wUsedSprites + 1
-
-.CheckSprite:
-	push bc
-	push de
-	push hl
-
-.CheckFollowing:
-	ld a, [de]
-	cp [hl]
-	jr nc, .loop
-
-; Swap the two sprites.
-
-	ld b, a
-	ld a, [hl]
-	ld [hl], b
-	ld [de], a
-	dec de
-	dec hl
-	ld a, [de]
-	ld b, a
-	ld a, [hl]
-	ld [hl], b
-	ld [de], a
-	inc de
-	inc hl
-
-; Keep doing this until everything's in order.
-
-.loop
-	dec de
-	dec de
-	dec c
-	jr nz, .CheckFollowing
-
-	pop hl
-	inc hl
-	inc hl
-	pop de
-	pop bc
-	dec c
-	jr nz, .CheckSprite
-
-.quit
 	ret
 
 ArrangeUsedSprites:

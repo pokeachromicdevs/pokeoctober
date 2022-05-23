@@ -5,218 +5,218 @@ JohtoGrassWildMons:
 	map_id SPROUT_TOWER_2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, MISDREAVUS
 	dbw 4, MISDREAVUS
 	dbw 5, MISDREAVUS
-	dbw 3, RATTATA
 	dbw 6, MISDREAVUS
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 
 	map_id SPROUT_TOWER_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, MISDREAVUS
 	dbw 4, MISDREAVUS
 	dbw 5, MISDREAVUS
-	dbw 3, RATTATA
 	dbw 6, MISDREAVUS
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	
 	map_id SPROUT_TOWER_4F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, MISDREAVUS
 	dbw 4, MISDREAVUS
 	dbw 5, MISDREAVUS
-	dbw 3, RATTATA
 	dbw 6, MISDREAVUS
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	
 	map_id SPROUT_TOWER_5F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
-	dbw 3, RATTATA
-	dbw 6, GASTLY
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
+	dbw 6, MISDREAVUS
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	
 	map_id SPROUT_TOWER_6F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
-	dbw 3, RATTATA
-	dbw 6, GASTLY
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
+	dbw 6, MISDREAVUS
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	
 	map_id SPROUT_TOWER_7F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
-	dbw 3, RATTATA
-	dbw 6, GASTLY
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
+	dbw 6, MISDREAVUS
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	
 	map_id SPROUT_TOWER_8F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
-	dbw 3, RATTATA
-	dbw 6, GASTLY
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
+	dbw 6, MISDREAVUS
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	
 	map_id SPROUT_TOWER_9F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
+	dbw 6, RATTATA
+	dbw 4, RATTATA
+	dbw 7, NATU
 	dbw 6, NATU
-	dbw 5, NATU
-	dbw 5, NATU
+	dbw 6, NATU
 	; day
-	dbw 3, NATU
 	dbw 4, NATU
 	dbw 5, NATU
-	dbw 3, NATU
+	dbw 6, NATU
+	dbw 4, NATU
+	dbw 7, RATTATA
 	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 3, GASTLY
-	dbw 4, GASTLY
-	dbw 5, GASTLY
-	dbw 3, RATTATA
-	dbw 6, GASTLY
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 4, MISDREAVUS
+	dbw 5, MISDREAVUS
+	dbw 6, MISDREAVUS
+	dbw 4, RATTATA
+	dbw 7, MISDREAVUS
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 
 	map_id TIN_TOWER_2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -1436,29 +1436,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_32
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 4, EKANS
-	dbw 5, RATTATA
-	dbw 7, BELLSPROUT
-	dbw 6, MAREEP
-	dbw 7, PIDGEY
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 6, EKANS
+	dbw 7, RATTATA
+	dbw 9, BELLSPROUT
+	dbw 8, MAREEP
+	dbw 9, PIDGEY
+	dbw 9, HOPPIP
+	dbw 9, HOPPIP
 	; day
-	dbw 4, EKANS
-	dbw 5, RATTATA
-	dbw 7, BELLSPROUT
-	dbw 6, MAREEP
-	dbw 7, PIDGEY
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 6, EKANS;TYKER 
+	dbw 7, EKANS
+	dbw 9, BELLSPROUT
+	dbw 8, MAREEP
+	dbw 9, SNUBBULL
+	dbw 9, HOPPIP;TYKER
+	dbw 9, HOPPIP
 	; nite
-	dbw 4, WOOPER
-	dbw 5, RATTATA
-	dbw 7, BELLSPROUT
-	dbw 6, ZUBAT
-	dbw 7, HOOTHOOT
-	dbw 7, GASTLY
-	dbw 7, MAREEP
+	dbw 6, WOOPER
+	dbw 7, RATTATA
+	dbw 9, BELLSPROUT
+	dbw 8, ZUBAT
+	dbw 9, HOOTHOOT
+	dbw 9, GASTLY
+	dbw 9, BIPULLA
 
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

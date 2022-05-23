@@ -178,7 +178,7 @@ ItemDescriptions:
 	dw WaterTailDesc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw QuestionMarkDesc
+	dw CountercuffDesc
 	dw BrickPieceDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -235,26 +235,44 @@ ItemDescriptions:
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
+	dw CranidosFossilDesc
+	dw MysticWaterDesc
+	dw ConfuseClawDesc
+	dw QuestionMarkDesc
+	dw FiveYenCoinDesc
+	dw LifeTagDesc
+	dw StrangePowderDesc
+	dw BugFlyingFossilDesc
+	dw SkelebroFossilDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
+	dw InvisibleWallDesc
+	dw SkateboardDesc
+	dw MomsLoveDesc
+	dw MysticThreadDesc
+	dw MysticNeedleDesc
+	dw SafariBallDesc
+	dw FujisLetterDesc
 	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+
+CountercuffDesc:
+CranidosFossilDesc:
+MysticWaterDesc:
+ConfuseClawDesc:
+FiveYenCoinDesc:
+LifeTagDesc:
+StrangePowderDesc:
+BugFlyingFossilDesc:
+SkelebroFossilDesc:
+InvisibleWallDesc:
+SkateboardDesc:
+MomsLoveDesc:
+MysticThreadDesc:
+MysticNeedleDesc:
+SafariBallDesc:
+FujisLetterDesc:
+	db "Coming soon!@"
 
 MasterBallDesc:
 	db   "The best BALL. It"

@@ -34,6 +34,26 @@ HallOfFame::
 	farcall Credits
 	ret
 
+GotoOctoberCredits::
+	ld a, LOW(MUSIC_NONE)
+	ld [wMusicFadeID], a
+	ld a, HIGH(MUSIC_NONE)
+	ld [wMusicFadeID + 1], a
+	ld a, 10
+	ld [wMusicFade], a
+	xor a
+	ld [wVramState], a
+	ldh [hMapAnims], a
+	farcall FadeOutPalettes
+	farcall InitDisplayForRedCredits
+	ld c, 8
+	call DelayFrames
+	call DisableSpriteUpdates
+	ld a, [wStatusFlags]
+	ld b, a
+	farcall OctoberCredits
+	ret
+
 RedCredits::
 	ld a, LOW(MUSIC_NONE)
 	ld [wMusicFadeID], a

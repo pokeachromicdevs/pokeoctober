@@ -23,6 +23,12 @@ SpawnPlayer:
 	ld a, $0
 	ld hl, PlayerObjectTemplate
 	call CopyPlayerObjectTemplate
+
+	call CheckFollowerLoaded
+	jr c, .skip_follower
+	call SpawnFollower
+
+.skip_follower
 	ld b, $0
 	call PlayerSpawn_ConvertCoords
 	ld a, PLAYER_OBJECT
@@ -51,11 +57,51 @@ SpawnPlayer:
 	ld [wCenteredObject], a
 	ret
 
+SpawnFollower::
+	ld a, FOLLOWER
+	ld hl, FollowObjTemplate
+	call CopyPlayerObjectTemplate
+	ld b, FOLLOWER
+	jr PlayerSpawn_ConvertCoords
+
 PlayerObjectTemplate:
 ; A dummy map object used to initialize the player object.
 ; Shorter than the actual amount copied by two bytes.
 ; Said bytes seem to be unused.
 	object_event -4, -4, SPRITE_CHRIS, SPRITEMOVEDATA_PLAYER, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 0, -1
+
+FollowObjTemplate:
+	object_event -4, -4, SPRITE_MONSTER, SPRITEMOVEDATA_FOLLOWNOTEXACT, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, _FollowerScript, -1
+
+PUSHS
+SECTION "Follower Script Home", ROM0
+_FollowerScript:
+	farjump FollowerScript
+POPS
+
+CheckFollowerLoaded:
+; check if follower enabled
+;	ld a, [wFollowerFlags]
+	and a
+;	scf
+;	ret z
+;	ccf
+	ret
+	ld hl, wObjectStructs + 1
+	ld bc, OBJECT_LENGTH
+	ld d, NUM_OBJECT_STRUCTS
+.loop
+	ld a, [hl]
+	add hl, bc
+	cp FOLLOWER
+	jr z, .loaded
+	dec d
+	jr nz, .loop
+	xor a
+	ret
+.loaded
+	scf
+	ret
 
 CopyDECoordsToMapObject::
 	push de
@@ -99,7 +145,77 @@ WriteObjectXY::
 	and a
 	ret
 
-RefreshPlayerCoords:
+RefreshPlayerCoords::
+	call _RefreshPlayerCoords
+	ret
+MapPlayerCoordWarped::
+	call _RefreshPlayerCoords
+; check if follower enabled
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
+; add a follower
+	ld b, PLAYER
+	ld c, FOLLOWER
+	call MoveToObject
+	call MatchFollowerDirection
+	ret
+MapPlayerCoordConnected:
+	call _RefreshPlayerCoords
+; check if follower enabled
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
+; add a follower
+	ld b, PLAYER
+	ld c, FOLLOWER
+	call MoveToObject
+	ld b, FOLLOWER
+	call GetObjectCoord
+	ld a, [wPlayerStepDirection]
+	and a
+	jr z, .south
+	dec a
+	jr z, .north
+	dec a
+	jr z, .west
+	dec a
+	jr z, .east
+	jr .none
+.south
+	dec c
+	jr .ok
+.north
+	inc c
+	jr .ok
+.west
+	inc b
+	jr .ok
+.east
+	dec b
+.ok
+	ld a, FOLLOWER
+	call MoveToCoord
+	call MatchFollowerDirection
+.none
+	call RefreshFollowingCoords
+	ret
+MatchFollowerDirection:
+	ld a, FOLLOWER
+	call GetObjectStruct
+	push bc
+	ld a, PLAYER
+	call GetObjectStruct
+	ld hl, OBJECT_FACING
+	add hl, bc
+	ld a, [hl]
+	pop bc
+	ld hl, OBJECT_FACING
+	add hl, bc
+	ld [hl], a
+	ret
+
+_RefreshPlayerCoords:
 	ld a, [wXCoord]
 	add 4
 	ld d, a
@@ -127,10 +243,24 @@ RefreshPlayerCoords:
 	ret nz ; wtf
 	ret
 
+RefreshFollowingCoords::
+	ld b, PLAYER
+	ld c, FOLLOWER
+	call FollowNotExact
+	ret
+
 CopyObjectStruct::
 	call CheckObjectMask
 	and a
 	ret nz ; masked
+
+; if follower object, force into wObject1Struct
+	ldh a, [hMapObjectIndexBuffer]
+	cp FOLLOWER
+	jr z, .follower
+	ld hl, wObjectStructs + OBJECT_LENGTH * 2
+	ld a, 2
+
 
 	ld hl, wObjectStructs + OBJECT_STRUCT_LENGTH * 1
 	ld a, 1
@@ -147,6 +277,11 @@ CopyObjectStruct::
 	jr nz, .loop
 	scf
 	ret ; overflow
+
+.follower
+	ld hl, wObject1Struct
+	ld a, FOLLOWER
+	ldh [hObjectStructIndexBuffer], a
 
 .done
 	ld d, h
@@ -239,6 +374,12 @@ InitializeVisibleSprites:
 	ld a, [hl]
 	cp -1
 	jr nz, .next
+
+;	ld hl, MAPOBJECT_SPRITE
+;	add hl, bc
+;	ld a, [hl]
+;	cp SPRITE_FOLLOWER
+;	jr z, .next
 
 	ld a, [wXCoord]
 	ld d, a
@@ -602,6 +743,55 @@ SurfStartStep:
 	slow_step UP
 	slow_step LEFT
 	slow_step RIGHT
+
+MoveToObject::
+	push bc
+	ld a, c
+	call GetMapObject
+	ld d, b
+	ld e, c
+	pop bc
+	ld a, b
+	call GetMapObject
+	ld hl, MAPOBJECT_X_COORD
+	add hl, bc
+	ld a, [hl]
+	ld hl, MAPOBJECT_X_COORD
+	add hl, de
+	ld [hl], a
+	ld hl, MAPOBJECT_Y_COORD
+	add hl, bc
+	ld a, [hl]
+	ld hl, MAPOBJECT_Y_COORD
+	add hl, de
+	ld [hl], a
+	ret
+GetObjectCoord:
+	ld a, b
+	call GetMapObject
+	ld d, b
+	ld e, c
+	ld hl, MAPOBJECT_X_COORD
+	add hl, de
+	ld b, [hl]
+	ld hl, MAPOBJECT_Y_COORD
+	add hl, de
+	ld c, [hl]
+	ret
+MoveToCoord:
+	push bc
+	call GetMapObject
+	ld d, b
+	ld e, c
+	pop bc
+	ld hl, MAPOBJECT_X_COORD
+	add hl, de
+	ld [hl], b
+	ld hl, MAPOBJECT_Y_COORD
+	add hl, de
+	ld [hl], c
+	ret
+
 
 FollowNotExact::
 	push bc

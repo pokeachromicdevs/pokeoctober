@@ -157,6 +157,10 @@ INCLUDE "audio/music/bluebattle.asm"
 INCLUDE "audio/music/dreadwoods.asm"
 INCLUDE "audio/music/cinnabarmansion.asm"
 INCLUDE "audio/music/pokemart.asm"
+INCLUDE "audio/music/ceruleancave.asm"
+INCLUDE "audio/music/safari_zone.asm"
+INCLUDE "audio/music/credits_g1.asm"
+
 
 
 SECTION "Sound Effects", ROMX

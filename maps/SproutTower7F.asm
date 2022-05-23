@@ -1,9 +1,47 @@
+	object_const_def
+	const SPROUT_TOWER_7F_POKE_BALL1
+	const SPROUT_TOWER_7F_MYSTIC
+	const SPROUT_TOWER_7F_LASS
+	const SPROUT_TOWER_7F_POKE_BALL2
+
 SproutTower7F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-; scripts here
+SproutTowerF7EscapeRope:
+	itemball ESCAPE_ROPE
+	
+TrainerMysticStella:
+	trainer MYSTIC, STELLA, EVENT_BEAT_MYSTIC_STELLA, MysticStellaSeenText, MysticStellaBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext MysticStellaAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+MysticStellaSeenText:
+	text "The TOWER!"
+	
+	para "It's going to fall"
+	line "any minute now!"
+	done
+	
+MysticStellaBeatenText:
+	text "Ack! I've fallen"
+	line "down!"
+	done
+	
+MysticStellaAfterBattleText:
+	text "It appears my"
+	line "visions were<...>"
+	
+	para "slightly inaccu-" 
+	line "rate. Hehe<...>"
+	done
 
 SproutTower7F_MapEvents:
 	db 0, 0 ; filler
@@ -24,4 +62,6 @@ SproutTower7F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event 17, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF7EscapeRope, EVENT_SPROUT_TOWERF7_ESCAPE_ROPE
+	object_event 15, 5, SPRITE_MYSTIC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 3, TrainerMysticStella, -1

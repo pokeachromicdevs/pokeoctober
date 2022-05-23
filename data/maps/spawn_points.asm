@@ -47,4 +47,9 @@ SpawnPoints:
 
 ; '92 kanto
 	spawn CITRINE_ISLAND,             24, 28
+
+; special
+	spawn ALDER_POKECENTER_1F,         5,  3 ; TODO: Azalea pokecenter
+
+; end of
 	spawn N_A,                        -1, -1

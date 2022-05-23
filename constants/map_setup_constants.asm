@@ -17,6 +17,9 @@
 ; MapSetupCommands indexes (see engine/overworld/map_setup.asm)
 ; Names taken from Condensation water's scripting compendium
 ; https://hax.iimarck.us/files/scriptingcodes_eng.htm
+
+; Why are these randomly in lowercase?
+; (I know its fixed in newer pokecrystal but still)
 	const_def
 	const map_lcd_on              ; 00
 	const map_lcd_off             ; 01
@@ -64,6 +67,9 @@
 	const map_keep_palettes       ; 2b
 	const map_text_scroll_off     ; 2c
 	const map_stop_script         ; 2d
+	const map_warped_coord        ; 2e
+	const map_connected_coord     ; 2f
+	const map_unload_or_reload_follower ; 30
 map_end EQU -1
 
 ; callback types

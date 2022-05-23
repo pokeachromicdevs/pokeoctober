@@ -719,6 +719,19 @@ YoungsterGroup:
 	db 5
 	dw LEDYBA
 	db -1 ; end
+	
+	next_list_item ; YOUNGSTER (1)
+	db "DAN@", TRAINERTYPE_NORMAL
+	db 10
+	dw RATTATA
+	db 11
+	dw HOOTHOOT
+	db 12
+	dw MAREEP
+	db 12
+	dw RATTATA 
+	db -1 ; end
+
 
 	end_list_items
 
@@ -4018,6 +4031,24 @@ BlackbeltGroup:
 	db 11
 	dw MANKEY
 	db -1 ; end
+	
+	next_list_item ; BLACKBELT_T (9)
+	db "HITOSHI@", TRAINERTYPE_NORMAL
+	db 12
+	dw MACHOP
+	db 15
+	dw TYROGUE
+	db -1 ; end
+	
+	next_list_item ; BLACKBELT_T (9)
+	db "LEE@", TRAINERTYPE_NORMAL
+	db 12
+	dw GEODUDE
+	db 13
+	dw MACHOP
+	db 13
+	dw MANKEY 
+	db -1 ; end
 
 	end_list_items
 
@@ -4458,8 +4489,10 @@ SageGroup:
 
 	next_list_item ; SAGE (3)
 	db "JIN@", TRAINERTYPE_NORMAL
-	db 6
+	db 11
 	dw BELLSPROUT
+	db 13
+	dw HOOTHOOT
 	db -1 ; end
 
 	next_list_item ; SAGE (4)
@@ -4492,12 +4525,12 @@ SageGroup:
 
 	next_list_item ; SAGE (7)
 	db "EDMOND@", TRAINERTYPE_NORMAL
-	db 3
+	db 10
 	dw BELLSPROUT
-	db 3
-	dw BELLSPROUT
-	db 3
-	dw BELLSPROUT
+	db 12
+	dw VULPIII
+	db 12
+	dw MOIBELLE
 	db -1 ; end
 
 	next_list_item ; SAGE (8)
@@ -5141,7 +5174,7 @@ InstructorGroup:
 	next_list_item ; INSTRUCTOR (5)
 	db "STANLEY@", TRAINERTYPE_MOVES
 	db 46
-	dw SHUCKLE
+	dw SHUQLOUR
 	dw TOXIC, EARTHQUAKE, ROLLOUT, REST
 	db 48
 	dw ALAKAZAM
@@ -5153,6 +5186,16 @@ InstructorGroup:
 	dw NOCTOWL
 	dw FLY, TAKE_DOWN, HYPNOSIS, DREAM_EATER
 	db -1 ; end
+	
+	next_list_item ; INSTRUCTOR (6)
+	db "CURTIS@", TRAINERTYPE_NORMAL
+	db 11
+	dw RATTATA
+	db 12
+	dw WOOPER
+	db 13
+	dw GASTLY
+	db -1 ;end
 	
 	end_list_items
 
@@ -5191,18 +5234,18 @@ ProfessorGroup:
 
 ProdigyGroup:
 	next_list_item ; PRODIGY (1)
-		db "AXEL@", TRAINERTYPE_NORMAL
-		db 8
-		dw CHIKORITA
-		db 8
-		dw CYNDAQUIL
-		db 8
-		dw TOTODILE
-		db 9
-		dw CUBONE
-		db -1 ;end
+	db "AXEL@", TRAINERTYPE_NORMAL
+	db 8
+	dw CHIKORITA
+	db 8
+	dw CYNDAQUIL
+	db 8
+	dw TOTODILE
+	db 9
+	dw CUBONE
+	db -1 ;end
 		
-		end_list_items
+	end_list_items
 		
 SoldierGroup:
 	next_list_item; SOLDIER (1)
@@ -5242,42 +5285,52 @@ FledglingGroup:
 	
 BallsmithGroup:
 	next_list_item; BALLSMITH (1)
-		db "KURT@", TRAINERTYPE_NORMAL
-		db 21
-		dw VOLTORB
-		db 21
-		dw SANDSHREW
-		db 22
-		dw LICKITUNG
-		db 24
-		dw GLOOM
-		db 24
-		dw SLOWPOKE
-		db -1 ;end
+	db "KURT@", TRAINERTYPE_NORMAL
+	db 21
+	dw VOLTORB
+	db 21
+	dw SANDSHREW
+	db 22
+	dw LICKITUNG
+	db 24
+	dw GLOOM
+	db 24
+	dw SLOWPOKE
+	db -1 ;end
 		
-		end_list_items
+	end_list_items
 		
 MysticGroup:
 	next_list_item; MYSTIC (1)
-		db "STELLA@", TRAINERTYPE_NORMAL
-		db 12
-		dw ABRA
-		db 13
-		dw GASTLY
-		db 14
-		dw NATU 
-		db -1 ;end
+	db "STELLA@", TRAINERTYPE_NORMAL
+	db 12
+	dw ABRA
+	db 13
+	dw GASTLY
+	db 14
+	dw NATU 
+	db -1 ;end
 		
-		end_list_items
+	end_list_items
 		
 RockClimberGroup:
 	next_list_item; ROCKCLIMBER (1)
-		db "HENRY@", TRAINERTYPE_NORMAL
-		db 7
-		dw MACHOP
-		db -1 ;end 
+	db "HENRY@", TRAINERTYPE_NORMAL
+	db 7
+	dw MACHOP
+	db -1 ;end
+
+	next_list_item; ROCKCLIMBER (2)
+	db "LOID@", TRAINERTYPE_NORMAL
+	db 12
+	dw GEODUDE
+	db 12
+	dw BELLSPROUT
+	db 13
+	dw BURGELA 
+	db -1 ;end 
 		
-		end_list_items
+	end_list_items
 	
 CamperGroup:
 	next_list_item ; CAMPER (1)

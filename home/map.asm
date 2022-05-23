@@ -546,7 +546,10 @@ ReadObjectEvents::
 	push hl
 	call ClearObjectStructs
 	pop de
-	ld hl, wMap1Object
+	;ld hl, wMap1Object
+	ld a, -1
+	ld [wMap1Object], a
+	ld hl, wMapObjects + OBJECT_LENGTH * 2
 	ld a, [de]
 	inc de
 	ld [wCurMapObjectEventCount], a
@@ -561,7 +564,12 @@ ReadObjectEvents::
 ; get NUM_OBJECTS - [wCurMapObjectEventCount]
 	ld a, [wCurMapObjectEventCount]
 	ld c, a
-	ld a, NUM_OBJECTS ; - 1
+	;ld a, [wFollowerFlags]
+	;and a
+	ld a, NUM_OBJECTS - 2
+	;jr nz, .continue
+	;inc a
+;.continue
 	sub c
 	jr z, .skip
 	; jr c, .skip
@@ -614,21 +622,19 @@ CopyMapObjectEvents::
 	ret
 
 ClearObjectStructs::
-	ld hl, wObject1Struct
-	ld bc, OBJECT_STRUCT_LENGTH * (NUM_OBJECT_STRUCTS - 1)
+;	ld a, [wFollowerFlags]
+;	and a
+;	jr z, .begin_from_start
+	ld hl, wObject2Struct
+	ld bc, OBJECT_STRUCT_LENGTH * (NUM_OBJECT_STRUCTS - 2)
+;	jr .continue
+;.begin_from_start
+;	ld hl, wObject1Struct
+;	ld bc, OBJECT_STRUCT_LENGTH * (NUM_OBJECT_STRUCTS - 1)
+	; fallthru
+.continue
 	xor a
 	call ByteFill
-
-; Just to make sure (this is rather pointless)
-	ld hl, wObject1Struct
-	ld de, OBJECT_STRUCT_LENGTH
-	ld c, NUM_OBJECT_STRUCTS - 1
-	xor a
-.loop
-	ld [hl], a
-	add hl, de
-	dec c
-	jr nz, .loop
 	ret
 
 RestoreFacingAfterWarp::

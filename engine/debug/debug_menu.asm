@@ -108,12 +108,14 @@ DebugMenu::
 	db "TRAINERS@"
 	db "HELP@"
 	db "FIX EVENTS@"
+	db "FOLLOW@"
+	db "CREDITS@"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 15
-	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15
+	db 17
+	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17
 	db -1
 
 .Jumptable
@@ -133,6 +135,78 @@ DebugMenu::
 	dw Debug_Trainer
 	dw Debug_Help
 	dw Debug_FixEvents
+	dw Debug_ToggleFollow
+	dw Debug_Credits
+
+Debug_Credits:
+	ld a, BANK(.RunCredits)
+	ld hl, .RunCredits
+	jp CallScript
+.RunCredits
+	credits
+	end
+
+Debug_ToggleFollow:
+	ld hl, .ToggleFollowText
+	call PrintText
+	call .yesno
+
+	jr nz, .disable
+.enable
+; fix position of follow obj
+	ld b, FOLLOWER
+	ld a, [wXCoord]
+	add 4
+	ld d, a
+	ld a, [wYCoord]
+	add 4
+	ld e, a
+	farcall CopyDECoordsToMapObject
+	ld a, BANK(.FinishFollowEna)
+	ld hl, .FinishFollowEna
+	call CallScript
+	ld hl, .FollowEnaText
+	call PrintText
+	ret
+
+.disable
+	ld a, BANK(.FinishFollowDisa)
+	ld hl, .FinishFollowDisa
+	call CallScript
+	ld hl, .FollowDisaText
+	call PrintText
+	ret
+
+.yesno
+	lb bc, 0, 7
+	call PlaceYesNoBox
+	ld a, [wMenuCursorY]
+	dec a
+	and a
+	ret
+
+.FinishFollowEna:
+	appear FOLLOWER
+	loadmem wFollowerFlags, 1
+	end
+
+.FinishFollowDisa:
+	disappear FOLLOWER
+	loadmem wFollowerFlags, 0
+	end
+
+.ToggleFollowText:
+	text "Toggle following?"
+	done
+
+.FollowEnaText:
+	text "Follower enabled."
+	prompt
+
+.FollowDisaText:
+	text "Follower disabled."
+	prompt
+
 
 Debug_FixEvents:
 	ld hl, .FixEventsText
@@ -236,10 +310,6 @@ DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
 	para "While you're in the"
 	line "overworld, hold B"
 	cont "to run."
-
-	para "Hold START while a"
-	line "textbox is open to"
-	cont "advance instantly."
 	prompt
 .SoundTest:
 	text "1st line is MUSIC,"
@@ -1295,6 +1365,32 @@ Debug_FillBag:
 	xor a
 	call ByteFill
 
+IF 1
+; reset scroll position every time
+	ld a, 1
+	ld [wItemsPocketCursor], a
+	xor a
+	ld [wItemsPocketScrollPosition], a
+
+; fill bag, incrementing the item ID
+	ld hl, wNumItems
+	ld c, MAX_ITEMS
+	ld [hl], c
+	inc hl
+	ld a, [wDebugItemPickerBuffer]
+.loop
+	inc a
+	ld [hli], a
+	ld [hl], 99
+	ld [wDebugItemPickerBuffer], a
+	inc hl
+	dec c
+	jr nz, .loop
+	ld [hl], -1
+	ret
+
+ELSE
+; just fills the bag no questions asked
 	ld a, -1
 	ld hl, wItems
 	ld [hl], a
@@ -1344,6 +1440,7 @@ Debug_FillBag:
 .full_break
 ; set breakpoint to check if full
 	ret
+ENDC
 
 Debug_FillTMHM:
 	ld e, NUM_TMS + NUM_HMS

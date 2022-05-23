@@ -149,7 +149,8 @@ wUnusedScriptByteBuffer:: db
 
 wMapTimeOfDay:: db
 
-	ds 3
+	ds 2
+wFollowerSpriteID:: db
 
 wPrinterConnectionOpen:: db
 wPrinterOpcode:: db
@@ -284,6 +285,9 @@ wSpriteAnimsEnd::
 	ds 11
 
 ; mobile data
+if DEF(_DEBUG)
+wDebugItemPickerBuffer::
+endc
 wc3cc:: ds 1
 wc3cd:: ds 31
 wc3ec:: ds 1
@@ -2461,8 +2465,7 @@ wGameTimeFrames::  db ; d4c8
 	ds 2
 
 wCurDay:: db ; d4cb
-
-	ds 1
+wFollowerFlags:: db ; 1 = enabled
 
 wObjectFollow_Leader:: db
 wObjectFollow_Follower:: db
@@ -2484,11 +2487,12 @@ wObject9Struct::  object_struct wObject9
 wObject10Struct:: object_struct wObject10
 wObject11Struct:: object_struct wObject11
 wObject12Struct:: object_struct wObject12
+wObject13Struct:: object_struct wObject13
 wObjectStructsEnd:: ; d6de
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-	ds 40
+; ds 40
 
 wMapObjects:: ; d71e
 wPlayerObject:: map_object wPlayer
@@ -2591,6 +2595,7 @@ wPokegearFlags::
 	db
 wRadioTuningKnob:: db
 wLastDexMode:: db
+wFollowerState:: db
 wCurPokedexColor:: db ; current dex color
 wWhichRegisteredItem:: db ; d95b
 wRegisteredItem:: db ; d95c
@@ -2604,7 +2609,7 @@ wMooMooBerries:: db ; d962
 wUndergroundSwitchPositions:: db ; d963
 wFarfetchdPosition:: db ; d964
 
-	ds 13
+;	ds 13
 
 ; map scene ids
 wSceneIDs::

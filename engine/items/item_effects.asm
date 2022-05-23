@@ -174,8 +174,8 @@ ItemEffects:
 	dw PokeBallEffect      ; LEVEL_BALL
 	dw PokeBallEffect      ; LURE_BALL
 	dw PokeBallEffect      ; FAST_BALL
-	dw NoEffect            ; ITEM_A2
 	dw NoEffect            ; LIGHT_BALL
+	dw NoEffect            ; WISDOM_ORB
 	dw PokeBallEffect      ; FRIEND_BALL
 	dw PokeBallEffect      ; MOON_BALL
 	dw PokeBallEffect      ; LOVE_BALL
@@ -183,15 +183,91 @@ ItemEffects:
 	dw GorgeousBoxEffect   ; GORGEOUS_BOX
 	dw EvoStoneEffect      ; SUN_STONE
 	dw NoEffect            ; POLKADOT_BOW
-	dw NoEffect            ; ODD_THREAD
 	dw NoEffect            ; UP_GRADE
-	dw RestoreHPEffect     ; BERRY
+	dw NoEffect            ; ODD_THREAD
 	dw RestoreHPEffect     ; APPLE
+	dw RestoreHPEffect     ; BERRY
 	dw SquirtbottleEffect  ; SQUIRTBOTTLE
-	dw NoEffect            ; ITEM_B0
 	dw PokeBallEffect      ; PARK_BALL
+	dw NoEffect            ; WATER TAIL
 	dw NoEffect            ; RAINBOW_WING
-	dw NoEffect            ; ITEM_B3
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw NoEffect
+	dw PokeBallEffect ; SAFARI_BALL
+	dw NoEffect
+	dw NoEffect
 
 PokeBallEffect:
 	ld a, [wBattleMode]
@@ -214,6 +290,8 @@ PokeBallEffect:
 	ld [wWildMon], a
 	ld a, [wCurItem]
 	cp PARK_BALL
+	call nz, ReturnToBattle_UseBall
+	cp SAFARI_BALL
 	call nz, ReturnToBattle_UseBall
 
 	ld hl, wOptions
@@ -674,8 +752,8 @@ PokeBallEffect:
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	ret z
-	cp BATTLETYPE_DEBUG
-	ret z
+	cp BATTLETYPE_SAFARI
+	jr z, .used_safari_ball
 	cp BATTLETYPE_CONTEST
 	jr z, .used_park_ball
 
@@ -694,6 +772,11 @@ PokeBallEffect:
 
 .used_park_ball
 	ld hl, wParkBallsRemaining
+	dec [hl]
+	ret
+
+.used_safari_ball
+	ld hl, wSafariBallsRemaining
 	dec [hl]
 	ret
 

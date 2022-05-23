@@ -99,11 +99,9 @@
 	const SPRITE_SILVER_TROPHY ; 5f
 	const SPRITE_KRIS ; 60
 	const SPRITE_KRIS_BIKE ; 61
-	const SPRITE_KURT_OUTSIDE ; 62
 	const SPRITE_SUICUNE ; 63
 	const SPRITE_ENTEI ; 64
 	const SPRITE_RAIKOU ; 65
-	const SPRITE_STANDING_YOUNGSTER ; 66
 	const SPRITE_FLEDGLING
 	const SPRITE_BIRD_KEEPER
 	const SPRITE_SOLDIER
@@ -115,6 +113,7 @@
 	const SPRITE_MYSTIC
 	const SPRITE_MANCHILD
 	const SPRITE_SCHOOLBOY
+	const SPRITE_ROCKCLIMBER
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

@@ -116,3 +116,6 @@ Debug_MusicNames::
 	db "Dread Woods@@@@@@@"
 	db "Cinnabar Mansion@@"
 	db "Pokemart@@@@@@@@@@"
+	db "Cerulean Cave@@@@@"
+	db "Safari Zone@@@@@@@"
+	db "Credits(Gen1ized)@"

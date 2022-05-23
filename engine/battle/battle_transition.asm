@@ -55,7 +55,7 @@ DoBattleTransition:
 
 	pop af
 	ldh [rSVBK], a
-	call BattleTransition_ClearLYOverrides
+	;call BattleTransition_ClearLYOverrides
 
 	ld a, %11111111
 	ld [wBGP], a

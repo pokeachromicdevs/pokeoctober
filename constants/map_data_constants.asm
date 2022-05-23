@@ -103,7 +103,7 @@ const_value = -1
 	const SPAWN_ALDER
 ; '92 kanto
 	const SPAWN_CITRINE
+; special
+	const SPAWN_AZALEA_POKECENTER
 
 NUM_SPAWNS EQU const_value
-
-MAX_OUTDOOR_SPRITES EQU 23 ; see engine/overworld/overworld.asm

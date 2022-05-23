@@ -44,6 +44,7 @@ IF DEF(_DEBUG)
 	ld a, STEP_BIKE
 .hopback
 	call .DoStep
+	call .CheckWarp
 	scf
 	ret
 .regular_move
@@ -652,6 +653,13 @@ ENDM
 	ld bc, wObjectStructs ; redundant
 	farcall IsNPCAtCoord
 	jr nc, .is_npc
+
+	ld hl, OBJECT_MOVEMENTTYPE
+	add hl, bc
+	ld a, [hl]
+	cp SPRITEMOVEDATA_FOLLOWNOTEXACT
+	jr z, .is_npc
+
 	call .CheckStrengthBoulder
 	jr c, .no_bump
 

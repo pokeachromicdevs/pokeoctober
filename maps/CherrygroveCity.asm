@@ -48,33 +48,39 @@ CherrygroveCityGuideGent:
 	follow CHERRYGROVECITY_GRAMPS, PLAYER
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement1
 	turnobject PLAYER, UP
+	turnobject FOLLOWER, UP
 	opentext
 	writetext GuideGentPokecenterText
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement2
 	turnobject PLAYER, UP
+	turnobject FOLLOWER, UP
 	opentext
 	writetext GuideGentMartText
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement3
 	turnobject PLAYER, LEFT
+	turnobject FOLLOWER, LEFT
 	opentext
 	writetext GuideGentGymText
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement4
 	turnobject PLAYER, UP
+	turnobject FOLLOWER, UP
 	opentext
 	writetext GuideGentSeaText
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement5
 	turnobject PLAYER, UP
+	turnobject FOLLOWER, UP
 	pause 60
 	turnobject CHERRYGROVECITY_GRAMPS, LEFT
 	turnobject PLAYER, RIGHT
+	turnobject FOLLOWER, RIGHT
 	opentext
 	writetext GuideGentGiftText
 	buttonsound

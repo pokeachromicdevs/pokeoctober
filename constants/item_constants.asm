@@ -184,7 +184,7 @@
 	const WATER_TAIL   ; b0
 	const PARK_BALL    ; b1
 	const RAINBOW_WING ; b2
-	const ITEM_B3      ; b3
+	const COUNTERCUFF  ; b3
 	const BRICK_PIECE  ; b4
 	const SURF_MAIL    ; b5
 	const LITEBLUEMAIL ; b6
@@ -213,7 +213,7 @@
 	const THUNDER_TAIL
 	const CALM_SEED
 	const SPOON
-	const PEBBLE
+	const PEBBLE ; d0
 	const BIG_STONE
 	const TORN_COLLAR
 	const CRUSHED_TIRE
@@ -225,12 +225,46 @@
 	const OLD_AMBER
 	const DOME_FOSSIL
 	const HELIX_FOSSIL
-	const FLEE_FEATHER
+	const FLEE_FEATHER ; dd
+	const ITEM_DE
+	const ITEM_DF
+	const ITEM_E0
+	const ITEM_E1
+	const ITEM_E2
+	const ITEM_E3
+	const ITEM_E4
+	const ITEM_E5
+	const ITEM_E6
+	const ITEM_E7
+	const ITEM_E8
+	const ITEM_E9
+	const ITEM_EA
+	const ITEM_EB
+	const ITEM_EC
+	const CRANIDOS_FOSSIL
+	const MYSTIC_WATER
+	const CONFUSE_CLAW
+	const ITEM_F0
+	const FIVE_YEN_COIN
+	const LIFE_TAG
+	const STRANGE_POWDER
+	const BUG_FLYING_FOSSIL
+	const SKELEBRO_FOSSIL
+	const ITEM_F6
+	const ITEM_F7
+	const ITEM_F8
+	const INVISIBLE_WALL
+	const SKATEBOARD
+	const MOMS_LOVE
+	const MYSTIC_THREAD
+	const MYSTIC_NEEDLE
+	const SAFARI_BALL
+	const FUJIS_LETTER
+	const ITEM_FF ; unusable
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff
 
 ; leftovers from red
-SAFARI_BALL    EQU $08 ; MOON_STONE
 MOON_STONE_RED EQU $0a ; BURN_HEAL
 FULL_HEAL_RED  EQU $34 ; X_SPEED
