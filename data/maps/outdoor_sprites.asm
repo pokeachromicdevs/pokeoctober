@@ -178,13 +178,13 @@ CherrygroveGroupSprites:
 		walksprite SPRITE_GRAMPS
 		walksprite SPRITE_SUPER_NERD
 		walksprite SPRITE_LASS
-		walksprite SPRITE_BUG_CATCHER
 	end_walksprites
 
 	begin_staticsprites
 		staticsprite SPRITE_POKE_BALL
 		staticsprite SPRITE_FRUIT_TREE
 		staticsprite SPRITE_OFFICER
+		staticsprite SPRITE_BLACK_BELT
 	end_staticsprites
 
 SilverGroupSprites:

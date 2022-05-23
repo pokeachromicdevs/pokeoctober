@@ -510,6 +510,28 @@ GuideGentsHouseSignText:
 	text "GUIDE GENT'S HOUSE"
 	done
 
+BlackbeltBlockage:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "Oi!"
+	para "We don't just"
+	line "allow anyone to"
+	cont "wander on in here!"
+	para "This is the"
+	line "CHERRYGROVE DOJO!"
+	para "We're too tough"
+	line "for the average"
+	cont "trainer!"
+	para "But if you can"
+	line "handle the elder"
+	para "SAGE at the top of"
+	line "SPROUT TOWER,"
+	para "maybe we'll let"
+	line "you in."
+	done
+
+
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -533,11 +555,11 @@ CherrygroveCity_MapEvents:
 	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 	bg_event 23,  5, BGEVENT_READ, CherrygroveCityGymSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 36, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
 	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	;object_event 15,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM, -1
+	object_event  9, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackbeltBlockage, EVENT_BEAT_SAGE_LI
 
