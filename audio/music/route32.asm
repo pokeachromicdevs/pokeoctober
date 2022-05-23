@@ -323,7 +323,7 @@ Music_Route47_branch_ee6e9:
 	octave 4
 	note C_, 6
 ;end
-	sound_duty $3, $3, $2, $2
+	;sound_duty $3, $3, $2, $2
 	intensity $85
 	octave 3
 	note A#, 4
@@ -505,7 +505,7 @@ Music_Route47_branch_ee75e:
 	note F_, 4
 	octave 5
 	intensity $85
-	sound_duty $3, $3, $2, $2
+	;sound_duty $3, $3, $2, $2
 	note D_, 4
 	note C_, 4
 	octave 4
