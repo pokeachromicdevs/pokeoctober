@@ -237,6 +237,8 @@ INCLUDE "engine/battle/check_battle_scene.asm"
 INCLUDE "engine/movie/gbc_only.asm"
 INCLUDE "engine/events/poke_seer.asm"
 
+INCLUDE "engine/movie/october_credits.asm"
+
 
 SECTION "bank14", ROMX
 
@@ -646,6 +648,7 @@ INCLUDE "data/phone/text/kenji_callee.asm"
 INCLUDE "data/phone/text/parry_callee.asm"
 INCLUDE "data/phone/text/erin_callee.asm"
 INCLUDE "data/phone/text/unused.asm"
+INCLUDE "engine/events/follower.asm"
 
 
 SECTION "Miscellaneous Text", ROMX

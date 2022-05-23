@@ -28,6 +28,7 @@ ROM0
 	"Header"
 	org $0150
 	"Home"
+	"Follower Script Home"
 ROMX $01
 	"bank1"
 ROMX $02
@@ -180,6 +181,7 @@ ROMX $41
 ROMX $42
 	"Mobile 42"
 	"Credits"
+	"October Credits"
 ROMX $43
 	"Title"
 ROMX $44

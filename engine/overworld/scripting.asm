@@ -921,7 +921,7 @@ GetScriptObject:
 	ret z
 	cp LAST_TALKED
 	ret z
-	dec a
+	; add 3
 	ret
 
 Script_setlasttalked:
@@ -2784,7 +2784,8 @@ Script_halloffame:
 Script_credits:
 ; script command 0xa2
 
-	farcall RedCredits
+	;farcall RedCredits
+	farcall GotoOctoberCredits
 ReturnFromCredits:
 	call Script_endall
 	ld a, MAPSTATUS_DONE

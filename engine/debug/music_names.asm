@@ -118,3 +118,4 @@ Debug_MusicNames::
 	db "Pokemart@@@@@@@@@@"
 	db "Cerulean Cave@@@@@"
 	db "Safari Zone@@@@@@@"
+	db "Credits(Gen1ized)@"

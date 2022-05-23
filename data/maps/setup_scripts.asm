@@ -25,7 +25,7 @@ MapSetupScript_Warp:
 	db map_load_attributes
 	db map_change_callback
 	db map_spawn_coord
-	db map_player_coord
+	db map_warped_coord
 	db map_anchor_screen
 	db map_load_blocks
 	db map_buffer_screen
@@ -48,7 +48,7 @@ MapSetupScript_BadWarp:
 	db map_load_attributes
 	db map_change_callback
 	db map_spawn_coord
-	db map_player_coord
+	db map_warped_coord
 	db map_anchor_screen
 	db map_load_blocks
 	db map_buffer_screen
@@ -72,7 +72,7 @@ MapSetupScript_Connection:
 	db map_load_connection
 	db map_load_attributes
 	db map_change_callback
-	db map_player_coord
+	db map_connected_coord
 	db map_load_blocks
 	db map_load_tileset
 	db map_save_screen
@@ -95,7 +95,7 @@ MapSetupScript_Train:
 	db map_load_attributes
 	db map_warp_face
 	db map_change_callback
-	db map_player_coord
+	db map_connected_coord
 	db map_load_blocks
 	db map_buffer_screen
 	db map_lcd_off
