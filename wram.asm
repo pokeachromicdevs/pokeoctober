@@ -2465,8 +2465,7 @@ wGameTimeFrames::  db ; d4c8
 	ds 2
 
 wCurDay:: db ; d4cb
-
-	ds 1
+wFollowerFlags:: db ; 1 = enabled
 
 wObjectFollow_Leader:: db
 wObjectFollow_Follower:: db
@@ -2596,6 +2595,7 @@ wPokegearFlags::
 	db
 wRadioTuningKnob:: db
 wLastDexMode:: db
+wFollowerState:: db
 wCurPokedexColor:: db ; current dex color
 wWhichRegisteredItem:: db ; d95b
 wRegisteredItem:: db ; d95c

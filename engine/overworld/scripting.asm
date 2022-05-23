@@ -1132,7 +1132,7 @@ Script_disappear:
 	farcall _UpdateSprites
 	ret
 
-ApplyEventActionAppearDisappear:
+ApplyEventActionAppearDisappear::
 	push bc
 	call GetMapObject
 	ld hl, MAPOBJECT_EVENT_FLAG

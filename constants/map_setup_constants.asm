@@ -69,6 +69,7 @@
 	const map_stop_script         ; 2d
 	const map_warped_coord        ; 2e
 	const map_connected_coord     ; 2f
+	const map_unload_or_reload_follower ; 30
 map_end EQU -1
 
 ; callback types

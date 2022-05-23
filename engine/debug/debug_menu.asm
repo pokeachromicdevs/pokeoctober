@@ -108,12 +108,13 @@ DebugMenu::
 	db "TRAINERS@"
 	db "HELP@"
 	db "FIX EVENTS@"
+	db "FOLLOW@"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 15
-	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15
+	db 16
+	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16
 	db -1
 
 .Jumptable
@@ -133,6 +134,69 @@ DebugMenu::
 	dw Debug_Trainer
 	dw Debug_Help
 	dw Debug_FixEvents
+	dw Debug_ToggleFollow
+
+Debug_ToggleFollow:
+	ld hl, .ToggleFollowText
+	call PrintText
+	call .yesno
+
+	jr nz, .disable
+.enable
+; fix position of follow obj
+	ld b, FOLLOWER
+	ld a, [wXCoord]
+	add 4
+	ld d, a
+	ld a, [wYCoord]
+	add 4
+	ld e, a
+	farcall CopyDECoordsToMapObject
+	ld a, BANK(.FinishFollowEna)
+	ld hl, .FinishFollowEna
+	call CallScript
+	ld hl, .FollowEnaText
+	call PrintText
+	ret
+
+.disable
+	ld a, BANK(.FinishFollowDisa)
+	ld hl, .FinishFollowDisa
+	call CallScript
+	ld hl, .FollowDisaText
+	call PrintText
+	ret
+
+.yesno
+	lb bc, 0, 7
+	call PlaceYesNoBox
+	ld a, [wMenuCursorY]
+	dec a
+	and a
+	ret
+
+.FinishFollowEna:
+	appear FOLLOWER
+	loadmem wFollowerFlags, 1
+	end
+
+.FinishFollowDisa:
+	disappear FOLLOWER
+	loadmem wFollowerFlags, 0
+	end
+
+.ToggleFollowText:
+	text "Toggle following?"
+	done
+
+.FollowEnaText:
+	text "Follower enabled."
+	prompt
+
+.FollowDisaText:
+	text "Follower disabled."
+	prompt
+
 
 Debug_FixEvents:
 	ld hl, .FixEventsText

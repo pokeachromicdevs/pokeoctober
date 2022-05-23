@@ -17,6 +17,9 @@ _ReplaceKrisSprite::
 	ret
 
 AddFollowSprite:
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
 	ld a, [wUsedSprites + FOLLOWER * 2]
 	ldh [hUsedSpriteIndex], a
 	ld a, [wUsedSprites + FOLLOWER * 2 + 1]
@@ -127,7 +130,7 @@ AddIndoorSprites:
 	ret
 
 AddOutdoorSprites:
-	ld a, SPRITE_FOLLOWER
+	call GetFollowerOutdoorSprite
 	call AddSpriteGFX
 
 	ld a, [wMapGroup]
@@ -147,6 +150,43 @@ AddOutdoorSprites:
 	ret z
 	call AddSpriteGFX
 	jr .loop
+
+GetFollowerOutdoorSprite:
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
+	ld a, [wFollowerState]
+	ld c, 0
+	ld hl, .state_table
+.loop
+	cp [hl]
+	jr z, .found
+	inc c
+	inc hl
+	jr .loop
+.found
+	ld b, 0
+	ld hl, .sprite_table
+	add hl, bc
+	add hl, bc
+	;ld a, [wFollowerFlags]
+	;bit FOLLOWER_SWAPPED_F, a
+	;jr nz, .got_sprite
+	inc hl
+.got_sprite
+	ld a, [hl]
+	ret
+.state_table
+	db PLAYER_NORMAL
+	db PLAYER_BIKE
+	db PLAYER_SURF
+	db PLAYER_SURF_PIKA
+.sprite_table
+	; red,                leaf
+	db SPRITE_CHRIS,      SPRITE_MONSTER      ; walking
+	db SPRITE_CHRIS_BIKE, SPRITE_MONSTER ; bike
+	db SPRITE_SURF,       SPRITE_MONSTER      ; surf
+	db SPRITE_SURF,       SPRITE_MONSTER      ; surf pika
 
 LoadUsedSpritesGFX:
 	ld a, MAPCALLBACK_SPRITES
@@ -178,9 +218,6 @@ SafeGetSprite:
 	ret
 
 GetSprite:
-	call GetFollowingSprite
-	ret c
-
 	call GetMonSprite
 	ret c
 
@@ -273,45 +310,9 @@ GetMonSprite:
 	and a
 	ret
 
-GetFollowingSprite:
-	cp SPRITE_FOLLOWER
-	jr nz, .none
-	ld hl, OverworldSprites
-	ld a, [wFollowerSpriteID]
-	add a
-	ld e, a
-	add e
-	add e
-	ld d, 0
-	add hl, de
-	ld de, wUnusedMapBuffer
-	ld bc, 6
-	ld a, BANK(OverworldSprites)
-	call FarCopyBytes
-	ld hl, wUnusedMapBuffer
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	ld a, [hli]
-	swap a
-	and $f
-	ld c, a
-	ld a, [hli]
-	ld b, a
-	ld l, [hl]
-	ld h, 0
-	scf
-	ret
-.none
-	and a
-	ret
-
 _DoesSpriteHaveFacings::
 ; Checks to see whether we can apply a facing to a sprite.
 ; Returns carry unless the sprite is a Pokemon or a Still Sprite.
-	cp SPRITE_FOLLOWER
-	jr z, .follower
 	cp SPRITE_POKEMON
 	jr nc, .only_down
 
@@ -340,12 +341,6 @@ _DoesSpriteHaveFacings::
 
 _GetSpritePalette::
 	ld a, c
-	push bc
-	call GetFollowingSprite
-	pop bc
-	jr c, .follower
-
-	ld a, c
 	call GetMonSprite
 	jr c, .is_pokemon
 
@@ -361,10 +356,6 @@ _GetSpritePalette::
 .is_pokemon
 	xor a
 	ld c, a
-	ret
-
-.follower
-	ld c, 0
 	ret
 
 LoadAndSortSprites:

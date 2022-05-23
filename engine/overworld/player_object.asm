@@ -26,11 +26,7 @@ SpawnPlayer:
 
 	call CheckFollowerLoaded
 	jr c, .skip_follower
-	ld a, FOLLOWER
-	ld hl, FollowObjTemplate
-	call CopyPlayerObjectTemplate
-	ld b, FOLLOWER
-	call PlayerSpawn_ConvertCoords
+	call SpawnFollower
 
 .skip_follower
 	ld b, $0
@@ -61,6 +57,13 @@ SpawnPlayer:
 	ld [wCenteredObject], a
 	ret
 
+SpawnFollower::
+	ld a, FOLLOWER
+	ld hl, FollowObjTemplate
+	call CopyPlayerObjectTemplate
+	ld b, FOLLOWER
+	jr PlayerSpawn_ConvertCoords
+
 PlayerObjectTemplate:
 ; A dummy map object used to initialize the player object.
 ; Shorter than the actual amount copied by two bytes.
@@ -68,7 +71,7 @@ PlayerObjectTemplate:
 	object_event -4, -4, SPRITE_CHRIS, SPRITEMOVEDATA_PLAYER, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 0, -1
 
 FollowObjTemplate:
-	object_event -4, -4, SPRITE_FOLLOWER, SPRITEMOVEDATA_FOLLOWNOTEXACT, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, _FollowerScript, -1
+	object_event -4, -4, SPRITE_MONSTER, SPRITEMOVEDATA_FOLLOWNOTEXACT, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, _FollowerScript, -1
 
 PUSHS
 SECTION "Follower Script Home", ROM0
@@ -77,7 +80,12 @@ _FollowerScript:
 POPS
 
 CheckFollowerLoaded:
-	xor a
+; check if follower enabled
+;	ld a, [wFollowerFlags]
+	and a
+;	scf
+;	ret z
+;	ccf
 	ret
 	ld hl, wObjectStructs + 1
 	ld bc, OBJECT_LENGTH
@@ -140,8 +148,13 @@ WriteObjectXY::
 RefreshPlayerCoords::
 	call _RefreshPlayerCoords
 	ret
-MapPlayerCoordWarped:
+MapPlayerCoordWarped::
 	call _RefreshPlayerCoords
+; check if follower enabled
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
+; add a follower
 	ld b, PLAYER
 	ld c, FOLLOWER
 	call MoveToObject
@@ -149,6 +162,11 @@ MapPlayerCoordWarped:
 	ret
 MapPlayerCoordConnected:
 	call _RefreshPlayerCoords
+; check if follower enabled
+;	ld a, [wFollowerFlags]
+;	and a
+;	ret z
+; add a follower
 	ld b, PLAYER
 	ld c, FOLLOWER
 	call MoveToObject
@@ -726,7 +744,7 @@ SurfStartStep:
 	slow_step LEFT
 	slow_step RIGHT
 
-MoveToObject:
+MoveToObject::
 	push bc
 	ld a, c
 	call GetMapObject

@@ -320,7 +320,9 @@ GetNextTile:
 	push bc
 	call GetCoordTile
 	pop bc
+	push af
 	call UpdateFollowerSprite
+	pop af
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld [hl], a
@@ -335,7 +337,6 @@ UpdateFollowerSprite:
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld d, [hl]
-	ld [hl], e
 	push de
 	ld a, d ; previous
 	call GetTileCollision
@@ -353,21 +354,15 @@ UpdateFollowerSprite:
 	jr z, .water_tile
 	ret
 .land_tile
-	push af
-	push bc
-	push de
-	push hl
+	ld a, [wPlayerState]
 	jr .done
 .water_tile
-	push af
-	push bc
-	push de
-	push hl
+	;ld a, PLAYER_SURF
 .done
-	pop hl
-	pop de
+	ld [wFollowerState], a
+	push bc
+	farcall AddFollowSprite
 	pop bc
-	pop af
 	ret
 
 AddStepVector:

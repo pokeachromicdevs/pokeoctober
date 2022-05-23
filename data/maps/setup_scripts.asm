@@ -32,6 +32,7 @@ MapSetupScript_Warp:
 	db map_load_graphics
 	db map_time_of_day
 	db map_load_objects
+	db map_unload_or_reload_follower ; ???
 	db map_lcd_on
 	db map_palettes
 	db map_face_down
@@ -58,6 +59,7 @@ MapSetupScript_BadWarp:
 	db map_fade_out_music
 	db map_lcd_on
 	db map_load_objects
+	db map_unload_or_reload_follower ; ???
 	db map_palettes
 	db map_face_down
 	db map_sprites
@@ -77,6 +79,7 @@ MapSetupScript_Connection:
 	db map_load_tileset
 	db map_save_screen
 	db map_load_objects
+	db map_unload_or_reload_follower ; ???
 	db map_fade_music
 	db map_palettes
 	db map_stop_script
@@ -104,6 +107,7 @@ MapSetupScript_Train:
 	db map_fade_out_music
 	db map_lcd_on
 	db map_load_objects
+	db map_unload_or_reload_follower ; ???
 	db map_palettes
 	db map_sprites
 	db map_fade_music

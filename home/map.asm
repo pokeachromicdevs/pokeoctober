@@ -564,7 +564,12 @@ ReadObjectEvents::
 ; get NUM_OBJECTS - [wCurMapObjectEventCount]
 	ld a, [wCurMapObjectEventCount]
 	ld c, a
+	;ld a, [wFollowerFlags]
+	;and a
 	ld a, NUM_OBJECTS - 2
+	;jr nz, .continue
+	;inc a
+;.continue
 	sub c
 	jr z, .skip
 	; jr c, .skip
@@ -617,8 +622,17 @@ CopyMapObjectEvents::
 	ret
 
 ClearObjectStructs::
+;	ld a, [wFollowerFlags]
+;	and a
+;	jr z, .begin_from_start
 	ld hl, wObject2Struct
 	ld bc, OBJECT_STRUCT_LENGTH * (NUM_OBJECT_STRUCTS - 2)
+;	jr .continue
+;.begin_from_start
+;	ld hl, wObject1Struct
+;	ld bc, OBJECT_STRUCT_LENGTH * (NUM_OBJECT_STRUCTS - 1)
+	; fallthru
+.continue
 	xor a
 	call ByteFill
 	ret
