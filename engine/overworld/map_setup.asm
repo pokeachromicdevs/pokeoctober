@@ -113,21 +113,9 @@ MapSetupCommands:
 UnloadOrLoadFollowerAsNeeded:
 	ld a, [wFollowerFlags]
 	and a
+	ret nz
 	ld a, FOLLOWER
-	jr z, .disappear
-; appear FOLLOWER
-	call _CopyObjectStruct
-	ldh a, [hMapObjectIndexBuffer]
-	ld b, 0 ; clear
-	jr .done
-.disappear
-; disappear FOLLOWER
 	call DeleteObjectStruct
-	ldh a, [hMapObjectIndexBuffer]
-	ld b, 1 ; set
-.done
-	farcall ApplyEventActionAppearDisappear
-	farcall _UpdateSprites
 	ret
 
 DontScrollText:
