@@ -79,9 +79,6 @@ DoBattle:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	ld [wTempBattleMonSpecies], a
-
-	farcall CheckFinalMon
-
 	hlcoord 1, 5
 	ld a, 9
 	call SlideBattlePicOut
@@ -95,6 +92,9 @@ DoBattle:
 	call SendOutPlayerMon
 	call EmptyBattleTextbox
 	call LoadTileMapToTempTileMap
+
+	farcall CheckFinalMon
+
 	call SetPlayerTurn
 	call SpikesDamage
 	ld a, [wLinkMode]
