@@ -119,3 +119,4 @@ Debug_MusicNames::
 	db "Cerulean Cave@@@@@"
 	db "Safari Zone@@@@@@@"
 	db "Credits(Gen1ized)@"
+	db "Safari Zone Gate@@"
