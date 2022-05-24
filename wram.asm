@@ -397,7 +397,8 @@ wBattleMonNick:: ds MON_NAME_LENGTH ; c621
 wBattleMon:: battle_struct wBattleMon ; c62c
 
 ; intro water/grass/fire cutscene data
-	ds 4
+wBattleFinalMonTextPointer:: dw
+	ds 2
 wIntroJumptableIndex:: db
 wIntroBGMapPointer:: dw
 wIntroTilemapPointer:: dw

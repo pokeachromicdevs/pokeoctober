@@ -1,8 +1,8 @@
-; ported from PC
+; with help from PC
 ; XXX: what if i can fit all of this inside the main battle bank
 
 CheckFinalMon:
-	push af ; do we need this?
+	push af
 	; is not wild battle?
 		ld a, [wBattleMode]
 		dec a
@@ -14,6 +14,14 @@ CheckFinalMon:
 	; is last pokemon?
 		farcall CheckAnyOtherAliveEnemyMons
 		jr nz, .done
+	; has text?
+		call GetFinalMonTxtPointer
+		jr c, .done
+	; copy text pointer
+		ld a, l
+		ld [wBattleFinalMonTextPointer], a
+		ld a, h
+		ld [wBattleFinalMonTextPointer + 1], a
 	; init stuff
 		farcall EmptyBattleTextbox
 		ld c, 20
@@ -29,10 +37,11 @@ CheckFinalMon:
 		push af
 	; slide trainer pic in
 			farcall BattleWinSlideInEnemyTrainerFrontpic
-	; text
-		; TODO: replace with battle textbox later
-			ld a, BANK(TestFinalText)
-			ld hl, TestFinalText
+	; read in text pointer
+			ld a, [wBattleFinalMonTextPointer]
+			ld l, a
+			ld a, [wBattleFinalMonTextPointer + 1]
+			ld h, a
 			call BattleTextbox
 		pop af
 		ld [wTempEnemyMonSpecies], a
@@ -44,14 +53,8 @@ CheckFinalMon:
 	; slide pokemon pic in
 		call SlideBackInMonPic
 .done
-	pop af ; do we need this?
+	pop af
 	ret
-
-TestFinalText:
-	text "Last one?"
-	para "Already?"
-	para "Gimme a break!"
-	prompt
 
 SlideEnemyPicOut2:
 	hlcoord 18, 0
@@ -70,7 +73,7 @@ SlideEnemyPicOut2:
 	add hl, de
 	dec b
 	jr nz, .loop2
-	ld c, 2
+	ld c, 3
 	call DelayFrames
 	pop hl
 	pop bc
@@ -157,3 +160,44 @@ SlideBackInMonPic:
 	pop de
 	pop hl
 	ret
+
+GetFinalMonTxtPointer:
+; Returns the pointer at HL if succeeded and carry is cleared.
+; Otherwise, clobbers registers and carry is set.
+	ld hl, FinalMonTexts
+	ld de, wOtherTrainerClass
+
+; place value to compare to
+	ld a, [de]
+	ld c, a
+
+.keep_searching
+	ld a, [hli]
+
+; end of list?
+	cp -1
+	jr z, .not_found ; terminate immediately
+
+; is correct value?
+	cp c
+	jr nz, .advance
+
+; complement (clear) flag
+	scf
+	ccf
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jr .done
+
+.advance
+	inc hl
+	inc hl
+	jr .keep_searching
+
+.not_found
+	scf
+.done
+	ret
+	
+INCLUDE "data/trainers/final_mon_txt.asm"
