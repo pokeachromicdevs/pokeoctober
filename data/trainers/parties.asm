@@ -15,7 +15,7 @@ FalknerGroup:
 	db 10
 	dw PIDGEY
 	db NO_ITEM
-	dw NO_MOVE, MUD_SLAP, QUICK_ATTACK, GUST
+	dw MUD_SLAP, QUICK_ATTACK, GUST, NO_MOVE
 	db 11
 	dw NATU
 	db NO_ITEM
