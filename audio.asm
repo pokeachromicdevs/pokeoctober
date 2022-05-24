@@ -96,7 +96,6 @@ INCLUDE "audio/music/cherrygrovecity.asm"
 INCLUDE "audio/music/unioncave.asm"
 INCLUDE "audio/music/johtowildbattle.asm"
 INCLUDE "audio/music/johtowildbattlenight.asm"
-INCLUDE "audio/music/johtotrainerbattle.asm"
 INCLUDE "audio/music/lookyoungster.asm"
 INCLUDE "audio/music/tintower.asm"
 INCLUDE "audio/music/sprouttower.asm"
@@ -134,12 +133,13 @@ SECTION "Extra Songs 1", ROMX
 INCLUDE "audio/music/credits.asm"
 INCLUDE "audio/music/clair.asm"
 INCLUDE "audio/music/mobileadapter.asm"
+INCLUDE "audio/music/johtotrainerbattle.asm"
+
 
 
 SECTION "Extra Songs 2", ROMX
 
 INCLUDE "audio/music/postcredits.asm"
-INCLUDE "data/pokemon/cries_beytah.asm"
 
 SECTION "New Songs", ROMX
 

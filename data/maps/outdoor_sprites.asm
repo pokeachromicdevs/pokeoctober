@@ -178,6 +178,7 @@ CherrygroveGroupSprites:
 		walksprite SPRITE_GRAMPS
 		walksprite SPRITE_SUPER_NERD
 		walksprite SPRITE_LASS
+		walksprite SPRITE_BUG_CATCHER
 	end_walksprites
 
 	begin_staticsprites

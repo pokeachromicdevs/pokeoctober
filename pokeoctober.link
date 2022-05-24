@@ -44,7 +44,6 @@ ROMX $06
 ROMX $07
 	"Roofs"
 	"Tileset Data 2"
-	"Extra Songs 1"
 ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
@@ -313,6 +312,7 @@ ROMX $7c
 ROMX $7d
 	"Evolutions and Attacks 2"
 	"Cries"
+	"Extra Songs 1"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
