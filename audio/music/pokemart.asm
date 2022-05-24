@@ -1,3 +1,6 @@
+; remixed by zumi in 2022
+; from hg/ss
+
 Music_Pokemart:
 	channel_count 4
 	channel 1, Music_Pokemart_Ch1

@@ -1,3 +1,6 @@
+; remixed by zumi in 2015
+; from b/w
+
 Music_ProfBattle::
 	channel_count 3
 	channel 1, WCS_Ch1

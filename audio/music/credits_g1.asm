@@ -1,3 +1,6 @@
+; remixed by zumi in 2020
+; from g/s
+
 Music_CreditsG1:
 	channel_count 3
 	channel 1, Music_CreditsG1_Ch1

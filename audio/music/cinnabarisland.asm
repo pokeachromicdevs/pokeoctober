@@ -1,3 +1,6 @@
+; remixed by zumi in 2022
+; from fr/lg
+
 Music_CinnabarIsland:
 	channel_count 4
 	channel 1, Music_CinnabarIsland_Ch1

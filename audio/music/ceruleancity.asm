@@ -1,3 +1,5 @@
+; remixed by zumi in 2022
+
 Music_CeruleanCity:
 	channel_count 4
 	channel 1, Music_CeruleanCity_Ch1
