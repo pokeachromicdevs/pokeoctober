@@ -120,3 +120,4 @@ Debug_MusicNames::
 	db "Safari Zone@@@@@@@"
 	db "Credits(Gen1ized)@"
 	db "Safari Zone Gate@@"
+	db "Final Pokemon@@@@@"

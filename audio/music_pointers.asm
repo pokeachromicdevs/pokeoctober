@@ -124,3 +124,4 @@ Music:
 	dba Music_SafariZone
 	dba Music_CreditsG1
 	dba Music_SafariZoneGate
+	dba Music_Pinch
