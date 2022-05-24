@@ -173,6 +173,7 @@ SECTION "bank10", ROMX
 
 INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
+INCLUDE "engine/battle/final_mon.asm"
 
 
 SECTION "bank11", ROMX

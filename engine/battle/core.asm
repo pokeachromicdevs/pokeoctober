@@ -79,6 +79,9 @@ DoBattle:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	ld [wTempBattleMonSpecies], a
+
+	farcall CheckFinalMon
+
 	hlcoord 1, 5
 	ld a, 9
 	call SlideBattlePicOut
@@ -237,6 +240,7 @@ BattleTurn:
 	jr nz, .quit
 
 	call HandleBetweenTurnEffects
+
 	ld a, [wBattleEnded]
 	and a
 	jr nz, .quit
@@ -2377,7 +2381,9 @@ HandleEnemySwitch:
 	ld a, [hli]
 	or [hl]
 	ld a, $0
-	jr nz, EnemyPartyMonEntrance
+	call nz, EnemyPartyMonEntrance
+	farcall CheckFinalMon
+	ret
 	inc a
 	ret
 
