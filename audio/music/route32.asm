@@ -702,11 +702,23 @@ Music_Route47_Ch3:
 	note_type 12, 1, 6
 	octave 2
 	note A#, 6
-	note F_, 2
-	note A#, 6
+	note_type 6, 1, 6
+	note A#, 1
+	rest 1
+	note A#, 1
+	rest 1
+	note A#, 5
+	rest 1
+	note_type 12, 1, 6
+	note A#, 3
 	note A_, 2
 	note G#, 6
-	note F_, 2
+	note_type 6, 1, 6
+	note F_, 1
+	rest 1
+	note F_, 1
+	rest 1
+	note_type 12, 1, 6
 	note A_, 2
 	note G_, 2
 	note F_, 2
@@ -784,10 +796,12 @@ Music_Route47_Ch3:
 	rest 1
 	note C_, 1
 	rest 1
+	note C_, 5
+	rest 1
+	note C_, 5
+	rest 1
+	note C_, 4
 	note_type 12, 1, 6
-	note C_, 3
-	note C_, 3
-	note C_, 2
 	sound_ret
 
 Music_Route47_Ch4:
