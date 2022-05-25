@@ -699,10 +699,10 @@ Music_Route47_Ch3:
 	sound_ret
 
 .pattern4
-	note_type 12, 1, 6
-	octave 2
-	note A#, 6
 	note_type 6, 1, 6
+	octave 2
+	note A#, 11
+	rest 1
 	note A#, 1
 	rest 1
 	note A#, 1
@@ -712,8 +712,9 @@ Music_Route47_Ch3:
 	note_type 12, 1, 6
 	note A#, 3
 	note A_, 2
-	note G#, 6
 	note_type 6, 1, 6
+	note G#, 11
+	rest 1
 	note F_, 1
 	rest 1
 	note F_, 1
