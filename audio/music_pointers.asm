@@ -125,3 +125,4 @@ Music:
 	dba Music_CreditsG1
 	dba Music_SafariZoneGate
 	dba Music_Pinch
+	dba Music_MewtwoBattleStadium

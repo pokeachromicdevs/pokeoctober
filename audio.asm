@@ -163,6 +163,10 @@ INCLUDE "audio/music/credits_g1.asm"
 INCLUDE "audio/music/safarizonegate.asm"
 INCLUDE "audio/music/gymleaderpinch.asm"
 
+SECTION "More New Songs", ROMX 
+
+INCLUDE "audio/music/mewtwobattle.asm"
+
 
 SECTION "Sound Effects", ROMX
 

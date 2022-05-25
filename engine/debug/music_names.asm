@@ -121,3 +121,4 @@ Debug_MusicNames::
 	db "Credits(Gen1ized)@"
 	db "Safari Zone Gate@@"
 	db "Final Pokemon@@@@@"
+	db "Mewtwo Battle@@@@@"

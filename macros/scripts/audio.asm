@@ -369,3 +369,8 @@ ENDM
 transpose: MACRO
 	pitchoffset \1, \2 + 1
 ENDM
+
+noisesampleset: MACRO
+	db noisesampleset
+	db \1 ; noise
+ENDM

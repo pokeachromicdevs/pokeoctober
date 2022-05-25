@@ -126,6 +126,7 @@
 	const MUSIC_CREDITS_G1                   ; 73
 	const MUSIC_SAFARI_ZONE_GATE             ; 74
 	const MUSIC_FINAL_POKEMON                ; 75 Last pokemon
+	const MUSIC_MEWTWO_BATTLE                ; 76
 
 NUM_MUSIC_TRACKS EQU const_value
 
