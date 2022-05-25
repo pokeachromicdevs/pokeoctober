@@ -26,9 +26,35 @@ FinalMonTexts::
 	db -1 ; end of list
 
 .FalknerText:
+	text "Nothing makes my"
+	line "spirits soar like"
+	para "the turbulence of"
+	line "battle!"
+	para "Bring it!"
+	prompt
+
 .WhitneyText:
+	text "H-hey, why aren't"
+	line "you goin' easy on"
+	cont "a cutie like me?"
+	para "I'll just have to"
+	line "show you how"
+	cont "tough we are!"
+	prompt
+
 .BugsyText:
+	text "My swarm is down"
+	line "to one?"
+	para "You're not bad,"
+	line "but we're better!"
+	prompt
+
 .MortyText:
+	text "I refuse to let"
+	line "this be our limit!"
+	para "It's not over yet!"
+	prompt
+
 .PryceText:
 .JasmineText:
 .ChuckText:
@@ -40,6 +66,7 @@ FinalMonTexts::
 .AgathaText:
 .KogaText:
 .LanceText:
+; XXX THIS IS PLACEHOLDER TEXT XXX
 	text "Last one?"
 	para "Already?"
 	para "Gimme a break!"
