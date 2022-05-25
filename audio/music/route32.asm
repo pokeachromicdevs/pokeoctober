@@ -404,6 +404,7 @@ Music_Route47_Ch2:
 	sound_ret
 
 .pattern1
+	note_type 12, 10, 7
 	duty_cycle 1
 	stereo_panning TRUE, TRUE
 	octave 1
@@ -523,7 +524,7 @@ Music_Route47_Ch2:
 .pattern5
 	duty_cycle 3
 	stereo_panning TRUE, TRUE
-	note_type 12, 12, 7
+	note_type 12, 10, 7
 	transpose 1, 0
 	octave 2
 	note F_, 6
@@ -602,7 +603,7 @@ Music_Route47_Ch3:
 
 .pattern0
 	stereo_panning FALSE, TRUE
-	note_type 12, 1, 6
+	note_type 12, 2, 5
 	octave 2
 	note F_, 6
 	note C_, 2
@@ -677,13 +678,12 @@ Music_Route47_Ch3:
 	note F_, 16
 	rest 12
 	stereo_panning TRUE, TRUE
-	note_type 12, 1, 6
+	note_type 12, 2, 5
 	octave 3
 	note C_, 4
 	sound_ret
 
 .pattern3
-	note_type 12, 1, 6
 	octave 2
 	note F_, 16
 	note A_, 16
@@ -699,7 +699,7 @@ Music_Route47_Ch3:
 	sound_ret
 
 .pattern4
-	note_type 6, 1, 6
+	note_type 6, 2, 5
 	octave 2
 	note A#, 11
 	rest 1
@@ -709,17 +709,17 @@ Music_Route47_Ch3:
 	rest 1
 	note A#, 5
 	rest 1
-	note_type 12, 1, 6
+	note_type 12, 2, 5
 	note A#, 3
 	note A_, 2
-	note_type 6, 1, 6
+	note_type 6, 2, 5
 	note G#, 11
 	rest 1
 	note F_, 1
 	rest 1
 	note F_, 1
 	rest 1
-	note_type 12, 1, 6
+	note_type 12, 2, 5
 	note A_, 2
 	note G_, 2
 	note F_, 2
@@ -777,22 +777,23 @@ Music_Route47_Ch3:
 	octave 4
 	note F_, 4
 	stereo_panning TRUE, TRUE
+	note_type 12, 2, 5
 	octave 2
 	note G_, 5
 	rest 1
-	note_type 6, 1, 6
+	note_type 6, 2, 5
 	note G_, 1
 	rest 1
 	note G_, 1
 	rest 1
-	note_type 12, 1, 6
+	note_type 12, 2, 5
 	note G_, 3
 	note A_, 3
 	note A#, 2
 	octave 3
 	note C_, 5
 	rest 1
-	note_type 6, 1, 6
+	note_type 6, 2, 5
 	note C_, 1
 	rest 1
 	note C_, 1
@@ -802,7 +803,7 @@ Music_Route47_Ch3:
 	note C_, 5
 	rest 1
 	note C_, 4
-	note_type 12, 1, 6
+	note_type 12, 2, 5
 	sound_ret
 
 Music_Route47_Ch4:
