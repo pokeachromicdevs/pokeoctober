@@ -152,6 +152,8 @@ AddOutdoorSprites:
 	jr .loop
 
 GetFollowerOutdoorSprite:
+	ld a, SPRITE_FOLLOWER
+	ret
 ;	ld a, [wFollowerFlags]
 ;	and a
 ;	ret z

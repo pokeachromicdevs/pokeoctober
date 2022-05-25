@@ -119,4 +119,5 @@ KarenSpriteGFX::               INCBIN "gfx/sprites/karen.2bpp"
 ManchildSpriteGFX::            INCBIN "gfx/sprites/manchild.2bpp"
 SchoolboySpriteGFX::           INCBIN "gfx/sprites/schoolboy.2bpp"
 RockClimberSpriteGFX::         INCBIN "gfx/sprites/rock_climber.2bpp"
+WooperSpriteGFX::         INCBIN "gfx/sprites/pokemon/wooper.2bpp"
 

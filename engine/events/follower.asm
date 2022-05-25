@@ -4,6 +4,6 @@ FollowerScript::
 	jumptextfaceplayer .Text
 
 .Text
-	text "Hello!"
+	text "This"
 	done
 
