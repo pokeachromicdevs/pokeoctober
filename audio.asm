@@ -166,6 +166,10 @@ INCLUDE "audio/music/gymleaderpinch.asm"
 SECTION "More New Songs", ROMX 
 
 INCLUDE "audio/music/mewtwobattle.asm"
+INCLUDE "audio/music/hoohbattle.asm"
+INCLUDE "audio/music/lugiabattle.asm"
+INCLUDE "audio/music/lugiassong.asm"
+INCLUDE "audio/music/kantolegendbattle.asm"
 
 
 SECTION "Sound Effects", ROMX

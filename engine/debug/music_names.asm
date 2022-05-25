@@ -122,3 +122,7 @@ Debug_MusicNames::
 	db "Safari Zone Gate@@"
 	db "Final Pokemon@@@@@"
 	db "Mewtwo Battle@@@@@"
+	db "Ho-Oh Battle@@@@@@"
+	db "Lugia Battle@@@@@@"
+	db "Lugia's Song@@@@@@"
+	db " Battle Kanto Birds@"

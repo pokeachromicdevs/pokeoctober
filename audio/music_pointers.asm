@@ -126,3 +126,7 @@ Music:
 	dba Music_SafariZoneGate
 	dba Music_Pinch
 	dba Music_MewtwoBattleStadium
+	dba Music_HoOhBattleHGSS
+	dba Music_LugiaBattleHGSS
+	dba Music_LugiasSong2000
+	dba Music_KantoLegendBattleXY
