@@ -248,7 +248,7 @@ Music_Route47_Ch1:
 
 .pattern4
 	duty_cycle 0
-	note_type 12, 10, 7
+	note_type 12, 11, 7
 	octave 3
 	note D_, 2
 	octave 2
@@ -322,7 +322,7 @@ Music_Route47_Ch1:
 	octave 4
 	note C_, 6
 	duty_cycle 3
-	note_type 12, 9, 6
+	note_type 12, 9, 4
 	octave 3
 	note A#, 4
 	note A_, 4
@@ -470,10 +470,10 @@ Music_Route47_Ch2:
 	sound_ret
 
 .pattern3
-	note_type 12, 10, 0
+	note_type 12, 12, 0
 	octave 4
 	note F_, 3
-	note_type 12, 10, 7
+	note_type 12, 12, 7
 	note F_, 3
 	note G_, 4
 	note F_, 4
@@ -484,9 +484,9 @@ Music_Route47_Ch2:
 	note A#, 4
 	note A_, 4
 	note G_, 4
-	note_type 12, 10, 0
+	note_type 12, 12, 0
 	note F_, 3
-	note_type 12, 10, 7
+	note_type 12, 12, 7
 	note F_, 3
 	note G_, 4
 	note F_, 4
@@ -498,7 +498,7 @@ Music_Route47_Ch2:
 	sound_ret
 
 .pattern4
-	note_type 12, 10, 7
+	note_type 12, 12, 7
 	octave 4
 	note D_, 6
 	note F_, 4
@@ -572,6 +572,7 @@ Music_Route47_Ch2:
 	note A_, 2
 	note G_, 2
 	stereo_panning FALSE, TRUE
+	note_type 12, 12, 5
 	octave 4
 	note D_, 4
 	note C_, 4
@@ -587,7 +588,6 @@ Music_Route47_Ch2:
 	sound_ret
 
 Music_Route47_Ch3:
-	note_type 12, 15, 0
 	vibrato $18, 3, 4
 .loop
 	sound_call .pattern0
