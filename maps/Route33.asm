@@ -196,7 +196,8 @@ Route33_EncounterKaren:
 	waitbutton
 	closetext
 
-; kurt 
+; kurt
+	hidefollower
 	applymovement PLAYER, .PlayerMovesOutOfWay
 	applymovement ROUTE33_KURT, .KurtGoingHome
 	disappear ROUTE33_KURT
@@ -215,6 +216,8 @@ Route33_EncounterKaren:
 	disappear ROUTE33_BUGSY
 
 	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
+	moveobject FOLLOWER, 43, 11
+	showfollower
 	end
 
 .KarenText1:
