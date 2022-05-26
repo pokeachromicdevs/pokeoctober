@@ -2466,7 +2466,7 @@ wGameTimeFrames::  db ; d4c8
 	ds 2
 
 wCurDay:: db ; d4cb
-wFollowerFlags:: db ; 1 = enabled
+wWhichPartyFollower:: db ; 1 = enabled
 
 wObjectFollow_Leader:: db
 wObjectFollow_Follower:: db
@@ -2520,7 +2520,7 @@ wVariableSprites:: ds $100 - SPRITE_VARS ; d82e
 
 wEnteredMapFromContinue:: db ; d83e
 
-wFollowerPokemonID:: dw
+	ds 2
 
 wTimeOfDayPal:: db ; d841
 	ds 4

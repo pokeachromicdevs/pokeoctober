@@ -112,7 +112,7 @@ MapSetupCommands:
 	dba UpdateFollowerPositionAfterWarp ; 31
 
 UnloadFollowerAsNeeded:
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	ret nz
 	ld a, FOLLOWER

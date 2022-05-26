@@ -3012,7 +3012,7 @@ TMHMPocketName:
 Script_hidefollower:
 ; shortcut to hide follower and play the pokeball sound
 ; no params
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	ret z
 	ld a, FOLLOWER
@@ -3026,7 +3026,7 @@ Script_hidefollower:
 Script_showfollower:
 ; shortcut to show follower and play the pokeball sound
 ; no params
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	ret z
 	ld de, SFX_BALL_POOF
@@ -3039,7 +3039,7 @@ Script_showfollower:
 Script_checkfollower:
 ; = if (which_follower != 0)
 ; no params
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .no_follower
 	ld a, 1

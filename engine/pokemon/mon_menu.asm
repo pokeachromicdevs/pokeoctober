@@ -158,7 +158,7 @@ MonStopFollowAction:
 	jp CancelPokemonAction
 
 MonFollowAction:
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .no_follower_mon
 

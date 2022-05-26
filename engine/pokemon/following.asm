@@ -6,7 +6,7 @@ SetPartyNumberAsFollower::
 	jr z, DisableFollower
 
 ; Follower flags = which number in party is following you
-	ld [wFollowerFlags], a
+	ld [wWhichPartyFollower], a
 
 ; kind of crude check
 	ld a, [wTileLeft]
@@ -81,5 +81,5 @@ DisableFollower::
 	ld a, FOLLOWER
 	call DeleteObjectStruct
 	xor a
-	ld [wFollowerFlags], a
+	ld [wWhichPartyFollower], a
 	ret

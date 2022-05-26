@@ -151,7 +151,7 @@ GetMonSubmenuItems:
 	call AddMonMenuItem
 	ld a, MONMENUITEM_MOVE
 	call AddMonMenuItem
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .add_follow
 

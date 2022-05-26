@@ -17,7 +17,7 @@ _ReplaceKrisSprite::
 	ret
 
 AddFollowSprite:
-;	ld a, [wFollowerFlags]
+;	ld a, [wWhichPartyFollower]
 ;	and a
 ;	ret z
 	ld a, [wUsedSprites + FOLLOWER * 2]
@@ -154,7 +154,7 @@ AddOutdoorSprites:
 GetFollowerOutdoorSprite:
 	ld a, SPRITE_FOLLOWER
 	ret
-;	ld a, [wFollowerFlags]
+;	ld a, [wWhichPartyFollower]
 ;	and a
 ;	ret z
 	ld a, [wFollowerState]
@@ -171,7 +171,7 @@ GetFollowerOutdoorSprite:
 	ld hl, .sprite_table
 	add hl, bc
 	add hl, bc
-	;ld a, [wFollowerFlags]
+	;ld a, [wWhichPartyFollower]
 	;bit FOLLOWER_SWAPPED_F, a
 	;jr nz, .got_sprite
 	inc hl
@@ -252,7 +252,7 @@ GetSprite:
 
 .load_follower_gfx
 	push af
-		ld a, [wFollowerFlags]
+		ld a, [wWhichPartyFollower]
 		and a
 		jr z, .follower_gfx_done ; if disabled, load nothing
 	; find which party mon

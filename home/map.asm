@@ -564,7 +564,7 @@ ReadObjectEvents::
 ; get NUM_OBJECTS - [wCurMapObjectEventCount]
 	ld a, [wCurMapObjectEventCount]
 	ld c, a
-	;ld a, [wFollowerFlags]
+	;ld a, [wWhichPartyFollower]
 	;and a
 	ld a, NUM_OBJECTS - 2
 	;jr nz, .continue
@@ -622,7 +622,7 @@ CopyMapObjectEvents::
 	ret
 
 ClearObjectStructs::
-;	ld a, [wFollowerFlags]
+;	ld a, [wWhichPartyFollower]
 ;	and a
 ;	jr z, .begin_from_start
 	ld hl, wObject2Struct

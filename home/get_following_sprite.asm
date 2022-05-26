@@ -38,12 +38,12 @@ GetFollowingPokemon::
 ; output:
 ;	hl = pokemon index
 
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	ret z
 	ld a, [wCurPartyMon]
 	push af
-		ld a, [wFollowerFlags]
+		ld a, [wWhichPartyFollower]
 		dec a
 		ld [wCurPartyMon], a
 		ld a, MON_SPECIES

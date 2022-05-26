@@ -156,7 +156,7 @@ BillsPCDepositFuncDeposit:
 	call BillsPC_CheckMail_PreventBlackout
 	jp c, BillsPCDepositFuncCancel
 ; adjust follower position
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .deposit
 
@@ -182,7 +182,7 @@ BillsPCDepositFuncDeposit:
 .shift_follower_pos
 	dec c
 	ld a, c
-	ld [wFollowerFlags], a
+	ld [wWhichPartyFollower], a
 
 .deposit
 	call DepositPokemon
@@ -229,7 +229,7 @@ BillsPCDepositFuncRelease:
 	jr nz, .failed_release
 
 ; release follower
-	ld a, [wFollowerFlags]
+	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .release
 	ld c, a
