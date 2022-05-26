@@ -108,6 +108,7 @@ PokecenterNurseScript:
 
 	farwritetext NurseTakePokemonText
 	pause 20
+	hidefollower
 	special StubbedTrainerRankings_Healings
 	turnobject LAST_TALKED, LEFT
 	pause 10
@@ -127,6 +128,9 @@ PokecenterNurseScript:
 	special CheckPokerus
 	iftrue .pokerus
 .no
+	moveobject FOLLOWER, 6, 3
+	showfollower
+	turnobject FOLLOWER, UP
 
 	farwritetext NurseReturnPokemonText
 	pause 20
