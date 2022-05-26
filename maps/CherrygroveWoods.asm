@@ -123,6 +123,12 @@ CherrygroveWoods_MineBlockage:
 	line "limits."
 	done
 
+CherrygroveWoodsPsnCure1:
+	fruittree FRUITTREE_CHERRYGROVE_WOODS_1
+
+CherrygroveWoodsPsnCure2:
+	fruittree FRUITTREE_CHERRYGROVE_WOODS_2
+
 CherrygroveWoods_MapEvents:
 	db 0, 0 ; filler
 
@@ -142,7 +148,9 @@ CherrygroveWoods_MapEvents:
 	bg_event 43,  5, BGEVENT_READ, CherrygroveWoods_Sign2
 	bg_event 33, 13, BGEVENT_READ, CherrygroveMinesSign
 
-	db 3 ; object events
+	db 5 ; object events
 	object_event 10, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherLenny, -1
 	object_event  42, 8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherTimothy, -1
 	object_event  30, 10, SPRITE_OFFICER,     SPRITEMOVEDATA_STANDING_DOWN,  0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT,  0, CherrygroveWoods_MineBlockage, -1
+	object_event 17,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsPsnCure1, -1
+	object_event 47,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsPsnCure1, -1
