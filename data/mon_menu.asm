@@ -22,6 +22,8 @@ MonMenuOptions:
 	dbbw MONMENU_MENUOPTION, MONMENUITEM_CANCEL,     .cancel
 	dbbw MONMENU_MENUOPTION, MONMENUITEM_MOVE,       .move
 	dbbw MONMENU_MENUOPTION, MONMENUITEM_MAIL,       .mail
+	dbbw MONMENU_MENUOPTION, MONMENUITEM_FOLLOW,     .follow
+	dbbw MONMENU_MENUOPTION, MONMENUITEM_STOP_FOLLOW,     .stopfollow
 	dbbw MONMENU_MENUOPTION, MONMENUITEM_ERROR,      .error
 	db -1
 
@@ -32,3 +34,5 @@ MonMenuOptions:
 .move:   db "MOVE@"
 .mail:   db "MAIL@"
 .error:  db "ERROR!@"
+.follow: db "TAG ALONG@"
+.stopfollow: db "RECALL@"

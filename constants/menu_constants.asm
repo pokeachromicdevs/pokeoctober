@@ -62,7 +62,9 @@
 	const MONMENUITEM_CANCEL     ; 18
 	const MONMENUITEM_MOVE       ; 19
 	const MONMENUITEM_MAIL       ; 20
-	const MONMENUITEM_ERROR      ; 21
+	const MONMENUITEM_FOLLOW     ; 21
+	const MONMENUITEM_STOP_FOLLOW     ; 22
+	const MONMENUITEM_ERROR      ; 23
 
 ; MonMenuOptions categories
 MONMENU_FIELD_MOVE EQU 0

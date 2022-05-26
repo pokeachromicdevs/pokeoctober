@@ -680,6 +680,7 @@ PokegearGFX:
 INCBIN "gfx/pokegear/pokegear.2bpp.lz"
 
 INCLUDE "engine/pokemon/european_mail.asm"
+INCLUDE "engine/pokemon/following.asm"
 
 
 SECTION "Battle Tower Text", ROMX
@@ -715,7 +716,8 @@ INCLUDE "engine/16/table_functions.asm"
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/pokedex/new_pokedex_entry.asm"
 
-
+SECTION "Pokemon Follow Sprites", ROMX
+INCLUDE "data/pokemon/follow_sprite_pointers.asm"
 
 SECTION "Debug Menu", ROMX
 if DEF(_DEBUG)

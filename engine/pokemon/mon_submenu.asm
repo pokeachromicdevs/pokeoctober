@@ -151,6 +151,29 @@ GetMonSubmenuItems:
 	call AddMonMenuItem
 	ld a, MONMENUITEM_MOVE
 	call AddMonMenuItem
+	ld a, [wFollowerFlags]
+	and a
+	jr z, .add_follow
+
+	push bc
+		ld c, a
+		dec c
+		ld a, [wCurPartyMon]
+		cp c
+	pop bc
+	jr nz, .add_follow
+
+; follower == selected party slot
+	ld a, MONMENUITEM_STOP_FOLLOW
+	call AddMonMenuItem
+	jr .skip_follow
+
+.add_follow
+; follower != selected party slot
+	ld a, MONMENUITEM_FOLLOW
+	call AddMonMenuItem
+
+.skip_follow
 	ld a, [wLinkMode]
 	and a
 	jr nz, .skip2

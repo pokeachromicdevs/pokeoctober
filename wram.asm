@@ -2519,7 +2519,9 @@ wObjectMasks:: ds NUM_OBJECTS ; d81e
 wVariableSprites:: ds $100 - SPRITE_VARS ; d82e
 
 wEnteredMapFromContinue:: db ; d83e
-	ds 2
+
+wFollowerPokemonID:: dw
+
 wTimeOfDayPal:: db ; d841
 	ds 4
 wTimeOfDayPalFlags:: db ; d846

@@ -147,36 +147,24 @@ Debug_Credits:
 	end
 
 Debug_ToggleFollow:
+	ld a, [wPartyCount]
+	and a
+	jp z, .no_pokes
+
 	ld hl, .ToggleFollowText
 	call PrintText
 	call .yesno
 
 	jr nz, .disable
 .enable
-; fix position of follow obj
-	ld b, FOLLOWER
-	ld a, [wXCoord]
-	add 4
-	ld d, a
-	ld a, [wYCoord]
-	add 4
-	ld e, a
-	farcall CopyDECoordsToMapObject
-	ld a, FOLLOWER
-	call _CopyObjectStruct
-	ld a, 1
-	ld [wFollowerFlags], a
-
+	ld b, 1 ; first pokemon in party
+	callfar SetPartyNumberAsFollower
 	ld hl, .FollowEnaText
 	call PrintText
 	ret
 
 .disable
-	ld a, FOLLOWER
-	call DeleteObjectStruct
-	xor a
-	ld [wFollowerFlags], a
-
+	callfar DisableFollower
 	ld hl, .FollowDisaText
 	call PrintText
 	ret
@@ -188,6 +176,17 @@ Debug_ToggleFollow:
 	dec a
 	and a
 	ret
+
+.no_pokes
+	ld hl, .NoPokesText
+	call PrintText
+	ret
+
+.NoPokesText:
+	text "You need to have"
+	line "at least one"
+	cont "#MON first."
+	prompt
 
 .ToggleFollowText:
 	text "Toggle following?"

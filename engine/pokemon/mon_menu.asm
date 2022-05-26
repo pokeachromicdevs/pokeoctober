@@ -140,6 +140,69 @@ PokemonActionSubmenu:
 	dbw MONMENUITEM_CANCEL,     CancelPokemonAction
 	dbw MONMENUITEM_MOVE,       ManagePokemonMoves
 	dbw MONMENUITEM_MAIL,       MonMailAction
+	dbw MONMENUITEM_FOLLOW,     MonFollowAction
+	dbw MONMENUITEM_STOP_FOLLOW,     MonStopFollowAction
+
+MonStopFollowAction:
+	callfar DisableFollower
+
+	call WaitSFX
+	ld de, SFX_BALL_POOF
+	call PlaySFX
+	call GetCurNick
+	ld hl, wStringBuffer1
+	ld de, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	ld hl, MonStopsFollowingText
+	call PrintText
+	jp CancelPokemonAction
+
+MonFollowAction:
+	ld a, [wFollowerFlags]
+	and a
+	jr z, .no_follower_mon
+
+; show old pokemon being recalled
+	dec a
+	ld hl, wPartyMonNicknames
+	call GetNick
+	ld hl, wStringBuffer1
+	ld de, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+
+	call WaitSFX
+	ld de, SFX_BALL_POOF
+	call PlaySFX
+	ld hl, MonStopsFollowingText
+	call PrintText
+
+.no_follower_mon
+	ld a, [wCurPartyMon] ; index of mon
+	inc a ; 0-indexed, so +1
+	ld b, a
+	callfar SetPartyNumberAsFollower
+
+	call WaitSFX
+	ld de, SFX_BALL_POOF
+	call PlaySFX
+	call WaitSFX
+	ld a, [wCurPartySpecies]
+	call GetCryIndex
+	jr c, .skip_cry
+	ld e, c
+	ld d, b
+	call PlayCry
+.skip_cry
+	call GetCurNick
+	ld hl, wStringBuffer1
+	ld de, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	ld hl, MonIsFollowingText
+	call PrintText
+	jp CancelPokemonAction
 
 SwitchPartyMons:
 ; Don't try if there's nothing to switch!
@@ -401,6 +464,14 @@ ItemStorageIsFullText:
 
 TookFromText:
 	text_far UnknownText_0x1c1bc4
+	text_end
+
+MonIsFollowingText:
+	text_far _MonIsFollowingText
+	text_end
+
+MonStopsFollowingText:
+	text_far _MonStopsFollowingText
 	text_end
 
 SwitchAlreadyHoldingText:

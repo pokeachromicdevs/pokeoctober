@@ -25,8 +25,7 @@ hSeconds:: db ; ff98
 
 hVBlankCounter:: db ; ff9b
 
-	ds 1
-
+hSavedROMBank:: db
 hROMBank:: db ; ff9d
 hVBlank:: db ; ff9e
 hMapEntryMethod:: db ; ff9f

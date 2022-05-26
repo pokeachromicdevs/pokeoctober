@@ -314,7 +314,7 @@ ROMX $7d
 	"Cries"
 	"Extra Songs 1"
 ROMX $7e
-	"Crystal Events"
+	"Pokemon Follow Sprites"
 ROMX $7f
 	"Pokemon"
 	org $7de0

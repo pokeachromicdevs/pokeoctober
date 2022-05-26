@@ -59,8 +59,19 @@ SpawnFollower::
 	ld hl, FollowObjTemplate
 	call CopyPlayerObjectTemplate
 	ld b, FOLLOWER
-	jr PlayerSpawn_ConvertCoords
+	call PlayerSpawn_ConvertCoords
 
+; fallthru
+
+ChangeFollowerColor::
+	ld a, FOLLOWER_OBJECT
+	call GetMapObject
+	ld hl, MAPOBJECT_COLOR
+	add hl, bc
+	ln e, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT
+	ld [hl], e
+	ret
+	
 PlayerObjectTemplate:
 ; A dummy map object used to initialize the player object.
 ; Shorter than the actual amount copied by two bytes.

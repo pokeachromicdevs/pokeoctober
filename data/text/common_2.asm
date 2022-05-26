@@ -1448,6 +1448,20 @@ UnknownText_0x1c1bdc::
 	line "Switch items?"
 	done
 
+_MonIsFollowingText::
+	text_ram wMonOrItemNameBuffer
+	text " tags"
+	line "along with you."
+	prompt
+
+_MonStopsFollowingText::
+	text "You put @"
+	text_ram wMonOrItemNameBuffer
+	text ""
+	line "back into the #"
+	cont "BALL."
+	prompt
+
 UnknownText_0x1c1c09::
 	text "This item can't be"
 	line "held."
