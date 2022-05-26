@@ -1104,3 +1104,18 @@ tmhmtotext: MACRO
 	db \1 ; tmhm
 	db \2 ; memory
 ENDM
+
+	enum hidefollower_command
+hidefollower: MACRO
+	db hidefollower_command
+ENDM
+
+	enum showfollower_command
+showfollower: MACRO
+	db showfollower_command
+ENDM
+
+	enum checkfollower_command
+checkfollower: MACRO
+	db checkfollower_command
+ENDM

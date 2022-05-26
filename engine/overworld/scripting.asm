@@ -240,6 +240,9 @@ ScriptCommandTable:
 	dw Script_verbosegivetmhm            ; ae
 	dw Script_tmhmnotify                 ; af
 	dw Script_tmhmtotext                 ; b0
+	dw Script_hidefollower               ; b1
+	dw Script_showfollower               ; b2
+	dw Script_checkfollower              ; b3
 
 StartScript:
 	ld hl, wScriptFlags
@@ -3005,3 +3008,41 @@ GetTMHMPocketName:
 
 TMHMPocketName:
 	db "TM POCKET@"
+
+Script_hidefollower:
+; shortcut to hide follower and play the pokeball sound
+; no params
+	ld a, [wFollowerFlags]
+	and a
+	ret z
+	ld a, FOLLOWER
+	call DeleteObjectStruct
+	ld de, SFX_BALL_POOF
+	call WaitPlaySFX
+	call WaitSFX
+	ret
+
+Script_showfollower:
+; shortcut to show follower and play the pokeball sound
+; no params
+	ld a, [wFollowerFlags]
+	and a
+	ret z
+	ld de, SFX_BALL_POOF
+	call WaitPlaySFX
+	ld a, FOLLOWER
+	call _CopyObjectStruct
+	call WaitSFX
+	ret
+
+Script_checkfollower:
+; = if (which_follower != 0)
+; no params
+	ld a, [wFollowerFlags]
+	and a
+	jr z, .no_follower
+	ld a, 1
+.no_follower
+	ld [wScriptVar], a
+	ret
+
