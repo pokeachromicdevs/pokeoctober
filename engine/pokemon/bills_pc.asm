@@ -155,6 +155,36 @@ BillsPCDepositJumptable:
 BillsPCDepositFuncDeposit:
 	call BillsPC_CheckMail_PreventBlackout
 	jp c, BillsPCDepositFuncCancel
+; adjust follower position
+	ld a, [wFollowerFlags]
+	and a
+	jr z, .deposit
+
+	ld c, a
+	ld a, [wCurPartyMon]
+	inc a
+	cp c
+	jr nz, .not_follower_mon
+
+	ld de, PCString_PKMNIsFollowing
+	call BillsPC_PlaceString
+	ld de, SFX_WRONG
+	call WaitPlaySFX
+	call WaitSFX
+	ld c, 50
+	call DelayFrames
+	jp BillsPCDepositFuncCancel
+
+.not_follower_mon
+	jr c, .shift_follower_pos
+	jr .deposit
+
+.shift_follower_pos
+	dec c
+	ld a, c
+	ld [wFollowerFlags], a
+
+.deposit
 	call DepositPokemon
 	jr c, .box_full
 	ld a, $0
@@ -197,6 +227,20 @@ BillsPCDepositFuncRelease:
 	call ExitMenu
 	and a
 	jr nz, .failed_release
+
+; release follower
+	ld a, [wFollowerFlags]
+	and a
+	jr z, .release
+	ld c, a
+	ld a, [wCurPartyMon]
+	inc a
+	cp c
+	jr nz, .release
+
+	callfar DisableFollower
+
+.release
 	ld a, [wBillsPC_CursorPosition]
 	ld hl, wBillsPC_ScrollPosition
 	add [hl]
@@ -2288,6 +2332,7 @@ PCString_Non: db "Non.@"
 PCString_BoxFull: db "The BOX is full.@"
 PCString_PartyFull: db "The party's full!@"
 PCString_NoReleasingEGGS: db "No releasing EGGS!@"
+PCString_PKMNIsFollowing: db "<PK><MN> follows you!@"
 
 _ChangeBox:
 	call LoadStandardMenuHeader

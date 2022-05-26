@@ -146,9 +146,8 @@ PokemonActionSubmenu:
 MonStopFollowAction:
 	callfar DisableFollower
 
-	call WaitSFX
 	ld de, SFX_BALL_POOF
-	call PlaySFX
+	call WaitPlaySFX
 	call GetCurNick
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
@@ -172,9 +171,8 @@ MonFollowAction:
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 
-	call WaitSFX
 	ld de, SFX_BALL_POOF
-	call PlaySFX
+	call WaitPlaySFX
 	ld hl, MonStopsFollowingText
 	call PrintText
 
@@ -184,9 +182,8 @@ MonFollowAction:
 	ld b, a
 	callfar SetPartyNumberAsFollower
 
-	call WaitSFX
 	ld de, SFX_BALL_POOF
-	call PlaySFX
+	call WaitPlaySFX
 	call WaitSFX
 	ld a, [wCurPartySpecies]
 	call GetCryIndex

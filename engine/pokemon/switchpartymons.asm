@@ -14,6 +14,12 @@ _SwitchPartyMons:
 	ld a, [wBuffer2]
 	call .ClearSprite
 .skip
+; reflect the changes in the follower flag
+	ld a, [wFollowerFlags]
+	and a
+	ret z
+	ld a, [wMenuCursorY]
+	ld [wFollowerFlags], a
 	ret
 
 .ClearSprite:
