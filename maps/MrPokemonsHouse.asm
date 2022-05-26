@@ -111,12 +111,21 @@ MrPokemonsHouse_OakScript:
 	waitbutton
 	closetext
 	turnobject PLAYER, DOWN
+	checkfollower
+	iffalse .no_follower2
+	turnobject FOLLOWER, RIGHT
+	applymovement FOLLOWER, MrPokemonsHouse_FollowerMovesOutOfWay
+.no_follower2
 	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
 	playsound SFX_EXIT_BUILDING
 	disappear MRPOKEMONSHOUSE_OAK
 	waitsfx
 	special RestartMapMusic
 	pause 15
+	checkfollower
+	iffalse .no_follower3
+	applymovement FOLLOWER, MrPokemonsHouse_FollowerMovesOutOfWay2
+.no_follower3
 	turnobject PLAYER, UP
 	opentext
 	writetext MrPokemonsHouse_MrPokemonHealText
@@ -155,6 +164,15 @@ MrPokemonsHouse_PlayerWalksToMrPokemon:
 	step UP
 	step_end
 
+MrPokemonsHouse_FollowerMovesOutOfWay:
+	fix_facing
+	step LEFT
+	remove_fixed_facing
+	step_end
+
+MrPokemonsHouse_FollowerMovesOutOfWay2:
+	step UP
+	step_end
 
 MrPokemonsHouse_OakWalksToFollower:
 	step DOWN
