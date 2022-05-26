@@ -87,8 +87,20 @@ MrPokemonsHouse_OakScript:
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext MrPokemonsHouse_OakText1
-	buttonsound
-	waitsfx
+	waitbutton
+	closetext
+	checkfollower
+	iffalse .no_follower
+	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksToFollower
+	turnobject FOLLOWER, RIGHT
+	pause 30
+	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksBackToPlayer
+	turnobject FOLLOWER, UP
+.no_follower
+	opentext
+	writetext MrPokemonsHouse_OakText1b
+	waitbutton
+	closetext
 	opentext
 	writetext MrPokemonsHouse_GetDexText
 	giveitem OAKS_PARCEL
@@ -141,6 +153,17 @@ MrPokemonsHouse_StrangeCoins:
 MrPokemonsHouse_PlayerWalksToMrPokemon:
 	step RIGHT
 	step UP
+	step_end
+
+
+MrPokemonsHouse_OakWalksToFollower:
+	step DOWN
+	turn_head LEFT
+	step_end
+
+MrPokemonsHouse_OakWalksBackToPlayer:
+	step UP
+	turn_head LEFT
 	step_end
 
 MrPokemonsHouse_OakWalksToPlayer:
@@ -245,8 +268,10 @@ MrPokemonsHouse_OakText1:
 	cont "examining #MON."
 
 	para "Let's see here…"
-	
-	para "Oh my! That's one"
+	done
+
+MrPokemonsHouse_OakText1b:
+	text "Oh my! That's one"
 	line "happy #MON"
 	cont "indeed! You really"
 
