@@ -374,6 +374,9 @@ Route29Sign1Text:
 
 	para "CHERRYGROVE CITY -"
 	line "SILENT TOWN"
+
+	para "CHERRYGROVE WOODS"
+	line "In Between"
 	done
 	
 YoungsterJoey1SeenText:
