@@ -33,3 +33,24 @@ GetFollowingSprite::
 	ld a, [hSavedROMBank]
 	rst Bankswitch
 	ret
+
+GetFollowingPokemon::
+; output:
+;	hl = pokemon index
+
+	ld a, [wFollowerFlags]
+	and a
+	ret z
+	ld a, [wCurPartyMon]
+	push af
+		ld a, [wFollowerFlags]
+		dec a
+		ld [wCurPartyMon], a
+		ld a, MON_SPECIES
+		call GetPartyParamLocation
+	pop af
+	scf
+	ccf
+	ld [wCurPartyMon], a
+	ld a, [hl]
+	jp GetPokemonIndexFromID

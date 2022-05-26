@@ -272,8 +272,8 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BELLEDAM
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CLEFLING
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MALLODY
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CAMOUFLAKE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;COALTA
+	follow_sprite WooperSpriteGFX, PAL_OW_SILVER  ;CAMOUFLAKE
+	follow_sprite WooperSpriteGFX, PAL_OW_RED ;COALTA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BURGELA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VULPIII
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;WORFURS

@@ -255,29 +255,13 @@ GetSprite:
 		ld a, [wFollowerFlags]
 		and a
 		jr z, .follower_gfx_done ; if disabled, load nothing
-
 	; find which party mon
-		ld a, [wCurPartyMon]
-		push af
-			ld a, [wFollowerFlags]
-			dec a
-			ld [wCurPartyMon], a
-			ld a, MON_SPECIES
-			call GetPartyParamLocation
-		pop af
-		ld [wCurPartyMon], a
-
-		ld a, [hl]
-		call GetPokemonIndexFromID ; 16 bit -> hl
-
+		call GetFollowingPokemon
 		call GetFollowingSprite ; c was color of sprite
-
  ; always walking sprite
 		ld c, 12
 		ld l, WALKING_SPRITE
-
 		ld h, b
-
 .follower_gfx_done
 	pop af
 	ret

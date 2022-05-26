@@ -64,11 +64,22 @@ SpawnFollower::
 ; fallthru
 
 ChangeFollowerColor::
+	push bc
+		call GetFollowingPokemon
+		call GetFollowingSprite ; c contains color
+
+		ld a, c
+	; assume we're using PAL_OW_* constants
+		set 3, a
+		swap a
+		add OBJECTTYPE_SCRIPT
+		ld e, a
+	pop bc
+
 	ld a, FOLLOWER_OBJECT
 	call GetMapObject
 	ld hl, MAPOBJECT_COLOR
 	add hl, bc
-	ln e, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT
 	ld [hl], e
 	ret
 	

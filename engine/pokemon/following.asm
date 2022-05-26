@@ -17,6 +17,7 @@ SetPartyNumberAsFollower::
 	add 4
 	ld e, a
 	farcall CopyDECoordsToMapObject
+	farcall ChangeFollowerColor
 	ld a, FOLLOWER
 	call _CopyObjectStruct
 	ret
