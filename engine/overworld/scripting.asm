@@ -3017,6 +3017,7 @@ Script_hidefollower:
 	ret z
 	ld a, FOLLOWER
 	call DeleteObjectStruct
+	call UpdateSprites
 	ld de, SFX_BALL_POOF
 	call WaitPlaySFX
 	call WaitSFX
