@@ -155,22 +155,22 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DRAGONITE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEWTWO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEW
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CHIKORITA
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PETAMOLE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEGANIUM
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CYNDAQUIL
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;QUILAVA
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TYPHLOSION
+	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;CHIKORITA
+	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;PETAMOLE
+	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;MEGANIUM
+	follow_sprite WooperSpriteGFX, PAL_OW_RED ;CYNDAQUIL
+	follow_sprite WooperSpriteGFX, PAL_OW_RED ;QUILAVA
+	follow_sprite WooperSpriteGFX, PAL_OW_RED ;TYPHLOSION
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TOTODILE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CROCONAW
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FERALIGATR
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BAYLEEF
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SENTRET
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FURRET
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;HOOTHOOT
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NOCTOWL
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;LEDYBA
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;LEDIAN
+	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;BAYLEEF
+	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;SENTRET
+	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;FURRET
+	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;HOOTHOOT
+	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;NOCTOWL
+	follow_sprite WooperSpriteGFX, PAL_OW_RED ;LEDYBA
+	follow_sprite WooperSpriteGFX, PAL_OW_RED ;LEDIAN
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SPINARAK
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;ARIADOS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CROBAT
