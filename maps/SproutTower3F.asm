@@ -63,6 +63,7 @@ SproutTowerF3FleeFeather:
 
 SproutTower3F_RivalBattle:
 .West:
+	hidefollower ; easier than dealing with follower movement
 	appear SPROUT_TOWER_3F_RIVAL
 	playsound SFX_EXIT_BUILDING
 	turnobject PLAYER, RIGHT
@@ -74,6 +75,8 @@ SproutTower3F_RivalBattle:
 	applymovement SPROUT_TOWER_3F_RIVAL, .RivalGoesHomeWest
 	disappear SPROUT_TOWER_3F_RIVAL
 	playmapmusic
+	moveobject FOLLOWER, 12, 13
+	showfollower
 	end
 
 .North:
@@ -150,7 +153,7 @@ SproutTower3F_RivalBattle:
 
 	setscene SCENE_SPROUT_TOWER_3F_BATTLED_RIVAL
 	end
-	
+
 .BackOffWest:
 	fix_facing
 	step LEFT
