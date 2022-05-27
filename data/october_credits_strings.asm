@@ -93,7 +93,9 @@ OctoberCredits_StringTable:
 			; water sport, safari zone, tm/hm bitflags
 		dw .Reforged, .Blank
 			; move animations, sprites
-
+		   .Pokebrass, .Blank
+		    ; follower OWs
+		   
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
@@ -163,6 +165,7 @@ OctoberCredits_StringTable:
 .Poket:         db "        POKET       ";;
 .CoralDev:      db "       CORALDEV     ";;
 .Reforged:      db "   G/S '97 REFORGED ";;
+.Pokebrass:     db "  POKEBRASS PROJECT ";;
 .TCRF:          db "        TCRF        ";; no beytah, bad daytah
 ;.FourCh:        db "     4CHAN /VP/     ";;
 .Pret:          db "        PRET        ";;
