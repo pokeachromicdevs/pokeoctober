@@ -11,8 +11,8 @@ FollowSpritePointers::
 	follow_sprite CharmeleonSpriteGFX, PAL_OW_RED ;CHARMELEON
 	follow_sprite CharizardSpriteGFX, PAL_OW_RED ;CHARIZARD
 	follow_sprite SquirtleSpriteGFX, PAL_OW_BLUE ;SQUIRTLE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;WARTORTLE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BLASTOISE
+	follow_sprite WartortleSpriteGFX, PAL_OW_BLUE ;WARTORTLE
+	follow_sprite BlastoiseSpriteGFX, PAL_OW_BLUE ;BLASTOISE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CATERPIE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;METAPOD
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BUTTERFREE

@@ -95,9 +95,6 @@ OctoberCredits_StringTable:
 			; move animations, sprites
 		dw .Pokebrass, .Blank
 		    ; follower OWs
-		dw .EvoYellow, .Blank
-			; raichu and meowth, persian walking
-			
 		   
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -111,7 +108,7 @@ OctoberCredits_StringTable:
 	dw .SpecialThanks, .Blank
 		dw .Gelius, .Blank
 			; cherrygrove woods
-	;	dw .FourCh, .Blank
+		dw .FourCh, .Blank
 			; based leakers
 		dw .Pret, .Blank
 			; pokecrystal disassembly
@@ -169,9 +166,8 @@ OctoberCredits_StringTable:
 .CoralDev:      db "       CORALDEV     ";;
 .Reforged:      db "   G/S '97 REFORGED ";;
 .Pokebrass:     db "  POKEBRASS PROJECT ";;
-.EvoYellow:     db "      EVO YELLOW    ";;
 .TCRF:          db "        TCRF        ";; no beytah, bad daytah
-;.FourCh:        db "     4CHAN /VP/     ";;
+.FourCh:        db "     4CHAN /VP/     ";;
 .Pret:          db "        PRET        ";;
 .AX6:           db "        AX6         ";;
 .ThanksFor1:    db " THANKS FOR PLAYING!";;

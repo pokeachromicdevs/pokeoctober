@@ -138,6 +138,9 @@ MeowthSpriteGFX::              INCBIN "gfx/sprites/pokemon/meowth.2bpp"
 RaichuSpriteGFX::              INCBIN "gfx/sprites/pokemon/raichu.2bpp"
 PersianSpriteGFX::             INCBIN "gfx/sprites/pokemon/persian.2bpp"
 SquirtleSpriteGFX::            INCBIN "gfx/sprites/pokemon/squirtle.2bpp"
+WartortleSpriteGFX::           INCBIN "gfx/sprites/pokemon/wartortle.2bpp"
+BlastoiseSpriteGFX::           INCBIN "gfx/sprites/pokemon/blastoise.2bpp"
+
 
 
 
