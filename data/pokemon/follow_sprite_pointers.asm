@@ -136,7 +136,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;GYARADOS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;LAPRAS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DITTO
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;EEVEE
+	follow_sprite EeveeSpriteGFX, PAL_OW_BROWN ;EEVEE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VAPOREON
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;JOLTEON
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FLAREON
@@ -264,7 +264,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TYRANITAR
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;LUGIA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;HO_OH
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CELEBI
+	follow_sprite CelebiSpriteGFX, PAL_OW_BROWN;CELEBI
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;COINPUR
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;ADBARSTORK
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PUPPERON
