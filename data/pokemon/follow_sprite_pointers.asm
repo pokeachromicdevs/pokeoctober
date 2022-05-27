@@ -10,7 +10,7 @@ FollowSpritePointers::
 	follow_sprite CharmanderSpriteGFX, PAL_OW_RED ;CHARMANDER
 	follow_sprite CharmeleonSpriteGFX, PAL_OW_RED ;CHARMELEON
 	follow_sprite CharizardSpriteGFX, PAL_OW_RED ;CHARIZARD
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SQUIRTLE
+	follow_sprite SquirtleSpriteGFX, PAL_OW_BLUE ;SQUIRTLE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;WARTORTLE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BLASTOISE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CATERPIE
@@ -29,7 +29,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;EKANS 
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;ARBOK
 	follow_sprite PikachuSpriteGFX, PAL_OW_RED ;PIKACHU
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;RAICHU
+	follow_sprite RaichuSpriteGFX, PAL_OW_RED ;RAICHU
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SANDSHREW
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SANDSLASH
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORAN_F
@@ -55,8 +55,8 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VENOMOTH
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DIGLETT
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DUGTRIO
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEOWTH
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PERSIAN
+	follow_sprite MeowthSpriteGFX, PAL_OW_BROWN ;MEOWTH
+	follow_sprite PersianSpriteGFX, PAL_OW_BROWN ;PERSIAN
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PSYDUCK
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;GOLDUCK
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MANKEY

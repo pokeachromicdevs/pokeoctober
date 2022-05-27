@@ -134,6 +134,12 @@ IvysaurSpriteGFX::             INCBIN "gfx/sprites/pokemon/ivysaur.2bpp"
 VenusaurSpriteGFX::            INCBIN "gfx/sprites/pokemon/venusaur.2bpp"
 CharmanderSpriteGFX::          INCBIN "gfx/sprites/pokemon/charmander.2bpp"
 CharmeleonSpriteGFX::          INCBIN "gfx/sprites/pokemon/charmeleon.2bpp"
+MeowthSpriteGFX::              INCBIN "gfx/sprites/pokemon/meowth.2bpp"
+RaichuSpriteGFX::              INCBIN "gfx/sprites/pokemon/raichu.2bpp"
+PersianSpriteGFX::             INCBIN "gfx/sprites/pokemon/persian.2bpp"
+SquirtleSpriteGFX::            INCBIN "gfx/sprites/pokemon/squirtle.2bpp"
+
+
 
 
 

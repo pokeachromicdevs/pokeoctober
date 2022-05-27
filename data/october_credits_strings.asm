@@ -93,8 +93,11 @@ OctoberCredits_StringTable:
 			; water sport, safari zone, tm/hm bitflags
 		dw .Reforged, .Blank
 			; move animations, sprites
-		   .Pokebrass, .Blank
+		dw .Pokebrass, .Blank
 		    ; follower OWs
+		dw .EvoYellow, .Blank
+			; raichu and meowth, persian walking
+			
 		   
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -166,6 +169,7 @@ OctoberCredits_StringTable:
 .CoralDev:      db "       CORALDEV     ";;
 .Reforged:      db "   G/S '97 REFORGED ";;
 .Pokebrass:     db "  POKEBRASS PROJECT ";;
+.EvoYellow:     db "      EVO YELLOW    ";;
 .TCRF:          db "        TCRF        ";; no beytah, bad daytah
 ;.FourCh:        db "     4CHAN /VP/     ";;
 .Pret:          db "        PRET        ";;
