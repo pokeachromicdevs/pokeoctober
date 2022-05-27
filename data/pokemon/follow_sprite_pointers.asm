@@ -4,12 +4,12 @@ follow_sprite: MACRO
 ENDM
 
 FollowSpritePointers::
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BULBASAUR
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;IVYSAUR
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VENUSAUR
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CHARMANDER
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CHARMELEON
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CHARIZARD
+	follow_sprite BulbasaurSpriteGFX, PAL_OW_GREEN ;BULBASAUR
+	follow_sprite IvysaurSpriteGFX, PAL_OW_GREEN ;IVYSAUR
+	follow_sprite VenusaurSpriteGFX, PAL_OW_GREEN ;VENUSAUR
+	follow_sprite CharmanderSpriteGFX, PAL_OW_RED ;CHARMANDER
+	follow_sprite CharmeleonSpriteGFX, PAL_OW_RED ;CHARMELEON
+	follow_sprite CharizardSpriteGFX, PAL_OW_RED ;CHARIZARD
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SQUIRTLE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;WARTORTLE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BLASTOISE
@@ -26,9 +26,9 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;RATICATE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SPEAROW
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FEAROW
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;EKANS
+	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;EKANS 
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;ARBOK
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PIKACHU
+	follow_sprite PikachuSpriteGFX, PAL_OW_RED ;PIKACHU
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;RAICHU
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SANDSHREW
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SANDSLASH
