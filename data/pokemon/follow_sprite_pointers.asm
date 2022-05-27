@@ -38,8 +38,8 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORAN_M
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORINO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDOKING
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CLEFAIRY
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CLEFABLE
+	follow_sprite ClefairySpriteGFX, PAL_OW_RED ;CLEFAIRY
+	follow_sprite WooperSpriteGFX, PAL_OW_RED ;CLEFABLE,
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VULPIX
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NINETALES
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;JIGGLYPUFF
@@ -86,7 +86,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SLOWBRO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MAGNEMITE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MAGNETON
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FARFETCH_D
+	follow_sprite FarfetchdSpriteGFX, PAL_OW_BROWN;FARFETCH_D
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DODUO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DODRIO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SEEL

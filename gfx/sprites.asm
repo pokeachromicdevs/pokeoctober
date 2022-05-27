@@ -121,7 +121,8 @@ SchoolboySpriteGFX::           INCBIN "gfx/sprites/schoolboy.2bpp"
 RockClimberSpriteGFX::         INCBIN "gfx/sprites/rock_climber.2bpp"
 WooperSpriteGFX::         	   INCBIN "gfx/sprites/pokemon/wooper.2bpp"
 CelebiSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/celebi.2bpp"
-EeveeSpriteGFX:: `			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"
-
+EeveeSpriteGFX::			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"
+FarfetchdSpriteGFX::		   INCBIN "gfx/sprites/pokemon/farfetch_d.2bpp"
+ClefairySpriteGFX::		       INCBIN "gfx/sprites/pokemon/clefairy.2bpp"
 
 
