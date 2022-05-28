@@ -323,7 +323,6 @@ INCLUDE "engine/battle/battlestart_copytilemapatonce.asm"
 INCLUDE "engine/gfx/sprites.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
 
-
 SECTION "bank24", ROMX
 
 INCLUDE "engine/phone/phone.asm"

@@ -156,6 +156,7 @@ ArbokSpriteGFX::               INCBIN "gfx/sprites/pokemon/arbok.2bpp"
 ClefableSpriteGFX::            INCBIN "gfx/sprites/pokemon/clefable.2bpp"
 SandshrewSpriteGFX::           INCBIN "gfx/sprites/pokemon/sandshrew.2bpp"
 SandslashSpriteGFX::           INCBIN "gfx/sprites/pokemon/sandslash.2bpp"
+NidoranFSpriteGFX::            INCBIN "gfx/sprites/pokemon/nidoran_f.2bpp"
 
 
 SECTION "Followers Johto", ROMX
