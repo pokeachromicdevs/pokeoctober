@@ -157,12 +157,17 @@ ClefableSpriteGFX::            INCBIN "gfx/sprites/pokemon/clefable.2bpp"
 SandshrewSpriteGFX::           INCBIN "gfx/sprites/pokemon/sandshrew.2bpp"
 SandslashSpriteGFX::           INCBIN "gfx/sprites/pokemon/sandslash.2bpp"
 NidoranFSpriteGFX::            INCBIN "gfx/sprites/pokemon/nidoran_f.2bpp"
-
+NidorinaSpriteGFX::            INCBIN "gfx/sprites/pokemon/nidorina.2bpp"
+NidoqueenSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoqueen.2bpp"
+NidoranMSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoran_m.2bpp"
+NidorinoSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidorino.2bpp"
+NidokingSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoking.2bpp"
 
 SECTION "Followers Johto", ROMX
 
 WooperSpriteGFX::         	   INCBIN "gfx/sprites/pokemon/wooper.2bpp"
 CelebiSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/celebi.2bpp"
+YanmaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/yanma.2bpp"
 
 
 

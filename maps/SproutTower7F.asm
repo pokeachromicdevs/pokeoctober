@@ -2,7 +2,6 @@
 	const SPROUT_TOWER_7F_POKE_BALL1
 	const SPROUT_TOWER_7F_MYSTIC
 	const SPROUT_TOWER_7F_LASS
-	const SPROUT_TOWER_7F_POKE_BALL2
 
 SproutTower7F_MapScripts:
 	db 0 ; scene scripts
@@ -19,6 +18,17 @@ TrainerMysticStella:
 	endifjustbattled
 	opentext
 	writetext MysticStellaAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerLassAnnie:
+	trainer LASS, ANNIE, EVENT_BEAT_LASS_ANNIE, LassAnnieSeenText, LassAnnieBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext LassAnnieAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -42,6 +52,24 @@ MysticStellaAfterBattleText:
 	para "slightly inaccu-" 
 	line "rate. Hehe<...>"
 	done
+	
+LassAnnieSeenText:
+	text "Teehee! I sneaked"
+	line "away from my" 
+	cont "class!"
+	
+	para "They're still down-"
+	line "stairs!"
+	done 
+	
+LassAnnieBeatenText:
+	text "Teehee!"
+	done 
+	
+LassAnnieAfterBattleText:
+	text "I'm going to be-"
+	line "come a ninja when"
+	cont "I get older!"
 
 SproutTower7F_MapEvents:
 	db 0, 0 ; filler
@@ -62,6 +90,7 @@ SproutTower7F_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 17, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF7EscapeRope, EVENT_SPROUT_TOWERF7_ESCAPE_ROPE
 	object_event 15, 5, SPRITE_MYSTIC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 3, TrainerMysticStella, -1
+	object_event  2, 6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassAnnie, -1

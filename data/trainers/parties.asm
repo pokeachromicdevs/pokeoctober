@@ -1246,6 +1246,16 @@ LassGroup:
 	dw MOLAMBINO
 	db -1 ; end
 	
+	next_list_item ; LASS (21)
+	db "ANNIE@", TRAINERTYPE_NORMAL
+	db 9
+	dw YANMA
+	db 12
+	dw CLEFFA
+	db 14
+	dw ZUBAT
+	db -1 ; end
+	
 	end_list_items
 
 JanineGroup:

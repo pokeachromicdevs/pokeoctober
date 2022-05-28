@@ -76,3 +76,4 @@
 	const CRY_WORFURS
 	const CRY_MOLAMBINO
 	const CRY_MISDREAVUS
+	const CRY_YANMA

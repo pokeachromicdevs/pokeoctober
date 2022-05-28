@@ -33,11 +33,11 @@ FollowSpritePointers::
 	follow_sprite SandshrewSpriteGFX, PAL_OW_BROWN ;SANDSHREW
 	follow_sprite SandslashSpriteGFX, PAL_OW_BROWN ;SANDSLASH
 	follow_sprite NidoranFSpriteGFX, PAL_OW_BLUE ;NIDORAN_F
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORINA
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDOQUEEN
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORAN_M
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORINO
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDOKING
+	follow_sprite NidorinaSpriteGFX, PAL_OW_BLUE ;NIDORINA
+	follow_sprite NidoqueenSpriteGFX, PAL_OW_BLUE ;NIDOQUEEN
+	follow_sprite NidoranMSpriteGFX, PAL_OW_PINK ;NIDORAN_M
+	follow_sprite NidorinoSpriteGFX, PAL_OW_PINK ;NIDORINO
+	follow_sprite NidokingSpriteGFX, PAL_OW_PINK ;NIDOKING
 	follow_sprite ClefairySpriteGFX, PAL_OW_RED ;CLEFAIRY
 	follow_sprite ClefableSpriteGFX, PAL_OW_RED ;CLEFABLE,
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VULPIX
@@ -155,6 +155,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DRAGONITE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEWTWO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEW
+;Johto Icons
 	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;CHIKORITA
 	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;PETAMOLE
 	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;MEGANIUM
@@ -174,7 +175,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SPINARAK
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;ARIADOS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CROBAT
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;YANMA
+	follow_sprite YanmaSpriteGFX,  PAL_OW_GREEN ;YANMA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TONBOSS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BELLIGNAN
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CHINCHOU

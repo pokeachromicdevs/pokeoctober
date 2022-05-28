@@ -71,3 +71,4 @@ Cries:
 	dba Cry_Worfurs
 	dba Cry_Molambino
 	dba Cry_Misdreavus
+	dba Cry_Yanma

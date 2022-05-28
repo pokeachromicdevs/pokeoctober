@@ -163,7 +163,12 @@ Cry_Misdreavus:
 	channel 5, Cry_Misdreavus_Ch5
 	channel 6, Cry_Misdreavus_Ch6
 	channel 8, Cry_Misdreavus_Ch8
-
+	
+Cry_Yanma:
+	channel_count 3
+	channel 5, Cry_Yanma_Ch5
+	channel 6, Cry_Yanma_Ch6
+	channel 8, Cry_Yanma_Ch8
 
 Cry_Entei_Ch5:
 	; soundinput $ff
@@ -2105,4 +2110,30 @@ Cry_Misdreavus_Ch8:
 	noise_note 1, 9, 8, 94
 	noise_note 16, 10, 7, 110
 	sound_ret
+	
+Cry_Yanma_Ch5:
+	sound_duty 0, 3, 0, 2
+	square_note 8, 15, 8, 816
+	square_note 8, 15, 8, 832
+	square_note 8, 12, 8, 1970
+	square_note 8, 11, 8, 1971
+	square_note 32, 11, 2, 1972
+	sound_ret
+
+Cry_Yanma_Ch6:
+	sound_duty 0, 1, 0, 2
+	square_note 8, 14, 8, 800
+	square_note 8, 14, 8, 808
+	square_note 8, 9, 8, 1920
+	square_note 8, 8, 8, 1922
+	square_note 32, 7, 2, 1924
+	sound_ret
+
+Cry_Yanma_Ch8:
+	noise_note 2, 11, -6, 73
+	noise_note 5, 11, -6, 58
+	noise_note 2, 11, -6, 41
+	noise_note 40, 13, 3, 110
+	sound_ret
+
 

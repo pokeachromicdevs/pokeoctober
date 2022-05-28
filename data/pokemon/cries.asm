@@ -175,8 +175,8 @@ PokemonCries::
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
-	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA, needs fixing
-	mon_cry CRY_TOTODILE,   -$022,  $200 ; TONBOSS, needs fixing
+	mon_cry CRY_YANMA,       $031,  $0c8 ; YANMA, needs fixing
+	mon_cry CRY_YANMA,      -$022,  $200 ; TONBOSS, needs fixing
 	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
@@ -209,8 +209,8 @@ PokemonCries::
 	mon_cry CRY_GIRAFARIG,   -30,   160  ; UMBREON 
 	mon_cry CRY_MARILL,     -$01f,  $180 ; MURKROW
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
-	mon_cry CRY_MISDREAVUS,  $130,  $0e8 ; MISDREAVUS, needs fixing
-	mon_cry CRY_MISDREAVUS,  $162,  $100 ; UNOWN, needs fixing
+	mon_cry CRY_MISDREAVUS,  $130,  $0e8 ; MISDREAVUS
+	mon_cry CRY_MISDREAVUS,  $162,  $100 ; UNOWN
 	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET, needs fixing
 	mon_cry CRY_CLEFFA,     -264,  320 ; TWINZ (unique!, add this beta base cry in)
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
