@@ -1,9 +1,19 @@
+	object_const_def
+	const SPROUTTOWER_8F_POKEBALL
+	const SPROUTTOWER_8F_OFFICER
+	const SPROUTTOWER_8F_SAGE
+	
 SproutTower8F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-; scripts here
+SproutTowerF8Potion:
+	itemball POTION
+	
+SproutTowerF8HpUp:
+	itemball HP_UP
+
 
 SproutTower8F_MapEvents:
 	db 0, 0 ; filler
@@ -21,4 +31,7 @@ SproutTower8F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event 10, 2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF8Potion, EVENT_SPROUT_TOWERF8_POTION
+	object_event  3, 8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF8HpUp, EVENT_SPROUT_TOWERF8_HP_UP
+
