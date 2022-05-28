@@ -284,3 +284,4 @@ PokemonNames::
 	db "SILKANE@@@"
 	db "MORPHOBIA@"
 	db "TERRACHNID"
+	db "SMUJJ@@@@@"

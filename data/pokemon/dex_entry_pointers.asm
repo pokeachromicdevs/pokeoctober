@@ -281,3 +281,4 @@ PokedexDataPointerTable:
 	dba SilkanePokedexEntry
 	dba MorphobiaPokedexEntry
 	dba TerrachnidPokedexEntry
+	dba SmujjPokedexEntry

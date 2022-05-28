@@ -21,6 +21,7 @@ EvosAttacksPointers3::
 	dw SilkaneEvosAttacks
 	dw MorphobiaEvosAttacks
 	dw TerrachnidEvosAttacks
+	dw SmujjEvosAttacks
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -333,6 +334,24 @@ TerrachnidEvosAttacks:
 	dbw 45, EARTHQUAKE
 	dbw 52, FISSURE
 	db 0 ; no more level-up moves 
+	
+SmujjEvosAttacks:
+	dbbw EVOLVE_LEVEL, 14, GRIMER
+	db 0 ; no more evolutions
+	dbw 1, POUND
+	dbw 1, HARDEN
+	dbw 10, POISON_GAS
+	dbw 14, SLUDGE
+	dbw 19, MUD_SLAP
+	dbw 24, TOXIC
+	dbw 28, DISABLE
+	dbw 23, MINIMIZE
+	dbw 33, SCREECH
+	dbw 38, MINIMIZE
+	dbw 42, BODY_SLAM
+	dbw 47, ACID_ARMOR
+	dbw 52, SLUDGE_BOMB
+	db 0 ; no more level-up moves
 	
 	
 	

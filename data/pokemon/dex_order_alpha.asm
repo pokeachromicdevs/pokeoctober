@@ -227,6 +227,7 @@ AlphabeticalPokedexOrder:
 	dw SLUGMA
 	dw SMEARGLE
 	dw SMOOCHUM
+	dw SMUJJ
 	dw SNEASEL
 	dw SNORLAX
 	dw SNUBBULL

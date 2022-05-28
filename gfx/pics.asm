@@ -781,5 +781,6 @@ MorphobiaFrontpic: INCBIN "gfx/pokemon/morphobia/front.animated.2bpp.lz"
 MorphobiaBackpic:  INCBIN "gfx/pokemon/morphobia/back.2bpp.lz"
 TerrachnidFrontpic: INCBIN "gfx/pokemon/terrachnid/front.animated.2bpp.lz"
 TerrachnidBackpic:  INCBIN "gfx/pokemon/terrachnid/back.2bpp.lz"
-
+SmujjFrontpic:	INCBIN "gfx/pokemon/smujj/front.animated.2bpp.lz"
+SmujjBackpic:	INCBIN "gfx/pokemon/smujj/back.2bpp.lz"
 

@@ -592,3 +592,5 @@ INCBIN "gfx/pokemon/morphobia/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/morphobia/shiny.pal"
 INCBIN "gfx/pokemon/terrachnid/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/terrachnid/shiny.pal"
+INCBIN "gfx/pokemon/smujj/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/smujj/shiny.pal"

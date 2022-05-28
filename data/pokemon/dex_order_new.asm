@@ -128,6 +128,7 @@ NewPokedexOrder:
 	dw HERACROSS
 	dw KOFFING
 	dw WEEZING
+	dw SMUJJ
 	dw GRIMER
 	dw MUK
 	dw MAGNEMITE

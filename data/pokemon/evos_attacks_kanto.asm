@@ -1363,29 +1363,36 @@ DewgongEvosAttacks:
 GrimerEvosAttacks:
 	dbbw EVOLVE_LEVEL, 38, MUK
 	db 0 ; no more evolutions
-	dbw 1, POISON_GAS
 	dbw 1, POUND
-	dbw 5, HARDEN
-	dbw 10, DISABLE
-	dbw 16, SLUDGE
+	dbw 1, HARDEN
+	dbw 10, POISON_GAS
+	dbw 14, SLUDGE
+	dbw 19, MUD_SLAP
+	dbw 24, TOXIC
+	dbw 28, DISABLE
 	dbw 23, MINIMIZE
-	dbw 31, SCREECH
-	dbw 40, ACID_ARMOR
-	dbw 50, SLUDGE_BOMB
+	dbw 33, SCREECH
+	dbw 38, MINIMIZE
+	dbw 42, BODY_SLAM
+	dbw 47, ACID_ARMOR
+	dbw 52, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 MukEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, POISON_GAS
 	dbw 1, POUND
 	dbw 1, HARDEN
-	dbw 33, HARDEN
-	dbw 37, DISABLE
-	dbw 45, SLUDGE
+	dbw 10, POISON_GAS
+	dbw 14, SLUDGE
+	dbw 19, MUD_SLAP
+	dbw 24, TOXIC
+	dbw 28, DISABLE
 	dbw 23, MINIMIZE
-	dbw 31, SCREECH
-	dbw 45, ACID_ARMOR
-	dbw 60, SLUDGE_BOMB
+	dbw 33, SCREECH
+	dbw 38, MINIMIZE
+	dbw 44, BODY_SLAM
+	dbw 51, ACID_ARMOR
+	dbw 56, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 ShellderEvosAttacks:

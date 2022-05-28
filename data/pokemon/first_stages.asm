@@ -45,8 +45,8 @@ FirstEvoStages::
 	dw ODDISH
 	dw ODDISH
 	dw ODDISH
-	dw PARAS
-	dw PARAS
+	dw PARASPOR
+	dw PARASPOR
 	dw VENONAT    ;30
 	dw VENONAT
 	dw DIGLETT
@@ -83,12 +83,12 @@ FirstEvoStages::
 	dw MAGNEMITE
 	dw MAGNEMITE
 	dw FARFETCH_D
-	dw DODUO
-	dw DODUO
+	dw DODAERIE
+	dw DODAERIE
 	dw SEEL
 	dw SEEL
-	dw GRIMER     ;58
-	dw GRIMER
+	dw SMUJJ     ;58
+	dw SMUJJ
 	dw SHELLDER
 	dw SHELLDER
 	dw GASTLY
@@ -262,3 +262,13 @@ FirstEvoStages::
 	dw COALTA
 	dw BURGELA
 	dw VULPIII
+	dw WORFURS
+	dw WORFURS
+	dw DODAERIE
+	dw PARASPOR
+	dw MOLAMBINO
+	dw KIWACKI
+	dw SILKANE
+	dw SILKANE
+	dw TERRACHNID
+	dw SMUJJ

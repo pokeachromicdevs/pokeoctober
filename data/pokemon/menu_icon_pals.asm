@@ -285,4 +285,5 @@ MonMenuIconPals:
 	icon_pals RED, RED         ; SILKANE (placeholder)
 	icon_pals RED, RED         ; MORPHOBIA (placeholder)
 	icon_pals RED, RED         ; TERRACHNID (placeholder)
+	icon_pals RED, RED		   ; SMUJJ (placeholder)
 	icon_pals RED, RED         ; EGG

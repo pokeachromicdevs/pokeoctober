@@ -287,7 +287,7 @@ PokemonCries::
  	mon_cry CRY_DIGLETT,     $020,   $040 ; MORPHOBIA
 	mon_cry CRY_GLIGAR,     -$045,  $120  ; TERRACHNID
  	;mon_cry CRY_GLIGAR,     $090,  $095 ; TERRACHNID (beta cry)
-
+	mon_cry CRY_GRIMER,      $100,  $100 ; GRIMER
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

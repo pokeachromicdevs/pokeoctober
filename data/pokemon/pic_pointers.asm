@@ -575,3 +575,5 @@ PokemonPicPointers::
 	dba MorphobiaBackpic
 	dba TerrachnidFrontpic
 	dba TerrachnidBackpic
+	dba SmujjFrontpic
+	dba SmujjBackpic

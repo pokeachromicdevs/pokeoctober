@@ -301,6 +301,7 @@ JOHTO_POKEMON EQU const_value
 	const SILKANE
 	const MORPHOBIA
 	const TERRACHNID
+	const SMUJJ
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3
