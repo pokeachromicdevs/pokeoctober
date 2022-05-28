@@ -118,11 +118,5 @@ OverworldSprites:
 	overworld_sprite ManchildSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite SchoolboySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite RockClimberSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
-	overworld_sprite WooperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite CelebiSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
-	overworld_sprite EeveeSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-	overworld_sprite FarfetchdSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-	overworld_sprite ClefairySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
-
-
+	overworld_sprite WooperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE ; special follower sprite
 
