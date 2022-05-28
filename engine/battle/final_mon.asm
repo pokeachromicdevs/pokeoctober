@@ -161,6 +161,106 @@ SlideBackInMonPic:
 	pop hl
 	ret
 
+SlidePlayerPicIn::
+	ld a, 7
+	ldh [hMapObjectIndexBuffer], a
+	hlcoord 0, 6
+	ld a, $4f
+	ld c, 6
+	ld de, SCREEN_WIDTH
+.loop1
+	ld [hl], a
+	add hl, de
+	inc a
+	dec c
+	jr nz, .loop1
+	call WaitBGMap
+	hlcoord 6, 6
+	ldh a, [hMapObjectIndexBuffer]
+	ld c, a
+.loop
+	push bc
+	push hl
+	ld b, 6
+.loop2
+	push hl
+	call .DoFrame
+	pop hl
+	ld de, SCREEN_WIDTH
+	add hl, de
+	dec b
+	jr nz, .loop2
+	ld c, 2
+	call DelayFrames
+	pop hl
+	pop bc
+	dec c
+	jr nz, .loop
+	hlcoord 0, 6
+	ld a, $7f
+	ld c, 6
+	ld de, SCREEN_WIDTH
+.loop3
+	ld [hl], a
+	add hl, de
+	dec c
+	jr nz, .loop3
+	jp WaitBGMap
+.DoFrame:
+	ldh a, [hMapObjectIndexBuffer]
+	ld c, a
+.forward
+	ld a, [hli]
+	ld [hld], a
+	cp " "
+	jr z, .skip
+	sub 6
+	cp $30
+	jr nc, .do
+	ld a, " "
+.do
+	ld [hl], a
+.skip
+	dec hl
+	dec c
+	jr nz, .forward
+	ret
+
+SlideBattlePicOut2::
+	hlcoord 1, 6
+	ld a, 8 
+	ldh [hMapObjectIndexBuffer], a
+	ld c, a
+.loop
+	push bc
+	push hl
+	ld b, $7
+.loop2
+	push hl
+	call .DoFrame
+	pop hl
+	ld de, SCREEN_WIDTH
+	add hl, de
+	dec b
+	jr nz, .loop2
+	ld c, 2
+	call DelayFrames
+	pop hl
+	pop bc
+	dec c
+	jr nz, .loop
+	ret
+.DoFrame:
+	ldh a, [hMapObjectIndexBuffer]
+	ld c, a
+.forward
+	ld a, [hld]
+	ld [hli], a
+	inc hl
+	dec c
+	jr nz, .forward
+	ret
+
 GetFinalMonTxtPointer:
 ; Returns the pointer at HL if succeeded and carry is cleared.
 ; Otherwise, clobbers registers and carry is set.

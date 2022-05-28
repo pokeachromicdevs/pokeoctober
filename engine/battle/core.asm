@@ -4122,6 +4122,27 @@ SendOutPlayerMon:
 	xor a
 	ld [wNumHits], a
 	ld [wBattleAnimParam], a
+
+; bypass battle anim
+	ld a, [wWhichPartyFollower]
+	and a
+	jr z, .normal_battle_anim
+	dec a
+	ld c, a
+	ld a, [wCurPartyMon]
+	cp c
+	jr nz, .normal_battle_anim
+
+	ldh a, [hBGMapMode]
+	push af
+	ld a, 1
+	ldh [hBGMapMode], a
+	farcall SlidePlayerPicIn
+	pop af
+	ldh [hBGMapMode], a
+	jr .not_shiny
+
+.normal_battle_anim
 	ld de, ANIM_SEND_OUT_MON
 	call Call_PlayBattleAnim
 	call BattleCheckPlayerShininess
@@ -4309,8 +4330,31 @@ RecallPlayerMon:
 	xor a
 	ldh [hBattleTurn], a
 	ld [wNumHits], a
+
+
+; bypass battle anim
+	ld a, [wWhichPartyFollower]
+	and a
+	jr z, .normal_battle_anim
+	dec a
+	ld c, a
+	ld a, [wLastPlayerMon]
+	cp c
+	jr nz, .normal_battle_anim
+
+
+	ld a, 1
+	ld [hBGMapMode], a
+	hlcoord 1, 5
+	ld a, 9
+	farcall SlideBattlePicOut2
+	jr .done
+
+.normal_battle_anim
 	ld de, ANIM_RETURN_MON
 	call Call_PlayBattleAnim
+
+.done
 	pop af
 	ldh [hBattleTurn], a
 	ret
