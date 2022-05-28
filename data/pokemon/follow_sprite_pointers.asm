@@ -30,8 +30,8 @@ FollowSpritePointers::
 	follow_sprite ArbokSpriteGFX, PAL_OW_PINK ;ARBOK
 	follow_sprite PikachuSpriteGFX, PAL_OW_RED ;PIKACHU
 	follow_sprite RaichuSpriteGFX, PAL_OW_RED ;RAICHU
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SANDSHREW
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SANDSLASH
+	follow_sprite SandshrewSpriteGFX, PAL_OW_BROWN ;SANDSHREW
+	follow_sprite SandslashSpriteGFX, PAL_OW_BROWN ;SANDSLASH
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORAN_F
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORINA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDOQUEEN
@@ -39,7 +39,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORINO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDOKING
 	follow_sprite ClefairySpriteGFX, PAL_OW_RED ;CLEFAIRY
-	follow_sprite WooperSpriteGFX, PAL_OW_RED ;CLEFABLE,
+	follow_sprite ClefableSpriteGFX, PAL_OW_RED ;CLEFABLE,
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VULPIX
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NINETALES
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;JIGGLYPUFF

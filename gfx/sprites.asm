@@ -153,6 +153,9 @@ SpearowSpriteGFX::             INCBIN "gfx/sprites/pokemon/spearow.2bpp"
 FearowSpriteGFX::              INCBIN "gfx/sprites/pokemon/fearow.2bpp"
 EkansSpriteGFX::               INCBIN "gfx/sprites/pokemon/ekans.2bpp"
 ArbokSpriteGFX::               INCBIN "gfx/sprites/pokemon/arbok.2bpp"
+ClefableSpriteGFX::            INCBIN "gfx/sprites/pokemon/clefable.2bpp"
+SandshrewSpriteGFX::           INCBIN "gfx/sprites/pokemon/sandshrew.2bpp"
+SandslashSpriteGFX::           INCBIN "gfx/sprites/pokemon/sandslash.2bpp"
 
 
 SECTION "Followers Johto", ROMX
