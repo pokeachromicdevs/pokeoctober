@@ -13,21 +13,21 @@ FollowSpritePointers::
 	follow_sprite SquirtleSpriteGFX, PAL_OW_BLUE ;SQUIRTLE
 	follow_sprite WartortleSpriteGFX, PAL_OW_BLUE ;WARTORTLE
 	follow_sprite BlastoiseSpriteGFX, PAL_OW_BLUE ;BLASTOISE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CATERPIE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;METAPOD
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BUTTERFREE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;WEEDLE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;KAKUNA
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BEEDRILL
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PIDGEY
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PIDGEOTTO
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PIDGEOT
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;RATTATA
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;RATICATE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SPEAROW
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FEAROW
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;EKANS 
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;ARBOK
+	follow_sprite CaterpieSpriteGFX, PAL_OW_GREEN ;CATERPIE
+	follow_sprite MetapodSpriteGFX, PAL_OW_GREEN ;METAPOD
+	follow_sprite ButterfreeSpriteGFX, PAL_OW_RED ;BUTTERFREE
+	follow_sprite WeedleSpriteGFX, PAL_OW_RED ;WEEDLE
+	follow_sprite KakunaSpriteGFX, PAL_OW_BROWN ;KAKUNA
+	follow_sprite BeedrillSpriteGFX, PAL_OW_RED ;BEEDRILL
+	follow_sprite PidgeySpriteGFX, PAL_OW_BROWN ;PIDGEY
+	follow_sprite PidgeottoSpriteGFX, PAL_OW_BROWN ;PIDGEOTTO
+	follow_sprite PidgeotSpriteGFX, PAL_OW_BROWN ;PIDGEOT
+	follow_sprite RattataSpriteGFX, PAL_OW_PINK ;RATTATA
+	follow_sprite RaticateSpriteGFX, PAL_OW_BROWN ;RATICATE
+	follow_sprite SpearowSpriteGFX, PAL_OW_BROWN ;SPEAROW
+	follow_sprite FearowSpriteGFX, PAL_OW_BROWN ;FEAROW
+	follow_sprite EkansSpriteGFX, PAL_OW_PINK ;EKANS 
+	follow_sprite ArbokSpriteGFX, PAL_OW_PINK ;ARBOK
 	follow_sprite PikachuSpriteGFX, PAL_OW_RED ;PIKACHU
 	follow_sprite RaichuSpriteGFX, PAL_OW_RED ;RAICHU
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SANDSHREW

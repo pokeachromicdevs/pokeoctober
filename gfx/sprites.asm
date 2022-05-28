@@ -120,10 +120,8 @@ ManchildSpriteGFX::            INCBIN "gfx/sprites/manchild.2bpp"
 SchoolboySpriteGFX::           INCBIN "gfx/sprites/schoolboy.2bpp"
 RockClimberSpriteGFX::         INCBIN "gfx/sprites/rock_climber.2bpp"
 
-SECTION "Followers", ROMX 
+SECTION "Followers Kanto", ROMX 
 
-WooperSpriteGFX::         	   INCBIN "gfx/sprites/pokemon/wooper.2bpp"
-CelebiSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/celebi.2bpp"
 EeveeSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"
 FarfetchdSpriteGFX::		   INCBIN "gfx/sprites/pokemon/farfetch_d.2bpp"
 ClefairySpriteGFX::		       INCBIN "gfx/sprites/pokemon/clefairy.2bpp"
@@ -140,6 +138,27 @@ PersianSpriteGFX::             INCBIN "gfx/sprites/pokemon/persian.2bpp"
 SquirtleSpriteGFX::            INCBIN "gfx/sprites/pokemon/squirtle.2bpp"
 WartortleSpriteGFX::           INCBIN "gfx/sprites/pokemon/wartortle.2bpp"
 BlastoiseSpriteGFX::           INCBIN "gfx/sprites/pokemon/blastoise.2bpp"
+CaterpieSpriteGFX::            INCBIN "gfx/sprites/pokemon/caterpie.2bpp"
+MetapodSpriteGFX::             INCBIN "gfx/sprites/pokemon/metapod.2bpp"
+ButterfreeSpriteGFX::          INCBIN "gfx/sprites/pokemon/butterfree.2bpp"
+WeedleSpriteGFX::              INCBIN "gfx/sprites/pokemon/weedle.2bpp"
+KakunaSpriteGFX::              INCBIN "gfx/sprites/pokemon/kakuna.2bpp"
+BeedrillSpriteGFX::            INCBIN "gfx/sprites/pokemon/beedrill.2bpp"
+PidgeySpriteGFX::              INCBIN "gfx/sprites/pokemon/pidgey.2bpp"
+PidgeottoSpriteGFX::           INCBIN "gfx/sprites/pokemon/pidgeotto.2bpp"
+PidgeotSpriteGFX::             INCBIN "gfx/sprites/pokemon/pidgeot.2bpp"
+RattataSpriteGFX::             INCBIN "gfx/sprites/pokemon/rattata.2bpp"
+RaticateSpriteGFX::            INCBIN "gfx/sprites/pokemon/raticate.2bpp"
+SpearowSpriteGFX::             INCBIN "gfx/sprites/pokemon/spearow.2bpp"
+FearowSpriteGFX::              INCBIN "gfx/sprites/pokemon/fearow.2bpp"
+EkansSpriteGFX::               INCBIN "gfx/sprites/pokemon/ekans.2bpp"
+ArbokSpriteGFX::               INCBIN "gfx/sprites/pokemon/arbok.2bpp"
+
+
+SECTION "Followers Johto", ROMX
+
+WooperSpriteGFX::         	   INCBIN "gfx/sprites/pokemon/wooper.2bpp"
+CelebiSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/celebi.2bpp"
 
 
 

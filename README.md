@@ -64,3 +64,10 @@ that will go beyond indexes.
 [compare]: https://github.com/aaaaaa123456789/pokecrystal16/compare
 [pokecrystal]: https://github.com/pret/pokecrystal/
 [wiki]: https://github.com/aaaaaa123456789/pokecrystal16/wiki
+
+
+## Additions by Gs33022 (Pokeoctober Manager)
+
+Pokeoctober is fully open-source, as long as credit is given to this hack. If credit is not found to be given, the hack's
+author will be notified to do so. Additionally, Shockslayer, as well as anyone currently working on, moderating, or developing
+the Crystal Clear project is NOT allowed to use any of the code contained within this repository. Fuck Shockslayer.
