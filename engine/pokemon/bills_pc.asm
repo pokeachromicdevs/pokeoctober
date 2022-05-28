@@ -212,9 +212,9 @@ BillsPCDepositFuncStats:
 
 BillsPCDepositFuncRelease:
 	call BillsPC_CheckMail_PreventBlackout
-	jr c, BillsPCDepositFuncCancel
+	jp c, BillsPCDepositFuncCancel
 	call BillsPC_IsMonAnEgg
-	jr c, BillsPCDepositFuncCancel
+	jp c, BillsPCDepositFuncCancel
 	ld a, [wMenuCursorY]
 	push af
 	ld de, PCString_ReleasePKMN
@@ -228,17 +228,27 @@ BillsPCDepositFuncRelease:
 	and a
 	jr nz, .failed_release
 
-; release follower
+; adjust follower position
 	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .release
+
 	ld c, a
 	ld a, [wCurPartyMon]
 	inc a
 	cp c
-	jr nz, .release
+	jr nz, .not_follower_mon
 
-	callfar DisableFollower
+	jp BillsPCDepositFuncCancel
+
+.not_follower_mon
+	jr c, .shift_follower_pos
+	jr .release
+
+.shift_follower_pos
+	dec c
+	ld a, c
+	ld [wWhichPartyFollower], a
 
 .release
 	ld a, [wBillsPC_CursorPosition]
