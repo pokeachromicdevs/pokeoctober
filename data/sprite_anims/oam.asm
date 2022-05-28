@@ -362,37 +362,37 @@ SpriteAnimOAMData:
 
 .OAMData_PartyMonWithMail1:
 	db 4
-	dsprite -1, -1,  0,  0, $00, -1
-	dsprite  0, -1,  0,  0, $01, -1
-	dsprite -1,  0,  0,  0, $08, PAL_ICON_RED
+	dsprite -1,  0, -1,  0, $00, -1
+	dsprite -1,  0,  0,  0, $01, -1
+	dsprite  0,  0, -1,  0, $08, PAL_ICON_RED
 	dsprite  0,  0,  0,  0, $03, -1
 
 .OAMData_PartyMonWithMail2:
 	db 4
-	dsprite -1, -1,  0,  0, $04, -1
-	dsprite  0, -1,  0,  0, $05, -1
-	dsprite -1,  0,  0,  0, $08, PAL_ICON_RED
+	dsprite -1,  0, -1,  0, $04, -1
+	dsprite -1,  0,  0,  0, $05, -1
+	dsprite  0,  0, -1,  0, $08, PAL_ICON_RED
 	dsprite  0,  0,  0,  0, $07, -1
 
 .OAMData_PartyMonWithItem1:
 	db 4
-	dsprite -1, -1,  0,  0, $00, -1
-	dsprite  0, -1,  0,  0, $01, -1
-	dsprite -1,  0,  0,  0, $09, PAL_ICON_RED
+	dsprite -1,  0, -1,  0, $00, -1
+	dsprite -1,  0,  0,  0, $01, -1
+	dsprite  0,  0, -1,  0, $09, PAL_ICON_RED
 	dsprite  0,  0,  0,  0, $03, -1
 
 .OAMData_PartyMonWithItem2:
 	db 4
-	dsprite -1, -1,  0,  0, $00, -1
-	dsprite  0, -1,  0,  0, $01, -1
-	dsprite -1,  0,  0,  0, $09, PAL_ICON_RED
+	dsprite -1,  0, -1,  0, $00, -1
+	dsprite -1,  0,  0,  0, $01, -1
+	dsprite  0,  0, -1,  0, $09, PAL_ICON_RED
 	dsprite  0,  0,  0,  0, $03, -1
 	
 .OAMData_PartyMon:
 	db 4
-	dsprite -1, -1,  0,  0, $00, -1
-	dsprite  0, -1,  0,  0, $01, -1
-	dsprite -1,  0,  0,  0, $02, -1
+	dsprite -1,  0, -1,  0, $00, -1
+	dsprite -1,  0,  0,  0, $01, -1
+	dsprite  0,  0, -1,  0, $02, -1
 	dsprite  0,  0,  0,  0, $03, -1
 
 .OAMData_GSIntroMagikarp:
