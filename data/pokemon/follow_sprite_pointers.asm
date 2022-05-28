@@ -32,7 +32,7 @@ FollowSpritePointers::
 	follow_sprite RaichuSpriteGFX, PAL_OW_RED ;RAICHU
 	follow_sprite SandshrewSpriteGFX, PAL_OW_BROWN ;SANDSHREW
 	follow_sprite SandslashSpriteGFX, PAL_OW_BROWN ;SANDSLASH
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORAN_F
+	follow_sprite NidoranFSpriteGFX, PAL_OW_BLUE ;NIDORAN_F
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORINA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDOQUEEN
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;NIDORAN_M

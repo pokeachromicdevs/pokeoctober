@@ -326,7 +326,7 @@ SetPartyMonIconAnimSpeed:
 	db $00 ; HP_GREEN
 	db $40 ; HP_YELLOW
 	db $80 ; HP_RED
-
+	
 NamingScreen_InitAnimatedMonIcon:
 	ld hl, wTempMonDVs
 	call SetMenuMonIconColor
