@@ -215,7 +215,7 @@ SlidePlayerPicIn::
 	cp " "
 	jr z, .skip
 	sub 6
-	cp $30
+	cp $31
 	jr nc, .do
 	ld a, " "
 .do
