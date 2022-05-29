@@ -148,11 +148,6 @@ _DamageCalc:
 	cp b
 	jr nz, .DoneOpponentItem
 
-; is super effective?
-	ld a, [wTypeModifier]
-	cp EFFECTIVE + 1
-	jr c, .DoneOpponentItem
-
 ; half damage
 
 ; * 5
@@ -292,11 +287,6 @@ _NotifyWeakenedEffect:
 	call GetBattleVar
 	cp b
 	ret nz
-
-; is super effective?
-	ld a, [wTypeModifier]
-	cp EFFECTIVE + 1
-	ret c
 
 	call .GetOpponentItemName
 	call .GetTypeName
