@@ -50,24 +50,18 @@ WhitneyGroup:
 BugsyGroup:
 	next_list_item ; BUGSY (1)
 	db "BUGSY@", TRAINERTYPE_ITEM_MOVES
-	db 22
+	db 23
 	dw LEDIAN
 	db FIRE_MANE
 	dw TACKLE, SUPERSONIC, COMET_PUNCH, ROLLOUT
-	db 23
+	db 24
 	dw TONBOSS
 	db FIRE_MANE
 	dw LEECH_LIFE, QUICK_ATTACK, BITE, SONICBOOM
-	db 24
+	db 26
 	dw HERACROSS
 	db SILVERPOWDER
 	dw FURY_CUTTER, DETECT, HORN_ATTACK, ENDURE
-	db 26 
-	dw TRICULES
-	db FIRE_MANE
-	dw FURY_CUTTER, SEISMIC_TOSS, METAL_CLAW, CROSS_CUTTER
-	db -1 ; end
-
 	end_list_items
 
 MortyGroup:
