@@ -5083,7 +5083,7 @@ GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	dbw 14, BURGELA
-	;dbw 18, SMUJI
+	dbw 18, SMUJJ
 	dbw 20, GRIMER
 	dbw 21, TANGELA
 	db -1 ; end
