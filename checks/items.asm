@@ -1,3 +1,6 @@
+; constants/item_constants.asm
+assert NUM_ITEMS < 255, "\n\t\tCan't have 255 items! ({d:NUM_ITEMS} defined)"
+
 ; data/items/attributes.asm
 assert _NUM_ITEM_ATTRIBUTES == NUM_ITEMS, "\n\t\tNumber of item attributes must match the constants ({d:NUM_ITEMS}).\n\t\t({d:_NUM_ITEM_ATTRIBUTES} defined)"
 

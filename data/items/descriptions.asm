@@ -119,7 +119,7 @@ ItemDescriptions:
 	dw MiracleSeedDesc
 	dw ThickClubDesc
 	dw FocusOrbDesc
-	dw QuestionMarkDesc
+	dw MysticPetalDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
 	dw HealPowderDesc
@@ -134,27 +134,25 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw DiggingClawDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw WhiteFeatherDesc
+	dw ElectricPouchDesc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
 	dw SharpScytheDesc
-	dw WobblyBloonDesc
-	dw QuestionMarkDesc
+	dw FireManeDesc
 	dw MetalCoatDesc
 	dw DragonFangDesc
-	dw QuestionMarkDesc
+	dw TwistedSpoonDesc
 	dw LeftoversDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw FossilShardDesc
+	dw GrossGarbageDesc
+	dw ChampionbeltDesc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw TagDesc
+	dw GuardThreadDesc
+	dw IceBikiniDesc
 	dw SacredAshDesc
 	dw HeavyBallDesc
 	dw FlowerMailDesc
@@ -220,21 +218,6 @@ ItemDescriptions:
 	dw DomeFossilDesc
 	dw HelixFossilDesc
 	dw FleeFeatherDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw CranidosFossilDesc
 	dw MysticWaterDesc
 	dw ConfuseClawDesc
@@ -244,9 +227,6 @@ ItemDescriptions:
 	dw StrangePowderDesc
 	dw BugFlyingFossilDesc
 	dw SkelebroFossilDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw InvisibleWallDesc
 	dw SkateboardDesc
 	dw MomsLoveDesc
@@ -254,9 +234,19 @@ ItemDescriptions:
 	dw MysticNeedleDesc
 	dw SafariBallDesc
 	dw FujisLetterDesc
-	dw QuestionMarkDesc
 .End:
 
+IceBikiniDesc:
+GuardThreadDesc:
+TagDesc:
+ChampionbeltDesc:
+GrossGarbageDesc:
+FossilShardDesc:
+TwistedSpoonDesc:
+FireManeDesc:
+ElectricPouchDesc:
+WhiteFeatherDesc:
+MysticPetalDesc:
 CountercuffDesc:
 CranidosFossilDesc:
 MysticWaterDesc:

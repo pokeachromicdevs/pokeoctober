@@ -124,7 +124,7 @@ ItemNames::
 	item_name "MIRACLE SEED"
 	item_name "THICK CLUB"
 	item_name "FOCUS ORB"
-	item_name "-";mystic petal
+	item_name "MYSTIC PETAL"
 	item_name "ENERGYPOWDER"
 	item_name "ENERGY ROOT"
 	item_name "HEAL POWDER"
@@ -139,27 +139,25 @@ ItemNames::
 	item_name "STAR PIECE"
 	item_name "BASEMENT KEY"
 	item_name "PASS"
-	item_name "WOBBLY BLOON";whitefeather
-	item_name "-";electric pouch
-	item_name "-";hard stone
+	item_name "WHT FEATHER"
+	item_name "ELEC. POUCH"
 	item_name "CHARCOAL"
 	item_name "BERRY JUICE"
 	item_name "SHARP SCYTHE"
-	item_name "WOBBLY BLOON";fire mane
-	item_name "-"
+	item_name "FIRE MANE";fire mane
 	item_name "METAL COAT"
 	item_name "DRAGON FANG"
-	item_name "-";beta twistedspoon
+	item_name "TWISTEDSPOON"
 	item_name "LEFTOVERS"
-	item_name "-";fossil shard
-	item_name "-";gross garbage
-	item_name "-";championbelt
+	item_name "FOSSIL SHARD"
+	item_name "GROSSGARBAGE"
+	item_name "CHAMPIONBELT"
 	item_name "MYSTERYBERRY"
 	item_name "DRAGON SCALE";add secondary effect to weaken Dragon moves as in SW97
 	item_name "BERSERK GENE"
-	item_name "-";tag
-	item_name "-";guardthread
-	item_name "-";ice bikini
+	item_name "TAG"
+	item_name "GUARD THREAD"
+	item_name "ICE BIKINI"
 	item_name "SACRED ASH"
 	item_name "HEAVY BALL"
 	item_name "FLOWER MAIL"
@@ -225,33 +223,15 @@ ItemNames::
 	item_name "DOME FOSSIL"
 	item_name "HELIX FOSSIL"
 	item_name "FLEE FEATHER"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-" ; e0
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "-"
-	item_name "CRANIDOS FSL";PROTO CRANIDOS FOSSIL
-	item_name "MYSTIC WATER";SW97 MYSTIC WATER (weakens a foe's water attacks)
-	item_name "CONFUSE CLAW";SW97 CONFUSE CLAW ("Damages foe before battle. (HOLD)")
+	item_name "CRANIDOS FSL";CRANIDOS FOSSIL
+	item_name "MYSTIC WATER";(weakens a foe's water attacks)
+	item_name "CONFUSE CLAW";("Damages foe before battle. (HOLD)")
 	item_name "?";SW97 FLEE FEATHER (switch without wasting a turn)
 	item_name "5 YEN COIN";5 YEN COIN (weakens a foe's psychic attacks)
 	item_name "LIFE TAG";LIFE TAG ("Revives fainted PKMN post-battle. (HOLD)")
 	item_name "STRANGEPOWDR";STRANGE POWDER ("Nullifies all type effects. (HOLD)")
 	item_name "BUG FOSSIL";BUG-FLYING FOSSIL
 	item_name "SKELEBRO FSL";SKELEBRO FOSSIL
-	item_name "?"
-	item_name "?"
-	item_name "?"
 	item_name "INVIS. WALL";INVISIBLE WALL ("Halves SP.ATK hits. (HOLD)")
 	item_name "SKATEBOARD";SKATEBOARD (Plan to port from Reforged and add ability to go indoors, no depositing in PC)
 	item_name "MOM's LOVE";MOMS LOVE ("Heals 1HP for each step taken. (HOLD)")
@@ -259,4 +239,3 @@ ItemNames::
 	item_name "MYSTICNEEDLE";MYSTIC NEEDLE (Stroman valueable item)
 	item_name "SAFARI BALL";SAFARI BALL
 	item_name "FUJI's LETTER";FUJI'S LETTER (for Kanto postgame)
-	item_name "?"

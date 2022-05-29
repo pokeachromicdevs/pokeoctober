@@ -132,7 +132,7 @@ ItemEffects:
 	dw NoEffect            ; MIRACLE_SEED
 	dw NoEffect            ; THICK_CLUB
 	dw NoEffect            ; FOCUS_BAND
-	dw NoEffect            ; ITEM_78
+	dw NoEffect            ; MYSTIC_PETAL
 	dw EnergypowderEffect  ; ENERGYPOWDER
 	dw EnergyRootEffect    ; ENERGY_ROOT
 	dw HealPowderEffect    ; HEAL_POWDER
@@ -147,27 +147,25 @@ ItemEffects:
 	dw NoEffect            ; STAR_PIECE
 	dw BasementKeyEffect   ; BASEMENT_KEY
 	dw NoEffect            ; PASS
-	dw NoEffect            ; ITEM_87
-	dw NoEffect            ; ITEM_88
-	dw NoEffect            ; ITEM_89
+	dw NoEffect            ; WHITE_FEATHER
+	dw NoEffect            ; ELECTRIC_POUCH
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; SHARP_SCYTHE
-	dw WobblyBloonEffect   ; WOBBLY_BLOON
-	dw NoEffect            ; ITEM_8E
+	dw WobblyBloonEffect   ; FIRE_MANE
 	dw NoEffect            ; METAL_COAT
 	dw NoEffect            ; DRAGON_FANG
-	dw NoEffect            ; ITEM_91
+	dw NoEffect            ; TWISTED_SPOON
 	dw NoEffect            ; LEFTOVERS
-	dw NoEffect            ; ITEM_93
-	dw NoEffect            ; ITEM_94
-	dw NoEffect            ; ITEM_95
+	dw NoEffect            ; FOSSIL_SHARD
+	dw NoEffect            ; GROSS_GARBAGE
+	dw NoEffect            ; CHAMPIONBELT
 	dw RestorePPEffect     ; MYSTERYBERRY
 	dw NoEffect            ; DRAGON_SCALE
 	dw NoEffect            ; BERSERK_GENE
-	dw NoEffect            ; ITEM_99
-	dw NoEffect            ; ITEM_9A
-	dw NoEffect            ; ITEM_9B
+	dw NoEffect            ; TAG
+	dw NoEffect            ; GUARD_THREAD
+	dw NoEffect            ; ICE_BIKINI
 	dw SacredAshEffect     ; SACRED_ASH
 	dw PokeBallEffect      ; HEAVY_BALL
 	dw NoEffect            ; FLOWER_MAIL
@@ -247,26 +245,7 @@ ItemEffects:
 	dw NoEffect
 	dw NoEffect
 	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
 	dw PokeBallEffect ; SAFARI_BALL
-	dw NoEffect
 	dw NoEffect
 .End:
 

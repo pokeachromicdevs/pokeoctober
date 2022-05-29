@@ -5,7 +5,7 @@
 ; - ItemAttributes (see data/items/attributes.asm)
 ; - ItemEffects (see engine/items/item_effects.asm)
 	const_def
-	const NO_ITEM      ; 00
+	const NO_ITEM
 	const MASTER_BALL  ; 01
 	const ULTRA_BALL   ; 02
 	const BRIGHTPOWDER ; 03
@@ -95,7 +95,7 @@
 	const BIG_MUSHROOM ; 57
 	const SILVERPOWDER ; 58
 	const BLU_APRICORN ; 59
-	const ITEM_5A      ; 5a
+	const EARTHEN_CLAY ; 5a
 	const AMULET_COIN  ; 5b
 	const YLW_APRICORN ; 5c
 	const GRN_APRICORN ; 5d
@@ -125,7 +125,7 @@
 	const MIRACLE_SEED ; 75
 	const THICK_CLUB   ; 76
 	const FOCUS_ORB    ; 77
-	const ITEM_78      ; 78
+	const MYSTIC_PETAL ; 78
 	const ENERGYPOWDER ; 79
 	const ENERGY_ROOT  ; 7a
 	const HEAL_POWDER  ; 7b
@@ -140,27 +140,25 @@
 	const STAR_PIECE   ; 84
 	const BASEMENT_KEY ; 85
 	const PASS         ; 86
-	const ITEM_87      ; 87
-	const ITEM_88      ; 88
-	const ITEM_89      ; 89
+	const WHITE_FEATHER   ; 87
+	const ELECTRIC_POUCH  ; 88
 	const CHARCOAL     ; 8a
 	const BERRY_JUICE  ; 8b
 	const SHARP_SCYTHE ; 8c
-	const WOBBLY_BLOON ; 8d
-	const ITEM_8E      ; 8e
+	const FIRE_MANE    ; 8d
 	const METAL_COAT   ; 8f
 	const DRAGON_FANG  ; 90
-	const ITEM_91      ; 91
+	const TWISTED_SPOON; 91
 	const LEFTOVERS    ; 92
-	const ITEM_93      ; 93
-	const ITEM_94      ; 94
-	const ITEM_95      ; 95
+	const FOSSIL_SHARD ; 93
+	const GROSS_GARBAGE; 94
+	const CHAMPIONBELT ; 95
 	const MYSTERYBERRY ; 96
 	const DRAGON_SCALE ; 97
 	const BERSERK_GENE ; 98
-	const ITEM_99      ; 99
-	const ITEM_9A      ; 9a
-	const ITEM_9B      ; 9b
+	const TAG          ; 99
+	const GUARD_THREAD ; 9a
+	const ICE_BIKINI   ; 9b
 	const SACRED_ASH   ; 9c
 	const HEAVY_BALL   ; 9d
 	const FLOWER_MAIL  ; 9e
@@ -226,21 +224,6 @@
 	const DOME_FOSSIL
 	const HELIX_FOSSIL
 	const FLEE_FEATHER ; dd
-	const ITEM_DE
-	const ITEM_DF
-	const ITEM_E0
-	const ITEM_E1
-	const ITEM_E2
-	const ITEM_E3
-	const ITEM_E4
-	const ITEM_E5
-	const ITEM_E6
-	const ITEM_E7
-	const ITEM_E8
-	const ITEM_E9
-	const ITEM_EA
-	const ITEM_EB
-	const ITEM_EC
 	const CRANIDOS_FOSSIL
 	const MYSTIC_WATER
 	const CONFUSE_CLAW
@@ -250,9 +233,6 @@
 	const STRANGE_POWDER
 	const BUG_FLYING_FOSSIL
 	const SKELEBRO_FOSSIL
-	const ITEM_F6
-	const ITEM_F7
-	const ITEM_F8
 	const INVISIBLE_WALL
 	const SKATEBOARD
 	const MOMS_LOVE
@@ -260,7 +240,6 @@
 	const MYSTIC_NEEDLE
 	const SAFARI_BALL
 	const FUJIS_LETTER
-	const ITEM_FF ; unusable
 
 NUM_ITEMS equ const_value - 1
 
