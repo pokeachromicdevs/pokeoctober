@@ -212,6 +212,7 @@ TryWildEncounter::
 	call GetMapEncounterRate
 	call ApplyMusicEffectOnEncounterRate
 	call ApplyCleanseTagEffectOnEncounterRate
+	call ApplyMysticTagEffectOnEncounterRate
 	call Random
 	cp b
 	ret
@@ -236,8 +237,6 @@ ApplyMusicEffectOnEncounterRate::
 	cp MUSIC_POKEMON_MARCH
 	jr z, .double
 	cp MUSIC_RUINS_OF_ALPH_RADIO
-	jr z, .double
-	cp HELD_MYSTIC_TAG
 	jr z, .double
 	cp MUSIC_POKEMON_LULLABY
 	ret nz
@@ -265,6 +264,25 @@ ApplyCleanseTagEffectOnEncounterRate::
 
 .cleansetag
 	srl b
+	ret
+
+ApplyMysticTagEffectOnEncounterRate::
+; Mystic Tag doubles encounter rate.
+	ld hl, wPartyMon1Item
+	ld de, PARTYMON_STRUCT_LENGTH
+	ld a, [wPartyCount]
+	ld c, a
+.loop
+	ld a, [hl]
+	cp MYSTIC_TAG
+	jr z, .mystictag
+	add hl, de
+	dec c
+	jr nz, .loop
+	ret
+
+.mystictag
+	sla b
 	ret
 
 ChooseWildEncounter:
