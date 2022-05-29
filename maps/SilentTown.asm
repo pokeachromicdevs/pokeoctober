@@ -633,27 +633,27 @@ SilentTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 13, 13, ELMS_LAB, 1
-	warp_event  5,  5, PLAYERS_HOUSE_1F, 1
-	warp_event  3, 13, ELMS_HOUSE, 1
-	warp_event 11,  5, SILENT_POKECENTER_1F, 2
+	warp_event 13, 15, ELMS_LAB, 1
+	warp_event  5,  7, PLAYERS_HOUSE_1F, 1
+	warp_event  3, 15, ELMS_HOUSE, 1
+	warp_event 11,  7, SILENT_POKECENTER_1F, 2
 
 	db 4 ; coord events
-	coord_event  1,  8, SCENE_TEACHER_STOPS, ElmStopsYouScene1
-	coord_event  1,  9, SCENE_TEACHER_STOPS, ElmStopsYouScene2
-	coord_event  5,  6, SCENE_DEFAULT, SilentTown_RivalGreets
-	coord_event 10, 14, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
+	coord_event  1, 10, SCENE_TEACHER_STOPS, ElmStopsYouScene1
+	coord_event  1, 11, SCENE_TEACHER_STOPS, ElmStopsYouScene2
+	coord_event  5,  8, SCENE_DEFAULT, SilentTown_RivalGreets
+	coord_event 10, 16, SCENE_ELM_ENTRANCE_BATTLE, SilentTownSilverBattleScript
 
 	db 4 ; bg events
-	bg_event 12,  8, BGEVENT_READ, SilentTownSign
-	bg_event  3,  5, BGEVENT_READ, SilentTownPlayersHouseSign
-	bg_event 11, 13, BGEVENT_READ, SilentTownElmsLabSign
-	bg_event  7, 13, BGEVENT_READ, SilentTownElmsHouseSign
+	bg_event 12, 10, BGEVENT_READ, SilentTownSign
+	bg_event  3,  7, BGEVENT_READ, SilentTownPlayersHouseSign
+	bg_event 11, 15, BGEVENT_READ, SilentTownElmsLabSign
+	bg_event  7, 15, BGEVENT_READ, SilentTownElmsHouseSign
 
 	db 6 ; object events
-	object_event  8,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownTeacherScript, -1
-	object_event 15,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentTownFisherScript, -1
-	object_event  7, 11, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownRivalScript, EVENT_RIVAL_SILENT_TOWN
-	object_event  7,  8, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SilentTownElmScript, EVENT_ELM_APPEARED_SILENT_TOWN
-	object_event 19,  8, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownFisher2Script, -1
-	object_event  7, 14, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, EVENT_FOUGHT_RIVAL_SILENT_TOWN
+	object_event  8,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownTeacherScript, -1
+	object_event 15, 10, SPRITE_FAT_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentTownFisherScript, -1
+	object_event  7, 13, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownRivalScript, EVENT_RIVAL_SILENT_TOWN
+	object_event  7, 10, SPRITE_ELM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SilentTownElmScript, EVENT_ELM_APPEARED_SILENT_TOWN
+	object_event 19, 10, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownFisher2Script, -1
+	object_event  7, 16, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownSilverBattleScript, EVENT_FOUGHT_RIVAL_SILENT_TOWN
