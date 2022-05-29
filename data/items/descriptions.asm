@@ -237,6 +237,8 @@ ItemDescriptions:
 .End:
 
 IceBikiniDesc:
+	db "Weakens ice-type"
+	next "moves. (HOLD)"
 GuardThreadDesc:
 TagDesc:
 ChampionbeltDesc:
@@ -594,7 +596,7 @@ TeruSamaDesc:
 	next "Sell high.@"
 
 SilverPowderDesc:
-	db   "Powers up bug-type"
+	db   "Weakens bug-type"
 	next "moves. (HOLD)@"
 
 BluApricornDesc:
@@ -726,7 +728,7 @@ RevivalHerbDesc:
 	next "#MON. Bitter.@"
 
 HardStoneDesc:
-	db   "Powers up rock-"
+	db   "Weakens rock-"
 	next "type moves. (HOLD)@"
 
 LuckyEggDesc:
