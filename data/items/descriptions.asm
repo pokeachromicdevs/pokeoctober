@@ -582,7 +582,8 @@ MintBerryDesc:
 	next "for sleep. (HOLD)@"
 
 RedApricornDesc:
-	db   "A red APRICORN.@"
+	db   "A deep red" 
+	next "APRICORN.@"
 
 CordycepsDesc:
 	db   "An excellent mush-"
