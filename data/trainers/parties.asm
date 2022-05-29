@@ -5077,6 +5077,14 @@ OfficerGroup:
 	dw REMORAID
 	db -1 ; end
 	
+	next_list_item ; OFFICER (2)
+	db "AARON@", TRAINERTYPE_NORMAL
+	db 13
+	dw EKANS
+	db 15
+	dw REMORAID
+	db -1 ; end
+	
 	end_list_items
 
 GruntFGroup:
