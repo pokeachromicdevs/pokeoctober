@@ -280,3 +280,4 @@ AnimationIdlePointers:
 	dw SilkaneAnimationIdle
 	dw MorphobiaAnimationIdle
 	dw TerrachnidAnimationIdle
+	dw SmujjAnimationIdle

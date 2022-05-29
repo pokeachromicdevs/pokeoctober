@@ -280,3 +280,4 @@ BitmasksPointers:
 	dw SilkaneBitmasks
 	dw MorphobiaBitmasks
 	dw TerrachnidBitmasks
+	dw SmujjBitmasks

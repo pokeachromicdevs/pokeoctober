@@ -280,3 +280,4 @@ FramesPointers:
 	dba SilkaneFrames
 	dba MorphobiaFrames
 	dba TerrachnidFrames
+	dba SmujjFrames
