@@ -92,24 +92,24 @@ DebugMenu::
 	ret
 
 .Strings:
-	db "SOUND TEST@"
-	db "SUBGAME (SOON)@"
-	db "WARP!@"
-	db "COLOR@"
-	db "FILL DEX@"
-	db "TEACH MOVE@"
-	db "GIVE #@"
-	db "MAX ¥@"
-	db "WARP ANY@"
-	db "PC@"
-	db "FILL BAG@"
-	db "FILL TM/HM@"
-	db "PLAY CRY@"
-	db "TRAINERS@"
-	db "HELP@"
-	db "FIX EVENTS@"
-	db "FOLLOW@"
-	db "CREDITS@"
+	string "SOUND TEST"
+	string "SUBGAME (SOON)"
+	string "WARP!"
+	string "COLOR"
+	string "FILL DEX"
+	string "TEACH MOVE"
+	string "GIVE #"
+	string "MAX ¥"
+	string "WARP ANY"
+	string "PC"
+	string "FILL BAG"
+	string "FILL TM/HM"
+	string "PLAY CRY"
+	string "TRAINERS"
+	string "HELP"
+	string "FIX EVENTS"
+	string "FOLLOW"
+	string "CREDITS"
 
 .MenuItems
 ;	db 14
@@ -591,9 +591,9 @@ Debug_SubgameMenu:
 .MenuData:
 	db STATICMENU_CURSOR
 	db 4 ; # items
-	db "Slots@"
-	db "Card@"
-	db "Unown@"
+	string "Slots"
+	string "Card"
+	string "Unown"
 
 Debug_Warp:
 	lb bc, SCREEN_HEIGHT - 2, SCREEN_WIDTH - 2
@@ -1191,7 +1191,7 @@ Debug_GivePoke:
 	jp PlaceString
 
 .BlankItemName:
-	db "------@"
+	string "------"
 
 Debug_MaxMoney:
 	ld hl, wMoney
@@ -1684,11 +1684,11 @@ ENDR
 	ret
 
 .basecry
-	db "BASE@"
+	string "BASE"
 .pitch
-	db "PITCH@"
+	string "PITCH"
 .length
-	db "LENGTH@"
+	string "LENGTH"
 
 .updateleft
 	call .getupdateamt

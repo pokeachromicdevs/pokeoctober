@@ -7,6 +7,11 @@ cont   EQUS "db \"<CONT>\","  ; Scroll to the next line.
 done   EQUS "db \"<DONE>\""   ; End a text box.
 prompt EQUS "db \"<PROMPT>\"" ; Prompt the player to end a text box (initiating some other event).
 
+; @-delimited string
+string: MACRO
+	db \1, "@"
+ENDM
+
 ; TextCommands indexes (see home/text.asm)
 	enum_start
 

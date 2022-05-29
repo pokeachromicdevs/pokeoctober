@@ -28,16 +28,16 @@ PrintDayOfWeek:
 	ret
 
 .Days:
-	db "SUN@"
-	db "MON@"
-	db "TUES@"
-	db "WEDNES@"
-	db "THURS@"
-	db "FRI@"
-	db "SATUR@"
+	string "SUN"
+	string "MON"
+	string "TUES"
+	string "WEDNES"
+	string "THURS"
+	string "FRI"
+	string "SATUR"
 
 .Day:
-	db "DAY@"
+	string "DAY"
 
 NewGame_ClearTileMapEtc:
 	xor a
@@ -274,7 +274,7 @@ SetDefaultBoxNames:
 	ret
 
 .Box:
-	db "BOX@"
+	string "BOX"
 
 InitializeMagikarpHouse:
 	ld hl, wBestMagikarpLengthFeet
@@ -287,7 +287,7 @@ InitializeMagikarpHouse:
 	ret
 
 .Ralph:
-	db "RALPH@"
+	string "RALPH"
 
 InitializeNPCNames:
 	ld hl, .Player
@@ -314,11 +314,11 @@ InitializeNPCNames:
 	call CopyBytes
 	ret
 
-.Rival:  db "???@"
-.Red:    db "RED@"
-.Green:  db "GREEN@"
-.Mom:    db "MOM@"
-.Player: db "GABE@"
+.Rival:  string "???"
+.Red:    string "RED"
+.Green:  string "GREEN"
+.Mom:    string "MOM"
+.Player: string "GABE"
 
 InitializeWorld:
 	call ShrinkPlayer
@@ -554,10 +554,10 @@ Continue_LoadMenuHeader:
 .MenuData_Dex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER@"
-	db "BADGES@"
-	db "#DEX@"
-	db "TIME@"
+	string "PLAYER"
+	string "BADGES"
+	string "#DEX"
+	string "TIME"
 
 .MenuHeader_NoDex:
 	db MENU_BACKUP_TILES ; flags
@@ -568,10 +568,10 @@ Continue_LoadMenuHeader:
 .MenuData_NoDex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER <PLAYER>@"
-	db "BADGES@"
-	db " @"
-	db "TIME@"
+	string "PLAYER <PLAYER>"
+	string "BADGES"
+	string " "
+	string "TIME"
 
 Continue_DisplayBadgesDexPlayerName:
 	call MenuBoxCoord2Tile
@@ -594,7 +594,7 @@ Continue_DisplayBadgesDexPlayerName:
 	ret
 
 .Player:
-	db "<PLAYER>@"
+	string "<PLAYER>"
 
 Continue_PrintGameTime:
 	decoord 9, 8, 0
@@ -610,7 +610,7 @@ Continue_UnknownGameTime:
 	ret
 
 .three_question_marks
-	db " ???@"
+	string " ???"
 
 Continue_DisplayBadgeCount:
 	push hl
