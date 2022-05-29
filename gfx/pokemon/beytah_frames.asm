@@ -22,8 +22,9 @@ ParasporFrames:   INCLUDE "gfx/pokemon/paraspor/frames.asm"
 MolambinoFrames:  INCLUDE "gfx/pokemon/molambino/frames.asm"
 KiwackiFrames:    INCLUDE "gfx/pokemon/kiwacki/frames.asm"
 SilkaneFrames:    INCLUDE "gfx/pokemon/silkane/frames.asm"
-MorphobiaFrames:   INCLUDE "gfx/pokemon/morphobia/frames.asm"
-TerrachnidFrames:   INCLUDE "gfx/pokemon/terrachnid/frames.asm"
+MorphobiaFrames:  INCLUDE "gfx/pokemon/morphobia/frames.asm"
+TerrachnidFrames: INCLUDE "gfx/pokemon/terrachnid/frames.asm"
+SmujjFrames:      INCLUDE "gfx/pokemon/smujj/frames.asm"
 
 
 

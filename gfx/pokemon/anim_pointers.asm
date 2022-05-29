@@ -280,3 +280,4 @@ AnimationPointers:
 	dw SilkaneAnimation
 	dw MorphobiaAnimation
 	dw TerrachnidAnimation
+	dw SmujjAnimation
