@@ -9,7 +9,7 @@ FinalMonTexts::
 	dbw MORTY,   .MortyText
 	dbw PRYCE,   .PryceText
 	dbw JASMINE, .JasmineText
-	dbw CHUCK,   .ChuckText ; formerly .SneedText
+	dbw CHUCK,   .ChuckText
 	dbw CLAIR,   .ClairText
 
 ; execs
@@ -56,10 +56,39 @@ FinalMonTexts::
 	prompt
 
 .PryceText:
+	text "The storm isn't"
+	line "quite over yet,"
+	cont "young one."
+	prompt
+
 .JasmineText:
+	text "With an iron will,"
+	line "we can seize"
+	para "victory at any"
+	line "cost."
+	para "Um<...>"
+	para "What gives you"
+	line "your strength?"
+	prompt
+
 .ChuckText:
+	text "Alright!"
+	para "Looks like I'm"
+	line "going to have to"
+	para "bust out the big"
+	line "guns!"
+	prompt
+
 .ClairText:
+	text "A valiant effort,"
+	line "but I'm afraid this"
+	cont "ends here."
+	prompt
+
 .KarenText:
+	; karen should maybe have per-roster txt's
+	; so this probably isn't needed...
+
 .GiovanniText:
 .LoreleiText:
 .BrunoText:
