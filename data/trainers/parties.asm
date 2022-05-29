@@ -5077,13 +5077,21 @@ OfficerGroup:
 	dw REMORAID
 	db -1 ; end
 	
+	next_list_item ; OFFICER (2)
+	db "AARON@", TRAINERTYPE_NORMAL
+	db 13
+	dw EKANS
+	db 15
+	dw REMORAID
+	db -1 ; end
+	
 	end_list_items
 
 GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	dbw 14, BURGELA
-	;dbw 18, SMUJI
+	dbw 18, SMUJJ
 	dbw 20, GRIMER
 	dbw 21, TANGELA
 	db -1 ; end

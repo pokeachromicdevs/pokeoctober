@@ -695,6 +695,7 @@ KRIS EQU __enum__
 	const DIRK
 	const MATT
 	const SAMSON
+	const AARON_O
 
 	trainerclass GRUNTF ; 42
 	const GRUNTF_ROUTE_33
