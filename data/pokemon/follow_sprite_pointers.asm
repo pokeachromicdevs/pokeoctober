@@ -286,4 +286,5 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SILKANE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MORPHOBIA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TERRACHNID
+	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SMUJJ
 
