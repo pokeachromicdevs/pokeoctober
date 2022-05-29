@@ -1,25 +1,22 @@
 ; List macros.
-begin_walksprites: MACRO
+def_walk_sprite: MACRO
 __num_walking__ = 0
 ENDM
 
-walksprite: MACRO
+walk_sprite: MACRO
 	db \1
 __num_walking__ = __num_walking__ + 1
 ENDM
 
-end_walksprites: MACRO
+def_static_sprite: MACRO
 	assert __num_walking__ <= 9, "\n\t\tThere can only be a maximum of 9 walking sprites ({d:__num_walking__} defined)"
 ENDM
 
-begin_staticsprites: MACRO
-ENDM
-
-staticsprite: MACRO
+static_sprite: MACRO
 	db \1
 ENDM
 
-end_staticsprites: MACRO
+end_outdoor_sprites: MACRO
 	db 0
 ENDM
 
@@ -62,226 +59,226 @@ PalletGroupSprites:
 ViridianGroupSprites:
 PewterGroupSprites:
 CinnabarGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_TEACHER
-		walksprite SPRITE_FISHER
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_BLUE
-		walksprite SPRITE_GRAMPS
-		walksprite SPRITE_BUG_CATCHER
-		walksprite SPRITE_COOLTRAINER_F
-		walksprite SPRITE_SWIMMER_GIRL
-		walksprite SPRITE_SWIMMER_GUY
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_TEACHER
+		walk_sprite SPRITE_FISHER
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_BLUE
+		walk_sprite SPRITE_GRAMPS
+		walk_sprite SPRITE_BUG_CATCHER
+		walk_sprite SPRITE_COOLTRAINER_F
+		walk_sprite SPRITE_SWIMMER_GIRL
+		walk_sprite SPRITE_SWIMMER_GUY
+	
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
 
-	begin_staticsprites
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-	end_staticsprites
+	end_outdoor_sprites
 
 CeruleanGroupSprites:
 SaffronGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_COOLTRAINER_M
-		walksprite SPRITE_SUPER_NERD
-		walksprite SPRITE_COOLTRAINER_F
-		walksprite SPRITE_FISHER
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_LASS
-		walksprite SPRITE_POKEFAN_M
-		walksprite SPRITE_ROCKET
-		walksprite SPRITE_MISTY
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_COOLTRAINER_M
+		walk_sprite SPRITE_SUPER_NERD
+		walk_sprite SPRITE_COOLTRAINER_F
+		walk_sprite SPRITE_FISHER
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_POKEFAN_M
+		walk_sprite SPRITE_ROCKET
+		walk_sprite SPRITE_MISTY
+	
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_SLOWPOKE
 
-	begin_staticsprites
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_SLOWPOKE
-	end_staticsprites
+	end_outdoor_sprites
 
 CeladonGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_FISHER
-		walksprite SPRITE_TEACHER
-		walksprite SPRITE_GRAMPS
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_LASS
-		walksprite SPRITE_BIKER
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_FISHER
+		walk_sprite SPRITE_TEACHER
+		walk_sprite SPRITE_GRAMPS
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_BIKER
+	
+	def_static_sprite
+		static_sprite SPRITE_POLIWAG
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
 
-	begin_staticsprites
-		staticsprite SPRITE_POLIWAG
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-	end_staticsprites
+	end_outdoor_sprites
 
 LavenderGroupSprites:
 FuchsiaGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_POKEFAN_M
-		walksprite SPRITE_GRAMPS
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_FISHER
-		walksprite SPRITE_TEACHER
-		walksprite SPRITE_SUPER_NERD
-		walksprite SPRITE_BIKER
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_POKEFAN_M
+		walk_sprite SPRITE_GRAMPS
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_FISHER
+		walk_sprite SPRITE_TEACHER
+		walk_sprite SPRITE_SUPER_NERD
+		walk_sprite SPRITE_BIKER
 
-	begin_staticsprites
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-	end_staticsprites
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
+
+	end_outdoor_sprites
 
 VermilionGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_POKEFAN_M
-		walksprite SPRITE_GRAMPS
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_TEACHER
-		walksprite SPRITE_SUPER_NERD
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_POKEFAN_M
+		walk_sprite SPRITE_GRAMPS
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_TEACHER
+		walk_sprite SPRITE_SUPER_NERD
+	
+	def_static_sprite
+		static_sprite SPRITE_BIG_SNORLAX
+		static_sprite SPRITE_MACHOP
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
 
-	begin_staticsprites
-		staticsprite SPRITE_BIG_SNORLAX
-		staticsprite SPRITE_MACHOP
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-	end_staticsprites
+	end_outdoor_sprites
 
 IndigoGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 
 SilentGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_SILENTTOWN_RIVAL_DUDE
-		walksprite SPRITE_TEACHER
-		walksprite SPRITE_FAT_GUY
-		walksprite SPRITE_ELM
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_TEACHER
-		walksprite SPRITE_GRAMPS
-		walksprite SPRITE_BUG_CATCHER
-		walksprite SPRITE_COOLTRAINER_F
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_SILENTTOWN_RIVAL_DUDE
+		walk_sprite SPRITE_TEACHER
+		walk_sprite SPRITE_FAT_GUY
+		walk_sprite SPRITE_ELM
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_TEACHER
+		walk_sprite SPRITE_GRAMPS
+		walk_sprite SPRITE_BUG_CATCHER
+		walk_sprite SPRITE_COOLTRAINER_F
 
-	begin_staticsprites
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-	end_staticsprites
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
+
+	end_outdoor_sprites
 
 CherrygroveGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_SOLDIER
-		walksprite SPRITE_TEACHER
-		walksprite SPRITE_FISHER
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_BIRD_KEEPER
-		walksprite SPRITE_GRAMPS
-		walksprite SPRITE_SUPER_NERD
-		walksprite SPRITE_LASS
-		walksprite SPRITE_BUG_CATCHER
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_SOLDIER
+		walk_sprite SPRITE_TEACHER
+		walk_sprite SPRITE_FISHER
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_BIRD_KEEPER
+		walk_sprite SPRITE_GRAMPS
+		walk_sprite SPRITE_SUPER_NERD
+		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_BUG_CATCHER
+	
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
+		static_sprite SPRITE_OFFICER
+		static_sprite SPRITE_BLACK_BELT
 
-	begin_staticsprites
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-		staticsprite SPRITE_OFFICER
-		staticsprite SPRITE_BLACK_BELT
-	end_staticsprites
+	end_outdoor_sprites
 
 SilverGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 
 VioletGroupSprites:
 EcruteakGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_FISHER
-		walksprite SPRITE_LASS
-		walksprite SPRITE_OFFICER
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_COOLTRAINER_M
-		walksprite SPRITE_SAGE
-		walksprite SPRITE_SUPER_NERD
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_FISHER
+		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_OFFICER
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_COOLTRAINER_M
+		walk_sprite SPRITE_SAGE
+		walk_sprite SPRITE_SUPER_NERD
 
-	begin_staticsprites
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-	end_staticsprites
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
+
+	end_outdoor_sprites
 
 AzaleaGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_KURT
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_OFFICER
-		walksprite SPRITE_AZALEA_ROCKET
-		walksprite SPRITE_ROCKET_GIRL
-		walksprite SPRITE_BUGSY
-		walksprite SPRITE_KAREN
-		walksprite SPRITE_LASS
-		walksprite SPRITE_SILVER
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_KURT
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_OFFICER
+		walk_sprite SPRITE_AZALEA_ROCKET
+		walk_sprite SPRITE_ROCKET_GIRL
+		walk_sprite SPRITE_BUGSY
+		walk_sprite SPRITE_KAREN
+		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_SILVER
+	
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
 
-	begin_staticsprites
-		staticsprite SPRITE_POKE_BALL
-		staticsprite SPRITE_FRUIT_TREE
-	end_staticsprites
+	end_outdoor_sprites
 
 GoldenrodGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 
 OlivineGroupSprites:
 CianwoodGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_OLIVINE_RIVAL
-		walksprite SPRITE_POKEFAN_M
-		walksprite SPRITE_LASS
-		walksprite SPRITE_BUENA
-		walksprite SPRITE_SWIMMER_GIRL
-		walksprite SPRITE_SAILOR
-		walksprite SPRITE_POKEFAN_F
-		walksprite SPRITE_SUPER_NERD
-		walksprite SPRITE_YOUNGSTER
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_OLIVINE_RIVAL
+		walk_sprite SPRITE_POKEFAN_M
+		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_BUENA
+		walk_sprite SPRITE_SWIMMER_GIRL
+		walk_sprite SPRITE_SAILOR
+		walk_sprite SPRITE_POKEFAN_F
+		walk_sprite SPRITE_SUPER_NERD
+		walk_sprite SPRITE_YOUNGSTER
 
-	begin_staticsprites
-		staticsprite SPRITE_TAUROS
-		staticsprite SPRITE_FRUIT_TREE
-		staticsprite SPRITE_ROCK
-		staticsprite SPRITE_SUICUNE
-	end_staticsprites
+	def_static_sprite
+		static_sprite SPRITE_TAUROS
+		static_sprite SPRITE_FRUIT_TREE
+		static_sprite SPRITE_ROCK
+		static_sprite SPRITE_SUICUNE
+
+	end_outdoor_sprites
 
 LakeOfRageGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 
 MahoganyGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 
 SnowGroupSprites:
 BlackthornGroupSprites:
 CitrineGroupSprites:
-	begin_walksprites
-		walksprite SPRITE_GRAMPS
-		walksprite SPRITE_YOUNGSTER
-		walksprite SPRITE_LASS
-		walksprite SPRITE_SUPER_NERD
-		walksprite SPRITE_COOLTRAINER_M
-		walksprite SPRITE_SPORTSMAN
-		walksprite SPRITE_POKEFAN_M
-		walksprite SPRITE_CAMPER
-		walksprite SPRITE_FISHER
-	end_walksprites
+	def_walk_sprite
+		walk_sprite SPRITE_GRAMPS
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_SUPER_NERD
+		walk_sprite SPRITE_COOLTRAINER_M
+		walk_sprite SPRITE_SPORTSMAN
+		walk_sprite SPRITE_POKEFAN_M
+		walk_sprite SPRITE_CAMPER
+		walk_sprite SPRITE_FISHER
+	
+	def_static_sprite
+		static_sprite SPRITE_FRUIT_TREE
+		static_sprite SPRITE_POKE_BALL
 
-	begin_staticsprites
-		staticsprite SPRITE_FRUIT_TREE
-		staticsprite SPRITE_POKE_BALL
-	end_staticsprites
+	end_outdoor_sprites
 
 DungeonsGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 
 FastShipGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 
 CableClubGroupSprites:
-	end_staticsprites
+	end_outdoor_sprites
 

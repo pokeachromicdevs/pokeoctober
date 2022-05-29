@@ -291,6 +291,7 @@ BattleAnimations::
 	dw BattleAnim_Ambush
 	dw BattleAnim_WillOWisp
 	dw BattleAnim_SweetScent2
+.End:
 
 BattleAnim_0:
 BattleAnim_MirrorMove:
@@ -5043,3 +5044,6 @@ BattleAnim_ShowMon_1:
 	anim_incobj 1
 	anim_wait 1
 	anim_ret
+
+;--------------------------------------------------------------------
+_NUM_MOVE_ANIMATIONS = (BattleAnimations.End  - BattleAnimations)/2

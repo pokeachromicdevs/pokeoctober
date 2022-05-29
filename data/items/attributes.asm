@@ -1,8 +1,10 @@
+_NUM_ITEM_ATTRIBUTES = 0
 item_attribute: MACRO
 ; price, held effect, parameter, property, pocket, field menu, battle menu
 	dw \1
 	db \2, \3, \4, \5
 	dn \6, \7
+_NUM_ITEM_ATTRIBUTES = _NUM_ITEM_ATTRIBUTES + 1
 ENDM
 
 ItemAttributes:

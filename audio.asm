@@ -187,3 +187,6 @@ SECTION "Cries", ROMX
 INCLUDE "data/pokemon/cries.asm"
 
 INCLUDE "audio/cries.asm"
+
+; --------------------------
+INCLUDE "checks/pokemon_cries.asm"

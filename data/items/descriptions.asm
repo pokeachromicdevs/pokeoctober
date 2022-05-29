@@ -255,6 +255,7 @@ ItemDescriptions:
 	dw SafariBallDesc
 	dw FujisLetterDesc
 	dw QuestionMarkDesc
+.End:
 
 CountercuffDesc:
 CranidosFossilDesc:
@@ -1076,3 +1077,6 @@ FleeFeatherDesc:
 	next "waste turn. (HOLD)@"
 	
 	
+
+;--------------------------------------------------------------------
+_NUM_ITEM_DESCRIPTIONS = (ItemDescriptions.End  - ItemDescriptions)/2

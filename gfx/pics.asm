@@ -9,6 +9,8 @@ SECTION "Pic Pointers", ROMX
 
 INCLUDE "data/pokemon/pic_pointers.asm"
 
+INCLUDE "checks/pokemon_pics.asm"
+
 
 SECTION "Unown Pic Pointers", ROMX
 

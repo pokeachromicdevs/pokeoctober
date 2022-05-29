@@ -268,6 +268,9 @@ ItemEffects:
 	dw PokeBallEffect ; SAFARI_BALL
 	dw NoEffect
 	dw NoEffect
+.End:
+
+_NUM_ITEM_FX = (ItemEffects.End  - ItemEffects)/2
 
 PokeBallEffect:
 	ld a, [wBattleMode]

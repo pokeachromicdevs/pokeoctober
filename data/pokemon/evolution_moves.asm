@@ -260,3 +260,28 @@ EvolutionMoves::
 	db NO_MOVE      ; MALLODY
 	db NO_MOVE      ; CAMOUFLAKE
 	db NO_MOVE      ; COALTA
+	db NO_MOVE      ; BURGELA
+	db NO_MOVE      ; VULPIII
+	db NO_MOVE      ; WORFURS
+	db NO_MOVE      ; WEARLYCAN
+	db NO_MOVE      ; DODAERIE
+	db NO_MOVE      ; PARASPOR
+	db NO_MOVE      ; MOLAMBINO
+	db NO_MOVE      ; KIWACKI
+	db NO_MOVE      ; SILKANE
+	db NO_MOVE      ; MORPHOBIA
+	db NO_MOVE      ; TERRACHNID
+	db NO_MOVE      ; SMUJJ
+
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+	db NO_MOVE      ; 
+
+;----------------------------------
+_NUM_EVO_MOVES = @ - EvolutionMoves

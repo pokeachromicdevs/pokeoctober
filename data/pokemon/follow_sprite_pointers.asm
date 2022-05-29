@@ -1,6 +1,8 @@
+_NUM_FOLLOW_SPRITES = 0
 follow_sprite: MACRO
 	dba \1 ; sprite location
 	db  \2 ; which palette to use (see constants/sprite_data_constants.asm#sprite palettes)
+_NUM_FOLLOW_SPRITES = _NUM_FOLLOW_SPRITES + 1
 ENDM
 
 FollowSpritePointers::
@@ -285,5 +287,6 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;KIWACKI
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SILKANE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MORPHOBIA
+	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TERRACHNID
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TERRACHNID
 

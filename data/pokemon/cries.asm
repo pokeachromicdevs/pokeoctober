@@ -1,6 +1,8 @@
+_NUM_POKEMON_CRIES = 0
 mon_cry: MACRO
 ; index, pitch, length
 	dw \1, \2, \3
+_NUM_POKEMON_CRIES = _NUM_POKEMON_CRIES + 1
 ENDM
 
 PokemonCries::

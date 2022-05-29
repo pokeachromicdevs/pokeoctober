@@ -111,6 +111,7 @@ EvosAttacksPointers2::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
+.End:
 
 ChikoritaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, PETAMOLE
@@ -1692,3 +1693,6 @@ CelebiEvosAttacks:
 	dbw 40, BATON_PASS
 	dbw 50, PERISH_SONG
 	db 0 ; no more level-up moves
+
+;-------------------------------------------------------------------------------------------
+_NUM_EVOS_ATTACKS = _NUM_EVOS_ATTACKS + (EvosAttacksPointers2.End  - EvosAttacksPointers2)/2

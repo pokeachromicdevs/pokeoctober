@@ -22,6 +22,7 @@ EvosAttacksPointers3::
 	dw MorphobiaEvosAttacks
 	dw TerrachnidEvosAttacks
 	dw SmujjEvosAttacks
+.End:
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -354,4 +355,7 @@ SmujjEvosAttacks:
 	db 0 ; no more level-up moves
 	
 	
-	
+
+
+;-------------------------------------------------------------------------------------------
+_NUM_EVOS_ATTACKS = _NUM_EVOS_ATTACKS + (EvosAttacksPointers3.End  - EvosAttacksPointers3)/2

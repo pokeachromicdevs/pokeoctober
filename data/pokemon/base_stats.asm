@@ -41,7 +41,7 @@ BaseData::
 	indirect_entries NUM_POKEMON, BaseData1
 	indirect_table_end
 
-BaseData1:
+BaseData1::
 INCLUDE "data/pokemon/base_stats/bulbasaur.asm"
 INCLUDE "data/pokemon/base_stats/ivysaur.asm"
 INCLUDE "data/pokemon/base_stats/venusaur.asm"
@@ -324,3 +324,6 @@ INCLUDE "data/pokemon/base_stats/silkane.asm"
 INCLUDE "data/pokemon/base_stats/morphobia.asm"
 INCLUDE "data/pokemon/base_stats/terrachnid.asm"
 INCLUDE "data/pokemon/base_stats/smujj.asm"
+
+;------------------------------------
+_NUM_BASE_STATS = (@ - BaseData1)/$20

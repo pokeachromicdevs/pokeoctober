@@ -283,3 +283,6 @@ NewPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
+
+;---------------------------------------------
+_NUM_NEW_DEX_ORDER = (@ - NewPokedexOrder) / 2

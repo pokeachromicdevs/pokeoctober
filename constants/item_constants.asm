@@ -262,6 +262,8 @@
 	const FUJIS_LETTER
 	const ITEM_FF ; unusable
 
+NUM_ITEMS equ const_value - 1
+
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff
 

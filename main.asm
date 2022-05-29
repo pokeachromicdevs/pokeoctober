@@ -722,3 +722,9 @@ SECTION "Debug Menu", ROMX
 if DEF(_DEBUG)
 INCLUDE "engine/debug/debug_menu.asm"
 endc
+
+; --------------------------
+INCLUDE "checks/events.asm"
+INCLUDE "checks/pokemon.asm"
+INCLUDE "checks/moves.asm"
+INCLUDE "checks/items.asm"

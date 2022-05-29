@@ -282,3 +282,6 @@ PokedexDataPointerTable:
 	dba MorphobiaPokedexEntry
 	dba TerrachnidPokedexEntry
 	dba SmujjPokedexEntry
+
+;-------------------------------------------------------
+_NUM_POKEDEX_ENTRIES = (@ - PokedexDataPointerTable) / 3

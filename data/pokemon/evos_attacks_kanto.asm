@@ -1,7 +1,3 @@
-SECTION "Evolutions and Attacks 1", ROMX
-
-INCLUDE "data/pokemon/evolution_moves.asm"
-
 EvosAttacksPointers1::
 	dw BulbasaurEvosAttacks
 	dw IvysaurEvosAttacks
@@ -154,6 +150,7 @@ EvosAttacksPointers1::
 	dw DragoniteEvosAttacks
 	dw MewtwoEvosAttacks
 	dw MewEvosAttacks
+.End:
 
 BulbasaurEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, IVYSAUR
@@ -2251,3 +2248,6 @@ MewEvosAttacks:
 	dbw 40, PSYCHIC_M
 	dbw 50, ANCIENTPOWER
 	db 0 ; no more level-up moves
+
+;-----------------------------------------------------------------------
+_NUM_EVOS_ATTACKS = (EvosAttacksPointers1.End  - EvosAttacksPointers1)/2

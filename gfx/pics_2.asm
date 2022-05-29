@@ -1,7 +1,3 @@
-SECTION "Pic Pointers", ROMX
-	
-INCLUDE "data/pokemon/pic_pointers.asm"
-
 ;pics 2
 
 SECTION "Pics 20", ROMX

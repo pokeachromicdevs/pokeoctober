@@ -252,3 +252,6 @@ IconPointers:
 	dw Ho_OhIcon
 	dw CelebiIcon
 	dw EggIcon
+
+;--------------------------------------------------
+_NUM_MON_ICON_POINTERS = (@ - IconPointers - 2) / 2

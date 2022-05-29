@@ -23,6 +23,11 @@ EvosAttacksPointers::
 	indirect_entries NUM_POKEMON, EvosAttacksPointers3
 	indirect_table_end
 
+SECTION "Evolutions and Attacks 1", ROMX
+INCLUDE "data/pokemon/evolution_moves.asm"
 INCLUDE "data/pokemon/evos_attacks_kanto.asm"
 INCLUDE "data/pokemon/evos_attacks_johto.asm"
 INCLUDE "data/pokemon/evos_attacks_beytah.asm"
+
+;----------------------------------------
+INCLUDE "checks/pokemon_evos_attacks.asm"

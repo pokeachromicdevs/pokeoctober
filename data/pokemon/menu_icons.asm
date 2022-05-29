@@ -284,3 +284,6 @@ MonMenuIcons:
 	db ICON_GLIGAR      ; TERRACHNID
 	db ICON_GRIMER		; SMUJJ
 	db ICON_EGG         ; EGG
+
+;-------------------------------------------
+_NUM_MON_MENU_ICONS = (@ - MonMenuIcons) - 1

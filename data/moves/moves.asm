@@ -1,5 +1,6 @@
 ; Characteristics of each move.
 
+_NUM_ATTACKS = 0
 move: MACRO
 	; the animation byte will be filled when the move is loaded
 	db \1 ; effect
@@ -8,6 +9,7 @@ move: MACRO
 	db \4 percent ; accuracy
 	db \5 ; pp
 	db \6 percent ; effect chance
+_NUM_ATTACKS = _NUM_ATTACKS + 1
 ENDM
 
 Moves::

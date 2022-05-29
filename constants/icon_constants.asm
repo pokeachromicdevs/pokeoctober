@@ -253,6 +253,8 @@
 	const ICON_CELEBI      ; CELEBI
 	const ICON_EGG         ; EGG
 
+NUM_MON_ICONS EQU const_value + -1
+
 ; LoadMenuMonIcon.Jumptable indexes (see engine/gfx/mon_icons.asm)
 	const_def
 	const MONICON_PARTYMENU
