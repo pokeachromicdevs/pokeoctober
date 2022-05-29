@@ -152,7 +152,7 @@ ItemEffects:
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; SHARP_SCYTHE
-	dw WobblyBloonEffect   ; FIRE_MANE
+	dw NoEffect            ; FIRE_MANE
 	dw NoEffect            ; METAL_COAT
 	dw NoEffect            ; DRAGON_FANG
 	dw NoEffect            ; TWISTED_SPOON
@@ -2221,20 +2221,6 @@ digclaw_incave:
 	return_dig 32
 	step_end
 	
-WobblyBloonEffect:
-	xor a
-	cp HELD_WOBBLY_BLOON
-	call NOT_VERY_EFFECTIVE
-	call Play_SFX_NOT_VERY_EFFECTIVE
-	ret
-	
-Play_SFX_NOT_VERY_EFFECTIVE:
-	push de
-	ld de, SFX_NOT_VERY_EFFECTIVE
-	call WaitPlaySFX
-	pop de
-	ret
-
 ;DiggingClawEffect:
 	;xor a
     ;ld [wItemEffectSucceeded], a

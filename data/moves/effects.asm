@@ -17,6 +17,7 @@ NormalHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -47,6 +48,7 @@ PoisonHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	poisontarget
@@ -67,6 +69,7 @@ LeechHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	draintarget
 	checkfaint
 	buildopponentrage
@@ -89,6 +92,7 @@ BurnHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	burntarget
@@ -110,6 +114,7 @@ FreezeHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	freezetarget
@@ -131,6 +136,7 @@ ParalyzeHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	paralyzetarget
@@ -152,6 +158,7 @@ Selfdestruct:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -172,6 +179,7 @@ DreamEater:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	eatdream
 	checkfaint
 	buildopponentrage
@@ -551,6 +559,7 @@ AttackDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	attackdown
@@ -573,6 +582,7 @@ DefenseDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	effectchance ; bug: duplicate effectchance shouldn't be here
@@ -596,6 +606,7 @@ SpeedDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	speeddown
@@ -618,6 +629,7 @@ SpecialAttackDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	specialattackdown
@@ -640,6 +652,7 @@ SpecialDefenseDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	specialdefensedown
@@ -662,6 +675,7 @@ AccuracyDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	accuracydown
@@ -684,6 +698,7 @@ EvasionDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	evasiondown
@@ -706,6 +721,7 @@ DefenseUpHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	defenseup
@@ -728,6 +744,7 @@ AttackUpHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	attackup
@@ -750,6 +767,7 @@ AllUpHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	allstatsup
@@ -770,6 +788,7 @@ PayDay:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	payday
 	checkfaint
 	buildopponentrage
@@ -824,6 +843,7 @@ Rampage:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -907,6 +927,7 @@ FlinchHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	flinchtarget
@@ -923,6 +944,7 @@ OHKOHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	endmove
@@ -942,6 +964,7 @@ RecoilHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	recoil
 	checkfaint
 	buildopponentrage
@@ -987,6 +1010,7 @@ ConfuseHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	confusetarget
@@ -1029,6 +1053,7 @@ TriAttack:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	tristatuschance
@@ -1073,6 +1098,7 @@ SkyAttack:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	flinchtarget
@@ -1101,6 +1127,7 @@ HyperBeam:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	rechargenextturn
 	checkfaint
 	buildopponentrage
@@ -1123,6 +1150,7 @@ Rage:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1183,6 +1211,7 @@ RazorWind:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1206,6 +1235,7 @@ Fly:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1227,6 +1257,7 @@ TrapTarget:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	traptarget
@@ -1260,6 +1291,7 @@ Reversal:
 	failuretext
 	applydamage
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1311,6 +1343,7 @@ Snore:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	flinchtarget
@@ -1385,6 +1418,7 @@ FalseSwipe:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1441,6 +1475,7 @@ Thief:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	thief
 	checkfaint
 	buildopponentrage
@@ -1477,6 +1512,7 @@ FlameWheel:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	defrost
 	checkfaint
 	buildopponentrage
@@ -1550,6 +1586,7 @@ Rollout:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1589,6 +1626,7 @@ FuryCutter:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1618,6 +1656,7 @@ Return:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1639,6 +1678,7 @@ Present:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1660,6 +1700,7 @@ Frustration:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1688,6 +1729,7 @@ SacredFire:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	defrost
 	checkfaint
 	buildopponentrage
@@ -1711,6 +1753,7 @@ Magnitude:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1739,6 +1782,7 @@ Pursuit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1759,6 +1803,7 @@ RapidSpin:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	clearhazards
 	checkfaint
 	buildopponentrage
@@ -1801,6 +1846,7 @@ HiddenPower:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1874,6 +1920,7 @@ SkullBash:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1899,6 +1946,7 @@ Twister:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	flinchtarget
@@ -1921,6 +1969,7 @@ Earthquake:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	endmove
@@ -1958,6 +2007,7 @@ Gust:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	endmove
@@ -1979,6 +2029,7 @@ Stomp:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	flinchtarget
@@ -2002,6 +2053,7 @@ Solarbeam:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -2024,6 +2076,7 @@ Thunder:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	paralyzetarget
@@ -2055,6 +2108,7 @@ BeatUp:
 	criticaltext
 	cleartext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	endloop
@@ -2092,6 +2146,7 @@ CoinHurl:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -2115,6 +2170,7 @@ Bounce:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -2137,6 +2193,7 @@ SpeedDown2Hit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	notifyweakenedeffect
 	checkfaint
 	buildopponentrage
 	speeddown2

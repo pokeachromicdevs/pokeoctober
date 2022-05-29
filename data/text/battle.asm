@@ -818,6 +818,16 @@ TooWeakSubText:
 	line "a SUBSTITUTE!"
 	prompt
 
+TypeWeakenedText:
+	text "@"
+	text_ram wStringBuffer1
+	text "'s power"
+	line "was weakened by"
+	cont "@"
+	text_ram wStringBuffer2
+	text "!"
+	prompt
+
 SubTookDamageText:
 	text "The SUBSTITUTE"
 	line "took damage for"

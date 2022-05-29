@@ -1,3 +1,332 @@
+_DamageCalc:
+; damagecalc
+
+; Return a damage value for move power d, player level e, enemy defense c and player attack b.
+
+; Return 1 if successful, else 0.
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+
+; Selfdestruct and Explosion halve defense.
+	cp EFFECT_SELFDESTRUCT
+	jr nz, .dont_selfdestruct
+
+	srl c
+	jr nz, .dont_selfdestruct
+	inc c
+
+.dont_selfdestruct
+
+; Variable-hit moves and Conversion can have a power of 0.
+	cp EFFECT_MULTI_HIT
+	jr z, .skip_zero_damage_check
+
+	cp EFFECT_CONVERSION
+	jr z, .skip_zero_damage_check
+
+; No damage if move power is 0.
+	ld a, d
+	and a
+	ret z
+
+.skip_zero_damage_check
+; Minimum defense value is 1.
+	ld a, c
+	and a
+	jr nz, .not_dividing_by_zero
+	ld c, 1
+.not_dividing_by_zero
+
+	xor a
+	ld hl, hDividend
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+
+; Level * 2
+	ld a, e
+	add a
+	jr nc, .level_not_overflowing
+	ld [hl], 1
+.level_not_overflowing
+	inc hl
+	ld [hli], a
+
+; / 5
+	ld a, 5
+	ld [hld], a
+	push bc
+	ld b, 4
+	call Divide
+	pop bc
+
+; + 2
+	inc [hl]
+	inc [hl]
+
+; * bp
+	inc hl
+	ld [hl], d
+	call Multiply
+
+; * Attack
+	ld [hl], b
+	call Multiply
+
+; / Defense
+	ld [hl], c
+	ld b, 4
+	call Divide
+
+; / 50
+	ld [hl], 50
+	ld b, $4
+	call Divide
+	
+.UserItem
+; Item boosts
+	farcall GetUserItem
+
+	ld a, b
+	and a
+	jr z, .DoneItem
+
+	ld hl, TypeBoostItems
+
+.NextItem:
+	ld a, [hli]
+	cp -1
+	jr z, .DoneItem
+
+; Item effect
+	cp b
+	ld a, [hli]
+	jr nz, .NextItem
+
+; Type
+	ld b, a
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	cp b
+	jr nz, .DoneItem
+
+; * 100 + item effect amount
+	ld a, c
+	add 100
+	ldh [hMultiplier], a
+	call Multiply
+
+; / 100
+	ld a, 100
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+
+.DoneItem:
+
+; Opponent item weakening
+	farcall GetOpponentItem
+	ld a, b
+	and a
+	jr z, .DoneOpponentItem
+	ld hl, TypeWeakenItems
+
+.NextOpponentItem:
+	ld a, [hli]
+	cp -1
+	jr z, .DoneOpponentItem
+; Item effect
+	cp b
+	ld a, [hli]
+	jr nz, .NextOpponentItem
+
+; Type
+	ld b, a
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	cp b
+	jr nz, .DoneOpponentItem
+
+; is super effective?
+	ld a, [wTypeModifier]
+	cp EFFECTIVE + 1
+	jr c, .DoneOpponentItem
+
+; half damage
+
+; * 5
+	ld a, 5	
+	ldh [hMultiplier], a
+	call Multiply
+
+; / 10
+	ld a, 10
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+
+.DoneOpponentItem:
+; Critical hits
+	call .CriticalMultiplier
+
+; Update wCurDamage (capped at 997).
+	ld hl, wCurDamage
+	ld b, [hl]
+	ldh a, [hProduct + 3]
+	add b
+	ldh [hProduct + 3], a
+	jr nc, .dont_cap_1
+
+	ldh a, [hProduct + 2]
+	inc a
+	ldh [hProduct + 2], a
+	and a
+	jr z, .Cap
+
+.dont_cap_1
+	ldh a, [hProduct]
+	ld b, a
+	ldh a, [hProduct + 1]
+	or a
+	jr nz, .Cap
+
+	ldh a, [hProduct + 2]
+	cp HIGH(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE + 1)
+	jr c, .dont_cap_2
+
+	cp HIGH(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE + 1) + 1
+	jr nc, .Cap
+
+	ldh a, [hProduct + 3]
+	cp LOW(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE + 1)
+	jr nc, .Cap
+
+.dont_cap_2
+	inc hl
+
+	ldh a, [hProduct + 3]
+	ld b, [hl]
+	add b
+	ld [hld], a
+
+	ldh a, [hProduct + 2]
+	ld b, [hl]
+	adc b
+	ld [hl], a
+	jr c, .Cap
+
+	ld a, [hl]
+	cp HIGH(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE + 1)
+	jr c, .dont_cap_3
+
+	cp HIGH(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE + 1) + 1
+	jr nc, .Cap
+
+	inc hl
+	ld a, [hld]
+	cp LOW(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE + 1)
+	jr c, .dont_cap_3
+
+.Cap:
+	ld a, HIGH(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE)
+	ld [hli], a
+	ld a, LOW(MAX_STAT_VALUE - MIN_NEUTRAL_DAMAGE)
+	ld [hld], a
+
+.dont_cap_3
+; Minimum neutral damage is 2 (bringing the cap to 999).
+	inc hl
+	ld a, [hl]
+	add MIN_NEUTRAL_DAMAGE
+	ld [hld], a
+	jr nc, .dont_floor
+	inc [hl]
+.dont_floor
+
+	ld a, 1
+	and a
+	ret
+
+.CriticalMultiplier:
+	ld a, [wCriticalHit]
+	and a
+	ret z
+
+; x2
+	ldh a, [hQuotient + 3]
+	add a
+	ldh [hProduct + 3], a
+
+	ldh a, [hQuotient + 2]
+	rl a
+	ldh [hProduct + 2], a
+
+; Cap at $ffff.
+	ret nc
+
+	ld a, $ff
+	ldh [hProduct + 2], a
+	ldh [hProduct + 3], a
+
+	ret
+
+_NotifyWeakenedEffect:
+; Opponent item weakening
+	farcall GetOpponentItem
+	ld a, b
+	and a
+	ret z
+	ld hl, TypeWeakenItems
+.NextOpponentItem:
+	ld a, [hli]
+	cp -1
+	ret z
+; Item effect
+	cp b
+	ld a, [hli]
+	jr nz, .NextOpponentItem
+; Type
+	ld b, a
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	cp b
+	ret nz
+
+; is super effective?
+	ld a, [wTypeModifier]
+	cp EFFECTIVE + 1
+	ret c
+
+	call .GetOpponentItemName
+	call .GetTypeName
+
+	ld hl, TypeWeakenedText
+	jp StdBattleTextbox
+
+.GetOpponentItemName: ; to wStringBuffer2
+	ld hl, wEnemyMonItem
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .go
+	ld hl, wBattleMonItem
+.go
+	ld a, [hl]
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	ld de, wStringBuffer1
+	jp CopyName1
+
+.GetTypeName:
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	ld [wNamedObjectIndexBuffer], a
+	farcall GetTypeName
+	ret
+
+INCLUDE "data/types/type_boost_items.asm"
+INCLUDE "data/types/type_weaken_items.asm"
+
 _DisappearUser:
 	xor a
 	ldh [hBGMapMode], a

@@ -181,6 +181,7 @@ ENDM
 	command startloop               ; ae
 	command curl                    ; af
 	command coinhurl                ; b0
+	command notifyweakenedeffect    ; b1
 
 
 	enum_start $fe
