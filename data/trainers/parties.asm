@@ -9,6 +9,9 @@
 
 __party_open__  = 0
 next_party: MACRO
+IF __party_open__  == 1
+fail "\tPrevious party definition has not been closed yet!\n\t(add 'end_party' to the previous line to fix this)"
+ENDC
 	next_list_item
 __party_open__  = 1
 ENDM
