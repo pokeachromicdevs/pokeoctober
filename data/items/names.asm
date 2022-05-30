@@ -222,11 +222,11 @@ ItemNames::
 	item_name "OLD AMBER"
 	item_name "DOME FOSSIL"
 	item_name "HELIX FOSSIL"
-	item_name "FLEE FEATHER"
+	item_name "FLEE FEATHER";SW97 FLEE FEATHER (switch without wasting a turn)
 	item_name "CRANIDOS FSL";CRANIDOS FOSSIL
-	item_name "MYSTIC WATER";(weakens a foe's water attacks)
+	item_name "MYSTIC WATER";
 	item_name "CONFUSE CLAW";("Damages foe before battle. (HOLD)")
-	item_name "?";SW97 FLEE FEATHER (switch without wasting a turn)
+	item_name "?"
 	item_name "5 YEN COIN";5 YEN COIN (weakens a foe's psychic attacks)
 	item_name "LIFE TAG";LIFE TAG ("Revives fainted PKMN post-battle. (HOLD)")
 	item_name "STRANGEPOWDR";STRANGE POWDER ("Nullifies all type effects. (HOLD)")
@@ -239,3 +239,4 @@ ItemNames::
 	item_name "MYSTICNEEDLE";MYSTIC NEEDLE (Stroman valueable item)
 	item_name "SAFARI BALL";SAFARI BALL
 	item_name "FUJI's LETTER";FUJI'S LETTER (for Kanto postgame)
+	item_name "WOBBLY BLOON"

@@ -240,6 +240,7 @@
 	const MYSTIC_NEEDLE
 	const SAFARI_BALL
 	const FUJIS_LETTER
+	const WOBBLY_BLOON
 
 NUM_ITEMS equ const_value - 1
 

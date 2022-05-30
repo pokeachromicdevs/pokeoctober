@@ -234,6 +234,7 @@ ItemDescriptions:
 	dw MysticNeedleDesc
 	dw SafariBallDesc
 	dw FujisLetterDesc
+	dw WobblyBloonDesc
 .End:
 
 IceBikiniDesc:
