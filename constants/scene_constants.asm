@@ -7,6 +7,11 @@ SCENE_DEFAULT  EQU 0
 ; do-nothing scene 1 when the event finishes.
 SCENE_FINISHED EQU 1
 
+; wCherrygrovePokecenter1FSceneID
+	const_def
+	const SCENE_CHERRYGROVEPOKECENTER1F_NOTHING
+	const SCENE_CHERRYGROVEPOKECENTER1F_A_LINE_FORMS
+
 ; wPokecenter2FSceneID
 	const_def 1
 	const SCENE_POKECENTER2F_LEAVE_TRADE_CENTER       ; 1

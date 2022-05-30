@@ -7,10 +7,33 @@
 	const CHERRYGROVEPOKECENTER1F_LASS
 	const CHERRYGROVEPOKECENTER1F_SCIENTIST
 
-CherrygrovePokecenter1F_MapScripts:
-	db 0 ; scene scripts
+	const CHERRYGROVEPOKECENTER1F_BLACKBELT_1
+	const CHERRYGROVEPOKECENTER1F_BLACKBELT_2
+	const CHERRYGROVEPOKECENTER1F_BLACKBELT_3
 
-	db 0 ; callbacks
+CherrygrovePokecenter1F_MapScripts:
+	db 2 ; scene scripts
+	scene_script .NoScene ; SCENE_CHERRYGROVEPOKECENTER1F_NOTHING
+	scene_script .NoScene ; SCENE_CHERRYGROVEPOKECENTER1F_A_LINE_FORMS
+
+	db 1 ; callbacks
+	callback MAPCALLBACK_SPRITES, .IsLineForming
+
+.NoScene
+	end
+
+.IsLineForming
+	checkscene
+	iffalse .no_line
+	appear CHERRYGROVEPOKECENTER1F_BLACKBELT_1
+	appear CHERRYGROVEPOKECENTER1F_BLACKBELT_2
+	appear CHERRYGROVEPOKECENTER1F_BLACKBELT_3
+	return
+.no_line
+	disappear CHERRYGROVEPOKECENTER1F_BLACKBELT_1
+	disappear CHERRYGROVEPOKECENTER1F_BLACKBELT_2
+	disappear CHERRYGROVEPOKECENTER1F_BLACKBELT_3
+	return
 
 CherrygrovePokecenter1FNurseScript:
 	jumpstd pokecenternurse
@@ -73,7 +96,11 @@ CherrygrovePokecenter1FGentlemanScript:
 	jumptextfaceplayer CherrygrovePokecenter1FGentlemanText
 	
 CherrygrovePokecenter1FGentleman2Script:
+	checkscene
+	iftrue .line_forming
 	jumptextfaceplayer CherrygrovePokecenter1FGentleman2Text
+.line_forming
+	jumptextfaceplayer CherrygrovePokecenter1FGentleman2Text2
 	
 CherrygrovePokecenter1FBeautyScript:
 	jumptextfaceplayer CherrygrovePokecenter1FBeautyText
@@ -240,24 +267,41 @@ CherrygrovePokecenter1FTeacherText_CommCenterOpen:
 CherrygrovePokecenter1FGentleman2Text:
 	text "Those hooligans"
 	line "from the DOJO get"
-	cont "their #MON into"
-	
-	para "such rough battles"
-	line "that everyone at"
-	cont "the DOJO frequent-"
-	
+	para "their #MON into"
+	line "such rough battles"
+	para "that everyone at"
+	line "the DOJO frequent-"
 	para "ly comes and heals"
 	line "their #MON all"
 	cont "at once."
-	
+
 	para "The lines that"
 	line "form when that"
-	cont "happens…those"
-	
-	para "lines are so"
-	line "dreadfully long…"
+	cont "happens<...>"
+
+	para "Those lines are so"
+	line "dreadfully long<...>"
 	done
-	
+
+CherrygrovePokecenter1FGentleman2Text2:
+	text "Sigh<...> not again."
+
+	para "There's a wares"
+	line "shop right next to"
+	cont "the GYM here."
+
+	para "It's blocked by a"
+	line "tree, so you need"
+	cont "to UPROOT it."
+
+	para "There, you can get"
+	line "some SUPER POTION"
+	para "to help until the"
+	line "line is cleared."
+
+	para "Good luck."
+	done
+
 CherrygrovePokecenter1FBeautyText:
 	text "I heard there's a"
 	line "pagoda around here"
@@ -272,7 +316,30 @@ CherrygrovePokecenter1FBeautyText:
 	
 	para "How annoying…"
 	done
-	
+
+CherrygrovePokecenter1FQueueGuy1:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "Hey, no cutting in"
+	line "line!"
+	done
+
+CherrygrovePokecenter1FQueueGuy2:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "I was here first."
+	done
+
+CherrygrovePokecenter1FQueueGuy3:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "Be patient, will"
+	line "ya?!"
+	done
+
 CherrygrovePokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -285,11 +352,15 @@ CherrygrovePokecenter1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 7 ; object events
+	db 10 ; object events
 	object_event  5,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FNurseScript, -1 ; was 3, 1
 	object_event  2,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FFisherScript, -1
 	object_event  9,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FGentlemanScript, -1
 	object_event  2,  6, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FTeacherScript, -1
 	object_event  10, 2, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FGentleman2Script, -1
 	object_event  13, 5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FBeautyScript, -1
-	object_event  6, 3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
+	object_event  7,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
+
+	object_event  5,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FQueueGuy3, EVENT_LINE_FORMS_IN_CHERRYGROVE_POKEMON_CENTER
+	object_event  5,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FQueueGuy2, EVENT_LINE_FORMS_IN_CHERRYGROVE_POKEMON_CENTER
+	object_event  5,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FQueueGuy1, EVENT_LINE_FORMS_IN_CHERRYGROVE_POKEMON_CENTER
