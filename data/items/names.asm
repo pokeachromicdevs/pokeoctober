@@ -81,7 +81,7 @@ ItemNames::
 	item_name "PSNCUREBERRY"
 	item_name "GOLD LEAF"
 	item_name "SOFT SAND"
-	item_name "SHARP BEAK"
+	item_name "BLACKFEATHER"
 	item_name "PRZCUREBERRY"
 	item_name "BURNT BERRY"
 	item_name "ICE BERRY"
