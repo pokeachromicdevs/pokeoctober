@@ -283,6 +283,9 @@ MonMenuIcons:
 	db ICON_BUTTERFREE  ; MORPHOBIA
 	db ICON_GLIGAR      ; TERRACHNID
 	db ICON_GRIMER		; SMUJJ
+	db ICON_MAREEP		; KOTORA
+	db ICON_MAREEP		; RAITORA
+	db ICON_FLAAFY		; GOROTORA
 	db ICON_EGG         ; EGG
 
 ;-------------------------------------------

@@ -60,6 +60,9 @@ OldPokedexOrder:
 	dw MAREEP
 	dw FLAAFFY
 	dw AMPHAROS
+	dw KOTORA
+	dw RAITORA
+	dw GOROTORA
 	dw WOOPER
 	dw QUAGSIRE
 	dw GASTLY

@@ -302,6 +302,10 @@ JOHTO_POKEMON EQU const_value
 	const MORPHOBIA
 	const TERRACHNID
 	const SMUJJ
+	const KOTORA
+	const RAITORA
+	const GOROTORA
+	
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

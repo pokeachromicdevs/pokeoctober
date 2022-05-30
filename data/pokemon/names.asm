@@ -286,6 +286,9 @@ PokemonNames::
 	db "MORPHOBIA@"
 	db "TERRACHNID"
 	db "SMUJJ@@@@@"
+	db "KOTORA@@@@"
+	db "RAITORA@@@"
+	db "GOROTORA@@"
 
 ;--------------------------------------------------------------
 _NUM_POKEMON_NAMES = (@ - PokemonNames) / (MON_NAME_LENGTH - 1)

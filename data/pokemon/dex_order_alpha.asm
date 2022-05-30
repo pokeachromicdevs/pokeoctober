@@ -86,6 +86,7 @@ AlphabeticalPokedexOrder:
 	dw GOLDEEN
 	dw GOLDUCK
 	dw GOLEM
+	dw GOROTORA
 	dw GRANBULL
 	dw GRAVELER
 	dw GRIMER
@@ -117,8 +118,9 @@ AlphabeticalPokedexOrder:
 	dw KATU
 	dw KINGDRA
 	dw KINGLER
-	db KIWACKI
+	dw KIWACKI
 	dw KOFFING
+	dw KOTORA
 	dw KRABBY
 	dw LANTURN
 	dw LAPRAS
@@ -201,6 +203,7 @@ AlphabeticalPokedexOrder:
 	dw QWILFISH
 	dw RAICHU
 	dw RAIKOU
+	dw RAITORA
 	dw RAPIDASH
 	dw RATICATE
 	dw RATTATA

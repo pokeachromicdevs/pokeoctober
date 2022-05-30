@@ -130,6 +130,8 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw SmujjEggMoves
+	dw KotoraEggMoves
 	
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -568,4 +570,16 @@ MolambinoEggMoves:
 	db RAIN_DANCE
 	db REVERSAL
 	db SWAGGER
+	db -1 ; end
+	
+SmujjEggMoves:
+	dw HAZE
+	dw MEAN_LOOK
+	dw LICK
+	dw -1 ; end
+	
+KotoraEggMoves:
+	db THUNDERBOLT
+	db TAKE_DOWN
+	db SCREECH
 	db -1 ; end

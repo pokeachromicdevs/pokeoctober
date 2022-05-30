@@ -272,3 +272,6 @@ FirstEvoStages::
 	dw SILKANE
 	dw TERRACHNID
 	dw SMUJJ
+	dw KOTORA
+	dw KOTORA
+	dw KOTORA

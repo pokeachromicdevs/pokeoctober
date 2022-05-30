@@ -272,10 +272,10 @@ EvolutionMoves::
 	db NO_MOVE      ; MORPHOBIA
 	db NO_MOVE      ; TERRACHNID
 	db NO_MOVE      ; SMUJJ
-
-	db NO_MOVE      ; 
-	db NO_MOVE      ; 
-	db NO_MOVE      ; 
+    db NO_MOVE      ; KOTORA
+	db NO_MOVE      ; RAITORA
+	db NO_MOVE      ; GOROTORA
+	
 	db NO_MOVE      ; 
 	db NO_MOVE      ; 
 	db NO_MOVE      ; 

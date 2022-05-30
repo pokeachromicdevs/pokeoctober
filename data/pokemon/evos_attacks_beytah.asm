@@ -22,6 +22,10 @@ EvosAttacksPointers3::
 	dw MorphobiaEvosAttacks
 	dw TerrachnidEvosAttacks
 	dw SmujjEvosAttacks
+	dw KotoraEvosAttacks
+	dw RaitoraEvosAttacks
+	dw GorotoraEvosAttacks
+	
 .End:
 	
 CoinpurEvosAttacks:
@@ -352,6 +356,56 @@ SmujjEvosAttacks:
 	dbw 42, BODY_SLAM
 	dbw 47, ACID_ARMOR
 	dbw 52, SLUDGE_BOMB
+	db 0 ; no more level-up moves
+	
+KotoraEvosAttacks:
+	db EVOLVE_LEVEL, 15, RAITORA
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 6, THUNDERSHOCK
+	db 10, BITE
+	db 15, THUNDER_WAVE
+	db 19, SCARY_FACE
+	db 24, SPARK
+	db 28, TAKE_DOWN
+	db 33, AGILITY
+	db 37, CRUNCH
+	db 42, THUNDERBOLT
+	db 46, SLASH
+	db 0 ; no more level-up moves
+
+RaitoraEvosAttacks:
+	db EVOLVE_LEVEL, 30, GOROTORA
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 6, THUNDERSHOCK
+	db 10, BITE
+	db 17, THUNDER_WAVE
+	db 21, SCARY_FACE
+	db 25, SPARK
+	db 30, TAKE_DOWN
+	db 35, AGILITY
+	db 42, CRUNCH
+	db 49, THUNDERBOLT
+	db 56, SLASH
+	db 0 ; no more level-up moves
+
+GorotoraEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 6, THUNDERSHOCK
+	db 10, BITE
+	db 17, THUNDER_WAVE
+	db 21, SCARY_FACE
+	db 25, SPARK
+	db 31, TAKE_DOWN
+	db 34, AGILITY
+	db 45, CRUNCH
+	db 51, THUNDERBOLT
+	db 58, SLASH
 	db 0 ; no more level-up moves
 	
 	

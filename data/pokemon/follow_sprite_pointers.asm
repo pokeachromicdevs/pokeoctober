@@ -289,3 +289,6 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MORPHOBIA
 	follow_sprite WooperSpriteGFX, PAL_OW_PINK ;TERRACHNID
 	follow_sprite WooperSpriteGFX, PAL_OW_PINK ;SMUJJ
+	follow_sprite KotoraSpriteGFX, PAL_OW_BLUE ;KOTORA
+	follow_sprite KotoraSpriteGFX, PAL_OW_BLUE ;RAITORA
+	follow_sprite KotoraSpriteGFX, PAL_OW_BLUE ;GOROTORA

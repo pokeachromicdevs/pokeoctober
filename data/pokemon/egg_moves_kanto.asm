@@ -87,7 +87,7 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw SeelEggMoves
 	dw NoEggMoves1
-	dw GrimerEggMoves
+	dw NoEggMoves1
 	dw NoEggMoves1
 	dw ShellderEggMoves
 	dw NoEggMoves1
@@ -365,12 +365,6 @@ SeelEggMoves:
 	dw PECK
 	dw SLAM
 	dw ENCORE
-	dw -1 ; end
-
-GrimerEggMoves:
-	dw HAZE
-	dw MEAN_LOOK
-	dw LICK
 	dw -1 ; end
 
 ShellderEggMoves:

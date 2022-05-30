@@ -577,6 +577,12 @@ PokemonPicPointers::
 	dba TerrachnidBackpic
 	dba SmujjFrontpic
 	dba SmujjBackpic
+	dba KotoraFrontpic
+	dba KotoraBackpic
+	dba RaitoraFrontpic
+	dba RaitoraBackpic
+	dba GorotoraFrontpic
+	dba GorotoraBackpic
 
 ;------------------------------------------------
 _NUM_POKEMON_PICS = (@ - PokemonPicPointers) / 6 - 1
