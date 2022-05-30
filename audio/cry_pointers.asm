@@ -72,3 +72,4 @@ Cries:
 	dba Cry_Molambino
 	dba Cry_Misdreavus
 	dba Cry_Yanma
+	dba Cry_Elekid

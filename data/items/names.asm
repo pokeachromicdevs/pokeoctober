@@ -92,7 +92,7 @@ ItemNames::
 	item_name "RED APRICORN"
 	item_name "CORDYCEPS"
 	item_name "BIG MUSHROOM"
-	item_name "SILVERPOWDER";change to weaken foe's bug attacks like SW97
+	item_name "SILVERPOWDER"
 	item_name "BLU APRICORN"
 	item_name "EARTHEN CLAY"
 	item_name "AMULET COIN"
@@ -144,7 +144,7 @@ ItemNames::
 	item_name "CHARCOAL"
 	item_name "BERRY JUICE"
 	item_name "SHARP SCYTHE"
-	item_name "FIRE MANE";fire mane
+	item_name "FIRE MANE"
 	item_name "METAL COAT"
 	item_name "DRAGON FANG"
 	item_name "TWISTEDSPOON"
@@ -226,7 +226,7 @@ ItemNames::
 	item_name "CRANIDOS FSL";CRANIDOS FOSSIL
 	item_name "MYSTIC WATER";(weakens a foe's water attacks)
 	item_name "CONFUSE CLAW";("Damages foe before battle. (HOLD)")
-	item_name "?";SW97 FLEE FEATHER (switch without wasting a turn)
+	item_name "STEEL SHELL"
 	item_name "5 YEN COIN";5 YEN COIN (weakens a foe's psychic attacks)
 	item_name "LIFE TAG";LIFE TAG ("Revives fainted PKMN post-battle. (HOLD)")
 	item_name "STRANGEPOWDR";STRANGE POWDER ("Nullifies all type effects. (HOLD)")

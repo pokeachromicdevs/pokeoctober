@@ -227,7 +227,7 @@
 	const CRANIDOS_FOSSIL
 	const MYSTIC_WATER
 	const CONFUSE_CLAW
-	const ITEM_F0
+	const STEEL_SHELL
 	const FIVE_YEN_COIN
 	const LIFE_TAG
 	const STRANGE_POWDER
