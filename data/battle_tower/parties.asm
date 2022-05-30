@@ -5297,7 +5297,7 @@ BattleTowerMons10:
 	db "UINDEi@@@@@"
 
 	dw CHARIZARD
-	db SHARP_BEAK
+	db BLACK_FEATHER
 	dw FLAMETHROWER, EARTHQUAKE, SLASH, FLY
 
 	dw 0 ; OT ID

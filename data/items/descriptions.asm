@@ -221,7 +221,7 @@ ItemDescriptions:
 	dw CranidosFossilDesc
 	dw MysticWaterDesc
 	dw ConfuseClawDesc
-	dw QuestionMarkDesc
+	dw SteelShellDesc
 	dw FiveYenCoinDesc
 	dw LifeTagDesc
 	dw StrangePowderDesc
@@ -240,6 +240,7 @@ ItemDescriptions:
 IceBikiniDesc:
 	db "Weakens ice-type"
 	next "moves. (HOLD)"
+	
 GuardThreadDesc:
 TagDesc:
 ChampionbeltDesc:
@@ -1069,8 +1070,10 @@ WobblyBloonDesc:
 FleeFeatherDesc:
 	db "Switch without"
 	next "waste turn. (HOLD)@"
-	
-	
+
+SteelShellDesc:
+	db "Sharply raises"
+	next "DEFENSE. (HOLD)@"
 
 ;--------------------------------------------------------------------
 _NUM_ITEM_DESCRIPTIONS = (ItemDescriptions.End  - ItemDescriptions)/2

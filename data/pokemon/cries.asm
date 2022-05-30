@@ -255,7 +255,7 @@ PokemonCries::
 	mon_cry CRY_AIPOM,       $02c,  $108 ; TYROGUE
 	mon_cry CRY_SLUGMA,      $000,  $100 ; HITMONTOP
 	mon_cry CRY_MARILL,      $068,  $100 ; SMOOCHUM
-	mon_cry CRY_SUNFLORA,   -$2d8,  $0b4 ; ELEKID
+	mon_cry CRY_ELEKID,      128,   16   ; ELEKID
 	mon_cry CRY_TEDDIURSA,   $176,  $03a ; MAGBY
 	mon_cry CRY_GLIGAR,     -$1cd,  $1a0 ; MILTANK
 	mon_cry CRY_SLOWKING,    $293,  $140 ; BLISSEY

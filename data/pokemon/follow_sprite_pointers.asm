@@ -138,7 +138,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;GYARADOS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;LAPRAS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;DITTO
-	follow_sprite EeveeSpriteGFX, PAL_OW_BROWN ;EEVEE
+	follow_sprite EeveeSpriteGFX,  PAL_OW_BROWN;EEVEE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;VAPOREON
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;JOLTEON
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FLAREON
@@ -158,7 +158,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEWTWO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEW
 ;Johto Icons
-	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;CHIKORITA
+	follow_sprite ChikoritaSpriteGFX, PAL_OW_GREEN ;CHIKORITA
 	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;PETAMOLE
 	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;MEGANIUM
 	follow_sprite WooperSpriteGFX, PAL_OW_RED ;CYNDAQUIL

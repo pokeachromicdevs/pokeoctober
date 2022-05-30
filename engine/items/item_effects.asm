@@ -89,7 +89,7 @@ ItemEffects:
 	dw StatusHealingEffect ; PSNCUREBERRY
 	dw NoEffect            ; GOLD_LEAF
 	dw NoEffect            ; SOFT_SAND
-	dw NoEffect            ; SHARP_BEAK
+	dw NoEffect            ; BLACK_FEATHER
 	dw StatusHealingEffect ; PRZCUREBERRY
 	dw StatusHealingEffect ; BURNT_BERRY
 	dw StatusHealingEffect ; ICE_BERRY

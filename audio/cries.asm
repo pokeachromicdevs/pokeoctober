@@ -169,6 +169,12 @@ Cry_Yanma:
 	channel 5, Cry_Yanma_Ch5
 	channel 6, Cry_Yanma_Ch6
 	channel 8, Cry_Yanma_Ch8
+	
+Cry_Elekid:
+	channel_count 3
+	channel 5, Cry_Elekid_Ch5
+	channel 6, Cry_Elekid_Ch6
+	channel 8, Cry_Elekid_Ch8
 
 Cry_Entei_Ch5:
 	; soundinput $ff
@@ -2136,4 +2142,22 @@ Cry_Yanma_Ch8:
 	noise_note 40, 13, 3, 110
 	sound_ret
 
+Cry_Elekid_Ch5:
+	sound_duty 3, 3, 1, 1
+	square_note 4, 15, 3, 1816
+	square_note 15, 14, 5, 1944
+	square_note 8, 9, 1, 1880
+	sound_ret
 
+Cry_Elekid_Ch6:
+	sound_duty 2, 2, 0, 0
+	square_note 5, 11, 3, 1800
+	square_note 15, 12, 5, 1928
+	square_note 8, 7, 1, 1864
+	sound_ret
+
+Cry_Elekid_Ch8:
+	noise_note 3, 10, 1, 28
+	noise_note 14, 9, 4, 44
+	noise_note 8, 8, 1, 28
+	sound_ret

@@ -1229,7 +1229,6 @@ RapidashEvosAttacks:
 
 SlowpokeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, SLOWBRO
-	dbbw EVOLVE_TRADE, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	dbw 1, CURSE
 	dbw 1, TACKLE
@@ -1243,6 +1242,7 @@ SlowpokeEvosAttacks:
 	db 0 ; no more level-up moves
 
 SlowbroEvosAttacks:
+	dbbw EVOLVE_TRADE, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	dbw 1, CURSE
 	dbw 1, TACKLE

@@ -82,7 +82,7 @@
 	const PSNCUREBERRY ; 4a
 	const GOLD_LEAF    ; 4b
 	const SOFT_SAND    ; 4c
-	const SHARP_BEAK   ; 4d
+	const BLACK_FEATHER; 4d
 	const PRZCUREBERRY ; 4e
 	const BURNT_BERRY  ; 4f
 	const ICE_BERRY    ; 50
@@ -227,7 +227,7 @@
 	const CRANIDOS_FOSSIL
 	const MYSTIC_WATER
 	const CONFUSE_CLAW
-	const ITEM_F0
+	const STEEL_SHELL
 	const FIVE_YEN_COIN
 	const LIFE_TAG
 	const STRANGE_POWDER
