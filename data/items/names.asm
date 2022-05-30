@@ -226,7 +226,7 @@ ItemNames::
 	item_name "CRANIDOS FSL";CRANIDOS FOSSIL
 	item_name "MYSTIC WATER";(weakens a foe's water attacks)
 	item_name "CONFUSE CLAW";("Damages foe before battle. (HOLD)")
-	item_name "STEEL SHELL"
+	item_name "STEEL SHELL"; needs effect
 	item_name "5 YEN COIN";5 YEN COIN (weakens a foe's psychic attacks)
 	item_name "LIFE TAG";LIFE TAG ("Revives fainted PKMN post-battle. (HOLD)")
 	item_name "STRANGEPOWDR";STRANGE POWDER ("Nullifies all type effects. (HOLD)")
