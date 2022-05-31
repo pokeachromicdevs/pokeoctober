@@ -127,3 +127,4 @@ Debug_MusicNames::
 	db "Lugia's Song@@@@@@"
 	db "      Kanto Birds@"
 	db " Imakuni theme @@@"
+	db " Elite Four Battle@" 

@@ -131,3 +131,4 @@ Music:
 	dba Music_LugiasSong2000
 	dba Music_KantoLegendBattleXY
 	dba Music_ImakuniTheme
+	dba Music_EliteFourBattle
