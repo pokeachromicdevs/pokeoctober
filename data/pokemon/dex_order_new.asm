@@ -63,7 +63,7 @@ NewPokedexOrder:
 	dw AMPHAROS
 	dw KOTORA
 	dw RAITORA
-	dw GAOTORA
+	dw GOROTORA
 	dw WOOPER
 	dw QUAGSIRE
 	dw GASTLY

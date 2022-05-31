@@ -205,9 +205,11 @@ EvolutionMoves::
 	db NO_MOVE      ; WOBBUFFET
 	db NO_MOVE      ; BIPULLA
 	db DOUBLE_KICK  ; GIRAFARIG
+	db NO_MOVE      ; TOPSYSPOT
 	db NO_MOVE      ; PINECO
 	db NO_MOVE      ; FORRETRESS
 	db NO_MOVE      ; SHUCKLE
+	db NO_MOVE      ; SHUQLOUR
 	db NO_MOVE      ; DUNSPARCE
 	db NO_MOVE      ; GLIGAR
 	db IRON_TAIL    ; STEELIX
@@ -215,6 +217,7 @@ EvolutionMoves::
 	db NO_MOVE      ; GRANBULL
 	db NO_MOVE      ; QWILFISH
 	db FURY_CUTTER  ; SCIZOR
+	db NO_MOVE      ; TRICULES
 	db NO_MOVE      ; HERACROSS
 	db NO_MOVE      ; SNEASEL
 	db NO_MOVE      ; TEDDIURSA

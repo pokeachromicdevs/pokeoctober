@@ -285,7 +285,7 @@ MonMenuIcons:
 	db ICON_GRIMER		; SMUJJ
 	db ICON_MAREEP		; KOTORA
 	db ICON_MAREEP		; RAITORA
-	db ICON_FLAAFY		; GOROTORA
+	db ICON_FLAAFFY		; GOROTORA
 	db ICON_EGG         ; EGG
 
 ;-------------------------------------------
