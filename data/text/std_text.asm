@@ -72,14 +72,10 @@ NurseReturnPokemonText:
 	done
 
 NurseGoodbyeText:
-	text "We hope to see you"
-	line "again."
+	text "Please, come back"
+	line "again anytime!"
 	done
 
-; not used
-	text "We hope to see you"
-	line "again."
-	done
 
 NursePokerusText:
 	text "Your #MON"

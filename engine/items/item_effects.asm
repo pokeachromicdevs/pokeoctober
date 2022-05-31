@@ -247,6 +247,7 @@ ItemEffects:
 	dw NoEffect
 	dw PokeBallEffect ; SAFARI_BALL
 	dw NoEffect
+	dw NoEffect       ; WOBBLY_BLOON
 .End:
 
 _NUM_ITEM_FX = (ItemEffects.End  - ItemEffects)/2

@@ -2697,10 +2697,11 @@ wFastShipB1FSceneID::                             db ; d9bd
 wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
+wCherrygrovePokecenter1FSceneID::                 db
 
 wSceneIDsEnd::
 
-	ds 49
+	ds 48
 
 ; fight counts
 wJackFightCount::    db ; d9f2
