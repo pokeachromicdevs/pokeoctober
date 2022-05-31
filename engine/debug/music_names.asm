@@ -125,4 +125,5 @@ Debug_MusicNames::
 	db "Ho-Oh Battle@@@@@@"
 	db "Lugia Battle@@@@@@"
 	db "Lugia's Song@@@@@@"
-	db " Battle Kanto Birds@"
+	db "      Kanto Birds@"
+	db " Imakuni theme @@@"

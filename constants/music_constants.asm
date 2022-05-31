@@ -131,6 +131,7 @@
 	const MUSIC_LUGIA_BATTLE                 ; 78
 	const MUSIC_LUGIAS_SONG                  ; 79
 	const MUSIC_KANTO_BIRDS_BATTLE           ; 80
+	const MUSIC_IMAKUNI_THEME                ; 81
 
 NUM_MUSIC_TRACKS EQU const_value
 

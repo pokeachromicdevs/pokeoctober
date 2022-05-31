@@ -34,7 +34,6 @@ SECTION "Songs 2", ROMX
 INCLUDE "audio/music/route1.asm"
 INCLUDE "audio/music/route3.asm"
 INCLUDE "audio/music/route12.asm"
-INCLUDE "audio/music/kantogymbattle.asm"
 INCLUDE "audio/music/kantotrainerbattle.asm"
 INCLUDE "audio/music/kantowildbattle.asm"
 INCLUDE "audio/music/pokemoncenter.asm"
@@ -170,6 +169,8 @@ INCLUDE "audio/music/hoohbattle.asm"
 INCLUDE "audio/music/lugiabattle.asm"
 INCLUDE "audio/music/lugiassong.asm"
 INCLUDE "audio/music/kantolegendbattle.asm"
+INCLUDE "audio/music/imakunitheme.asm"
+INCLUDE "audio/music/kantogymbattle.asm"
 
 
 SECTION "Sound Effects", ROMX
