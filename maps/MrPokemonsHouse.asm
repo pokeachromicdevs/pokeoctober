@@ -106,7 +106,6 @@ MrPokemonsHouse_OakScript:
 	giveitem OAKS_PARCEL
 	playsound SFX_ITEM
 	waitsfx
-	setflag ENGINE_POKEDEX
 	writetext MrPokemonsHouse_OakText2
 	waitbutton
 	closetext
