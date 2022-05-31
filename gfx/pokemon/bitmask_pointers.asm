@@ -281,3 +281,6 @@ BitmasksPointers:
 	dw MorphobiaBitmasks
 	dw TerrachnidBitmasks
 	dw SmujjBitmasks
+	dw KotoraBitmasks
+	dw RaitoraBitmasks
+	dw GorotoraBitmasks

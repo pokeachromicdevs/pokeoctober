@@ -25,6 +25,10 @@ SilkaneFrames:    INCLUDE "gfx/pokemon/silkane/frames.asm"
 MorphobiaFrames:  INCLUDE "gfx/pokemon/morphobia/frames.asm"
 TerrachnidFrames: INCLUDE "gfx/pokemon/terrachnid/frames.asm"
 SmujjFrames:      INCLUDE "gfx/pokemon/smujj/frames.asm"
+KotoraFrames:     INCLUDE "gfx/pokemon/kotora/frames.asm"
+RaitoraFrames:    INCLUDE "gfx/pokemon/raitora/frames.asm"
+GorotoraFrames:     INCLUDE "gfx/pokemon/gorotora/frames.asm"
+
 
 
 

@@ -281,3 +281,6 @@ AnimationIdlePointers:
 	dw MorphobiaAnimationIdle
 	dw TerrachnidAnimationIdle
 	dw SmujjAnimationIdle
+	dw KotoraAnimationIdle
+	dw RaitoraAnimationIdle
+	dw GorotoraAnimationIdle

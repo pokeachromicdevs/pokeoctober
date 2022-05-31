@@ -281,3 +281,6 @@ AnimationPointers:
 	dw MorphobiaAnimation
 	dw TerrachnidAnimation
 	dw SmujjAnimation
+	dw KotoraAnimation
+	dw RaitoraAnimation
+	dw GorotoraAnimation

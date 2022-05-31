@@ -281,3 +281,6 @@ FramesPointers:
 	dba MorphobiaFrames
 	dba TerrachnidFrames
 	dba SmujjFrames
+	dba KotoraFrames
+	dba RaitoraFrames
+	dba GorotoraFrames

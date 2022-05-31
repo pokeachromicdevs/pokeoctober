@@ -169,11 +169,8 @@ WooperSpriteGFX::         	   INCBIN "gfx/sprites/pokemon/wooper.2bpp"
 CelebiSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/celebi.2bpp"
 YanmaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/yanma.2bpp"
 ChikoritaSpriteGFX:: 		   INCBIN "gfx/sprites/pokemon/chikorita.2bpp"
-<<<<<<< HEAD
 CyndaquilSpriteGFX:: 		   INCBIN "gfx/sprites/pokemon/cyndaquil.2bpp"
-=======
 KotoraSpriteGFX::			   INCBIN "gfx/sprites/pokemon/kotora.2bpp"
->>>>>>> 837cc459 (resolve merge conflict in sprites.asm)
 
 
 
