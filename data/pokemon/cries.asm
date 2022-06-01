@@ -243,7 +243,7 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,    $000,  $180 ; OCTILLERY
 	mon_cry CRY_TEDDIURSA,   $002,  $06a ; DELIBIRD
 	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE
-	mon_cry CRY_RAIKOU,      $06b,  $280 ; SKARMORY, needs fixing
+	mon_cry CRY_LARVITAR,    $06b,  $280 ; SKARMORY, needs fixing
 	mon_cry CRY_CYNDAQUIL,     0,  288   ; HOUNDOUR 
 	mon_cry CRY_CYNDAQUIL,   531,  128   ; HOUNDOOM 
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
@@ -262,13 +262,13 @@ PokemonCries::
 	mon_cry CRY_RAIKOU,      $001,  $140 ; RAIKOU
 	mon_cry CRY_ENTEI,       $123,  $071 ; ENTEI
 	mon_cry CRY_RAIKOU,      $04b,  $0a8 ; SUICUNE
-	mon_cry CRY_RAIKOU,      $05f,  $0d0 ; LARVITAR, needs fixing
+	mon_cry CRY_LARVITAR,    $05f,  $0d0 ; LARVITAR, needs fixing
 	mon_cry CRY_SPINARAK,   -$1db,  $150 ; PUPITAR
 	mon_cry CRY_ENTEI,       $153,  $180 ; TYRANITAR, needs fixing
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-    mon_cry CRY_ENTEI,       $2fb,  $100 ; COINPUR
+    mon_cry CRY_ENTEI,       $2fb,  $100 ; COINPUR, needs fixing
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
 	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
@@ -289,10 +289,10 @@ PokemonCries::
  	mon_cry CRY_DIGLETT,     $020,   $040 ; MORPHOBIA
 	mon_cry CRY_GLIGAR,     -$045,  $120  ; TERRACHNID
  	;mon_cry CRY_GLIGAR,     $090,  $095 ; TERRACHNID (beta cry)
-	mon_cry CRY_GRIMER,      $100,  $100 ; GRIMER
+	mon_cry CRY_GRIMER,      $100,  $100 ; SMUJJ
 	mon_cry CRY_PICHU,       $f60,  $200 ; KOTORA
-	mon_cry CRY_RAIKOU,      $db3,  $168 ; RAITORA
-	mon_cry CRY_RAIKOU,		 $ca2,  $192 ; GOROTORA
+	mon_cry CRY_LARVITAR,    $db3,  $168 ; RAITORA
+	mon_cry CRY_LARVITAR,    $ca2,  $192 ; GOROTORA
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

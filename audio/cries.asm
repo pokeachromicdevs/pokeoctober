@@ -175,6 +175,12 @@ Cry_Elekid:
 	channel 5, Cry_Elekid_Ch5
 	channel 6, Cry_Elekid_Ch6
 	channel 8, Cry_Elekid_Ch8
+	
+Cry_Larvitar:
+	channel_count 3
+	channel 5, Cry_Larvitar_Ch5
+	channel 6, Cry_Larvitar_Ch6
+	channel 8, Cry_Larvitar_Ch8
 
 Cry_Entei_Ch5:
 	; soundinput $ff
@@ -2160,4 +2166,38 @@ Cry_Elekid_Ch8:
 	noise_note 3, 10, 1, 28
 	noise_note 14, 9, 4, 44
 	noise_note 8, 8, 1, 28
+	sound_ret
+
+Cry_Larvitar_Ch5:
+	sound_duty 3, 3, 2, 0
+	square_note 2, 15, 1, 1200
+	square_note 2, 15, 7, 1424
+	square_note 8, 15, 8, 1296
+	square_note 3, 15, 2, 1728
+	square_note 3, 15, 8, 1722
+	square_note 3, 15, 2, 1712
+	square_note 16, 15, 2, 1680
+	sound_ret
+
+Cry_Larvitar_Ch6:
+	sound_duty 3, 3, 0, 2
+	square_note 2, 15, 1, 1824
+	square_note 2, 14, 1, 1616
+	square_note 4, 15, 1, 1872
+	square_note 4, 13, 1, 928
+	square_note 3, 15, 1, 1648
+	square_note 3, 14, 1, 1664
+	square_note 3, 15, 2, 1680
+	square_note 16, 14, 2, 1696
+	sound_ret
+
+Cry_Larvitar_Ch8:
+	noise_note 2, 8, -1, 46
+	noise_note 2, 9, -1, 31
+	noise_note 4, 8, -1, 78
+	noise_note 4, 8, -1, 123
+	noise_note 3, 13, 8, 75
+	noise_note 3, 14, 7, 76
+	noise_note 3, 14, -4, 77
+	noise_note 16, 13, 2, 79
 	sound_ret

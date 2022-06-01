@@ -78,3 +78,4 @@
 	const CRY_MISDREAVUS
 	const CRY_YANMA
 	const CRY_ELEKID
+	const CRY_LARVITAR

@@ -171,6 +171,7 @@ YanmaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/yanma.2bpp"
 ChikoritaSpriteGFX:: 		   INCBIN "gfx/sprites/pokemon/chikorita.2bpp"
 CyndaquilSpriteGFX:: 		   INCBIN "gfx/sprites/pokemon/cyndaquil.2bpp"
 KotoraSpriteGFX::			   INCBIN "gfx/sprites/pokemon/kotora.2bpp"
+CleflingSpriteGFX::			   INCBIN "gfx/sprites/pokemon/clefling.2bpp"
 
 
 

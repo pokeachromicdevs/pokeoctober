@@ -273,7 +273,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_RED ;PUPPERON
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MOIBELLE
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BELLEDAM
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CLEFLING
+	follow_sprite CleflingSpriteGFX, PAL_OW_RED ;CLEFLING
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MALLODY
 	follow_sprite WooperSpriteGFX, PAL_OW_SILVER  ;CAMOUFLAKE
 	follow_sprite WooperSpriteGFX, PAL_OW_RED ;COALTA
@@ -289,6 +289,6 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MORPHOBIA
 	follow_sprite WooperSpriteGFX, PAL_OW_PINK ;TERRACHNID
 	follow_sprite WooperSpriteGFX, PAL_OW_PINK ;SMUJJ
-	follow_sprite KotoraSpriteGFX, PAL_OW_BLUE ;KOTORA
-	follow_sprite KotoraSpriteGFX, PAL_OW_BLUE ;RAITORA
-	follow_sprite KotoraSpriteGFX, PAL_OW_BLUE ;GOROTORA
+	follow_sprite KotoraSpriteGFX, PAL_OW_RED ;KOTORA
+	follow_sprite KotoraSpriteGFX, PAL_OW_RED ;RAITORA
+	follow_sprite KotoraSpriteGFX, PAL_OW_RED ;GOROTORA
