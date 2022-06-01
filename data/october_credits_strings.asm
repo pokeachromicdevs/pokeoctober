@@ -95,6 +95,10 @@ OctoberCredits_StringTable:
 			; move animations, sprites
 		dw .Pokebrass, .Blank
 		    ; follower OWs
+		dw .CrystalLeaf, .Blank
+			; follower mechanic
+		dw .PokeOrange, .Blank
+			; gym leader music
 		   
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -108,14 +112,14 @@ OctoberCredits_StringTable:
 	dw .SpecialThanks, .Blank
 		dw .Gelius, .Blank
 			; cherrygrove woods
+		dw .AX6, .Blank
+			; pokecrystal-16
 		dw .FourCh, .Blank
 			; based leakers
 		dw .Pret, .Blank
 			; pokecrystal disassembly
 		dw .TCRF, .Blank
 			; the place where everything is compiled
-		dw .AX6, .Blank
-			; pokecrystal-16
 
 ; last screen
 	dw .Blank, .Blank
@@ -137,7 +141,7 @@ OctoberCredits_StringTable:
 .Music:         db "    CUSTOM  MUSIC   ";;
 .SpriteArtists: db "   SPRITE  ARTISTS  ";;
 .MapDesigners:  db "    MAP DESIGNERS   ";;
-.BugTesters:    db "     BUG TESTERS    ";;
+.BugTesters:    db "     PLAY TESTERS   ";;
 .AssetsFrom:    db "     ASSETS FROM    ";;
 .CryPorts:      db "      CRY PORTS     ";;
 .SpecialThanks: db "   SPECIAL THANKS   ";;
@@ -165,11 +169,13 @@ OctoberCredits_StringTable:
 .Poket:         db "        POKET       ";;
 .CoralDev:      db "       CORALDEV     ";;
 .Reforged:      db "   G/S '97 REFORGED ";;
-.Pokebrass:     db "  POKEBRASS PROJECT ";;
+.Pokebrass:     db "  POKéBRASS PROJECT ";;
 .TCRF:          db "        TCRF        ";; no beytah, bad daytah
-.FourCh:        db "     4CHAN /VP/     ";;
+.FourCh:        db "        /VP/        ";;
 .Pret:          db "        PRET        ";;
 .AX6:           db "        AX6         ";;
+.PokeOrange:    db "   POKéMON BORNANA  ";;
+.CrystalLeaf:   db " POKéMON CRYSTALLEAF";;
 .ThanksFor1:    db " THANKS FOR PLAYING!";;
 .ThanksFor2:    db "   STAY TUNED FOR   ";;
 .ThanksFor3:    db "       DEMO 2!      ";;
