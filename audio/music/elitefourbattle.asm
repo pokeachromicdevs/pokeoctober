@@ -4,10 +4,9 @@
 ; https://hax.iimarckus.org/topic/6777/8/
 
 Music_EliteFourBattle:
-	musicheader 4, 1, Music_EliteFourBattle_Ch1
+	musicheader 3, 1, Music_EliteFourBattle_Ch1
 	musicheader 1, 2, Music_EliteFourBattle_Ch2
 	musicheader 1, 3, Music_EliteFourBattle_Ch3
-	musicheader 1, 4, Music_EliteFourBattle_Ch4
 
 Music_EliteFourBattle_Ch1:
 	tempo 184
@@ -596,78 +595,3 @@ Music_EliteFourBattle_Ch3_branch_1:
 	note __, 12
 	note __, 16
 	endchannel
-
-Music_EliteFourBattle_Ch4:
-	togglenoise $3
-	notetype $c
-	note __, 16
-	note __, 16
-	note __, 16
-	note __, 16
-	note __, 16
-	note __, 8
-	note C#, 1
-	note C#, 2
-	note C#, 1
-	note C#, 2
-	note C_, 1
-	note C_, 1
-Music_EliteFourBattle_Ch4_loop_main:
-Music_EliteFourBattle_Ch4_loop_1:
-	notetype $6
-	note D#, 4
-	note C_, 2
-	note G#, 1
-	note G_, 1
-	note D#, 2
-	note D#, 2
-	note C_, 4
-	loopchannel 16, Music_EliteFourBattle_Ch4_loop_1
-	note B_, 16
-	note __, 16
-	note __, 16
-	note __, 16
-Music_EliteFourBattle_Ch4_loop_2:
-	note C#, 1
-	note C#, 1
-	note C#, 2
-	note C#, 2
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 2
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	loopchannel 11, Music_EliteFourBattle_Ch4_loop_2
-	note B_, 2
-	note C_, 1
-	note C_, 1
-	note B_, 2
-	note C_, 1
-	note C_, 1
-	note B_, 2
-	note C_, 1
-	note C_, 1
-	note B_, 2
-	note C_, 1
-	note C_, 1
-Music_EliteFourBattle_Ch4_loop_3:
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	loopchannel 8, Music_EliteFourBattle_Ch4_loop_3
-	loopchannel 0, Music_EliteFourBattle_Ch4_loop_main
