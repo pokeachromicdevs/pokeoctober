@@ -1005,6 +1005,10 @@ LoveBallMultiplier:
 ; x.25
 	srl b
 	srl b
+	ld a, b
+	and a
+	ret nz
+	ld b, 1
 	ret
 
 FastBallMultiplier:
