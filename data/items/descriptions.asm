@@ -841,8 +841,8 @@ MoonBallDesc:
 	next "STONE evolvers.@"
 
 LoveBallDesc:
-	db   "For catching the"
-	next "opposite gender.@"
+	db   "Works best on"
+	next "KURT's favorites.@"
 
 NormalBoxDesc:
 	db   "Open it and see"

@@ -959,68 +959,52 @@ MoonBallMultiplier:
 	ret
 
 LoveBallMultiplier:
-; This function is buggy.
-; Intent:  multiply catch rate by 8 if mons are of same species, different sex
-; Reality: multiply catch rate by 8 if mons are of same species, same sex
+; multiply catch rate by 4   if the enemy mon is in the LoveBallMons table
+; multiply catch rate by .25 otherwise
 
-	; does species match?
 	ld a, [wTempEnemyMonSpecies]
-	ld c, a
-	ld a, [wTempBattleMonSpecies]
-	cp c
-	ret nz
+	call GetPokemonIndexFromID
+	ld d, h
+	ld e, l
+	ld hl, LoveBallMons
+	push bc ; current multiplier
+.loop
+		ld a, BANK(LoveBallMons)
+		call GetFarByte
+		cp -1
+		jr z, .nothing_matches
 
-	; check player mon species
-	push bc
-	ld a, [wTempBattleMonSpecies]
-	ld [wCurPartySpecies], a
-	xor a ; PARTYMON
-	ld [wMonType], a
-	ld a, [wCurBattleMon]
-	ld [wCurPartyMon], a
-	farcall GetGender
-	jr c, .done1 ; no effect on genderless
+		ld c, a
+		inc hl
+		ld a, BANK(LoveBallMons)
+		call GetFarByte
+		ld b, a
+		inc hl
 
-	ld d, 0 ; male
-	jr nz, .playermale
-	inc d   ; female
-.playermale
+		; matched?
+		ld a, b
+		cp d
+		jr nz, .loop ; non match, keep looking
 
-	; check wild mon species
-	push de
-	ld a, [wTempEnemyMonSpecies]
-	ld [wCurPartySpecies], a
-	ld a, WILDMON
-	ld [wMonType], a
-	farcall GetGender
-	jr c, .done2 ; no effect on genderless
-
-	ld d, 0 ; male
-	jr nz, .wildmale
-	inc d   ; female
-.wildmale
-
-	ld a, d
-	pop de
-	cp d
+		ld a, c
+		cp e
+		jr nz, .loop ; non match, keep looking
 	pop bc
-	ret z ; for the intended effect, this should be "ret z"
 
+; match, so x4
 	sla b
-	jr c, .max
-	sla b
-	jr c, .max
+	jr c, .maxed_out
 	sla b
 	ret nc
-.max
-	ld b, $ff
+.maxed_out
+	ld b, 255
 	ret
 
-.done2
-	pop de
-
-.done1
+.nothing_matches
 	pop bc
+; x.25
+	srl b
+	srl b
 	ret
 
 FastBallMultiplier:

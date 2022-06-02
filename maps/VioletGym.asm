@@ -41,6 +41,7 @@ VioletGymWhitneyScript:
 	iftrue .GotAttract
 	checkflag ENGINE_PLAINBADGE
 	iftrue .GotPlainBadge
+	opentext
 	writetext WhitneyWhatDoYouWantText
 	buttonsound
 	waitsfx
@@ -51,12 +52,11 @@ VioletGymWhitneyScript:
 .GotPlainBadge:
 	writetext WhitneyPlainBadgeText
 	buttonsound
-	verbosegiveitem TM_ATTRACT
+	verbosegivetmhm ATTRACT_TMNUM
 	iffalse .NoRoomForAttract
 	setevent EVENT_GOT_TM45_ATTRACT
 	sjump .GotAttract
-
-.AfterFight:
+.FightDone:
 	opentext
 .GotAttract:
 	writetext WhitneyAttractText

@@ -508,14 +508,14 @@ INCLUDE "engine/pokedex/unown_dex.asm"
 INCLUDE "engine/events/magikarp.asm"
 INCLUDE "engine/battle/hidden_power.asm"
 
+INCLUDE "data/wild/love_ball_mons.asm"
+
 
 SECTION "bank3F", ROMX
 
 INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
-
-
 INCLUDE "mobile/mobile_40.asm"
 INCLUDE "engine/battle/misc.asm"
 

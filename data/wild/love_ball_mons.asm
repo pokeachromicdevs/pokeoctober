@@ -1,0 +1,22 @@
+LoveBallMons:
+	dw SANDSHREW
+	dw SANDSLASH
+	dw PARAS
+	dw PARASECT
+	dw SLOWPOKE
+	dw SLOWBRO
+	dw GEODUDE
+	dw GRIMER
+	dw MUK
+	dw EXEGGUTOR
+	dw LICKITUNG
+	dw JYNX
+	dw MAGIKARP
+	dw PORYGON
+	dw ELEKID
+	dw GRANBULL
+	dw UNOWN
+;	dw NOROWARA
+	dw BELLOSSOM
+	dw MANKEY
+	db -1
