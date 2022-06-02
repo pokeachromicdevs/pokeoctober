@@ -56,8 +56,6 @@ VioletGymWhitneyScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_PLAINBADGE
-	readvar VAR_BADGES
-	scall VioletGymActivateRockets
 .GotPlainBadge:
 	writetext WhitneyPlainBadgeText
 	buttonsound
@@ -75,17 +73,6 @@ VioletGymWhitneyScript:
 .NoRoomForAttract:
 	closetext
 	end
-
-VioletGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .VioletRockets
-	end
-
-.VioletRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 TrainerLassCarrie:
 	trainer LASS, CARRIE, EVENT_BEAT_LASS_CARRIE, LassCarrieSeenText, LassCarrieBeatenText, 0, .Script
