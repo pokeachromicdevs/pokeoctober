@@ -85,7 +85,7 @@ MoveNames::
 	move_name "STUN SPORE"
 	move_name "SLEEP POWDER"
 	move_name "PETAL DANCE"
-	move_name "move_name SHOT"
+	move_name "STRING SHOT"
 	move_name "DRAGON RAGE"
 	move_name "FIRE SPIN"
 	move_name "THUNDERSHOCK"
