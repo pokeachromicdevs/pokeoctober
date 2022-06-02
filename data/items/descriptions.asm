@@ -1072,8 +1072,8 @@ WobblyBloonDesc:
 	next "NORMAL moves.@"
 	
 FleeFeatherDesc:
-	db "Switch without"
-	next "waste turn. (HOLD)@"
+	db "Switch without a"
+	next "turn wasted.(HOLD)@"
 
 SteelShellDesc:
 	db "Sharply raises"

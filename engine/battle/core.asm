@@ -985,7 +985,23 @@ Battle_PlayerFirst:
 	call LoadTileMapToTempTileMap
 	call TryEnemyFlee
 	jp c, WildFled_EnemyFled_LinkBattleCanceled
+
+	push hl
+	push de
+		ld a, [wBattleMonItem]
+		ld [wNamedObjectIndexBuffer], a
+		ld b, a
+		callfar GetItemHeldEffect
+		ld a, b
+		cp HELD_FLEE_FEATHER
+	pop de
+	pop hl
+	
+	jr z, .skip_enemy_turn
+
 	call EnemyTurn_EndOpponentProtectEndureDestinyBond
+
+.skip_enemy_turn
 	call CheckMobileBattleError
 	ret c
 	ld a, [wForcedSwitch]
@@ -1970,6 +1986,7 @@ GetMaxHP:
 	ld c, a
 	ret
 
+IF 0 ; bank full momento
 Unreferenced_GetHalfHP:
 	ld hl, wBattleMonHP
 	ldh a, [hBattleTurn]
@@ -1988,6 +2005,7 @@ Unreferenced_GetHalfHP:
 	ld a, [hl]
 	ld [wBuffer1], a
 	ret
+ENDC
 
 CheckUserHasEnoughHP:
 	ld hl, wBattleMonHP + 1

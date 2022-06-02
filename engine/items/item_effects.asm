@@ -230,7 +230,7 @@ ItemEffects:
 	dw NoEffect
 	dw NoEffect
 	dw NoEffect
-	dw NoEffect
+	dw NoEffect      ; FLEE_FEATHER
 	dw NoEffect
 	dw NoEffect
 	dw NoEffect
