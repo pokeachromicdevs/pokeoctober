@@ -175,7 +175,7 @@ SilentTownTeacherScript:
 	end
 	
 SilentTownSilverBattleScript:
-	moveobject NEWBARKTOWN_SILVER_2, 13, 13
+	moveobject NEWBARKTOWN_SILVER_2, 13, 15
 	appear NEWBARKTOWN_SILVER_2
 	playsound SFX_ENTER_DOOR
 	applymovement NEWBARKTOWN_SILVER_2, MovementBattle
