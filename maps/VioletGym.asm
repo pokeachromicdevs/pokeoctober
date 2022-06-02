@@ -37,14 +37,6 @@ VioletGymWhitneyScript:
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
 	setevent EVENT_BEAT_LASS_CARRIE
 	setevent EVENT_BEAT_LASS_BRIDGET
-.FightDone:
-	opentext
-	writetext WhitneyYouMeanieText 
-	waitbutton
-	closetext
-	end
-
-.StoppedCrying:
 	checkevent EVENT_GOT_TM45_ATTRACT
 	iftrue .GotAttract
 	checkflag ENGINE_PLAINBADGE
@@ -62,13 +54,12 @@ VioletGymWhitneyScript:
 	verbosegiveitem TM_ATTRACT
 	iffalse .NoRoomForAttract
 	setevent EVENT_GOT_TM45_ATTRACT
-	writetext WhitneyAttractText
-	waitbutton
-	closetext
-	end
+	sjump .GotAttract
 
+.AfterFight:
+	opentext
 .GotAttract:
-	writetext WhitneyGoodCryText
+	writetext WhitneyAttractText
 	waitbutton
 .NoRoomForAttract:
 	closetext
@@ -83,19 +74,6 @@ TrainerLassCarrie:
 	writetext LassCarrieAfterBattleText
 	waitbutton
 	closetext
-	end
-
-WhitneyCriesScript:
-	showemote EMOTE_SHOCK, VIOLETGYM_LASS2, 15
-	applymovement VIOLETGYM_LASS2, BridgetWalksUpMovement
-	turnobject PLAYER, DOWN
-	opentext
-	writetext BridgetWhitneyCriesText
-	waitbutton
-	closetext
-	applymovement VIOLETGYM_LASS2, BridgetWalksAwayMovement
-	setscene SCENE_VIOLETGYM_NOTHING
-	clearevent EVENT_MADE_WHITNEY_CRY
 	end
 
 TrainerLassBridget:
@@ -156,16 +134,6 @@ VioletGymStatue:
 	gettrainername STRING_BUFFER_4, WHITNEY, WHITNEY1
 	jumpstd gymstatue2
 
-BridgetWalksUpMovement:
-	step LEFT
-	turn_head UP
-	step_end
-
-BridgetWalksAwayMovement:
-	step RIGHT
-	turn_head LEFT
-	step_end
-
 WhitneyBeforeText:
 	text "Yo! Name's" 
 	line "WHITNEY, the"
@@ -193,34 +161,19 @@ WhitneyBeforeText:
 	done
 
 WhitneyShouldntBeSoSeriousText:
-	text "Sob…"
-
-	para "…Waaaaaaah!"
-	line "You're mean!"
-
-	para "You shouldn't be"
-	line "so serious! You…"
-	cont "you child, you!"
-	done
-
-WhitneyYouMeanieText:
-	text "Waaaaah!"
-
-	para "Waaaaah!"
-
-	para "…Snivel, hic…"
-	line "…You meanie!"
+	text "Shoot."
+	para "That<...> happened."
 	done
 
 WhitneyWhatDoYouWantText:
-	text "…Sniff…"
+	text "Dang, you got some"
+	line "skills there!"
 
-	para "What? What do you"
-	line "want? A BADGE?"
-
-	para "Oh, right."
-	line "I forgot. Here's"
-	cont "PLAINBADGE."
+	para "Consider me"
+	line "impressed, and"
+	para "consider yourself"
+	line "worthy of the"
+	cont "PLAINBADGE!"
 	done
 
 PlayerReceivedPlainBadgeText:
@@ -229,31 +182,35 @@ PlayerReceivedPlainBadgeText:
 	done
 
 WhitneyPlainBadgeText:
-	text "PLAINBADGE lets"
-	line "your #MON use"
+	text "With the"
+	line "PLAINBADGE,"
+	para "#MON up to"
+	line "level 30 will"
+	cont "always obey!"
 
-	para "STRENGTH outside"
-	line "of battle."
+	para "Even traded ones"
+	line "will love ya!"
 
-	para "It also boosts"
-	line "your #MON's"
-	cont "SPEED."
-
-	para "Oh, you can have"
-	line "this too!"
+	para "Oh, and an extra"
+	line "gift, because why"
+	cont "not?"
 	done
 
 WhitneyAttractText:
-	text "It's ATTRACT!"
-	line "It makes full use"
+	text "TM45, ATTRACT!"
 
-	para "of a #MON's"
-	line "charm."
+	para "Have your POKEMON"
+	line "use it on foes of"
+	para "the opposite"
+	line "gender, and your"
+	para "enemies will be"
+	line "head over heels in"
+	cont "love!"
 
-	para "Isn't it just per-"
-	line "fect for a cutie"
-	cont "like me?"
-	done
+	para "Just like boys are"
+	line "after I flirt with"
+	cont "them!"
+	done ; oh come on whitney, lmao
 
 WhitneyGoodCryText:
 	text "Ah, that was a"
@@ -268,7 +225,7 @@ LassCarrieSeenText:
 	line "#MON's cute"
 
 	para "looks fool you."
-	line "They can whip you!"
+	line "They can whip you!" ; :flooshed:
 	done
 
 LassCarrieBeatenText:
@@ -304,17 +261,6 @@ LassBridgetAfterBattleText:
 
 	para "try harder next"
 	line "time!"
-	done
-
-BridgetWhitneyCriesText:
-	text "Oh, no. You made"
-	line "WHITNEY cry."
-
-	para "It's OK. She'll"
-	line "stop soon. She"
-
-	para "always cries when"
-	line "she loses."
 	done
 
 LassHelenSeenText:
@@ -374,8 +320,7 @@ VioletGym_MapEvents:
 	warp_event  2, 17, VIOLET_CITY, 2
 	warp_event  3, 17, VIOLET_CITY, 2
 
-	db 1 ; coord events
-	coord_event  8,  5, SCENE_VIOLETGYM_WHITNEY_STOPS_CRYING, WhitneyCriesScript
+	db 0 ; coord events
 
 	db 2 ; bg events
 	bg_event  1, 15, BGEVENT_READ, VioletGymStatue
