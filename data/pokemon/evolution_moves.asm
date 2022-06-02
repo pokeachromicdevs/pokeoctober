@@ -17,6 +17,7 @@ EvolutionMoves::
 	db NO_MOVE      ; PIDGEY
 	db NO_MOVE      ; PIDGEOTTO
 	db EXTREMESPEED ; PIDGEOT 
+	db NO_MOVE      ; RATTATA
 	db SCARY_FACE   ; RATICATE
 	db NO_MOVE      ; SPEAROW
 	db NO_MOVE      ; FEAROW
@@ -145,6 +146,7 @@ EvolutionMoves::
 	db NO_MOVE      ; ZAPDOS
 	db NO_MOVE      ; MOLTRES
 	db NO_MOVE      ; DRATINI
+	db NO_MOVE      ; DRAGONAIR
 	db WING_ATTACK  ; DRAGONITE
 	db NO_MOVE      ; MEWTWO
 	db NO_MOVE      ; MEW
@@ -168,6 +170,7 @@ EvolutionMoves::
 	db SWORDS_DANCE ; ARIADOS
 	db NO_MOVE      ; CROBAT
 	db NO_MOVE      ; YANMA
+	db NO_MOVE      ; TONBOSS
 	db LOVELY_KISS  ; BELLIGNAN
 	db NO_MOVE      ; CHINCHOU
 	db NO_MOVE      ; LANTURN
@@ -226,6 +229,7 @@ EvolutionMoves::
 	db NO_MOVE      ; MAGCARGO
 	db NO_MOVE      ; SWINUB
 	db FURY_ATTACK  ; PILOSWINE
+	db NO_MOVE      ; CHOMOSWINE
 	db NO_MOVE      ; CORSOLA
 	db NO_MOVE      ; REMORAID
 	db OCTAZOOKA    ; OCTILLERY
@@ -240,10 +244,12 @@ EvolutionMoves::
 	db NO_MOVE      ; PORYGON2
 	db NO_MOVE      ; STANTLER
 	db NO_MOVE      ; SMEARGLE
+	db NO_MOVE      ; TYROGUE
 	db ROLLING_KICK ; HITMONTOP
 	db NO_MOVE      ; SMOOCHUM
 	db NO_MOVE      ; ELEKID
 	db NO_MOVE      ; MAGBY
+	db NO_MOVE      ; MILTANK
 	db NO_MOVE      ; BLISSEY
 	db NO_MOVE      ; RAIKOU
 	db NO_MOVE      ; ENTEI
@@ -278,13 +284,6 @@ EvolutionMoves::
     db NO_MOVE      ; KOTORA
 	db NO_MOVE      ; RAITORA
 	db NO_MOVE      ; GOROTORA
-	
-	db NO_MOVE      ; 
-	db NO_MOVE      ; 
-	db NO_MOVE      ; 
-	db NO_MOVE      ; 
-	db NO_MOVE      ; 
-	db NO_MOVE      ; 
 
 ;----------------------------------
 _NUM_EVO_MOVES = @ - EvolutionMoves
