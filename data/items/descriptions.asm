@@ -239,7 +239,7 @@ ItemDescriptions:
 
 IceBikiniDesc:
 	db "Weakens ice-type"
-	next "moves. (HOLD)"
+	next "moves. (HOLD)@"
 	
 GuardThreadDesc:
 TagDesc:
