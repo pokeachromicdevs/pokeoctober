@@ -130,9 +130,14 @@ AddIndoorSprites:
 	ret
 
 AddOutdoorSprites:
+	ld a, [wWhichPartyFollower]
+	and a
+	jr z, .skip_follower
+
 	call GetFollowerOutdoorSprite
 	call AddSpriteGFX
 
+.skip_follower
 	ld a, [wMapGroup]
 	dec a
 	ld c, a

@@ -150,7 +150,6 @@ IndigoGroupSprites:
 SilentGroupSprites:
 	def_walk_sprite
 		walk_sprite SPRITE_SILENTTOWN_RIVAL_DUDE
-		walk_sprite SPRITE_TEACHER
 		walk_sprite SPRITE_FAT_GUY
 		walk_sprite SPRITE_ELM
 		walk_sprite SPRITE_YOUNGSTER
@@ -158,6 +157,7 @@ SilentGroupSprites:
 		walk_sprite SPRITE_GRAMPS
 		walk_sprite SPRITE_BUG_CATCHER
 		walk_sprite SPRITE_COOLTRAINER_F
+		walk_sprite SPRITE_TEACHER
 
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
