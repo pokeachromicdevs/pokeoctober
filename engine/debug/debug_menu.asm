@@ -1019,15 +1019,24 @@ Debug_GivePoke:
 .left
 	call .getdat
 .leftloop
-; cursor == 0?
-	ld a, [hDebugMenuCursorPos]
-	and a
-	jr nz, .dec_value
 ; hl == 0?
 	ld a, h
 	or l
 	jr nz, .dec_value
+; check cursor
+	ld a, [hDebugMenuCursorPos]
+	and a
+	jr z, .dec_pokemon
+	cp 1
+	jr z, .dec_items
+; level
+	ld hl, 100
+	jr .left_cont
+.dec_pokemon
 	ld hl, NUM_POKEMON
+	jr .left_cont
+.dec_items
+	ld hl, NUM_ITEMS
 	jr .left_cont
 .dec_value
 	dec hl
@@ -1041,12 +1050,24 @@ Debug_GivePoke:
 .right
 	call .getdat
 .rightloop
-; cursor == 0?
+; check cursor
 	ld a, [hDebugMenuCursorPos]
 	and a
-	jr nz, .inc_value
-; hl == max poke?
+	jr z, .inc_pokemon
+	cp 1
+	jr z, .inc_items
+; level
+	cphl16 100
+	jr c, .inc_value
+	ld hl, 1
+	jr .right_cont
+.inc_pokemon
 	cphl16 NUM_POKEMON
+	jr c, .inc_value
+	ld hl, 1
+	jr .right_cont
+.inc_items
+	cphl16 NUM_ITEMS
 	jr c, .inc_value
 	ld hl, 1
 	jr .right_cont
