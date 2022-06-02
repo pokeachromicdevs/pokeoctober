@@ -240,3 +240,5 @@ ItemNames::
 	item_name "SAFARI BALL";SAFARI BALL
 	item_name "FUJI's LETTER";FUJI'S LETTER (for Kanto postgame)
 	item_name "WOBBLY BLOON"
+	item_name "DIRECT BALL"
+	item_name "NIGHT BALL"

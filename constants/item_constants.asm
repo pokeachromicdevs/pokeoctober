@@ -241,6 +241,8 @@
 	const SAFARI_BALL
 	const FUJIS_LETTER
 	const WOBBLY_BLOON
+	const DIRECT_BALL
+	const NIGHT_BALL
 
 NUM_ITEMS equ const_value - 1
 

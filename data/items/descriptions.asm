@@ -235,12 +235,16 @@ ItemDescriptions:
 	dw SafariBallDesc
 	dw FujisLetterDesc
 	dw WobblyBloonDesc
+	dw DirectBallDesc
+	dw NightBallDesc
 .End:
 
 IceBikiniDesc:
 	db "Weakens ice-type"
 	next "moves. (HOLD)@"
-	
+
+DirectBallDesc:
+NightBallDesc:
 GuardThreadDesc:
 TagDesc:
 ChampionbeltDesc:

@@ -246,8 +246,10 @@ ItemEffects:
 	dw NoEffect
 	dw NoEffect
 	dw PokeBallEffect ; SAFARI_BALL
-	dw NoEffect
+	dw NoEffect       ; FUJIS_LETTER
 	dw NoEffect       ; WOBBLY_BLOON
+	dw PokeBallEffect ; DIRECT_BALL
+	dw PokeBallEffect ; NIGHT_BALL
 .End:
 
 _NUM_ITEM_FX = (ItemEffects.End  - ItemEffects)/2
@@ -313,6 +315,11 @@ PokeBallEffect:
 	jp hl
 
 .skip_or_return_from_ball_fn
+	ld a, [wCurItem]
+	cp DIRECT_BALL
+	ld a, b
+	jp z, .skip_hp_calc
+
 	ld a, [wCurItem]
 	cp LEVEL_BALL
 	ld a, b
@@ -776,6 +783,8 @@ BallMultiplierFunctionTable:
 	dbw MOON_BALL,   MoonBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
+	dbw NIGHT_BALL,  NightBallMultiplier
+	dbw DIRECT_BALL, DirectBallMultiplier
 	db -1 ; end
 
 UltraBallMultiplier:
@@ -919,6 +928,40 @@ LureBallMultiplier:
 .max
 	ld a, $ff
 .done
+	ld b, a
+	ret
+
+NightBallMultiplier:
+; Multiply catch rate by 3 when used at night
+	ldh a, [hHours]
+	cp NITE_HOUR	; > 18:00
+	jr nc, .is_night
+; 04:00
+	cp MORN_HOUR
+	ret nc
+.is_night
+; x3	
+	ld a, b
+	add a, a
+	jr c, .maxed_out
+	add a, b
+	jr nc, .done
+.maxed_out
+	ld a, 255
+.done
+	ld b, a
+	ret
+
+DirectBallMultiplier:
+; Multiply catch rate by 2/3 directly from the base rate.
+	ld a, b
+	ld c, 255
+.loop
+	inc c
+	sub 3
+	jr nc, .loop
+	ld a, c
+	add a, a
 	ld b, a
 	ret
 
