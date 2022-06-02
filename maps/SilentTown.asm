@@ -178,7 +178,13 @@ SilentTownSilverBattleScript:
 	moveobject NEWBARKTOWN_SILVER_2, 13, 15
 	appear NEWBARKTOWN_SILVER_2
 	playsound SFX_ENTER_DOOR
+	checkfollower
+	iftrue .has_follower
 	applymovement NEWBARKTOWN_SILVER_2, MovementBattle
+	sjump .got_movement
+.has_follower
+	applymovement NEWBARKTOWN_SILVER_2, MovementBattleDontBump
+.got_movement
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	turnobject PLAYER, RIGHT
@@ -305,7 +311,12 @@ MovementBattle:
 	big_step LEFT
 	big_step LEFT
 	step_end
-	
+
+MovementBattleDontBump:
+	big_step DOWN
+	big_step LEFT
+	step_end
+
 ElmTakesPlayerToLab1:
 	step RIGHT
 	step RIGHT
