@@ -158,6 +158,18 @@ MonStopFollowAction:
 	jp CancelPokemonAction
 
 MonFollowAction:
+	callfar IsMonFainted
+	jr nz, .do_follow
+
+	ld hl, wStringBuffer1
+	ld de, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	ld hl, MonCantFollowText
+	call PrintText
+	jp CancelPokemonAction
+
+.do_follow
 	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .no_follower_mon
@@ -469,6 +481,10 @@ MonIsFollowingText:
 
 MonStopsFollowingText:
 	text_far _MonStopsFollowingText
+	text_end
+
+MonCantFollowText:
+	text_far _MonCantFollowText
 	text_end
 
 SwitchAlreadyHoldingText:

@@ -1462,6 +1462,12 @@ _MonStopsFollowingText::
 	cont "BALL."
 	prompt
 
+_MonCantFollowText::
+	text_ram wMonOrItemNameBuffer
+	text " can't"
+	line "follow you!"
+	prompt
+
 UnknownText_0x1c1c09::
 	text "This item can't be"
 	line "held."
