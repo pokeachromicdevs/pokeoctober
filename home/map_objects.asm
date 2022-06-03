@@ -465,6 +465,8 @@ endr
 	ld a, [hl]
 	cp SPRITEMOVEDATA_FOLLOWNOTEXACT
 	jr z, .skip_facing
+	cp SPRITEMOVEDATA_FOLLOWEROBJ
+	jr z, .skip_facing
 	dec bc
 
 	ld a, [bc]

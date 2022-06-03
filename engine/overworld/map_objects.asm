@@ -589,6 +589,7 @@ MapObjectMovementPattern:
 	dw .MovementSpinCounterclockwise ; 19
 	dw .MovementBoulderDust ; 1a
 	dw .MovementShakingGrass ; 1b
+	dw .MovementFollower ; 1c
 
 .Null_00:
 	ret
@@ -680,6 +681,74 @@ MapObjectMovementPattern:
 	ld hl, GetFollowerNextMovementByte
 	jp HandleMovementData
 
+.MovementFollower:
+	call .DoFollowNotExact
+	ret nc
+	push af
+		ld a, [wFollowerNextMovement]
+		cp FOLLOWERMOVE_NUM_TYPES
+		jr c, .get_step
+		xor a
+.get_step
+		ld e, a
+		ld d, 0
+		ld hl, .step_funcs
+		add hl, de
+		add hl, de
+		add hl, de
+		ld a, [hli]
+		ld [wFollowerNextMovement], a
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+	pop af
+	jp hl
+
+.step_funcs
+	dbw FOLLOWERMOVE_NORMAL,   NormalStep ; FOLLOWERMOVE_NORMAL
+	dbw FOLLOWERMOVE_NORMAL,   SlideStep  ; FOLLOWERMOVE_SLIDE
+	dbw FOLLOWERMOVE_NORMAL,   .BigStep   ; FOLLOWERMOVE_BIG_STEP
+	dbw FOLLOWERMOVE_STILL,    .TurnHead  ; FOLLOWERMOVE_STILL
+	dbw FOLLOWERMOVE_BIG_STEP, .TurnHead  ; FOLLOWERMOVE_PREPARE_JUMP
+
+.BigStep
+; need to modify the speed parameter
+	ld e, a
+	xor a
+	ld [wFollowerNextMovement], a
+	ld a, [wPlayerStepType]
+	cp STEP_TYPE_PLAYER_JUMP
+	jr z, .regular
+	ld a, [wPlayerState]
+	cp PLAYER_BIKE
+	jr z, .biking
+	ld a, [wPlayerStandingTile]
+	cp COLL_ICE
+	jr z, .biking
+
+.regular
+	ld a, e
+	push af
+		ld de, SFX_JUMP_OVER_LEDGE
+		call PlaySFX
+	pop af
+	and $3
+	or STEP_BIKE << 2
+	jp JumpStep
+
+.biking
+	ld a, e
+	and %00000011
+	or %00001100 ; very big step
+	jp JumpStep
+
+.TurnHead:
+; TurnHead uses different arguments, so modify it here
+	and %00000011
+	add a
+	add a
+	jp TurnHead
+
 .Script:
 	ld hl, GetMovementByte
 	jp HandleMovementData
@@ -734,6 +803,11 @@ MapObjectMovementPattern:
 	ret
 
 .FollowNotExact:
+	call .DoFollowNotExact
+	jp c, NormalStep
+	ret
+
+.DoFollowNotExact:
 	ld hl, OBJECT_NEXT_MAP_X
 	add hl, bc
 	ld d, [hl]
@@ -784,7 +858,8 @@ MapObjectMovementPattern:
 	and %00001100
 	or d
 	pop bc
-	jp NormalStep
+	scf
+	ret
 
 .standing
 	pop bc
@@ -801,6 +876,7 @@ MapObjectMovementPattern:
 	ld hl, OBJECT_ACTION
 	add hl, bc
 	ld [hl], OBJECT_ACTION_STAND
+	and a
 	ret
 
 .pokemon_idle
@@ -843,6 +919,10 @@ MapObjectMovementPattern:
 	ld hl, OBJECT_STEP_TYPE
 	add hl, bc
 	ld [hl], STEP_TYPE_04
+	xor a
+	ld hl, OBJECT_SPRITE_Y_OFFSET
+	add hl, bc
+	ld [hl], a
 	ret
 
 .MovementBouncing:
@@ -1248,6 +1328,9 @@ PlayerJump:
 	ret
 
 .initland
+	ld a, FOLLOWERMOVE_STILL
+	ld [wFollowerNextMovement], a
+
 	call GetNextTile
 	ld hl, wPlayerStepFlags
 	set PLAYERSTEP_START_F, [hl]
@@ -1259,6 +1342,9 @@ PlayerJump:
 	add hl, bc
 	dec [hl]
 	ret nz
+
+	ld a, FOLLOWERMOVE_PREPARE_JUMP
+	ld [wFollowerNextMovement], a
 	ld hl, wPlayerStepFlags
 	set PLAYERSTEP_STOP_F, [hl]
 	call CopyNextCoordsTileToStandingCoordsTile
@@ -2047,7 +2133,6 @@ GetFollowerNextMovementByte:
 	dec e
 	jr nz, .loop
 	ret
-
 .done
 	call .CancelFollowIfLeaderMissing
 	ret c
