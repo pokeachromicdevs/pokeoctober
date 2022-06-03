@@ -238,8 +238,15 @@ SilentTownSilverBattleScript:
 	waitbutton
 	closetext
 .FinishRival:
+	checkfollower
+	iftrue .FinishWithFollower
 	applymovement PLAYER, PlayerMovesOutOfWay
 	applymovement ELMENTRANCE_SILVER, SilverAfterBattle
+	sjump .Done
+.FinishWithFollower:
+	applymovement PLAYER, PlayerMovesOutOfWayWithFollower
+	applymovement ELMENTRANCE_SILVER, SilverAfterBattleWithFollower
+.Done:
 	disappear NEWBARKTOWN_SILVER_2
 	special HealParty
 	setscene SCENE_SILENT_NOTHING
@@ -287,11 +294,15 @@ SilentTownElmsLabSign:
 SilentTownElmsHouseSign:
 	jumptext SilentTownElmsHouseSignText
 
+PlayerMovesOutOfWayWithFollower:
+	step UP
 PlayerMovesOutOfWay:
 	step UP
 	turn_head DOWN
 	step_end
 
+SilverAfterBattleWithFollower:
+	step LEFT
 SilverAfterBattle:
 	step LEFT
 	step LEFT
