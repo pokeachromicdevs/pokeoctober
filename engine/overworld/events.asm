@@ -919,6 +919,9 @@ CountStep:
 	; Increase the EXP of (both) DayCare Pokemon by 1.
 	farcall DayCareStep
 
+	; Increase HP of Pokemon holding Mom's Love
+	farcall MomsLoveStep
+
 	; Every four steps, deal damage to all Poisoned Pokemon
 	ld hl, wPoisonStepCount
 	ld a, [hl]

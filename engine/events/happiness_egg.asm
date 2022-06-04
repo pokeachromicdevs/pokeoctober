@@ -104,6 +104,68 @@ ChangeHappiness:
 
 INCLUDE "data/events/happiness_changes.asm"
 
+MomsLoveStep::
+; Raise HP of whoever holds Mom's Love
+	ld hl, wPartyMon1Item
+	ld de, PARTYMON_STRUCT_LENGTH
+	ld a, [wPartyCount]
+	ld c, a
+.loop
+	ld a, [hl]
+	cp MOMS_LOVE
+
+;   :(
+	push hl
+	push de
+	push bc
+		call z, .raise_hp
+	pop bc
+	pop de
+	pop hl
+
+	add hl, de
+	dec c
+	jr nz, .loop
+	ret
+
+.raise_hp
+	ld de, (wPartyMon1HP - wPartyMon1Item)
+	add hl, de
+
+	push hl
+		ld b, [hl]
+		inc hl
+		ld c, [hl]
+		inc hl
+		; bc = cur HP
+
+		ld a, [hli]
+		ld l, [hl]
+		ld h, a
+		; hl = max HP
+
+		ld a, h
+		cp b
+		jr c, .done_compare_hp
+		jr nz, .done_compare_hp
+		ld a, l
+		cp c
+.done_compare_hp
+		jr z, .no_change
+
+		inc bc ; raise HP by 1
+
+	pop hl
+	ld [hl], b
+	inc hl
+	ld [hl], c
+	ret
+	
+.no_change
+	; HP maxed out
+	pop hl
+	ret
+
 StepHappiness::
 ; Raise the party's happiness by 1 point every other step cycle.
 

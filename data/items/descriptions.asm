@@ -243,6 +243,10 @@ IceBikiniDesc:
 	db "Weakens ice-type"
 	next "moves. (HOLD)@"
 
+MomsLoveDesc:
+	db   "Heals 1HP for each"
+	next "step taken. (HOLD)@"
+
 DirectBallDesc:
 NightBallDesc:
 GuardThreadDesc:
@@ -266,7 +270,6 @@ BugFlyingFossilDesc:
 SkelebroFossilDesc:
 InvisibleWallDesc:
 SkateboardDesc:
-MomsLoveDesc:
 MysticThreadDesc:
 MysticNeedleDesc:
 SafariBallDesc:
