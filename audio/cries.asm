@@ -2210,17 +2210,17 @@ Cry_Larvitar_Ch8:
 	
 Cry_Bipulla_Ch5:
 	sound_duty 0, 3, 2, 1
-	soundinput 15, -7
+	soundinput $ff
 	square_note 2, 15, 8, 1824
 	square_note 2, 15, 8, 1831
 	square_note 2, 15, 8, 1920
-	soundinput 8, 8
+	soundinput $88
 	square_note 2, 15, 8, 1913
 	square_note 4, 15, 8, 1856
 	square_note 4, 15, 8, 1852
-	soundinput 15, -7
+	soundinput $ff
 	square_note 8, 15, 1, 1847
-	soundinput 8, 8
+	soundinput $88
 	sound_ret
 
 Cry_Bipulla_Ch6:
