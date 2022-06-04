@@ -297,6 +297,14 @@ SpriteMovementData::
 	db 0 ; flags2
 	db SWIMMING ; palette flags
 
+; SPRITEMOVEDATA_FOLLOWEROBJ
+	db SPRITEMOVEFN_FOLLOWER_OBJ ; movement function
+	db DOWN ; facing
+	db OBJECT_ACTION_STAND ; action
+	db WONT_DELETE ; flags1
+	db 0 ; flags2
+	db 0 ; palette flags
+
 ; 25
 	db SPRITEMOVEFN_00 ; movement function
 	db DOWN ; facing

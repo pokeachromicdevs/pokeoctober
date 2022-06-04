@@ -170,7 +170,11 @@ wScriptVar:: db ; c2dd
 
 wPlayerNextMovement:: db
 wPlayerMovement:: db
-	ds 2
+
+wFollowerNextMovement:: db
+
+	db
+
 wc2e2::
 wMovementObject::
 	db

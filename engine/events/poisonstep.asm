@@ -132,6 +132,18 @@ DoPoisonStep::
 	ld hl, .PoisonFaintText
 	call PrintText
 
+; check if follower mon is the one being poisoned
+	ld hl, wCurPartyMon
+	ld c, [hl]
+	inc c
+	ld a, [wWhichPartyFollower]
+	cp c
+	jr nz, .mon_not_fainted
+; call back pokemon
+	callfar DisableFollower
+	ld de, SFX_BALL_POOF
+	call WaitPlaySFX
+
 .mon_not_fainted
 	pop de
 	inc de

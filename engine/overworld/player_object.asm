@@ -55,6 +55,8 @@ SpawnPlayer:
 	ret
 
 SpawnFollower::
+	xor a
+	ld [wFollowerNextMovement], a
 	ld a, FOLLOWER
 	ld hl, FollowObjTemplate
 	call CopyPlayerObjectTemplate
@@ -90,7 +92,7 @@ PlayerObjectTemplate:
 	object_event -4, -4, SPRITE_CHRIS, SPRITEMOVEDATA_PLAYER, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 0, -1
 
 FollowObjTemplate:
-	object_event -4, -4, SPRITE_FOLLOWER, SPRITEMOVEDATA_FOLLOWNOTEXACT, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, _FollowerScript, -1
+	object_event -4, -4, SPRITE_FOLLOWER, SPRITEMOVEDATA_FOLLOWEROBJ, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, _FollowerScript, -1
 
 PUSHS
 SECTION "Follower Script Home", ROM0
@@ -143,13 +145,16 @@ WriteObjectXY::
 RefreshPlayerCoords::
 	call _RefreshPlayerCoords
 	ret
+
 MapPlayerCoordWarped::
 	call _RefreshPlayerCoords
 	ld b, PLAYER
 	ld c, FOLLOWER
 	call MoveToObject
+	call UpdateFollowerPositionAfterWarp ; ?
 	call MatchFollowerDirection
 	ret
+
 MapPlayerCoordConnected:
 	call _RefreshPlayerCoords
 	ld b, PLAYER
@@ -206,7 +211,7 @@ UpdateFollowerPositionAfterWarp:
 	ld a, [wPlayerStandingMapY]
 	ld e, a
 	push de
-	call GetCoordTile
+		call GetCoordTile
 	pop de
 	cp COLL_WARP_CARPET_UP
 	jr z, .up_down
@@ -215,7 +220,10 @@ UpdateFollowerPositionAfterWarp:
 	cp COLL_WARP_CARPET_LEFT
 	jr z, .left_right
 	cp COLL_WARP_CARPET_RIGHT
-	ret nz
+	jr z, .left_right
+; anything else redirects to player's pos.
+	jr .move_follower
+
 .left_right
 	inc e
 	push de
@@ -294,6 +302,13 @@ RefreshFollowingCoords::
 	ld b, PLAYER
 	ld c, FOLLOWER
 	call FollowNotExact
+	ret c
+; special case for follower obj
+	ld a, FOLLOWER
+	call GetObjectStruct
+	ld hl, OBJECT_MOVEMENTTYPE
+	add hl, de
+	ld [hl], SPRITEMOVEDATA_FOLLOWEROBJ
 	ret
 
 CopyObjectStruct::

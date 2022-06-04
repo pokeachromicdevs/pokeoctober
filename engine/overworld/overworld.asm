@@ -130,14 +130,10 @@ AddIndoorSprites:
 	ret
 
 AddOutdoorSprites:
-	ld a, [wWhichPartyFollower]
-	and a
-	jr z, .skip_follower
-
+; always add follower sprite
 	call GetFollowerOutdoorSprite
 	call AddSpriteGFX
 
-.skip_follower
 	ld a, [wMapGroup]
 	dec a
 	ld c, a
@@ -259,7 +255,7 @@ GetSprite:
 	push af
 		ld a, [wWhichPartyFollower]
 		and a
-		jr z, .follower_gfx_done ; if disabled, load nothing
+		jr z, .follower_gfx_nothing ; if disabled, load nothing
 	; find which party mon
 		call GetFollowingPokemon
 		call GetFollowingSprite ; c was color of sprite
@@ -267,7 +263,12 @@ GetSprite:
 		ld c, 12
 		ld l, WALKING_SPRITE
 		ld h, b
-.follower_gfx_done
+	pop af
+	ret
+
+.follower_gfx_nothing
+		ld bc, 0
+		ld hl, 0
 	pop af
 	ret
 
