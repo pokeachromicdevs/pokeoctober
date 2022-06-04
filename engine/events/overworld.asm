@@ -290,7 +290,7 @@ OWFlash:
 
 .CheckUseFlash:
 ; Flash
-	ld de, ENGINE_ZEPHYRBADGE
+	ld de, ENGINE_PLAINBADGE
 	farcall CheckBadge
 	jr c, .nozephyrbadge
 	push hl
@@ -1801,7 +1801,7 @@ TryCutOW::
 	call CheckPartyMoveIndex
 	jr c, .cant_cut
 
-	ld de, ENGINE_HIVEBADGE
+	ld de, ENGINE_ZEPHYRBADGE
 	call CheckEngineFlag
 	jr c, .cant_cut
 

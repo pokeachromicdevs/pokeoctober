@@ -515,7 +515,8 @@ UnknownText_0x1c09dd::
 	text "This tree can be"
 	line "UPROOTed!"
 
-	para "Want to use UPROOT?"
+	para "Want to use"
+	line "UPROOT?"
 	done
 
 UnknownText_0x1c0a05::
