@@ -181,6 +181,12 @@ Cry_Larvitar:
 	channel 5, Cry_Larvitar_Ch5
 	channel 6, Cry_Larvitar_Ch6
 	channel 8, Cry_Larvitar_Ch8
+	
+Cry_Bipulla:
+	channel_count 3
+	channel 5, Cry_Bipulla_Ch5
+	channel 6, Cry_Bipulla_Ch6
+	channel 8, Cry_Bipulla_Ch8
 
 Cry_Entei_Ch5:
 	; soundinput $ff
@@ -2200,4 +2206,36 @@ Cry_Larvitar_Ch8:
 	noise_note 3, 14, 7, 76
 	noise_note 3, 14, -4, 77
 	noise_note 16, 13, 2, 79
+	sound_ret
+	
+Cry_Bipulla_Ch5:
+	sound_duty 0, 3, 2, 1
+	soundinput 15, -7
+	square_note 2, 15, 8, 1824
+	square_note 2, 15, 8, 1831
+	square_note 2, 15, 8, 1920
+	soundinput 8, 8
+	square_note 2, 15, 8, 1913
+	square_note 4, 15, 8, 1856
+	square_note 4, 15, 8, 1852
+	soundinput 15, -7
+	square_note 8, 15, 1, 1847
+	soundinput 8, 8
+	sound_ret
+
+Cry_Bipulla_Ch6:
+	sound_duty 0, 2, 0, 2
+	square_note 6, 11, 2, 1822
+	square_note 5, 9, 2, 1913
+	square_note 4, 8, 2, 1854
+	square_note 8, 10, 1, 1845
+	sound_ret
+
+Cry_Bipulla_Ch8:
+	noise_note 2, 6, 4, 127
+	noise_note 2, 8, 4, 125
+	noise_note 2, 10, 4, 111
+	noise_note 2, 6, 4, 108
+	noise_note 2, 9, 4, 111
+	noise_note 2, 6, 1, 107
 	sound_ret

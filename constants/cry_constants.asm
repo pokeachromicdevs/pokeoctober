@@ -79,3 +79,4 @@
 	const CRY_YANMA
 	const CRY_ELEKID
 	const CRY_LARVITAR
+	const CRY_BIPULLA

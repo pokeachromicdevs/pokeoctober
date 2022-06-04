@@ -74,3 +74,4 @@ Cries:
 	dba Cry_Yanma
 	dba Cry_Elekid
 	dba Cry_Larvitar
+	dba Cry_Bipulla
