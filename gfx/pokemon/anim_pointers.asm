@@ -206,6 +206,7 @@ AnimationPointers:
 	dw MisdreavusAnimation
 	dw UnownAnimation
 	dw WobbuffetAnimation
+	dw BipullaAnimation
 	dw GirafarigAnimation
 	dw TopsyspotAnimation
 	dw PinecoAnimation
@@ -262,7 +263,6 @@ AnimationPointers:
 	dw CoinpurAnimation
 	dw AdbarstorkAnimation
 	dw PupperonAnimation
-	dw BipullaAnimation
 	dw MoibelleAnimation
 	dw BelledamAnimation
 	dw CleflingAnimation
@@ -284,3 +284,4 @@ AnimationPointers:
 	dw KotoraAnimation
 	dw RaitoraAnimation
 	dw GorotoraAnimation
+
