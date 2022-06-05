@@ -25,7 +25,7 @@ SpawnPoints:
 	spawn ROUTE_23,                    9,  6
 
 ; johto
-	spawn SILENT_TOWN,               5,  6
+	spawn SILENT_TOWN,                 5,  8
 	spawn CHERRYGROVE_CITY,           29, 22
 	spawn VIOLET_CITY,                17, 32
 	spawn ROUTE_32,                   11, 74
