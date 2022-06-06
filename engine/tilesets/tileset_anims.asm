@@ -273,6 +273,7 @@ TilesetAerodactylWordRoomAnim:
 TilesetCapumonInnAnim::
 TilesetCapumonMartAnim::
 TilesetCapumonChampCupAnim::
+TilesetCapumonHouseAnim::
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

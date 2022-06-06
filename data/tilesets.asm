@@ -54,3 +54,4 @@ Tilesets::
 	tileset TilesetCapumonInn
 	tileset TilesetCapumonMart
 	tileset TilesetCapumonChampCup
+	tileset TilesetCapumonHouse

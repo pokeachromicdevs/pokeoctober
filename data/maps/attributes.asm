@@ -721,6 +721,8 @@ ENDM
 	map_attributes CitrineMart, CITRINE_MART, $00, 0
 	map_attributes CitrineInn1F, CITRINE_INN_1F, $00, 0
 	map_attributes CitrineInn2F, CITRINE_INN_2F, $00, 0
+	map_attributes CitrineDevHouse1F, CITRINE_DEV_HOUSE_1F, $00, 0
+	map_attributes CitrineDevHouse2F, CITRINE_DEV_HOUSE_2F, $00, 0
 
 	map_attributes DreadWoods, DREAD_WOODS, $05, 0
 	map_attributes VioletHerbShop, VIOLET_HERB_SHOP, $00, 0

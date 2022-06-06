@@ -989,6 +989,12 @@ CitrineInn1F_Blocks:
 CitrineInn2F_Blocks:
 	INCBIN "maps/capumon/CitrineInn2F.blk"
 
+CitrineDevHouse1F_Blocks:
+	INCBIN "maps/capumon/CitrineDevHouse1F.blk"
+
+CitrineDevHouse2F_Blocks:
+	INCBIN "maps/capumon/CitrineDevHouse2F.blk"
+
 DreadWoods_Blocks:
 	INCBIN "maps/DreadWoods.blk"
 

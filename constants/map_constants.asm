@@ -515,4 +515,6 @@ ENDM
 	map_const CITRINE_MART,                                12,  4 ;  2
 	map_const CITRINE_INN_1F,                               7,  4 ;  3
 	map_const CITRINE_INN_2F,                               7,  4 ;  4
+	map_const CITRINE_DEV_HOUSE_1F,                         4,  4 ;  5
+	map_const CITRINE_DEV_HOUSE_2F,                         4,  4 ;  6
 

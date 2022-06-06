@@ -41,6 +41,7 @@
 	const TILESET_CAPUMON_INN          ; 27
 	const TILESET_CAPUMON_MART         ; 28
 	const TILESET_CAPUMON_CHAMP_CUP    ; 29
+	const TILESET_CAPUMON_HOUSE        ; 2a
 
 ; bg palette values (see gfx/tilesets/*_palette_map.asm)
 ; TilesetBGPalette indexes (see gfx/tilesets/bg_tiles.pal)
