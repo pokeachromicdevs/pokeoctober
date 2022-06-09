@@ -217,22 +217,19 @@ MrPokemonsHouse_GotEggText:
 MrPokemonIntroText3:
 	text "I'll admit, even"
 	line "I haven't seen an"
-	cont "EGG quite like"
-
-	para "this one. It might"
-	line "contain a new"
-	cont "#MON we've"
-
+	para "EGG quite like"
+	line "this one. It might"
+	para "contain a new"
+	line "#MON we've"
 	para "never seen"
 	line "before!"
 	
 	para "Oh?"
 	
 	para "Speaking of"
-	line "#MON…it looks"
-	cont "like yours really"
-
-	para "adores you!"
+	line "#MON… it looks"
+	para "like yours really"
+	line "adores you!"
 	done
 
 MrPokemonIntroText4:
@@ -267,55 +264,50 @@ MrPokemonText_AlwaysNewDiscoveries:
 	done
 
 MrPokemonsHouse_OakText1:
-	text "OAK: Pardon me, I"
-	line "was busy looking"
-
+	text "Pardon me, I was"
+	line "busy looking"
 	para "through a few"
 	line "photos an"
-	cont "assistant of mine"
+	para "assistant of mine"
+	line "sent me recently."
 
-	para "sent me recently."
-	
 	para "My name's OAK."
-	line "I'm a #MON"
-    cont "researcher."
 
-	para "I only heard"
-	line "something about"
-	cont "examining #MON."
-
-	para "Let's see here…"
+	para "I'm a #MON"
+	line "researcher."
+	para "I heard something"
+	line "about examining"
+	cont "#MON."
+	para "Let's see here<...>"
 	done
+
 
 MrPokemonsHouse_OakText1b:
 	text "Oh my! That's one"
 	line "happy #MON"
-	cont "indeed! You really"
+	cont "indeed!"
 
-	para "have potential if"
-	line "you're this loving"
-	cont "to your #MON!"
+	para "You really have"
+	line "potential if you're"
+	para "this loving to"
+	line "your #MON!"
 
 	para "Huh? You're the"
 	line "trainer ELM sent?"
 
-	para "My, seeing such"
-	line "a new trainer"
-	cont "already making a"
-
-	para "#MON so happy…"
-	line "that sure does"
-	cont "bring back"
-	
-	para "memories!"
+	para "My, seeing a new"
+	line "trainer already"
+	para "making a #MON"
+	line "so happy<...> that"
+	para "sure does bring"
+	line "back memories!"
 	
 	para "Well, since you're"
 	line "heading right back"
-	cont "to ELM, can you"
-	
-	para "deliver this"
-	line "PARCEL to him for"
-	cont "me?"
+	para "to ELM, can you"
+	line "deliver this"
+	para "PARCEL to him for"
+	line "me?"
 	done
 
 MrPokemonsHouse_GetDexText:
@@ -324,33 +316,27 @@ MrPokemonsHouse_GetDexText:
 	done
 
 MrPokemonsHouse_OakText2:
-	text "I originally came"
-	line "down around this"
+	text "I came down around"
+	line "this part of JOHTO"
+	para "to deliver the"
+	line "PARCEL, but I"
+	para "stuck around to"
+	line "see my old pal MR."
+	cont "#MON."
 
-	para "part of JOHTO just"
-	line "to deliver that"
+	para "Well now, it"
+	line "appears I've hung"
+	para "around for too"
+	line "long, haha."
 
-	para "PARCEL, but I"
-	line "stuck around a" 
-	cont "while to see my"
-
-	para "old friend MR."
-	line "#MON here and,"
-	cont "well, it appears"
-
-	para "that I've hung"
-	line "around for a tad"
-	cont "bit too long,"
-	
-	para "hehe. I have a"
-	line "radio show in"
-	cont "GOLDENROD to"
-	
-	para "attend to, and"
+	para "I have a radio"
+	line "show in GOLDENROD"
+	para "to attend to, and"
 	line "then I'll get back"
 	cont "to my studies."
-	
 	para "Farewell for now!"
+	done
+
 	done
 
 MrPokemonText_GimmeTheScale:
