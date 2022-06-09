@@ -11,7 +11,7 @@ ElmsLab_MapScripts:
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_NOTHING
 	scene_script .MeetElm ; SCENE_MEETELM
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_CANT_LEAVE
-	scene_script .DummyScene1 ; SCENE_ELMSLAB_UNUSED
+	scene_script .DummyScene1 ; SCENE_ELMSLAB_RECEIVE_DEX
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_AIDE_GIVES_POTION
 	scene_script .DummyScene1 ; SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 
@@ -26,8 +26,8 @@ ElmsLab_MapScripts:
 	end
 
 .MoveElmCallback:
-	checkscene
-	iftrue .doMove
+	readmem wElmsLabSceneID
+	ifequal SCENE_ELMSLAB_MEETELM, .doMove
 	return
 .doMove
 	moveobject ELMSLAB_ELM, 4, 10
@@ -345,6 +345,29 @@ ElmAfterTheftDoneScript:
 	closetext
 	end
 
+LabGetPokedexScript1:
+	applymovement PLAYER, .WalkUpToElm
+	opentext
+	sjump ElmAfterTheftScript
+
+.WalkUpToElm:
+	step UP
+	step UP
+	step RIGHT
+	step UP
+	step_end
+
+LabGetPokedexScript2:
+	applymovement PLAYER, .WalkUpToElm
+	opentext
+	sjump ElmAfterTheftScript
+
+.WalkUpToElm:
+	step UP
+	step UP
+	step UP
+	step_end
+
 ElmAfterTheftScript:
 	writetext ElmAfterTheftText1
 	checkitem ELMS_EGG
@@ -374,10 +397,32 @@ ElmAfterTheftScript:
 	writetext ElmAfterTheftText6
 	waitbutton
 	closetext
-	applymovement ELMSLAB_ELM, ElmMovement
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .TakeTotodile
+	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	iftrue .TakeChikorita
+.TakeCyndaquil
+	applymovement ELMSLAB_ELM, .ElmTakesCyndaquil1
+	pause 5
 	disappear ELMSLAB_POKE_BALL1
-	disappear ELMSLAB_POKE_BALL2
+	pause 5
+	applymovement ELMSLAB_ELM, .ElmTakesCyndaquil2
+	sjump .ElmGotPokemon
+.TakeChikorita
+	applymovement ELMSLAB_ELM, .ElmTakesChikorita1
+	pause 5
 	disappear ELMSLAB_POKE_BALL3
+	pause 5
+	applymovement ELMSLAB_ELM, .ElmTakesChikorita2
+	sjump .ElmGotPokemon
+.TakeTotodile
+	applymovement ELMSLAB_ELM, .ElmTakesTotodile1
+	pause 5
+	disappear ELMSLAB_POKE_BALL2
+	pause 5
+	applymovement ELMSLAB_ELM, .ElmTakesTotodile2
+	sjump .ElmGotPokemon
+.ElmGotPokemon
 	faceplayer
 	opentext
 	writetext ElmTakesMonText
@@ -385,6 +430,72 @@ ElmAfterTheftScript:
 	closetext
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 	end
+
+.ElmTakesTotodile1:
+	step LEFT
+	step DOWN
+	step DOWN
+	step DOWN ; account for follower
+	step RIGHT
+	step RIGHT ; elm is near table
+	step RIGHT
+	step UP ; elm at position
+	step_end
+
+.ElmTakesTotodile2:
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step UP
+	step RIGHT
+	step_end
+
+.ElmTakesChikorita1:
+	step LEFT
+	step DOWN
+	step DOWN
+	step DOWN ; account for follower
+	step RIGHT
+	step RIGHT ; elm is near table
+	step RIGHT
+	step RIGHT
+	step UP ; elm at position
+	step_end
+
+.ElmTakesChikorita2:
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step UP
+	step RIGHT
+	step_end
+
+.ElmTakesCyndaquil1:
+	step LEFT
+	step DOWN
+	step DOWN
+	step DOWN ; account for follower
+	step RIGHT
+	step RIGHT ; elm is near table
+	step UP ; elm at position
+	step_end
+
+.ElmTakesCyndaquil2:
+	step DOWN
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step UP
+	step RIGHT
+	step_end
 
 ElmStudyingEggScript:
 	writetext ElmStudyingEggText
@@ -730,30 +841,6 @@ AfterChikoritaMovement:
 	step LEFT
 	step UP
 	step UP
-	step_end
-	
-ElmMovement:
-	turn_head LEFT
-	step LEFT
-	step DOWN
-	step DOWN
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head UP
-	
-	turn_head DOWN
-	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	
-	step UP
-	step UP
-	step UP
-	step UP
-	step RIGHT
-	step DOWN
 	step_end
 	
 Text_SilverTakeThisOne:
@@ -1424,13 +1511,15 @@ ElmsLab_MapEvents:
 	warp_event  4, 11, SILENT_TOWN, 1
 	warp_event  5, 11, SILENT_TOWN, 1
 
-	db 6 ; coord events
+	db 8 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  5,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls2
+	coord_event  4,  6, SCENE_ELMSLAB_RECEIVE_DEX, LabGetPokedexScript1
+	coord_event  5,  6, SCENE_ELMSLAB_RECEIVE_DEX, LabGetPokedexScript2
 
 	db 17 ; bg events
 	bg_event  0,  1, BGEVENT_READ, ElmsLabHealingMachine
