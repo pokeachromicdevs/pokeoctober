@@ -64,6 +64,7 @@ CherrygrovePokecenter1F_ElmsAideScript:
 	applymovement CHERRYGROVEPOKECENTER1F_SCIENTIST, MovementData_AideWalksStraightOutOfPokecenter
 	playsound SFX_EXIT_BUILDING
 	disappear CHERRYGROVEPOKECENTER1F_SCIENTIST
+	setevent EVENT_ELM_NOT_IN_LAB ; elm departs for saffron
 	waitsfx
 	end
 

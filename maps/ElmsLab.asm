@@ -378,9 +378,17 @@ ElmAfterTheftScript:
 	takeitem ELMS_EGG
 	writetext ElmAfterTheftText3
 	waitbutton
-	writetext ElmAfterTheftText4
+	writetext ElmAfterTheftText4a
 	waitbutton
+	closetext
+
+	opentext
+	writetext ElmAfterTheftText4b
 	takeitem OAKS_PARCEL
+	waitbutton
+	closetext
+	
+	opentext
 	writetext ElmAfterTheftText5
 	waitsfx
 	waitbutton
@@ -423,7 +431,7 @@ ElmAfterTheftScript:
 	applymovement ELMSLAB_ELM, .ElmTakesTotodile2
 	sjump .ElmGotPokemon
 .ElmGotPokemon
-	faceplayer
+	faceobject ELMSLAB_ELM, PLAYER
 	opentext
 	writetext ElmTakesMonText
 	waitbutton
@@ -635,11 +643,16 @@ ElmsAideScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue AideText_AlwaysBusy
+	iftrue .AlwaysBusy
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue AideScript_ExplainBalls
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+	iftrue .ExplainBalls
+.AlwaysBusy:
 	writetext AideText_AlwaysBusy
+	sjump .End
+.ExplainBalls:
+	writetext AideScript_ExplainBalls
+	sjump .End
+.End:
 	waitbutton
 	closetext
 	end
@@ -1108,8 +1121,9 @@ ElmsLabHealingMachineText1:
 
 ElmAfterTheftText1:
 	text "Ah, you've re-"
-	line "turned! Do you"
-	cont "have the EGG?"
+	line "turned!"
+	para "Do you have the"
+	line "EGG?"
 	done
 
 ElmAfterTheftText2:
@@ -1118,66 +1132,64 @@ ElmAfterTheftText2:
 	done
 
 ElmAfterTheftText3:
-	text "ELM: Indeed you"
-	line "do! Thank you so"
-	cont "much! Did MR."
-	
-	para "#MON have any-"
-	line "thing to say"
-	cont "about the EGG?"
+	text "Indeed you do!"
+	line "Thank you so much!"
+	para "Did MR. #MON"
+	line "have anything to"
+	cont "say about it?"
 	done
 
-ElmAfterTheftText4:
+ElmAfterTheftText4a:
 	text "Huh? He thinks it"
 	line "houses a never"
-	cont "before seen #-"
+	para "before seen #-"
+	line "MON? If that's"
+	para "true, then history"
+	line "is in the making!"
 
-	para "MON? If that's"
-	line "true, then histo-"
-	cont "ry's in the mak-"
-	
-	para "ing! This reminds"
-	line "me of when I first"
-	cont "discovered PICHU,"
-	para "haha."
-	
-	para "ELM: Huh? What's"
-	line "that? OAK was at"
-	cont "MR. #MON's"
-	
-	para "house, and he has"
-	line "a PARCEL for me?"
-	
-	para "<PLAYER> handed"
-	line "over OAK'S PARCEL."
+	para "This reminds me of"
+	line "when I first"
+	para "discovered PICHU,"
+	line "haha!"
+
+	para "Huh? What's that?"
+	line "OAK was at MR."
+	para "#MON's house,"
+	line "and he has a"
+	cont "PARCEL for me?"
+	done
+
+ElmAfterTheftText4b:
+	text "<PLAYER> handed"
+	line "over OAK's PARCEL."
 	done
 
 ElmAfterTheftText5:
-	text "Hmm…let's see"
-	line "what's inside here…"
+	text "Let's see what's"
+	line "inside<...>"
 
 	para "Oh! Several new"
-	line "#DEXs! I needed"
-	cont "some of these!"
-	
+	line "#DEXes! I"
+	para "needed some of"
+	line "these!"
+
 	para "Bless OAK for"
 	line "going out of his"
-	cont "way for me! Come"
-	
-	para "to think of it,"
-	line "would you take"
-	cont "one of these and"
-	
-	para "record #MON"
-	line "data with it? It's"
-	cont "always been OAK's"
-	
-	para "dream to know of"
-	line "every #MON in"
-	cont "existance, and"
-	
-	para "OAK's dreams are"
-	line "my dreams!"
+	cont "way for me!"
+
+	para "Come to think of"
+	line "it, would you take"
+	para "one of these and"
+	line "record #MON"
+	cont "data with it?"
+
+	para "It's always been"
+	line "OAK's dream to"
+	para "know of every"
+	line "#MON in exist-"
+	para "ence, and OAK's"
+	line "dreams are my"
+	cont "dreams!"
 	done
 	
 ElmGivesPokedexText:
@@ -1186,58 +1198,51 @@ ElmGivesPokedexText:
 	done
 
 ElmAfterTheftText6:
-	text "Thank you! Since"
-	line "<RIVAL> is"
-	cont "nowhere near here,"
-	
-	para "I think I'll have"
-	line "to send my aide"
-	cont "to deliver a #-"
-	
-	para "DEX to him. Heck,"
-	line "even I might as"
-	cont "well take a #-"
-	
-	para "DEX as well!"
-	line "Having to write"
-	cont "down all of my"
-	
-	para "notes is annoy-"
-	line "ing, and this is"
-	cont "a great excuse to"
-	
-	para "get out of the"
-	line "LAB every once"
-	cont "in a while!"
-	
+	text "Since <RIVAL>"
+	line "is nowhere near"
+	para "here, I think I'll"
+	line "have to send my"
+	para "aide to deliver a"
+	line "#DEX to him."
+
+	para "Heck, even I might"
+	line "as well take one!"
+
+	para "Having to write"
+	line "down all of my"
+	para "notes is annoying"
+	line "and this is a"
+	para "great excuse to"
+	line "get out of the LAB"
+	para "every once in a"
+	line "while!"
+
 	para "And come to think"
-	line "of it…"
+	line "of it<...>"
 	done
 	
 ElmTakesMonText:
-	text "This little #-"
-	line "MON needs a"
-	cont "reason to get"
-	
-	para "and see the"
+	text "This #MON needs"
+	line "a reason to get"
+	para "out and see the"
 	line "world instead of"
-	cont "being cooped up in"
-	
-	para "here too."
-	
-	para "So long,"
-	line "<PLAYER>!"
-	
+	para "being cooped up in"
+	line "the LAB, too."
+
 	para "Have fun on your"
 	line "journey!"
+
+	para "And don't forget"
+	line "to let your"
+	para "<MOM> know"
+	line "before leaving!"
 	done
 
-ElmStudyingEggText:
-	text "ELM: Don't give"
-	line "up! I'll call if"
 
-	para "I learn anything"
-	line "about that EGG!"
+ElmStudyingEggText:
+	text "ELM: Have fun on"
+	line "your journey!"
+	para "Don't give up!"
 	done
 
 ElmAideHasEggText:
@@ -1248,8 +1253,9 @@ ElmAideHasEggText:
 	para "He should have met"
 	line "you with the EGG"
 
-	para "at VIOLET CITY's"
-	line "#MON CENTER."
+	para "at CHERRYGROVE"
+	line "CITY's #MON"
+	cont "CENTER."
 
 	para "You must have just"
 	line "missed him. Try to"
