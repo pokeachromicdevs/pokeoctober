@@ -18,7 +18,22 @@ _SwitchPartyMons:
 	ld a, [wWhichPartyFollower]
 	and a
 	ret z
-	ld a, [wMenuCursorY]
+
+; offset temporary buffer by +1
+	ld hl, wBuffer2
+	inc [hl]
+	inc hl
+	inc [hl]
+
+; change follower position appropriately
+	ld b, a
+	ld a, [wBuffer2]
+	cp b
+	jr z, .use_other_buffer
+	jr .done
+.use_other_buffer
+	ld a, [wBuffer3]
+.done
 	ld [wWhichPartyFollower], a
 	ret
 
