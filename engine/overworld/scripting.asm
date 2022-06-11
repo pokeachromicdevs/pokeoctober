@@ -243,6 +243,7 @@ ScriptCommandTable:
 	dw Script_hidefollower               ; b1
 	dw Script_showfollower               ; b2
 	dw Script_checkfollower              ; b3
+	dw Script_ifequal16                  ; b4
 
 StartScript:
 	ld hl, wScriptFlags
@@ -3046,4 +3047,25 @@ Script_checkfollower:
 .no_follower
 	ld [wScriptVar], a
 	ret
+
+Script_ifequal16:
+; parameters: word, pointer
+	push de
+		ld hl, wScriptWordVar
+		call GetScriptByte
+		cp [hl]
+		jr z, .check_second_byte
+	pop de
+	call GetScriptByte
+	jp SkipTwoScriptBytes
+.check_second_byte
+		inc hl
+		call GetScriptByte
+		cp [hl]
+		jr z, .apply_jump
+	pop de
+	jp SkipTwoScriptBytes
+.apply_jump
+	pop de
+	jp Script_sjump
 

@@ -149,7 +149,8 @@ wUnusedScriptByteBuffer:: db
 
 wMapTimeOfDay:: db
 
-	ds 2
+wScriptWordVar:: dw
+
 wFollowerSpriteID:: db
 
 wPrinterConnectionOpen:: db

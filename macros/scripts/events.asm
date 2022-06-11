@@ -1119,3 +1119,10 @@ ENDM
 checkfollower: MACRO
 	db checkfollower_command
 ENDM
+
+	enum ifequal16_command
+ifequal16: MACRO
+	db ifequal16_command
+	dw \1 ; 16-bit little endian value
+	dw \2 ; script
+ENDM
