@@ -28,7 +28,7 @@ SpawnPoints:
 	spawn SILENT_TOWN,                 5,  8
 	spawn CHERRYGROVE_CITY,           29, 22
 	spawn VIOLET_CITY,                17, 32
-	spawn ROUTE_32,                   11, 74
+	spawn ROUTE_32_NORTH,             11, 10
 	spawn AZALEA_TOWN,                11, 6
 	spawn CIANWOOD_CITY,              23, 44
 	spawn GOLDENROD_CITY,             15, 24

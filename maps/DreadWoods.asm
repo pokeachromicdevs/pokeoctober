@@ -111,10 +111,10 @@ DreadWoods_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 29,  2, ROUTE_32, 1
-	warp_event 29,  3, ROUTE_32, 2
-	warp_event 29, 36, ROUTE_32, 3
-	warp_event 29, 37, ROUTE_32, 4
+	warp_event 29,  2, ROUTE_32_NORTH, 1
+	warp_event 29,  3, ROUTE_32_NORTH, 2
+	warp_event 29, 36, ROUTE_32_SOUTH, 1
+	warp_event 29, 37, ROUTE_32_SOUTH, 1
 
 	db 0 ; coord events
 

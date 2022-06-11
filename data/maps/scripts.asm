@@ -335,7 +335,8 @@ INCLUDE "maps/AlderGym.asm"
 SECTION "Map Scripts 17", ROMX
 
 INCLUDE "maps/MahoganyTown.asm"
-INCLUDE "maps/Route32.asm"
+INCLUDE "maps/Route32North.asm"
+INCLUDE "maps/Route32South.asm"
 INCLUDE "maps/VermilionFishingSpeechHouse.asm"
 INCLUDE "maps/VermilionPokecenter1F.asm"
 INCLUDE "maps/VermilionPokecenter2FBeta.asm"

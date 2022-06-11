@@ -122,7 +122,13 @@ JohtoWaterWildMons:
 	dbw 15, POLIWAG
 	dbw 20, POLIWHIRL
 
-	map_id ROUTE_32
+	map_id ROUTE_32_NORTH
+	db 6 percent ; encounter rate
+	dbw 15, TENTACOOL
+	dbw 20, QUAGSIRE
+	dbw 20, TENTACRUEL
+
+	map_id ROUTE_32_SOUTH
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 20, QUAGSIRE

@@ -106,7 +106,7 @@ ENDM
 	
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST | NORTH
 	connection north, ZenGarden, ZEN_GARDEN, -1
-	connection south, Route32, ROUTE_32, 0
+	connection south, Route32North, ROUTE_32_NORTH, 0
 	connection west, Route36, ROUTE_36, 0
 	connection east, Route31, ROUTE_31, 9
 
@@ -114,7 +114,7 @@ ENDM
 	connection south, VioletCity, VIOLET_CITY, 1
 	
 	map_attributes AlderTown, ALDER_TOWN, $35, NORTH | WEST
-	connection north, Route32, ROUTE_32, 0
+	connection north, Route32South, ROUTE_32_SOUTH, 0
 	connection west, Route33, ROUTE_33, 0
 
 	map_attributes AzaleaTown, AZALEA_TOWN, $05, NORTH | EAST
@@ -179,8 +179,12 @@ ENDM
 	connection south, Route30, ROUTE_30, 10
 	connection west, VioletCity, VIOLET_CITY, -9
 
-	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
+	map_attributes Route32North, ROUTE_32_NORTH, $05, NORTH | SOUTH
 	connection north, VioletCity, VIOLET_CITY, 0
+	connection south, Route32South, ROUTE_32_SOUTH, 0
+
+	map_attributes Route32South, ROUTE_32_SOUTH, $05, NORTH | SOUTH
+	connection north, Route32North, ROUTE_32_NORTH, 0
 	connection south, AlderTown, ALDER_TOWN, 0
 
 	map_attributes Route33, ROUTE_33, $05,  WEST | EAST

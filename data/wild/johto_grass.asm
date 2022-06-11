@@ -1433,7 +1433,7 @@ JohtoGrassWildMons:
 	dbw 5, GASTLY
 	dbw 5, GASTLY
 
-	map_id ROUTE_32
+	map_id ROUTE_32_NORTH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 6, EKANS
@@ -1444,12 +1444,39 @@ JohtoGrassWildMons:
 	dbw 9, HOPPIP
 	dbw 9, HOPPIP
 	; day
-	dbw 6, EKANS;TYKER 
+	dbw 6, KOTORA
 	dbw 7, EKANS
 	dbw 9, BELLSPROUT
 	dbw 8, MAREEP
 	dbw 9, SNUBBULL
-	dbw 9, HOPPIP;TYKER
+	dbw 9, KOTORA
+	dbw 9, HOPPIP
+	; nite
+	dbw 6, WOOPER
+	dbw 7, RATTATA
+	dbw 9, BELLSPROUT
+	dbw 8, ZUBAT
+	dbw 9, HOOTHOOT
+	dbw 9, GASTLY
+	dbw 9, BIPULLA
+
+	map_id ROUTE_32_SOUTH
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 6, EKANS
+	dbw 7, RATTATA
+	dbw 9, BELLSPROUT
+	dbw 8, MAREEP
+	dbw 9, PIDGEY
+	dbw 9, HOPPIP
+	dbw 9, HOPPIP
+	; day
+	dbw 6, KOTORA
+	dbw 7, EKANS
+	dbw 9, BELLSPROUT
+	dbw 8, MAREEP
+	dbw 9, SNUBBULL
+	dbw 9, KOTORA
 	dbw 9, HOPPIP
 	; nite
 	dbw 6, WOOPER

@@ -223,6 +223,7 @@ ENDM
 	map_const ALDER_POKECENTER_1F,                          8,  4 ;  9
 	map_const ALDER_MART,                                   6,  4 ;  10
 	map_const ALDER_HAPPINESS_RATER,                        4,  4 ;  5
+	map_const ROUTE_32_SOUTH,                              10, 18 ;  8
 
 	newgroup                                                      ;  9
 
@@ -235,7 +236,7 @@ ENDM
 
 	newgroup                                                      ; 10
 
-	map_const ROUTE_32,                                    10, 45 ;  1
+	map_const ROUTE_32_NORTH,                              10, 27 ;  1
 	map_const ROUTE_35,                                    10, 18 ;  2
 	map_const ROUTE_36,                                    30,  9 ;  3
 	map_const ROUTE_37,                                    10,  9 ;  4

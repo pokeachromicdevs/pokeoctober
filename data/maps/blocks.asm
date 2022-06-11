@@ -1,7 +1,10 @@
 SECTION "Map Blocks 1", ROMX
 
-Route32_Blocks:
-	INCBIN "maps/Route32.blk"
+Route32North_Blocks:
+	INCBIN "maps/Route32North.blk"
+
+Route32South_Blocks:
+	INCBIN "maps/Route32South.blk"
 
 Route40_Blocks:
 	INCBIN "maps/Route40.blk"
@@ -1003,4 +1006,3 @@ ZenGarden_Blocks:
 
 VioletHerbShop_Blocks:
 	INCBIN "maps/VioletHerbShop.blk"
-

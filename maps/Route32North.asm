@@ -1,6 +1,6 @@
 	object_const_def ; object_event constants
 
-Route32_MapScripts:
+Route32North_MapScripts:
 	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_ROUTE32_OFFER_SLOWPOKETAIL
@@ -17,14 +17,12 @@ Route32_MapScripts:
 .DummyScene2:
 	end
 
-Route32_MapEvents:
+Route32North_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 2 ; warp events
 	warp_event  2, 12, DREAD_WOODS, 1
 	warp_event  2, 13, DREAD_WOODS, 2
-	warp_event  2, 68, DREAD_WOODS, 3
-	warp_event  2, 69, DREAD_WOODS, 4
 
 	db 0 ; coord events
 

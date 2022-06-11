@@ -2649,7 +2649,7 @@ wPlayersHouse1FSceneID::                          db ; d988
 wRoute29SceneID::                                 db ; d989
 wCherrygroveCitySceneID::                         db ; d98a
 wMrPokemonsHouseSceneID::                         db ; d98b
-wRoute32SceneID::                                 db ; d98c
+wRoute32SouthSceneID::                                 db ; d98c
 wRoute35NationalParkGateSceneID::                 db ; d98d
 wRoute36SceneID::                                 db ; d98e
 wRoute36NationalParkGateSceneID::                 db ; d98f
