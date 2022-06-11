@@ -13,7 +13,29 @@ SproutTower1F_MapScripts:
 	specialphonecall SPECIALCALL_WORRIED
 	return
 
-; scripts here
+TrainerFledglingTimothy:
+	trainer FLEDGLING, FLEDGLING_TIMOTHY, EVENT_BEAT_FLEDGLING_TIMOTHY, .Seen, .Beat, 0, .PostScript
+
+.Seen:
+	text "H-have you seen my"
+	line "big sis?"
+	done
+
+.Beat:
+	text "Sis<...> where are"
+	line "you?"
+	done
+
+.PostScript:
+	endifjustbattled
+	jumptextfaceplayer .PostBattleTxt
+
+.PostBattleTxt:
+	text "I<...> I wandered off"
+	line "to see the tower<...>"
+	para "But now I can't"
+	line "find my big sis<...>"
+	done
 
 SproutTower1F_MapEvents:
 	db 0, 0 ; filler
@@ -28,4 +50,5 @@ SproutTower1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event  8,  4, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFledglingTimothy, -1

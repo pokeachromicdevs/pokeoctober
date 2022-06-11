@@ -5286,25 +5286,36 @@ SoldierGroup:
 	
 FledglingGroup:
 	next_party; FLEDGLING (1)
-	db "BARRY@", TRAINERTYPE_NORMAL
-	db 4
-	dw HOPPIP
-	db 6
-	dw PIDGEY
+		db "BARRY@", TRAINERTYPE_NORMAL
+		db 4
+		dw HOPPIP
+		db 6
+		dw PIDGEY
 	end_party
 	
-	next_party; FLEDGLING (1)
-	db "TERRY@", TRAINERTYPE_NORMAL
-	db 13
-	dw IGGLYBUFF
-	db 13
-	dw CLEFFA
-	db 14
-	dw PIDGEY
-	db 14
-	dw SPEAROW
-	db 15
-	dw DODAERIE
+	next_party; FLEDGLING (2)
+		db "TERRY@", TRAINERTYPE_NORMAL
+		db 13
+		dw IGGLYBUFF
+		db 13
+		dw CLEFFA
+		db 14
+		dw PIDGEY
+		db 14
+		dw SPEAROW
+		db 15
+		dw DODAERIE
+	end_party
+
+	next_party; FLEDGLING (3)
+		string "TIMOTHY"
+		db     TRAINERTYPE_NORMAL
+
+		dbw    6, CATERPIE
+		dbw    6, WEEDLE
+		dbw    9, METAPOD
+		dbw    9, KAKUNA
+		dbw    9, DODAERIE
 	end_party
 	
 	end_party_list

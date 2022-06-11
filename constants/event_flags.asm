@@ -313,7 +313,9 @@
 	const EVENT_BEAT_OFFICER_AARON
 	const EVENT_BEAT_SAGE_NEAL
 
-	const EVENT_15c
+; sprout tower 1f
+	const EVENT_BEAT_FLEDGLING_TIMOTHY
+
 	const EVENT_15e
 	const EVENT_15f
 	const EVENT_160
