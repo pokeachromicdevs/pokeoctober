@@ -196,12 +196,15 @@ EcruteakGroupSprites:
 		walk_sprite SPRITE_OFFICER
 		walk_sprite SPRITE_YOUNGSTER
 		walk_sprite SPRITE_COOLTRAINER_M
+		walk_sprite SPRITE_COOLTRAINER_F
 		walk_sprite SPRITE_SAGE
-		walk_sprite SPRITE_SUPER_NERD
+		walk_sprite SPRITE_FLEDGLING
+		walk_sprite SPRITE_BUG_CATCHER
 
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
+		static_sprite SPRITE_GYM_GUY
 
 	end_outdoor_sprites
 
@@ -213,18 +216,10 @@ AzaleaGroupSprites:
 		walk_sprite SPRITE_AZALEA_ROCKET
 		walk_sprite SPRITE_ROCKET_GIRL
 		walk_sprite SPRITE_SILVER
-		walk_sprite SPRITE_BUG_CATCHER
-		walk_sprite SPRITE_COOLTRAINER_F
 	
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
-		static_sprite SPRITE_LASS
-		static_sprite SPRITE_YOUNGSTER
-		static_sprite SPRITE_OFFICER
-		static_sprite SPRITE_FISHER
-		static_sprite SPRITE_FLEDGLING
-		static_sprite SPRITE_GYM_GUY
 
 	end_outdoor_sprites
 

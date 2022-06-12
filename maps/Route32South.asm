@@ -17,13 +17,6 @@ Route32South_MapScripts:
 .DummyScene2:
 	end
 
-Route32SouthForceWildMonScript:
-; try to force a map reload
-	loadwildmon WOOPER, 6
-	startbattle
-	reloadmapafterbattle
-	end
-
 TrainerFisherKoi:
 ; lmao
 	trainer FISHER, KOI, EVENT_BEAT_FISHER_KOI, .SeenTxt, .WinTxt, 0, .PostScript
@@ -153,21 +146,7 @@ Route32South_MapEvents:
 	warp_event  2, 14, DREAD_WOODS, 3
 	warp_event  2, 15, DREAD_WOODS, 4
 
-	db 14 ; coord events
-	coord_event 15,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event 14,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event 13,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event 12,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event 11,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event 10,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  9,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  8,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  7,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  6,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  5,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  4,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  3,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
-	coord_event  2,  0, SCENE_DEFAULT, Route32SouthForceWildMonScript
+	db 0 ; coord events
 
 	db 0 ; bg events
 
