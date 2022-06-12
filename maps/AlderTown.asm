@@ -79,4 +79,4 @@ AlderTown_MapEvents:
 	bg_event 10,  8, BGEVENT_READ, AlderTownSign
 
 	db 1 ; object events
-	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownOutsideGymGuyScript, EVENT_BEAT_ROUTE33_KAREN
+	object_event  5, 12, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownOutsideGymGuyScript, EVENT_BEAT_ROUTE33_KAREN
