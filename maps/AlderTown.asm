@@ -65,11 +65,13 @@ AlderTownOutsideGymGuyScript:
 AlderTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 6 ; warp events
 	warp_event  3,  5, ALDER_POKECENTER_1F, 1
 	warp_event 15,  3, ALDER_HAPPINESS_RATER, 1
 	warp_event 11,  5, ALDER_MART, 1
 	warp_event  4, 11, ALDER_GYM, 1
+	warp_event  0,  6, ROUTE_33_EAST_GATE, 3
+	warp_event  0,  7, ROUTE_33_EAST_GATE, 4
 
 	db 1 ; coord events
 	coord_event  4, 12, SCENE_ALDER_TOWN_NOTHING, AlderTown_GymLocked

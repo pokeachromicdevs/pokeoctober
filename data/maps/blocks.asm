@@ -249,9 +249,11 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
+Route33EastGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 CherrygroveWoodsGate_Blocks:
+Route33WestGate_Blocks:
 	INCBIN "maps/CherrygroveWoodsGate.blk"
 
 CherrygroveWoodsExitGate_Blocks:

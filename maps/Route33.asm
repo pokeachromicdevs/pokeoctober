@@ -439,17 +439,20 @@ Route33_Sign:
 Route33_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 3 ; warp events
+	warp_event 57,  6, ROUTE_33_EAST_GATE, 1
+	warp_event 57,  7, ROUTE_33_EAST_GATE, 2
+	warp_event  0,  7, ROUTE_33_WEST_GATE, 1
 
 	db 1 ; coord events
 	coord_event 44, 10, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
 
 	db 1 ; bg events
-	bg_event 56,  6, BGEVENT_READ, Route33_Sign
+	bg_event 54,  6, BGEVENT_READ, Route33_Sign
 
 	db 8 ; object events
 ; rocket grunts
-	object_event 54, 10, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
+	object_event 54,  9, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
 	object_event 50,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
 	object_event 47,  2, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33Hyuck, -1
 ; karen + kurt
