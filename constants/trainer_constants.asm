@@ -373,6 +373,7 @@ KRIS EQU __enum__
 	const RALPH5
 	const TULLY4
 	const FISHER_BILLY
+	const MANNY
 
 	trainerclass SWIMMERM ; 26
 	const HAROLD

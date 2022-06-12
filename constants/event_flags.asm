@@ -319,8 +319,8 @@
 ; r32 north
 	const EVENT_BEAT_LASS_TINA
 	const EVENT_TALKED_TO_LASS_TINA ; found tim at sprout tower
+	const EVENT_BEAT_FISHER_MANNY
 
-	const EVENT_160
 	const EVENT_161
 	const EVENT_162
 	const EVENT_163
