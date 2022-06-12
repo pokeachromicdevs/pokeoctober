@@ -325,13 +325,19 @@ AlderGymGuyText:
 	line "tough without my"
 	cont "advice."
 
-	para "Let's see… Bug"
-	line "#MON don't like"
-	cont "fire."
+	para "Let's see<...> Flying-"
+	line "type moves are"
+	para "super-effective on"
+	line "bug #MON<...>"
+	para "<...>and they also"
+	line "don't like fire."
 
-	para "Flying-type moves"
-	line "are super-effec-"
-	cont "tive too."
+	para "But be warned!"
+	line "BUGSY equips his"
+	para "#MON with FIRE"
+	line "MANE, so fire-type"
+	para "moves don't deal"
+	line "too much damage."
 	done
 
 AlderGymGuyWinText:
