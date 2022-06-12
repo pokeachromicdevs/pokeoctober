@@ -51,4 +51,4 @@ SproutTower1F_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  8,  4, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFledglingTimothy, -1
+	object_event  8,  4, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFledglingTimothy, EVENT_TALKED_TO_LASS_TINA

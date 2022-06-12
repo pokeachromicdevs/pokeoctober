@@ -187,6 +187,7 @@ KRIS EQU __enum__
 	const HELEN
 	const JUNE
 	const ANNIE
+	const TINA
 
 	trainerclass JANINE ; 1a
 	const JANINE1

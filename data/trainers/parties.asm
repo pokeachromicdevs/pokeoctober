@@ -1048,222 +1048,228 @@ BirdKeeperGroup:
 	
 LassGroup:
 	next_party ; LASS (1)
-	db "CARRIE@", TRAINERTYPE_MOVES
-	db 18
-	dw SNUBBULL
-	dw SCARY_FACE, CHARM, BITE, LICK
+		db "CARRIE@", TRAINERTYPE_MOVES
+		db 18
+		dw SNUBBULL
+		dw SCARY_FACE, CHARM, BITE, LICK
 	end_party
 
 	next_party ; LASS (2)
-	db "BRIDGET@", TRAINERTYPE_NORMAL
-	db 15
-	dw JIGGLYPUFF
-	db 15
-	dw JIGGLYPUFF
-	db 15
-	dw JIGGLYPUFF
+		db "BRIDGET@", TRAINERTYPE_NORMAL
+		db 15
+		dw JIGGLYPUFF
+		db 15
+		dw JIGGLYPUFF
+		db 15
+		dw JIGGLYPUFF
 	end_party
 
 	next_party ; LASS (3)
-	db "ALICE@", TRAINERTYPE_NORMAL
-	db 30
-	dw GLOOM
-	db 34
-	dw ARBOK
-	db 30
-	dw GLOOM
+		db "ALICE@", TRAINERTYPE_NORMAL
+		db 30
+		dw GLOOM
+		db 34
+		dw ARBOK
+		db 30
+		dw GLOOM
 	end_party
 
 	next_party ; LASS (4)
-	db "KRISE@", TRAINERTYPE_NORMAL
-	db 12
-	dw ODDISH
-	db 15
-	dw CUBONE
+		db "KRISE@", TRAINERTYPE_NORMAL
+		db 12
+		dw ODDISH
+		db 15
+		dw CUBONE
 	end_party
 
 	next_party ; LASS (5)
-	db "CONNIE@", TRAINERTYPE_NORMAL
-	db 21
-	dw MARILL
+		db "CONNIE@", TRAINERTYPE_NORMAL
+		db 21
+		dw MARILL
 	end_party
 
 	next_party ; LASS (6)
-	db "LINDA@", TRAINERTYPE_NORMAL
-	db 30
-	dw BULBASAUR
-	db 32
-	dw IVYSAUR
-	db 34
-	dw VENUSAUR
+		db "LINDA@", TRAINERTYPE_NORMAL
+		db 30
+		dw BULBASAUR
+		db 32
+		dw IVYSAUR
+		db 34
+		dw VENUSAUR
 	end_party
 
 	next_party ; LASS (7)
-	db "LAURA@", TRAINERTYPE_NORMAL
-	db 28
-	dw GLOOM
-	db 31
-	dw PIDGEOTTO
-	db 31
-	dw BELLOSSOM
+		db "LAURA@", TRAINERTYPE_NORMAL
+		db 28
+		dw GLOOM
+		db 31
+		dw PIDGEOTTO
+		db 31
+		dw BELLOSSOM
 	end_party
 
 	next_party ; LASS (8)
-	db "SHANNON@", TRAINERTYPE_NORMAL
-	db 29
-	dw PARAS
-	db 29
-	dw PARAS
-	db 32
-	dw PARASECT
+		db "SHANNON@", TRAINERTYPE_NORMAL
+		db 29
+		dw PARAS
+		db 29
+		dw PARAS
+		db 32
+		dw PARASECT
 	end_party
 
 	next_party ; LASS (9)
-	db "MICHELLE@", TRAINERTYPE_NORMAL
-	db 32
-	dw SKIPLOOM
-	db 33
-	dw HOPPIP
-	db 34
-	dw JUMPLUFF
+		db "MICHELLE@", TRAINERTYPE_NORMAL
+		db 32
+		dw SKIPLOOM
+		db 33
+		dw HOPPIP
+		db 34
+		dw JUMPLUFF
 	end_party
 
 	next_party ; LASS (10)
-	db "DANA@", TRAINERTYPE_MOVES
-	db 18
-	dw FLAAFFY
-	dw TACKLE, GROWL, THUNDERSHOCK, THUNDER_WAVE
-	db 18
-	dw PSYDUCK
-	dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
+		db "DANA@", TRAINERTYPE_MOVES
+		db 18
+		dw FLAAFFY
+		dw TACKLE, GROWL, THUNDERSHOCK, THUNDER_WAVE
+		db 18
+		dw PSYDUCK
+		dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
 	end_party
 
 	next_party ; LASS (11)
-	db "ELLEN@", TRAINERTYPE_NORMAL
-	db 30
-	dw WIGGLYTUFF
-	db 34
-	dw GRANBULL
+		db "ELLEN@", TRAINERTYPE_NORMAL
+		db 30
+		dw WIGGLYTUFF
+		db 34
+		dw GRANBULL
 	end_party
 
 	next_party ; LASS (12)
-	db "CONNIE@", TRAINERTYPE_NORMAL
-	db 21
-	dw MARILL
+		db "CONNIE@", TRAINERTYPE_NORMAL
+		db 21
+		dw MARILL
 	end_party
 
 	next_party ; LASS (13)
-	db "CONNIE@", TRAINERTYPE_NORMAL
-	db 21
-	dw MARILL
+		db "CONNIE@", TRAINERTYPE_NORMAL
+		db 21
+		dw MARILL
 	end_party
 
 	next_party ; LASS (14)
-	db "DANA@", TRAINERTYPE_MOVES
-	db 21
-	dw FLAAFFY
-	dw TACKLE, GROWL, THUNDERSHOCK, THUNDER_WAVE
-	db 21
-	dw PSYDUCK
-	dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
+		db "DANA@", TRAINERTYPE_MOVES
+		db 21
+		dw FLAAFFY
+		dw TACKLE, GROWL, THUNDERSHOCK, THUNDER_WAVE
+		db 21
+		dw PSYDUCK
+		dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
 	end_party
 
 	next_party ; LASS (15)
-	db "DANA@", TRAINERTYPE_MOVES
-	db 29
-	dw PSYDUCK
-	dw SCRATCH, DISABLE, CONFUSION, SCREECH
-	db 29
-	dw AMPHAROS
-	dw TACKLE, THUNDERSHOCK, THUNDER_WAVE, COTTON_SPORE
+		db "DANA@", TRAINERTYPE_MOVES
+		db 29
+		dw PSYDUCK
+		dw SCRATCH, DISABLE, CONFUSION, SCREECH
+		db 29
+		dw AMPHAROS
+		dw TACKLE, THUNDERSHOCK, THUNDER_WAVE, COTTON_SPORE
 	end_party
 
 	next_party ; LASS (16)
-	db "DANA@", TRAINERTYPE_MOVES
-	db 32
-	dw PSYDUCK
-	dw SCRATCH, DISABLE, CONFUSION, SCREECH
-	db 32
-	dw AMPHAROS
-	dw TACKLE, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
+		db "DANA@", TRAINERTYPE_MOVES
+		db 32
+		dw PSYDUCK
+		dw SCRATCH, DISABLE, CONFUSION, SCREECH
+		db 32
+		dw AMPHAROS
+		dw TACKLE, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
 	end_party
 
 	next_party ; LASS (17)
-	db "DANA@", TRAINERTYPE_MOVES
-	db 36
-	dw AMPHAROS
-	dw SWIFT, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
-	db 36
-	dw GOLDUCK
-	dw DISABLE, SURF, PSYCHIC_M, SCREECH
+		db "DANA@", TRAINERTYPE_MOVES
+		db 36
+		dw AMPHAROS
+		dw SWIFT, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
+		db 36
+		dw GOLDUCK
+		dw DISABLE, SURF, PSYCHIC_M, SCREECH
 	end_party
 	
 	next_party ; LASS (18)
-	db "ARIEL@", TRAINERTYPE_NORMAL
-	db 5
-	dw ZUBAT
-	db 7
-	dw PIDGEY
-	db 8
-	dw HOPPIP
+		db "ARIEL@", TRAINERTYPE_NORMAL
+		db 5
+		dw ZUBAT
+		db 7
+		dw PIDGEY
+		db 8
+		dw HOPPIP
 	end_party
 	
 	next_party ; LASS (18)
-	db "SAM@", TRAINERTYPE_NORMAL
-	db 2
-	dw COINPUR
-	db 4
-	dw SENTRET
+		db "SAM@", TRAINERTYPE_NORMAL
+		db 2
+		dw COINPUR
+		db 4
+		dw SENTRET
 	end_party
 	
 	next_party ; LASS (19)
-	db "NIECHELLE@", TRAINERTYPE_NORMAL
-	db 3
-	dw CAMOUFLAKE
-	db 4
-	dw CAMOUFLAKE
+		db "NIECHELLE@", TRAINERTYPE_NORMAL
+		db 3
+		dw CAMOUFLAKE
+		db 4
+		dw CAMOUFLAKE
 	end_party
 	
 	next_party ; LASS (20)
-	db "YURI@", TRAINERTYPE_NORMAL
-	db 2
-	dw CAMOUFLAKE
-	db 3
-	dw MARILL
-	db 4
-	dw SWINUB
+		db "YURI@", TRAINERTYPE_NORMAL
+		db 2
+		dw CAMOUFLAKE
+		db 3
+		dw MARILL
+		db 4
+		dw SWINUB
 	end_party
 	
 	next_party ; LASS (20)
-	db "HELEN@", TRAINERTYPE_NORMAL
-	db 14
-	dw COINPUR
-	db 14
-	dw SENTRET
-	db 15
-	dw FURRET
+		db "HELEN@", TRAINERTYPE_NORMAL
+		db 14
+		dw COINPUR
+		db 14
+		dw SENTRET
+		db 15
+		dw FURRET
 	end_party
 	
 	next_party ; LASS (21)
-	db "JUNE@", TRAINERTYPE_NORMAL
-	db 9
-	dw IGGLYBUFF
-	db 11
-	dw SENTRET
-	db 11
-	dw MOLAMBINO
+		db "JUNE@", TRAINERTYPE_NORMAL
+		db 9
+		dw IGGLYBUFF
+		db 11
+		dw SENTRET
+		db 11
+		dw MOLAMBINO
 	end_party
 	
 	next_party ; LASS (21)
-	db "ANNIE@", TRAINERTYPE_NORMAL
-	db 9
-	dw YANMA
-	db 12
-	dw CLEFFA
-	db 14
-	dw ZUBAT
+		db "ANNIE@", TRAINERTYPE_NORMAL
+		db 9
+		dw YANMA
+		db 12
+		dw CLEFFA
+		db 14
+		dw ZUBAT
 	end_party
 	
+	next_party ; LASS (23)
+		string "TINA"
+		db     TRAINERTYPE_NORMAL
+		dbw    10, BUTTERFREE
+	end_party
+
 	end_party_list
 
 JanineGroup:

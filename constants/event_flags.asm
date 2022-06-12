@@ -316,8 +316,10 @@
 ; sprout tower 1f
 	const EVENT_BEAT_FLEDGLING_TIMOTHY
 
-	const EVENT_15e
-	const EVENT_15f
+; r32 north
+	const EVENT_BEAT_LASS_TINA
+	const EVENT_TALKED_TO_LASS_TINA ; found tim at sprout tower
+
 	const EVENT_160
 	const EVENT_161
 	const EVENT_162
