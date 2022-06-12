@@ -1826,6 +1826,15 @@ BeautyGroup:
 	dw CORSOLA
 	end_party
 
+	next_party
+		string "PEONY"
+		db     TRAINERTYPE_NORMAL
+		
+		dbw    17, MOIBELLE
+		;dbw    17, KOIJACK
+		dbw    18, SMOOCHUM
+	end_party
+
 	end_party_list
 
 PokemaniacGroup:
@@ -2378,116 +2387,68 @@ BugCatcherGroup:
 	end_party
 
 	next_party ; BUG_CATCHER (10)
-	db "WADE@", TRAINERTYPE_NORMAL
-	db 9
-	dw METAPOD
-	db 9
-	dw METAPOD
-	db 10
-	dw KAKUNA
-	db 9
-	dw METAPOD
-	end_party
-
-	next_party ; BUG_CATCHER (11)
-	db "WADE@", TRAINERTYPE_NORMAL
-	db 14
-	dw BUTTERFREE
-	db 14
-	dw BUTTERFREE
-	db 15
-	dw BEEDRILL
-	db 14
-	dw BUTTERFREE
-	end_party
-
-	next_party ; BUG_CATCHER (12)
 	db "DOUG@", TRAINERTYPE_NORMAL
 	db 34
 	dw ARIADOS
 	end_party
 
-	next_party ; BUG_CATCHER (13)
+	next_party ; BUG_CATCHER (11)
 	db "ARNIE@", TRAINERTYPE_NORMAL
 	db 19
 	dw VENONAT
 	end_party
 
-	next_party ; BUG_CATCHER (14)
+	next_party ; BUG_CATCHER (12)
 	db "ARNIE@", TRAINERTYPE_MOVES
 	db 28
 	dw VENOMOTH
 	dw DISABLE, SUPERSONIC, CONFUSION, LEECH_LIFE
 	end_party
 
-	next_party ; BUG_CATCHER (15)
-	db "WADE@", TRAINERTYPE_MOVES
-	db 24
-	dw BUTTERFREE
-	dw CONFUSION, POISONPOWDER, SUPERSONIC, WHIRLWIND
-	db 24
-	dw BUTTERFREE
-	dw CONFUSION, STUN_SPORE, SUPERSONIC, WHIRLWIND
-	db 25
-	dw BEEDRILL
-	dw FURY_ATTACK, FOCUS_ENERGY, TWINEEDLE, RAGE
-	db 24
-	dw BUTTERFREE
-	dw CONFUSION, SLEEP_POWDER, SUPERSONIC, WHIRLWIND
-	end_party
-	
-	next_party ; BUG_CATCHER (20)
-	db "LENNY@", TRAINERTYPE_NORMAL
-	db 2
-	dw CATERPIE
-	db 2
-	dw WEEDLE
-	end_party
-	
-	next_party ; BUG_CATCHER (20)
-	db "TIMMY@", TRAINERTYPE_NORMAL
-	db 4
-	dw LEDYBA
-	db 4
-	dw SPINARAK
-	end_party
-
-	next_party ; BUG_CATCHER (16)
-	db "WADE@", TRAINERTYPE_MOVES
-	db 30
-	dw BUTTERFREE
-	dw CONFUSION, POISONPOWDER, SUPERSONIC, GUST
-	db 30
-	dw BUTTERFREE
-	dw CONFUSION, STUN_SPORE, SUPERSONIC, GUST
-	db 32
-	dw BEEDRILL
-	dw FURY_ATTACK, PURSUIT, TWINEEDLE, DOUBLE_TEAM
-	db 34
-	dw BUTTERFREE
-	dw PSYBEAM, SLEEP_POWDER, GUST, WHIRLWIND
-	end_party
-
-	next_party ; BUG_CATCHER (17)
+	next_party ; BUG_CATCHER (13)
 	db "ARNIE@", TRAINERTYPE_MOVES
 	db 36
 	dw VENOMOTH
 	dw GUST, SUPERSONIC, PSYBEAM, LEECH_LIFE
 	end_party
 
-	next_party ; BUG_CATCHER (18)
+	next_party ; BUG_CATCHER (14)
 	db "ARNIE@", TRAINERTYPE_MOVES
 	db 40
 	dw VENOMOTH
 	dw GUST, SUPERSONIC, PSYCHIC_M, TOXIC
 	end_party
 
-	next_party ; BUG_CATCHER (19)
+	next_party ; BUG_CATCHER (15)
 	db "WAYNE@", TRAINERTYPE_NORMAL
 	db 8
 	dw LEDYBA
 	db 10
 	dw PARAS
+	end_party
+
+	next_party ; BUG_CATCHER (16)
+		string "LENNY"
+		db     TRAINERTYPE_NORMAL
+		dbw    2, CATERPIE
+		dbw    2, WEEDLE
+	end_party
+
+	next_party ; BUG_CATCHER (17)
+		string "TIMOTHY"
+		db     TRAINERTYPE_NORMAL
+		dbw    3, LEDYBA
+		dbw    3, SPINARAK
+	end_party
+
+	next_party ; BUG_CATCHER (18)
+		string "HIKARU"
+		db     TRAINERTYPE_NORMAL
+		dbw     9, METAPOD
+		dbw    18, BUTTERFREE
+		dbw     9, KAKUNA
+		dbw    18, BEEDRILL
+		dbw    19, SCYTHER
 	end_party
 
 	end_party_list
@@ -2742,6 +2703,21 @@ FisherGroup:
 		db     TRAINERTYPE_NORMAL
 		dbw    13, REMORAID
 	end_party
+
+	next_party ; FISHER (28)
+		string "GEORGE"
+		db     TRAINERTYPE_NORMAL
+		dbw    20, GYARADOS
+	end_party
+
+	next_party ; FISHER (29)
+		string "KOI"
+		db     TRAINERTYPE_NORMAL
+		dbw    15, MAGIKARP
+		dbw    15, MAGIKARP
+		dbw    15, MAGIKARP
+	end_party
+
 
 	end_party_list
 
@@ -5328,6 +5304,14 @@ FledglingGroup:
 		dbw    9, METAPOD
 		dbw    9, KAKUNA
 		dbw    9, DODAERIE
+	end_party
+
+	next_party ; FLEDGLING (4)
+		string "WINSTON"
+		db     TRAINERTYPE_NORMAL
+		dbw    16, MAGBY
+		dbw    18, PSYDUCK
+		dbw    18, MURKROW
 	end_party
 	
 	end_party_list

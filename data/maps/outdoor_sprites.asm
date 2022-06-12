@@ -208,18 +208,22 @@ EcruteakGroupSprites:
 AzaleaGroupSprites:
 	def_walk_sprite
 		walk_sprite SPRITE_KURT
-		walk_sprite SPRITE_YOUNGSTER
-		walk_sprite SPRITE_OFFICER
-		walk_sprite SPRITE_AZALEA_ROCKET
-		walk_sprite SPRITE_ROCKET_GIRL
 		walk_sprite SPRITE_BUGSY
 		walk_sprite SPRITE_KAREN
-		walk_sprite SPRITE_LASS
+		walk_sprite SPRITE_AZALEA_ROCKET
+		walk_sprite SPRITE_ROCKET_GIRL
 		walk_sprite SPRITE_SILVER
+		walk_sprite SPRITE_BUG_CATCHER
+		walk_sprite SPRITE_COOLTRAINER_F
 	
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
+		static_sprite SPRITE_LASS
+		static_sprite SPRITE_YOUNGSTER
+		static_sprite SPRITE_OFFICER
+		static_sprite SPRITE_FISHER
+		static_sprite SPRITE_FLEDGLING
 
 	end_outdoor_sprites
 

@@ -255,6 +255,7 @@ KRIS EQU __enum__
 	const THERESA
 	const VALERIE
 	const OLIVIA
+	const PEONY
 
 	trainerclass POKEMANIAC ; 1e
 	const LARRY
@@ -345,6 +346,7 @@ KRIS EQU __enum__
 	const WAYNE
 	const LENNY
 	const BC_TIMOTHY
+	const HIKARU
 
 	trainerclass FISHER ; 25
 	const JUSTIN
@@ -374,6 +376,9 @@ KRIS EQU __enum__
 	const TULLY4
 	const FISHER_BILLY
 	const MANNY
+	const FISHER_GEORGE
+	const KOI
+
 
 	trainerclass SWIMMERM ; 26
 	const HAROLD
@@ -732,6 +737,7 @@ KRIS EQU __enum__
 	const BARRY_T
 	const TERRY
 	const FLEDGLING_TIMOTHY
+	const WINSTON
 		
 	trainerclass BALLSMITH
 	const KURT
