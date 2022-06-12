@@ -172,6 +172,8 @@ Route33_EncounterKaren:
 	disappear ROUTE33_KAREN
 
 ; kurt thanks player
+	special FadeOutMusic
+	pause 15
 	playmapmusic
 	applymovement ROUTE33_KURT, .KurtToPlayer
 
