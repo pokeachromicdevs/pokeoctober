@@ -587,6 +587,14 @@ Route33_EncounterRival:
 	turn_head DOWN
 	step_end
 
+Route33BugCatcherScript:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "Shh! I'm looking"
+	line "for TONBOSS here!"
+	done
+
 Route33_MapEvents:
 	db 0, 0 ; filler
 
@@ -612,5 +620,5 @@ Route33_MapEvents:
 	object_event 42, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
 	object_event 39,  8, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_ROUTE33_BUGSY_APPEARS
 ; bloooooooooocking
-	object_event 37,  8, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_BUGSY
+	object_event 37,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, Route33BugCatcherScript, EVENT_BEAT_BUGSY
 	object_event 61, 17, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_RIVAL
