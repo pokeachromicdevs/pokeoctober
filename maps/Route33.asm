@@ -215,6 +215,10 @@ Route33_EncounterKaren:
 	applymovement ROUTE33_BUGSY, .BugsyGoingHome
 	disappear ROUTE33_BUGSY
 
+; rockets go away except for one
+	disappear ROUTE33_ROCKET_1
+	disappear ROUTE33_ROCKET_2
+
 	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
 	moveobject FOLLOWER, 43, 11
 	showfollower
