@@ -5,17 +5,28 @@
 	const ROUTE33_KAREN
 	const ROUTE33_KURT
 	const ROUTE33_BUGSY
+	const ROUTE33_BLOCKER
+	const ROUTE33_RIVAL
 
 Route33_MapScripts:
-	db 2 ; scene scripts
+	db 3 ; scene scripts
 	scene_script .EmptyScene ; SCENE_ROUTE33_NOTHING
 	scene_script .EmptyScene ; SCENE_ROUTE33_BATTLED_KAREN
+	scene_script .EmptyScene ; SCENE_ROUTE33_BATTLED_RIVAL
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .LoadCallback
+	callback MAPCALLBACK_SPRITES, .HideRival
 
 .LoadCallback:
 	setevent EVENT_ROUTE33_BUGSY_APPEARS
+	return
+
+.HideRival:
+	checkscene
+	iftrue .done ; if not SCENE_ROUTE33_NOTHING
+	disappear ROUTE33_RIVAL
+.done
 	return
 
 .EmptyScene:
@@ -438,6 +449,144 @@ Route33_Sign:
 	para "Thru MT. HIVE"
 	done
 
+Route33_EncounterRival:
+; rival enters the chat
+	moveobject ROUTE33_RIVAL, 46, 8
+	appear ROUTE33_RIVAL
+	turnobject PLAYER, UP
+	turnobject FOLLOWER, UP
+	applymovement ROUTE33_RIVAL, .RivalEnters
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	showemote EMOTE_SHOCK, ROUTE33_RIVAL, 15
+	opentext
+	writetext .RivalIntroText
+	waitbutton
+	closetext
+; battle
+	winlosstext .WinAgainstRivalText, 0
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .CyndaTeam
+	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	iftrue .TotoTeam
+.ChikoTeam:
+	loadtrainer RIVAL1, RIVAL1_3_CHIKORITA
+	sjump .GotTeam
+.CyndaTeam:
+	loadtrainer RIVAL1, RIVAL1_3_CYNDAQUIL
+	sjump .GotTeam
+.TotoTeam:
+	loadtrainer RIVAL1, RIVAL1_3_TOTODILE
+	; sjump .GotTeam
+.GotTeam:
+	startbattle
+; after battle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	playmusic MUSIC_RIVAL_AFTER
+	setevent EVENT_BEAT_ROUTE33_RIVAL
+	opentext
+	writetext .RivalAfterText
+	waitbutton
+	closetext
+	setscene SCENE_ROUTE33_BATTLED_RIVAL
+; rival goes away
+	applymovement PLAYER, .PlayerMovesOutOfWay
+	applymovement ROUTE33_RIVAL, .RivalMovesAway
+	disappear ROUTE33_RIVAL
+	special FadeOutMusic
+	pause 15
+	playmapmusic
+	end
+
+.PlayerMovesOutOfWay:
+	step DOWN
+	step LEFT
+	turn_head RIGHT
+	step_end
+
+.RivalMovesAway:
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+
+.RivalIntroText:
+	text "Hey! You're just"
+	line "getting ready to"
+	para "challenge the GYM,"
+	line "<PLAY_G>?"
+
+	para "I cleared through"
+	line "that place a"
+	cont "little while ago!"
+
+	para "I even reached the"
+	line "next town over in"
+	cont "no time!"
+
+	para "Only reason I came"
+	line "back here was"
+	cont "because<...>"
+	
+	para "I, uh, left my"
+	line "#DEX in the"
+	cont "#MON CENTER."
+
+	para "Whatever!"
+
+	para "All that matters"
+	line "is that you're here"
+	para "now, and we're"
+	line "going to have"
+	cont "another rematch!"
+
+	para "Let's go!"
+	done
+
+.WinAgainstRivalText:
+	text "Come on!"
+	para "That's twice now!"
+	done
+
+.RivalAfterText:
+	text "Ah well, a loss is"
+	line "a loss."
+
+	para "Huh? What? What"
+	line "happened to my"
+	cont "SENTRET?"
+
+	para "I put it in the"
+	line "PC, duh!"
+
+	para "Anyways, I'm going"
+	line "to steamroll"
+	para "through the next"
+	line "GYM, and then I'm"
+	para "going to train so"
+	line "hard that I will"
+	cont "finally beat you!"
+
+	para "See ya,"
+	line "<PLAY_G>!"
+	done
+
+
+.RivalEnters:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head DOWN
+	step_end
+
 Route33_MapEvents:
 	db 0, 0 ; filler
 
@@ -446,8 +595,9 @@ Route33_MapEvents:
 	warp_event 57,  7, ROUTE_33_EAST_GATE, 2
 	warp_event  0,  7, ROUTE_33_WEST_GATE, 1
 
-	db 1 ; coord events
+	db 2 ; coord events
 	coord_event 44, 10, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
+	coord_event 51, 10, SCENE_ROUTE33_BATTLED_KAREN, Route33_EncounterRival
 
 	db 1 ; bg events
 	bg_event 54,  6, BGEVENT_READ, Route33_Sign
@@ -463,4 +613,4 @@ Route33_MapEvents:
 	object_event 39,  8, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_ROUTE33_BUGSY_APPEARS
 ; bloooooooooocking
 	object_event 37,  8, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_BUGSY
-	object_event 36,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_BUGSY
+	object_event 61, 17, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_RIVAL

@@ -78,6 +78,7 @@ SCENE_FINISHED EQU 1
 	const_def
 	const SCENE_ROUTE33_NOTHING ; 0
 	const SCENE_ROUTE33_BATTLED_KAREN ; 1
+	const SCENE_ROUTE33_BATTLED_RIVAL ; 2
 
 ; wRoute35NationalParkGateSceneID
 	const_def
