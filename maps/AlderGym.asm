@@ -26,6 +26,8 @@ AlderGymBugsyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY
 	opentext
+	writetext BugsyText_AboutToGiveBadgeSpeech
+	waitbutton
 	writetext Text_ReceivedHiveBadge
 	playsound SFX_GET_BADGE
 	waitsfx
@@ -39,7 +41,7 @@ AlderGymBugsyScript:
 	setevent EVENT_BEAT_BUG_CATCHER_JOSH
 	writetext BugsyText_HiveBadgeSpeech
 	buttonsound
-	verbosegiveitem TM_FURY_CUTTER
+	verbosegivetmhm FURY_CUTTER_TMNUM
 	iffalse .NoRoomForFuryCutter
 	setevent EVENT_GOT_TM49_FURY_CUTTER
 	writetext BugsyText_FuryCutterSpeech
@@ -135,33 +137,36 @@ AlderGymStatue:
 	jumpstd gymstatue2
 
 BugsyText_INeverLose:
-	text "I'm BUGSY!"
-	line "I never lose when"
-
-	para "it comes to bug"
-	line "#MON."
-
-	para "My research is"
-	line "going to make me"
-
-	para "the authority on"
-	line "bug #MON!"
-
-	para "Let me demonstrate"
-	line "what I've learned"
-	cont "from my studies."
+	text "Ah, there you are."
+	para "While I've only"
+	line "been a GYM LEADER"
+	para "for only about a"
+	line "year now, I've"
+	para "been studying and"
+	line "training bug-types"
+	para "for most of my"
+	line "life."
+	para "My family may not"
+	line "have approved of"
+	para "my studies, but"
+	line "they have gotten"
+	cont "me where I am now."
+	para "Now then, let me"
+	line "show you what I've"
+	cont "learned."
 	done
 
 BugsyText_ResearchIncomplete:
-	text "Whoa, amazing!"
-	line "You're an expert"
-	cont "on #MON!"
+	text "As expected, I"
+	line "still have much to"
+	cont "learn."
+	para "Thank you."
+	done
 
-	para "My research isn't"
-	line "complete yet."
-
-	para "OK, you win. Take"
-	line "this BADGE."
+BugsyText_AboutToGiveBadgeSpeech:
+	text "Victory is yours,"
+	line "and so is the"
+	cont "HIVEBADGE."
 	done
 
 Text_ReceivedHiveBadge:
@@ -170,40 +175,31 @@ Text_ReceivedHiveBadge:
 	done
 
 BugsyText_HiveBadgeSpeech:
-	text "Do you know the"
-	line "benefits of HIVE-"
-	cont "BADGE?"
-
-	para "If you have it,"
-	line "#MON up to L30"
-
-	para "will obey you,"
-	line "even traded ones."
-
-	para "#MON that know"
-	line "CUT will be able"
-
-	para "to use it outside"
-	line "of battle too."
-
-	para "Here, I also want"
-	line "you to have this."
+	text "The HIVEBADGE,"
+	line "named after the"
+	para "nearby MT. HIVE,"
+	line "blesses your"
+	para "POKEMON with"
+	line "boosted speed."
+	para "It also grants you"
+	line "the power to use"
+	para "STRONG ARM outside"
+	line "of battle."
+	para "And before you go,"
+	line "please take this."
 	done
 
 BugsyText_FuryCutterSpeech:
-	text "TM49 contains"
+	text "That is TM49,"
 	line "FURY CUTTER."
-
-	para "If you don't miss,"
-	line "it gets stronger"
-	cont "every turn."
-
-	para "The longer your"
-	line "battle goes, the"
-	cont "better it gets."
-
-	para "Isn't that great?"
-	line "I discovered it!"
+	para "Consecutive hits"
+	line "with FURY CUTTER"
+	para "increases its"
+	line "power."
+	para "Just be sure not"
+	line "to miss, or else"
+	para "its power will"
+	line "revert to normal."
 	done
 
 BugsyText_BugMonsAreDeep:
