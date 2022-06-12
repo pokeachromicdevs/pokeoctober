@@ -224,6 +224,7 @@ AzaleaGroupSprites:
 		static_sprite SPRITE_OFFICER
 		static_sprite SPRITE_FISHER
 		static_sprite SPRITE_FLEDGLING
+		static_sprite SPRITE_GYM_GUY
 
 	end_outdoor_sprites
 

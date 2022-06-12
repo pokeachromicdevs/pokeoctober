@@ -45,6 +45,23 @@ AlderTown_GymLocked:
 	step DOWN
 	step_end
 
+AlderTownOutsideGymGuyScript:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "Sorry, CHAMP in"
+	line "the making!"
+	para "BUGSY's not here"
+	line "at the moment."
+	para "He's over at MT."
+	line "HIVE, catching"
+	para "some bugs as"
+	line "usual."
+	para "You can go look"
+	line "for him yourself,"
+	cont "though!"
+	done
+
 AlderTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -61,4 +78,5 @@ AlderTown_MapEvents:
 	bg_event 14,  4, BGEVENT_READ, AlderTownHappinessRaterSign
 	bg_event 10,  8, BGEVENT_READ, AlderTownSign
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownOutsideGymGuyScript, EVENT_BEAT_ROUTE33_KAREN
