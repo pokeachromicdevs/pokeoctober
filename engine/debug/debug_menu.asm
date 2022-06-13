@@ -110,12 +110,13 @@ DebugMenu::
 	string "FIX EVENTS"
 	string "FOLLOW"
 	string "CREDITS"
+	string "TOGGLE RUN"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 17
-	db 14, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17
+	db 18
+	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17
 	db -1
 
 .Jumptable
@@ -137,6 +138,7 @@ DebugMenu::
 	dw Debug_FixEvents
 	dw Debug_ToggleFollow
 	dw Debug_Credits
+	dw Debug_ToggleRun
 
 Debug_Credits:
 	ld a, BANK(.RunCredits)
@@ -145,6 +147,25 @@ Debug_Credits:
 .RunCredits
 	credits
 	end
+
+Debug_ToggleRun:
+	ld hl, .ToggleRunText
+	call PrintText
+	call Debug_ToggleFollow.yesno
+	jr nz, .disable
+.enable
+	ld a, 1
+	jr .got_option
+.disable
+	xor a
+.got_option
+	ld [wDebugControlsToggle], a
+	ret
+
+.ToggleRunText:
+	text "Enable debug"
+	line "controls?"
+	done
 
 Debug_ToggleFollow:
 	ld a, [wPartyCount]
@@ -300,10 +321,12 @@ DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
 	para "But for reference,"
 	line "it's B plus START."
 
-	para "While you're in the"
-	line "overworld, hold B"
-	cont "to run."
+	para "When debug controls"
+	line "are enabled, hold B"
+	para "to run while in the"
+	line "overworld."
 	prompt
+
 .SoundTest:
 	text "1st line is MUSIC,"
 	line "2nd line is SFX."

@@ -2526,7 +2526,12 @@ wVariableSprites:: ds $100 - SPRITE_VARS ; d82e
 
 wEnteredMapFromContinue:: db ; d83e
 
+if DEF(_DEBUG)
+wDebugControlsToggle:: db
+	ds 1
+else
 	ds 2
+endc
 
 wTimeOfDayPal:: db ; d841
 	ds 4

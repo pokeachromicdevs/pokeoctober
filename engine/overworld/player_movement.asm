@@ -33,6 +33,9 @@ DoPlayerMovement::
 
 .TranslateIntoMovement:
 IF DEF(_DEBUG)
+	ld a, [wDebugControlsToggle]
+	and a
+	jr z, .regular_move
 	ld a, [wCurInput]
 	and B_BUTTON
 	jr z, .regular_move

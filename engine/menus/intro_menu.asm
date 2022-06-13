@@ -666,6 +666,10 @@ OakSpeech:
 	call PlayMusic
 
 IF DEF(_DEBUG)
+; enable debug controls by default
+	ld a, 1
+	ld [wDebugControlsToggle], a
+
 	call DelayFrame
 	call GetJoypad
 	ldh a, [hJoyDown]
