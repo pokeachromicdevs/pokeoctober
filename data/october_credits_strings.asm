@@ -145,7 +145,7 @@ OctoberCredits_StringTable:
 .AssetsFrom:    db "     ASSETS FROM    ";;
 .CryPorts:      db "      CRY PORTS     ";;
 .SpecialThanks: db "   SPECIAL THANKS   ";;
-.Gabe:          db "     GABE STANEK    ";;
+.Gabe:          db "       GS33022      ";;
 .TMShadow:      db "  TM 30 SHADOW BALL ";;
 .Zumi:          db "        ZUMI        ";;
 .Cybershell:    db "    CYBERSHELL12    ";;
@@ -169,12 +169,12 @@ OctoberCredits_StringTable:
 .Poket:         db "        POKET       ";;
 .CoralDev:      db "       CORALDEV     ";;
 .Reforged:      db "   G/S '97 REFORGED ";;
-.Pokebrass:     db "  POKéBRASS PROJECT ";;
+.Pokebrass:     db "    POKéMON BRASS   ";;
 .TCRF:          db "        TCRF        ";; no beytah, bad daytah
 .FourCh:        db "        /VP/        ";;
 .Pret:          db "        PRET        ";;
 .AX6:           db "        AX6         ";;
-.PokeOrange:    db "   POKéMON BORNANA  ";;
+.PokeOrange:    db "   POKéMON ORANGE   ";;
 .CrystalLeaf:   db " POKéMON CRYSTALLEAF";;
 .ThanksFor1:    db " THANKS FOR PLAYING!";;
 .ThanksFor2:    db "   STAY TUNED FOR   ";;
