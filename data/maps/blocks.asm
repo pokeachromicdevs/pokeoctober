@@ -1008,3 +1008,6 @@ ZenGarden_Blocks:
 
 VioletHerbShop_Blocks:
 	INCBIN "maps/VioletHerbShop.blk"
+
+VioletHerbShopBasement_Blocks:
+	INCBIN "maps/VioletHerbShopBasement.blk"

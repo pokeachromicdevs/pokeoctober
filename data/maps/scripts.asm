@@ -513,6 +513,7 @@ INCLUDE "maps/DreadWoods.asm"
 INCLUDE "maps/ZenGarden.asm"
 INCLUDE "maps/ZenGardenGate.asm"
 INCLUDE "maps/VioletHerbShop.asm"
+INCLUDE "maps/VioletHerbShopBasement.asm"
 INCLUDE "maps/Route33EastGate.asm"
 INCLUDE "maps/Route33WestGate.asm"
 

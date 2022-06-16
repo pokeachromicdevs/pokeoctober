@@ -8,9 +8,10 @@ VioletHerbShop_MapScripts:
 VioletHerbShop_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 3 ; warp events
 	warp_event  9,  9, VIOLET_CITY, 8
 	warp_event 10,  9, VIOLET_CITY, 8
+	warp_event  5,  7, VIOLET_HERB_SHOP_BASEMENT, 1
 
 	db 0 ; coord events
 

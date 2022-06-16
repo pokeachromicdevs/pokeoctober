@@ -734,4 +734,5 @@ ENDM
 	map_attributes ZenGardenGate, ZEN_GARDEN_GATE, $00, 0
 	map_attributes Route33EastGate, ROUTE_33_EAST_GATE, $00, 0
 	map_attributes Route33WestGate, ROUTE_33_WEST_GATE, $00, 0
+	map_attributes VioletHerbShopBasement, VIOLET_HERB_SHOP_BASEMENT, $00, 0
 

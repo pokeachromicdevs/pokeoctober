@@ -62,4 +62,5 @@
 	tilecoll RADIO, WALL, FLOOR, FLOOR ; 3d
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 3e
 	tilecoll COUNTER, FLOOR, COUNTER, FLOOR ; 3f
-	tilecoll WALL, WALL, WALL, WALL ; 40
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 40
+	tilecoll FLOOR, FLOOR, FLOOR, LADDER ; 41
