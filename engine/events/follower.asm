@@ -8,6 +8,9 @@ FollowerScript::
 ; make sure follower is facing player
 	faceplayer
 
+; play cry
+	callasm .PlayCry
+
 ; poisoned script takes priority
 	callasm .IsFollowerPoisoned
 	iftrue FollowerPoisonedScript
@@ -20,6 +23,13 @@ FollowerScript::
 
 ; ...then fallback to generic script
 	sjump FollowerGenericScript
+
+.PlayCry:
+	push hl
+		call GetFollowingPokemon
+		call PlayMonCry
+	pop hl
+	ret
 
 .GetFollowerNickname:
 	ld a, [wWhichPartyFollower]
@@ -135,6 +145,10 @@ FollowerCyndaquilScriptChoice2:
 	done
 
 FollowerCyndaquilScriptChoiceBerry:
+; 1/10 == 1/60 chance of cyndaquil giving you an item
+	random 10
+	ifless 9, FollowerCyndaquilScript
+
 	opentext
 	writetext .Text
 	yesorno
