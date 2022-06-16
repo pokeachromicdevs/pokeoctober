@@ -13,6 +13,7 @@ DRUM_POKEMART_09	EQU	3 ; noise
 DRUM_POKEMART_0a	EQU	4 ;
 DRUM_POKEMART_0b	EQU	7 ;
 DRUM_POKEMART_0d	EQU	8 ; hat
+DRUM_POKEMART_0e	EQU	5 ; tri
 DRUM_POKEMART_0f	EQU	4 ; 
 
 ; Drumset to use, replace with the proper value
@@ -94,7 +95,9 @@ Music_Pokemart_Ch1:
 	note C#, 8
 	octave 2
 	note B_, 8
-	note A#, 4
+	note A#, 1 ;
+	note B_, 3 ;
+	;note B_, 4
 	octave 1
 	note B_, 4
 	octave 2
@@ -120,7 +123,9 @@ Music_Pokemart_Ch1:
 	note D#, 8
 	octave 2
 	note B_, 8
-	note A#, 4
+	note A#, 1 ;
+	note B_, 3 ;
+	;note B_, 4
 	octave 1
 	note B_, 4
 	octave 2
@@ -1117,8 +1122,14 @@ Music_Pokemart_Ch4:
 .pattern3
 	stereo_panning FALSE, TRUE
 	drum_note DRUM_POKEMART_0d, 8
+	;drum_note DRUM_POKEMART_0d, 4
+	;drum_note DRUM_POKEMART_0e, 4
 	drum_note DRUM_POKEMART_0d, 8
+	;drum_note DRUM_POKEMART_0d, 4
+	;drum_note DRUM_POKEMART_0e, 4
 	drum_note DRUM_POKEMART_0d, 4
+	;drum_note DRUM_POKEMART_0d, 4
+	;drum_note DRUM_POKEMART_0e, 4
 	drum_note DRUM_POKEMART_0d, 8
 	drum_note DRUM_POKEMART_0d, 12
 	drum_note DRUM_POKEMART_0b, 12
