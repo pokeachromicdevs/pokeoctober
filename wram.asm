@@ -2822,10 +2822,16 @@ wLuckyNumberDayBuffer:: dw ; dc2d
 wSpecialPhoneCallID:: db ; dc31
 	ds 3
 wBugContestStartTime:: ds 4 ; day, hour, min, sec ; dc35
-wUnusedTwoDayTimerOn:: db ; dc39
-wUnusedTwoDayTimer:: db
-wUnusedTwoDayTimerStartDate:: db
-	ds 4
+
+wSweetHoneyEnabled:: db
+wSweetHoneyTimer:: db ; counts days since start date
+wSweetHoneyStartDate:: db
+
+wSweetHoneyMapGroup:: db
+wSweetHoneyMapNumber:: db
+wSweetHoneyX:: db
+wSweetHoneyY:: db
+
 wMobileOrCable_LastSelection:: db
 wdc41:: ds 1
 wdc42:: ds 8

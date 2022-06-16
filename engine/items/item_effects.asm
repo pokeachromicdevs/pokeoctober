@@ -37,7 +37,7 @@ ItemEffects:
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
-	dw NoEffect            ; HONEY_POT
+	dw UseHoneyEffect      ; HONEY_POT
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -2485,6 +2485,10 @@ SuperRodEffect:
 
 UseRod:
 	farcall FishFunction
+	ret
+
+UseHoneyEffect:
+	farcall _UseHoney
 	ret
 
 ItemfinderEffect:

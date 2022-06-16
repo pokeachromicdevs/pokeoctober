@@ -5,7 +5,7 @@ _InitializeStartDay:
 ClearDailyTimers:
 	xor a
 	ld [wLuckyNumberDayBuffer], a
-	ld [wUnusedTwoDayTimer], a
+	ld [wSweetHoneyTimer], a
 	ld [wDailyResetTimer], a
 	ret
 
@@ -189,20 +189,20 @@ CheckPokerusTick::
 	xor a
 	ret
 
-SetUnusedTwoDayTimer:
+SetSweetHoneyTimer:
 	ld a, 2
-	ld hl, wUnusedTwoDayTimer
+	ld hl, wSweetHoneyTimer
 	ld [hl], a
 	call UpdateTime
-	ld hl, wUnusedTwoDayTimerStartDate
+	ld hl, wSweetHoneyStartDate
 	call CopyDayToHL
 	ret
 
-CheckUnusedTwoDayTimer:
-	ld hl, wUnusedTwoDayTimerStartDate
+_CheckSweetHoneyTimer:
+	ld hl, wSweetHoneyStartDate
 	call CalcDaysSince
 	call GetDaysSince
-	ld hl, wUnusedTwoDayTimer
+	ld hl, wSweetHoneyTimer
 	call UpdateTimeRemaining
 	ret
 

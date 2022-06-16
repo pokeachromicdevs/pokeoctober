@@ -226,6 +226,9 @@ MOM_ACTIVE_F            EQU 7
 
 MOM_SAVING_MONEY_MASK EQU (1 << MOM_SAVING_SOME_MONEY_F) | (1 << MOM_SAVING_HALF_MONEY_F) | (1 << MOM_SAVING_ALL_MONEY_F)
 
+; wSweetHoneyEnabled
+SWEET_HONEY_F EQU 0
+
 ; wJohtoBadges:: ; d857
 	const_def
 	const ZEPHYRBADGE

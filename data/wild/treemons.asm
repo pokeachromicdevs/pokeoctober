@@ -127,3 +127,7 @@ TreeMonSet_Rock:
 	dbbw 90, 15, KRABBY
 	dbbw 10, 15, SHUCKLE
 	db -1
+
+TreeMonSet_Heracross:
+	dbbw 100, 10, HERACROSS
+	db -1
