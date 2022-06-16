@@ -12,6 +12,8 @@ Music_AfterTheRivalFight:
 Music_AfterTheRivalFight_Ch1:
 	tempo 184
 	dutycycle 1
+	pitch_offset 2
+	vibrato $12, $14
 	notetype $c, $85
 	note __, 4
 	loopchannel 0, Music_LookRival_Ch1_loop
@@ -19,12 +21,13 @@ Music_AfterTheRivalFight_Ch1:
 Music_AfterTheRivalFight_Ch2:
 	dutycycle 2
 	notetype $c, $b4
+	vibrato $12, $36
+	pitch_offset 1
 	note __, 4
 	loopchannel 0, Music_LookRival_Ch2_loop
 
 Music_AfterTheRivalFight_Ch3:
-	notetype $c, $15
-	intensity $10
+	notetype $c, $25
 	note __, 4
 	loopchannel 0, Music_LookRival_Ch3_loop
 

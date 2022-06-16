@@ -9,9 +9,14 @@ Music_LookRival:
 	musicheader 1, 3, Music_LookRival_Ch3
 	musicheader 1, 4, Music_LookRival_Ch4
 
+LOOK_RIVAL_TRANSPOSEDOWN equ 4
+
 Music_LookRival_Ch1:
 	tempo 184
+	transpose 1, 12-LOOK_RIVAL_TRANSPOSEDOWN
 	dutycycle 1
+	pitch_offset 2
+	vibrato $12, $14
 	notetype $c, $85
 	octave 2
 	note A#, 1
@@ -22,6 +27,7 @@ Music_LookRival_Ch1:
 	note C_, 2
 	note D#, 9
 Music_LookRival_Ch1_loop:
+	transpose 1, 12-LOOK_RIVAL_TRANSPOSEDOWN
 	octave 3
 	note D#, 6
 	note G_, 1
@@ -188,6 +194,9 @@ Music_LookRival_Ch1_loop:
 Music_LookRival_Ch2:
 	dutycycle 2
 	notetype $c, $b4
+	transpose 1, 12-LOOK_RIVAL_TRANSPOSEDOWN
+	pitch_offset 1
+	vibrato $12, $36
 	octave 4
 	note C_, 1
 	note D#, 1
@@ -200,6 +209,7 @@ Music_LookRival_Ch2:
 	intensity $b7
 	note D#, 9
 Music_LookRival_Ch2_loop:
+	transpose 1, 12-LOOK_RIVAL_TRANSPOSEDOWN
 	note __, 4
 	octave 4
 	intensity $b4
@@ -298,9 +308,9 @@ Music_LookRival_Ch2_loop:
 	loopchannel 0, Music_LookRival_Ch2_loop
 
 Music_LookRival_Ch3:
-	notetype $c, $15
-	intensity $10
+	notetype $c, $25
 	octave 2
+	transpose 1, 12-LOOK_RIVAL_TRANSPOSEDOWN
 	note A#, 1
 	note A#, 1
 	note __, 1
@@ -314,6 +324,7 @@ Music_LookRival_Ch3:
 	note __, 1
 	note A#, 1
 Music_LookRival_Ch3_loop:
+	transpose 1, 12-LOOK_RIVAL_TRANSPOSEDOWN
 	octave 3
 	note D#, 2
 	note __, 1
