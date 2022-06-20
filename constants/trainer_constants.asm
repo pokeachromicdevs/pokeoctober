@@ -530,17 +530,15 @@ KRIS EQU __enum__
 
 	trainerclass BLACKBELT_T ; 32
 	const KENJI1
-	const YOSHI
 	const KENJI2
-	const LAO
-	const NOB
-	const KIYO
-	const LUNG
 	const KENJI3
-	const WAI
-	const GENKI
-	const HITOSHI
 	const LEE
+	const HITOSHI
+	const GENKI
+	const KAORI
+	const JIRO
+	const KIYOSHI
+	const KIYO
 
 	trainerclass EXECUTIVEM ; 33
 	const EXECUTIVEM_1

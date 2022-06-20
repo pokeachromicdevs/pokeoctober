@@ -3932,13 +3932,6 @@ BlackbeltGroup:
 	dw MACHOKE
 	end_party
 
-	next_party ; BLACKBELT_T (2)
-	db "YOSHI@", TRAINERTYPE_MOVES
-	db 27
-	dw HITMONLEE
-	dw DOUBLE_KICK, MEDITATE, JUMP_KICK, FOCUS_ENERGY
-	end_party
-
 	next_party ; BLACKBELT_T (3)
 	db "KENJI@", TRAINERTYPE_MOVES
 	db 33
@@ -3955,73 +3948,12 @@ BlackbeltGroup:
 	dw DOUBLE_TEAM, HI_JUMP_KICK, MUD_SLAP, SWIFT
 	end_party
 
-	next_party ; BLACKBELT_T (4)
-	db "LAO@", TRAINERTYPE_MOVES
-	db 27
-	dw HITMONCHAN
-	dw COMET_PUNCH, THUNDERPUNCH, ICE_PUNCH, FIRE_PUNCH
-	end_party
-
-	next_party ; BLACKBELT_T (5)
-	db "NOB@", TRAINERTYPE_MOVES
-	db 25
-	dw MACHOP
-	dw LEER, FOCUS_ENERGY, KARATE_CHOP, SEISMIC_TOSS
-	db 25
-	dw MACHOKE
-	dw LEER, KARATE_CHOP, SEISMIC_TOSS, ROCK_SLIDE
-	end_party
-
-	next_party ; BLACKBELT_T (6)
-	db "KIYO@", TRAINERTYPE_NORMAL
-	db 34
-	dw HITMONLEE
-	db 34
-	dw HITMONCHAN
-	end_party
-
-	next_party ; BLACKBELT_T (7)
-	db "LUNG@", TRAINERTYPE_NORMAL
-	db 23
-	dw MANKEY
-	db 23
-	dw MANKEY
-	db 25
-	dw PRIMEAPE
-	end_party
-
 	next_party ; BLACKBELT_T (8)
 	db "KENJI@", TRAINERTYPE_NORMAL
 	db 28
 	dw MACHOKE
 	end_party
 
-	next_party ; BLACKBELT_T (9)
-	db "WAI@", TRAINERTYPE_NORMAL
-	db 30
-	dw MACHOKE
-	db 32
-	dw MACHOKE
-	db 34
-	dw MACHOKE
-	end_party
-	
-	next_party ; BLACKBELT_T (9)
-	db "GENKI@", TRAINERTYPE_NORMAL
-	db 9
-	dw MACHOP
-	db 11
-	dw MANKEY
-	end_party
-	
-	next_party ; BLACKBELT_T (9)
-	db "HITOSHI@", TRAINERTYPE_NORMAL
-	db 12
-	dw MACHOP
-	db 15
-	dw TYROGUE
-	end_party
-	
 	next_party ; BLACKBELT_T (9)
 	db "LEE@", TRAINERTYPE_NORMAL
 	db 12
@@ -4032,6 +3964,50 @@ BlackbeltGroup:
 	dw MANKEY 
 	end_party
 
+	next_party ; BLACKBELT_T (9)
+	db "HITOSHI@", TRAINERTYPE_NORMAL
+	db 12
+	dw MACHOP
+	db 15
+	dw TYROGUE
+	end_party
+
+	next_party ; BLACKBELT_T (9)
+	db "GENKI@", TRAINERTYPE_NORMAL
+	db 9
+	dw MACHOP
+	db 11
+	dw MANKEY
+	end_party
+
+	next_party
+		string "KAORI"
+		db     TRAINERTYPE_NORMAL
+		dbw    16, MANKEY
+		dbw    16, MANKEY
+		dbw    17, PHANPY
+	end_party
+
+	next_party
+		string "JIRO"
+		db     TRAINERTYPE_NORMAL
+		dbw    17, MACHOP
+		dbw    17, FARFETCH_D
+	end_party
+
+	next_party
+		string "KIYOSHI"
+		db     TRAINERTYPE_NORMAL
+		dbw    16, MANKEY
+		dbw    18, SNEASEL
+	end_party
+
+	next_party
+		string "KIYO"
+		db     TRAINERTYPE_NORMAL
+		dbw    18, SCYTHER
+		dbw    20, HITMONTOP
+	end_party
 	end_party_list
 
 ExecutiveMGroup:
