@@ -244,10 +244,10 @@ MainMenu_PrintCurrentVersion:
 .CommitString:
 	db "rev."
 	db GIT_COMMIT
-	db "/"
+	db "("
 	db GIT_OFFSET
 IF DEF(_DEBUG)
-	db "-d"
+	db "d)"
 endc
 	db "@"
 
