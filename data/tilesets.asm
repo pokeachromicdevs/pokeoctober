@@ -55,3 +55,4 @@ Tilesets::
 	tileset TilesetCapumonMart
 	tileset TilesetCapumonChampCup
 	tileset TilesetCapumonHouse
+	tileset TilesetBetaTower

@@ -517,3 +517,8 @@ INCLUDE "maps/VioletHerbShopBasement.asm"
 INCLUDE "maps/Route33EastGate.asm"
 INCLUDE "maps/Route33WestGate.asm"
 
+INCLUDE "maps/CherrygrovePagoda1F.asm"
+INCLUDE "maps/CherrygrovePagoda2F.asm"
+INCLUDE "maps/CherrygrovePagoda3F.asm"
+INCLUDE "maps/CherrygrovePagoda4F.asm"
+INCLUDE "maps/CherrygrovePagoda5F.asm"

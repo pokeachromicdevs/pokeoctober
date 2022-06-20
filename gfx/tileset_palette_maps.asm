@@ -117,3 +117,4 @@ TilesetCapumonInnPalMap::       INCLUDE "gfx/tilesets/capumon_inn_palette_map.as
 TilesetCapumonMartPalMap::      INCLUDE "gfx/tilesets/capumon_mart_palette_map.asm"
 TilesetCapumonChampCupPalMap::  INCLUDE "gfx/tilesets/capumon_champ_cup_palette_map.asm"
 TilesetCapumonHousePalMap::  INCLUDE "gfx/tilesets/capumon_house_palette_map.asm"
+TilesetBetaTowerPalMap::  INCLUDE "gfx/tilesets/beta_tower_palette_map.asm"

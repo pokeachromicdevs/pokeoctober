@@ -1011,3 +1011,18 @@ VioletHerbShop_Blocks:
 
 VioletHerbShopBasement_Blocks:
 	INCBIN "maps/VioletHerbShopBasement.blk"
+
+CherrygrovePagoda1F_Blocks:
+	INCBIN "maps/CherrygrovePagoda1F.blk"
+
+CherrygrovePagoda2F_Blocks:
+	INCBIN "maps/CherrygrovePagoda2F.blk"
+
+CherrygrovePagoda3F_Blocks:
+	INCBIN "maps/CherrygrovePagoda3F.blk"
+
+CherrygrovePagoda4F_Blocks:
+	INCBIN "maps/CherrygrovePagoda4F.blk"
+
+CherrygrovePagoda5F_Blocks:
+	INCBIN "maps/CherrygrovePagoda5F.blk"

@@ -736,3 +736,8 @@ ENDM
 	map_attributes Route33WestGate, ROUTE_33_WEST_GATE, $00, 0
 	map_attributes VioletHerbShopBasement, VIOLET_HERB_SHOP_BASEMENT, $00, 0
 
+	map_attributes CherrygrovePagoda1F, CHERRYGROVE_PAGODA_1F, $00, 0
+	map_attributes CherrygrovePagoda2F, CHERRYGROVE_PAGODA_2F, $00, 0
+	map_attributes CherrygrovePagoda3F, CHERRYGROVE_PAGODA_3F, $00, 0
+	map_attributes CherrygrovePagoda4F, CHERRYGROVE_PAGODA_4F, $00, 0
+	map_attributes CherrygrovePagoda5F, CHERRYGROVE_PAGODA_5F, $00, 0

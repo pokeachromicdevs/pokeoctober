@@ -513,6 +513,11 @@ ENDM
 	map_const SILENT_POKECENTER_1F,                         8,  4 ; 14
 	map_const CHERRYGROVE_FISHER_HOUSE,                     4,  4 ;  8
 	map_const CHERRYGROVE_WOODS_NAME_RATER,                 4,  4 ; 10
+	map_const CHERRYGROVE_PAGODA_1F,                        4,  4
+	map_const CHERRYGROVE_PAGODA_2F,                        4,  4
+	map_const CHERRYGROVE_PAGODA_3F,                        4,  4
+	map_const CHERRYGROVE_PAGODA_4F,                        4,  4
+	map_const CHERRYGROVE_PAGODA_5F,                        3,  3
 
 	newgroup                                                      ; 27
 	map_const CITRINE_ISLAND,                              20, 18 ;  1

@@ -274,6 +274,7 @@ TilesetCapumonInnAnim::
 TilesetCapumonMartAnim::
 TilesetCapumonChampCupAnim::
 TilesetCapumonHouseAnim::
+TilesetBetaTowerAnim::
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

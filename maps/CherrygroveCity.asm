@@ -535,7 +535,7 @@ BlackbeltBlockage:
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 10 ; warp events
+	db 11 ; warp events
 	warp_event 23, 21, CHERRYGROVE_MART, 2
 	warp_event 29, 21, CHERRYGROVE_POKECENTER_1F, 1
 	warp_event 23, 15, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
@@ -546,6 +546,7 @@ CherrygroveCity_MapEvents:
 	warp_event 37, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
 	warp_event 25, 27, CHERRYGROVE_FISHER_HOUSE, 1
 	warp_event  7, 11, FIGHTING_DOJO, 1
+	warp_event 35,  7, CHERRYGROVE_PAGODA_1F, 1
 
 	db 0 ; coord events
 

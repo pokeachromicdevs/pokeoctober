@@ -358,11 +358,10 @@ TilesetCapumonChampCupColl:: INCLUDE "data/tilesets/capumon_champ_cup_collision.
 
 SECTION "Tileset Data 9", ROMX
 
-TilesetTrainStationGFX:
-INCBIN "gfx/tilesets/train_station.2bpp.lz"
+TilesetTrainStationGFX: INCBIN "gfx/tilesets/train_station.2bpp.lz"
+TilesetTrainStationMeta: INCBIN "data/tilesets/train_station_metatiles.bin"
+TilesetTrainStationColl: INCLUDE "data/tilesets/train_station_collision.asm"
 
-TilesetTrainStationMeta:
-INCBIN "data/tilesets/train_station_metatiles.bin"
-
-TilesetTrainStationColl:
-INCLUDE "data/tilesets/train_station_collision.asm"
+TilesetBetaTowerGFX: INCBIN "gfx/tilesets/beta_tower.2bpp.lz"
+TilesetBetaTowerMeta: INCBIN "data/tilesets/beta_tower_metatiles.bin"
+TilesetBetaTowerColl: INCLUDE "data/tilesets/beta_tower_collision.asm"
