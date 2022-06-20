@@ -479,7 +479,7 @@ ENDM
 
 	map_const ROUTE_5,                                     10,  9 ;  1
 	map_const SAFFRON_CITY,                                20, 18 ;  2
-	map_const FIGHTING_DOJO,                                5,  6 ;  3
+	map_const FIGHTING_DOJO,                                5,  7 ;  3
 	map_const SAFFRON_GYM,                                 10,  9 ;  4
 	map_const SAFFRON_MART,                                 6,  4 ;  5
 	map_const SAFFRON_POKECENTER_1F,                        8,  4 ;  6

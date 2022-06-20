@@ -1,4 +1,4 @@
-	tilecoll FF, FF, FF, FF ; 00
+	tilecoll WALL, WALL, WALL, WALL ; 00
 	tilecoll UP_WALL, UP_WALL, FLOOR, FLOOR ; 01
 	tilecoll UP_WALL, FLOOR, UP_WALL, FLOOR ; 02
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 03
@@ -62,3 +62,11 @@
 	tilecoll WALL, WALL, WALL, WALL ; 3d
 	tilecoll WALL, WALL, WALL, WALL ; 3e
 	tilecoll WALL, WALL, WALL, WALL ; 3f
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 40
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 41
+	tilecoll WALL, WALL, WALL, FLOOR ; 42
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 43
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 44
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 45
+	tilecoll WALL, WALL, FLOOR, WALL ; 46
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 47

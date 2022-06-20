@@ -134,15 +134,6 @@ INCBIN "data/tilesets/game_corner_metatiles.bin"
 TilesetGameCornerColl:
 INCLUDE "data/tilesets/game_corner_collision.asm"
 
-TilesetTrainStationGFX:
-INCBIN "gfx/tilesets/train_station.2bpp.lz"
-
-TilesetTrainStationMeta:
-INCBIN "data/tilesets/train_station_metatiles.bin"
-
-TilesetTrainStationColl:
-INCLUDE "data/tilesets/train_station_collision.asm"
-
 TilesetForestMeta:
 INCBIN "data/tilesets/forest_metatiles.bin"
 
@@ -364,3 +355,14 @@ TilesetCapumonMartColl:: INCLUDE "data/tilesets/capumon_mart_collision.asm"
 TilesetCapumonChampCupGFX::  INCBIN  "gfx/tilesets/capumon_champ_cup.2bpp.lz"
 TilesetCapumonChampCupMeta:: INCBIN  "data/tilesets/capumon_champ_cup_metatiles.bin"
 TilesetCapumonChampCupColl:: INCLUDE "data/tilesets/capumon_champ_cup_collision.asm"
+
+SECTION "Tileset Data 9", ROMX
+
+TilesetTrainStationGFX:
+INCBIN "gfx/tilesets/train_station.2bpp.lz"
+
+TilesetTrainStationMeta:
+INCBIN "data/tilesets/train_station_metatiles.bin"
+
+TilesetTrainStationColl:
+INCLUDE "data/tilesets/train_station_collision.asm"

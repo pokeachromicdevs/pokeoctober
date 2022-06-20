@@ -98,6 +98,7 @@ ROMX $1d
 ROMX $1e
 	"Map Scripts 9"
 ROMX $1f
+	"Tileset Data 9"
 	"Map Scripts 10"
 ROMX $20
 	"bank20"
