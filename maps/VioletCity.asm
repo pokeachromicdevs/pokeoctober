@@ -128,7 +128,64 @@ VioletCity_SageStopsYou:
 	step LEFT
 	step LEFT
 	step_end
-	
+
+VioletCityHerbSage:
+	jumptextfaceplayer .Text
+.Text:
+	text "I serve as the"
+	line "guardian SAGE for"
+	cont "this building."
+	para "But I'll be honest<...>"
+	line "I can't quite stand"
+	para "the scent of the"
+	line "herbs here."
+	para "They burn my nose<...>"
+	done
+
+VioletCitySchoolSage:
+	jumptextfaceplayer .Text
+.Text:
+	text "I am the SAGE that"
+	line "oversees this"
+	cont "school."
+	para "I've been here for"
+	line "so many years, and"
+	para "even during these"
+	line "later years, I end"
+	para "up learning new"
+	line "things every once"
+	cont "in a while."
+	para "One never truly"
+	line "stops learning."
+	done
+
+VioletCityFishingSage:
+	jumptextfaceplayer .Text
+.Text:
+	text "I am the guardian"
+	line "SAGE for the"
+	cont "FISHER's GUILD."
+	para "Seeing such pas-"
+	line "sion and respect"
+	cont "for water #MON<...>"
+	para "It gives me hope"
+	line "for our future."
+	done
+
+VioletCityMuseumSage:
+	jumptextfaceplayer .Text
+.Text:
+	text "Yes, I am one of"
+	line "the four OVERSEER"
+	cont "SAGES of VIOLET."
+	para "Seeing all of"
+	line "these relics found"
+	cont "here<...>"
+	para "It's actually quite"
+	line "saddening, seeing"
+	cont "these remains."
+	done
+
 VioletCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -148,6 +205,10 @@ VioletCity_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 6 ; object events
 	object_event 34, 34, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI
 	object_event  8, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
+	object_event 17,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHerbSage, -1
+	object_event 20, 16, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCitySchoolSage, -1
+	object_event 34,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFishingSage, -1
+	object_event 30, 17, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityMuseumSage, -1
