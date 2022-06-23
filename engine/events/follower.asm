@@ -35,7 +35,7 @@ FollowerScript::
 
 .PlayCry:
 	push hl
-		call GetFollowingPokemon
+		call GetFollowingPokemonSpeciesID
 		call PlayMonCry
 	pop hl
 	ret

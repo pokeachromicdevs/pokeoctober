@@ -37,7 +37,12 @@ GetFollowingSprite::
 GetFollowingPokemon::
 ; output:
 ;	hl = pokemon index
+	call GetFollowingPokemonSpeciesID
+	jp GetPokemonIndexFromID
 
+GetFollowingPokemonSpeciesID::
+; output:
+;	a = pokemon 8-bit ID
 	ld a, [wWhichPartyFollower]
 	and a
 	ret z
@@ -53,4 +58,5 @@ GetFollowingPokemon::
 	ccf
 	ld [wCurPartyMon], a
 	ld a, [hl]
-	jp GetPokemonIndexFromID
+	ret
+	
