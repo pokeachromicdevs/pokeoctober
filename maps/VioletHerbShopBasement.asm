@@ -22,6 +22,8 @@ HoneyGrannyScript:
 	ifequal 2, .just_used
 
 	writetext .UsedHoneyText
+
+.give_honey
 	setflag ENGINE_SWEET_HONEY
 	waitbutton
 
@@ -29,6 +31,10 @@ HoneyGrannyScript:
 	playsound SFX_ITEM
 	pause 60
 	waitbutton
+	
+	writetext .TryUsingText
+	waitbutton
+
 	closetext
 	end
 
@@ -41,8 +47,9 @@ HoneyGrannyScript:
 .no_pot
 	writetext .NoPotText
 	waitbutton
-	closetext
-	end
+	verbosegiveitem HONEY_POT
+	writetext .AfterPotGivenText
+	sjump .give_honey
 
 .just_given
 	writetext .TryUsingText
@@ -88,8 +95,21 @@ HoneyGrannyScript:
 
 .NoPotText:
 	text "You don't have a"
-	line "HONEY POT? That's"
-	cont "a shame<...>"
+	line "HONEY POT?"
+	para "Not to worry!"
+	line "I've got just the"
+	cont "thing for you."
+	done
+
+.AfterPotGivenText:
+	text "A HONEY POT can"
+	line "store SWEET HONEY."
+	para "You can use it to"
+	line "attract rare wild"
+	cont "#MON."
+	para "In fact, I'll give"
+	line "you some to try"
+	cont "it out!"
 	done
 
 .TryUsingText:
