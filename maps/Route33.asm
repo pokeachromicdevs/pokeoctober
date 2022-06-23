@@ -120,7 +120,6 @@ TrainerRoute33Hyuck:
 	end
 
 .AfterText
-	;     XXXXXXXXXXXXXXXXXX
 	text "Looks like I found"
 	line "myself a worthy"
 	cont "rival!"
@@ -591,8 +590,26 @@ Route33BugCatcherScript:
 	jumptextfaceplayer .Text
 
 .Text:
-	text "Shh! I'm looking"
-	line "for TONBOSS here!"
+	text "Shh! Be quiet!"
+	para "You might scare"
+	line "the TONBOSS away!"
+	done
+
+Route33CaveBlockageScript:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "Don't step here,"
+	line "please!"
+	para "Some poacher has"
+	line "stolen one of our"
+	para "precious"
+	line "CHARMANDER from"
+	cont "here!"
+	para "If you can figure"
+	line "out who stole it,"
+	para "then we'll open"
+	line "this place up."
 	done
 
 Route33_MapEvents:
@@ -610,7 +627,7 @@ Route33_MapEvents:
 	db 1 ; bg events
 	bg_event 54,  6, BGEVENT_READ, Route33_Sign
 
-	db 8 ; object events
+	db 9 ; object events
 ; rocket grunts
 	object_event 54,  9, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
 	object_event 50,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
@@ -622,3 +639,4 @@ Route33_MapEvents:
 ; bloooooooooocking
 	object_event 37,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, Route33BugCatcherScript, EVENT_BEAT_BUGSY
 	object_event 61, 17, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_RIVAL
+	object_event 14,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, Route33CaveBlockageScript, -1

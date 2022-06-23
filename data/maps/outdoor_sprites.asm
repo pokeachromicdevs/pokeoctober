@@ -221,6 +221,7 @@ AzaleaGroupSprites:
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
+		static_sprite SPRITE_SUPER_NERD
 
 	end_outdoor_sprites
 
