@@ -151,7 +151,7 @@ Debug_Credits:
 Debug_ToggleRun:
 	ld hl, .ToggleRunText
 	call PrintText
-	call Debug_ToggleFollow.yesno
+	call .OnOffBox
 	jr nz, .disable
 .enable
 	ld a, 1
@@ -162,9 +162,49 @@ Debug_ToggleRun:
 	ld [wDebugControlsToggle], a
 	ret
 
+.OnOffBox:
+	lb bc, SCREEN_WIDTH - 6, 7
+	push bc
+	ld hl, .OnOffMenuHeader
+	call CopyMenuHeader
+	pop bc
+	ld a, b
+	cp SCREEN_WIDTH - 6
+	jr nc, .on_off_box_ok
+	ld a, SCREEN_WIDTH - 6
+	ld b, a
+
+.on_off_box_ok
+	ld a, b
+	ld [wMenuBorderLeftCoord], a
+	add 5
+	ld [wMenuBorderRightCoord], a
+	ld a, c
+	ld [wMenuBorderTopCoord], a
+	add 4
+	ld [wMenuBorderBottomCoord], a
+	call PushWindow
+	call InterpretTwoOptionMenu
+	ld a, [wMenuCursorY]
+	dec a
+	and a
+	ret
+
+.OnOffMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 10, 5, 15, 9
+	dw .OnOffMenuData
+	db 1 ; default option
+
+.OnOffMenuData:
+	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
+	db 2
+	db "ON@"
+	db "OFF@"
+
 .ToggleRunText:
-	text "Enable debug"
-	line "controls?"
+	text "Switch debug"
+	line "controls<...>"
 	done
 
 Debug_ToggleFollow:
@@ -191,8 +231,7 @@ Debug_ToggleFollow:
 	ret
 
 .yesno
-	lb bc, 0, 7
-	call PlaceYesNoBox
+	call YesNoBox
 	ld a, [wMenuCursorY]
 	dec a
 	and a
@@ -253,8 +292,7 @@ Debug_FixEvents:
 	jumpstd initializeevents
 	
 .YesNo
-	lb bc, 0, 7
-	call PlaceYesNoBox
+	call YesNoBox
 	ld a, [wMenuCursorY]
 	dec a
 	and a
