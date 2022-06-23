@@ -84,4 +84,5 @@ MapScenes::
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var CHERRYGROVE_POKECENTER_1F,                   wCherrygrovePokecenter1FSceneID
+	scene_var ROUTE_33_EAST_GATE,                          wRoute33EastGateSceneID
 	db -1 ; end

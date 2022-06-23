@@ -76,6 +76,26 @@ AlderTownFisherScript:
 	done
 
 AlderTownCheckOutMtHiveScript:
+	checkevent EVENT_BEAT_ROUTE33_KAREN
+	iftrue .RegularScript
+	checkmapscene ROUTE_33_EAST_GATE
+	iftrue .RegularScript
+	checkmoney YOUR_MONEY, 50
+	ifnotequal HAVE_LESS, .RegularScript
+; not enough to pay toll
+	faceplayer
+	opentext
+	writetext .TollTxt
+	buttonsound
+	givemoney YOUR_MONEY, 50
+	writetext .Got50BucksTxt
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	end
+	
+.RegularScript:
 	jumptextfaceplayer .Text
 .Text:
 	text "Have you checked"
@@ -85,6 +105,21 @@ AlderTownCheckOutMtHiveScript:
 	para "Our GYM LEADER"
 	line "regularly does his"
 	cont "research there."
+	done
+
+.TollTxt:
+	text "Have you checked"
+	line "out MT. HIVE?"
+	para "<...>Huh? I don't"
+	line "remember having to"
+	cont "pay toll fees<...>"
+	para "Here, this should"
+	line "be enough."
+	done
+
+.Got50BucksTxt:
+	text "<PLAYER>"
+	line "received ¥50!"
 	done
 
 AlderTown_MapEvents:

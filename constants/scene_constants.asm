@@ -7,6 +7,11 @@ SCENE_DEFAULT  EQU 0
 ; do-nothing scene 1 when the event finishes.
 SCENE_FINISHED EQU 1
 
+; wRoute33EastGateSceneID
+	const_def
+	const SCENE_ROUTE33EASTGATE_NOTHING
+	const SCENE_ROUTE33EASTGATE_PAID_TOLL
+
 ; wCherrygrovePokecenter1FSceneID
 	const_def
 	const SCENE_CHERRYGROVEPOKECENTER1F_NOTHING

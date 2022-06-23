@@ -2708,10 +2708,11 @@ wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 wCherrygrovePokecenter1FSceneID::                 db
+wRoute33EastGateSceneID::                         db
 
 wSceneIDsEnd::
 
-	ds 48
+	ds 47
 
 ; fight counts
 wJackFightCount::    db ; d9f2
