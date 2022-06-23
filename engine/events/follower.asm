@@ -17,9 +17,18 @@ FollowerScript::
 
 ; ...then starter mons
 	callasm .GetFollowerSpecies
+
 	ifequal16 CHIKORITA, FollowerChikoritaScript
-	ifequal16 CYNDAQUIL, FollowerCyndaquilScript
-	ifequal16  TOTODILE, FollowerTotodileScript
+	ifequal16 PETAMOLE,  FollowerChikoritaScript
+	ifequal16 MEGANIUM,  FollowerChikoritaScript
+
+	ifequal16 CYNDAQUIL,  FollowerCyndaquilScript
+	ifequal16 QUILAVA,    FollowerCyndaquilScript
+	ifequal16 TYPHLOSION, FollowerCyndaquilScript
+
+	ifequal16 TOTODILE,   FollowerTotodileScript
+	ifequal16 CROCONAW,   FollowerTotodileScript
+	ifequal16 FERALIGATR, FollowerTotodileScript
 
 ; ...then fallback to generic script
 	sjump FollowerGenericScript
