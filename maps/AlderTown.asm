@@ -62,6 +62,31 @@ AlderTownOutsideGymGuyScript:
 	cont "though!"
 	done
 
+AlderTownFisherScript:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "It's nice to go out"
+	line "and fish in a"
+	para "small, quiet town"
+	line "like this."
+	para "It gets my mind"
+	line "off of everything"
+	cont "else in life."
+	done
+
+AlderTownCheckOutMtHiveScript:
+	jumptextfaceplayer .Text
+.Text:
+	text "Have you checked"
+	line "out MT. HIVE?"
+	para "It's huge, and full"
+	line "of bug #MON!"
+	para "Our GYM LEADER"
+	line "regularly does his"
+	cont "research there."
+	done
+
 AlderTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -80,5 +105,7 @@ AlderTown_MapEvents:
 	bg_event 14,  4, BGEVENT_READ, AlderTownHappinessRaterSign
 	bg_event 10,  8, BGEVENT_READ, AlderTownSign
 
-	db 1 ; object events
+	db 3 ; object events
 	object_event  5, 12, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownOutsideGymGuyScript, EVENT_BEAT_ROUTE33_KAREN
+	object_event 15, 10, SPRITE_FISHER,  SPRITEMOVEDATA_STANDING_RIGHT,0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownFisherScript, -1
+	object_event  8,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AlderTownCheckOutMtHiveScript, -1
