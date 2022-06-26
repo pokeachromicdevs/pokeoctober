@@ -2411,7 +2411,7 @@ BugCatcherGroup:
 	end_party
 
 	next_party ; BUG_CATCHER (17)
-		string "TIM"
+		string "TIMMY"
 		db     TRAINERTYPE_NORMAL
 		dbw    3, LEDYBA
 		dbw    3, SPINARAK
