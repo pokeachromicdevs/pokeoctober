@@ -26,10 +26,28 @@ Route33EastGate_MapScripts:
 	return
 
 Route33EastGateOfficerScript:
+	checkevent EVENT_BEAT_BUGSY
+	iftrue .WriteOtherText
 	jumptextfaceplayer .Text
+.WriteOtherText:
+	jumptextfaceplayer .OtherText
+
+.OtherText:
+	text "I'll do better next"
+	line "time<...> even though"
+	para "they don't pay me"
+	line "to be vigilant"
+	cont "enough."
+	done
 
 .Text:
-	text "Zzz<...>"
+	text "Nghh<...> what"
+	line "happened<...>?"
+	para "I was minding my"
+	line "business for a"
+	para "second, and then"
+	line "everything was"
+	cont "black<...>"
 	done
 
 Route33EastGateGruntScript:
