@@ -63,9 +63,10 @@ SproutTowerF3FleeFeather:
 
 SproutTower3F_RivalBattle:
 .West:
-	hidefollower ; easier than dealing with follower movement
-	appear SPROUT_TOWER_3F_RIVAL
 	playsound SFX_EXIT_BUILDING
+	checkfollower
+	iftrue .DontMoveRival
+	appear SPROUT_TOWER_3F_RIVAL
 	turnobject PLAYER, RIGHT
 	follow PLAYER, SPROUT_TOWER_3F_RIVAL
 	applymovement PLAYER, .BackOffWest
@@ -73,10 +74,17 @@ SproutTower3F_RivalBattle:
 	scall .Continue
 ; rival walks away
 	applymovement SPROUT_TOWER_3F_RIVAL, .RivalGoesHomeWest
+	sjump .FinishWest
+.DontMoveRival:
+	turnobject PLAYER, RIGHT
+	appear SPROUT_TOWER_3F_RIVAL
+	turnobject SPROUT_TOWER_3F_RIVAL, LEFT
+	scall .Continue
+; rival walks away
+	applymovement SPROUT_TOWER_3F_RIVAL, .RivalGoesHomeWestOneStepFurther
+.FinishWest:
 	disappear SPROUT_TOWER_3F_RIVAL
 	playmapmusic
-	moveobject FOLLOWER, 12, 13
-	showfollower
 	end
 
 .North:
@@ -90,6 +98,22 @@ SproutTower3F_RivalBattle:
 	disappear SPROUT_TOWER_3F_RIVAL
 	playmapmusic
 	end
+
+.RivalGoesHomeWestOneStepFurther:
+	remove_fixed_facing
+	step UP
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step UP
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
 
 .RivalGoesHomeWest:
 	remove_fixed_facing
