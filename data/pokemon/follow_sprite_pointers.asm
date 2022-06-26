@@ -160,14 +160,14 @@ FollowSpritePointers::
 ;Johto Icons
 	follow_sprite ChikoritaSpriteGFX, PAL_OW_GREEN ;CHIKORITA
 	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;PETAMOLE
-	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;MEGANIUM
+	follow_sprite MeganiumSpriteGFX, PAL_OW_GREEN ;MEGANIUM
 	follow_sprite CyndaquilSpriteGFX, PAL_OW_RED ;CYNDAQUIL
-	follow_sprite WooperSpriteGFX, PAL_OW_RED ;QUILAVA
-	follow_sprite WooperSpriteGFX, PAL_OW_RED ;TYPHLOSION
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TOTODILE
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CROCONAW
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FERALIGATR
-	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;BAYLEEF
+	follow_sprite QuilavaSpriteGFX, PAL_OW_RED ;QUILAVA
+	follow_sprite TyphlosionSpriteGFX, PAL_OW_RED ;TYPHLOSION
+	follow_sprite TotodileSpriteGFX, PAL_OW_BLUE ;TOTODILE
+	follow_sprite CroconawSpriteGFX, PAL_OW_BLUE ;CROCONAW
+	follow_sprite FeraligatrSpriteGFX, PAL_OW_BLUE ;FERALIGATR
+	follow_sprite BayleefSpriteGFX, PAL_OW_GREEN ;BAYLEEF
 	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;SENTRET
 	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;FURRET
 	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;HOOTHOOT
