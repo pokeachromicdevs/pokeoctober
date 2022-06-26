@@ -15,7 +15,7 @@ JoeyPhoneCalleeScript:
 	farsjump UnknownScript_0xa0930
 
 .WantsBattle:
-	getlandmarkname STRING_BUFFER_5, ROUTE_30
+	getlandmarkname STRING_BUFFER_5, ROUTE_29
 	farsjump UnknownScript_0xa0a4b
 
 JoeyPhoneCallerScript:
@@ -36,6 +36,6 @@ JoeyMondayAfternoon:
 	setflag ENGINE_JOEY_MONDAY_AFTERNOON
 
 JoeyWantsBattle:
-	getlandmarkname STRING_BUFFER_5, ROUTE_30
+	getlandmarkname STRING_BUFFER_5, ROUTE_29
 	setflag ENGINE_JOEY
 	farsjump PhoneScript_WantsToBattle_Male
