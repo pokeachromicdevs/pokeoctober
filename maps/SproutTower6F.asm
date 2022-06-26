@@ -69,6 +69,7 @@ TrainerBlackbeltLee:
 	step LEFT
 	step UP
 	step UP
+	step UP
 	rept 7
 	step RIGHT
 	endr
