@@ -212,6 +212,7 @@ FollowerTotodileScriptChoice3:
 
 FollowerPoisonedScript:
 ; poisoned script
+	playsound SFX_POISON
 	showemote EMOTE_SAD, FOLLOWER, 30
 	jumptext .Text
 	end
