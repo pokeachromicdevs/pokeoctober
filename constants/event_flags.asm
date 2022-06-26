@@ -339,7 +339,9 @@
 	const EVENT_OFFICER_IN_R33_GATE
 	const EVENT_GRUNT_IN_R33_GATE
 
-	const EVENT_16d
+; demo limit
+	const EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
+
 	const EVENT_16e
 	const EVENT_16f
 	const EVENT_170
