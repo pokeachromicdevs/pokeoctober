@@ -159,7 +159,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MEW
 ;Johto Icons
 	follow_sprite ChikoritaSpriteGFX, PAL_OW_GREEN ;CHIKORITA
-	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;PETAMOLE
+	follow_sprite BlossomoleSpriteGFX, PAL_OW_GREEN ;BLOSSOMOLE
 	follow_sprite MeganiumSpriteGFX, PAL_OW_GREEN ;MEGANIUM
 	follow_sprite CyndaquilSpriteGFX, PAL_OW_RED ;CYNDAQUIL
 	follow_sprite QuilavaSpriteGFX, PAL_OW_RED ;QUILAVA
