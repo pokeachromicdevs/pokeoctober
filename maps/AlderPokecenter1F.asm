@@ -1,14 +1,12 @@
 	object_const_def ; object_event constants
 	const ALDERPOKECENTER1F_NURSE
+	const ALDERPOKECENTER1F_KURT
+	const ALDERPOKECENTER1F_GAMEBOYGUY
 
 AlderPokecenter1F_MapScripts:
-	db 1 ; scene scripts
-	scene_script .DummyScene
+	db 0 ; scene scripts
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 AlderPokecenter1FNurseScript:
 	jumpstd pokecenternurse

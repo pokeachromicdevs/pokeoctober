@@ -1,3 +1,3 @@
 #!/bin/sh
 
-grep -rIP ";\s?(TODO|XXX)"
+grep -rIP ";\s?(TODO|XXX)" | sort

@@ -85,4 +85,5 @@ MapScenes::
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var CHERRYGROVE_POKECENTER_1F,                   wCherrygrovePokecenter1FSceneID
 	scene_var ROUTE_33_EAST_GATE,                          wRoute33EastGateSceneID
+	scene_var AZALEA_POKECENTER_1F,                        Start ; always 0
 	db -1 ; end
