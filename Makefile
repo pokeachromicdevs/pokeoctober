@@ -39,7 +39,7 @@ IPSPATCH ?= tools/ipspatch
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all clean tidy tools
+.PHONY: all clean tidy tools engine/menus/main_menu.asm
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
