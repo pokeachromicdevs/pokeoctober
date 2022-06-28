@@ -358,15 +358,21 @@ EvolveAfterBattle_MasterLoop:
 LearnEvolutionMove:
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
-	dec a
-	ld c, a
-	ld b, 0
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, EvolutionMoves
 	add hl, bc
-	ld a, [hl]
-	and a
+	add hl, bc
+	dec hl
+	dec hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	or h ; hl == 0?
 	ret z
 
+	call GetMoveIDFromIndex
 	push hl
 	ld d, a
 	ld hl, wPartyMon1Moves
