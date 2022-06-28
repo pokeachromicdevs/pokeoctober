@@ -1,4 +1,4 @@
-ErinAskNumber1Text:
+NiechelleAskNumber1Text:
 	text "It really made me"
 	line "angry to lose."
 
@@ -13,7 +13,7 @@ ErinAskNumber1Text:
 	cont "me again?"
 	done
 
-ErinAskNumber2Text:
+NiechelleAskNumber2Text:
 	text "I want to battle"
 	line "with you again."
 
@@ -21,13 +21,13 @@ ErinAskNumber2Text:
 	line "exchange numbers?"
 	done
 
-ErinNumberAcceptedText:
+NiechelleNumberAcceptedText:
 	text "I'll remember to"
 	line "call when I want"
 	cont "to battle again!"
 	done
 
-ErinNumberDeclinedText:
+NiechelleNumberDeclinedText:
 	text "Oh… I'm sad…"
 	line "If you do want to"
 
@@ -36,17 +36,17 @@ ErinNumberDeclinedText:
 	cont "me!"
 	done
 
-ErinPhoneFullText:
+NiechellePhoneFullText:
 	text "Oh no. Your phone"
 	line "is all filled up."
 	done
 
-ErinRematchText:
+NiechelleRematchText:
 	text "Yay! I waited!"
 	line "Let's start now!"
 	done
 
-ErinPackFullText:
+NiechellePackFullText:
 	text "That's too bad!"
 	line "You have no room…"
 
@@ -54,7 +54,7 @@ ErinPackFullText:
 	line "you another time."
 	done
 
-ErinRematchGiftText:
+NiechelleRematchGiftText:
 	text "Aww… I lost again!"
 
 	para "I wonder how many"

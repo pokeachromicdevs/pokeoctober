@@ -10,38 +10,38 @@ Route46_MapScripts:
 
 	db 0 ; callbacks
 
-TrainerPicnickerErin1:
-	trainer LASS, NIECHELLE, EVENT_BEAT_PICNICKER_ERIN, PicnickerErin1SeenText, PicnickerErin1BeatenText, 0, .Script
+TrainerLassNiechelle:
+	trainer LASS, NIECHELLE, EVENT_BEAT_LASS_NIECHELLE, LassNiechelleSeenText, LassNiechelleBeatenText, 0, .Script
 
 .Script:
-	loadvar VAR_CALLERID, PHONE_PICNICKER_ERIN
+	loadvar VAR_CALLERID, PHONE_LASS_NIECHELLE
 	opentext
-	checkflag ENGINE_ERIN
+	checkflag ENGINE_NIECHELLE
 	iftrue .WantsBattle
-	checkcellnum PHONE_PICNICKER_ERIN
+	checkcellnum PHONE_LASS_NIECHELLE
 	iftrue Route46NumberAcceptedF
-	checkevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
+	checkevent EVENT_NIECHELLE_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskedAlready
-	writetext PicnickerErinAfterBattleText
+	writetext LassNiechelleAfterBattleText
 	buttonsound
-	setevent EVENT_ERIN_ASKED_FOR_PHONE_NUMBER
+	setevent EVENT_NIECHELLE_ASKED_FOR_PHONE_NUMBER
 	scall Route46AskNumber1F
 	sjump .AskForNumber
 
 .AskedAlready:
 	scall Route46AskNumber2F
 .AskForNumber:
-	askforphonenumber PHONE_PICNICKER_ERIN
+	askforphonenumber PHONE_LASS_NIECHELLE
 	ifequal PHONE_CONTACTS_FULL, Route46PhoneFullF
 	ifequal PHONE_CONTACT_REFUSED, Route46NumberDeclinedF
-	gettrainername STRING_BUFFER_3, PICNICKER, ERIN1
+	gettrainername STRING_BUFFER_3, LASS, NIECHELLE
 	scall Route46RegisteredNumberF
 	sjump Route46NumberAcceptedF
 
 .WantsBattle:
 	scall Route46RematchF
-	winlosstext PicnickerErin1BeatenText, 0
-	readmem wErinFightCount
+	winlosstext LassNiechelleBeatenText, 0
+	readmem wNiechelleFightCount
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
@@ -52,34 +52,34 @@ TrainerPicnickerErin1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer PICNICKER, ERIN1
+	loadtrainer LASS, NIECHELLE2
 	startbattle
 	reloadmapafterbattle
-	loadmem wErinFightCount, 1
-	clearflag ENGINE_ERIN
+	loadmem wNiechelleFightCount, 1
+	clearflag ENGINE_NIECHELLE
 	end
 
 .LoadFight1:
-	loadtrainer PICNICKER, ERIN2
+	loadtrainer LASS, NIECHELLE3
 	startbattle
 	reloadmapafterbattle
-	loadmem wErinFightCount, 2
-	clearflag ENGINE_ERIN
+	loadmem wNiechelleFightCount, 2
+	clearflag ENGINE_NIECHELLE
 	end
 
 .LoadFight2:
-	loadtrainer PICNICKER, ERIN3
+	loadtrainer LASS, NIECHELLE4
 	startbattle
 	reloadmapafterbattle
-	clearflag ENGINE_ERIN
-	checkevent EVENT_ERIN_CALCIUM
+	clearflag ENGINE_NIECHELLE
+	checkevent EVENT_NIECHELLE_CALCIUM
 	iftrue .HasCalcium
-	checkevent EVENT_GOT_CALCIUM_FROM_ERIN
+	checkevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
 	iftrue .GotCalciumAlready
 	scall Route46RematchGiftF
 	verbosegiveitem CALCIUM
-	iffalse ErinNoRoomForCalcium
-	setevent EVENT_GOT_CALCIUM_FROM_ERIN
+	iffalse NiechelleNoRoomForCalcium
+	setevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
 	sjump Route46NumberAcceptedF
 
 .GotCalciumAlready:
@@ -87,12 +87,12 @@ TrainerPicnickerErin1:
 
 .HasCalcium:
 	opentext
-	writetext PicnickerErin2BeatenText
+	writetext LassNiechelle2BeatenText
 	waitbutton
 	verbosegiveitem CALCIUM
-	iffalse ErinNoRoomForCalcium
-	clearevent EVENT_ERIN_CALCIUM
-	setevent EVENT_GOT_CALCIUM_FROM_ERIN
+	iffalse NiechelleNoRoomForCalcium
+	clearevent EVENT_NIECHELLE_CALCIUM
+	setevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
 	sjump Route46NumberAcceptedF
 
 Route46AskNumber1F:
@@ -123,8 +123,8 @@ Route46RematchF:
 	jumpstd rematchf
 	end
 
-ErinNoRoomForCalcium:
-	setevent EVENT_ERIN_CALCIUM
+NiechelleNoRoomForCalcium:
+	setevent EVENT_NIECHELLE_CALCIUM
 	jumpstd packfullf
 	end
 
@@ -185,17 +185,17 @@ Route46FruitTree1:
 Route46FruitTree2:
 	fruittree FRUITTREE_ROUTE_46_2
 
-PicnickerErin1SeenText:
+LassNiechelleSeenText:
 	text "Eek! Are you here"
 	line "to gawk at my"
 	cont "snowballs, too?"
 	done
 
-PicnickerErin1BeatenText:
+LassNiechelleBeatenText:
 	text "I guess not…"
 	done
 
-PicnickerErinAfterBattleText:
+LassNiechelleAfterBattleText:
 	text "My CAMOUFLAKE"
 	line "sure are cute,"
 	cont "aren't they?"
@@ -205,7 +205,7 @@ PicnickerErinAfterBattleText:
 	cont "together!"
 	done
 
-PicnickerErin2BeatenText:
+LassNiechelle2BeatenText:
 	text "Aww… I keep losing"
 	line "all the time!"
 
@@ -324,7 +324,7 @@ Route46_MapEvents:
 
 	db 7 ; object events
 	object_event 11, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBenny, -1
-	object_event  7, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPicnickerErin1, -1
+	object_event  7, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassNiechelle, -1
 	object_event  9, 15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1
 	object_event  6, 28, SPRITE_SPORTSMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerSportsmanJayden, -1

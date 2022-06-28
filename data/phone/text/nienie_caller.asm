@@ -48,7 +48,7 @@ UnknownText_0x67281:
 	text "See you. Bye-bye!"
 	done
 
-ErinWorkingHardText:
+NiechelleWorkingHardText:
 	text "I'm working hard"
 	line "to raise my"
 	cont "#MON!"
@@ -57,7 +57,7 @@ ErinWorkingHardText:
 	line "another battle!"
 	done
 
-ErinComeBattleText:
+NiechelleComeBattleText:
 	text "Oh, <PLAY_G>!"
 	line "Come battle"
 	cont "NICHELLE!"

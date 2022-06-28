@@ -118,8 +118,8 @@ ParryBattleWithMe:
 	buttonsound
 	sjump PhoneScript_HangupText_Male
 
-ErinWorkingHardScript:
-	farwritetext ErinWorkingHardText
+NiechelleWorkingHardScript:
+	farwritetext NiechelleWorkingHardText
 	buttonsound
 	sjump PhoneScript_HangupText_Female
 

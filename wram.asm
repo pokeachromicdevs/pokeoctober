@@ -2742,7 +2742,7 @@ wVanceFightCount::   db
 wWiltonFightCount::  db
 wKenjiFightCount::   db ; unused
 wParryFightCount::   db
-wErinFightCount::    db
+wNiechelleFightCount::    db
 ; da0e
 
 	ds 100

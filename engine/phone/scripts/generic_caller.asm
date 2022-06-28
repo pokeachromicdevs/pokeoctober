@@ -156,7 +156,7 @@ Phone_WhosBragging_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x174688
@@ -300,7 +300,7 @@ Phone_WhoDefeatedMon_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1746c3
@@ -444,7 +444,7 @@ Phone_WhoLostAMon_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x174734
@@ -595,7 +595,7 @@ PhoneScript_RematchText_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beth:
 	farwritetext UnknownText_0x174e4e
@@ -742,7 +742,7 @@ PhoneScript_HangupText_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1747ac

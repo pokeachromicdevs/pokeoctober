@@ -34,7 +34,7 @@
 	const PHONE_FISHER_WILTON
 	const PHONE_BLACKBELT_KENJI
 	const PHONE_HIKER_PARRY
-	const PHONE_PICNICKER_ERIN
+	const PHONE_LASS_NIECHELLE
 	const PHONE_BUENA
 
 ; SpecialPhoneCallList indexes (see data/phone/special_calls.asm)

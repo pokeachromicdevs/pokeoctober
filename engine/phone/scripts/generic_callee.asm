@@ -378,7 +378,7 @@ PhoneScript_AnswerPhone_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1b4f21
@@ -429,7 +429,7 @@ PhoneScript_AnswerPhone_Female_Day:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1b4f4d
@@ -480,7 +480,7 @@ PhoneScript_AnswerPhone_Female_Nite:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1b4f75
@@ -887,7 +887,7 @@ PhoneScript_GreetPhone_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1b4fa1
@@ -938,7 +938,7 @@ PhoneScript_GreetPhone_Female_Day:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1b4fda
@@ -989,7 +989,7 @@ PhoneScript_GreetPhone_Female_Nite:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1b5004
@@ -1143,7 +1143,7 @@ PhoneScript_Generic_Female:
 	ifequal PHONE_PICNICKER_GINA, .Gina
 	ifequal PHONE_LASS_DANA, .Dana
 	ifequal PHONE_PICNICKER_TIFFANY, .Tiffany
-	ifequal PHONE_PICNICKER_ERIN, .Erin
+	ifequal PHONE_LASS_NIECHELLE, .Erin
 
 .Beverly:
 	farwritetext UnknownText_0x1b502b

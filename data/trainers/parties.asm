@@ -1245,6 +1245,30 @@ LassGroup:
 		db     TRAINERTYPE_NORMAL
 		dbw    10, BUTTERFREE
 	end_party
+	
+	next_party ; LASS (19) NIE NIE 2
+		db "NIECHELLE@", TRAINERTYPE_NORMAL
+		db 7
+		dw CAMOUFLAKE
+		db 8
+		dw CAMOUFLAKE
+	end_party
+	
+	next_party ; LASS (19) NIE NIE 3
+		db "NIECHELLE@", TRAINERTYPE_NORMAL
+		db 9
+		dw CAMOUFLAKE
+		db 10
+		dw CAMOUFLAKE
+	end_party
+	
+	next_party ; LASS (19) NIE NIE 4
+		db "NIECHELLE@", TRAINERTYPE_NORMAL
+		db 12
+		dw CAMOUFLAKE
+		db 14
+		dw CAMOUFLAKE
+	end_party
 
 	end_party_list
 
@@ -4237,7 +4261,7 @@ PicnickerGroup:
 	end_party
 
 	next_party ; PICNICKER (10)
-	db "NIECHELLE@", TRAINERTYPE_NORMAL
+	db "ERIN@", TRAINERTYPE_NORMAL
 	db 3
 	dw PONYTA
 	db 3

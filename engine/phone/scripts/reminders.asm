@@ -86,6 +86,6 @@ ParryHaventYouGottenTo:
 	farwritetext ParryHaventYouGottenToText
 	end
 
-ErinComeBattleScript:
-	farwritetext ErinComeBattleText
+NiechelleComeBattleScript:
+	farwritetext NiechelleComeBattleText
 	end
