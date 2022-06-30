@@ -42,35 +42,6 @@ TrainerFisherKoi:
 	cont "crime!"
 	done
 
-
-TrainerFisherGeorge:
-	trainer FISHER, FISHER_GEORGE, EVENT_BEAT_FISHER_GEORGE, .SeenTxt, .WinTxt, 0, .PostScript
-
-.SeenTxt:
-	text "I did it!"
-	para "I caught a huge"
-	line "one!"
-	done
-
-.WinTxt:
-	text "What a huge dis-"
-	line "appointment."
-	done
-
-.PostScript:
-	endifjustbattled
-	jumptextfaceplayer .PSTxt
-
-.PSTxt:
-	text "Ah well."
-	para "I probably should"
-	line "be happy I made"
-	para "such a catch in-"
-	line "stead of getting"
-	para "ornery about"
-	line "losing."
-	done
-
 TrainerBeautyPeony:
 	trainer BEAUTY, PEONY, EVENT_BEAT_BEAUTY_PEONY, .SeenTxt, .WinTxt, 0, .PostScript
 
@@ -150,9 +121,8 @@ Route32South_MapEvents:
 
 	db 0 ; bg events
 
-	db 5 ; object events
+	db 4 ; object events
 	object_event 13, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherKoi, -1
-	object_event 13, 14, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherGeorge, -1
 	object_event 10, 19, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerBeautyPeony, -1
 	object_event  7, 28, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFledglingWinston, -1
 	object_event 11, 27, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherHikaru, -1

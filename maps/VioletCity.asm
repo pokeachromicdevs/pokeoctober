@@ -254,6 +254,31 @@ SproutTowerSign:
 	line "Way of #MON"
 	done
 
+TrainerFisherManny:
+	trainer FISHER, MANNY, EVENT_BEAT_FISHER_MANNY, .Seen, .Beat, 0, .PostScript
+
+.Seen:
+	text "Well, if nothing's"
+	line "bitin', I might"
+	para "as well start"
+	line "battlin'!"
+	done
+
+.Beat:
+	text "Dang! You're good!"
+	done
+
+.PostScript:
+	endifjustbattled
+	jumptextfaceplayer .PostScriptTxt
+
+.PostScriptTxt: ; hero moment
+	text "You're gonna go"
+	line "places, kid."
+	para "I'll root for you"
+	line "all the way!"
+	done
+
 VioletCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -279,7 +304,7 @@ VioletCity_MapEvents:
 	bg_event 30, 16, BGEVENT_READ, VioletMuseumSign
 	bg_event  7, 33, BGEVENT_READ, SproutTowerSign
 
-	db 8 ; object events
+	db 9 ; object events
 	object_event 34, 34, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI
 	object_event  8, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
 	object_event 17,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHerbSage, -1
@@ -288,3 +313,4 @@ VioletCity_MapEvents:
 	object_event 30, 17, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityMuseumSage, -1
 	object_event 25, 31, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHeracrossGuy, -1
 	object_event 15, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityYoungster, -1
+	object_event 34,  6,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherManny, -1

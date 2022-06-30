@@ -18,29 +18,32 @@ Route32North_MapScripts:
 .DummyScene2:
 	end
 
-TrainerFisherManny:
-	trainer FISHER, MANNY, EVENT_BEAT_FISHER_MANNY, .Seen, .Beat, 0, .PostScript
+TrainerFisherGeorge:
+	trainer FISHER, FISHER_GEORGE, EVENT_BEAT_FISHER_GEORGE, .SeenTxt, .WinTxt, 0, .PostScript
 
-.Seen:
-	text "Well if nothing's"
-	line "bitin', then I"
-	para "better start"
-	line "battlin'!"
+.SeenTxt:
+	text "I did it!"
+	para "I caught a huge"
+	line "one!"
 	done
 
-.Beat:
-	text "Dang! You're good!"
+.WinTxt:
+	text "What a huge dis-"
+	line "appointment."
 	done
 
 .PostScript:
 	endifjustbattled
-	jumptextfaceplayer .PostScriptTxt
+	jumptextfaceplayer .PSTxt
 
-.PostScriptTxt: ; hero moment
-	text "You're gonna go"
-	line "places, kid."
-	para "I'll root for you"
-	line "all the way!"
+.PSTxt:
+	text "Ah well."
+	para "I probably should"
+	line "be happy I made"
+	para "such a catch in-"
+	line "stead of getting"
+	para "ornery about"
+	line "losing."
 	done
 
 TrainerLassTina:
@@ -126,5 +129,5 @@ Route32North_MapEvents:
 
 	db 2 ; object events
 	object_event  4, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassTina, EVENT_TALKED_TO_LASS_TINA
-	object_event 10, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFisherManny, -1
+	object_event 10, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFisherGeorge, -1
 

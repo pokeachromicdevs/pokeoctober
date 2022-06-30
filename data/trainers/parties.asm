@@ -2701,7 +2701,7 @@ FisherGroup:
 	next_party ; FISHER (27)
 		string "MANNY"
 		db     TRAINERTYPE_NORMAL
-		dbw    13, REMORAID
+		dbw    9, REMORAID
 	end_party
 
 	next_party ; FISHER (28)
