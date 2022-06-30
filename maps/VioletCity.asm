@@ -164,12 +164,13 @@ VioletCityFishingSage:
 .Text:
 	text "I am the guardian"
 	line "SAGE for the"
-	cont "FISHER's GUILD."
-	para "Seeing such pas-"
-	line "sion and respect"
-	cont "for water #MON<...>"
-	para "It gives me hope"
-	line "for our future."
+	cont "FISHING GUILD."
+	para "I love seeing"
+	line "people passionate"
+	para "about water"
+	line "#MON<...> they are"
+	para "such graceful"
+	line "creatures."
 	done
 
 VioletCityMuseumSage:
@@ -184,6 +185,73 @@ VioletCityMuseumSage:
 	para "It's actually quite"
 	line "saddening, seeing"
 	cont "these remains."
+	done
+
+VioletCityHeracrossGuy:
+	jumptextfaceplayer .Txt
+.Txt:
+	text "Did you know that"
+	line "HERACROSS loves"
+	cont "HONEY on trees?"
+	para "Why not get some"
+	line "from the HONEY"
+	cont "GRANDMA?"
+	done
+
+VioletCityYoungster:
+	jumptextfaceplayer .Txt
+.Txt:
+	text "Whooh! I tried to"
+	line "challenge WHITNEY,"
+	para "but her MILTANK"
+	line "keeps steamrolling"
+	cont "my team!"
+	para "I'm gonna train"
+	line "harder!"
+	done
+
+VioletCitySign:
+	jumptext .Txt
+.Txt:
+	text "VIOLET CITY"
+
+	para "The City of"
+	line "Nostalgic Scents"
+	done
+
+VioletHerbShopSign:
+	jumptext .Txt
+.Txt:
+	text "VIOLET HERB SHOP"
+	para "Your One-Stop Shop"
+	line "for Rare Spices"
+	done
+
+VioletFishingGuildSign:
+	jumptext .Txt
+.Txt:
+	text "FISHING GUILD"
+	done
+
+VioletSchoolSign:
+	jumptext .Txt
+.Txt:
+	text "TRAINER SCHOOL"
+	done
+
+VioletMuseumSign:
+	jumptext .Txt
+.Txt:
+	text "VIOLET MUSEUM"
+	done
+
+SproutTowerSign:
+	jumptext .Txt
+.Txt:
+	text "SPROUT TOWER"
+
+	para "Experience the"
+	line "Way of #MON"
 	done
 
 VioletCity_MapEvents:
@@ -203,12 +271,20 @@ VioletCity_MapEvents:
 	coord_event 36, 26, SCENE_VIOLETCITY_NOTHING, VioletCity_SageStopsYou.North
 	coord_event 36, 27, SCENE_VIOLETCITY_NOTHING, VioletCity_SageStopsYou.South
 
-	db 0 ; bg events
+	db 6 ; bg events
+	bg_event 27, 29, BGEVENT_READ, VioletCitySign
+	bg_event 19,  5, BGEVENT_READ, VioletHerbShopSign
+	bg_event 32,  4, BGEVENT_READ, VioletFishingGuildSign
+	bg_event 18, 16, BGEVENT_READ, VioletSchoolSign
+	bg_event 30, 16, BGEVENT_READ, VioletMuseumSign
+	bg_event  7, 33, BGEVENT_READ, SproutTowerSign
 
-	db 6 ; object events
+	db 8 ; object events
 	object_event 34, 34, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI
 	object_event  8, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
 	object_event 17,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHerbSage, -1
 	object_event 20, 16, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCitySchoolSage, -1
-	object_event 34,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFishingSage, -1
+	object_event 34,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFishingSage, -1
 	object_event 30, 17, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityMuseumSage, -1
+	object_event 25, 31, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHeracrossGuy, -1
+	object_event 15, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityYoungster, -1
