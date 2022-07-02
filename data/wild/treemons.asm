@@ -128,6 +128,9 @@ TreeMonSet_Rock:
 	dbbw 10, 15, SHUCKLE
 	db -1
 
-TreeMonSet_Heracross:
-	dbbw 100, 10, HERACROSS
+TreeMonSet_SweetHoneyMons:
+	dbbw 70, 10, HERACROSS
+	dbbw 10, 10, BUTTERFREE
+	dbbw 10, 10, BEEDRILL
+	dbbw 10, 10, TEDDIURSA
 	db -1

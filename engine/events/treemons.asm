@@ -136,8 +136,8 @@ ModifyTreeMonRates:
 	cp 2 ; was 1; jump if sweethoney was applied today
 	jr z, GetTreeMon
 
-	ld hl, TreeMonSet_Heracross
-; fallthrough 100% lv 10 heracross on day 1+
+	ld hl, TreeMonSet_SweetHoneyMons
+; fallthrough sweet honey mons
 
 GetTreeMon:
 	push hl
