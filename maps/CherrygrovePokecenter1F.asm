@@ -124,6 +124,7 @@ CherrygrovePokecenter1FTeacherScript:
 	
 MovementData_AideWalksStraightOutOfPokecenter:
 	step DOWN
+	step LEFT
 	step DOWN
 	step DOWN
 	step DOWN
