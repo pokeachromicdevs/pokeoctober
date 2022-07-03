@@ -142,76 +142,63 @@ MovementData_AideFinishesLeavingPokecenter:
 	step_end
 
 UnknownText_0x69555:
-	text "Ah, there you"
-	line "are, <PLAYER>."
-
-	para "PROF.ELM has en-"
+	text "Ah, there you are,"
+	line "<PLAYER>."
+	para "PROF. ELM has en-"
 	line "trusted me to"
-	cont "deliver two things"
-	
-	para "to you. Firstly…"
+	para "deliver two things"
+	line "to you."
+	para "Firstly<...>"
 	done
 	
 GotUprootText:
-	text "HM 01, UPROOT."
-	
+	text "HM01, UPROOT."
 	para "Unlike TMs, HMs"
-	line "can be be used as"
-	cont "much as your heart"
-	
-	para "desires. UPROOT"
-	line "can yank small"
-	cont "trees blocking"
-	
-	para "your path out of"
-	line "the ground. And"
-	cont "now for the second"
-	para "item…"
+	line "can be used as"
+	para "much as your heart"
+	line "desires."
+	para "UPROOT can yank"
+	line "small trees"
+	para "blocking your path"
+	line "out of the ground."
+	para "And now for the"
+	line "second item<...>"
 	done
 	
 UnknownText_0x695c5:
 	text "Yes, the EGG that"
 	line "you retrieved for"
 	cont "ELM is now yours."
-
 	para "From all the stud-"
-	line "ies ELM has per-"
-	cont "formed on EGGs,"
-	
-	para "he's discovered"
-	line "that EGGs hatch"
-	cont "faster when sur-"
-	
-	para "rounded with other"
-	line "#MON."
-	
+	line "ies ELM has"
+	para "performed on EGGs,"
+	line "he's discovered"
+	para "that EGGs hatch"
+	line "faster when"
+	para "surrounded with"
+	line "other #MON."
 	para "Therefore, leaving"
 	line "it in the LAB"
-	cont "would mean it"
-	
-	para "would take ages to"
-	line "hatch. Thus, ELM"
-	cont "wants you to care"
-	
-	para "of the EGG. Raise"
-	line "that little #-"
-	cont "MON well."
-	
+	para "would mean it can"
+	line "take ages for it"
+	cont "to hatch."
+	para "So, ELM wants you"
+	line "to take care of"
+	cont "the EGG."
+	para "Raise that little"
+	line "#MON well."
 	para "Anyways, I suppose"
-	line "I better get go-"
-	cont "ing. ELM's getting"
-	cont "ready for a trip,"
-	
-	para "and he needs me"
-	line "to watch over the"
-	cont "LAB while he's"
-	
-	para "gone. We don't want"
-	line "anyone breaking"
-	cont "into to the LAB,"
-	
-	para "after all. Fare-"
-	line "well for now."
+	line "I better be going."
+	para "ELM's getting ready"
+	line "for a trip, and he"
+	para "needs me to watch"
+	line "over the LAB while"
+	cont "he's gone."
+	para "We don't want any-"
+	line "one breaking into"
+	cont "the LAB,after all."
+	para "Farewell for now."
+	done
 	done
 
 UnknownText_0x69693:
