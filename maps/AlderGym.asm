@@ -131,6 +131,7 @@ AlderGymGuyScript:
 AlderGymStatue:
 	checkflag ENGINE_HIVEBADGE
 	iftrue .Beaten
+	gettrainername STRING_BUFFER_4, BUGSY, BUGSY1
 	jumpstd gymstatue1
 .Beaten:
 	gettrainername STRING_BUFFER_4, BUGSY, BUGSY1

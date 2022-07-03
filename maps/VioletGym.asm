@@ -129,6 +129,7 @@ VioletGymGuyScript:
 VioletGymStatue:
 	checkflag ENGINE_PLAINBADGE
 	iftrue .Beaten
+	gettrainername STRING_BUFFER_4, WHITNEY, WHITNEY1
 	jumpstd gymstatue1
 .Beaten:
 	gettrainername STRING_BUFFER_4, WHITNEY, WHITNEY1

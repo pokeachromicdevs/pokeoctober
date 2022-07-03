@@ -119,6 +119,7 @@ CherrygroveGymGuyScript:
 CherrygroveGymStatue:
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue .Beaten
+	gettrainername STRING_BUFFER_4, FALKNER, FALKNER1
 	jumpstd gymstatue1
 .Beaten:
 	gettrainername STRING_BUFFER_4, FALKNER, FALKNER1
