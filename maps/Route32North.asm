@@ -18,32 +18,29 @@ Route32North_MapScripts:
 .DummyScene2:
 	end
 
-TrainerFisherGeorge:
-	trainer FISHER, FISHER_GEORGE, EVENT_BEAT_FISHER_GEORGE, .SeenTxt, .WinTxt, 0, .PostScript
+TrainerFisherKoi:
+; lmao
+	trainer FISHER, KOI, EVENT_BEAT_FISHER_KOI, .SeenTxt, .WinTxt, 0, .PostScript
 
 .SeenTxt:
-	text "I did it!"
-	para "I caught a huge"
-	line "one!"
+	text "All hail MAGIKARP!"
 	done
 
 .WinTxt:
-	text "What a huge dis-"
-	line "appointment."
+	text "No! MAGIKARP!"
 	done
+
 
 .PostScript:
 	endifjustbattled
 	jumptextfaceplayer .PSTxt
 
 .PSTxt:
-	text "Ah well."
-	para "I probably should"
-	line "be happy I made"
-	para "such a catch in-"
-	line "stead of getting"
-	para "ornery about"
-	line "losing."
+	text "You should be"
+	line "ashamed!"
+	para "Hurting MAGIKARP"
+	line "is practically a"
+	cont "crime!"
 	done
 
 TrainerLassTina:
@@ -129,5 +126,5 @@ Route32North_MapEvents:
 
 	db 2 ; object events
 	object_event  4, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassTina, EVENT_TALKED_TO_LASS_TINA
-	object_event 10, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFisherGeorge, -1
+	object_event 10, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFisherKoi, -1
 

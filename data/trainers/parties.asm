@@ -2713,9 +2713,9 @@ FisherGroup:
 	next_party ; FISHER (29)
 		string "KOI"
 		db     TRAINERTYPE_NORMAL
-		dbw    15, MAGIKARP
-		dbw    15, MAGIKARP
-		dbw    15, MAGIKARP
+		dbw    9, MAGIKARP
+		dbw    9, MAGIKARP
+		dbw    9, MAGIKARP
 	end_party
 
 
