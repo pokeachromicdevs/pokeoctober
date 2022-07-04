@@ -332,7 +332,7 @@ KRIS EQU __enum__
 	const SABRINA1
 
 	trainerclass BUG_CATCHER ; 24
-	const BC_MAX
+	const BC_NATE
 	const ROB
 	const ED
 	const STANLEY1
@@ -514,7 +514,7 @@ KRIS EQU __enum__
 	const COREY
 
 	trainerclass FIREBREATHER ; 30
-	const OTIS
+	const FB_ROB
 	const DICK
 	const NED
 	const BURT
@@ -755,5 +755,6 @@ KRIS EQU __enum__
 	
 	trainerclass MANCHILD
 	const MIGUEL
+	const MARCO
 	
 NUM_TRAINER_CLASSES EQU __enum__

@@ -7,6 +7,12 @@
 	const ROUTE33_BUGSY
 	const ROUTE33_BLOCKER
 	const ROUTE33_RIVAL
+	const ROUTE33_NERD
+	const ROUTE33_BUG_CATCHER
+	const ROUTE33_MANCHILD
+	const ROUTE33_FIREBREATHER
+	const ROUTE33_HIKER_GUY
+	
 
 Route33_MapScripts:
 	db 3 ; scene scripts
@@ -16,12 +22,24 @@ Route33_MapScripts:
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .LoadCallback
-	callback MAPCALLBACK_SPRITES, .HideRival
+	callback MAPCALLBACK_SPRITES, .CheckNPCAppear
 
 .LoadCallback:
 	setevent EVENT_ROUTE33_BUGSY_APPEARS
 	return
 
+.CheckNPCAppear:
+	checkevent EVENT_BEAT_BUGSY
+	iftrue .appears
+; some npcs disappear before bugsy is beaten
+	disappear ROUTE33_HIKER_GUY
+
+	sjump .HideRival
+.appears
+; some npcs appear once bugsy is beaten
+	appear ROUTE33_HIKER_GUY
+
+	;sjump .HideRival
 .HideRival:
 	checkscene
 	iftrue .done ; if not SCENE_ROUTE33_NOTHING
@@ -227,9 +245,10 @@ Route33_EncounterKaren:
 	applymovement ROUTE33_BUGSY, .BugsyGoingHome
 	disappear ROUTE33_BUGSY
 
-; rockets go away except for one
+; rockets go away
 	disappear ROUTE33_ROCKET_1
 	disappear ROUTE33_ROCKET_2
+	disappear ROUTE33_ROCKET_HYUCK
 
 	setmapscene ALDER_TOWN, SCENE_ALDER_TOWN_GYM_UNLOCKED
 	moveobject FOLLOWER, 43, 11
@@ -611,6 +630,93 @@ Route33CaveBlockageScript:
 	para "then we'll open"
 	line "this place up."
 	done
+	
+TrainerBugCatcherNate:
+	trainer BUG_CATCHER, BC_NATE, EVENT_BEAT_BUG_CATCHER_NATE, .Seen, .Beaten, 0, .After
+
+.Seen
+	text "MT. HIVE is a bug-"
+	line "catcher's paradise!"
+	done
+
+.Beaten
+	text "You just had to"
+	line "ruin the fun,"
+	cont "didn't you?"
+	done
+
+.After
+	endifjustbattled
+	jumptext .AfterText
+	end
+
+.AfterText
+	text "I caught all my"
+	line "bugs here!"
+	para "Aren't they great?"
+	done
+
+TrainerManchildMarco:
+	trainer MANCHILD, MARCO, EVENT_BEAT_MANCHILD_MARCO, .Seen, .Beaten, 0, .After
+
+.Seen
+	text "A-are there bugs"
+	line "at my feet<...>?"
+	done
+
+.Beaten
+	text "O-oh<...>!"
+	done
+
+.After
+	endifjustbattled
+	jumptext .AfterText
+	end
+
+.AfterText
+	text "I'm on my way to"
+	line "see my grandma in"
+	para "GOLDENROD, but"
+	line "bug-types really"
+	cont "frighten me<...>"
+	done
+
+TrainerFirebreatherRob:
+	trainer FIREBREATHER, FB_ROB, EVENT_BEAT_FIREBREATHER_ROB, .Seen, .Beaten, 0, .After
+
+.Seen
+	text "Go! My<...> not-bug-"
+	line "typed<...> SLUGMA!"
+	done
+
+.Beaten
+	text "Strange, isn't it?"
+	done
+
+.After
+	endifjustbattled
+	jumptext .AfterText
+
+.AfterText
+	text "Seriously, if"
+	line "SLUGMA descended"
+	para "from slugs, then"
+	line "why isn't it a bug-"
+	cont "type #MON?"
+	para "It's one of the"
+	line "greatest mysteries"
+	cont "to me."
+	done
+
+Route33HikerGuyScript:
+	jumptextfaceplayer .Txt
+	
+.Txt:
+	text "Phew! That was"
+	line "a long trek."
+	para "It's quite the view"
+	line "from up here!"
+	done
 
 Route33_MapEvents:
 	db 0, 0 ; filler
@@ -627,11 +733,11 @@ Route33_MapEvents:
 	db 1 ; bg events
 	bg_event 54,  6, BGEVENT_READ, Route33_Sign
 
-	db 9 ; object events
+	db 13 ; object events
 ; rocket grunts
 	object_event 54,  9, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
 	object_event 50,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
-	object_event 47,  2, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33Hyuck, -1
+	object_event 47,  2, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33Hyuck, EVENT_BEAT_ROUTE33_KAREN
 ; karen + kurt
 	object_event 42, 10, SPRITE_KAREN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
 	object_event 42, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_KAREN
@@ -640,3 +746,8 @@ Route33_MapEvents:
 	object_event 37,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, Route33BugCatcherScript, EVENT_BEAT_BUGSY
 	object_event 61, 17, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_BEAT_ROUTE33_RIVAL
 	object_event 14,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, Route33CaveBlockageScript, -1
+; trainers
+	object_event 28,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherNate, -1
+	object_event 20,  8, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerManchildMarco, -1
+	object_event 17, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFirebreatherRob, -1
+	object_event 39,  4, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33HikerGuyScript, EVENT_HIKER_GUY_ATOP_MT_HIVE

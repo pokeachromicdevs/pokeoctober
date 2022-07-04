@@ -2311,11 +2311,11 @@ SabrinaGroup:
 
 BugCatcherGroup:
 	next_party ; BUG_CATCHER (1)
-	db "MAX@", TRAINERTYPE_NORMAL
-	db 3
-	dw VENONAT
-	db 4
-	dw LEDYBA
+		string  "NATE"
+		db      TRAINERTYPE_NORMAL
+		dbw 18, SILKANE
+		dbw 18, BEEDRILL
+		dbw 20, TERRACHNID
 	end_party
 
 	next_party ; BUG_CATCHER (2)
@@ -3803,13 +3803,10 @@ BurglarGroup:
 
 FirebreatherGroup:
 	next_party ; FIREBREATHER (1)
-	db "OTIS@", TRAINERTYPE_NORMAL
-	db 29
-	dw MAGMAR
-	db 32
-	dw WEEZING
-	db 29
-	dw MAGMAR
+		string "ROB"
+		db     TRAINERTYPE_NORMAL
+		dbw    19, SLUGMA
+		dbw    20, SLUGMA
 	end_party
 
 	next_party ; FIREBREATHER (2)
@@ -5575,6 +5572,14 @@ ManchildGroup:
 	dw MAGNEMITE
 	db 12
 	dw COALTA
+	end_party
+	
+	next_party
+		string "MARCO"
+		db     TRAINERTYPE_NORMAL
+		dbw    15, COALTA
+		dbw    16, SMUJJ
+		;dbw    18, OREFRY
 	end_party
 
 	end_party_list

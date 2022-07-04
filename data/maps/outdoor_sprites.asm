@@ -222,6 +222,10 @@ AzaleaGroupSprites:
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_SUPER_NERD
+		static_sprite SPRITE_YANMEGA
+		static_sprite SPRITE_MANCHILD
+		static_sprite SPRITE_FISHER
+		static_sprite SPRITE_HIKER
 
 	end_outdoor_sprites
 
