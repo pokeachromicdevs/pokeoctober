@@ -2802,6 +2802,9 @@ OpenBox:
 	text_end
 
 NoEffect:
+	ld a, [wCurItem]
+	cp OAKS_PARCEL
+	jp z, BelongsToSomeoneElseMessage
 	jp IsntTheTimeMessage
 	
 Play_SFX_FULL_HEAL:
