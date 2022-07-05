@@ -343,11 +343,15 @@
 	const EVENT_OFFICER_IN_R33_GATE
 	const EVENT_GRUNT_IN_R33_GATE
 
+; azalea gym
+	const EVENT_BEAT_MORTY
+
+; azalea town
+	const EVENT_GYM_GUY_IN_AZALEA_TOWN
+
 ; demo limit
 	const EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
 
-	const EVENT_172
-	const EVENT_173
 	const EVENT_174
 	const EVENT_175
 	const EVENT_176
