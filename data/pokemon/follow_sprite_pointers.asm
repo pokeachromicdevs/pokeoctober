@@ -178,7 +178,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;ARIADOS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CROBAT
 	follow_sprite YanmaSpriteGFX,  PAL_OW_GREEN ;YANMA
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TONBOSS
+	follow_sprite YanmegaSpriteGFX, PAL_OW_GREEN ;TONBOSS
 	follow_sprite WooperSpriteGFX, PAL_OW_GREEN ;BELLIGNAN
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;CHINCHOU
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;LANTURN
