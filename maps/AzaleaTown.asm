@@ -28,11 +28,18 @@ AzaleaTown_GymBlocker:
 .DoBlockingScript:
 	showemote EMOTE_SHOCK, AZALEATOWN_GYM_GUY, 15
 	turnobject AZALEATOWN_GYM_GUY, RIGHT
+	turnobject PLAYER, LEFT
 	opentext
 	writetext AzaleaTown_GymGuyText1
 	waitbutton
 	closetext
 	follow PLAYER, AZALEATOWN_GYM_GUY
+	checkfollower
+	iffalse .SkipFollower1
+; lock and move follower to the left
+	followerstop
+	applymovement FOLLOWER, .MoveLeft
+.SkipFollower1
 	applymovement PLAYER, .MoveDown
 	stopfollow
 	turnobject AZALEATOWN_GYM_GUY, DOWN
@@ -42,10 +49,19 @@ AzaleaTown_GymBlocker:
 	waitbutton
 	closetext
 	applymovement AZALEATOWN_GYM_GUY, .GoBackToBase
+	checkfollower
+	iffalse .SkipFollower2
+	followerresume
+	applymovement FOLLOWER, .MoveDown2
+.SkipFollower2
 	end
-
+.MoveLeft
+	step LEFT
+	turn_head DOWN
+	step_end
 .MoveDown
 	step DOWN
+.MoveDown2
 	step DOWN
 	step_end
 
