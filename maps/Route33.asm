@@ -12,13 +12,16 @@
 	const ROUTE33_MANCHILD
 	const ROUTE33_FIREBREATHER
 	const ROUTE33_HIKER_GUY
-	
+	const ROUTE33_ELM
+	const ROUTE33_KURT_2
+	const ROUTE33_TONBOSS
 
 Route33_MapScripts:
-	db 3 ; scene scripts
+	db 4 ; scene scripts
 	scene_script .EmptyScene ; SCENE_ROUTE33_NOTHING
 	scene_script .EmptyScene ; SCENE_ROUTE33_BATTLED_KAREN
 	scene_script .EmptyScene ; SCENE_ROUTE33_BATTLED_RIVAL
+	scene_script .EmptyScene ; SCENE_ROUTE33_BATTLED_KURT
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .LoadCallback
@@ -29,6 +32,8 @@ Route33_MapScripts:
 	return
 
 .CheckNPCAppear:
+; always hide tonboss
+	disappear ROUTE33_TONBOSS
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .appears
 ; some npcs disappear before bugsy is beaten
@@ -718,6 +723,190 @@ Route33HikerGuyScript:
 	line "from up here!"
 	done
 
+Route33_MoveLeftBeforeEncounterKurt:
+	applymovement PLAYER, .MoveLeft
+	sjump Route33_EncounterKurt
+
+.MoveLeft:
+	step LEFT
+	step_end
+
+Route33_EncounterKurt:
+	hidefollower ; just deal with this for now...
+	turnobject ROUTE33_ELM, UP
+	showemote EMOTE_SHOCK, ROUTE33_ELM, 15
+	turnobject PLAYER, DOWN
+	opentext
+	writetext .ElmText1
+	waitbutton
+	closetext
+	turnobject ROUTE33_KURT_2, DOWN
+	opentext
+	writetext .KurtText1
+	waitbutton
+	closetext
+	applymovement ROUTE33_KURT_2, .KurtToPlayer
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext .KurtText1b
+	waitbutton
+	closetext
+; kurt battle here
+	opentext
+	writetext .KurtText2
+	waitbutton
+	closetext
+	end
+
+.KurtToPlayer:
+	step UP
+	turn_head LEFT
+	step_end
+
+.ElmText1:
+	text "ELM: Ah!"
+	line "<PLAYER>! It's"
+	para "been a while,"
+	line "hasn't it?"
+	para "I was just chatt-"
+	line "ing away with KURT"
+	para "here for a bit be-"
+	line "fore I set out to"
+	para "do my research on"
+	line "ROUTE 33!"
+	para "Well, more"
+	line "specifically, MT."
+	cont "HIVE."
+	para "Then again, every"
+	line "inch of ROUTE 33"
+	para "is part of MT."
+	line "HIVE<...>"
+	done
+
+.KurtText1:
+	text "KURT: Indeed, MT."
+	line "HIVE covers a very"
+	cont "large area."
+	para "While I was"
+	line "healing in the"
+	para "#MON CENTER, I"
+	line "realized that you"
+	para "must be quite"
+	line "strong to beat the"
+	para "ROCKETs that were"
+	line "harrassing me, and"
+	para "you even bested"
+	line "their commander to"
+	cont "boot!"
+	done
+
+.KurtText1b:
+	text "Now that I'm fully"
+	line "recovered, I wish"
+	para "to challenge you"
+	line "myself, to see"
+	para "just exactly how"
+	line "strong you are."
+	done
+
+.KurtWinText:
+	text "You're even"
+	line "stronger than I"
+	cont "anticipated."
+	para "Congratulations."
+	done
+
+.KurtText2:
+	text "KURT: Marvelous."
+	para "I can already tell"
+	line "you're going to get"
+	cont "far in life."
+	para "Well, I better get"
+	line "going back home."
+	para "My granddaughter,"
+	line "MAIZIE, must be"
+	para "worried sick over"
+	line "me."
+	para "Say, child, if you"
+	line "come to my home in"
+	para "AZALEA TOWN, I can"
+	line "give you a gift as"
+	para "thanks for saving"
+	line "me."
+	para "Farewell to both"
+	line "of you, and I hope"
+	para "your journeys go"
+	line "well."
+	done
+
+.ElmText2:
+	text "Yeah<...> I already"
+	line "heard about some"
+	para "TEAM ROCKET mem-"
+	line "bers roaming"
+	para "around here before"
+	line "I left the LAB,"
+	cont "but sheesh!"
+	para "I still wasn't ex-"
+	line "pecting poor KURT"
+	para "to end up getting"
+	line "his back slashed"
+	cont "up by them."
+	para "Thank you so much"
+	line "for saving him."
+	para "He's a kind man,"
+	line "and he deserves"
+	para "far better than"
+	line "dealing with such"
+	cont "vile people."
+	para "Anyways, I better"
+	line "get on with my"
+	cont "research."
+	done
+	
+.TonbossText1:
+	text "???: Bzzzzzzzzzzz!"
+	line "Zzzzzzzzzz!"
+	done
+
+.ElmText3:
+	text "<...>Wait, do you hear"
+	line "something?"
+	done
+
+.TonbossText2:
+	text "TONBOSS: Bossuuuu!"
+	done
+
+.ElmText4:
+	text "ELM: AAH! I-It's a"
+	line "TONBOSS!"
+	para "Watch out!"
+	done
+
+.ElmText5:
+	text "What on earth was"
+	line "that about?!"
+	para "TONBOSS isn't nor-"
+	line "mally spotted"
+	para "around here, and"
+	line "I doubt my"
+	para "TOTODILE could've"
+	line "handled it right"
+	cont "now."
+	para "Thanks for hand-"
+	line "ling it,"
+	cont "<PLAYER>!"
+	para "I'm glad I could"
+	line "depend on you!"
+	para "I should be off"
+	line "now before"
+	para "anything else"
+	line "happens<...>"
+	para "S-Stay safe out"
+	line "there!"
+	done
+
 Route33_MapEvents:
 	db 0, 0 ; filler
 
@@ -726,14 +915,16 @@ Route33_MapEvents:
 	warp_event 57,  7, ROUTE_33_EAST_GATE, 2
 	warp_event  0,  7, ROUTE_33_WEST_GATE, 1
 
-	db 2 ; coord events
+	db 4 ; coord events
 	coord_event 44, 10, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
 	coord_event 51, 10, SCENE_ROUTE33_BATTLED_KAREN, Route33_EncounterRival
+	coord_event  8,  8, SCENE_ROUTE33_BATTLED_RIVAL, Route33_EncounterKurt
+	coord_event  9,  8, SCENE_ROUTE33_BATTLED_RIVAL, Route33_MoveLeftBeforeEncounterKurt
 
 	db 1 ; bg events
 	bg_event 54,  6, BGEVENT_READ, Route33_Sign
 
-	db 13 ; object events
+	db 17 ; object events
 ; rocket grunts
 	object_event 54,  9, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRoute33RocketGrunt1, EVENT_BEAT_ROUTE33_KAREN
 	object_event 50,  8, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerRoute33RocketGrunt2, EVENT_BEAT_ROUTE33_KAREN
@@ -751,3 +942,8 @@ Route33_MapEvents:
 	object_event 20,  8, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerManchildMarco, -1
 	object_event 17, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFirebreatherRob, -1
 	object_event 39,  4, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33HikerGuyScript, EVENT_HIKER_GUY_ATOP_MT_HIVE
+; kurt battle 2
+	object_event  8,  9, SPRITE_ELM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_KURT
+	object_event  9,  9, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_KURT
+	object_event  8,  10, SPRITE_YANMEGA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_TONBOSS
+

@@ -218,6 +218,7 @@ AzaleaGroupSprites:
 		walk_sprite SPRITE_SILVER
 		walk_sprite SPRITE_BUG_CATCHER
 		walk_sprite SPRITE_FLEDGLING
+		walk_sprite SPRITE_ELM
 	
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
