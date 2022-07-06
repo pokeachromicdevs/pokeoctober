@@ -682,7 +682,11 @@ MapObjectMovementPattern:
 	jp HandleMovementData
 
 .MovementFollower:
+	ld a, [wIsPartyFollowerStill]
+	and a
+	jr nz, .skip_follow
 	call .DoFollowNotExact
+.skip_follow
 	ret nc
 	push af
 		ld a, [wFollowerNextMovement]

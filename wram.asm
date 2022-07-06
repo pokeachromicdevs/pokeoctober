@@ -2469,8 +2469,8 @@ wGameTimeMinutes:: db ; d4c6
 wGameTimeSeconds:: db ; d4c7
 wGameTimeFrames::  db ; d4c8
 
-	ds 2
-
+	ds 1
+wIsPartyFollowerStill:: db ; 1 = follower stays put
 wCurDay:: db ; d4cb
 wWhichPartyFollower:: db ; 1 = enabled
 

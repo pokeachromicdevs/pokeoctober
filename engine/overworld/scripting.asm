@@ -244,6 +244,8 @@ ScriptCommandTable:
 	dw Script_showfollower               ; b2
 	dw Script_checkfollower              ; b3
 	dw Script_ifequal16                  ; b4
+	dw Script_followerstop               ; b5
+	dw Script_followerresume             ; b6
 
 StartScript:
 	ld hl, wScriptFlags
@@ -258,6 +260,16 @@ CheckScript:
 StopScript:
 	ld hl, wScriptFlags
 	res SCRIPT_RUNNING, [hl]
+	ret
+
+Script_followerstop:
+	ld a, 1
+	ld [wIsPartyFollowerStill], a
+	ret
+
+Script_followerresume:
+	xor a
+	ld [wIsPartyFollowerStill], a
 	ret
 
 Script_callasm:

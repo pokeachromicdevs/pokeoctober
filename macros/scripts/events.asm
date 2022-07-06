@@ -1126,3 +1126,13 @@ ifequal16: MACRO
 	dw \1 ; 16-bit little endian value
 	dw \2 ; script
 ENDM
+
+	enum followerstop_command
+followerstop: MACRO ; stops walking Pokemon and locks it in place
+	db followerstop_command
+ENDM
+
+	enum followerresume_command
+followerresume: MACRO ; resumes walking pokemon
+	db followerresume_command
+ENDM
