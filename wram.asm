@@ -2416,8 +2416,6 @@ wBugContestSecsRemaining:: db ; d46d
 	ds 2
 wMapStatusEnd:: ; d470
 
-	ds 2
-
 wCrystalData::
 wPlayerGender:: ; d472
 ; bit 0:
@@ -2455,8 +2453,6 @@ wStartMinute:: db ; d4b8
 wStartSecond:: db ; d4b9
 
 wRTC:: ds 4 ; d4ba
-
-	ds 4
 
 wDST:: ; d4c2
 ; bit 7: dst
@@ -2502,22 +2498,26 @@ wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 ; ds 40
 
 wMapObjects:: ; d71e
-wPlayerObject:: map_object wPlayer
-wMap1Object::   map_object wMap1
-wMap2Object::   map_object wMap2
-wMap3Object::   map_object wMap3
-wMap4Object::   map_object wMap4
-wMap5Object::   map_object wMap5
-wMap6Object::   map_object wMap6
-wMap7Object::   map_object wMap7
-wMap8Object::   map_object wMap8
-wMap9Object::   map_object wMap9
-wMap10Object::  map_object wMap10
-wMap11Object::  map_object wMap11
-wMap12Object::  map_object wMap12
-wMap13Object::  map_object wMap13
-wMap14Object::  map_object wMap14
-wMap15Object::  map_object wMap15
+wPlayerObject:: map_object wPlayer ; 1 - Player
+wMap1Object::   map_object wMap1   ; 2 - Follower
+wMap2Object::   map_object wMap2   ; 3
+wMap3Object::   map_object wMap3   ; 4
+wMap4Object::   map_object wMap4   ; 5
+wMap5Object::   map_object wMap5   ; 6
+wMap6Object::   map_object wMap6   ; 7
+wMap7Object::   map_object wMap7   ; 8
+wMap8Object::   map_object wMap8   ; 9
+wMap9Object::   map_object wMap9   ; 10
+wMap10Object::  map_object wMap10  ; 11
+wMap11Object::  map_object wMap11  ; 12
+wMap12Object::  map_object wMap12  ; 13
+wMap13Object::  map_object wMap13  ; 14
+wMap14Object::  map_object wMap14  ; 15
+wMap15Object::  map_object wMap15  ; 16
+wMap16Object::  map_object wMap16  ; 17
+wMap17Object::  map_object wMap17  ; 18
+wMap18Object::  map_object wMap18  ; 19
+wMap19Object::  map_object wMap19  ; 20
 wMapObjectsEnd::
 
 wObjectMasks:: ds NUM_OBJECTS ; d81e

@@ -194,7 +194,7 @@ SPAWN_RED   EQU 2
 ; wMapObjects:: ; d71e
 PLAYER_OBJECT EQU 0
 FOLLOWER_OBJECT EQU 1
-NUM_OBJECTS   EQU 17
+NUM_OBJECTS   EQU 20
 
 ; wStatusFlags:: ; d84c
 	const_def
