@@ -490,19 +490,11 @@ InitializeEventsScript:
 	setflag ENGINE_ROCKET_SIGNAL_ON_CH20
 	setflag ENGINE_ROCKETS_IN_MAHOGANY
 
-; init silent town varsprites
+; init varsprites
 	variablesprite SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITE_SILVER
-
-; init other varsprites
-	variablesprite SPRITE_WEIRD_TREE, SPRITE_SUDOWOODO
-	variablesprite SPRITE_OLIVINE_RIVAL, SPRITE_SILVER
-	variablesprite SPRITE_AZALEA_ROCKET, SPRITE_ROCKET
-	variablesprite SPRITE_FUCHSIA_GYM_1, SPRITE_JANINE
-	variablesprite SPRITE_FUCHSIA_GYM_2, SPRITE_JANINE
-	variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_JANINE
-	variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_JANINE
-	variablesprite SPRITE_COPYCAT, SPRITE_LASS
-	variablesprite SPRITE_JANINE_IMPERSONATOR, SPRITE_LASS
+	;variablesprite SPRITE_COPYCAT, SPRITE_LASS
+	;variablesprite SPRITE_JANINE_IMPERSONATOR, SPRITE_LASS
+	variablesprite SPRITE_ROUTE33_KAREN_ELM, SPRITE_KAREN
 
 ; finish
 	setevent EVENT_INITIALIZED_EVENTS

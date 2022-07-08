@@ -212,13 +212,12 @@ AzaleaGroupSprites:
 	def_walk_sprite
 		walk_sprite SPRITE_KURT
 		walk_sprite SPRITE_BUGSY
-		walk_sprite SPRITE_KAREN
-		walk_sprite SPRITE_AZALEA_ROCKET
+		walk_sprite SPRITE_ROUTE33_KAREN_ELM
+		walk_sprite SPRITE_ROCKET
 		walk_sprite SPRITE_ROCKET_GIRL
 		walk_sprite SPRITE_SILVER
 		walk_sprite SPRITE_BUG_CATCHER
 		walk_sprite SPRITE_FLEDGLING
-		walk_sprite SPRITE_ELM
 	
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
@@ -237,7 +236,7 @@ GoldenrodGroupSprites:
 OlivineGroupSprites:
 CianwoodGroupSprites:
 	def_walk_sprite
-		walk_sprite SPRITE_OLIVINE_RIVAL
+		walk_sprite SPRITE_SILVER
 		walk_sprite SPRITE_POKEFAN_M
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_BUENA
