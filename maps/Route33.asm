@@ -12,8 +12,8 @@
 	const ROUTE33_MANCHILD
 	const ROUTE33_FIREBREATHER
 	const ROUTE33_HIKER_GUY
-	const ROUTE33_ELM
 	const ROUTE33_KURT_2
+	const ROUTE33_ELM
 	const ROUTE33_TONBOSS
 
 Route33_MapScripts:
@@ -724,15 +724,25 @@ Route33HikerGuyScript:
 	done
 
 Route33_MoveLeftBeforeEncounterKurt:
+	hidefollower
 	applymovement PLAYER, .MoveLeft
-	sjump Route33_EncounterKurt
+	scall Route33_EncounterKurt
+	moveobject FOLLOWER, 8, 7
+	showfollower
+	end
 
 .MoveLeft:
 	step LEFT
 	step_end
 
+Route33_HideFollowerBeforeEncounterKurt:
+	hidefollower
+	scall Route33_EncounterKurt
+	moveobject FOLLOWER, 8, 7
+	showfollower
+	end
+
 Route33_EncounterKurt:
-	hidefollower ; just deal with this for now...
 	turnobject ROUTE33_ELM, UP
 	showemote EMOTE_SHOCK, ROUTE33_ELM, 15
 	turnobject PLAYER, DOWN
@@ -751,12 +761,100 @@ Route33_EncounterKurt:
 	writetext .KurtText1b
 	waitbutton
 	closetext
-; kurt battle here
+; battle
+	winlosstext .KurtWinText, 0
+	loadtrainer BALLSMITH, KURT
+	startbattle
+; after battle
+	reloadmapafterbattle
 	opentext
 	writetext .KurtText2
 	waitbutton
 	closetext
+	applymovement ROUTE33_KURT_2, .KurtLeaves
+	disappear ROUTE33_KURT_2
+; elm talk
+	turnobject PLAYER, DOWN
+	opentext
+	writetext .ElmText2
+	waitbutton
+	closetext
+	opentext
+	writetext .TonbossText1
+	cry TONBOSS
+	waitsfx
+	playmusic MUSIC_NONE
+	closetext
+	turnobject ROUTE33_ELM, RIGHT
+	opentext
+	writetext .ElmText3
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	appear ROUTE33_TONBOSS
+	special ReloadSpritesNoPalettes
+	special UpdateSprites
+	wait 8
+	special FadeInQuickly
+	opentext
+	writetext .TonbossText2
+	cry TONBOSS
+	waitsfx
+	playmusic MUSIC_ROCKET_ENCOUNTER
+	turnobject ROUTE33_ELM, UP
+	turnobject PLAYER, UP
+	closetext
+	opentext
+	writetext .ElmText4
+	waitbutton
+	closetext
+; tonboss battle
+	loadwildmon TONBOSS, 16
+	startbattle
+; after tonboss
+	reloadmapafterbattle
+	turnobject PLAYER, DOWN
+	opentext
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .has_totodile
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .has_cyndaquil
+	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	iftrue .has_chikorita
+; no special handling here
+.has_totodile
+	getmonname STRING_BUFFER_3, TOTODILE
+	sjump .last_elm
+.has_chikorita
+	getmonname STRING_BUFFER_3, CHIKORITA
+	sjump .last_elm
+.has_cyndaquil
+	getmonname STRING_BUFFER_3, CYNDAQUIL
+	;sjump .last_elm
+.last_elm
+	writetext .ElmText5
+	waitbutton
+	closetext
+	applymovement ROUTE33_ELM, .ElmGTFO
+	disappear ROUTE33_ELM
+	setscene SCENE_ROUTE33_BATTLED_KURT
 	end
+
+.ElmGTFO:
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	step_end
+
+.KurtLeaves:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
 
 .KurtToPlayer:
 	step UP
@@ -879,7 +977,7 @@ Route33_EncounterKurt:
 	done
 
 .ElmText4:
-	text "ELM: AAH! I-It's a"
+	text "ELM: Aah! I-It's a"
 	line "TONBOSS!"
 	para "Watch out!"
 	done
@@ -891,7 +989,9 @@ Route33_EncounterKurt:
 	line "mally spotted"
 	para "around here, and"
 	line "I doubt my"
-	para "TOTODILE could've"
+	para "@"
+	text_ram wStringBuffer3
+	text " could've"
 	line "handled it right"
 	cont "now."
 	para "Thanks for hand-"
@@ -918,7 +1018,7 @@ Route33_MapEvents:
 	db 4 ; coord events
 	coord_event 44, 10, SCENE_ROUTE33_NOTHING, Route33_EncounterKaren
 	coord_event 51, 10, SCENE_ROUTE33_BATTLED_KAREN, Route33_EncounterRival
-	coord_event  8,  8, SCENE_ROUTE33_BATTLED_RIVAL, Route33_EncounterKurt
+	coord_event  8,  8, SCENE_ROUTE33_BATTLED_RIVAL, Route33_HideFollowerBeforeEncounterKurt
 	coord_event  9,  8, SCENE_ROUTE33_BATTLED_RIVAL, Route33_MoveLeftBeforeEncounterKurt
 
 	db 1 ; bg events
@@ -943,7 +1043,7 @@ Route33_MapEvents:
 	object_event 17, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFirebreatherRob, -1
 	object_event 39,  4, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33HikerGuyScript, EVENT_HIKER_GUY_ATOP_MT_HIVE
 ; kurt battle 2
-	object_event  8,  9, SPRITE_ELM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_KURT
 	object_event  9,  9, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_KURT
-	object_event  8,  10, SPRITE_YANMEGA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_TONBOSS
+	object_event  8,  9, SPRITE_ELM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_KURT
+	object_event  8,  7, SPRITE_YANMEGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_TONBOSS
 
