@@ -79,7 +79,7 @@ AlderHappinessRaterTeacherText:
 
 	para "Your @"
 	text_ram wStringBuffer3
-	text
+	text ""
 	line "scores @"
 	text_decimal wScriptVar, 1, 0
 	text "/255."
