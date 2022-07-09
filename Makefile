@@ -39,7 +39,8 @@ IPSPATCH ?= tools/ipspatch
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all clean tidy tools engine/menus/main_menu.asm
+.PHONY: all clean tidy tools \
+	engine/menus/main_menu.asm # always rebuild this (ensuring the version is accurate)
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
@@ -54,7 +55,7 @@ clean: tidy
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
-	rm -f $(roms) $(october_obj) $(october_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(roms) $(october_obj) $(october_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) *.ips
 	$(MAKE) clean -C tools/
 
 tools:
@@ -81,7 +82,7 @@ endef
 
 # Build tools when building the rom.
 # This has to happen before the rules are processed, since that's when scan_includes is run.
-ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
+ifeq (,$(filter clean tidy tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
