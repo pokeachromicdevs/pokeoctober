@@ -741,3 +741,5 @@ ENDM
 	map_attributes CherrygrovePagoda3F, CHERRYGROVE_PAGODA_3F, $00, 0
 	map_attributes CherrygrovePagoda4F, CHERRYGROVE_PAGODA_4F, $00, 0
 	map_attributes CherrygrovePagoda5F, CHERRYGROVE_PAGODA_5F, $00, 0
+
+	map_attributes AzaleaGym, AZALEA_GYM, $00, 0

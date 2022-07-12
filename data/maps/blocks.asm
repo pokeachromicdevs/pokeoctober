@@ -1026,3 +1026,6 @@ CherrygrovePagoda4F_Blocks:
 
 CherrygrovePagoda5F_Blocks:
 	INCBIN "maps/CherrygrovePagoda5F.blk"
+
+AzaleaGym_Blocks::
+	INCBIN "maps/AzaleaGym.blk"

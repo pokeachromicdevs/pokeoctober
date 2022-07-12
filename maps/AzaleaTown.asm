@@ -105,10 +105,11 @@ AzaleaTown_GymGuyText4:
 AzaleaTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 4 ; warp events
 	warp_event 21,  7, ROUTE_33_WEST_GATE, 3
 	warp_event 11,  5, AZALEA_POKECENTER_1F, 1
 	warp_event 15,  5, AZALEA_MART, 1
+	warp_event  4, 3, AZALEA_GYM, 1
 
 	db 1 ; coord events
 	coord_event 9, 0, 0, AzaleaTown_GymBlocker

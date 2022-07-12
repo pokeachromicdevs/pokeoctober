@@ -224,6 +224,7 @@ ENDM
 	map_const ALDER_HAPPINESS_RATER,                        4,  4 ;  5
 	map_const ROUTE_33_EAST_GATE,                           5,  4 ; 22
 	map_const ROUTE_33_WEST_GATE,                           7,  4 ; 22
+	map_const AZALEA_GYM,                                  10, 13 ;
 
 	newgroup                                                      ;  9
 
