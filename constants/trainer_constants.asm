@@ -259,6 +259,7 @@ KRIS EQU __enum__
 	const VALERIE
 	const OLIVIA
 	const PEONY
+	const ANDREA
 
 	trainerclass POKEMANIAC ; 1e
 	const LARRY
@@ -642,6 +643,7 @@ KRIS EQU __enum__
 	const ETHEL
 	const REBECCA
 	const DORIS
+	const DOROTHY
 
 	trainerclass BOARDER ; 3a
 	const RONALD
@@ -722,6 +724,7 @@ KRIS EQU __enum__
 	const STANLEY4
 	const STANLEY5
 	const CURTIS
+	const FRANK
 	
 	trainerclass PROFESSOR   ; 45
 	const OAK1_1_BULBASAUR
@@ -756,5 +759,6 @@ KRIS EQU __enum__
 	trainerclass MANCHILD
 	const MIGUEL
 	const MARCO
+	const ZACHARY
 	
 NUM_TRAINER_CLASSES EQU __enum__

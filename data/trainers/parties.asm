@@ -82,18 +82,15 @@ BugsyGroup:
 MortyGroup:
 	next_party ; MORTY (1)
 		db "MORTY@", TRAINERTYPE_MOVES
-		db 21
-		dw GASTLY
-		dw LICK, SPITE, MEAN_LOOK, CURSE
-		db 21
+		db 34
 		dw HAUNTER
 		dw HYPNOSIS, MIMIC, CURSE, NIGHT_SHADE
-		db 25
-		dw GENGAR
+		db 35
+		dw TOPSYSPOT
+		dw STOMP, PSYBEAM, LICK, CONFUSE_RAY
+		db 37
+		dw GENGAR ; TODO: fire-ghost fox
 		dw HYPNOSIS, SHADOW_BALL, MEAN_LOOK, DREAM_EATER
-		db 23
-		dw HAUNTER
-		dw SPITE, MEAN_LOOK, MIMIC, NIGHT_SHADE
 	end_party
 	end_party_list
 
@@ -1833,6 +1830,14 @@ BeautyGroup:
 		dbw    17, MOIBELLE
 		;dbw    17, KOIJACK
 		dbw    18, SMOOCHUM
+	end_party
+
+	next_party
+		string "ANDREA"
+		db     TRAINERTYPE_NORMAL
+		;dbw    25, PANGSHI
+		dbw    25, GASTLY
+		;dbw    26, <something>
 	end_party
 
 	end_party_list
@@ -4605,6 +4610,13 @@ MediumGroup:
 	dw SLOWBRO
 	end_party
 
+	next_party
+		string "DOROTHY"
+		db     TRAINERTYPE_NORMAL
+		dbw    27, BIPULLA
+		dbw    28, MISDREAVUS
+	end_party
+
 	end_party_list
 
 BoarderGroup:
@@ -5183,6 +5195,15 @@ InstructorGroup:
 	db 13
 	dw GASTLY
 	end_party
+
+	next_party
+		string "FRANK"
+		db     TRAINERTYPE_MOVES
+		dbw    25, HAUNTER
+		dw     CURSE, NIGHT_SHADE, SPITE, NO_MOVE
+		dbw    26, GIRAFARIG
+		dw     AGILITY, CONFUSION, STOMP, NO_MOVE
+	end_party
 	
 	end_party_list
 
@@ -5580,6 +5601,13 @@ ManchildGroup:
 		dbw    15, COALTA
 		dbw    16, SMUJJ
 		;dbw    18, OREFRY
+	end_party
+
+	next_party
+		string "ZACHARY"
+		db     TRAINERTYPE_NORMAL
+		dbw    24, GASTLY
+		;dbw    25, STROMEN
 	end_party
 
 	end_party_list
