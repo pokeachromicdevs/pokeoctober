@@ -71,6 +71,7 @@
 	const map_connected_coord     ; 2f
 	const map_unload_follower     ; 30
 	const map_reposition_follower ; 31
+	const map_force_unload_follower ; 32
 map_end EQU -1
 
 ; callback types

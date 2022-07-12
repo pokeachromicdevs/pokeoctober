@@ -110,11 +110,13 @@ MapSetupCommands:
 	dba MapPlayerCoordConnected ; 2f
 	dba UnloadFollowerAsNeeded ; 30
 	dba UpdateFollowerPositionAfterWarp ; 31
+	dba ForceDeleteFollower ; 32
 
 UnloadFollowerAsNeeded:
 	ld a, [wWhichPartyFollower]
 	and a
 	ret nz
+ForceDeleteFollower:
 	ld a, FOLLOWER
 	call DeleteObjectStruct
 	ret

@@ -1028,6 +1028,14 @@ FallIntoMapScript:
 	newloadmap MAPSETUP_FALL
 	playsound SFX_KINESIS
 	applymovement PLAYER, MovementData_0x96c48
+	checkfollower
+	iffalse .skip_follower
+	playsound SFX_STRENGTH
+	earthquake 4
+	playsound SFX_KINESIS
+	appear FOLLOWER
+	applymovement FOLLOWER, MovementData_0x96c48
+.skip_follower
 	playsound SFX_STRENGTH
 	scall LandAfterPitfallScript
 	end
