@@ -99,12 +99,13 @@ OctoberCredits_StringTable:
 			; follower mechanic
 		dw .PokeOrange, .Blank
 			; gym leader music
-		   
+
 	dw .Blank, .Blank
 	dw .Blank, .Blank
 
 	dw .BugTesters, .Blank
 		dw .NieNie, .Blank
+		dw .Soul, .Blank
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -180,4 +181,4 @@ OctoberCredits_StringTable:
 .ThanksFor2:    db "   STAY TUNED FOR   ";;
 .ThanksFor3:    db "       DEMO 2!      ";;
 .PressStart:    db "    -PRESS START-   ";;
-
+.Soul:          db "     SOULCATCHER    ";;
