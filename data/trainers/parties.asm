@@ -5202,7 +5202,7 @@ InstructorGroup:
 		dbw    25, HAUNTER
 		dw     CURSE, NIGHT_SHADE, SPITE, NO_MOVE
 		dbw    26, GIRAFARIG
-		dw     AGILITY, CONFUSION, STOMP, NO_MOVE
+		dw     AGILITY, CONFUSION, FORESIGHT, FORESIGHT
 	end_party
 	
 	end_party_list
