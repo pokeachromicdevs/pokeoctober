@@ -13,7 +13,7 @@ FinalMonTexts::
 	dbw CLAIR,   .ClairText
 
 ; execs
-	dbw KAREN, .KarenText
+	;dbw KAREN, .KarenText
 	;dbw GIOVANNI, .GiovanniText
 
 ; e4
