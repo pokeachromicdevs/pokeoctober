@@ -174,7 +174,7 @@ AzaleaGymMortyScript:
 	para "My name is MORTY,"
 	line "and I am known as"
 	para "'the mystic seer of"
-	line "the future'."
+	line "the future.'"
 	para "I have trained"
 	line "here my entire"
 	para "life, and becoming"
@@ -283,5 +283,5 @@ AzaleaGym_MapEvents:
 	object_event  4, 18, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerManchildZachary, -1
 	object_event  5, 12, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerBeautyAndrea, -1
 	object_event 17, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerInstructorFrank, -1
-	object_event 17,  4, SPRITE_MYSTIC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumDorothy, -1
+	object_event 17,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumDorothy, -1
 	object_event  6,  3, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymMortyScript, -1
