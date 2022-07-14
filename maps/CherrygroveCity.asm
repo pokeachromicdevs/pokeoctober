@@ -14,7 +14,7 @@ CherrygroveCity_MapScripts:
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 	callback MAPCALLBACK_OBJECTS, .MoveBKCallback
-	
+
 .MoveBKCallback:
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue .doMove
@@ -22,13 +22,13 @@ CherrygroveCity_MapScripts:
 .doMove
 	moveobject CHERRYGROVECITY_BIRD_KEEPER1, 25, 6
 	return
-	
+
 .DummyScene0:
 	end
 
 .DummyScene1:
 	end
-	
+
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	return
@@ -163,7 +163,7 @@ MysticWaterGuy:
 .Exit:
 	closetext
 	end
-	
+
 BirdKeeperBlockage:
 	faceplayer
 	jumptext BirdKeeperBlocking
@@ -285,7 +285,7 @@ CherrygroveCity_UnusedMovementData:
 GuideGentIntroText:
 	text "Ah, another"
 	line "rookie, eh?"
-	
+
 	para "Haha!"
 	line "Don't sweat it!"
 
@@ -296,7 +296,7 @@ GuideGentIntroText:
 	para "Anyways, want me"
 	line "to show you the"
 	cont "ropes?"
-	
+
 	para "They don't call"
 	line "me the GUIDE GENT"
 	cont "for no reason!"
@@ -362,7 +362,7 @@ GuideGentGymText:
 	done
 
 GuideGentSeaText:
-	text "Ah, the" 
+	text "Ah, the"
 	line "CHERRYGROVE CITY"
 	cont "GYM!"
 
@@ -405,15 +405,15 @@ GotMapCardText:
 GuideGentPokegearText:
 	text "Ah, the #GEAR!"
 	line "Such a lovely"
-	cont "tool!" 
-	
+	cont "tool!"
+
 	para "It seems you only"
 	line "have one more CARD"
 	para "necessary to"
 	line "complete yours!"
-	
+
 	para "Best of luck"
-	line "finding it!"	
+	line "finding it!"
 	done
 
 GuideGentNoText:
@@ -482,7 +482,7 @@ CherrygroveCitySignText:
 	para "The City of Cute,"
 	line "Fragrant Flowers"
 	done
-	
+
 BirdKeeperBlocking:
 	text "Heya. I'm watching"
 	line "over this place"
@@ -531,6 +531,27 @@ BlackbeltBlockage:
 	line "you in."
 	done
 
+CherrygroveLassExposition:
+	jumptextfaceplayer .Text
+
+.Text:
+	text "FALKNER used to"
+	line "have an older"
+	para "cousin around"
+	line "here, but he left"
+	para "this place a few"
+	line "years back."
+	para "Unfortunately, I've"
+	line "heard the poor"
+	para "man's constantly"
+	line "been losing what-"
+	para "ever job he gets,"
+	line "and can't even win"
+	para "enough battles to"
+	line "get money."
+	para "I hope he's gotten"
+	line "back on his feet<...>"
+	done
 
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
@@ -557,11 +578,11 @@ CherrygroveCity_MapEvents:
 	bg_event 30, 21, BGEVENT_READ, CherrygroveCityPokecenterSign
 	bg_event 23,  5, BGEVENT_READ, CherrygroveCityGymSign
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 36, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	object_event 22,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 15, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event 18, 29, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, 7, 19, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
 	object_event 26,  6, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdKeeperBlockage, EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	object_event  9, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackbeltBlockage, EVENT_BEAT_SAGE_LI
-
+	object_event 21, 26, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygroveLassExposition, -1
