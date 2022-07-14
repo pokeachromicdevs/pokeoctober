@@ -2709,10 +2709,11 @@ wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 wCherrygrovePokecenter1FSceneID::                 db
 wRoute33EastGateSceneID::                         db
+wRoute34SceneID::                                 db
 
 wSceneIDsEnd::
 
-	ds 47
+	ds 46
 
 ; fight counts
 wJackFightCount::    db ; d9f2

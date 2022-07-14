@@ -7,6 +7,11 @@ SCENE_DEFAULT  EQU 0
 ; do-nothing scene 1 when the event finishes.
 SCENE_FINISHED EQU 1
 
+; wRoute34SceneID
+	const_def
+	const SCENE_ROUTE34_NOTHING
+	const SCENE_ROUTE34_FOUGHT_WILL
+
 ; wRoute33EastGateSceneID
 	const_def
 	const SCENE_ROUTE33EASTGATE_NOTHING
@@ -43,7 +48,7 @@ SCENE_FINISHED EQU 1
 ; wLancesRoomSceneID
 	const_def 1
 	const SCENE_LANCESROOM_APPROACH_LANCE ; 1
-	
+
 ; wSilentSceneID
 	const_def 1
 	const SCENE_TEACHER_STOPS
