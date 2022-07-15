@@ -87,7 +87,11 @@ FinalMonTexts::
 
 .KarenText:
 	; karen should maybe have per-roster txt's
-	; so this probably isn't needed...
+	; so this probably isn't needed later...
+	text "Why, you little"
+	line "nuisance<...>!"
+	para "I'll squash you!"
+	done
 
 .GiovanniText:
 .LoreleiText:
