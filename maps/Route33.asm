@@ -772,6 +772,7 @@ Route33_EncounterKurt:
 	waitbutton
 	closetext
 ; battle
+	setlasttalked ROUTE33_KURT_2
 	winlosstext .KurtWinText, 0
 	loadtrainer BALLSMITH, KURT
 	startbattle
