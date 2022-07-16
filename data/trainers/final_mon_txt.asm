@@ -91,7 +91,7 @@ FinalMonTexts::
 	text "Why, you little"
 	line "nuisance<...>!"
 	para "I'll squash you!"
-	done
+	prompt
 
 .GiovanniText:
 .LoreleiText:
