@@ -248,6 +248,13 @@ MomsLoveDesc:
 	next "step taken. (HOLD)@"
 
 DirectBallDesc:
+	db   "Catches <PKMN> regard-"
+	next "less of status.@"
+
+FireManeDesc:
+	db   "Resists fire"
+	next "attacks. (HOLD)@"
+
 NightBallDesc:
 GuardThreadDesc:
 TagDesc:
@@ -255,7 +262,6 @@ ChampionbeltDesc:
 GrossGarbageDesc:
 FossilShardDesc:
 TwistedSpoonDesc:
-FireManeDesc:
 ElectricPouchDesc:
 WhiteFeatherDesc:
 MysticPetalDesc:
@@ -593,7 +599,7 @@ MintBerryDesc:
 	next "for sleep. (HOLD)@"
 
 RedApricornDesc:
-	db   "A deep red" 
+	db   "A deep red"
 	next "APRICORN.@"
 
 CordycepsDesc:
@@ -933,37 +939,37 @@ MusicMailDesc:
 MewMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
-	
+
 HoneyPotDesc:
 	db   "A pot for storing"
 	next "SWEET HONEY.@"
-	
+
 TownMapDesc:
 	db "Use to view the"
 	next "map.@"
-	
+
 OaksParcelDesc:
-	db "Package from PROF." 
+	db "Package from PROF."
 	next "OAK to PROF. ELM.@"
-	
+
 SnakeskinDesc:
 	db "Prevents poison."
 	next "(HOLD)@"
 
-ThunderTailDesc:	
+ThunderTailDesc:
 EarthenClayDesc:
 	db "Prevents paralysis."
 	next "(HOLD)@"
-	
+
 DiggingClawDesc:
 	db "Use DIG outside of"
 	next "battle.(HOLD)@"
-	
+
 PokeFluteDesc:
 	db "Awakens sleeping"
 	next "#MON.@"
 
-IceWingDesc:	
+IceWingDesc:
 WisdomOrbDesc:
 	db "Sharply raises"
 	next "SPCL.DEF. (HOLD)@"
@@ -972,96 +978,96 @@ DetectOrbDesc:
 OddThreadDesc:
 	db "Raises EVASION of"
 	next "foe's moves.@"
-	
+
 WaterTailDesc:
 	db "Prevents burns."
 	next "(HOLD)@"
-	
+
 VoucherDesc:
 	db "RADIO CARD"
 	next "voucher.@"
-	
+
 TickleStickDesc:
 	db "Tickle SS AQUA"
 	next "CAPTAIN's back.@"
-	
+
 PrettyTailDesc:
 	db "Prevents poison-"
 	next "ing.(HOLD)@"
-	
+
 BurstOrbDesc:
 	db "Prevents sleep."
 	next "(HOLD)@"
-	
+
 HiddenNeedleDesc:
 	db   "Raises 1st strike"
 	next "ratio. (HOLD)@"
-	
+
 SharpHornDesc:
 	db  "Raises ATTACK by"
 	next "2. (HOLD)@"
-	
+
 HeartStoneDesc:
 	db  "Evolves certain"
 	next "kinds of #MON.@"
-	
+
 PoisonStoneDesc:
 	db  "Evolves certain"
 	next "kinds of #MON.@"
-	
+
 LongTongueDesc:
 LongVineDesc:
 	db  "Raises #MON"
 	next "catch rate. (HOLD)@"
-	
+
 ThunderWingDesc:
 	db "Raises SPEED by"
 	next "2. (HOLD)@"
-	
+
 FireWingDesc:
 	db "Sharply raises"
 	next "SPCL.ATTACK.(HOLD)@"
-	
+
 FireTailDesc:
 	db "Prevents freezing."
 	next "(HOLD)@"
-	
+
 CalmSeedDesc:
 	db "Prevents confu-"
 	next "sion.(HOLD)@"
-	
+
 SpoonDesc:
 	db "A shining spoon."
 	next "Sell low.@"
-	
+
 PebbleDesc:
 	db "A normal pebble."
 	next "Sell low.@"
-	
+
 BigStoneDesc:
 	db "A big stone."
 	next "Sell high.@"
-	
+
 TornCollarDesc:
 	db "A torn collar."
 	next "Sell low.@"
-	
+
 CrushedTireDesc:
 	db "A crushed tire."
 	next "Sell high.@"
-	
+
 TinyScalesDesc:
 	db "Some rocky scales."
 	next "Sell low.@"
-	
+
 SteelScalesDesc:
 	db "Some steel scales."
 	next "Sell high.@"
-	
+
 MysticTagDesc:
 	db "Helps attract wild"
 	next "#MON. (HOLD)@"
-	
+
 HeavyAmberDesc:
 ToxicAmberDesc:
 OldAmberDesc:
@@ -1069,11 +1075,11 @@ DomeFossilDesc:
 HelixFossilDesc:
 	db "Can be revived"
 	next "into a #MON.@"
-	
+
 WobblyBloonDesc:
 	db "Weaken a foe's"
 	next "NORMAL moves.@"
-	
+
 FleeFeatherDesc:
 	db "Switch without a"
 	next "turn wasted.(HOLD)@"
