@@ -4,12 +4,12 @@
 
 CherrygroveWoods_MapScripts:
 	db 0 ; scene scripts
-	
+
 	db 0 ; callbacks
-	
+
 TrainerBugCatcherLenny:
 	trainer BUG_CATCHER, LENNY, EVENT_BEAT_BUG_CATCHER_LENNY, BugCatcherLennySeenText, BugCatcherLennyBeatenText, 0, .Script
-	
+
 .Script
 	endifjustbattled
 	opentext
@@ -17,10 +17,10 @@ TrainerBugCatcherLenny:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerBugCatcherTimothy:
 	trainer BUG_CATCHER, BC_TIMOTHY, EVENT_BEAT_BUG_CATCHER_TIMOTHY, BugCatcherTimothySeenText, BugCatcherTimothyBeatenText, 0, .Script
-	
+
 .Script:
 	endifjustbattled
 	opentext
@@ -28,25 +28,25 @@ TrainerBugCatcherTimothy:
 	waitbutton
 	closetext
 	end
-	
+
 CherrygroveWoodsNameRaterSign:
 	jumptext CherrygroveWoodsNameRaterSignText
-	
+
 BugCatcherLennySeenText:
 	text "Buzz off! You're"
 	line "scaring the bugs"
 	cont "away!"
 	done
-	
+
 BugCatcherLennyBeatenText:
 	text "I said buzz off!"
 	done
-	
+
 BugCatcherLennyAfterText:
 	text "Geez! Now you've"
 	line "scared all the"
 	cont "bugs into hiding!"
-	
+
 	para "Nice job, idiot!"
 	done
 
@@ -56,38 +56,39 @@ CherrygroveWoodsNameRaterSignText:
 	para "Get Your #MON"
 	line "Nicknames Rated"
 	done
-	
+
 BugCatcherTimothySeenText:
 	text "Have you seen any"
 	line "PINSIR around"
 	cont "here?"
 	done
-	
+
 BugCatcherTimothyBeatenText:
 	text "No? Dang…"
 	done
-	
+
 BugCatcherTimothyAfterText:
 	text "Some people said"
 	line "there's a weird"
 	cont "PINSIR around"
-	
+
 	para "here. Its body is"
 	line "supposed to be"
 	cont "shiny like steel!"
-	done 
+	done
 
 CherrygroveWoods_ExitGateSign:
 	jumptext .Text
 .Text:
-	text "Now exiting"
+	text "Now Exiting"
 	line "CHERRYGROVE WOODS"
 	done
 
 CherrygroveWoods_EntryGateSign:
 	jumptext .Text
 .Text:
-	text "CHERRYGROVE WOODS"
+	text "ROUTE 29"
+	line "This Way"
 	done
 
 CherrygroveWoods_Sign2:
