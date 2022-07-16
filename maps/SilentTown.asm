@@ -5,13 +5,13 @@
 	const NEWBARKTOWN_ELM
 	const NEWBARKTOWN_FISHER_2
 	const NEWBARKTOWN_SILVER_2
-	
+
 SilentTown_MapScripts:
 	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_TEACHER_STOPS
 	scene_script .DummyScene1 ; SCENE_SILENT_NOTHING
 	scene_script .SilentTownSilverBattleScript ; SCENE_ELM_ENTRANCE_BATTLE
-	
+
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -27,10 +27,10 @@ SilentTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	setevent EVENT_ELM_APPEARED_SILENT_TOWN
 	return
-	
+
 .SilentTownSilverBattleScript:
 	end
-	
+
 SilentTown_RivalGreets:
 	setevent EVENT_ELM_NOT_IN_LAB
 	disappear NEWBARKTOWN_SILVER_2
@@ -126,7 +126,7 @@ ElmStopsYouScene2:
 	warpfacing UP, ELMS_LAB, 4, 11
 .skip
 	end
-	
+
 SilentTownRivalScript:
 	faceplayer
 	opentext
@@ -134,7 +134,7 @@ SilentTownRivalScript:
 	waitbutton
 	closetext
 	end
-	
+
 SilentTownElmScript:
 	opentext
 	writetext Text_Study101
@@ -173,7 +173,7 @@ SilentTownTeacherScript:
 	waitbutton
 	closetext
 	end
-	
+
 SilentTownSilverBattleScript:
 	moveobject NEWBARKTOWN_SILVER_2, 13, 15
 	appear NEWBARKTOWN_SILVER_2
@@ -196,6 +196,7 @@ SilentTownSilverBattleScript:
 	waitbutton
 	closetext
 ; player has:
+	setlasttalked NEWBARKTOWN_SILVER_2 ; ensure rival is visible
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .TOTODILE
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
@@ -252,11 +253,11 @@ SilentTownSilverBattleScript:
 	setscene SCENE_SILENT_NOTHING
 	setevent EVENT_RIVAL_ELMS_LAB
 	playmapmusic
-	
+
 	variablesprite SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITE_COOLTRAINER_M
 	special LoadUsedSpritesGFX
 	end
-	
+
 .no:
 	writetext RivalNoText
 	waitbutton
@@ -278,7 +279,7 @@ SilentTownSilverBattleScript:
 
 SilentTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
-	
+
 SilentTownFisher2Script:
 	jumptextfaceplayer KantoRockText
 
@@ -316,7 +317,7 @@ SilverAfterBattle:
 	step LEFT
 	step LEFT
 	step_end
-	
+
 MovementBattle:
 	big_step DOWN
 	big_step LEFT
@@ -348,7 +349,7 @@ ElmTakesPlayerToLab1:
 	step RIGHT
 	step UP
 	step_end
-	
+
 ElmTakesPlayerToLab2:
 	step RIGHT
 	step RIGHT
@@ -368,7 +369,7 @@ ElmTakesPlayerToLab2:
 	step RIGHT
 	step UP
 	step_end
-	
+
 ElmStopsPlayer1:
 	step LEFT
 	step LEFT
@@ -385,7 +386,7 @@ ElmStopsPlayer2:
 	step LEFT
 	step LEFT
 	step_end
-	
+
 RivalMeetsPlayer:
 	step UP
 	step UP
@@ -394,7 +395,7 @@ RivalMeetsPlayer:
 	step UP
 	step LEFT
 	step_end
-	
+
 RivalGoesToLab:
 	step RIGHT
 	step DOWN
@@ -403,7 +404,7 @@ RivalGoesToLab:
 	step DOWN
 	step DOWN
 	step_end
-	
+
 PlayerEntersLab:
 	step UP
 	step_end

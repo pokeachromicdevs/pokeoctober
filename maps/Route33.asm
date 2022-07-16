@@ -496,6 +496,7 @@ Route33_EncounterRival:
 	waitbutton
 	closetext
 ; battle
+	setlasttalked ROUTE33_RIVAL
 	winlosstext .WinAgainstRivalText, 0
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .CyndaTeam

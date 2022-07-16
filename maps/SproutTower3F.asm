@@ -14,14 +14,14 @@ SproutTower3F_MapScripts:
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .Sprites
-	
+
 .Nothing:
 	end
 
 .Sprites:
 	disappear SPROUT_TOWER_3F_RIVAL
 	return
-	
+
 TrainerSchoolboyAvery:
 	trainer SCHOOLBOY, AVERY, EVENT_BEAT_SCHOOLBOY_AVERY, SchoolboyAverySeenText, SchoolboyAveryBeatenText, 0, .AfterScript
 
@@ -32,7 +32,7 @@ TrainerSchoolboyAvery:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerTeacherBella:
 	trainer TEACHER, BELLA, EVENT_BEAT_TEACHER_BELLA, TeacherBellaSeenText, TeacherBellaBeatenText, 0, .AfterScript
 
@@ -43,7 +43,7 @@ TrainerTeacherBella:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerLassJune:
 	trainer LASS, JUNE, EVENT_BEAT_LASS_JUNE, LassJuneSeenText, LassJuneBeatenText, 0, .AfterScript
 
@@ -54,10 +54,10 @@ TrainerLassJune:
 	waitbutton
 	closetext
 	end
-	
+
 SproutTowerF3EscapeRope:
 	itemball ESCAPE_ROPE
-	
+
 SproutTowerF3FleeFeather:
 	itemball FLEE_FEATHER
 
@@ -138,7 +138,7 @@ SproutTower3F_RivalBattle:
 	step LEFT
 	step LEFT
 	step_end
-	
+
 .Continue:
 	waitsfx
 	playmusic MUSIC_RIVAL_ENCOUNTER
@@ -148,6 +148,7 @@ SproutTower3F_RivalBattle:
 	closetext
 
 ; do battle
+	setlasttalked SPROUT_TOWER_3F_RIVAL ; ensure rival is visible
 	winlosstext .WinAgainstRivalText, 0
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .CyndaTeam
@@ -242,60 +243,60 @@ SproutTower3F_RivalBattle:
 	para "It's been too"
 	line "long!"
 	done
-	
+
 SchoolboyAverySeenText:
 	text "This place is"
 	line "huge!"
-	
+
 	para "Can you believe"
 	line "it?!"
 	done
-	
+
 SchoolboyAveryBeatenText:
 	text "I can't believe I"
 	line "lost<...>"
 	done
-	
+
 SchoolboyAveryAfterBattleText:
 	text "This place is"
 	line "about as tall as"
-	
+
 	para "a STEELIX! It's"
 	line "insane!"
-	done 
-	
+	done
+
 TeacherBellaSeenText:
 	text "Well, since my"
 	line "students aren't"
-	
+
 	para "going to pay"
 	line "attention to me,"
-	
+
 	para "then I might as"
 	line "well have a quick"
 	cont "battle."
 	done
-	
+
 TeacherBellaBeatenText:
 	text "Woah! Who taught"
 	line "you that?"
-	done 
-	
+	done
+
 TeacherBellaAfterBattleText:
 	text "Sigh<...>well, back to"
 	line "desperately trying"
-	
+
 	para "to get these"
 	line "students to pay"
-	
+
 	para "attention, I"
 	line "suppose."
-	done 
-	
+	done
+
 LassJuneSeenText:
 	text "Woo! Field trip!"
 	done
-	
+
 LassJuneBeatenText:
 	text "You ruined it!"
 	done
@@ -303,21 +304,21 @@ LassJuneBeatenText:
 LassJuneAfterBattleText:
 	text "You ruined a"
 	line "field trip for an"
-	
+
 	para "innocent girl."
-	
+
 	para "You should be"
 	line "ashamed of your-"
 	cont "self."
 	done
-	
+
 SproutTower3F_MapEvents:
 	db 0, 0 ; filler
 
 	db 7 ; warp events
 
 	warp_event  9, 17, SPROUT_TOWER_2F, 3
-	warp_event 15,  7, SPROUT_TOWER_2F, 4 
+	warp_event 15,  7, SPROUT_TOWER_2F, 4
 	warp_event 19, 17, SPROUT_TOWER_2F, 5
 	warp_event  5, 15, SPROUT_TOWER_4F, 1
 	warp_event  7,  3, SPROUT_TOWER_4F, 2
