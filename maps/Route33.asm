@@ -566,7 +566,7 @@ Route33_EncounterRival:
 	para "Only reason I came"
 	line "back here was"
 	cont "because<...>"
-	
+
 	para "I, uh, left my"
 	line "#DEX in the"
 	cont "#MON CENTER."
@@ -645,7 +645,7 @@ Route33CaveBlockageScript:
 	para "then we'll open"
 	line "this place up."
 	done
-	
+
 TrainerBugCatcherNate:
 	trainer BUG_CATCHER, BC_NATE, EVENT_BEAT_BUG_CATCHER_NATE, .Seen, .Beaten, 0, .After
 
@@ -725,7 +725,7 @@ TrainerFirebreatherRob:
 
 Route33HikerGuyScript:
 	jumptextfaceplayer .Txt
-	
+
 .Txt:
 	text "Phew! That was"
 	line "a long trek."
@@ -972,7 +972,7 @@ Route33_EncounterKurt:
 	line "get on with my"
 	cont "research."
 	done
-	
+
 .TonbossText1:
 	text "???: Bzzzzzzzzzzz!"
 	line "Zzzzzzzzzz!"
@@ -1057,4 +1057,3 @@ Route33_MapEvents:
 	object_event  9,  9, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_KURT
 	object_event  8,  9, SPRITE_ROUTE33_KAREN_ELM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_KURT
 	object_event  8,  7, SPRITE_YANMEGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE33_TONBOSS
-

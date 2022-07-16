@@ -54,3 +54,4 @@ gfx/pokemon/*/frames.asm
 pokeoctober*-*.png
 *.stackdump
 **/desktop.ini
+.tags*
