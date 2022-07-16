@@ -25,7 +25,6 @@ AlderGymBugsyScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY
-	setevent EVENT_KURT_IN_ALDER_POKEMON_CENTER
 	opentext
 	writetext BugsyText_AboutToGiveBadgeSpeech
 	waitbutton
