@@ -59,7 +59,6 @@ ENDM
 	add_tm FIRE_PUNCH   ; 2f
 	add_tm FURY_CUTTER  ; 30
 	add_tm NIGHTMARE    ; 31
-; 51+
 	add_tm ROCK_SLIDE
 	add_tm THUNDER_WAVE
 	add_tm SEISMIC_TOSS

@@ -1,5 +1,5 @@
 TMHMMoves:
-; entries correspond to *_TMNUM enums (see constants/item_constants.asm)
+; entries correspond to *_TMNUM enums (see constants/tmhm_constants.asm)
 ; TMs
 	dw DYNAMICPUNCH
 	dw HEADBUTT
@@ -51,6 +51,51 @@ TMHMMoves:
 	dw FIRE_PUNCH
 	dw FURY_CUTTER
 	dw NIGHTMARE
+	dw ROCK_SLIDE
+	dw THUNDER_WAVE
+	dw SEISMIC_TOSS
+	dw TRI_ATTACK
+	dw BODY_SLAM
+	dw WHIRLWIND
+	dw SWORDS_DANCE
+	dw BUBBLEBEAM
+	dw SKULL_BASH
+	dw ICE_BEAM
+	dw THUNDERBOLT
+	dw FLAMETHROWER
+	dw GUST
+	dw METAL_CLAW
+	dw FLAME_WHEEL
+	dw PIN_MISSILE
+	dw SLUDGE
+	dw WATERFALL
+	dw CRUNCH
+	dw CROSS_CUTTER
+	dw TWISTER
+	dw PETAL_DANCE
+	dw HAZE
+	dw ROCK_HEAD
+	dw MEGAPHONE
+	dw TEMPT
+	dw NIGHT_SHADE
+	dw FUTURE_SIGHT
+	dw FORESIGHT
+	dw MIND_READER
+	dw CROSS_CHOP
+	dw SCARY_FACE
+	dw SPIKES
+	dw FAINT_ATTACK
+	dw JUMP_KICK
+	dw EXTREMESPEED
+	dw MACH_PUNCH
+	;dw STUN_CUT ; XXX
+	;dw UPPERCUT ; XXX
+	;dw THUNDER_JOLT ; XXX
+	;dw SHADOW_PUNCH ; XXX
+	;dw DRAGON_SMASH ; XXX
+	;dw DEEP_DIVE ; XXX
+	;dw IRON_HEAD ; XXX
+	;dw EERIE_LIGHT ; XXX
 ; HMs
 	dw UPROOT
 	dw WIND_RIDE
@@ -60,7 +105,10 @@ TMHMMoves:
 	dw WHIRLPOOL
 	dw BOUNCE
 ; Move tutor
-	dw FLAMETHROWER
-	dw THUNDERBOLT
-	dw ICE_BEAM
+	dw CUT
+	dw FLY
+	dw FLASH
+	dw STRENGTH
+	dw SURF
+
 	dw 0 ; end
