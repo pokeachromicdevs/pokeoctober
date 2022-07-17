@@ -164,13 +164,13 @@ PokemonCries::
 	mon_cry CRY_CYNDAQUIL,   839,  128   ; CYNDAQUIL
 	mon_cry CRY_CYNDAQUIL,   $321,  $120 ; QUILAVA
 	mon_cry CRY_CYNDAQUIL,   749,   416   ; TYPHLOSION
-	mon_cry CRY_TOTODILE,    $54,   $e0 ; TOTODILE 
+	mon_cry CRY_TOTODILE,    $54,   $e0 ; TOTODILE
 	mon_cry CRY_TOTODILE,      0,  $130 ; CROCONAW
 	mon_cry CRY_TOTODILE,   -232,  $1c0 ; FERALIGATR
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
 	mon_cry CRY_SENTRET,     $08a,  $0b8 ; SENTRET
 	mon_cry CRY_SENTRET,     $06b,  $102 ; FURRET
-	mon_cry CRY_HOOTHOOT_2CH,    $000,  $0a0 ; HOOTHOOT 
+	mon_cry CRY_HOOTHOOT_2CH,    $000,  $0a0 ; HOOTHOOT
 	mon_cry CRY_HOOTHOOT,   -$08e,  $100 ; NOCTOWL
 	mon_cry CRY_LEDYBA,      $000,  $0de ; LEDYBA
 	mon_cry CRY_LEDYBA,     -$096,  $138 ; LEDIAN
@@ -182,7 +182,7 @@ PokemonCries::
 	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
-	mon_cry CRY_SPINARAK,    0,     256  ; PICHU   
+	mon_cry CRY_SPINARAK,    0,     256  ; PICHU
 	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
 	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF
 	mon_cry CRY_TOGEPI,      $010,  $100 ; TOGEPI
@@ -208,7 +208,7 @@ PokemonCries::
 	mon_cry CRY_WOOPER,      $093,  $0af ; WOOPER
 	mon_cry CRY_WOOPER,      125,  175   ; QUAGSIRE
 	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
-	mon_cry CRY_GIRAFARIG,   -30,   160  ; UMBREON 
+	mon_cry CRY_GIRAFARIG,   -30,   160  ; UMBREON
 	mon_cry CRY_MARILL,     -$01f,  $180 ; MURKROW
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
 	mon_cry CRY_MISDREAVUS,  $130,  $0e8 ; MISDREAVUS
@@ -244,8 +244,8 @@ PokemonCries::
 	mon_cry CRY_TEDDIURSA,   $002,  $06a ; DELIBIRD
 	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE
 	mon_cry CRY_LARVITAR,    $06b,  $280 ; SKARMORY, needs fixing
-	mon_cry CRY_CYNDAQUIL,     0,  288   ; HOUNDOUR 
-	mon_cry CRY_CYNDAQUIL,   531,  128   ; HOUNDOOM 
+	mon_cry CRY_CYNDAQUIL,     0,  288   ; HOUNDOUR
+	mon_cry CRY_CYNDAQUIL,   531,  128   ; HOUNDOOM
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
 	mon_cry CRY_SENTRET,     $048,  $230 ; PHANPY
 	mon_cry CRY_SENTRET,    -184,  768   ; DONPHAN
@@ -268,7 +268,7 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-    mon_cry CRY_ENTEI,       $2fb,  $100 ; COINPUR, needs fixing
+	mon_cry CRY_ENTEI,       $2fb,  $100 ; COINPUR, needs fixing
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
 	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE

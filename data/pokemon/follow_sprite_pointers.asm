@@ -28,7 +28,7 @@ FollowSpritePointers::
 	follow_sprite RaticateSpriteGFX, PAL_OW_BROWN ;RATICATE
 	follow_sprite SpearowSpriteGFX, PAL_OW_BROWN ;SPEAROW
 	follow_sprite FearowSpriteGFX, PAL_OW_BROWN ;FEAROW
-	follow_sprite EkansSpriteGFX, PAL_OW_PINK ;EKANS 
+	follow_sprite EkansSpriteGFX, PAL_OW_PINK ;EKANS
 	follow_sprite ArbokSpriteGFX, PAL_OW_PINK ;ARBOK
 	follow_sprite PikachuSpriteGFX, PAL_OW_RED ;PIKACHU
 	follow_sprite RaichuSpriteGFX, PAL_OW_RED ;RAICHU
@@ -214,9 +214,9 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;MISDREAVUS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;UNOWN
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;WOBBUFFET
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BIPULLA  
+	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;BIPULLA
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;GIRAFARIG
-	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TOPSYSPOT  
+	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;TOPSYSPOT
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;PINECO
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;FORRETRESS
 	follow_sprite WooperSpriteGFX, PAL_OW_BLUE ;SHUCKLE

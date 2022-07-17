@@ -227,9 +227,9 @@ JOHTO_POKEMON EQU const_value
 	const MISDREAVUS ; c8
 	const UNOWN      ; c9
 	const WOBBUFFET  ; ca
-	const BIPULLA  
+	const BIPULLA
 	const GIRAFARIG  ; cb
-	const TOPSYSPOT  
+	const TOPSYSPOT
 	const PINECO     ; cc
 	const FORRETRESS ; cd
 	const SHUCKLE
@@ -283,7 +283,7 @@ JOHTO_POKEMON EQU const_value
 	const CELEBI     ; fb
 	const COINPUR    ; fc
 	const ADBARSTORK ; fe
-	const PUPPERON   ; ff 
+	const PUPPERON   ; ff
 	const MOIBELLE
 	const BELLEDAM
 	const CLEFLING

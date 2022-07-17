@@ -16,7 +16,7 @@ EvolutionMoves::
 	dw FURY_ATTACK  ; BEEDRILL
 	dw NO_MOVE      ; PIDGEY
 	dw NO_MOVE      ; PIDGEOTTO
-	dw EXTREMESPEED ; PIDGEOT 
+	dw EXTREMESPEED ; PIDGEOT
 	dw NO_MOVE      ; RATTATA
 	dw SCARY_FACE   ; RATICATE
 	dw NO_MOVE      ; SPEAROW
@@ -281,7 +281,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; MORPHOBIA
 	dw NO_MOVE      ; TERRACHNID
 	dw NO_MOVE      ; SMUJJ
-    dw NO_MOVE      ; KOTORA
+	dw NO_MOVE      ; KOTORA
 	dw NO_MOVE      ; RAITORA
 	dw NO_MOVE      ; GOROTORA
 	dw NO_MOVE      ; KOALYPTUS

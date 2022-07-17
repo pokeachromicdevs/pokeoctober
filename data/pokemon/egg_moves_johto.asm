@@ -190,7 +190,7 @@ SpinarakEggMoves:
 	dw BATON_PASS
 	dw PURSUIT
 	dw -1 ; end
-	
+
 YanmaEggMoves:
 	dw WHIRLWIND
 	dw REVERSAL
@@ -306,7 +306,7 @@ MisdreavusEggMoves:
 	dw SCREECH
 	dw DESTINY_BOND
 	dw -1 ; end
-	
+
 BipullaEggMoves:
 	dw MIST
 	dw SPITE
@@ -494,14 +494,14 @@ LarvitarEggMoves:
 	dw OUTRAGE
 	dw FOCUS_ENERGY
 	dw ANCIENTPOWER
-	
+
 CoinpurEggMoves:
 	dw SPITE
 	dw CHARM
 	dw HYPNOSIS
 	dw AMNESIA
 	dw -1 ; end
-	
+
 AdbarstorkEggMoves:
 	dw GUST
 	dw SKY_ATTACK
@@ -512,13 +512,13 @@ AdbarstorkEggMoves:
 
 NoEggMoves2:
 	dw -1 ; end
-	
+
 MoibelleEggMoves:
 	dw BEAT_UP
 	dw SING
 	dw SWEET_KISS
 	dw -1 ; end
-	
+
 CoaltaEggMoves:
 	dw FLAME_WHEEL
 	dw THRASH
@@ -527,7 +527,7 @@ CoaltaEggMoves:
 	dw CHARM
 	dw QUICK_ATTACK
 	dw -1 ; end
-	
+
 BurgelaEggMoves:
 	dw FLAIL
 	dw CONFUSION
@@ -535,7 +535,7 @@ BurgelaEggMoves:
 	dw REFLECT
 	dw AMNESIA
 	dw -1 ; end
-	
+
 VulpiiiEggMoves:
 	dw FAINT_ATTACK
 	dw HYPNOSIS
@@ -543,20 +543,20 @@ VulpiiiEggMoves:
 	dw SPITE
 	dw DISABLE
 	dw -1 ; end
-	
+
 WorfursEggMoves:
 	db PURSUIT
 	db OUTRAGE
 	db MIST
 	db -1 ; end
-	
+
 DodaerieEggMoves:
 	dw SUPERSONIC
 	dw HAZE
 	dw FAINT_ATTACK
 	dw FLAIL
 	dw -1 ; end
-	
+
 ParasporEggMoves:
 	dw FALSE_SWIPE
 	dw SCREECH
@@ -566,19 +566,19 @@ ParasporEggMoves:
 	dw LIGHT_SCREEN
 	dw PURSUIT
 	dw -1 ; end
-	
+
 MolambinoEggMoves:
 	db RAIN_DANCE
 	db REVERSAL
 	db SWAGGER
 	db -1 ; end
-	
+
 SmujjEggMoves:
 	dw HAZE
 	dw MEAN_LOOK
 	dw LICK
 	dw -1 ; end
-	
+
 KotoraEggMoves:
 	db THUNDERBOLT
 	db TAKE_DOWN

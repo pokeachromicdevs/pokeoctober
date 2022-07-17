@@ -10,7 +10,7 @@ EvosAttacksPointers3::
 	dw MallodyEvosAttacks
 	dw CamouflakeEvosAttacks
 	dw CoaltaEvosAttacks
-	dw BurgelaEvosAttacks 
+	dw BurgelaEvosAttacks
 	dw VupiiiEvosAttacks
 	dw WorfursEvosAttacks
 	dw WearlycanEvosAttacks
@@ -54,9 +54,9 @@ CoinpurEvosAttacks:
 	dbw 48, SWAGGER
 	dbw 54, SLASH
 	db 0 ; no more level-up moves
-	
+
 AdbarstorkEvosAttacks:
-	db  0; no more evolutions 
+	db  0; no more evolutions
 	dbw 1, PECK
 	dbw 5, GROWL
 	dbw 9, FURY_ATTACK
@@ -85,7 +85,7 @@ PupperonEvosAttacks:
 	dbw 50, OUTRAGE
 	dbw 56, FIRE_BLAST
 	db 0 ; no more level-up moves
-	
+
 MoibelleEvosAttacks:
 	dbbw EVOLVE_LEVEL, 28, BELLEDAM
 	db 0 ; no more evolutions
@@ -102,7 +102,7 @@ MoibelleEvosAttacks:
 	dbw 44, MOONLIGHT
 	dbw 50, SHADOW_BALL
 	db 0 ; no more level-up moves
-	
+
 BelledamEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
@@ -119,7 +119,7 @@ BelledamEvosAttacks:
 	dbw 48, ATTRACT
 	dbw 53, SLASH
 	db 0 ; no more level-up moves
-	
+
 CleflingEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, MALLODY
 	db 0 ; no more evolutions
@@ -130,7 +130,7 @@ CleflingEvosAttacks:
 	dbw 10, SING
 	dbw 15, SCREECH
 	db 0 ; no more level-up moves
-	
+
 MallodyEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 16, WING_ATTACK
@@ -143,7 +143,7 @@ MallodyEvosAttacks:
 	dbw 44, SLEEP_TALK
 	dbw 48, PERISH_SONG
 	db 0 ; no more level-up moves
-	
+
 CamouflakeEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ROLLOUT
@@ -159,7 +159,7 @@ CamouflakeEvosAttacks:
 	dbw 40, ICE_BEAM
 	dbw 45, GIGA_DRAIN
 	db 0 ; no more level-up moves
-	
+
 CoaltaEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, PONYTA
 	db 0 ; no more evolutions
@@ -176,8 +176,8 @@ CoaltaEvosAttacks:
 	dbw 42, AGILITY
 	dbw 47, SUNNY_DAY
 	dbw 52, FIRE_BLAST
-	db 0 ; no more level-up moves 
-	
+	db 0 ; no more level-up moves
+
 BurgelaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 15, TANGELA
 	db 0 ; no more evolutions
@@ -195,7 +195,7 @@ BurgelaEvosAttacks:
 	dbw 41, SLEEP_POWDER
 	dbw 46, ROLLOUT
 	db 0 ; no more level-up moves
-	
+
 VupiiiEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, VULPIX
 	db 0 ; no more evolutions
@@ -212,7 +212,7 @@ VupiiiEvosAttacks:
 	dbw 50, FIRE_BLAST
 	dbw 55, PSYCHIC
 	db 0 ; no more level-up moves
-	
+
 WorfursEvosAttacks:
 	dbbw EVOLVE_LEVEL, 31, WEARLYCAN
 	dbw 1, TACKLE
@@ -228,7 +228,7 @@ WorfursEvosAttacks:
 	dbw 47, THRASH
 	dbw 52, BLIZZARD
 	db 0 ; no more level-up moves
-	
+
 WearlycanEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
@@ -244,7 +244,7 @@ WearlycanEvosAttacks:
 	dbw 49, THRASH
 	dbw 54, BLIZZARD
 	db 0 ; no more level-up moves
-	
+
 DodaerieEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, DODUO
 	db 0 ; no more evolutions
@@ -260,7 +260,7 @@ DodaerieEvosAttacks:
 	dbw 48,	AGILITY
 	dbw 54,	EXTREMESPEED
 	db 0 ; no more level-up moves
-	
+
 ParasporEvosAttacks:
 	dbbw EVOLVE_LEVEL, 12, PARAS
 	db 0 ; no more evolutions
@@ -277,7 +277,7 @@ ParasporEvosAttacks:
 	dbw 45, SLASH
 	dbw 51, TACKLE ; LUNGE
 	db 0 ; no more level-up moves
-	
+
 MolambinoEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1 , WATER_GUN
@@ -295,7 +295,7 @@ MolambinoEvosAttacks:
 	dbw 47, THRASH
 	dbw 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
-	
+
 KiwackiEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
@@ -309,9 +309,9 @@ KiwackiEvosAttacks:
 	dbw 41, GIGA_DRAIN
 	dbw 46, DRILL_PECK
 	dbw 51, SWORDS_DANCE
-	dbw 58, TACKLE; EARTH DRILL 
+	dbw 58, TACKLE; EARTH DRILL
 	db 0 ; no more level-up moves
-	
+
 SilkaneEvosAttacks:
 	dbbw EVOLVE_LEVEL, 25, MORPHOBIA
 	db 0 ; no more evolutions
@@ -321,18 +321,18 @@ SilkaneEvosAttacks:
 	dbw 15, MIMIC
 	dbw 20, HIDDEN_POWER
 	db 0 ; no more level-up moves
-	
+
 MorphobiaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 25, MEAN_LOOK
-	dbw 30, TACKLE; SHADOW PUNCH 
+	dbw 30, TACKLE; SHADOW PUNCH
 	dbw 34, SCARY_FACE
 	dbw 40, SCREECH
 	dbw 44, SHADOW_BALL
 	dbw 48, FLY
-	dbw 54, TACKLE;LUNGE 
+	dbw 54, TACKLE;LUNGE
 	db 0 ; no more level-up moves
-	
+
 TerrachnidEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
@@ -347,8 +347,8 @@ TerrachnidEvosAttacks:
 	dbw 41, TACKLE;LUNGE
 	dbw 45, EARTHQUAKE
 	dbw 52, FISSURE
-	db 0 ; no more level-up moves 
-	
+	db 0 ; no more level-up moves
+
 SmujjEvosAttacks:
 	dbbw EVOLVE_LEVEL, 14, GRIMER
 	db 0 ; no more evolutions
@@ -366,7 +366,7 @@ SmujjEvosAttacks:
 	dbw 47, ACID_ARMOR
 	dbw 52, SLUDGE_BOMB
 	db 0 ; no more level-up moves
-	
+
 KotoraEvosAttacks:
 	dbbw EVOLVE_LEVEL, 15, RAITORA
 	db 0 ; no more evolutions
@@ -416,8 +416,8 @@ GorotoraEvosAttacks:
 	dbw 51, THUNDERBOLT
 	dbw 58, SLASH
 	db 0 ; no more level-up moves
-	
-	
+
+
 
 
 ;-------------------------------------------------------------------------------------------
