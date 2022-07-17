@@ -2618,7 +2618,6 @@ wPlayerState:: db ; d95d
 
 wHallOfFameCount:: dw
 wTradeFlags:: flag_array NUM_NPC_TRADES ; d960
-	ds 1
 wMooMooBerries:: db ; d962
 wUndergroundSwitchPositions:: db ; d963
 wFarfetchdPosition:: db ; d964
@@ -2713,7 +2712,7 @@ wRoute34SceneID::                                 db
 
 wSceneIDsEnd::
 
-	ds 46
+	ds 20
 
 ; fight counts
 wJackFightCount::    db ; d9f2

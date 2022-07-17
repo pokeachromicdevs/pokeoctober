@@ -59,7 +59,53 @@ ENDM
 	add_tm FIRE_PUNCH   ; 2f
 	add_tm FURY_CUTTER  ; 30
 	add_tm NIGHTMARE    ; 31
-	
+; 51+
+	add_tm ROCK_SLIDE
+	add_tm THUNDER_WAVE
+	add_tm SEISMIC_TOSS
+	add_tm TRI_ATTACK
+	add_tm BODY_SLAM
+	add_tm WHIRLWIND
+	add_tm SWORDS_DANCE
+	add_tm BUBBLEBEAM
+	add_tm SKULL_BASH
+	add_tm ICE_BEAM
+	add_tm THUNDERBOLT
+	add_tm FLAMETHROWER
+	add_tm GUST
+	add_tm METAL_CLAW
+	add_tm FLAME_WHEEL
+	add_tm PIN_MISSILE
+	add_tm SLUDGE
+	add_tm WATERFALL
+	add_tm CRUNCH
+	add_tm CROSS_CUTTER
+	add_tm TWISTER
+	add_tm PETAL_DANCE
+	add_tm HAZE
+	add_tm ROCK_HEAD
+	add_tm MEGAPHONE
+	add_tm TEMPT
+	add_tm NIGHT_SHADE
+	add_tm FUTURE_SIGHT
+	add_tm FORESIGHT
+	add_tm MIND_READER
+	add_tm CROSS_CHOP
+	add_tm SCARY_FACE
+	add_tm SPIKES
+	add_tm FAINT_ATTACK
+	add_tm JUMP_KICK
+	add_tm EXTREMESPEED
+	add_tm MACH_PUNCH
+	;add_tm STUN_CUT ; XXX
+	;add_tm UPPERCUT ; XXX
+	;add_tm THUNDER_JOLT ; XXX
+	;add_tm SHADOW_PUNCH ; XXX
+	;add_tm DRAGON_SMASH ; XXX
+	;add_tm DEEP_DIVE ; XXX
+	;add_tm IRON_HEAD ; XXX
+	;add_tm EERIE_LIGHT ; XXX
+
 NUM_TMS EQU const_value - TM01
 
 add_hm: MACRO
@@ -71,22 +117,24 @@ endc
 	enum \1_TMNUM
 ENDM
 
-	add_hm UPROOT       ; 32
-	add_hm WIND_RIDE    ; 33
-	add_hm WATER_SPORT  ; 34
-	add_hm STRONG_ARM   ; 35
-	add_hm BRIGHT_MOSS  ; 36
-	add_hm WHIRLPOOL    ; 37
-	add_hm BOUNCE       ; 38
-	
+	add_hm UPROOT       ; 01
+	add_hm WIND_RIDE    ; 02
+	add_hm WATER_SPORT  ; 03
+	add_hm STRONG_ARM   ; 04
+	add_hm BRIGHT_MOSS  ; 05
+	add_hm WHIRLPOOL    ; 06
+	add_hm BOUNCE       ; 07
+
 NUM_HMS EQU const_value - HM01
 
 add_mt: MACRO
 	enum \1_TMNUM
 ENDM
 
-	add_mt FLAMETHROWER ;39
-	add_mt THUNDERBOLT ;3a
-	add_mt ICE_BEAM ;3b
-	
+	add_mt CUT      ; 01
+	add_mt FLY      ; 02
+	add_mt FLASH    ; 03
+	add_mt STRENGTH ; 04
+	add_mt SURF     ; 05
+
 NUM_TM_HM_TUTOR EQU __enum__ + -1
