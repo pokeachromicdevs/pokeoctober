@@ -32,9 +32,15 @@ EvosAttacksPointers3::
 KoalyptusEvosAttacks:
 	db 0 ; no more evos
 	dbw 1, SCRATCH
+	dbw 1, GROWL
 	dbw 5, VINE_WHIP
 	dbw 8, BITE
 	dbw 15, RAZOR_LEAF
+	dbw 21, POISON_STING ; XXX POISON_FANG
+	dbw 25, FURY_SWIPES
+	dbw 32, CRUNCH
+	dbw 36, SLASH
+	dbw 42, BELLY_DRUM
 	db 0 ; no more level-up moves
 
 CoinpurEvosAttacks:
