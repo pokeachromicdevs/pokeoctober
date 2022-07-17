@@ -25,9 +25,18 @@ EvosAttacksPointers3::
 	dw KotoraEvosAttacks
 	dw RaitoraEvosAttacks
 	dw GorotoraEvosAttacks
-	
+	dw KoalyptusEvosAttacks
+
 .End:
-	
+
+KoalyptusEvosAttacks:
+	db 0 ; no more evos
+	dbw 1, SCRATCH
+	dbw 5, VINE_WHIP
+	dbw 8, BITE
+	dbw 15, RAZOR_LEAF
+	db 0 ; no more level-up moves
+
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
 	db 0 ; no more evolutions

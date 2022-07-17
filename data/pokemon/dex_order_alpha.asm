@@ -119,6 +119,7 @@ AlphabeticalPokedexOrder:
 	dw KINGDRA
 	dw KINGLER
 	dw KIWACKI
+	dw KOALYPTUS
 	dw KOFFING
 	dw KOTORA
 	dw KRABBY

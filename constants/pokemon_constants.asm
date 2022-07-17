@@ -305,7 +305,8 @@ JOHTO_POKEMON EQU const_value
 	const KOTORA
 	const RAITORA
 	const GOROTORA
-	
+	const KOALYPTUS
+
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

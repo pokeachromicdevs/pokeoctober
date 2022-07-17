@@ -283,4 +283,7 @@ SmujjAnimationIdle:      INCLUDE "gfx/pokemon/smujj/anim_idle.asm"
 KotoraAnimationIdle:     INCLUDE "gfx/pokemon/kotora/anim_idle.asm"
 RaitoraAnimationIdle:    INCLUDE "gfx/pokemon/raitora/anim_idle.asm"
 GorotoraAnimationIdle:   INCLUDE "gfx/pokemon/gorotora/anim_idle.asm"
+KoalyptusAnimationIdle:   INCLUDE "gfx/pokemon/koalyptus/anim_idle.asm"
+
+;---------------------------------------------------------------
 EggAnimationIdle:        INCLUDE "gfx/pokemon/egg/anim_idle.asm"

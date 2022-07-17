@@ -600,6 +600,8 @@ INCBIN "gfx/pokemon/raitora/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/raitora/shiny.pal"
 INCBIN "gfx/pokemon/gorotora/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/gorotora/shiny.pal"
+INCBIN "gfx/pokemon/koalyptus/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/koalyptus/shiny.pal"
 
 ;--------------------------------------------------------
 _NUM_POKEMON_PALETTES = (@ - PokemonPalettes) / 8 - 1

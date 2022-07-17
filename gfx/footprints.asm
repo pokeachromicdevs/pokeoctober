@@ -280,7 +280,7 @@ INCBIN "gfx/footprints/silkane.1bpp"
 INCBIN "gfx/footprints/morphobia.1bpp"
 INCBIN "gfx/footprints/terrachnid.1bpp"
 INCBIN "gfx/footprints/smujj.1bpp"
-INCBIN "gfx/footprints/253.1bpp"
-INCBIN "gfx/footprints/254.1bpp"
-INCBIN "gfx/footprints/255.1bpp"
-INCBIN "gfx/footprints/256.1bpp"
+INCBIN "gfx/footprints/283.1bpp" ; XXX KOTORA
+INCBIN "gfx/footprints/284.1bpp" ; XXX RAITORA
+INCBIN "gfx/footprints/285.1bpp" ; XXX GOROTORA
+INCBIN "gfx/footprints/286.1bpp" ; XXX KOALYPTUS

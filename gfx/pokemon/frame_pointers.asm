@@ -284,3 +284,4 @@ FramesPointers:
 	dba KotoraFrames
 	dba RaitoraFrames
 	dba GorotoraFrames
+	dba KoalyptusFrames

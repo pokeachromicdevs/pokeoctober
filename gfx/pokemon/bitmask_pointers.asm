@@ -284,3 +284,4 @@ BitmasksPointers:
 	dw KotoraBitmasks
 	dw RaitoraBitmasks
 	dw GorotoraBitmasks
+	dw KoalyptusBitmasks

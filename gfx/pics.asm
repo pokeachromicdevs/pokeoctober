@@ -791,4 +791,5 @@ RaitoraFrontpic:	INCBIN "gfx/pokemon/raitora/front.animated.2bpp.lz"
 RaitoraBackpic:	INCBIN "gfx/pokemon/raitora/back.2bpp.lz"
 GorotoraFrontpic:	INCBIN "gfx/pokemon/gorotora/front.animated.2bpp.lz"
 GorotoraBackpic:	INCBIN "gfx/pokemon/gorotora/back.2bpp.lz"
-
+KoalyptusFrontpic:	INCBIN "gfx/pokemon/koalyptus/front.animated.2bpp.lz"
+KoalyptusBackpic:	INCBIN "gfx/pokemon/koalyptus/back.2bpp.lz"

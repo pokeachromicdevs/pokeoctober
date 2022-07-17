@@ -292,3 +292,4 @@ FollowSpritePointers::
 	follow_sprite KotoraSpriteGFX, PAL_OW_RED ;KOTORA
 	follow_sprite KotoraSpriteGFX, PAL_OW_RED ;RAITORA
 	follow_sprite KotoraSpriteGFX, PAL_OW_RED ;GOROTORA
+	follow_sprite WooperSpriteGFX, PAL_OW_SILVER ;KOALYPTUS

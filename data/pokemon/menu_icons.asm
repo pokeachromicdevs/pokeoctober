@@ -286,6 +286,7 @@ MonMenuIcons:
 	db ICON_MAREEP		; KOTORA
 	db ICON_MAREEP		; RAITORA
 	db ICON_FLAAFFY		; GOROTORA
+	db ICON_MANKEY      ; KOALYPTUS
 	db ICON_EGG         ; EGG
 
 ;-------------------------------------------

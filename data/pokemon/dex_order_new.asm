@@ -248,6 +248,7 @@ NewPokedexOrder:
 	dw SNEASEL
 	dw WORFURS
 	dw WEARLYCAN
+	dw KOALYPTUS
 	dw MISDREAVUS
 	dw PORYGON
 	dw PORYGON2

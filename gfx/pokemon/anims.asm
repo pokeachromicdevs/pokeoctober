@@ -283,4 +283,7 @@ SmujjAnimation:      INCLUDE "gfx/pokemon/smujj/anim.asm"
 KotoraAnimation:     INCLUDE "gfx/pokemon/kotora/anim.asm"
 RaitoraAnimation:    INCLUDE "gfx/pokemon/raitora/anim.asm"
 GorotoraAnimation:   INCLUDE "gfx/pokemon/gorotora/anim.asm"
+KoalyptusAnimation:  INCLUDE "gfx/pokemon/koalyptus/anim.asm"
+
+;------------------------------------------------------
 EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"

@@ -167,6 +167,7 @@ HabitatPokedexOrder:
 	dw GYARADOS;122
 	dw GOLDEEN;128, add Orefry once in
 	dw SEAKING;129
+	dw KOALYPTUS
 	dw CHINCHOU
 	dw LANTURN
 	dw REMORAID
