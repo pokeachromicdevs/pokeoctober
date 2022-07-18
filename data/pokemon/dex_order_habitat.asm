@@ -186,7 +186,7 @@ HabitatPokedexOrder:
 ; SEA
 	dw GYARADOS
 	dw GOLDEEN
-	;dw OREFRY
+	dw OREFRY
 	dw SEAKING
 	dw CHINCHOU
 	dw LANTURN

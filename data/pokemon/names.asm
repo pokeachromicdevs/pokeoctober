@@ -290,6 +290,7 @@ PokemonNames::
 	db "RAITORA@@@"
 	db "GOROTORA@@"
 	db "KOALYPTUS@"
+	db "OREFRY@@@@"
 
 ;--------------------------------------------------------------
 _NUM_POKEMON_NAMES = (@ - PokemonNames) / (MON_NAME_LENGTH - 1)

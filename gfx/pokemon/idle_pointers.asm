@@ -285,3 +285,4 @@ AnimationIdlePointers:
 	dw RaitoraAnimationIdle
 	dw GorotoraAnimationIdle
 	dw KoalyptusAnimationIdle
+	dw OrefryAnimationIdle

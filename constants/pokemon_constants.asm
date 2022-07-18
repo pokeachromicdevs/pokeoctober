@@ -306,6 +306,7 @@ JOHTO_POKEMON EQU const_value
 	const RAITORA
 	const GOROTORA
 	const KOALYPTUS
+	const OREFRY
 
 NUM_POKEMON EQU const_value + -1
 

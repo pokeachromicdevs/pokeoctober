@@ -285,3 +285,4 @@ AnimationPointers:
 	dw RaitoraAnimation
 	dw GorotoraAnimation
 	dw KoalyptusAnimation
+	dw OrefryAnimation

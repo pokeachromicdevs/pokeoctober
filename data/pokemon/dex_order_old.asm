@@ -86,6 +86,7 @@ OldPokedexOrder:
 	dw POLITOED
 	dw MAGIKARP
 	dw GYARADOS
+	dw OREFRY
 	dw GOLDEEN
 	dw SEAKING
 	dw MOLAMBINO

@@ -285,3 +285,4 @@ BitmasksPointers:
 	dw RaitoraBitmasks
 	dw GorotoraBitmasks
 	dw KoalyptusBitmasks
+	dw OrefryBitmasks

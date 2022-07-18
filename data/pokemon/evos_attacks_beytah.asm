@@ -26,8 +26,27 @@ EvosAttacksPointers3::
 	dw RaitoraEvosAttacks
 	dw GorotoraEvosAttacks
 	dw KoalyptusEvosAttacks
+	dw OrefryEvoAttacks
 
 .End:
+
+OrefryEvoAttacks:
+	dbbw EVOLVE_LEVEL, 18, GOLDEEN
+	db 0 ; no more evos
+	dbw 1,  PECK
+	dbw 1,  TAIL_WHIP
+	dbw 1,  SUPERSONIC
+	dbw 6,  BUBBLE
+	dbw 12, HORN_ATTACK
+	dbw 16, FLAIL
+	;dbw 22, DEEP_DIVE
+	dbw 28, FURY_ATTACK
+	dbw 32, TAKE_DOWN
+	dbw 38, WATERFALL
+	dbw 44, AGILITY
+	dbw 48, MEGAHORN
+	dbw 54, HORN_DRILL
+	db 0 ; no more moves
 
 KoalyptusEvosAttacks:
 	db 0 ; no more evos
@@ -426,5 +445,5 @@ GorotoraEvosAttacks:
 
 
 
-;-------------------------------------------------------------------------------------------
-_NUM_EVOS_ATTACKS = _NUM_EVOS_ATTACKS + (EvosAttacksPointers3.End  - EvosAttacksPointers3)/2
+;---------------------------------------------------------------------------------------------
+_NUM_EVOS_ATTACKS = _NUM_EVOS_ATTACKS + ((EvosAttacksPointers3.End  - EvosAttacksPointers3)/2)

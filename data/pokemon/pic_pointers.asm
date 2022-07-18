@@ -585,6 +585,8 @@ PokemonPicPointers::
 	dba GorotoraBackpic
 	dba KoalyptusFrontpic
 	dba KoalyptusBackpic
+	dba OrefryFrontpic
+	dba OrefryBackpic
 
 ;------------------------------------------------
 _NUM_POKEMON_PICS = (@ - PokemonPicPointers) / 6 - 1

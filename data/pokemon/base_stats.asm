@@ -342,6 +342,7 @@ INCLUDE "data/pokemon/base_stats/kotora.asm"
 INCLUDE "data/pokemon/base_stats/raitora.asm"
 INCLUDE "data/pokemon/base_stats/gorotora.asm"
 INCLUDE "data/pokemon/base_stats/koalyptus.asm"
+INCLUDE "data/pokemon/base_stats/orefry.asm"
 
 ;------------------------------------
 _NUM_BASE_STATS = (@ - BaseData1)/$25

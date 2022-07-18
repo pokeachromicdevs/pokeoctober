@@ -285,6 +285,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; RAITORA
 	dw NO_MOVE      ; GOROTORA
 	dw NO_MOVE      ; KOALYPTUS
+	dw NO_MOVE      ; OREFRY
 
 ;----------------------------------
 _NUM_EVO_MOVES = (@ - EvolutionMoves) / 2

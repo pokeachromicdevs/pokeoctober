@@ -294,6 +294,7 @@ PokemonCries::
 	mon_cry CRY_LARVITAR,    $db3,  $168 ; RAITORA
 	mon_cry CRY_LARVITAR,    $ca2,  $192 ; GOROTORA
 	mon_cry CRY_PICHU,       $3fc,  $210 ; XXX KOALYPTUS
+	mon_cry CRY_CATERPIE,    $0a3,  $091 ; OREFRY
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle
