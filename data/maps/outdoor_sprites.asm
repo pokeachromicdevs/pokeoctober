@@ -205,6 +205,7 @@ EcruteakGroupSprites:
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_GYM_GUY
+		static_sprite SPRITE_GRANNY
 
 	end_outdoor_sprites
 
