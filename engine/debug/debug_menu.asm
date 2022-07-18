@@ -271,15 +271,15 @@ Debug_FixEvents:
 	ld hl, wEventFlags
 	ld bc, wEventFlagsEnd - wEventFlags
 	call ByteFill
-	
+
 	ld hl, wSceneIDs
 	ld bc, wSceneIDsEnd - wSceneIDs
 	call ByteFill
-	
+
 	ld a, BANK(.Init1)
 	ld hl, .Init1
 	call CallScript
-	
+
 	ld hl, .EventsFixedText
 	call PrintText
 	ret
@@ -290,7 +290,7 @@ Debug_FixEvents:
 
 .Init2
 	jumpstd initializeevents
-	
+
 .YesNo
 	call YesNoBox
 	ld a, [wMenuCursorY]
@@ -812,10 +812,10 @@ Debug_FillDex:
 .loop
 	inc hl
 	ld a, h
-	cp HIGH(NUM_POKEMON)
+	cp HIGH(NUM_POKEMON+1)
 	jr nz, .setflag
 	ld a, l
-	cp LOW(NUM_POKEMON)
+	cp LOW(NUM_POKEMON+1)
 	ret z
 .setflag
 	push hl
