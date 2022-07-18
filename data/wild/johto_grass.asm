@@ -55,7 +55,7 @@ JohtoGrassWildMons:
 	dbw 7, MISDREAVUS
 	dbw 6, RATTATA
 	dbw 6, RATTATA
-	
+
 	map_id SPROUT_TOWER_4F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
@@ -82,7 +82,7 @@ JohtoGrassWildMons:
 	dbw 7, MISDREAVUS
 	dbw 6, RATTATA
 	dbw 6, RATTATA
-	
+
 	map_id SPROUT_TOWER_5F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
@@ -109,7 +109,7 @@ JohtoGrassWildMons:
 	dbw 7, MISDREAVUS
 	dbw 6, RATTATA
 	dbw 6, RATTATA
-	
+
 	map_id SPROUT_TOWER_6F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
@@ -136,7 +136,7 @@ JohtoGrassWildMons:
 	dbw 7, MISDREAVUS
 	dbw 6, RATTATA
 	dbw 6, RATTATA
-	
+
 	map_id SPROUT_TOWER_7F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
@@ -163,7 +163,7 @@ JohtoGrassWildMons:
 	dbw 7, MISDREAVUS
 	dbw 6, RATTATA
 	dbw 6, RATTATA
-	
+
 	map_id SPROUT_TOWER_8F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
@@ -190,7 +190,7 @@ JohtoGrassWildMons:
 	dbw 7, MISDREAVUS
 	dbw 6, RATTATA
 	dbw 6, RATTATA
-	
+
 	map_id SPROUT_TOWER_9F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1487,6 +1487,33 @@ JohtoGrassWildMons:
 	dbw 9, GASTLY
 	dbw 9, BIPULLA
 
+	map_id DREAD_WOODS
+	db 14 percent, 14 percent, 14 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 6, HOPPIP
+	dbw 7, GASTLY
+	dbw 9, BELLSPROUT
+	dbw 8, MISDREAVUS
+	dbw 9, HOPPIP
+	dbw 9, PIDGEY
+	dbw 9, SNUBBULL
+	; day
+	dbw 6, RATTATA
+	dbw 7, RATTATA
+	dbw 9, HOPPIP
+	dbw 8, EKANS
+	dbw 9, SNUBBULL
+	dbw 9, BIPULLA
+	dbw 9, RATTATA
+	; nite
+	dbw 6, MURKROW
+	dbw 7, MISDREAVUS
+	dbw 9, EKANS
+	dbw 8, GASTLY
+	dbw 9, HOOTHOOT
+	dbw 9, MURKROW
+	dbw 9, MISDREAVUS
+
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1506,7 +1533,7 @@ JohtoGrassWildMons:
 	dbw 14, SLUGMA
 	dbw 14, SLUGMA
 	; nite
-	dbw 10, VENONAT 
+	dbw 10, VENONAT
 	dbw 10, SILKANE
 	dbw 12, SILKANE
 	dbw 12, ZUBAT
@@ -1522,7 +1549,7 @@ JohtoGrassWildMons:
 	dbw 12, PIDGEY
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
+	dbw 10, SMEARGLE
 	dbw 10, DITTO
 	; day
 	dbw 10, SNUBBULL
@@ -1531,7 +1558,7 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 10, DITTO
+	dbw 10, SMEARGLE
 	; nite
 	dbw 12, DROWZEE
 	dbw 11, RATTATA
@@ -1837,7 +1864,7 @@ JohtoGrassWildMons:
 	dbw 40, GOLBAT
 	dbw 44, GOLBAT
 	dbw 44, GOLBAT
-	
+
 	map_id CHERRYGROVE_WOODS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1848,7 +1875,7 @@ JohtoGrassWildMons:
 	dbw 3, LEDYBA
 	dbw 4, FARFETCH_D
 	dbw 4, FARFETCH_D
-	
+
 	dbw 3, PIDGEY;SAME AS ABOVE
 	dbw 3, BELLSPROUT
 	dbw 4, YANMA
@@ -1864,7 +1891,7 @@ JohtoGrassWildMons:
 	dbw 3, SPINARAK
 	dbw 4, MOIBELLE
 	dbw 4, PARASPOR
-	
+
 	map_id ZEN_GARDEN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1891,5 +1918,5 @@ JohtoGrassWildMons:
 	dbw 2, DROWZEE
 	dbw 4, BIPULLA
 	dbw 4, ODDISH
-	
+
 	db -1 ; end

@@ -8,6 +8,16 @@ JohtoWaterWildMons:
 	dbw 20, QUAGSIRE
 	dbw 15, QUAGSIRE
 
+	map_id ALDER_TOWN
+	db 2 percent ; encounter rate
+	dbw 12, REMORAID
+	dbw 14, QWILFISH
+
+	;map_id AZALEA_TOWN
+	;db 2 percent ; encounter rate
+	;dbw 15, CORASUN
+	;dbw 15, CORASUN
+
 	map_id UNION_CAVE_1F
 	db 2 percent ; encounter rate
 	dbw 15, WOOPER
