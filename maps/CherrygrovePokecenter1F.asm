@@ -23,6 +23,8 @@ CherrygrovePokecenter1F_MapScripts:
 	end
 
 .IsLineForming
+	checkevent EVENT_BEAT_BLACKBELT_KIYO
+	iftrue .no_line
 	checkscene
 	iffalse .no_line
 	appear CHERRYGROVEPOKECENTER1F_BLACKBELT_1
