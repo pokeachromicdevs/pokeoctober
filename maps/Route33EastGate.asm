@@ -113,14 +113,16 @@ Route33EastGateRocketTollScript:
 
 .YouCanGoThruTxt:
 	text "Go right ahead."
+	para "Don't cause any"
+	line "trouble!"
 	done
 
 .DeniedOrOutOfMoneyTxt:
-	text "Well, I'm not going"
-	line "to let you through"
-	cont "for free."
-	para "You'll have to find"
-	line "another way."
+	text "Well I'm not gonna"
+	line "let you through"
+	cont "for free!"
+	para "Either pay up or"
+	line "scram!"
 	done
 
 Route33EastGate_MapEvents:
