@@ -20,7 +20,7 @@ Flypoints:
 	flypoint BLACKTHORN,   BLACKTHORN_CITY
 	flypoint MT_SILVER,    SILVER_CAVE
 ; kansai
-	flypoint CHERRYGROVE_WOODS, CHERRYGROVE_WOODS
+	flypoint SILENT_HILLS, SILENT_HILLS
 	;flypoint CHERRYGROVE_SHRINE, CHERRYGROVE_SHRINE ; no landmark yet
 	flypoint ALDER, ALDER_TOWN
 

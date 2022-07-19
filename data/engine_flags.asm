@@ -98,7 +98,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_LAKE_OF_RAGE
 	engine_flag wVisitedSpawns, SPAWN_BLACKTHORN
 	engine_flag wVisitedSpawns, SPAWN_MT_SILVER
-	engine_flag wVisitedSpawns, SPAWN_CHERRYGROVE_WOODS
+	engine_flag wVisitedSpawns, SPAWN_SILENT_HILLS
 	engine_flag wVisitedSpawns, SPAWN_CHERRYGROVE_SHRINE
 	engine_flag wVisitedSpawns, SPAWN_ALDER
 	engine_flag wVisitedSpawns, NUM_SPAWNS ; unused

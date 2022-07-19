@@ -563,8 +563,8 @@ CherrygroveCity_MapEvents:
 	warp_event 33, 15, GUIDE_GENTS_HOUSE, 1
 	warp_event 29, 15, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
 	warp_event 26,  5, CHERRYGROVE_GYM, 1
-	warp_event 37, 26, CHERRYGROVE_WOODS_EXIT_GATE, 3
-	warp_event 37, 27, CHERRYGROVE_WOODS_EXIT_GATE, 4
+	warp_event 37, 26, SILENT_HILLS_EXIT_GATE, 3
+	warp_event 37, 27, SILENT_HILLS_EXIT_GATE, 4
 	warp_event 25, 27, CHERRYGROVE_FISHER_HOUSE, 1
 	warp_event  7, 11, FIGHTING_DOJO, 1
 	warp_event 35,  7, CHERRYGROVE_PAGODA_1F, 1

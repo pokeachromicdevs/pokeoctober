@@ -41,7 +41,7 @@ SpawnPoints:
 	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2
 
 ; kansai
-	spawn CHERRYGROVE_WOODS,          29,  2
+	spawn SILENT_HILLS,          29,  2
 	spawn ZEN_GARDEN,                  9, 33
 	spawn ALDER_TOWN,                  3,  6
 

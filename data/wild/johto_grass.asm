@@ -1865,7 +1865,7 @@ JohtoGrassWildMons:
 	dbw 44, GOLBAT
 	dbw 44, GOLBAT
 
-	map_id CHERRYGROVE_WOODS
+	map_id SILENT_HILLS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, PIDGEY;PIDGEY

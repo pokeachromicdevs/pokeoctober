@@ -149,7 +149,7 @@ LakeOfRageMagikarpHouse_Blocks:
 AlderHappinessRater_Blocks:
 BillsFamilysHouse_Blocks:
 GoldenrodPPSpeechHouse_Blocks:
-CherrygroveWoodsNameRater_Blocks:
+SilentHillsNameRater_Blocks:
 VermilionFishingSpeechHouse_Blocks:
 VermilionMagnetTrainSpeechHouse_Blocks:
 VermilionDiglettsCaveSpeechHouse_Blocks:
@@ -252,12 +252,12 @@ Route33EastGate_Blocks:
 Route36Gate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
-CherrygroveWoodsGate_Blocks:
+SilentHillsGate_Blocks:
 Route33WestGate_Blocks:
-	INCBIN "maps/CherrygroveWoodsGate.blk"
+	INCBIN "maps/SilentHillsGate.blk"
 
-CherrygroveWoodsExitGate_Blocks:
-	INCBIN "maps/CherrygroveWoodsExitGate.blk"
+SilentHillsExitGate_Blocks:
+	INCBIN "maps/SilentHillsExitGate.blk"
 
 VermilionCity_Blocks:
 	INCBIN "maps/VermilionCity.blk"
@@ -979,8 +979,8 @@ GoldenrodDeptStoreRoof_Blocks:
 
 Section "Map Blocks 4", ROMX
 
-CherrygroveWoods_Blocks:
-	INCBIN "maps/CherrygroveWoods.blk"
+SilentHills_Blocks:
+	INCBIN "maps/SilentHills.blk"
 
 CitrineIsland_Blocks:
 	INCBIN "maps/capumon/CitrineIsland.blk"

@@ -2,7 +2,7 @@
 	const ROUTE32RUINSOFALPHGATE_OFFICER
 	const ROUTE32RUINSOFALPHGATE_SPORTSMAN
 
-CherrygroveWoodsExitGate_MapScripts:
+SilentHillsExitGate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -31,12 +31,12 @@ WoodsExitGateSportsmanText:
 	cont "to SILENT TOWN!"
 	done
 
-CherrygroveWoodsExitGate_MapEvents:
+SilentHillsExitGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  9,  7, CHERRYGROVE_WOODS, 2
-	warp_event 10,  7, CHERRYGROVE_WOODS, 2
+	warp_event  9,  7, SILENT_HILLS, 2
+	warp_event 10,  7, SILENT_HILLS, 2
 	warp_event  0,  4, CHERRYGROVE_CITY, 7
 	warp_event  0,  5, CHERRYGROVE_CITY, 8
 

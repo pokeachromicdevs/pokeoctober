@@ -3,35 +3,35 @@
 	const ILEXFORESTAZALEAGATE_GRANNY
 	const CHERRYGROVEWOOODSGATE_YOUNGSTER
 
-CherrygroveWoodsGate_MapScripts:
+SilentHillsGate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-CherrygroveWoodsGateOfficerScript:
-	jumptextfaceplayer CherrygroveWoodsGateOfficerText
+SilentHillsGateOfficerScript:
+	jumptextfaceplayer SilentHillsGateOfficerText
 
-CherrygroveWoodsGateLassScript:
-	jumptextfaceplayer CherrygroveWoodsGateLassText
+SilentHillsGateLassScript:
+	jumptextfaceplayer SilentHillsGateLassText
 
-CherrygroveWoodsGateYoungsterScript:
+SilentHillsGateYoungsterScript:
 	faceplayer
 	opentext
-	writetext CherrygroveWoodsGateYoungsterText
+	writetext SilentHillsGateYoungsterText
 	yesorno
 	iffalse .no
-	writetext CherrygroveWoodsYoungsterYesText
+	writetext SilentHillsYoungsterYesText
 	waitbutton
 	closetext
 	end
 
 .no:
-	writetext CherrygroveWoodsYoungsterNoText
+	writetext SilentHillsYoungsterNoText
 	waitbutton
 	closetext
 	end
 
-CherrygroveWoodsGateOfficerText:
+SilentHillsGateOfficerText:
 	text "You know, with"
 	line "how little crime"
 
@@ -47,7 +47,7 @@ CherrygroveWoodsGateOfficerText:
 	line "places?"
 	done
 
-CherrygroveWoodsGateLassText:
+SilentHillsGateLassText:
 	text "I heard there's"
 	line "some crazy old"
 
@@ -68,7 +68,7 @@ CherrygroveWoodsGateLassText:
 	line "on my journey."
 	done
 
-CherrygroveWoodsGateYoungsterText:
+SilentHillsGateYoungsterText:
 	text "I always wondered"
 	line "what BERRIES taste"
 	cont "like."
@@ -77,13 +77,13 @@ CherrygroveWoodsGateYoungsterText:
 	line "one?"
 	done
 	
-CherrygroveWoodsYoungsterYesText:
+SilentHillsYoungsterYesText:
 	text "Oh, you look fine."
 	para "I'll have to give"
 	line "it a try sometime!"
 	done
 	
-CherrygroveWoodsYoungsterNoText:
+SilentHillsYoungsterNoText:
 	text "Really? Our #-"
 	line "MON gobble these"
 	cont "right up!"
@@ -92,14 +92,14 @@ CherrygroveWoodsYoungsterNoText:
 	line "little curious?"
 	done
 
-CherrygroveWoodsGate_MapEvents:
+SilentHillsGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
 	warp_event 11,  7, ROUTE_29, 1
 	warp_event 12,  7, ROUTE_29, 1
-	warp_event  1,  7, CHERRYGROVE_WOODS, 1
-	warp_event  2,  7, CHERRYGROVE_WOODS, 1
+	warp_event  1,  7, SILENT_HILLS, 1
+	warp_event  2,  7, SILENT_HILLS, 1
 
 
 	db 0 ; coord events
@@ -107,6 +107,6 @@ CherrygroveWoodsGate_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  6,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsGateOfficerScript, -1
-	object_event  1,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsGateLassScript, -1
-	object_event 12,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsGateYoungsterScript, -1
+	object_event  6,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SilentHillsGateOfficerScript, -1
+	object_event  1,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentHillsGateLassScript, -1
+	object_event 12,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentHillsGateYoungsterScript, -1

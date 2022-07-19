@@ -11,7 +11,7 @@ Landmarks:
 	dbbw       0,   0, SpecialMapName
 	landmark 132, 100, SilentTownName
 	landmark 124, 100, Route29Name
-	landmark 116, 100, CherrygroveWoodsName
+	landmark 116, 100, SilentHillsName
 	landmark 100, 100, CherrygroveCityName
 	landmark 100,  84, Route30Name
 	landmark 100,  60, Route31Name
@@ -115,7 +115,7 @@ SilentTownName:     db "SILENT¯TOWN@"       ; Shizuoka
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"    ; Nagoya
 VioletCityName:      db "VIOLET CITY@"        ; Nara
 AzaleaTownName:      db "AZALEA TOWN@"        ; Arida
-AlderTownName:       db "ALDER¯TOWN@"       ; XXX: Substitute Cianwood for Shingu 
+AlderTownName:       db "ALDER¯TOWN@"       ; XXX: Substitute Cianwood for Shingu
 GoldenrodCityName:   db "GOLDENROD¯CITY@"      ; Osaka
 EcruteakCityName:    db "ECRUTEAK¯CITY@"       ; Kyoto
 OlivineCityName:     db "OLIVINE¯CITY@"        ; Kobe
@@ -215,6 +215,6 @@ UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"
 HauntedHouseMapName: db "HAUNTED¯HOUSE@"
-CherrygroveWoodsName:db "CHERRYGROVE¯WOODS@"
+SilentHillsName:     db "SILENT¯HILLS@"
 CitrineIslandsName:  db "CITRINE¯ISLAND@"
 DreadWoodsName:  db "DREAD WOODS@"

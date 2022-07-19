@@ -98,7 +98,7 @@ const_value = -1
 	const SPAWN_MT_SILVER
 	const SPAWN_FAST_SHIP
 ; kansai
-	const SPAWN_CHERRYGROVE_WOODS
+	const SPAWN_SILENT_HILLS
 	const SPAWN_CHERRYGROVE_SHRINE
 	const SPAWN_ALDER
 ; '92 kanto

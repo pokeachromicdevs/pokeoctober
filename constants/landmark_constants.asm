@@ -5,7 +5,7 @@
 	const SPECIAL_MAP       ; 00
 	const SILENT_TOWN     ; 01
 	const ROUTE_29          ; 02
-	const CHERRYGROVE_WOODS 
+	const SILENT_HILLS 
 	const CHERRYGROVE_CITY  ; 03
 	const ROUTE_30          ; 04
 	const ROUTE_31          ; 05

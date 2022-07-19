@@ -687,7 +687,7 @@ Debug_Warp:
 	db "DEBUG@@@@@@@@"
 	db " -- JOHTO --@"
 	db "SILENT@@@@@@@"
-	db "CG WOODS@@@@@"
+	db "SHIZUKANAOKA@"
 	db "CHERRYGROVE@@"
 	db "VIOLET@@@@@@@"
 	db "ZEN GARDEN@@@"
@@ -721,7 +721,7 @@ Debug_Warp:
 	db SPAWN_DEBUG
 	db -1
 	db SPAWN_SILENT
-	db SPAWN_CHERRYGROVE_WOODS
+	db SPAWN_SILENT_HILLS
 	db SPAWN_CHERRYGROVE
 	db SPAWN_VIOLET
 	db SPAWN_CHERRYGROVE_SHRINE ; ZEN GARDEN

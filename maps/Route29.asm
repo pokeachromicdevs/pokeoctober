@@ -375,7 +375,7 @@ Route29Sign1Text:
 	para "CHERRYGROVE CITY -"
 	line "SILENT TOWN"
 
-	para "CHERRYGROVE WOODS"
+	para "SILENT HILLS"
 	line "In Between"
 	done
 	
@@ -448,7 +448,7 @@ Route29_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  2,  7, CHERRYGROVE_WOODS_GATE, 2
+	warp_event  2,  7, SILENT_HILLS_GATE, 2
 
 	db 2 ; coord events
 	coord_event 42,  3, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1

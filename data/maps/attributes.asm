@@ -102,7 +102,7 @@ ENDM
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5
-	connection east, CherrygroveWoods, CHERRYGROVE_WOODS, 9
+	connection east, SilentHills, SILENT_HILLS, 9
 	
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST | NORTH
 	connection north, ZenGarden, ZEN_GARDEN, -1
@@ -163,10 +163,10 @@ ENDM
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
 
 	map_attributes Route29, ROUTE_29, $05, WEST | EAST
-	connection west, CherrygroveWoods, CHERRYGROVE_WOODS, 0
+	connection west, SilentHills, SILENT_HILLS, 0
 	connection east, SilentTown, SILENT_TOWN, -1
 	
-	map_attributes CherrygroveWoods, CHERRYGROVE_WOODS, $05, NORTH | WEST | EAST
+	map_attributes SilentHills, SILENT_HILLS, $05, NORTH | WEST | EAST
 	connection north, Route46, ROUTE_46, 11
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, -9
 	connection east, Route29, ROUTE_29, 0
@@ -241,7 +241,7 @@ ENDM
 	connection west, Route46, ROUTE_46, 36
 
 	map_attributes Route46, ROUTE_46, $05, SOUTH | EAST
-	connection south, CherrygroveWoods, CHERRYGROVE_WOODS, -11
+	connection south, SilentHills, SILENT_HILLS, -11
 	connection east, Route45, ROUTE_45, -36
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST
@@ -548,7 +548,7 @@ ENDM
 	map_attributes VioletNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes VioletPokecenter1F, VIOLET_POKECENTER_1F, $00, 0
 	map_attributes VioletKylesHouse, VIOLET_KYLES_HOUSE, $00, 0
-	map_attributes CherrygroveWoodsExitGate, CHERRYGROVE_WOODS_EXIT_GATE, $00, 0
+	map_attributes SilentHillsExitGate, SILENT_HILLS_EXIT_GATE, $00, 0
 	map_attributes Route32Pokecenter1F, ROUTE_32_POKECENTER_1F, $00, 0
 	map_attributes Route35GoldenrodGate, ROUTE_35_GOLDENROD_GATE, $00, 0
 	map_attributes Route35NationalParkGate, ROUTE_35_NATIONAL_PARK_GATE, $00, 0
@@ -561,7 +561,7 @@ ENDM
 	map_attributes GoldenrodMagnetTrainStation, GOLDENROD_MAGNET_TRAIN_STATION, $00, 0
 	map_attributes GoldenrodFlowerShop, GOLDENROD_FLOWER_SHOP, $00, 0
 	map_attributes GoldenrodPPSpeechHouse, GOLDENROD_PP_SPEECH_HOUSE, $00, 0
-	map_attributes CherrygroveWoodsNameRater, CHERRYGROVE_WOODS_NAME_RATER, $00, 0
+	map_attributes SilentHillsNameRater, SILENT_HILLS_NAME_RATER, $00, 0
 	map_attributes GoldenrodDeptStore1F, GOLDENROD_DEPT_STORE_1F, $00, 0
 	map_attributes GoldenrodDeptStore2F, GOLDENROD_DEPT_STORE_2F, $00, 0
 	map_attributes GoldenrodDeptStore3F, GOLDENROD_DEPT_STORE_3F, $00, 0
@@ -573,7 +573,7 @@ ENDM
 	map_attributes GoldenrodGameCorner, GOLDENROD_GAME_CORNER, $00, 0
 	map_attributes GoldenrodPokecenter1F, GOLDENROD_POKECENTER_1F, $00, 0
 	map_attributes PokecomCenterAdminOfficeMobile, POKECOM_CENTER_ADMIN_OFFICE_MOBILE, $00, 0
-	map_attributes CherrygroveWoodsGate, CHERRYGROVE_WOODS_GATE, $00, 0
+	map_attributes SilentHillsGate, SILENT_HILLS_GATE, $00, 0
 	map_attributes Route34IlexForestGate, ROUTE_34_ILEX_FOREST_GATE, $00, 0
 	map_attributes DayCare, DAY_CARE, $00, 0
 	map_attributes VermilionFishingSpeechHouse, VERMILION_FISHING_SPEECH_HOUSE, $00, 0

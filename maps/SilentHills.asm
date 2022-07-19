@@ -1,8 +1,8 @@
 	object_const_def ; object_event constants
-	const CHERRYGROVEWOODS_BUG_CATCHER1
-	const CHERRYGROVEWOODS_BUG_CATCHER2
+	const SILENTHILLS_BUG_CATCHER1
+	const SILENTHILLS_BUG_CATCHER2
 
-CherrygroveWoods_MapScripts:
+SilentHills_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -29,8 +29,8 @@ TrainerBugCatcherTimothy:
 	closetext
 	end
 
-CherrygroveWoodsNameRaterSign:
-	jumptext CherrygroveWoodsNameRaterSignText
+SilentHillsNameRaterSign:
+	jumptext SilentHillsNameRaterSignText
 
 BugCatcherLennySeenText:
 	text "Buzz off! You're"
@@ -50,7 +50,7 @@ BugCatcherLennyAfterText:
 	para "Nice job, idiot!"
 	done
 
-CherrygroveWoodsNameRaterSignText:
+SilentHillsNameRaterSignText:
 	text "NAME RATER"
 
 	para "Get Your #MON"
@@ -77,21 +77,21 @@ BugCatcherTimothyAfterText:
 	cont "shiny like steel!"
 	done
 
-CherrygroveWoods_ExitGateSign:
+SilentHills_ExitGateSign:
 	jumptext .Text
 .Text:
 	text "Now Exiting"
-	line "CHERRYGROVE WOODS"
+	line "SILENT HILLS"
 	done
 
-CherrygroveWoods_EntryGateSign:
+SilentHills_EntryGateSign:
 	jumptext .Text
 .Text:
 	text "ROUTE 29"
 	line "This Way"
 	done
 
-CherrygroveWoods_Sign2:
+SilentHills_Sign2:
 	jumptext .Text
 .Text:
 	text "TRAINER TIPS:"
@@ -115,7 +115,7 @@ CherrygroveMines_Route46Sign:
 	text "ROUTE 46 AHEAD"
 	done
 
-CherrygroveWoods_MineBlockage:
+SilentHills_MineBlockage:
 	jumptextfaceplayer .Text
 .Text:
 	text "Sorry, kid. But"
@@ -124,34 +124,34 @@ CherrygroveWoods_MineBlockage:
 	line "limits."
 	done
 
-CherrygroveWoodsPsnCure1:
-	fruittree FRUITTREE_CHERRYGROVE_WOODS_1
+SilentHillsPsnCure1:
+	fruittree FRUITTREE_SILENT_HILLS_1
 
-CherrygroveWoodsPsnCure2:
-	fruittree FRUITTREE_CHERRYGROVE_WOODS_2
+SilentHillsPsnCure2:
+	fruittree FRUITTREE_SILENT_HILLS_2
 
-CherrygroveWoods_MapEvents:
+SilentHills_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 57,  7, CHERRYGROVE_WOODS_GATE, 3
-	warp_event 2,   9, CHERRYGROVE_WOODS_EXIT_GATE, 1
+	warp_event 57,  7, SILENT_HILLS_GATE, 3
+	warp_event 2,   9, SILENT_HILLS_EXIT_GATE, 1
 	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 3
-	warp_event 19,  7, CHERRYGROVE_WOODS_NAME_RATER, 1
+	warp_event 19,  7, SILENT_HILLS_NAME_RATER, 1
 	
 	db 0 ; coord events
  
 	db 6 ; bg events
-	bg_event 17,  7, BGEVENT_READ, CherrygroveWoodsNameRaterSign
-	bg_event  5,  9, BGEVENT_READ, CherrygroveWoods_ExitGateSign
+	bg_event 17,  7, BGEVENT_READ, SilentHillsNameRaterSign
+	bg_event  5,  9, BGEVENT_READ, SilentHills_ExitGateSign
 	bg_event 27,  3, BGEVENT_READ, CherrygroveMines_Route46Sign
-	bg_event 55,  7, BGEVENT_READ, CherrygroveWoods_EntryGateSign
-	bg_event 43,  5, BGEVENT_READ, CherrygroveWoods_Sign2
+	bg_event 55,  7, BGEVENT_READ, SilentHills_EntryGateSign
+	bg_event 43,  5, BGEVENT_READ, SilentHills_Sign2
 	bg_event 33, 13, BGEVENT_READ, CherrygroveMinesSign
 
 	db 5 ; object events
 	object_event 10, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherLenny, -1
 	object_event  42, 8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherTimothy, -1
-	object_event  30, 10, SPRITE_OFFICER,     SPRITEMOVEDATA_STANDING_DOWN,  0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT,  0, CherrygroveWoods_MineBlockage, -1
-	object_event 17,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsPsnCure1, -1
-	object_event 47,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveWoodsPsnCure1, -1
+	object_event  30, 10, SPRITE_OFFICER,     SPRITEMOVEDATA_STANDING_DOWN,  0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT,  0, SilentHills_MineBlockage, -1
+	object_event 17,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentHillsPsnCure1, -1
+	object_event 47,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentHillsPsnCure1, -1

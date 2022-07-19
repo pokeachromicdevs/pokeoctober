@@ -248,7 +248,7 @@ ENDM
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
 	map_const VIOLET_POKECENTER_1F,                         8,  4 ;  9
 	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 10
-	map_const CHERRYGROVE_WOODS_EXIT_GATE,                  6,  4 ; 11
+	map_const SILENT_HILLS_EXIT_GATE,                  6,  4 ; 11
 	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 13
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14
@@ -508,12 +508,12 @@ ENDM
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 	map_const CHERRYGROVE_GYM,                              5,  9 ; 12
-	map_const CHERRYGROVE_WOODS_GATE,                       7,  4 ; 22
-	map_const CHERRYGROVE_WOODS,                           30,  9
+	map_const SILENT_HILLS_GATE,                       7,  4 ; 22
+	map_const SILENT_HILLS,                           30,  9
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
 	map_const SILENT_POKECENTER_1F,                         8,  4 ; 14
 	map_const CHERRYGROVE_FISHER_HOUSE,                     4,  4 ;  8
-	map_const CHERRYGROVE_WOODS_NAME_RATER,                 4,  4 ; 10
+	map_const SILENT_HILLS_NAME_RATER,                 4,  4 ; 10
 	map_const CHERRYGROVE_PAGODA_1F,                        4,  4
 	map_const CHERRYGROVE_PAGODA_2F,                        4,  4
 	map_const CHERRYGROVE_PAGODA_3F,                        4,  4
