@@ -70,6 +70,7 @@ LassAnnieAfterBattleText:
 	text "I'm going to be-"
 	line "come a ninja when"
 	cont "I get older!"
+	done
 
 SproutTower7F_MapEvents:
 	db 0, 0 ; filler
