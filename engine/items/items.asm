@@ -474,3 +474,27 @@ GetItemPrice:
 	pop bc
 	pop hl
 	ret
+
+GetItemAsTMHMPrice:
+	push hl
+	push bc
+	ld hl, TMHMPrices
+	call .get_byte
+	ld e, a
+	ld hl, TMHMPrices + 1
+	call .get_byte
+	ld d, a
+	pop bc
+	pop hl
+	ret
+
+.get_byte
+	ld a, [wCurItem]
+	dec a
+	ld c, a
+	ld b, 0
+	ld a, 2
+	call AddNTimes
+	ld a, BANK(TMHMPrices)
+	call GetFarByte
+	ret

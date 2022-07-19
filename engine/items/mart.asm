@@ -23,6 +23,7 @@ OpenMartDialog::
 	dw Pharmacist
 	dw RooftopSale
 	dw PagodaSellers
+	dw PagodaSellers ; TM version
 
 MartDialog:
 	ld a, MARTTYPE_STANDARD
@@ -258,6 +259,14 @@ GetMartItemPrice:
 ; Return the price of item a in BCD at hl and in tiles at wStringBuffer1.
 	push hl
 	ld [wCurItem], a
+	ld a, [wMartType]
+	cp MARTTYPE_PAGODA_TM
+	jr nz, .not_tm
+	farcall GetItemAsTMHMPrice
+	pop hl
+	jr GetMartPrice
+
+.not_tm
 	farcall GetItemPrice
 	pop hl
 
@@ -386,7 +395,18 @@ MartAskPurchaseQuantity:
 	jp z, StandardMartAskPurchaseQuantity
 	cp 1
 	jp z, BargainShopAskPurchaseQuantity
-	jp RooftopSaleAskPurchaseQuantity
+	cp 3
+	jp nz, RooftopSaleAskPurchaseQuantity
+; group = 3
+; fixed quantity
+	ld a, 1
+	ld [wItemQuantityChangeBuffer], a
+	farcall GetItemAsTMHMPrice
+	ld a, d
+	ld [hMoneyTemp + 1], a
+	ld a, e
+	ld [hMoneyTemp + 2], a
+	ret
 
 GetMartDialogGroup:
 	ld a, [wMartType]
@@ -405,6 +425,7 @@ GetMartDialogGroup:
 	dwb .PharmacyPointers, 0
 	dwb .StandardMartPointers, 2
 	dwb .PagodaSellersPointers, 0
+	dwb .PagodaSellersPointers, 3
 
 .StandardMartPointers:
 	dw Text_Mart_HowMany
@@ -449,7 +470,14 @@ GetMartDialogGroup:
 BuyMenuLoop:
 	farcall PlaceMoneyTopRight
 	call UpdateSprites
+	ld a, [wMartType]
+	cp MARTTYPE_PAGODA_TM
+	jr nz, .not_tm
+	ld hl, MenuHeader_Buy_TM
+	jr .got_menu_header
+.not_tm
 	ld hl, MenuHeader_Buy
+.got_menu_header
 	call CopyMenuHeader
 	ld a, [wMenuCursorBufferBackup]
 	ld [wMenuCursorBuffer], a
@@ -477,9 +505,16 @@ BuyMenuLoop:
 	ld a, 3 ; useless load
 	call CompareMoney
 	jr c, .insufficient_funds
+
+	ld a, [wMartType]
+	cp MARTTYPE_PAGODA_TM
+	jr z, .set_tm
+
 	ld hl, wNumItems
 	call ReceiveItem
 	jr nc, .insufficient_bag_space
+
+.finish_transaction
 	ld a, [wMartItemID]
 	ld e, a
 	ld d, 0
@@ -517,6 +552,13 @@ BuyMenuLoop:
 	and a
 	ret
 
+.set_tm
+	ld a, [wCurItem]
+	dec a
+	ld [wCurTMHM], a
+	farcall ReceiveTMHM
+	jr .finish_transaction
+
 StandardMartAskPurchaseQuantity:
 	ld a, 99
 	ld [wItemQuantityBuffer], a
@@ -527,10 +569,39 @@ StandardMartAskPurchaseQuantity:
 	ret
 
 MartConfirmPurchase:
+	ld a, [wMartType]
+	cp MARTTYPE_PAGODA_TM
+	jr nz, .regular
+; check if you already have the TM
+	ld a, [wCurItem]
+	dec a
+	call .CheckTMHM
+	jr c, .already_have_tm
+	farcall CopyItemAsTMName
+	jr .got_name
+.regular
 	predef PartyMonItemName
+.got_name
 	ld a, MARTTEXT_COSTS_THIS_MUCH
 	call LoadBuyMenuText
 	call YesNoBox
+	ret
+
+.already_have_tm
+	ld hl, Text_Mart_AlreadyHaveTM
+	call PrintText
+	call JoyWaitAorB
+	scf
+	ret
+
+.CheckTMHM:
+	ld e, a
+	ld d, 0
+	ld b, CHECK_FLAG
+	ld hl, wTMsHMs
+	call FlagAction
+	ret z
+	scf
 	ret
 
 BargainShopAskPurchaseQuantity:
@@ -611,6 +682,22 @@ Text_Mart_CostsThisMuch:
 	text_far UnknownText_0x1c4c08
 	text_end
 
+
+MenuHeader_Buy_TM:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 1, 3, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData
+	db SCROLLINGMENU_DISPLAY_ARROWS | SCROLLINGMENU_ENABLE_FUNCTION3 ; flags
+	db 4, 8 ; rows, columns
+	db SCROLLINGMENU_ITEMS_NORMAL ; item format
+	dbw 0, wCurMart
+	dba PlaceMenuTMHMName
+	dba PrintMartBCDPrices
+	dba UpdateTMHMDescription
+
 MenuHeader_Buy:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 1, 3, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
@@ -623,10 +710,10 @@ MenuHeader_Buy:
 	db SCROLLINGMENU_ITEMS_NORMAL ; item format
 	dbw 0, wCurMart
 	dba PlaceMenuItemName
-	dba .PrintBCDPrices
+	dba PrintMartBCDPrices
 	dba UpdateItemDescription
 
-.PrintBCDPrices:
+PrintMartBCDPrices:
 	ld a, [wScrollingMenuCursorPosition]
 	ld c, a
 	ld b, 0
@@ -775,6 +862,10 @@ Text_Pharmacy_InsufficientFunds:
 Text_Pharmacist_ComeAgain:
 	; All right. See you around.
 	text_far UnknownText_0x1c4ef6
+	text_end
+
+Text_Mart_AlreadyHaveTM:
+	text_far _Text_Mart_AlreadyHaveTM
 	text_end
 
 SellMenu:

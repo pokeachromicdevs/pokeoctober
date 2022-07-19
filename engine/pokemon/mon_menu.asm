@@ -91,6 +91,13 @@ PartyMonItemName:
 	call CopyName1
 	ret
 
+CopyItemAsTMName:
+	ld a, [wCurItem]
+	ld [wNamedObjectIndexBuffer], a
+	call GetTMHMName
+	ld de, wStringBuffer1
+	jp CopyName1
+
 CancelPokemonAction:
 	farcall InitPartyMenuWithCancel
 	farcall UnfreezeMonIcons

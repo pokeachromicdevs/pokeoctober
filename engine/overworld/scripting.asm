@@ -2919,7 +2919,7 @@ Script_givetmhm:
 	ld [wScriptVar], a
 	ret
 
-ReceiveTMHM: ; d3c4
+ReceiveTMHM:: ; d3c4
 	ld a, [wCurTMHM]
 	ld e, a
 	ld d, 0
@@ -2938,13 +2938,13 @@ Script_checktmhm:
 	ld [wScriptVar], a
 	call GetScriptByte
 	ld [wCurTMHM], a
-	call CheckTMHM
+	call .CheckTMHM
 	ret nc
 	ld a, TRUE
 	ld [wScriptVar], a
 	ret
 
-CheckTMHM: ; d3fb
+.CheckTMHM: ; d3fb
 	ld a, [wCurTMHM]
 	ld e, a
 	ld d, 0

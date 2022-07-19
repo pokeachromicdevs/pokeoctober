@@ -451,6 +451,12 @@ UnknownText_0x1c4c08::
 	text "."
 	done
 
+_Text_Mart_AlreadyHaveTM::
+	text "Looks like you"
+	line "already have this"
+	cont "TM!"
+	done
+
 _Text_PagodaSellers_Intro::
 	text "Welcome,"
 	line "traveller."

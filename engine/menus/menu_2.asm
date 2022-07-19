@@ -7,6 +7,16 @@ PlaceMenuItemName:
 	call PlaceString
 	ret
 
+PlaceMenuTMHMName:
+	push de
+	ld a, [wMenuSelection]
+	ld [wNamedObjectIndexBuffer], a
+	call GetTMHMName
+	pop hl
+	ld de, wStringBuffer1
+	call PlaceString
+	ret
+
 PlaceMenuItemQuantity:
 	push de
 	ld a, [wMenuSelection]

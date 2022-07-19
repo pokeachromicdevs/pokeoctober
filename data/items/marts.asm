@@ -53,7 +53,6 @@ MartPagoda2F: ; berries and apricorns
 	db -1
 
 MartPagoda3F: ; manmades / super potions
-MartPagoda4F: ; expanded tm's
 	db 7
 	db SUPER_POTION
 	db MAX_ETHER
@@ -62,6 +61,15 @@ MartPagoda4F: ; expanded tm's
 	db IRON
 	db X_ATTACK
 	db X_SPEED
+	db -1
+
+MartPagoda4F: ; expanded tm's
+	db 5
+	db DYNAMICPUNCH_TMNUM
+	db HEADBUTT_TMNUM
+	db ROLLOUT_TMNUM
+	db ROAR_TMNUM
+	db PSYCH_UP_TMNUM
 	db -1
 
 MartCherrygrove:

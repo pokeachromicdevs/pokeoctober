@@ -1,0 +1,105 @@
+tmhm_price: MACRO ; ...
+	dw \1
+ENDM
+
+TMHMPrices:
+; TM01
+	tmhm_price 3000
+; TM02
+	tmhm_price 2000
+; TM03
+	tmhm_price 3000
+; TM04
+	tmhm_price 2000
+; TM05
+	tmhm_price 1000
+; TM06
+	tmhm_price 3000
+; TM07
+	tmhm_price 2000
+; TM08
+	tmhm_price 1000
+; TM09
+	tmhm_price 1000
+; TM10
+	tmhm_price 3000
+; TM11
+	tmhm_price 2000
+; TM12
+	tmhm_price 1000
+; TM13
+	tmhm_price 1000
+; TM14
+	tmhm_price 3000
+; TM15
+	tmhm_price 3000
+; TM16
+	tmhm_price 3000
+; TM17
+	tmhm_price 3000
+; TM18
+	tmhm_price 2000
+; TM19
+	tmhm_price 3000
+; TM20
+	tmhm_price 3000
+; TM21
+	tmhm_price 1000
+; TM22
+	tmhm_price 3000
+; TM23
+	tmhm_price 3000
+; TM24
+	tmhm_price 3000
+; TM25
+	tmhm_price 2000
+; TM26
+	tmhm_price 3000
+; TM27
+	tmhm_price 1000
+; TM28
+	tmhm_price 2000
+; TM29
+	tmhm_price 2000
+; TM30
+	tmhm_price 3000
+; TM31
+	tmhm_price 3000
+; TM32
+	tmhm_price 2000
+; TM33
+	tmhm_price 3000
+; TM34
+	tmhm_price 1000
+; TM35
+	tmhm_price 1000
+; TM36
+	tmhm_price 1000
+; TM37
+	tmhm_price 2000
+; TM38
+	tmhm_price 2000
+; TM39
+	tmhm_price 2000
+; TM40
+	tmhm_price 1000
+; TM41
+	tmhm_price 3000
+; TM42
+	tmhm_price 3000
+; TM43
+	tmhm_price 1000
+; TM44
+	tmhm_price 3000
+; TM45
+	tmhm_price 3000
+; TM46
+	tmhm_price 3000
+; TM47
+	tmhm_price 3000
+; TM48
+	tmhm_price 3000
+; TM49
+	tmhm_price 3000
+; TM50
+	tmhm_price 2000

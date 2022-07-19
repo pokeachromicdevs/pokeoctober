@@ -9,7 +9,7 @@ CherrygrovePagoda4F_PokemonStatue:
 
 CherrygrovePagoda4FMartScript:
 	opentext
-	pokemart MARTTYPE_PAGODA, MART_PAGODA_4F
+	pokemart MARTTYPE_PAGODA_TM, MART_PAGODA_4F
 	closetext
 	end
 
