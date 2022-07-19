@@ -13,6 +13,25 @@ CherrygrovePagoda2FMartScript:
 	closetext
 	end
 
+CherrygrovePagoda2FSageScript:
+	jumptextfaceplayer .Txt
+
+.Txt:
+	text "This tower was,"
+	line "and still is, a"
+	cont "sacred place."
+	para "However, lately,"
+	line "there has been an"
+	para "increase in"
+	line "tourism, so we"
+	para "had to accommodate"
+	line "them."
+	para "It's why we sell"
+	line "wares now, you can"
+	para "think of them as"
+	line "souvenirs."
+	done
+
 CherrygrovePagoda2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -25,5 +44,6 @@ CherrygrovePagoda2F_MapEvents:
 	db 1 ; bg events
 	bg_event  4,  1, BGEVENT_READ, CherrygrovePagoda2F_PokemonStatue
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event  0,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePagoda2FMartScript, -1
+	object_event  7,  3, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePagoda2FSageScript, -1

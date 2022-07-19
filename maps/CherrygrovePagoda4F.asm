@@ -13,6 +13,17 @@ CherrygrovePagoda4FMartScript:
 	closetext
 	end
 
+CherrygrovePagoda4FSageScript:
+	jumptextfaceplayer .Txt
+
+.Txt:
+	text "Are you here to"
+	line "pay respects?"
+	para "The fifth floor is"
+	line "still reserved for"
+	cont "it, if you are."
+	done
+
 CherrygrovePagoda4F_MapEvents:
 	db 0, 0 ; filler
 
@@ -25,5 +36,6 @@ CherrygrovePagoda4F_MapEvents:
 	db 1 ; bg events
 	bg_event  4,  1, BGEVENT_READ, CherrygrovePagoda4F_PokemonStatue
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event  0,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePagoda4FMartScript, -1
+	object_event  7,  2, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePagoda4FSageScript, -1
