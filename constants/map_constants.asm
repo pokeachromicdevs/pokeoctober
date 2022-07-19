@@ -252,7 +252,7 @@ ENDM
 	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 13
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14
-	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 15
+	map_const ROUTE_36_GATE,                  5,  4 ; 15
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 16
 	map_const VIOLET_GYM,                                  10,  9 ; 17
 	map_const DREAD_WOODS,                                 16, 20 ; 18

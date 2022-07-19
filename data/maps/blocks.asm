@@ -189,7 +189,6 @@ Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
 Route34IlexForestGate_Blocks:
 Route35GoldenrodGate_Blocks:
-Route36RuinsOfAlphGate_Blocks:
 Route6SaffronGate_Blocks:
 Route40BattleTowerGate_Blocks:
 Route2Gate_Blocks:
@@ -197,7 +196,7 @@ Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
 ZenGardenGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
-	
+
 BetaEcruteakCity_Blocks:
 	INCBIN "maps/unused/BetaEcruteakCity.blk"
 
@@ -250,6 +249,7 @@ Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
 Route33EastGate_Blocks:
+Route36Gate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 CherrygroveWoodsGate_Blocks:
@@ -279,7 +279,7 @@ Route9_Blocks:
 
 Route22_Blocks:
 	INCBIN "maps/Route22.blk"
-	
+
 Route30_Blocks:
 	INCBIN "maps/Route30.blk"
 
@@ -976,12 +976,12 @@ BetaBlank_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
-	
+
 Section "Map Blocks 4", ROMX
 
 CherrygroveWoods_Blocks:
 	INCBIN "maps/CherrygroveWoods.blk"
-	
+
 CitrineIsland_Blocks:
 	INCBIN "maps/capumon/CitrineIsland.blk"
 

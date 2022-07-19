@@ -69,7 +69,7 @@ CinnabarGroupSprites:
 		walk_sprite SPRITE_COOLTRAINER_F
 		walk_sprite SPRITE_SWIMMER_GIRL
 		walk_sprite SPRITE_SWIMMER_GUY
-	
+
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
@@ -88,7 +88,7 @@ SaffronGroupSprites:
 		walk_sprite SPRITE_POKEFAN_M
 		walk_sprite SPRITE_ROCKET
 		walk_sprite SPRITE_MISTY
-	
+
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_SLOWPOKE
@@ -103,7 +103,7 @@ CeladonGroupSprites:
 		walk_sprite SPRITE_YOUNGSTER
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_BIKER
-	
+
 	def_static_sprite
 		static_sprite SPRITE_POLIWAG
 		static_sprite SPRITE_POKE_BALL
@@ -135,7 +135,7 @@ VermilionGroupSprites:
 		walk_sprite SPRITE_YOUNGSTER
 		walk_sprite SPRITE_TEACHER
 		walk_sprite SPRITE_SUPER_NERD
-	
+
 	def_static_sprite
 		static_sprite SPRITE_BIG_SNORLAX
 		static_sprite SPRITE_MACHOP
@@ -176,7 +176,7 @@ CherrygroveGroupSprites:
 		walk_sprite SPRITE_SUPER_NERD
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_BUG_CATCHER
-	
+
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
@@ -206,6 +206,7 @@ EcruteakGroupSprites:
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_GYM_GUY
 		static_sprite SPRITE_GRANNY
+		static_sprite SPRITE_BIG_SNORLAX
 
 	end_outdoor_sprites
 
@@ -219,7 +220,7 @@ AzaleaGroupSprites:
 		walk_sprite SPRITE_SILVER
 		walk_sprite SPRITE_BUG_CATCHER
 		walk_sprite SPRITE_FLEDGLING
-	
+
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
@@ -274,7 +275,7 @@ CitrineGroupSprites:
 		walk_sprite SPRITE_POKEFAN_M
 		walk_sprite SPRITE_CAMPER
 		walk_sprite SPRITE_FISHER
-	
+
 	def_static_sprite
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_POKE_BALL
@@ -289,4 +290,3 @@ FastShipGroupSprites:
 
 CableClubGroupSprites:
 	end_outdoor_sprites
-
