@@ -35,7 +35,34 @@ Marts:
 	dw MartIndigoPlateau
 	dw MartUnderground
 	dw MartAlder
+	dw MartPagoda2F
+	dw MartPagoda3F
+	dw MartPagoda4F
 .End
+
+MartPagoda2F: ; berries and apricorns
+	db 8
+	db BERRY
+	db PSNCUREBERRY
+	db PRZCUREBERRY
+	db BURNT_BERRY
+	db ICE_BERRY
+	db RED_APRICORN
+	db WHT_APRICORN
+	db BLK_APRICORN
+	db -1
+
+MartPagoda3F: ; manmades / super potions
+MartPagoda4F: ; expanded tm's
+	db 7
+	db SUPER_POTION
+	db MAX_ETHER
+	db HP_UP
+	db PROTEIN
+	db IRON
+	db X_ATTACK
+	db X_SPEED
+	db -1
 
 MartCherrygrove:
 MartCherrygroveDex:

@@ -22,6 +22,7 @@ OpenMartDialog::
 	dw BargainShop
 	dw Pharmacist
 	dw RooftopSale
+	dw PagodaSellers
 
 MartDialog:
 	ld a, MARTTYPE_STANDARD
@@ -38,6 +39,16 @@ HerbShop:
 	call MartTextbox
 	call BuyMenu
 	ld hl, Text_HerbShop_ComeAgain
+	call MartTextbox
+	ret
+
+PagodaSellers:
+	call FarReadMart
+	call LoadStandardMenuHeader
+	ld hl, Text_PagodaSellers_Intro
+	call MartTextbox
+	call BuyMenu
+	ld hl, Text_PagodaSellers_ComeAgain
 	call MartTextbox
 	ret
 
@@ -393,6 +404,7 @@ GetMartDialogGroup:
 	dwb .BargainShopPointers, 1
 	dwb .PharmacyPointers, 0
 	dwb .StandardMartPointers, 2
+	dwb .PagodaSellersPointers, 0
 
 .StandardMartPointers:
 	dw Text_Mart_HowMany
@@ -400,6 +412,14 @@ GetMartDialogGroup:
 	dw Text_Mart_InsufficientFunds
 	dw Text_Mart_BagFull
 	dw Text_Mart_HereYouGo
+	dw BuyMenuLoop
+
+.PagodaSellersPointers:
+	dw Text_PagodaSellers_HowMany
+	dw Text_PagodaSellers_CostsThisMuch
+	dw Text_PagodaSellers_InsufficientFunds
+	dw Text_PagodaSellers_BagFull
+	dw Text_PagodaSellers_HereYouGo
 	dw BuyMenuLoop
 
 .HerbShopPointers:
@@ -657,6 +677,34 @@ Text_HerbShop_InsufficientFunds:
 Text_HerbShop_ComeAgain:
 	; Come again, dear. Hehehehe…
 	text_far UnknownText_0x1c4d2a
+	text_end
+
+Text_PagodaSellers_Intro:
+	text_far _Text_PagodaSellers_Intro
+	text_end
+
+Text_PagodaSellers_HowMany:
+	text_far UnknownText_0x1c4ca3
+	text_end
+
+Text_PagodaSellers_CostsThisMuch:
+	text_far UnknownText_0x1c4cae
+	text_end
+
+Text_PagodaSellers_HereYouGo:
+	text_far _Text_PagodaSellers_HereYouGo
+	text_end
+
+Text_PagodaSellers_BagFull:
+	text_far _Text_PagodaSellers_BagFull
+	text_end
+
+Text_PagodaSellers_InsufficientFunds:
+	text_far UnknownText_0x1c4f9a
+	text_end
+
+Text_PagodaSellers_ComeAgain:
+	text_far _Text_PagodaSellers_ComeAgain
 	text_end
 
 Text_BargainShop_Intro:

@@ -25,6 +25,15 @@ CherrygrovePagoda1FSageScript:
 	line "a look around."
 	done
 
+CherrygovePagoda_Common_FadedInscriptionScript::
+	jumptext .Txt
+
+.Txt:
+	text "<...>The inscription"
+	line "here seems to have"
+	cont "faded away<...>"
+	done
+
 CherrygrovePagoda1F_MapEvents:
 	db 0, 0 ; filler
 

@@ -451,6 +451,31 @@ UnknownText_0x1c4c08::
 	text "."
 	done
 
+_Text_PagodaSellers_Intro::
+	text "Welcome,"
+	line "traveller."
+	para "We have items and"
+	line "curios that is"
+	para "seldom found any-"
+	line "where else."
+	done
+
+_Text_PagodaSellers_HereYouGo::
+	text "It is yours."
+	line "Thank you."
+	done
+
+_Text_PagodaSellers_BagFull::
+	text "I'm sorry, but it"
+	line "looks like your"
+	cont "PACK is full."
+	done
+
+_Text_PagodaSellers_ComeAgain::
+	text "We hope you visit"
+	line "again soon."
+	done
+
 UnknownText_0x1c4c28::
 	text "Hello, dear."
 
