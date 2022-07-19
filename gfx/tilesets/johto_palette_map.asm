@@ -15,8 +15,6 @@ rept 16
 	db $ff
 endr
 
-	tilepal 1, BROWN, BROWN, RED, BROWN, BROWN, BROWN, BROWN, BROWN
-	tilepal 1, BROWN, BROWN, BROWN, RED, RED, RED, RED, RED
-	tilepal 1, BROWN, BROWN, RED, RED, RED, RED, RED, RED
-	tilepal 1, RED, RED, RED, RED, BROWN, BROWN, BROWN, BROWN
-	tilepal 1, BROWN, BROWN
+	tilepal 1, RED, RED, RED, RED, RED, RED, RED, RED
+	tilepal 1, GREEN, BROWN, BROWN, GREEN, GREEN, BROWN, BROWN, GREEN
+	tilepal 1, RED, TEXT
