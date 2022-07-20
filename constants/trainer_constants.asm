@@ -747,7 +747,7 @@ KRIS EQU __enum__
 	const TERRY
 	const FLEDGLING_TIMOTHY
 	const WINSTON
-	const FLEDGLING_TOM
+	const FLEDGLING_TOMMY
 
 	trainerclass BALLSMITH
 	const KURT

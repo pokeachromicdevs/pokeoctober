@@ -63,8 +63,8 @@ ZenGardenSageScript1:
 	cont "but it's gone now."
 	done
 
-TrainerFledglingTom:
-	trainer FLEDGLING, FLEDGLING_TOM, EVENT_BEAT_FLEDGLING_TOM, .SeenTxt, .WinTxt, 0, .AfterScript
+TrainerFledglingTommy:
+	trainer FLEDGLING, FLEDGLING_TOMMY, EVENT_BEAT_FLEDGLING_TOMMY, .SeenTxt, .WinTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "This GARDEN is a"
@@ -197,7 +197,7 @@ ZenGarden_MapEvents:
 	object_event 21, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript, -1
 	object_event 29, 11, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenGrampsScript, -1
 	object_event 16, 22, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript1, -1
-	object_event  5, 23, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingTom, -1
+	object_event  5, 23, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingTommy, -1
 	object_event  7,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChen, -1
 	object_event  9, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageMonty, -1
 	object_event 35, 13, SPRITE_MYSTIC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerMysticSonia, -1

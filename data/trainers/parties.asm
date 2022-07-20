@@ -5341,7 +5341,7 @@ FledglingGroup:
 	end_party
 
 	next_party
-		string "TOM"
+		string "TOMMY"
 		db TRAINERTYPE_NORMAL
 		dbw 7, PIDGEY
 		dbw 8, DODAERIE
