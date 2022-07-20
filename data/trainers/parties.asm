@@ -2366,21 +2366,16 @@ BugCatcherGroup:
 	end_party
 
 	next_party ; BUG_CATCHER (5)
-	db "BENNY@", TRAINERTYPE_NORMAL
-	db 7
-	dw WEEDLE
-	db 9
-	dw KAKUNA
-	db 12
-	dw BEEDRILL
+	db "SELDON@", TRAINERTYPE_NORMAL
+	dbw 11, PARASPOR
+	dbw 23, PARAS
+	dbw 25, PARASECT
 	end_party
 
 	next_party ; BUG_CATCHER (6)
-	db "AL@", TRAINERTYPE_NORMAL
-	db 12
-	dw CATERPIE
-	db 12
-	dw WEEDLE
+	db "YUKIJI@", TRAINERTYPE_NORMAL
+	dbw 20, SCYTHER
+	dbw 22, PINSIR
 	end_party
 
 	next_party ; BUG_CATCHER (7)
@@ -4427,6 +4422,14 @@ PicnickerGroup:
 	dw METRONOME, ENCORE, MOONLIGHT, MINIMIZE
 	end_party
 
+	next_party
+		string "JAMIE"
+		db TRAINERTYPE_NORMAL
+		dbw 21, VENONAT
+		dbw 22, BEEDRILL
+		dbw 22, BUTTERFREE
+	end_party
+
 	end_party_list
 
 
@@ -4841,11 +4844,11 @@ KimonoGirlGroup:
 
 TwinsGroup:
 	next_party ; TWINS (1)
-	db "AMY & MAY@", TRAINERTYPE_NORMAL
-	db 10
-	dw SPINARAK
-	db 10
-	dw LEDYBA
+	db "MEI & LEI@", TRAINERTYPE_NORMAL
+	dbw 17, LEDYBA
+	dbw 17, SPINARAK
+	dbw 21, BUTTERFREE
+	dbw 21, BEEDRILL
 	end_party
 
 	next_party ; TWINS (2)
@@ -4869,11 +4872,11 @@ TwinsGroup:
 	end_party
 
 	next_party ; TWINS (4)
-	db "AMY & MAY@", TRAINERTYPE_NORMAL
-	db 10
-	dw LEDYBA
-	db 10
-	dw SPINARAK
+	db "MEI & LEI@", TRAINERTYPE_NORMAL
+	dbw 21, BUTTERFREE
+	dbw 21, BEEDRILL
+	dbw 17, LEDYBA
+	dbw 17, SPINARAK
 	end_party
 
 	next_party ; TWINS (5)

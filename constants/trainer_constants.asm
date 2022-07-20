@@ -339,8 +339,8 @@ KRIS EQU __enum__
 	const ROB
 	const ED
 	const STANLEY1
-	const BUG_CATCHER_BENNY
-	const AL
+	const SHELDON
+	const YUKIJI
 	const JOSH
 	const ARNIE1
 	const KEN
@@ -593,6 +593,7 @@ KRIS EQU __enum__
 	const GINA4
 	const GINA5
 	const TIFFANY4
+	const JAMIE
 
 	trainerclass CAMPER ; 36
 	const ROLAND
@@ -677,10 +678,10 @@ KRIS EQU __enum__
 	const MIKI
 
 	trainerclass TWINS ; 3d
-	const AMYANDMAY1
+	const MEIANDLEI1
 	const ANNANDANNE1
 	const ANNANDANNE2
-	const AMYANDMAY2
+	const MEIANDLEI2
 	const JOANDZOE1
 	const JOANDZOE2
 	const MEGANDPEG1

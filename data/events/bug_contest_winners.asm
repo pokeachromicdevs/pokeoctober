@@ -5,7 +5,7 @@ BugContestantPointers:
 	dw BugContestant_BugCatcherEd
 	dw BugContestant_CooltrainerMNick
 	dw BugContestant_PokefanMWilliam
-	dw BugContestant_BugCatcherBenny
+;	dw BugContestant_BugCatcherBenny
 	dw BugContestant_CamperBarry
 	dw BugContestant_PicnickerCindy
 	dw BugContestant_BugCatcherJosh
@@ -41,11 +41,11 @@ BugContestant_PokefanMWilliam:
 	dw BUTTERFREE, 324
 	dw VENONAT,    321
 
-BugContestant_BugCatcherBenny:
-	db BUG_CATCHER, BUG_CATCHER_BENNY
-	dw BUTTERFREE, 318
-	dw WEEDLE,     295
-	dw CATERPIE,   285
+; BugContestant_BugCatcherBenny:
+; 	db BUG_CATCHER, BUG_CATCHER_BENNY
+; 	dw BUTTERFREE, 318
+; 	dw WEEDLE,     295
+; 	dw CATERPIE,   285
 
 BugContestant_CamperBarry:
 	db CAMPER, BARRY

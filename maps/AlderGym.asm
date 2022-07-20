@@ -36,10 +36,10 @@ AlderGymBugsyScript:
 .FightDone:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
-	setevent EVENT_BEAT_TWINS_AMY_AND_MAY
-	setevent EVENT_BEAT_BUG_CATCHER_BENNY
-	setevent EVENT_BEAT_BUG_CATCHER_AL
-	setevent EVENT_BEAT_BUG_CATCHER_JOSH
+	setevent EVENT_BEAT_TWINS_MEI_AND_LEI
+	setevent EVENT_BEAT_BUG_CATCHER_SHELDON
+	setevent EVENT_BEAT_BUG_CATCHER_YUKIJI
+	setevent EVENT_BEAT_PICNICKER_JAMIE
 	writetext BugsyText_HiveBadgeSpeech
 	buttonsound
 	verbosegivetmhm FURY_CUTTER_TMNUM
@@ -57,57 +57,57 @@ AlderGymBugsyScript:
 	closetext
 	end
 
-TrainerTwinsAmyandmay1:
-	trainer TWINS, AMYANDMAY1, EVENT_BEAT_TWINS_AMY_AND_MAY, TwinsAmyandmay1SeenText, TwinsAmyandmay1BeatenText, 0, .AfterScript
+TrainerTwinsMeiAndLei1:
+	trainer TWINS, MEIANDLEI1, EVENT_BEAT_TWINS_MEI_AND_LEI, TwinsMeiAndLei1SeenText, TwinsMeiAndLei1BeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext TwinsAmyandmay1AfterBattleText
+	writetext TwinsMeiAndLei1AfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerTwinsAmyandmay2:
-	trainer TWINS, AMYANDMAY2, EVENT_BEAT_TWINS_AMY_AND_MAY, TwinsAmyandmay2SeenText, TwinsAmyandmay2BeatenText, 0, .AfterScript
+TrainerTwinsMeiAndLei2:
+	trainer TWINS, MEIANDLEI2, EVENT_BEAT_TWINS_MEI_AND_LEI, TwinsMeiAndLei2SeenText, TwinsMeiAndLei2BeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext TwinsAmyandmay2AfterBattleText
+	writetext TwinsMeiAndLei2AfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcherBenny:
-	trainer BUG_CATCHER, BUG_CATCHER_BENNY, EVENT_BEAT_BUG_CATCHER_BENNY, BugCatcherBennySeenText, BugCatcherBennyBeatenText, 0, .AfterScript
+TrainerBugCatcherSheldon:
+	trainer BUG_CATCHER, SHELDON, EVENT_BEAT_BUG_CATCHER_SHELDON, BugCatcherSheldonSeenText, BugCatcherSheldonBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext BugCatcherBennyAfterBattleText
+	writetext BugCatcherSheldonAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcherAl:
-	trainer BUG_CATCHER, AL, EVENT_BEAT_BUG_CATCHER_AL, BugCatcherAlSeenText, BugCatcherAlBeatenText, 0, .AfterScript
+TrainerBugCatcherYukiji:
+	trainer BUG_CATCHER, YUKIJI, EVENT_BEAT_BUG_CATCHER_YUKIJI, BugCatcherYukijiSeenText, BugCatcherYukijiBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext BugCatcherAlAfterBattleText
+	writetext BugCatcherYukijiAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcherJosh:
-	trainer BUG_CATCHER, JOSH, EVENT_BEAT_BUG_CATCHER_JOSH, BugCatcherJoshSeenText, BugCatcherJoshBeatenText, 0, .AfterScript
+TrainerPicnickerJamie:
+	trainer PICNICKER, JAMIE, EVENT_BEAT_PICNICKER_JAMIE, PicnickerJamieSeenText, PicnickerJamieBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext BugCatcherJoshAfterBattleText
+	writetext PicnickerJamieAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -215,99 +215,107 @@ BugsyText_BugMonsAreDeep:
 	line "ites thoroughly."
 	done
 
-BugCatcherBennySeenText:
-	text "Bug #MON evolve"
-	line "young. So they get"
-
-	para "stronger that much"
-	line "faster."
+BugCatcherSheldonSeenText:
+	text "Bug-types evolve"
+	line "really fast!"
+	para "And with my fully-"
+	line "evolved #MON,"
+	cont "I will crush you!"
 	done
 
-BugCatcherBennyBeatenText:
-	text "Just evolving"
-	line "isn't enough!"
+BugCatcherSheldonBeatenText:
+	text "Curses! Beaten"
+	line "again!"
 	done
 
-BugCatcherBennyAfterBattleText:
-	text "#MON become"
-	line "stronger if they"
-	cont "evolve. Really!"
+BugCatcherSheldonAfterBattleText:
+	text "Just you wait! I'll"
+	line "have a whole army"
+	para "of fully evolved"
+	line "bug-types within"
+	para "days, and then"
+	line "we'll rule the"
+	cont "world!"
+	para "Muwahaha! Try"
+	line "stomping on us"
+	cont "then!"
 	done
 
-BugCatcherAlSeenText:
-	text "Bug #MON are"
-	line "cool and tough!"
-
-	para "I'll prove it to"
-	line "you!"
+BugCatcherYukijiSeenText:
+	text "I am the legendary"
+	line "bug samurai!"
+	para "Let us duel!"
 	done
 
-BugCatcherAlBeatenText:
-	text "You proved how"
-	line "tough you are…"
+BugCatcherYukijiBeatenText:
+	text "You're quite the"
+	line "warrior."
 	done
 
-BugCatcherAlAfterBattleText:
-	text "They're so cool,"
-	line "but most girls"
-
-	para "don't like bug"
-	line "#MON."
-
-	para "I don't know why…"
+BugCatcherYukijiAfterBattleText:
+	text "Once I am done"
+	line "training here, I"
+	para "will travel the"
+	line "globe once more."
+	para "May we meet again"
+	line "then."
 	done
 
-BugCatcherJoshSeenText:
-	text "You saved all the"
-	line "SLOWPOKE? Whew,"
-	cont "you're mighty!"
-
-	para "But my grown-up"
-	line "#MON are pretty"
-	cont "tough too!"
+PicnickerJamieSeenText:
+	text "Where would we be"
+	line "without bug-types"
+	para "to pollinate the"
+	line "flowers?"
 	done
 
-BugCatcherJoshBeatenText:
-	text "Urrgggh!"
+PicnickerJamieBeatenText:
+	text "Hey! Be nice to my"
+	line "bug-types!"
 	done
 
-BugCatcherJoshAfterBattleText:
-	text "I guess I should"
-	line "teach them better"
-	cont "moves…"
+PicnickerJamieAfterBattleText:
+	text "Without bug-types"
+	line "to pollinate stuff"
+	para "we'd probably be"
+	line "dead."
+	para "Or, we'd be without"
+	line "significantly less"
+	para "BEEDRILL stings, I"
+	line "guess."
 	done
 
-TwinsAmyandmay1SeenText:
-	text "AMY: Hi! Are you"
-	line "challenging the"
-	cont "LEADER? No way!"
+TwinsMeiAndLei1SeenText:
+	text "MEI: You better"
+	line "get ready for a"
+	cont "melee!"
 	done
 
-TwinsAmyandmay1BeatenText:
-	text "AMY & MAY: Oh,"
-	line "double goodness!"
+TwinsMeiAndLei1BeatenText:
+	text "MEI: We've lost<...>"
+	line "How could this"
+	cont "happen?"
 	done
 
-TwinsAmyandmay1AfterBattleText:
-	text "AMY: You're"
-	line "really strong!"
+TwinsMeiAndLei1AfterBattleText:
+	text "MEI: No! We lost!"
 	done
 
-TwinsAmyandmay2SeenText:
-	text "MAY: You want to"
-	line "see the LEADER?"
-	cont "We come first!"
+TwinsMeiAndLei2SeenText:
+	text "LEI: We've never"
+	line "lost, and never"
+	cont "will!"
 	done
 
-TwinsAmyandmay2BeatenText:
-	text "AMY & MAY: Oh,"
-	line "double goodness!"
+TwinsMeiAndLei2BeatenText:
+	text "MEI: We've lost<...>"
+	line "How could this"
+	cont "happen?"
 	done
 
-TwinsAmyandmay2AfterBattleText:
-	text "MAY: Our bug #-"
-	line "MON lost! Oh, what"
-	cont "a shame."
+TwinsMeiAndLei2AfterBattleText:
+	text "LEI: Bleh<...> losing"
+	line "stinks. Just like"
+	cont "you."
 	done
 
 AlderGymGuyText:
@@ -365,9 +373,9 @@ AlderGym_MapEvents:
 
 	db 7 ; object events
 	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AlderGymBugsyScript, -1
-	object_event  5,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherBenny, -1
-	object_event  8,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherAl, -1
-	object_event  0,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherJosh, -1
-	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsAmyandmay1, -1
-	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsAmyandmay2, -1
+	object_event  5,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherSheldon, -1
+	object_event  8,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherYukiji, -1
+	object_event  0,  2, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerJamie, -1
+	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsMeiAndLei1, -1
+	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsMeiAndLei2, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderGymGuyScript, -1
