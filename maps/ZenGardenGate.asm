@@ -7,13 +7,13 @@ ZenGardenGateGuardScript:
 	jumptextfaceplayer .Txt
 
 .Txt:
-	text "The ZEN GARDEN is"
-	line "a sacred place."
+	text "The SAKURA SHRINE"
+	line "is a sacred place."
 	para "Out of all places"
 	line "you could possibly"
 	para "mess around, it"
-	line "better not be here"
-	cont "kid."
+	line "better not be"
+	cont "there, kid."
 	done
 
 ZenGardenGateMysticScript:
