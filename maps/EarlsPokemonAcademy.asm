@@ -8,7 +8,9 @@ EarlsPokemonAcademy_MapScripts:
 EarlsPokemonAcademy_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 2 ; warp events
+	warp_event  3, 15, VIOLET_CITY, 11
+	warp_event  4, 15, VIOLET_CITY, 11
 
 	db 0 ; coord events
 
