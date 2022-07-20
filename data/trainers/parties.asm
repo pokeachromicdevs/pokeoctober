@@ -5343,7 +5343,7 @@ FledglingGroup:
 	next_party
 		string "TOM"
 		db TRAINERTYPE_NORMAL
-		dbw 5, PIDGEY
+		dbw 7, PIDGEY
 		dbw 8, DODAERIE
 	end_party
 

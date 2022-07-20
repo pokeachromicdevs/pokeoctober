@@ -66,22 +66,29 @@ ZenGardenSageScript1:
 TrainerFledglingTom:
 	trainer FLEDGLING, FLEDGLING_TOM, EVENT_BEAT_FLEDGLING_TOM, .SeenTxt, .WinTxt, 0, .AfterScript
 
-.SeenTxt: ; TODO
-	text "This place is"
-	line "huge!"
+.SeenTxt:
+	text "This GARDEN is a"
+	line "paradise for my"
+	cont "bird #MON!"
 	done
 
-.WinTxt: ; TODO
-	text "Aah!"
+.WinTxt:
+	text "But not for me"
+	line "anymore<...>"
 	done
 
 .AfterScript:
 	endifjustbattled
 	jumptextfaceplayer .AfterTxt
 
-.AfterTxt: ; TODO
-	text "I hope I don't get"
-	line "lost here<...>"
+.AfterTxt:
+	text "My birds are"
+	line "allowed to run"
+	para "wherever they"
+	line "please here."
+	para "They love pecking"
+	line "at the grass to"
+	cont "search for worms."
 	done
 
 TrainerSageChen:
