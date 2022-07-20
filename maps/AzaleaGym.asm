@@ -268,7 +268,7 @@ AzaleaGym_MapEvents:
 	warp_event 16,  6, AZALEA_GYM, 20
 	warp_event 17,  6, AZALEA_GYM, 20
 ; warp targets
-	warp_event 10,  4, AZALEA_GYM, 1
+	warp_event 15,  4, AZALEA_GYM, 1
 	warp_event  5, 14, AZALEA_GYM, 1
 	warp_event 17, 14, AZALEA_GYM, 1
 	warp_event  6, 18, AZALEA_GYM, 1
