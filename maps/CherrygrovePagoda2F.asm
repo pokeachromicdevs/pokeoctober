@@ -13,23 +13,20 @@ CherrygrovePagoda2FMartScript:
 	closetext
 	end
 
-CherrygrovePagoda2FSageScript:
+CherrygrovePagoda2FFarmerScript:
 	jumptextfaceplayer .Txt
 
 .Txt:
-	text "This tower was,"
-	line "and still is, a"
-	cont "sacred place."
-	para "However, lately,"
-	line "there has been an"
-	para "increase in"
-	line "tourism, so we"
-	para "had to accommodate"
-	line "them."
-	para "It's why we sell"
-	line "wares now, you can"
-	para "think of them as"
-	line "souvenirs."
+	text "I'll be honest,"
+	line "this place wasn't"
+	para "what I was expec-"
+	line "ting to supply our"
+	para "farm fresh BERRIES"
+	line "and APRICORNS to."
+	para "But it was hard"
+	line "work regardless,"
+	para "and worth the"
+	line "effort!"
 	done
 
 CherrygrovePagoda2F_MapEvents:
@@ -46,4 +43,4 @@ CherrygrovePagoda2F_MapEvents:
 
 	db 2 ; object events
 	object_event  0,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePagoda2FMartScript, -1
-	object_event  7,  3, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePagoda2FSageScript, -1
+	object_event  6,  3, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePagoda2FFarmerScript, -1
