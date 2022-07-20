@@ -1,6 +1,14 @@
 	object_const_def ; object_event constants
 	const VIOLETCITY_SAGE
-	const VIOLETCIITY_OFFICER
+	const VIOLETCITY_OFFICER
+	const VIOLETCITY_SAGE2
+	const VIOLETCITY_SAGE3
+	const VIOLETCITY_SAGE4
+	const VIOLETCITY_SAGE5
+	const VIOLETCITY_BUG_CATCHER
+	const VIOLETCITY_YOUNGSTER
+	const VIOLETCITY_FISHER_MANNY
+	const VIOLETCITY_EARL
 
 
 VioletCity_MapScripts:
@@ -236,7 +244,8 @@ VioletFishingGuildSign:
 VioletSchoolSign:
 	jumptext .Txt
 .Txt:
-	text "TRAINER SCHOOL"
+	text "EARL's #MON"
+	line "ACADEMY"
 	done
 
 VioletMuseumSign:
@@ -279,6 +288,106 @@ TrainerFisherManny:
 	line "all the way!"
 	done
 
+VioletCityEarlScript:
+	applymovement VIOLETCITY_EARL, .Speen
+	faceplayer
+	opentext
+	writetext .Intro
+	yesorno
+	iftrue .yes_or_lied
+; no
+	writetext .NoText
+	waitbutton
+	closetext
+; follow here
+	playmusic MUSIC_SHOW_ME_AROUND
+	follow VIOLETCITY_EARL, PLAYER
+	applymovement VIOLETCITY_EARL, .MoveTowardsAcademy
+	stopfollow
+	turnobject VIOLETCITY_EARL, DOWN
+	opentext
+	writetext .AtAcademyText
+	waitbutton
+	closetext
+	special RestartMapMusic
+	setevent EVENT_EARL_ENTERED_ACADEMY
+	applymovement VIOLETCITY_EARL, .MoveInsideAcademy
+	playsound SFX_ENTER_DOOR
+	disappear VIOLETCITY_EARL
+	waitsfx
+	end
+
+.yes_or_lied
+	writetext .YesOrLiedText
+	waitbutton
+	closetext
+	end
+
+.MoveTowardsAcademy:
+	step UP
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+
+.MoveInsideAcademy:
+	step UP
+	step_end
+
+.AtAcademyText:
+	text "Teach here, I do!"
+	para "Study here, you"
+	line "shall!"
+	para "Conquer GYM with"
+	line "knowledge, you"
+	cont "will!"
+	done
+
+.YesOrLiedText:
+	text "Ooh lala! Impres-"
+	line "sive strength, you"
+	cont "have!"
+	done
+
+.NoText:
+	text "Lost, you have?"
+	para "Then follow, you"
+	line "must!"
+	done
+
+.Intro:
+	text "Bonjour! EARL, I"
+	line "am!"
+	para "TRAINER, are you?"
+	para "Defeat VIOLET GYM"
+	line "LEADER, have you?"
+	done
+
+.Speen:
+	turn_head DOWN
+	turn_head LEFT
+	turn_head UP
+	turn_head RIGHT
+	turn_head DOWN
+	turn_head LEFT
+	turn_head UP
+	turn_head RIGHT
+	turn_head DOWN
+	turn_head LEFT
+	turn_head UP
+	turn_head RIGHT
+	turn_head DOWN
+	step_end
+
 VioletCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -309,7 +418,7 @@ VioletCity_MapEvents:
 	bg_event 30, 16, BGEVENT_READ, VioletMuseumSign
 	bg_event  7, 33, BGEVENT_READ, SproutTowerSign
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event 34, 36, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI
 	object_event  8, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
 	object_event 17,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHerbSage, -1
@@ -319,3 +428,4 @@ VioletCity_MapEvents:
 	object_event 25, 31, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHeracrossGuy, -1
 	object_event 15, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityYoungster, -1
 	object_event 30,  6,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherManny, -1
+	object_event 13, 23,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_EARL_ENTERED_ACADEMY
