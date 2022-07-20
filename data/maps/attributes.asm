@@ -103,7 +103,7 @@ ENDM
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5
 	connection east, SilentHills, SILENT_HILLS, 9
-	
+
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST | NORTH
 	connection north, ZenGarden, ZEN_GARDEN, -1
 	connection south, Route32North, ROUTE_32_NORTH, 0
@@ -112,7 +112,7 @@ ENDM
 
 	map_attributes ZenGarden, ZEN_GARDEN, $05, SOUTH
 	connection south, VioletCity, VIOLET_CITY, 1
-	
+
 	map_attributes AlderTown, ALDER_TOWN, $35, NORTH | WEST
 	connection north, Route32South, ROUTE_32_SOUTH, 0
 	connection west, Route33, ROUTE_33, 0
@@ -165,7 +165,7 @@ ENDM
 	map_attributes Route29, ROUTE_29, $05, WEST | EAST
 	connection west, SilentHills, SILENT_HILLS, 0
 	connection east, SilentTown, SILENT_TOWN, -1
-	
+
 	map_attributes SilentHills, SILENT_HILLS, $05, NORTH | WEST | EAST
 	connection north, Route46, ROUTE_46, 11
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, -9
@@ -743,3 +743,4 @@ ENDM
 	map_attributes CherrygrovePagoda5F, CHERRYGROVE_PAGODA_5F, $00, 0
 
 	map_attributes AzaleaGym, AZALEA_GYM, $00, 0
+	map_attributes SakuraShrine, SAKURA_SHRINE, $00, 0

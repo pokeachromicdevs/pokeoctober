@@ -524,3 +524,5 @@ INCLUDE "maps/CherrygrovePagoda4F.asm"
 INCLUDE "maps/CherrygrovePagoda5F.asm"
 
 INCLUDE "maps/AzaleaGym.asm"
+
+INCLUDE "maps/SakuraShrine.asm"

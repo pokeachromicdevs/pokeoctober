@@ -261,6 +261,7 @@ ENDM
 	map_const ZEN_GARDEN_GATE,                              5,  4 ; 21
 	map_const ALDER_TOWN,                                  10,  9 ;  8
 	map_const VIOLET_HERB_SHOP_BASEMENT,                    3,  4 ;  8
+	map_const SAKURA_SHRINE,                                5,  4
 
 
 	newgroup                                                      ; 11
