@@ -242,7 +242,7 @@ ENDM
 	map_const ROUTE_35,                                    10, 18 ;  2
 	map_const ROUTE_36,                                    30,  9 ;  3
 	map_const ROUTE_37,                                    10,  9 ;  4
-	map_const VIOLET_CITY,                                 20, 18 ;  5
+	map_const VIOLET_CITY,                                 20, 20 ;  5
 	map_const VIOLET_MART,                                  6,  4 ;  6
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  7
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
@@ -262,7 +262,7 @@ ENDM
 	map_const ALDER_TOWN,                                  10,  9 ;  8
 	map_const VIOLET_HERB_SHOP_BASEMENT,                    3,  4 ;  8
 
-	
+
 	newgroup                                                      ; 11
 
 	map_const ROUTE_34,                                    10, 18 ;  1
@@ -475,7 +475,7 @@ ENDM
 	map_const ROUTE_26_HEAL_HOUSE,                          4,  4 ; 10
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
-	
+
 	newgroup                                                      ; 25
 
 	map_const ROUTE_5,                                     10,  9 ;  1
@@ -527,4 +527,3 @@ ENDM
 	map_const CITRINE_INN_2F,                               7,  4 ;  4
 	map_const CITRINE_DEV_HOUSE_1F,                         4,  4 ;  5
 	map_const CITRINE_DEV_HOUSE_2F,                         4,  4 ;  6
-

@@ -15,7 +15,7 @@ VioletCity_MapScripts:
 
 VioletGymSageBlock:
 	jumptextfaceplayer VioletGymSageBlockText
-	
+
 TrainerOfficerSamson:
 	trainer OFFICER, SAMSON, EVENT_BEAT_OFFICER_SAMSON, OfficerSamsonSeenText, OfficerSamsonBeatenText, 0, .Script
 
@@ -26,35 +26,35 @@ TrainerOfficerSamson:
 	waitbutton
 	closetext
 	end
-	
+
 VioletGymSageBlockText:
 	text "I'm afraid I can't"
 	line "let you in."
-	
+
 	para "Not until you've"
 	line "proven yourself"
-	
+
 	para "as innocent at"
 	line "SPROUT TOWER."
-	done 
-	
+	done
+
 OfficerSamsonSeenText:
 	text "Aha! So you"
 	line "ROCKETS are trying"
-	
+
 	para "to invade SPROUT"
 	line "TOWER, huh?"
 	done
-	
+
 OfficerSamsonBeatenText:
 	text "Oh<...>you're just a"
 	line "kid."
 	done
-	
+
 OfficerSamsonAfterBattleText:
 	text "Uh<...> let's<...> not tell"
 	line "anyone about this."
-	done 
+	done
 
 VioletCity_SageStopsYou:
 .North:
@@ -75,7 +75,7 @@ VioletCity_SageStopsYou:
 	closetext
 	applymovement VIOLETCITY_SAGE, .MoveAwayFromPlayer
 	disappear VIOLETCITY_SAGE
-	moveobject VIOLETCITY_SAGE, 34, 34 ; usual position
+	moveobject VIOLETCITY_SAGE, 34, 36 ; usual position
 	appear VIOLETCITY_SAGE
 	setscene SCENE_VIOLETCITY_TALKED_TO_SAGE
 	pause 30
@@ -284,7 +284,7 @@ VioletCity_MapEvents:
 
 	db 10 ; warp events
 	warp_event 21, 31, VIOLET_MART, 2
-	warp_event 34, 33, VIOLET_GYM, 1
+	warp_event 34, 35, VIOLET_GYM, 1
 	warp_event 37, 26, ROUTE_31_VIOLET_GATE, 1
 	warp_event 37, 27, ROUTE_31_VIOLET_GATE, 2
 	warp_event  3, 25, SPROUT_TOWER_1F, 1
@@ -307,12 +307,12 @@ VioletCity_MapEvents:
 	bg_event  7, 33, BGEVENT_READ, SproutTowerSign
 
 	db 9 ; object events
-	object_event 34, 34, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI
+	object_event 34, 36, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI
 	object_event  8, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
 	object_event 17,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHerbSage, -1
 	object_event 20, 16, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCitySchoolSage, -1
-	object_event 34,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFishingSage, -1
+	object_event 33,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFishingSage, -1
 	object_event 30, 17, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityMuseumSage, -1
 	object_event 25, 31, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHeracrossGuy, -1
 	object_event 15, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityYoungster, -1
-	object_event 34,  6,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherManny, -1
+	object_event 30,  6,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherManny, -1
