@@ -4534,8 +4534,10 @@ SageGroup:
 
 	next_party ; SAGE (8)
 	db "NEAL@", TRAINERTYPE_NORMAL
-	db 6
-	dw BELLSPROUT
+	dbw 9,  ABRA
+	dbw 11, BELLSPROUT
+	dbw 13, NATU
+	dbw 15, PUPPERON
 	end_party
 
 	next_party ; SAGE (9)

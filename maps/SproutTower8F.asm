@@ -2,7 +2,7 @@
 	const SPROUTTOWER_8F_POKEBALL
 	const SPROUTTOWER_8F_OFFICER
 	const SPROUTTOWER_8F_SAGE
-	
+
 SproutTower8F_MapScripts:
 	db 0 ; scene scripts
 
@@ -10,9 +10,20 @@ SproutTower8F_MapScripts:
 
 SproutTowerF8Potion:
 	itemball POTION
-	
+
 SproutTowerF8HpUp:
 	itemball HP_UP
+
+TrainerSageNeal:
+	trainer SAGE, NEAL, EVENT_BEAT_SAGE_NEAL, SageNealSeenText, SageNealBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext SageNealAfterBattleText
+	waitbutton
+	closetext
+	end
 
 TrainerOfficerAaron:
 	trainer OFFICER, AARON_O, EVENT_BEAT_OFFICER_AARON, OfficerAaronSeenText, OfficerAaronBeatenText, 0, .AfterScript
@@ -24,32 +35,52 @@ TrainerOfficerAaron:
 	waitbutton
 	closetext
 	end
-	
+
 OfficerAaronSeenText:
 	text "I'm so bored"
 	line "of hanging around"
-	
+
 	para "here to watch"
 	line "for ROCKETS."
-	
+
 	para "Wanna fight?"
 	done
-	
+
 OfficerAaronBeatenText:
 	text "And I'm bored"
 	line "again<...>"
 	done
-	
+
 OfficerAaronAfterBattleText:
 	text "Well, I suppose"
 	line "I shouldn't slack"
-	
+
 	para "off anymore. I"
 	line "have a job to"
-	
+
 	para "do<...>even if it's"
 	line "so boring."
-	done 
+	done
+
+SageNealSeenText:
+	text "What's with all the"
+	line "activity today?"
+	done
+
+SageNealBeatenText:
+	text "It's so abnormal<...>"
+	done
+
+SageNealAfterBattleText:
+	text "I knew there was"
+	line "going to be a"
+	para "field trip coming"
+	line "here, but we have"
+	para "officers and kids"
+	line "climbing to the"
+	cont "top<...>"
+	para "What's going on?"
+	done
 
 SproutTower8F_MapEvents:
 	db 0, 0 ; filler
@@ -67,8 +98,8 @@ SproutTower8F_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 10, 2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF8Potion, EVENT_SPROUT_TOWERF8_POTION
 	object_event  3, 8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTowerF8HpUp, EVENT_SPROUT_TOWERF8_HP_UP
 	object_event  4, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerOfficerAaron, -1
-
+	object_event 12, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageNeal, -1
