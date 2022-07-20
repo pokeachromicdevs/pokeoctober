@@ -166,22 +166,30 @@ TrainerMysticSonia:
 	line "leave."
 	done
 
+SakuraShrineSign:
+	jumptext .Txt
+.Txt:
+	text "SAKURA SHRINE"
+	done
+
 ZenGarden_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 3 ; warp events
 	warp_event  9, 33, ZEN_GARDEN_GATE, 1
 	warp_event 10, 33, ZEN_GARDEN_GATE, 2
+	warp_event 19,  5, SAKURA_SHRINE, 1
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 22,  6, BGEVENT_READ, SakuraShrineSign
 
 	db 8 ; object events
-	object_event 21,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenMediumScript, -1
+	object_event 21,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenMediumScript, -1
 	object_event 21, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript, -1
 	object_event 29, 11, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenGrampsScript, -1
-	object_event  8, 31, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript1, -1
+	object_event 16, 22, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript1, -1
 	object_event  5, 23, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingTom, -1
 	object_event  7,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChen, -1
 	object_event  9, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageMonty, -1
