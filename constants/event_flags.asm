@@ -235,7 +235,7 @@
 	const EVENT_VIOLET_CITY_RARE_CANDY
 	const EVENT_BEAT_OFFICER_SAMSON
 
-; sprout tower (Floor 2)
+; sprout tower 2f
 	const EVENT_BEAT_SAGE_NICO
 	const EVENT_BEAT_SAGE_CHOW
 	const EVENT_BEAT_BLACKBELT_GENKI
@@ -287,7 +287,6 @@
 ; sprout tower 3f
 	const EVENT_BEAT_RIVAL_AT_SPROUT_TOWER
 	const EVENT_RIVAL_BLOCKING_SPROUT_TOWER ; needed for disappear callback to work
-	const EVENT_BEAT_SAGE_LI
 	const EVENT_BEAT_SCHOOLBOY_AVERY
 	const EVENT_BEAT_TEACHER_BELLA
 	const EVENT_BEAT_LASS_JUNE
@@ -323,6 +322,9 @@
 	const EVENT_SPROUT_TOWERF8_HP_UP
 	const EVENT_BEAT_OFFICER_AARON
 	const EVENT_BEAT_SAGE_NEAL
+
+; sprout tower 9f
+	const EVENT_BEAT_SAGE_LI
 
 ; sprout tower 1f
 	const EVENT_BEAT_FLEDGLING_TIMOTHY
