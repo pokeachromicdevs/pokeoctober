@@ -121,7 +121,7 @@ KRIS EQU __enum__
 	const JOEY5
 	const MAX
 	const BENNY
-	const DAN 
+	const DAN
 
 	trainerclass SCHOOLBOY ; 17
 	const JOHNNY
@@ -164,7 +164,7 @@ KRIS EQU __enum__
 
 	trainerclass LASS ; 19
 	const CARRIE
-	const BRIDGET
+	const GLORIA
 	const ALICE
 	const KRISE
 	const CONNIE1
@@ -260,6 +260,8 @@ KRIS EQU __enum__
 	const OLIVIA
 	const PEONY
 	const ANDREA
+	const CELICA
+	const SARAH
 
 	trainerclass POKEMANIAC ; 1e
 	const LARRY
@@ -716,7 +718,7 @@ KRIS EQU __enum__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
-	
+
 	trainerclass INSTRUCTOR  ; 44
 	const STANLEY
 	const STANLEY2
@@ -725,15 +727,15 @@ KRIS EQU __enum__
 	const STANLEY5
 	const CURTIS
 	const FRANK
-	
+
 	trainerclass PROFESSOR   ; 45
 	const OAK1_1_BULBASAUR
 	const OAK1_1_CHARMANDER
 	const OAK1_1_SQUIRTLE
-	
+
 	trainerclass PRODIGY     ; 46
 	const AXEL
-	
+
 	trainerclass SOLDIER     ; 47
 	const DWIGHT
 
@@ -742,23 +744,23 @@ KRIS EQU __enum__
 	const TERRY
 	const FLEDGLING_TIMOTHY
 	const WINSTON
-		
+
 	trainerclass BALLSMITH
 	const KURT
-		
+
 	trainerclass MYSTIC
 	const STELLA
-	
+
 	trainerclass ROCKCLIMBER
 	const HENRY_T
-	const LOID 
-	
+	const LOID
+
 	trainerclass SPORTSMAN
 	const JAYDEN
-	
+
 	trainerclass MANCHILD
 	const MIGUEL
 	const MARCO
 	const ZACHARY
-	
+
 NUM_TRAINER_CLASSES EQU __enum__

@@ -56,7 +56,7 @@ WhitneyGroup:
 
 		dbw 19, FARFETCH_D
 		db  NO_ITEM
-		dw  GUST, SAND_ATTACK, FURY_ATTACK, MUD_SLAP 
+		dw  GUST, SAND_ATTACK, FURY_ATTACK, MUD_SLAP
 
 		dbw 20, MILTANK
 		db  PRZCUREBERRY
@@ -587,7 +587,7 @@ YoungsterGroup:
 		db 4
 		dw RATTATA
 	end_party
-	
+
 	next_party ; YOUNGSTER (2)
 		db "MIKEY@", TRAINERTYPE_NORMAL
 		db 2
@@ -684,7 +684,7 @@ YoungsterGroup:
 		dw RATICATE
 		dw HYPER_BEAM, QUICK_ATTACK, HYPER_FANG, PURSUIT
 	end_party
-	
+
 	next_party ; YOUNGSTER (1)
 		db "MAX@", TRAINERTYPE_NORMAL
 		db 2
@@ -692,7 +692,7 @@ YoungsterGroup:
 		db 2
 		dw SANDSHREW
 	end_party
-	
+
 	next_party ; YOUNGSTER (1)
 	db "BENNY@", TRAINERTYPE_NORMAL
 	db 2
@@ -700,7 +700,7 @@ YoungsterGroup:
 	db 5
 	dw LEDYBA
 	end_party
-	
+
 	next_party ; YOUNGSTER (1)
 	db "DAN@", TRAINERTYPE_NORMAL
 	db 10
@@ -710,7 +710,7 @@ YoungsterGroup:
 	db 12
 	dw MAREEP
 	db 12
-	dw RATTATA 
+	dw RATTATA
 	end_party
 
 
@@ -828,7 +828,7 @@ SchoolboyGroup:
 	dw MAGNETON
 	dw ZAP_CANNON, THUNDER_WAVE, LOCK_ON, SWIFT
 	end_party
-	
+
 	next_party ; SCHOOLBOY (16)
 	db "ANDY@", TRAINERTYPE_NORMAL
 	db 7
@@ -838,7 +838,7 @@ SchoolboyGroup:
 	db 9
 	dw ODDISH
 	end_party
-	
+
 	next_party ; SCHOOLBOY (17)
 	db "AVERY@", TRAINERTYPE_NORMAL
 	db 8
@@ -849,7 +849,7 @@ SchoolboyGroup:
 	dw PARASPOR
 	db 10
 	dw SWINUB
-	end_party 
+	end_party
 
 	end_party_list
 
@@ -1010,15 +1010,15 @@ BirdKeeperGroup:
 	dw PIDGEOT
 	dw SWIFT, DETECT, STEEL_WING, FLY
 	end_party
-	
+
 	next_party ; BIRD_KEEPER (20)
 	db "CLYDE@", TRAINERTYPE_NORMAL
 	db 7
 	dw MURKROW
-	end_party 
+	end_party
 
 	end_party_list
-	
+
 LassGroup:
 	next_party ; LASS (1)
 		db "CARRIE@", TRAINERTYPE_MOVES
@@ -1028,13 +1028,10 @@ LassGroup:
 	end_party
 
 	next_party ; LASS (2)
-		db "BRIDGET@", TRAINERTYPE_NORMAL
-		db 15
-		dw JIGGLYPUFF
-		db 15
-		dw JIGGLYPUFF
-		db 15
-		dw JIGGLYPUFF
+		db "GLORIA@", TRAINERTYPE_NORMAL
+		dbw 14, IGGLYBUFF
+		dbw 15, SPEAROW
+		dbw 17, JIGGLYPUFF
 	end_party
 
 	next_party ; LASS (3)
@@ -1170,7 +1167,7 @@ LassGroup:
 		dw GOLDUCK
 		dw DISABLE, SURF, PSYCHIC_M, SCREECH
 	end_party
-	
+
 	next_party ; LASS (18)
 		db "ARIEL@", TRAINERTYPE_NORMAL
 		db 5
@@ -1180,7 +1177,7 @@ LassGroup:
 		db 8
 		dw HOPPIP
 	end_party
-	
+
 	next_party ; LASS (18)
 		db "SAM@", TRAINERTYPE_NORMAL
 		db 2
@@ -1188,7 +1185,7 @@ LassGroup:
 		db 4
 		dw SENTRET
 	end_party
-	
+
 	next_party ; LASS (19)
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
 		db 3
@@ -1196,7 +1193,7 @@ LassGroup:
 		db 4
 		dw CAMOUFLAKE
 	end_party
-	
+
 	next_party ; LASS (20)
 		db "YURI@", TRAINERTYPE_NORMAL
 		db 2
@@ -1206,7 +1203,7 @@ LassGroup:
 		db 4
 		dw SWINUB
 	end_party
-	
+
 	next_party ; LASS (20)
 		db "HELEN@", TRAINERTYPE_NORMAL
 		db 14
@@ -1216,7 +1213,7 @@ LassGroup:
 		db 15
 		dw FURRET
 	end_party
-	
+
 	next_party ; LASS (21)
 		db "JUNE@", TRAINERTYPE_NORMAL
 		db 9
@@ -1226,7 +1223,7 @@ LassGroup:
 		db 11
 		dw MOLAMBINO
 	end_party
-	
+
 	next_party ; LASS (21)
 		db "ANNIE@", TRAINERTYPE_NORMAL
 		db 9
@@ -1236,13 +1233,13 @@ LassGroup:
 		db 14
 		dw ZUBAT
 	end_party
-	
+
 	next_party ; LASS (23)
 		string "TINA"
 		db     TRAINERTYPE_NORMAL
 		dbw    10, BUTTERFREE
 	end_party
-	
+
 	next_party ; LASS (19) NIE NIE 2
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
 		db 7
@@ -1250,7 +1247,7 @@ LassGroup:
 		db 8
 		dw CAMOUFLAKE
 	end_party
-	
+
 	next_party ; LASS (19) NIE NIE 3
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
 		db 9
@@ -1258,7 +1255,7 @@ LassGroup:
 		db 10
 		dw CAMOUFLAKE
 	end_party
-	
+
 	next_party ; LASS (19) NIE NIE 4
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
 		db 12
@@ -1826,7 +1823,7 @@ BeautyGroup:
 	next_party
 		string "PEONY"
 		db     TRAINERTYPE_NORMAL
-		
+
 		dbw    17, MOIBELLE
 		;dbw    17, KOIJACK
 		dbw    18, SMOOCHUM
@@ -1838,6 +1835,21 @@ BeautyGroup:
 		;dbw    25, PANGSHI
 		dbw    25, GASTLY
 		;dbw    26, <something>
+	end_party
+
+	next_party
+		string "CELICA"
+		db     TRAINERTYPE_NORMAL
+		dbw    14, COINPUR
+		dbw    16, MEOWTH
+		dbw    16, AIPOM
+	end_party
+
+	next_party
+		string "SARAH"
+		db     TRAINERTYPE_NORMAL
+		dbw    15, PIDGEY
+		dbw    17, CLEFAIRY
 	end_party
 
 	end_party_list
@@ -2275,15 +2287,15 @@ TeacherGroup:
 	db 35
 	dw JIGGLYPUFF
 	end_party
-	
+
 	next_party ; TEACHER (4)
 	db "ANN@", TRAINERTYPE_NORMAL
 	db 2
 	dw HOOTHOOT
-	db 4 
+	db 4
 	dw MOIBELLE
 	end_party
-	
+
 	next_party ; TEACHER (5)
 	db "BELLA@", TRAINERTYPE_NORMAL
 	db 7
@@ -2692,7 +2704,7 @@ FisherGroup:
 	dw QWILFISH
 	dw ROLLOUT, SURF, PIN_MISSILE, TAKE_DOWN
 	end_party
-	
+
 	next_party ; FISHER (26)
 	db "BILLY@", TRAINERTYPE_NORMAL
 	db 3
@@ -3987,7 +3999,7 @@ BlackbeltGroup:
 	db 13
 	dw MACHOP
 	db 13
-	dw MANKEY 
+	dw MANKEY
 	end_party
 
 	next_party ; BLACKBELT_T (9)
@@ -5039,7 +5051,7 @@ OfficerGroup:
 	db 14
 	dw GROWLITHE
 	end_party
-	
+
 	next_party ; OFFICER (2)
 	db "MATT@", TRAINERTYPE_NORMAL
 	db 6
@@ -5049,7 +5061,7 @@ OfficerGroup:
 	db 9
 	dw REMORAID
 	end_party
-	
+
 	next_party ; OFFICER (2)
 	db "SAMSON@", TRAINERTYPE_NORMAL
 	db 6
@@ -5057,7 +5069,7 @@ OfficerGroup:
 	db 8
 	dw REMORAID
 	end_party
-	
+
 	next_party ; OFFICER (2)
 	db "AARON@", TRAINERTYPE_NORMAL
 	db 13
@@ -5065,7 +5077,7 @@ OfficerGroup:
 	db 15
 	dw REMORAID
 	end_party
-	
+
 	end_party_list
 
 GruntFGroup:
@@ -5128,9 +5140,9 @@ MysticalmanGroup:
 	dw ELECTRODE
 	dw SCREECH, SONICBOOM, THUNDER, ROLLOUT
 	end_party
-	
+
 	end_party_list
-	
+
 SECTION "Enemy Trainer Parties 3", ROMX
 
 InstructorGroup:
@@ -5139,7 +5151,7 @@ InstructorGroup:
 	db 3
 	dw HOOTHOOT
 	end_party
-	
+
 	next_party ; INSTRUCTOR (2)
 	db "STANLEY@", TRAINERTYPE_NORMAL
 	db 15
@@ -5147,7 +5159,7 @@ InstructorGroup:
 	db 15
 	dw HOOTHOOT
 	end_party
-	
+
 	next_party ; INSTRUCTOR (3)
 	db "STANLEY@", TRAINERTYPE_NORMAL
 	db 26
@@ -5157,7 +5169,7 @@ InstructorGroup:
 	db 28
 	dw NOCTOWL
 	end_party
-	
+
 	next_party ; INSTRUCTOR (4)
 	db "STANLEY@", TRAINERTYPE_NORMAL
 	db 34
@@ -5166,10 +5178,10 @@ InstructorGroup:
 	dw KADABRA
 	db 37
 	dw EXEGGUTOR
-	db 38 
+	db 38
 	dw NOCTOWL
 	end_party
-	
+
 	next_party ; INSTRUCTOR (5)
 	db "STANLEY@", TRAINERTYPE_MOVES
 	db 46
@@ -5185,7 +5197,7 @@ InstructorGroup:
 	dw NOCTOWL
 	dw FLY, TAKE_DOWN, HYPNOSIS, DREAM_EATER
 	end_party
-	
+
 	next_party ; INSTRUCTOR (6)
 	db "CURTIS@", TRAINERTYPE_NORMAL
 	db 11
@@ -5204,11 +5216,11 @@ InstructorGroup:
 		dbw    26, GIRAFARIG
 		dw     AGILITY, CONFUSION, FORESIGHT, FORESIGHT
 	end_party
-	
+
 	end_party_list
 
 ProfessorGroup:
-	next_party ; PROFESSOR (1)	
+	next_party ; PROFESSOR (1)
 	db "OAK@", TRAINERTYPE_MOVES
 	db 3
 	dw SPEAROW
@@ -5217,8 +5229,8 @@ ProfessorGroup:
 	dw BULBASAUR
 	dw TACKLE, GROWL, LEECH_SEED, NO_MOVE
 	end_party
-	
-	next_party ; PROFESSOR (2)	
+
+	next_party ; PROFESSOR (2)
 	db "OAK@", TRAINERTYPE_MOVES
 	db 3
 	dw SPEAROW
@@ -5227,12 +5239,12 @@ ProfessorGroup:
 	dw CHARMANDER
 	dw SCRATCH, GROWL, EMBER, NO_MOVE
 	end_party
-	
-	next_party ; PROFESSOR (3)	
+
+	next_party ; PROFESSOR (3)
 	db "OAK@", TRAINERTYPE_MOVES
 	db 3
 	dw SPEAROW
-	dw FURY_ATTACK, MIRROR_MOVE, NO_MOVE, NO_MOVE 
+	dw FURY_ATTACK, MIRROR_MOVE, NO_MOVE, NO_MOVE
 	db 7
 	dw SQUIRTLE
 	dw TACKLE, TAIL_WHIP, BUBBLE, NO_MOVE
@@ -5252,9 +5264,9 @@ ProdigyGroup:
 	db 9
 	dw CUBONE
 	end_party
-		
+
 	end_party_list
-		
+
 SoldierGroup:
 	next_party; SOLDIER (1)
 	db "DWIGHT@", TRAINERTYPE_NORMAL
@@ -5263,9 +5275,9 @@ SoldierGroup:
 	db 3
 	dw SENTRET
 	end_party
-	
+
 	end_party_list
-	
+
 FledglingGroup:
 	next_party; FLEDGLING (1)
 		db "BARRY@", TRAINERTYPE_NORMAL
@@ -5274,7 +5286,7 @@ FledglingGroup:
 		db 6
 		dw PIDGEY
 	end_party
-	
+
 	next_party; FLEDGLING (2)
 		db "TERRY@", TRAINERTYPE_NORMAL
 		db 13
@@ -5307,9 +5319,9 @@ FledglingGroup:
 		dbw    18, PSYDUCK
 		dbw    18, MURKROW
 	end_party
-	
+
 	end_party_list
-	
+
 BallsmithGroup:
 	next_party; BALLSMITH (1)
 	db "KURT@", TRAINERTYPE_NORMAL
@@ -5324,9 +5336,9 @@ BallsmithGroup:
 	db 24
 	dw SLOWPOKE
 	end_party
-		
+
 	end_party_list
-		
+
 MysticGroup:
 	next_party; MYSTIC (1)
 	db "STELLA@", TRAINERTYPE_NORMAL
@@ -5335,11 +5347,11 @@ MysticGroup:
 	db 13
 	dw GASTLY
 	db 14
-	dw NATU 
+	dw NATU
 	end_party
-		
+
 	end_party_list
-		
+
 RockClimberGroup:
 	next_party; ROCKCLIMBER (1)
 	db "HENRY@", TRAINERTYPE_NORMAL
@@ -5354,11 +5366,11 @@ RockClimberGroup:
 	db 12
 	dw BELLSPROUT
 	db 13
-	dw BURGELA 
-	end_party 
-		
+	dw BURGELA
+	end_party
+
 	end_party_list
-	
+
 CamperGroup:
 	next_party ; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_NORMAL
@@ -5559,7 +5571,7 @@ CamperGroup:
 	db 30
 	dw TAUROS
 	end_party
-	
+
 	next_party ; CAMPER (23)
 	db "CRAIG@", TRAINERTYPE_NORMAL
 	db 3
@@ -5571,19 +5583,19 @@ CamperGroup:
 	db 4
 	dw MARILL
 	end_party
-	
+
 	end_party_list
-	
-	
+
+
 SportsmanGroup:
 	next_party; SPORTSMAN (1)
 	db "JAYDEN@", TRAINERTYPE_NORMAL
 	db 4
 	dw COALTA
 	end_party
-	
+
 	end_party_list
-	
+
 ManchildGroup:
 	next_party ; MANCHILD (1)
 	db "MIGUEL@", TRAINERTYPE_NORMAL
@@ -5594,7 +5606,7 @@ ManchildGroup:
 	db 12
 	dw COALTA
 	end_party
-	
+
 	next_party
 		string "MARCO"
 		db     TRAINERTYPE_NORMAL

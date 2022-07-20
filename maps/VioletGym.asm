@@ -33,10 +33,11 @@ VioletGymWhitneyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY
 	setscene SCENE_VIOLETGYM_WHITNEY_STOPS_CRYING
-	setevent EVENT_BEAT_BEAUTY_VICTORIA
-	setevent EVENT_BEAT_BEAUTY_SAMANTHA
-	setevent EVENT_BEAT_LASS_CARRIE
-	setevent EVENT_BEAT_LASS_BRIDGET
+	setevent EVENT_BEAT_LASS_HELEN
+	setevent EVENT_BEAT_FLEDGLING_TERRY
+	setevent EVENT_BEAT_BEAUTY_CELICA
+	setevent EVENT_BEAT_LASS_GLORIA
+	setevent EVENT_BEAT_BEAUTY_SARAH
 	checkevent EVENT_GOT_TM45_ATTRACT
 	iftrue .GotAttract
 	checkflag ENGINE_PLAINBADGE
@@ -65,30 +66,38 @@ VioletGymWhitneyScript:
 	closetext
 	end
 
-TrainerLassCarrie:
-	trainer LASS, CARRIE, EVENT_BEAT_LASS_CARRIE, LassCarrieSeenText, LassCarrieBeatenText, 0, .Script
+TrainerBeautyCelica:
+	trainer BEAUTY, CELICA, EVENT_BEAT_BEAUTY_CELICA, BeautyCelicaSeenText, BeautyCelicaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext LassCarrieAfterBattleText
+	writetext BeautyCelicaAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerLassBridget:
-	trainer LASS, BRIDGET, EVENT_BEAT_LASS_BRIDGET, LassBridgetSeenText, LassBridgetBeatenText, 0, .Script
+TrainerLassGloria:
+	trainer LASS, GLORIA, EVENT_BEAT_LASS_GLORIA, LassGloriaSeenText, LassGloriaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext LassBridgetAfterBattleText
+	writetext LassGloriaAfterBattleText
 	waitbutton
 	closetext
 	end
+
+TrainerBeautySarah:
+	trainer BEAUTY, SARAH, EVENT_BEAT_BEAUTY_SARAH, BeautySarahSeenText, BeautySarahBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	jumptext BeautySarahAfterBattleText
+
 
 TrainerLassHelen:
-	trainer LASS, HELEN, EVENT_BEAT_BEAUTY_VICTORIA, LassHelenSeenText, LassHelenBeatenText, 0, .Script
+	trainer LASS, HELEN, EVENT_BEAT_LASS_HELEN, LassHelenSeenText, LassHelenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -99,7 +108,7 @@ TrainerLassHelen:
 	end
 
 TrainerFledglingTerry:
-	trainer FLEDGLING, TERRY, EVENT_BEAT_BEAUTY_SAMANTHA, FledglingTerrySeenText, FledglingTerryBeatenText, 0, .Script
+	trainer FLEDGLING, TERRY, EVENT_BEAT_FLEDGLING_TERRY, FledglingTerrySeenText, FledglingTerryBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -136,26 +145,26 @@ VioletGymStatue:
 	jumpstd gymstatue2
 
 WhitneyBeforeText:
-	text "Yo! Name's" 
+	text "Yo! Name's"
 	line "WHITNEY, the"
 	cont "VIOLET CITY GYM"
-	
+
 	para "LEADER! I'm the"
 	line "roughest, tough-"
 	cont "girl on this side"
-	
+
 	para "of JOHTO! I've"
 	line "even gone toe-to-"
 	cont "toe with wild"
-	
+
 	para "RATICATE before"
 	line "and won! But, I"
 	cont "do have a weak"
-	
+
 	para "spot, and that"
 	line "weak spot is cute"
 	cont "#MON!"
-	
+
 	para "But hey, enough"
 	line "about me! Let's"
 	cont "rumble!"
@@ -221,47 +230,68 @@ WhitneyGoodCryText:
 	line "again! Bye-bye!"
 	done
 
-LassCarrieSeenText:
-	text "Don't let my"
-	line "#MON's cute"
-
-	para "looks fool you."
-	line "They can whip you!" ; :flooshed:
+BeautyCelicaSeenText:
+	text "Aw! You're such an"
+	line "adorable little"
+	cont "trainer!"
 	done
 
-LassCarrieBeatenText:
-	text "Darn… I thought"
-	line "you were weak…"
+BeautyCelicaBeatenText:
+	text "Ow! That's not"
+	line "cute!"
 	done
 
-LassCarrieAfterBattleText:
-	text "Do my #MON"
-	line "think I'm cute?"
+BeautyCelicaAfterBattleText:
+	text "Did you have to go"
+	line "all out like that?"
+	para "You could've toned"
+	line "it down a bit<...>"
 	done
 
-LassBridgetSeenText:
-	text "I like cute #-"
-	line "MON better than"
-	cont "strong #MON."
-
-	para "But I have strong"
-	line "and cute #MON!"
+LassGloriaSeenText:
+	text "People don't give"
+	line "normal-types the"
+	para "respect they de-"
+	line "serve."
 	done
 
-LassBridgetBeatenText:
-	text "Oh, no, no, no!"
+LassGloriaBeatenText:
+	text "You deserve"
+	line "respect, too."
 	done
 
-LassBridgetAfterBattleText:
-	text "I'm trying to beat"
-	line "WHITNEY, but…"
-	cont "It's depressing."
+LassGloriaAfterBattleText:
+	text "Normal-types can"
+	line "be great in the"
+	cont "right hands."
+	para "And WHITNEY just"
+	line "so happens to be a"
+	para "good example of"
+	line "that!"
+	done
 
-	para "I'm okay! If I"
-	line "lose, I'll just"
+BeautySarahSeenText:
+	text "I like CLEFAIRY,"
+	line "but something"
+	para "about them seems<...>"
+	line "off."
+	done
 
-	para "try harder next"
-	line "time!"
+BeautySarahBeatenText:
+	text "Quite off, in"
+	line "fact."
+	done
+
+BeautySarahAfterBattleText:
+	text "I don't know, I"
+	line "guess it's just the"
+	para "fact that they're"
+	line "normal-type."
+	para "And yet, they're"
+	line "fairies from"
+	cont "space."
+	para "That<...> isn't really"
+	line "normal."
 	done
 
 LassHelenSeenText:
@@ -277,7 +307,7 @@ LassHelenAfterBattleText:
 	text "C'mon, let's hang"
 	line "out! What?! Am I"
 	cont "not cute enough"
-	
+
 	para "for you?!"
 	done
 
@@ -327,10 +357,11 @@ VioletGym_MapEvents:
 	bg_event  1, 15, BGEVENT_READ, VioletGymStatue
 	bg_event  4, 15, BGEVENT_READ, VioletGymStatue
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event  8,  3, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymWhitneyScript, -1
-	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassCarrie, -1
-	object_event  9,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassBridget, -1
+	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyCelica, -1
+	object_event  9,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassGloria, -1
 	object_event  0,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassHelen, -1
 	object_event 19,  5, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFledglingTerry, -1
 	object_event  5, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymGuyScript, -1
+	object_event  5,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautySarah, -1
