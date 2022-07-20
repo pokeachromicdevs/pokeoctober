@@ -76,10 +76,10 @@ TrainerBirdKeeperAbe:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerLassAriel:
-	trainer LASS, ARIEL, EVENT_BEAT_LASS_ARIEL, LassArielSeenText, LassArielBeatenText, 0, .Script 
-	
+	trainer LASS, ARIEL, EVENT_BEAT_LASS_ARIEL, LassArielSeenText, LassArielBeatenText, 0, .Script
+
 .Script:
 	endifjustbattled
 	opentext
@@ -87,7 +87,7 @@ TrainerLassAriel:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerBirdKeeperClyde:
 	trainer BIRD_KEEPER, CLYDE_T, EVENT_BEAT_BIRD_KEEPER_CLYDE, BirdKeeperClydeSeenText, BirdKeeperClydeBeatenText, 0, .Script
 
@@ -128,38 +128,34 @@ CherrygroveGymStatue:
 FalknerIntroText:
 	text "Welcome. I am"
 	line "FALKNER, the GYM"
-	cont "LEADER of this"
-	
-	para "city."
-	
+	para "LEADER of this"
+	line "city."
+
 	para "My position of"
 	line "gym leader has"
-	cont "only been given"
-	
-	para "to me fairly"
-	line "recently, but I"
-	cont "have trained"
-	
+	para "only been given"
+	line "to me fairly"
+	para "recently, but I"
+	line "have trained"
 	para "flying-types for"
-	line "many years. Let"
-	cont "me see if you can"
-	
-	para "hit a flying"
-	line "target!"
+	line "many years."
+
+	para "Let me see if you"
+	line "can hit a flying"
+	cont "target!"
 	done
 
 FalknerWinLossText:
 	text "My…my father's"
-	line "cherished birds!" 
+	line "cherished birds!"
 
 	para "Well, you have"
 	line "bested my flying-"
+	cont "types and I."
 
-	para "types and I."
-	line "That means you"
-	cont "have earned the"
-	
-	para "ZEPHYRBADGE."
+	para "That means you"
+	line "have earned the"
+	cont "ZEPHYRBADGE."
 	done
 
 ReceivedZephyrBadgeText:
@@ -170,49 +166,44 @@ ReceivedZephyrBadgeText:
 FalknerZephyrBadgeText:
 	text "With the"
 	line "ZEPHYRBADGE,"
-	cont "the attack power"
+	para "the attack power"
+	line "of your #MON"
+	para "increases, and"
+	line "you are granted"
+	para "the ability to use"
+	line "UPROOT out of"
+	cont "battle."
 
-	para "of your #MON"
-	line "increases, and"
-	para "you are granted"
-	line "the ability to use"
-	
-	para "UPROOT out of"
-	line "battle. And, as"
-	cont "a personal gift,"
-	
-	para "please take this."
+	para "And, as a personal"
+	line "gift, please take"
+	cont "this."
 	done
 
 FalknerTMMudSlapText:
 	text "That is a TM. Be"
 	line "wary-- TMs can be"
+	cont "used only once."
 
-	para "used only once."
-	line "Make sure you know"
+	para "Make sure you know"
+	line "what you are doing"
+	cont "when using it."
 
-	para "what you are doing"
-	line "when using it."
-	cont "That TM is TM 31--"
+	para "That TM is TM 31--"
+	line "MUD-SLAP. Though"
+	para "it only deals"
+	line "small damage, it"
+	para "always reduces the"
+	line "accuracy of your"
+	cont "foes."
 
-	para "MUD-SLAP. Though"
-	line "it only deals"
-
-	para "small damage, it"
-	line "always reduces the"
-
-	para "accuracy of your"
-	line "foes. That said…it"
-
-	para "is a ground-type"
-	line "TM. I wish I had a"
-	cont "flying-type TM"
-	
+	para "That said<...> it is"
+	line "a ground-type TM."
+	para "I wish I had a"
+	line "flying-type TM"
 	para "instead, but no"
 	line "such TM exists"
-	cont "yet. It's"
-	
-	para "embarrassing…"
+	cont "yet."
+	para "It's embarrassing<...>"
 	done
 
 FalknerFightDoneText:
@@ -249,7 +240,7 @@ BirdKeeperRodAfterBattleText:
 	text "It's true! I"
 	line "taught my SPEAROW"
 	cont "to talk!"
-	
+
 	para "Ugh…why must"
 	line "people never"
 	cont "believe me?"
@@ -271,48 +262,48 @@ BirdKeeperAbeAfterBattleText:
 	line "pretending to be"
 	cont "cool…sigh…"
 	done
-	
+
 LassArielSeenText:
 	text "I can feel the"
 	line "sunshine!"
 	done
-	
+
 LassArielBeatenText:
 	text "And boy does it"
 	line "burn."
 	done
-	
+
 LassArielAfterBattleText:
 	text "Seriously, never"
 	line "fly around on a"
 	cont "#MON. The"
-	
+
 	para "whole experience"
 	line "is pain. The"
-	
+
 	para "blinding sun, the"
 	line "risk of falling"
 	cont "off…it's agonizing."
 	done
-	
+
 BirdKeeperClydeSeenText:
 	text "Prepare to"
 	line "plummet!"
 	done
-	
+
 BirdKeeperClydeBeatenText:
 	text "I'm falling!"
 	line "Help!"
 	done
-	
+
 BirdKeeperClydeAfterBattleText:
 	text "I'll knock you"
 	line "out of the sky"
 	cont "next time! Just"
-	
+
 	para "you watch!"
-	done 
-	
+	done
+
 CherrygroveGymGuyText:
 	text "Hey! I'm no train-"
 	line "er but I can give"
