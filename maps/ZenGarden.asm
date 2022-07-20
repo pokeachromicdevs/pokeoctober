@@ -63,6 +63,109 @@ ZenGardenSageScript1:
 	cont "but it's gone now."
 	done
 
+TrainerFledglingTom:
+	trainer FLEDGLING, FLEDGLING_TOM, EVENT_BEAT_FLEDGLING_TOM, .SeenTxt, .WinTxt, 0, .AfterScript
+
+.SeenTxt: ; TODO
+	text "This place is"
+	line "huge!"
+	done
+
+.WinTxt: ; TODO
+	text "Aah!"
+	done
+
+.AfterScript:
+	endifjustbattled
+	jumptextfaceplayer .AfterTxt
+
+.AfterTxt: ; TODO
+	text "I hope I don't get"
+	line "lost here<...>"
+	done
+
+TrainerSageChen:
+	trainer SAGE, CHEN, EVENT_BEAT_SAGE_CHEN, .SeenTxt, .WinTxt, 0, .AfterScript
+
+.SeenTxt:
+	text "There is no place"
+	line "more soothing than"
+	para "this wondrous gar-"
+	line "den."
+	done
+
+.WinTxt:
+	text "Even now, I feel"
+	line "no rage."
+	done
+
+.AfterScript:
+	endifjustbattled
+	jumptextfaceplayer .AfterTxt
+
+.AfterTxt:
+	text "If only there was"
+	line "a way to keep the"
+	para "soothing bliss"
+	line "from this place"
+	para "with me at all"
+	line "times<...>"
+	done
+
+TrainerSageMonty:
+	trainer SAGE, MONTY, EVENT_BEAT_SAGE_MONTY, .SeenTxt, .WinTxt, 0, .AfterScript
+
+.SeenTxt:
+	text "Can you withhold"
+	line "your anger from"
+	para "your incoming"
+	line "defeat?"
+	done
+
+.WinTxt:
+	text "Hmm<...>"
+	done
+
+.AfterScript:
+	endifjustbattled
+	jumptextfaceplayer .AfterTxt
+
+.AfterTxt:
+	text "I've lost the"
+	line "ability to feel"
+	cont "anger."
+	para "In fact, I've been"
+	line "losing all of my"
+	cont "emotions lately."
+	done
+
+TrainerMysticSonia:
+	trainer MYSTIC, SONIA, EVENT_BEAT_MYSTIC_SONIA, .SeenTxt, .WinTxt, 0, .AfterScript
+
+.SeenTxt:
+	text "Hey! Get out of"
+	line "here! You're dis-"
+	cont "tracting me!"
+	done
+
+.WinTxt:
+	text "Curses<...>"
+	done
+
+.AfterScript:
+	endifjustbattled
+	jumptextfaceplayer .AfterTxt
+
+.AfterTxt:
+	text "I'm sorry, but I"
+	line "can't focus on"
+	para "gazing into the"
+	line "future with people"
+	cont "around."
+	para "Please, just<...>"
+	line "leave."
+	done
+
 ZenGarden_MapEvents:
 	db 0, 0 ; filler
 
@@ -74,8 +177,12 @@ ZenGarden_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 8 ; object events
 	object_event 21,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenMediumScript, -1
 	object_event 21, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript, -1
 	object_event 29, 11, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenGrampsScript, -1
 	object_event  8, 31, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript1, -1
+	object_event  5, 23, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingTom, -1
+	object_event  7,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChen, -1
+	object_event  9, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageMonty, -1
+	object_event 35, 13, SPRITE_MYSTIC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerMysticSonia, -1

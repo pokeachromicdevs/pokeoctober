@@ -207,7 +207,7 @@ EcruteakGroupSprites:
 		static_sprite SPRITE_GYM_GUY
 		static_sprite SPRITE_GRANNY
 		static_sprite SPRITE_BIG_SNORLAX
-
+		static_sprite SPRITE_MYSTIC
 	end_outdoor_sprites
 
 AzaleaGroupSprites:

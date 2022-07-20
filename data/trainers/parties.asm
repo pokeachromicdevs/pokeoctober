@@ -4572,6 +4572,21 @@ SageGroup:
 	dw VAPOREON
 	end_party
 
+	next_party
+		string "CHEN"
+		db TRAINERTYPE_NORMAL
+		dbw 6, DROWZEE
+		dbw 7, GEODUDE
+	end_party
+
+	next_party
+		string "MONTY"
+		db TRAINERTYPE_NORMAL
+		dbw 5, VULPIII
+		dbw 5, SANDSHREW
+		dbw 7, ONIX
+	end_party
+
 	end_party_list
 
 MediumGroup:
@@ -5325,6 +5340,13 @@ FledglingGroup:
 		dbw    18, MURKROW
 	end_party
 
+	next_party
+		string "TOM"
+		db TRAINERTYPE_NORMAL
+		dbw 5, PIDGEY
+		dbw 8, DODAERIE
+	end_party
+
 	end_party_list
 
 BallsmithGroup:
@@ -5353,6 +5375,13 @@ MysticGroup:
 	dw GASTLY
 	db 14
 	dw NATU
+	end_party
+
+	next_party
+		string "SONIA"
+		db TRAINERTYPE_NORMAL
+		dbw 6, SPINARAK
+		dbw 8, NATU
 	end_party
 
 	end_party_list

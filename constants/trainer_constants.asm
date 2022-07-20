@@ -637,6 +637,8 @@ KRIS EQU __enum__
 	const GAKU
 	const MASA
 	const KOJI
+	const CHEN
+	const MONTY
 
 	trainerclass MEDIUM ; 39
 	const MARTHA
@@ -745,12 +747,14 @@ KRIS EQU __enum__
 	const TERRY
 	const FLEDGLING_TIMOTHY
 	const WINSTON
+	const FLEDGLING_TOM
 
 	trainerclass BALLSMITH
 	const KURT
 
 	trainerclass MYSTIC
 	const STELLA
+	const SONIA
 
 	trainerclass ROCKCLIMBER
 	const HENRY_T
