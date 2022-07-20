@@ -10,8 +10,8 @@ ZenGardenMediumScript:
 	text "Ah, it's not every-"
 	line "day a young one"
 	para "such as yourself"
-	line "comes to the ZEN"
-	cont "GARDEN."
+	line "comes to the"
+	cont "SAKURA SHRINE."
 	para "It's reassuring"
 	line "that the young"
 	para "ones still wish to"
@@ -185,7 +185,7 @@ ZenGarden_MapEvents:
 	db 3 ; warp events
 	warp_event  9, 33, ZEN_GARDEN_GATE, 1
 	warp_event 10, 33, ZEN_GARDEN_GATE, 2
-	warp_event 19,  5, SAKURA_SHRINE, 1
+	warp_event 19,  5, SAKURA_SHRINE, 2
 
 	db 0 ; coord events
 

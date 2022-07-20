@@ -486,6 +486,7 @@ INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/SilentHills.asm"
 INCLUDE "maps/SilentTown.asm"
+INCLUDE "maps/SakuraShrine.asm"
 
 
 SECTION "Map Scripts 26", ROMX
@@ -524,5 +525,3 @@ INCLUDE "maps/CherrygrovePagoda4F.asm"
 INCLUDE "maps/CherrygrovePagoda5F.asm"
 
 INCLUDE "maps/AzaleaGym.asm"
-
-INCLUDE "maps/SakuraShrine.asm"
