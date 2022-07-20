@@ -4,6 +4,13 @@ Route36_MapScripts:
 	db 0 ; callbacks
 
 ; scripts here
+Route36_SnorlaxScript:
+	jumptext .Txt
+
+.Txt:
+	text "SNORLAX is snoring"
+	line "peacefully…"
+	done
 
 Route36_MapEvents:
 	db 0, 0 ; filler
@@ -17,4 +24,4 @@ Route36_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 56,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 56,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36_SnorlaxScript, -1
