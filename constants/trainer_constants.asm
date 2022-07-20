@@ -339,7 +339,7 @@ KRIS EQU __enum__
 	const ROB
 	const ED
 	const STANLEY1
-	const SHELDON
+	const SHELBY
 	const YUKIJI
 	const JOSH
 	const ARNIE1

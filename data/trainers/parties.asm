@@ -2366,7 +2366,7 @@ BugCatcherGroup:
 	end_party
 
 	next_party ; BUG_CATCHER (5)
-	db "SELDON@", TRAINERTYPE_NORMAL
+	db "SHELBY@", TRAINERTYPE_NORMAL
 	dbw 11, PARASPOR
 	dbw 23, PARAS
 	dbw 25, PARASECT

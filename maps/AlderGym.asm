@@ -37,7 +37,7 @@ AlderGymBugsyScript:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
 	setevent EVENT_BEAT_TWINS_MEI_AND_LEI
-	setevent EVENT_BEAT_BUG_CATCHER_SHELDON
+	setevent EVENT_BEAT_BUG_CATCHER_SHELBY
 	setevent EVENT_BEAT_BUG_CATCHER_YUKIJI
 	setevent EVENT_BEAT_PICNICKER_JAMIE
 	writetext BugsyText_HiveBadgeSpeech
@@ -79,13 +79,13 @@ TrainerTwinsMeiAndLei2:
 	closetext
 	end
 
-TrainerBugCatcherSheldon:
-	trainer BUG_CATCHER, SHELDON, EVENT_BEAT_BUG_CATCHER_SHELDON, BugCatcherSheldonSeenText, BugCatcherSheldonBeatenText, 0, .AfterScript
+TrainerBugCatcherShelby:
+	trainer BUG_CATCHER, SHELBY, EVENT_BEAT_BUG_CATCHER_SHELBY, BugCatcherShelbySeenText, BugCatcherShelbyBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
 	opentext
-	writetext BugCatcherSheldonAfterBattleText
+	writetext BugCatcherShelbyAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -215,7 +215,7 @@ BugsyText_BugMonsAreDeep:
 	line "ites thoroughly."
 	done
 
-BugCatcherSheldonSeenText:
+BugCatcherShelbySeenText:
 	text "Bug-types evolve"
 	line "really fast!"
 	para "And with my fully-"
@@ -223,12 +223,12 @@ BugCatcherSheldonSeenText:
 	cont "I will crush you!"
 	done
 
-BugCatcherSheldonBeatenText:
+BugCatcherShelbyBeatenText:
 	text "Curses! Beaten"
 	line "again!"
 	done
 
-BugCatcherSheldonAfterBattleText:
+BugCatcherShelbyAfterBattleText:
 	text "Just you wait! I'll"
 	line "have a whole army"
 	para "of fully evolved"
@@ -373,7 +373,7 @@ AlderGym_MapEvents:
 
 	db 7 ; object events
 	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AlderGymBugsyScript, -1
-	object_event  5,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherSheldon, -1
+	object_event  5,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherShelby, -1
 	object_event  8,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherYukiji, -1
 	object_event  0,  2, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerJamie, -1
 	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsMeiAndLei1, -1
