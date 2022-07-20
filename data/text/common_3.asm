@@ -461,7 +461,7 @@ _Text_PagodaSellers_Intro::
 	text "Welcome,"
 	line "traveller."
 	para "We have items and"
-	line "curios that is"
+	line "curios that are"
 	para "seldom found any-"
 	line "where else."
 	done
