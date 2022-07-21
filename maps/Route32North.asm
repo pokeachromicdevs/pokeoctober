@@ -113,6 +113,22 @@ TrainerLassTina:
 	big_step UP
 	step_end
 
+Route32Sign1:
+	jumptext .Text
+.Text:
+	text "ROUTE 32"
+	para "VIOLET CITY -"
+	line "ALDER TOWN"
+	done
+
+DreadWoodsSign1:
+	jumptext .Text
+.Text:
+	text "DREAD WOODS"
+	para "Beware of ghost"
+	line "#MON!"
+	done
+
 Route32North_MapEvents:
 	db 0, 0 ; filler
 
@@ -122,9 +138,10 @@ Route32North_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event 12, 10, BGEVENT_READ, Route32Sign1
+	bg_event  3, 11, BGEVENT_READ, DreadWoodsSign1
 
 	db 2 ; object events
 	object_event  4, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassTina, EVENT_TALKED_TO_LASS_TINA
 	object_event 10, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFisherKoi, -1
-
