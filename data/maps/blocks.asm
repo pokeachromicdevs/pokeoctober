@@ -1032,3 +1032,6 @@ AzaleaGym_Blocks::
 
 SakuraShrine_Blocks::
 	INCBIN "maps/SakuraShrine.blk"
+
+VioletMuseum_Blocks::
+	INCBIN "maps/VioletMuseum.blk"

@@ -262,6 +262,7 @@ ENDM
 	map_const ALDER_TOWN,                                  10,  9 ;  8
 	map_const VIOLET_HERB_SHOP_BASEMENT,                    3,  4 ;  8
 	map_const SAKURA_SHRINE,                                5,  4
+	map_const VIOLET_MUSEUM,                               10,  5
 
 
 	newgroup                                                      ; 11

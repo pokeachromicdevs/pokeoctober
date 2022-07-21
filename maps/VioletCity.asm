@@ -404,7 +404,7 @@ VioletCity_MapEvents:
 	warp_event  4,  8, ROUTE_36_GATE, 1
 	warp_event  4,  9, ROUTE_36_GATE, 2
 	warp_event 19, 15, EARLS_POKEMON_ACADEMY, 1
-	warp_event 31, 15, ROUTE_36_GATE, 2
+	warp_event 31, 15, VIOLET_MUSEUM, 1
 	warp_event 33,  3, ROUTE_36_GATE, 2
 
 	db 2 ; coord events

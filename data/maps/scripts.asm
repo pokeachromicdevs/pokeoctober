@@ -487,6 +487,7 @@ INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/SilentHills.asm"
 INCLUDE "maps/SilentTown.asm"
 INCLUDE "maps/SakuraShrine.asm"
+INCLUDE "maps/VioletMuseum.asm"
 
 
 SECTION "Map Scripts 26", ROMX
