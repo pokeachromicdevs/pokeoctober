@@ -10,7 +10,7 @@ TrainerClassNames::
 	db "LEADER@"
 	db "RIVAL@"
 	db "#MON PROF.@"
-	db "ELITE FOUR@"
+	db "ROCKET@"
 	db "<PKMN> TRAINER@"
 	db "ELITE FOUR@"
 	db "ROCKET@"

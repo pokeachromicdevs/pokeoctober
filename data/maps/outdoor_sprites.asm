@@ -215,7 +215,7 @@ AzaleaGroupSprites:
 	def_walk_sprite
 		walk_sprite SPRITE_KURT
 		walk_sprite SPRITE_BUGSY
-		walk_sprite SPRITE_ROUTE33_KAREN_ELM
+		walk_sprite SPRITE_ROUTE33_KAREN_ELM_WILL
 		walk_sprite SPRITE_ROCKET
 		walk_sprite SPRITE_ROCKET_GIRL
 		walk_sprite SPRITE_SILVER
