@@ -2712,7 +2712,7 @@ wRoute34SceneID::                                 db
 
 wSceneIDsEnd::
 
-	ds 20
+	ds 38
 
 ; fight counts
 wJackFightCount::    db ; d9f2
