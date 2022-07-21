@@ -138,9 +138,9 @@ SilentHills_MapEvents:
 	warp_event 2,   9, SILENT_HILLS_EXIT_GATE, 1
 	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 3
 	warp_event 19,  7, SILENT_HILLS_NAME_RATER, 1
-	
+
 	db 0 ; coord events
- 
+
 	db 6 ; bg events
 	bg_event 17,  7, BGEVENT_READ, SilentHillsNameRaterSign
 	bg_event  5,  9, BGEVENT_READ, SilentHills_ExitGateSign
@@ -154,4 +154,4 @@ SilentHills_MapEvents:
 	object_event  42, 8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherTimothy, -1
 	object_event  30, 10, SPRITE_OFFICER,     SPRITEMOVEDATA_STANDING_DOWN,  0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT,  0, SilentHills_MineBlockage, -1
 	object_event 17,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentHillsPsnCure1, -1
-	object_event 47,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentHillsPsnCure1, -1
+	object_event 47,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentHillsPsnCure2, -1
