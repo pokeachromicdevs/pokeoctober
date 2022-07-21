@@ -1035,3 +1035,6 @@ SakuraShrine_Blocks::
 
 VioletMuseum_Blocks::
 	INCBIN "maps/VioletMuseum.blk"
+
+VioletFishingGuild_Blocks::
+	INCBIN "maps/VioletFishingGuild.blk"

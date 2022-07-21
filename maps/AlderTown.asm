@@ -62,7 +62,7 @@ AlderTownOutsideGymGuyScript:
 	cont "though!"
 	done
 
-AlderTownFisherScript:
+AlderTownFisherScript: ; see also VioletFishingGuild_TravellingFisherScript
 	jumptextfaceplayer .Text
 
 .Text:
@@ -142,5 +142,5 @@ AlderTown_MapEvents:
 
 	db 3 ; object events
 	object_event  5, 12, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownOutsideGymGuyScript, EVENT_BEAT_ROUTE33_KAREN
-	object_event 15, 10, SPRITE_FISHER,  SPRITEMOVEDATA_STANDING_RIGHT,0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownFisherScript, -1
+	object_event 15, 10, SPRITE_FISHER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, 8, 15, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownFisherScript, -1
 	object_event  8,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AlderTownCheckOutMtHiveScript, -1

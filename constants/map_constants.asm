@@ -263,6 +263,7 @@ ENDM
 	map_const VIOLET_HERB_SHOP_BASEMENT,                    3,  4 ;  8
 	map_const SAKURA_SHRINE,                                5,  4
 	map_const VIOLET_MUSEUM,                               10,  5
+	map_const VIOLET_FISHING_GUILD,                         7,  4
 
 
 	newgroup                                                      ; 11

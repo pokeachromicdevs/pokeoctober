@@ -745,3 +745,4 @@ ENDM
 	map_attributes AzaleaGym, AZALEA_GYM, $00, 0
 	map_attributes SakuraShrine, SAKURA_SHRINE, $00, 0
 	map_attributes VioletMuseum, VIOLET_MUSEUM, $00, 0
+	map_attributes VioletFishingGuild, VIOLET_FISHING_GUILD, $00, 0

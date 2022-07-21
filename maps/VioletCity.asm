@@ -405,7 +405,7 @@ VioletCity_MapEvents:
 	warp_event  4,  9, ROUTE_36_GATE, 2
 	warp_event 19, 15, EARLS_POKEMON_ACADEMY, 1
 	warp_event 31, 15, VIOLET_MUSEUM, 1
-	warp_event 33,  3, ROUTE_36_GATE, 2
+	warp_event 33,  3, VIOLET_FISHING_GUILD, 2
 
 	db 2 ; coord events
 	coord_event 36, 26, SCENE_VIOLETCITY_NOTHING, VioletCity_SageStopsYou.North

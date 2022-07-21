@@ -376,10 +376,12 @@
 ; violet museum
 	const EVENT_VIOLETMUSEUM_PAID_TICKET
 
+; violet fishing guild
+	const EVENT_RECEIVED_OREFRY_FROM_FISHER_IN_GUILD
+
 ; demo 1 limit
 	const EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
 
-	const EVENT_189
 	const EVENT_18a
 	const EVENT_18b
 	const EVENT_18c
