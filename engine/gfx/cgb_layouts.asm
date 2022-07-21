@@ -285,7 +285,7 @@ _CGB_Pokedex:
 	ld a, $1
 	ldh [hCGBPalUpdate], a
 	ret
-	
+
 CheckPokedexColor:
 	ld a, [wCurPokedexColor]
 	cp DEXCOLOR_BLUE
@@ -304,7 +304,7 @@ CheckPokedexColor:
 	jr nz, .Green
 	ld a, PREDEFPAL_RB_BROWNMON
 	ret
-	
+
 .Green
 	cp DEXCOLOR_GREEN
 	jr nz, .Pink
@@ -338,7 +338,7 @@ CheckPokedexColor:
 .Red
 	ld a, PREDEFPAL_POKEDEX
 	ret
-	
+
 .Mewtwo
 	ld a, DEXCOLOR_MEWTWO
 	jr nz, .Mewtwo
@@ -691,10 +691,10 @@ _CGB_TrainerCard:
 	ld a, FALKNER ; KRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, BUGSY
+	ld a, WHITNEY
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, WHITNEY
+	ld a, BUGSY
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, MORTY
@@ -788,7 +788,7 @@ _CGB_TrainerCard:
 	ld a, $1
 	ldh [hCGBPalUpdate], a
 	ret
-	
+
 .BadgePalettes:
 INCLUDE "gfx/trainer_card/badges.pal"
 
