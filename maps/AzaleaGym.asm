@@ -140,10 +140,6 @@ AzaleaGymMortyScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MORTY
-	setevent EVENT_BEAT_MANCHILD_ZACHARY
-	setevent EVENT_BEAT_BEAUTY_ANDREA
-	setevent EVENT_BEAT_INSTRUCTOR_FRANK
-	setevent EVENT_BEAT_MEDIUM_DOROTHY
 	opentext
 	writetext .AfterTxt1
 	waitbutton
@@ -154,15 +150,20 @@ AzaleaGymMortyScript:
 .AfterFight:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .AfterShadowBall
+	setevent EVENT_BEAT_MANCHILD_ZACHARY
+	setevent EVENT_BEAT_BEAUTY_ANDREA
+	setevent EVENT_BEAT_INSTRUCTOR_FRANK
+	setevent EVENT_BEAT_MEDIUM_DOROTHY
+	variablesprite SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITE_WILL
 	writetext .AfterTxt2
 	buttonsound
 	verbosegivetmhm SHADOW_BALL_TMNUM
-	iffalse .NoRoomForShadowBall
+	;iffalse .NoRoomForShadowBall
 	setevent EVENT_GOT_TM30_SHADOW_BALL
 .AfterShadowBall:
 	writetext .AfterTxt3
 	waitbutton
-.NoRoomForShadowBall:
+;.NoRoomForShadowBall:
 	closetext
 	end
 

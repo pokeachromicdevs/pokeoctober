@@ -489,6 +489,7 @@ INCLUDE "maps/SilentTown.asm"
 INCLUDE "maps/SakuraShrine.asm"
 INCLUDE "maps/VioletMuseum.asm"
 INCLUDE "maps/VioletFishingGuild.asm"
+INCLUDE "maps/AzaleaGym.asm" ; gyms must be placed in bank < $80
 
 
 SECTION "Map Scripts 26", ROMX
@@ -525,5 +526,3 @@ INCLUDE "maps/CherrygrovePagoda2F.asm"
 INCLUDE "maps/CherrygrovePagoda3F.asm"
 INCLUDE "maps/CherrygrovePagoda4F.asm"
 INCLUDE "maps/CherrygrovePagoda5F.asm"
-
-INCLUDE "maps/AzaleaGym.asm"
