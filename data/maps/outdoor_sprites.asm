@@ -9,7 +9,8 @@ __num_walking__ = __num_walking__ + 1
 ENDM
 
 def_static_sprite: MACRO
-	assert __num_walking__ <= 9, "\n\t\tThere can only be a maximum of 9 walking sprites ({d:__num_walking__} defined)"
+	assert __num_walking__ <= 8, "\n\t\tThere can only be a maximum of 8 walking sprites ({d:__num_walking__} defined)"
+	; 9 walksprites = 8 sprites + 1 follower + 1 player
 ENDM
 
 static_sprite: MACRO
@@ -61,7 +62,6 @@ PewterGroupSprites:
 CinnabarGroupSprites:
 	def_walk_sprite
 		walk_sprite SPRITE_TEACHER
-		walk_sprite SPRITE_FISHER
 		walk_sprite SPRITE_YOUNGSTER
 		walk_sprite SPRITE_BLUE
 		walk_sprite SPRITE_GRAMPS
@@ -71,6 +71,7 @@ CinnabarGroupSprites:
 		walk_sprite SPRITE_SWIMMER_GUY
 
 	def_static_sprite
+		static_sprite SPRITE_FISHER
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
 
@@ -87,9 +88,9 @@ SaffronGroupSprites:
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_POKEFAN_M
 		walk_sprite SPRITE_ROCKET
-		walk_sprite SPRITE_MISTY
 
 	def_static_sprite
+		static_sprite SPRITE_MISTY
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_SLOWPOKE
 
@@ -157,9 +158,9 @@ SilentGroupSprites:
 		walk_sprite SPRITE_GRAMPS
 		walk_sprite SPRITE_BUG_CATCHER
 		walk_sprite SPRITE_COOLTRAINER_F
-		walk_sprite SPRITE_TEACHER
 
 	def_static_sprite
+		static_sprite SPRITE_TEACHER
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
 
@@ -167,7 +168,6 @@ SilentGroupSprites:
 
 CherrygroveGroupSprites:
 	def_walk_sprite
-		walk_sprite SPRITE_SOLDIER
 		walk_sprite SPRITE_TEACHER
 		walk_sprite SPRITE_FISHER
 		walk_sprite SPRITE_YOUNGSTER
@@ -178,6 +178,7 @@ CherrygroveGroupSprites:
 		walk_sprite SPRITE_BUG_CATCHER
 
 	def_static_sprite
+		static_sprite SPRITE_SOLDIER
 		static_sprite SPRITE_POKE_BALL
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_OFFICER
@@ -246,9 +247,9 @@ CianwoodGroupSprites:
 		walk_sprite SPRITE_SAILOR
 		walk_sprite SPRITE_POKEFAN_F
 		walk_sprite SPRITE_SUPER_NERD
-		walk_sprite SPRITE_YOUNGSTER
 
 	def_static_sprite
+		static_sprite SPRITE_YOUNGSTER
 		static_sprite SPRITE_TAUROS
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_ROCK
@@ -274,9 +275,9 @@ CitrineGroupSprites:
 		walk_sprite SPRITE_SPORTSMAN
 		walk_sprite SPRITE_POKEFAN_M
 		walk_sprite SPRITE_CAMPER
-		walk_sprite SPRITE_FISHER
 
 	def_static_sprite
+		static_sprite SPRITE_FISHER
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_POKE_BALL
 
