@@ -1,6 +1,5 @@
 UnknownText_0x6717a:
-	text_ram wStringBuffer3
-	text "'s @"
+	text "My @"
 	text_ram wStringBuffer4
 	text_start
 	line "is much stronger"
