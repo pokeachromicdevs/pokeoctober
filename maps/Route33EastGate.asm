@@ -57,7 +57,7 @@ Route33EastGateGruntScript:
 .Continue:
 	faceplayer
 	sjump Route33EastGateRocketTollScript.AskPayment
-	
+
 Route33EastGateRocketTollScript:
 	;turnobject PLAYER, UP
 	;turnobject FOLLOWER, UP
@@ -69,9 +69,9 @@ Route33EastGateRocketTollScript:
 	special PlaceMoneyTopRight
 	yesorno
 	iffalse .DeniedOrOutOfMoney
-	checkmoney YOUR_MONEY, 50
+	checkmoney YOUR_MONEY, 200
 	ifequal HAVE_LESS, .DeniedOrOutOfMoney
-	takemoney YOUR_MONEY, 50
+	takemoney YOUR_MONEY, 200
 	special PlaceMoneyTopRight
 	playsound SFX_TRANSACTION
 	waitsfx
@@ -107,8 +107,8 @@ Route33EastGateRocketTollScript:
 	para "You need to pay"
 	line "the toll if you"
 	cont "want to pass!"
-	para "Entry is ¥50!"
-	para "Pay the ¥50?"
+	para "Entry is ¥200!"
+	para "Pay the ¥200?"
 	done
 
 .YouCanGoThruTxt:
@@ -140,6 +140,6 @@ Route33EastGate_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events 
+	db 2 ; object events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route33EastGateOfficerScript, EVENT_OFFICER_IN_R33_GATE
 	object_event  5,  2, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33EastGateGruntScript, EVENT_GRUNT_IN_R33_GATE

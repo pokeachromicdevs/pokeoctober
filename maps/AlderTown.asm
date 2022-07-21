@@ -80,21 +80,21 @@ AlderTownCheckOutMtHiveScript:
 	iftrue .RegularScript
 	checkmapscene ROUTE_33_EAST_GATE
 	iftrue .RegularScript
-	checkmoney YOUR_MONEY, 50
+	checkmoney YOUR_MONEY, 200
 	ifnotequal HAVE_LESS, .RegularScript
 ; not enough to pay toll
 	faceplayer
 	opentext
 	writetext .TollTxt
 	buttonsound
-	givemoney YOUR_MONEY, 50
+	givemoney YOUR_MONEY, 200
 	writetext .Got50BucksTxt
 	playsound SFX_ITEM
 	waitsfx
 	waitbutton
 	closetext
 	end
-	
+
 .RegularScript:
 	jumptextfaceplayer .Text
 .Text:
@@ -119,7 +119,7 @@ AlderTownCheckOutMtHiveScript:
 
 .Got50BucksTxt:
 	text "<PLAYER>"
-	line "received ¥50!"
+	line "received ¥200!"
 	done
 
 AlderTown_MapEvents:
