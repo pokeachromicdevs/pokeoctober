@@ -118,8 +118,8 @@ CatchingTutorialDudeScript:
 	waitbutton
 	closetext
 
-	end  
-	
+	end
+
 TrainerYoungsterJoey:
 	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
 
@@ -265,10 +265,10 @@ TrainerYoungsterJoey:
 .RematchGift:
 	jumpstd rematchgiftm
 	end
-	
+
 TrainerYoungsterMikey:
 	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
-	
+
 .Script
 	endifjustbattled
 	opentext
@@ -282,14 +282,14 @@ Route29Sign1:
 
 Route29Potion:
 	itemball POTION
-	
-Route29PokeBall:
-	itemball POKE_BALL
-	
-Route29FruitTree:
-	fruittree FRUITTREE_ROUTE_29  
 
-	
+Route29Antidote:
+	itemball ANTIDOTE
+
+Route29FruitTree:
+	fruittree FRUITTREE_ROUTE_29
+
+
 DudeMovementData1a:
 	step UP
 	step UP
@@ -378,7 +378,7 @@ Route29Sign1Text:
 	para "SILENT HILLS"
 	line "In Between"
 	done
-	
+
 YoungsterJoey1SeenText:
 	text "I just lost, so"
 	line "I'm trying to find"
@@ -405,7 +405,7 @@ YoungsterJoey1AfterText:
 	line "with this one no"
 	cont "matter what!"
 	done
-	
+
 YoungsterJoeyText_GiveHPUpAfterBattle:
 	text "I lost again…"
 	line "Gee, you're tough!"
@@ -420,7 +420,7 @@ YoungsterJoeyText_GiveHPUpAfterBattle:
 	para "I'm going to get"
 	line "tougher too."
 	done
-	
+
 YoungsterMikeySeenText:
 	text "You're a #MON"
 	line "trainer, right?"
@@ -460,10 +460,7 @@ Route29_MapEvents:
 	db 6 ; object events
 	object_event 51,  9, SPRITE_SILENTTOWN_RIVAL_DUDE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	object_event 49,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
-	object_event 27,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29PokeBall, EVENT_ROUTE_31_POKE_BALL
+	object_event 27,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Antidote, EVENT_ROUTE_29_ANTIDOTE
 	object_event 21,  1, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route29FruitTree, -1
 	object_event 31,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerYoungsterJoey, -1
 	object_event 22,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMikey, -1
-
-
-

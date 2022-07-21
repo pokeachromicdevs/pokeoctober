@@ -169,7 +169,7 @@ TrainerInstructorStanley:
 .PackFullSTD:
 	jumpstd packfullm
 	end
-	
+
 TrainerYoungsterMax:
 	trainer YOUNGSTER, MAX, EVENT_BEAT_BUG_CATCHER_DON, YoungsterMaxSeenText, YoungsterMaxBeatenText, 0, .Script
 
@@ -191,7 +191,7 @@ TrainerLassSam:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerTeacherAnn:
 	trainer TEACHER, ANN, EVENT_BEAT_TEACHER_ANN, TeacherAnnSeenText, TeacherAnnBeatenText, 0, .Script
 
@@ -220,10 +220,10 @@ Route31Potion:
 
 Route31PokeBall:
 	itemball POKE_BALL
-	
+
 Route31OfficerBlock:
 	jumptext OfficerBlocking
-	
+
 Route31OfficerBlock2:
 	jumptext OfficerBlocking2
 
@@ -266,7 +266,7 @@ MrPokemonHouseText:
 	text "MR. #MON's"
 	line "HOUSE"
 	done
-	
+
 YoungsterMaxSeenText:
 	text "Hahaha!"
 	line "Prepare to lose!"
@@ -284,68 +284,68 @@ YoungsterMaxAfterText:
 
 	para "my class!"
 	done
-	
+
 LassSamSeenText:
 	text "Woo! Finally, my"
 	line "first trainer"
 	cont "battle!"
 	done
-	
+
 LassSamBeatenText:
 	text "And I lose."
 	line "Great."
 	done
-	
+
 LassSamAfterText:
 	text "This is the first"
 	line "time the teachers"
 	cont "have taken me out"
-	
+
 	para "for some #MON"
 	line "action outside of"
 	cont "the school."
 	done
-	
+
 TeacherAnnSeenText:
 	text "Pay attention!"
 	done
-	
+
 TeacherAnnBeatenText:
 	text "Oh, you're not"
 	line "a student."
 	done
-	
+
 TeacherAnnAfterText:
 	text "I hope you still"
 	line "learned from our"
 	cont "battle."
 	done
-	
+
 OfficerBlocking:
 	text "I really hope that"
 	line "TEAM ROCKET isn't"
 	cont "actually back. I"
-	
+
 	para "had to deal with"
 	line "those freaks three"
 	cont "years ago back in"
-	
+
 	para "KANTO, and they"
 	line "drove me nuts."
 	done
-	
+
 OfficerBlocking2:
 	text "Blasted ROCKETS…"
 	line "I remember what"
 	cont "they did near"
-	
+
 	para "LAVENDER TOWN…"
 	line "I'm going to"
 	cont "make sure nothing"
-	
+
 	para "like that happens"
 	line "again."
-	done 
+	done
 
 Route31_MapEvents:
 	db 0, 0 ; filler
@@ -360,10 +360,9 @@ Route31_MapEvents:
 	db 1 ; bg events
 	bg_event 19,  3, BGEVENT_READ, MrPokemonHouseSign
 
-	db 8 ; object events
+	db 7 ; object events
 	object_event 23,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerInstructorStanley, -1
 	object_event 10,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
-	object_event 36,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL
 	object_event 13, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerYoungsterMax, -1
 	object_event 27, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassSam, -1
 	object_event 16,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerTeacherAnn, -1
