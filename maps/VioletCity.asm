@@ -238,7 +238,8 @@ VioletHerbShopSign:
 VioletFishingGuildSign:
 	jumptext .Txt
 .Txt:
-	text "FISHING GUILD"
+	text "VIOLET FISHING"
+	line "GUILD"
 	done
 
 VioletSchoolSign:
@@ -310,7 +311,7 @@ VioletCityEarlScript:
 	waitbutton
 	closetext
 	special RestartMapMusic
-	setevent EVENT_EARL_ENTERED_ACADEMY
+	setevent EVENT_EARL_OUTSIDE_ACADEMY
 	applymovement VIOLETCITY_EARL, .MoveInsideAcademy
 	playsound SFX_ENTER_DOOR
 	disappear VIOLETCITY_EARL
@@ -428,4 +429,4 @@ VioletCity_MapEvents:
 	object_event 25, 31, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHeracrossGuy, -1
 	object_event 15, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityYoungster, -1
 	object_event 30,  6,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherManny, -1
-	object_event 13, 23,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_EARL_ENTERED_ACADEMY
+	object_event 13, 23,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_EARL_OUTSIDE_ACADEMY
