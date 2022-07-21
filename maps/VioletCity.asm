@@ -389,6 +389,20 @@ VioletCityEarlScript:
 	turn_head DOWN
 	step_end
 
+VioletCityLass:
+	jumptextfaceplayer .Txt
+
+.Txt:
+	text "Are you having a"
+	line "hard time getting"
+	cont "to SPROUT TOWER?"
+	para "I heard that a"
+	line "RATTATA might help"
+	cont "with that."
+	para "You can teach one"
+	line "how to UPROOT!"
+	done
+
 VioletCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -419,7 +433,7 @@ VioletCity_MapEvents:
 	bg_event 30, 16, BGEVENT_READ, VioletMuseumSign
 	bg_event  7, 33, BGEVENT_READ, SproutTowerSign
 
-	db 10 ; object events
+	db 11 ; object events
 	object_event 34, 36, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI
 	object_event  8, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerOfficerSamson, -1
 	object_event 17,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityHerbSage, -1
@@ -430,3 +444,4 @@ VioletCity_MapEvents:
 	object_event 15, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityYoungster, -1
 	object_event 30,  6,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerFisherManny, -1
 	object_event 13, 23,  SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_EARL_OUTSIDE_ACADEMY
+	object_event 12, 34, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletCityLass, -1
