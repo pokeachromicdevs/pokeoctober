@@ -170,6 +170,7 @@ Route34_WillEventTriggerCommon:
 .WillToPlayer:
 	step RIGHT
 	step DOWN
+	step DOWN
 	step_end
 
 .Rocket1BeginEscape_WithWalkMon:
@@ -200,10 +201,12 @@ Route34_WillEventTriggerCommon:
 	step DOWN
 	step DOWN
 	step DOWN
+	step DOWN
 	step RIGHT
 	step_end
 
 .Rocket1ToPlayer_WithoutWalkMon:
+	step DOWN
 	step DOWN
 	step DOWN
 	step DOWN
@@ -213,6 +216,7 @@ Route34_WillEventTriggerCommon:
 	step_end
 
 .Rocket2ToPlayer:
+	step DOWN
 	step DOWN
 	step_end
 
@@ -319,6 +323,6 @@ Route34_MapEvents:
 
 	db 4 ; object events
 	object_event  9,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Silver, -1
-	object_event  5, 24, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
-	object_event  6, 24, SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
-	object_event  7, 24, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
+	object_event  5, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
+	object_event  6, 23, SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
+	object_event  7, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
