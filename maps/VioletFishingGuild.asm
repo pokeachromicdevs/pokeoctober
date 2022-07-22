@@ -140,6 +140,103 @@ VioletFishingGuild_TravellingFisherScript: ; see also AlderTownFisherScript
 	line "where else."
 	done
 
+VioletFishingGuildJournal:
+	opentext
+	writetext .IntroTxt
+	buttonsound
+	writetext .Entry1Txt
+	buttonsound
+	writetext .KeepReadingTxt
+	yesorno
+	iffalse .done_reading
+	writetext .Entry2Txt
+	buttonsound
+	writetext .KeepReadingTxt
+	yesorno
+	iffalse .done_reading
+	writetext .Entry3Txt
+	buttonsound
+	writetext .KeepReadingTxt
+	yesorno
+	iffalse .done_reading
+	writetext .Entry4Txt
+	buttonsound
+.done_reading
+	closetext
+	end
+
+.IntroTxt:
+	text "It's a fisherman's"
+	line "journal!"
+	para "<...> <...> <...>"
+	done
+
+.Entry1Txt:
+	text "Entry 1"
+	para "MOLAMBINO and"
+	line "ANGORE were once"
+	para "thought to be re-"
+	line "lated, but a DNA"
+	para "test proved this"
+	line "theory to be in-"
+	cont "accurate."
+	done
+
+.Entry2Txt:
+	text "Entry 2"
+	para "It has been dis-"
+	line "covered that some"
+	para "very special"
+	line "MAGIKARP can learn"
+	para "moves by breeding,"
+	line "such as WATER GUN"
+	cont "and MINIMIZE."
+	done
+
+.Entry3Txt:
+	text "Entry 3"
+	para "The #MON known"
+	line "as SAKURAQUA was"
+	para "first discovered"
+	line "in Kyoto, Japan."
+	para "They can be seen"
+	line "or mentioned on"
+	para "many Japanese ar-"
+	line "tifacts."
+	para "Any cherry blossom"
+	line "nearby it, will"
+	para "bloom to be even"
+	line "healthier and"
+	para "beautiful than"
+	line "usual."
+	para "These #MON were"
+	line "brought to the"
+	para "United States in"
+	line "1912."
+	done
+
+.Entry4Txt:
+	text "Entry 4"
+	para "The mythical #-"
+	line "MON known as"
+	para "DRATINI, once"
+	line "thought to be a"
+	para "rumor, was disco-"
+	line "vered in 1995 when"
+	para "a fisherman hooked"
+	line "one up."
+	para "The most famous"
+	line "user of this #-"
+	cont "MON's evolutionary"
+	para "relatives is LANCE"
+	line "of the INDIGO"
+	cont "ELITE FOUR."
+	done
+
+.KeepReadingTxt:
+	text "Keep reading?"
+	done
+
 VioletFishingGuild_MapEvents:
 	db 0, 0 ; filler
 
@@ -149,7 +246,8 @@ VioletFishingGuild_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 11,  6, BGEVENT_READ, VioletFishingGuildJournal
 
 	db 5 ; object events
 	object_event  7,  2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletFishingGuild_Fisher1Script, -1

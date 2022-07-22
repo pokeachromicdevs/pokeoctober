@@ -478,6 +478,7 @@ INCLUDE "maps/Route10South.asm"
 INCLUDE "maps/Route23.asm"
 INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
+INCLUDE "maps/VioletFishingGuild.asm"
 
 
 SECTION "Map Scripts 25", ROMX
@@ -488,7 +489,6 @@ INCLUDE "maps/SilentHills.asm"
 INCLUDE "maps/SilentTown.asm"
 INCLUDE "maps/SakuraShrine.asm"
 INCLUDE "maps/VioletMuseum.asm"
-INCLUDE "maps/VioletFishingGuild.asm"
 INCLUDE "maps/AzaleaGym.asm" ; gyms must be placed in bank < $80
 
 
