@@ -173,12 +173,12 @@ VioletCityFishingSage:
 	text "I am the guardian"
 	line "SAGE for the"
 	cont "FISHING GUILD."
+	para "Water #MON are"
+	line "such graceful"
+	cont "creatures<...>"
 	para "I love seeing"
-	line "people passionate"
-	para "about water"
-	line "#MON<...> they are"
-	para "such graceful"
-	line "creatures."
+	line "people so passion-"
+	cont "ate about them."
 	done
 
 VioletCityMuseumSage:
