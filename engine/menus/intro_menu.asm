@@ -666,15 +666,15 @@ OakSpeech:
 	call PlayMusic
 
 IF DEF(_DEBUG)
-; enable debug controls by default
-	ld a, 1
+; disable debug controls by default
+	xor a
 	ld [wDebugControlsToggle], a
 
 	call DelayFrame
 	call GetJoypad
 	ldh a, [hJoyDown]
 	bit A_BUTTON_F, a
-	jp nz, .skip_intro
+	jp nz, .skip_intro_proper
 ENDC
 
 	;call RotateFourPalettesRight
@@ -781,7 +781,6 @@ ENDC
 	call PrintText
 	farcall InitClock	; set time
 
-.skip_intro
 ; flash in the player pic again
 	call RotateThreePalettesRight	; fade out
 	call ClearTileMap
@@ -793,14 +792,25 @@ ENDC
 	call GetSGBLayout
 	call Intro_RotatePalettesLeftFrontpic	; fade in
 
-IF DEF(_DEBUG)
-	ret
-ENDC
-
 ; player! are you ready?
 	ld hl, OakText7
 	call PrintText
 	ret
+
+IF DEF(_DEBUG)
+.skip_intro_proper
+; flash in the player pic again
+	call RotateThreePalettesRight	; fade out
+	call ClearTileMap
+	xor a
+	ld [wCurPartySpecies], a
+	farcall DrawIntroPlayerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic	; fade in
+	ret
+ENDC
 
 OakText1:
 	text_far _OakText1
