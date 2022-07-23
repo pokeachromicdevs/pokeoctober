@@ -1494,12 +1494,12 @@ JohtoGrassWildMons:
 	dbw 7, ODDISH
 	dbw 9, BELLSPROUT
 	dbw 8, PARASPOR
-	dbw 9, AGGROSWINE
+	dbw 9, PILOSWINE;AGGROSWINE ; XXX
 	dbw 9, MURKROW
 	dbw 9, MISDREAVUS
 	; day
 	dbw 6, MANKEY
-	dbw 7, AGGROSWINE
+	dbw 7, PILOSWINE;AGGROSWINE ; XXX
 	dbw 9, ODDISH
 	dbw 8, VENONAT
 	dbw 9, PARASPOR
@@ -1510,7 +1510,7 @@ JohtoGrassWildMons:
 	dbw 7, HOOTHOOT
 	dbw 9, ODDISH
 	dbw 8, VENONAT
-	dbw 9, AGGROSWINE
+	dbw 9, PILOSWINE;AGGROSWINE ; XXX
 	dbw 9, MURKROW
 	dbw 9, MISDREAVUS
 
