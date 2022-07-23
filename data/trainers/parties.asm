@@ -1969,7 +1969,7 @@ GruntMGroup:
 	next_party ; GRUNTM (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	dbw 19, RATTATA
-	;dbw 20, BALLERINE
+	dbw 20, BALLERINE
 	end_party
 
 	next_party ; GRUNTM (2)
