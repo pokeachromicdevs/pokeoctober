@@ -180,6 +180,7 @@ NewPokedexOrder:
 	dw JYNX
 	dw ELEKID
 	dw ELECTABUZZ
+	dw BALLERINE
 	dw MR__MIME
 	dw SMEARGLE
 	dw FARFETCH_D

@@ -285,3 +285,4 @@ INCBIN "gfx/footprints/284.1bpp" ; XXX RAITORA
 INCBIN "gfx/footprints/285.1bpp" ; XXX GOROTORA
 INCBIN "gfx/footprints/286.1bpp" ; XXX KOALYPTUS
 INCBIN "gfx/footprints/287.1bpp" ; XXX OREFRY
+INCBIN "gfx/footprints/ballerine.1bpp"

@@ -288,6 +288,7 @@ MonMenuIcons:
 	db ICON_FLAAFFY		; GOROTORA
 	db ICON_MANKEY      ; KOALYPTUS
 	db ICON_GOLDEEN     ; OREFRY
+	db ICON_MR_MIME     ; BALLERINE
 
 ; -----------------------------
 	db ICON_EGG         ; EGG

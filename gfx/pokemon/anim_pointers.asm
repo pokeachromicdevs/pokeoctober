@@ -286,3 +286,4 @@ AnimationPointers:
 	dw GorotoraAnimation
 	dw KoalyptusAnimation
 	dw OrefryAnimation
+	dw BallerineAnimation

@@ -754,6 +754,8 @@ WearlycanFrontpic: INCBIN "gfx/pokemon/wearlycan/front.animated.2bpp.lz"
 WearlycanBackpic:  INCBIN "gfx/pokemon/wearlycan/back.2bpp.lz"
 MolambinoFrontpic: INCBIN "gfx/pokemon/molambino/front.animated.2bpp.lz"
 MolambinoBackpic:  INCBIN "gfx/pokemon/molambino/back.2bpp.lz"
+BallerineFrontpic:	INCBIN "gfx/pokemon/ballerine/front.animated.2bpp.lz"
+BallerineBackpic:	INCBIN "gfx/pokemon/ballerine/back.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 

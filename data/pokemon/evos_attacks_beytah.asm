@@ -27,8 +27,25 @@ EvosAttacksPointers3::
 	dw GorotoraEvosAttacks
 	dw KoalyptusEvosAttacks
 	dw OrefryEvoAttacks
+	dw BallerineEvoAttacks
 
 .End:
+
+BallerineEvoAttacks:
+	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, MIMENTOR
+	db 0 ; no more evos
+	dbw 1, BARRIER
+	dbw 6, CONFUSION
+	dbw 9, SUBSTITUTE
+	dbw 13, MEDITATE
+	dbw 17, DOUBLESLAP
+	dbw 21, LIGHT_SCREEN
+	dbw 22, REFLECT
+	dbw 27, ENCORE
+	dbw 30, PSYBEAM
+	dbw 35, BATON_PASS
+	dbw 40, SAFEGUARD
+	db 0 ; no more moves
 
 OrefryEvoAttacks:
 	dbbw EVOLVE_LEVEL, 18, GOLDEEN

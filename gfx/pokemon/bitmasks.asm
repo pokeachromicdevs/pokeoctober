@@ -285,6 +285,7 @@ RaitoraBitmasks:    INCLUDE "gfx/pokemon/raitora/bitmask.asm"
 GorotoraBitmasks:   INCLUDE "gfx/pokemon/gorotora/bitmask.asm"
 KoalyptusBitmasks:   INCLUDE "gfx/pokemon/koalyptus/bitmask.asm"
 OrefryBitmasks:     INCLUDE "gfx/pokemon/orefry/bitmask.asm"
+BallerineBitmasks:  INCLUDE "gfx/pokemon/ballerine/bitmask.asm"
 
 ;--------------------------------------------------------
 EggBitmasks:        INCLUDE "gfx/pokemon/egg/bitmask.asm"

@@ -262,6 +262,7 @@ HabitatPokedexOrder:
 	dw CLEFABLE
 	dw DITTO
 	dw MR__MIME
+	dw BALLERINE
 	dw IGGLYBUFF
 	dw JIGGLYPUFF
 	dw WIGGLYTUFF

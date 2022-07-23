@@ -286,3 +286,4 @@ AnimationIdlePointers:
 	dw GorotoraAnimationIdle
 	dw KoalyptusAnimationIdle
 	dw OrefryAnimationIdle
+	dw BallerineAnimationIdle

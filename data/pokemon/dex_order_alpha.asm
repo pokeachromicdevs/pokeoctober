@@ -12,6 +12,7 @@ AlphabeticalPokedexOrder:
 	dw ARIADOS
 	dw ARTICUNO
 	dw AZUMARILL
+	dw BALLERINE
 	dw BAYLEEF
 	dw BEEDRILL
 	dw BELLEDAM
