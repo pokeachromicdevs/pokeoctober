@@ -673,7 +673,7 @@ IF DEF(_DEBUG)
 	call DelayFrame
 	call GetJoypad
 	ldh a, [hJoyDown]
-	bit A_BUTTON_F, a
+	bit B_BUTTON_F, a
 	jp nz, .skip_intro_proper
 ENDC
 
