@@ -230,7 +230,7 @@ AzaleaGroupSprites:
 		static_sprite SPRITE_MANCHILD
 		static_sprite SPRITE_FISHER
 		static_sprite SPRITE_HIKER
-
+		static_sprite SPRITE_SHUCKLE
 	end_outdoor_sprites
 
 GoldenrodGroupSprites:

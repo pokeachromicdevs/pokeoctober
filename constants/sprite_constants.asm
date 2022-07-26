@@ -116,6 +116,7 @@
 	const SPRITE_ROCKCLIMBER ; 70
 	const SPRITE_FOLLOWER ; 71
 	const SPRITE_YANMEGA ; 72
+	const SPRITE_SHUCKLE ; 73
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

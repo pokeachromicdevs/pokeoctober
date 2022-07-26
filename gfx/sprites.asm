@@ -120,7 +120,7 @@ ManchildSpriteGFX::            INCBIN "gfx/sprites/manchild.2bpp"
 SchoolboySpriteGFX::           INCBIN "gfx/sprites/schoolboy.2bpp"
 RockClimberSpriteGFX::         INCBIN "gfx/sprites/rock_climber.2bpp"
 
-SECTION "Followers Kanto", ROMX 
+SECTION "Followers Kanto", ROMX
 
 EeveeSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"
 FarfetchdSpriteGFX::		   INCBIN "gfx/sprites/pokemon/farfetch_d.2bpp"
@@ -181,9 +181,4 @@ CroconawSpriteGFX:: 		   INCBIN "gfx/sprites/pokemon/croconaw.2bpp"
 FeraligatrSpriteGFX:: 		   INCBIN "gfx/sprites/pokemon/feraligator.2bpp"
 KotoraSpriteGFX::			   INCBIN "gfx/sprites/pokemon/kotora.2bpp"
 CleflingSpriteGFX::			   INCBIN "gfx/sprites/pokemon/clefling.2bpp"
-
-
-
-
-
-
+ShuckleSpriteGFX::			   INCBIN "gfx/sprites/pokemon/shuckle.2bpp"

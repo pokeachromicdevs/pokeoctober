@@ -3,6 +3,7 @@
 	const ROUTE34_ROCKET1
 	const ROUTE34_WILL
 	const ROUTE34_ROCKET2
+	const ROUTE34_SHUCKLE
 
 Route34_MapScripts:
 	db 2 ; scene scripts
@@ -310,6 +311,24 @@ Route34_WillEventTriggerCommon:
 	line "you."
 	done
 
+Route34Shuckle:
+	faceplayer
+	opentext
+	writetext .Txt
+	cry SHUCKLE
+	waitbutton
+	closetext
+	loadwildmon SHUCKLE, 14
+	startbattle
+	disappear ROUTE34_SHUCKLE
+	reloadmapafterbattle
+	setevent EVENT_ENCOUNTERED_ROUTE34_SHUCKLE
+	end
+
+.Txt:
+	text "Hydriiiiii!"
+	done
+
 Route34_MapEvents:
 	db 0, 0 ; filler
 
@@ -321,8 +340,9 @@ Route34_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event  9,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Silver, -1
 	object_event  5, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  6, 23, SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  7, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
+	object_event  8, 14, SPRITE_SHUCKLE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Shuckle, EVENT_ENCOUNTERED_ROUTE34_SHUCKLE
