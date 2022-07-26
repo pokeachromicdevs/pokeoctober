@@ -191,6 +191,9 @@ KRIS EQU __enum__
 	const NIECHELLE2
 	const NIECHELLE3
 	const NIECHELLE4
+	const RUBY
+	const NANCY
+	const CHARLOTTE
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -698,6 +701,7 @@ KRIS EQU __enum__
 	const BEVERLY3
 	const GEORGIA
 	const JAIME
+	const PKF_ARIEL
 
 	trainerclass RED ; 3f
 	const RED1
@@ -741,6 +745,7 @@ KRIS EQU __enum__
 
 	trainerclass SOLDIER     ; 47
 	const DWIGHT
+	const GRANT
 
 	trainerclass FLEDGLING
 	const BARRY_T

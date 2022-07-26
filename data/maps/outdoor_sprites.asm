@@ -231,6 +231,9 @@ AzaleaGroupSprites:
 		static_sprite SPRITE_FISHER
 		static_sprite SPRITE_HIKER
 		static_sprite SPRITE_SHUCKLE
+		static_sprite SPRITE_SOLDIER
+		static_sprite SPRITE_LASS
+		static_sprite SPRITE_POKEFAN_F
 	end_outdoor_sprites
 
 GoldenrodGroupSprites:

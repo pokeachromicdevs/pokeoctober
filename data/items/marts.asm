@@ -114,9 +114,9 @@ MartAlder:
 	db 5 ; # items
 	db POTION
 	db SUPER_POTION
-	db HYPER_POTION
-	db FULL_HEAL
-	db REVIVE
+	db SLOWPOKETAIL
+	db REPEL
+	db ETHER
 	db -1 ; end
 
 MartGoldenrod2F1:

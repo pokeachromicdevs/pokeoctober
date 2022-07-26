@@ -1269,6 +1269,26 @@ LassGroup:
 		dw CAMOUFLAKE
 	end_party
 
+	next_party
+		string "RUBY"
+		db TRAINERTYPE_NORMAL
+		dbw 21, BIPULLA
+		dbw 23, EKANS
+		dbw 26, HAUNTER
+	end_party
+
+	next_party
+		string "NANCY"
+		db TRAINERTYPE_NORMAL
+		dbw 23, EXEGGCUTE
+	end_party
+
+	next_party
+		string "CHARLOTTE"
+		db TRAINERTYPE_NORMAL
+		dbw 20, PICHU
+	end_party
+
 	end_party_list
 
 JanineGroup:
@@ -4955,63 +4975,6 @@ TwinsGroup:
 
 	end_party_list
 
-PokefanFGroup:
-	next_party ; POKEFANF (1)
-	db "BEVERLY@", TRAINERTYPE_ITEM
-	db 14
-	dw SNUBBULL
-	db BERRY
-	end_party
-
-	next_party ; POKEFANF (2)
-	db "RUTH@", TRAINERTYPE_ITEM
-	db 17
-	dw PIKACHU
-	db BERRY
-	end_party
-
-	next_party ; POKEFANF (3)
-	db "BEVERLY@", TRAINERTYPE_ITEM
-	db 18
-	dw SNUBBULL
-	db BERRY
-	end_party
-
-	next_party ; POKEFANF (4)
-	db "BEVERLY@", TRAINERTYPE_ITEM
-	db 30
-	dw GRANBULL
-	db BERRY
-	end_party
-
-	next_party ; POKEFANF (5)
-	db "GEORGIA@", TRAINERTYPE_ITEM
-	db 23
-	dw SENTRET
-	db BERRY
-	db 23
-	dw SENTRET
-	db BERRY
-	db 23
-	dw SENTRET
-	db BERRY
-	db 28
-	dw FURRET
-	db BERRY
-	db 23
-	dw SENTRET
-	db BERRY
-	end_party
-
-	next_party ; POKEFANF (6)
-	db "JAIME@", TRAINERTYPE_ITEM
-	db 16
-	dw MEOWTH
-	db BERRY
-	end_party
-
-	end_party_list
-
 RedGroup:
 	next_party ; RED (1)
 	db "RED@", TRAINERTYPE_MOVES
@@ -5299,6 +5262,13 @@ SoldierGroup:
 	dw RATTATA
 	db 3
 	dw SENTRET
+	end_party
+
+	next_party
+		string "GRANT"
+		db TRAINERTYPE_NORMAL
+		dbw 25, MISDREAVUS
+		;dbw 27, PHANDARIN ; XXX
 	end_party
 
 	end_party_list
@@ -5659,6 +5629,71 @@ ManchildGroup:
 		db     TRAINERTYPE_NORMAL
 		dbw    24, GASTLY
 		;dbw    25, STROMEN
+	end_party
+
+	end_party_list
+
+
+PokefanFGroup:
+	next_party ; POKEFANF (1)
+	db "BEVERLY@", TRAINERTYPE_ITEM
+	db 14
+	dw SNUBBULL
+	db BERRY
+	end_party
+
+	next_party ; POKEFANF (2)
+	db "RUTH@", TRAINERTYPE_ITEM
+	db 17
+	dw PIKACHU
+	db BERRY
+	end_party
+
+	next_party ; POKEFANF (3)
+	db "BEVERLY@", TRAINERTYPE_ITEM
+	db 18
+	dw SNUBBULL
+	db BERRY
+	end_party
+
+	next_party ; POKEFANF (4)
+	db "BEVERLY@", TRAINERTYPE_ITEM
+	db 30
+	dw GRANBULL
+	db BERRY
+	end_party
+
+	next_party ; POKEFANF (5)
+	db "GEORGIA@", TRAINERTYPE_ITEM
+	db 23
+	dw SENTRET
+	db BERRY
+	db 23
+	dw SENTRET
+	db BERRY
+	db 23
+	dw SENTRET
+	db BERRY
+	db 28
+	dw FURRET
+	db BERRY
+	db 23
+	dw SENTRET
+	db BERRY
+	end_party
+
+	next_party ; POKEFANF (6)
+	db "JAIME@", TRAINERTYPE_ITEM
+	db 16
+	dw MEOWTH
+	db BERRY
+	end_party
+
+	next_party
+		string "ARIEL"
+		db TRAINERTYPE_ITEM
+		dbwb 21, MEOWTH, BERRY
+		dbwb 26, RAICHU, BERRY
 	end_party
 
 	end_party_list
