@@ -403,6 +403,17 @@ VioletCityLass:
 	line "how to UPROOT!"
 	done
 
+VioletGymSign:
+	jumptext .Text
+.Text:
+	text "VIOLET CITY"
+	line "#MON GYM"
+	cont "LEADER: WHITNEY"
+
+	para "The Incredibly"
+	line "Pretty Girl!"
+	done
+
 VioletCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -425,13 +436,14 @@ VioletCity_MapEvents:
 	coord_event 36, 26, SCENE_VIOLETCITY_NOTHING, VioletCity_SageStopsYou.North
 	coord_event 36, 27, SCENE_VIOLETCITY_NOTHING, VioletCity_SageStopsYou.South
 
-	db 6 ; bg events
+	db 7 ; bg events
 	bg_event 27, 29, BGEVENT_READ, VioletCitySign
 	bg_event 19,  5, BGEVENT_READ, VioletHerbShopSign
 	bg_event 32,  4, BGEVENT_READ, VioletFishingGuildSign
 	bg_event 18, 16, BGEVENT_READ, VioletSchoolSign
 	bg_event 30, 16, BGEVENT_READ, VioletMuseumSign
 	bg_event  7, 33, BGEVENT_READ, SproutTowerSign
+	bg_event 31, 35, BGEVENT_READ, VioletGymSign
 
 	db 11 ; object events
 	object_event 34, 36, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymSageBlock, EVENT_BEAT_SAGE_LI

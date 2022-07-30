@@ -122,6 +122,18 @@ AlderTownCheckOutMtHiveScript:
 	line "received ¥200!"
 	done
 
+AlderTownGymSign:
+	jumptext .Text
+.Text:
+	text "ALDER TOWN"
+	line "#MON GYM"
+	cont "LEADER: BUGSY"
+
+	para "The Walking"
+	line "Bug #MON"
+	cont "Encyclopedia"
+	done
+
 AlderTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -136,9 +148,10 @@ AlderTown_MapEvents:
 	db 1 ; coord events
 	coord_event  4, 12, SCENE_ALDER_TOWN_NOTHING, AlderTown_GymLocked
 
-	db 2 ; bg events
+	db 3 ; bg events
 	bg_event 14,  4, BGEVENT_READ, AlderTownHappinessRaterSign
 	bg_event 10,  8, BGEVENT_READ, AlderTownSign
+	bg_event  8, 11, BGEVENT_READ, AlderTownGymSign
 
 	db 3 ; object events
 	object_event  5, 12, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlderTownOutsideGymGuyScript, EVENT_BEAT_ROUTE33_KAREN
