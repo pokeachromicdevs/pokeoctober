@@ -77,18 +77,10 @@ BugCatcherTimothyAfterText:
 	cont "shiny like steel!"
 	done
 
-SilentHills_ExitGateSign:
-	jumptext .Text
-.Text:
-	text "Now Exiting"
-	line "SILENT HILLS"
-	done
-
 SilentHills_EntryGateSign:
 	jumptext .Text
 .Text:
-	text "ROUTE 29"
-	line "This Way"
+	text "SILENT HILLS"
 	done
 
 SilentHills_Sign2:
@@ -141,9 +133,8 @@ SilentHills_MapEvents:
 
 	db 0 ; coord events
 
-	db 6 ; bg events
+	db 5 ; bg events
 	bg_event 17,  7, BGEVENT_READ, SilentHillsNameRaterSign
-	bg_event  5,  9, BGEVENT_READ, SilentHills_ExitGateSign
 	bg_event 27,  3, BGEVENT_READ, CherrygroveMines_Route46Sign
 	bg_event 55,  7, BGEVENT_READ, SilentHills_EntryGateSign
 	bg_event 43,  5, BGEVENT_READ, SilentHills_Sign2
