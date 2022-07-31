@@ -245,8 +245,8 @@ AzaleaGym_MapEvents:
 
 	db 20 ; warp events
 ; entry
-	warp_event  4, 25, AZALEA_TOWN, 4
-	warp_event  5, 25, AZALEA_TOWN, 4
+	warp_event  4, 25, AZALEA_TOWN, 5
+	warp_event  5, 25, AZALEA_TOWN, 5
 ; pit 1
 	warp_event  8, 18, AZALEA_GYM, 19
 	warp_event  8, 19, AZALEA_GYM, 19

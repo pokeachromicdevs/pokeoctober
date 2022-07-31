@@ -102,19 +102,51 @@ AzaleaTown_GymGuyText4:
 	para "Be careful!"
 	done
 
+KurtsHouseSign:
+	jumptext .Text
+.Text:
+	text "KURT's HOUSE"
+
+AzaleaGymSign:
+	jumptext .Text
+.Text:
+	text "AZALEA TOWN"
+	line "#MON GYM"
+	cont "LEADER: MORTY"
+
+	para "The Mystic Seer of"
+	line "the Future"
+	done
+
+AzaleaTownSign:
+	jumptext .Text
+.Text:
+	text "AZALEA TOWN"
+	line "Where People and"
+
+	para "#MON Live in"
+	line "Happy Harmony"
+	done
+
 AzaleaTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 7 ; warp events
 	warp_event 21,  7, ROUTE_33_WEST_GATE, 3
 	warp_event 11,  5, AZALEA_POKECENTER_1F, 1
 	warp_event 15,  5, AZALEA_MART, 1
-	warp_event  4, 3, AZALEA_GYM, 1
+	warp_event  5,  9, KURTS_HOUSE, 1
+	warp_event  4,  3, AZALEA_GYM, 1
+	warp_event 11, 11, AZALEA_GYM, 1
+	warp_event 15, 11, AZALEA_GYM, 1
 
 	db 1 ; coord events
 	coord_event 9, 0, 0, AzaleaTown_GymBlocker
 
-	db 0 ; bg events
+	db 3 ; bg events
+	bg_event  4, 10, BGEVENT_READ, KurtsHouseSign
+	bg_event  7,  5, BGEVENT_READ, AzaleaGymSign
+	bg_event 10,  8, BGEVENT_READ, AzaleaTownSign
 
 	db 2 ; object events
 	object_event 8, 0, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaTown_GymGuy, EVENT_BEAT_MORTY
