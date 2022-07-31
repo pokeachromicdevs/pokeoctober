@@ -194,7 +194,7 @@ Phone_WhosBragging_Female:
 	end
 
 .Erin:
-	farwritetext UnknownText_0x6717a
+	farwritetext NiechelleMuchStrongerTxt
 	buttonsound
 	end
 
@@ -338,7 +338,7 @@ Phone_WhoDefeatedMon_Female:
 	end
 
 .Erin:
-	farwritetext UnknownText_0x671a4
+	farwritetext NiechelleBeatMonTxt
 	buttonsound
 	end
 
@@ -482,7 +482,7 @@ Phone_WhoLostAMon_Female:
 	end
 
 .Erin:
-	farwritetext UnknownText_0x671eb
+	farwritetext NiechelleWildMonGotAwayTxt
 	buttonsound
 	end
 
@@ -628,7 +628,7 @@ PhoneScript_RematchText_Female:
 	end
 
 .Erin:
-	farwritetext UnknownText_0x6722e
+	farwritetext NiechellRematchCallerTxt
 	buttonsound
 	end
 
@@ -773,7 +773,7 @@ PhoneScript_HangupText_Female:
 	end
 
 .Erin:
-	farwritetext UnknownText_0x67281
+	farwritetext NiecheleByeTxt
 	end
 
 Phone_CheckIfUnseenRare_Male:
