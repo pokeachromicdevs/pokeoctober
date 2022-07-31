@@ -1,3 +1,9 @@
+	object_const_def
+	const KURTSHOUSE_KURT1
+	const KURTSHOUSE_KURT2
+	const KURTSHOUSE_TWIN1
+	const KURTSHOUSE_TWIN2
+
 KurtsHouse_MapScripts:
 	db 0 ; scene scripts
 
@@ -338,6 +344,179 @@ x = x + 1
 	line "tantrums are"
 	cont "adorable!"
 	done
+
+KurtHouseScript:
+	checkevent EVENT_KURTS_HOUSE_RECEIVED_EGG
+	iftrue .ask_for_apricorns
+	faceplayer
+	opentext
+	writetext .KurtIntro
+	waitbutton
+	closetext
+	checkfollower
+	iftrue .maizie_with_follower
+	readvar VAR_FACING
+	ifequal LEFT, .maizie_to_right_of_player
+	ifequal RIGHT, .maizie_to_bottom_of_player
+; south (face up)
+	applymovement KURTSHOUSE_TWIN1, .MaizieToPlayerSouth
+	sjump .after_maizie_move
+; east (face left)
+.maizie_to_right_of_player
+	applymovement KURTSHOUSE_TWIN1, .MaizieToPlayerEast
+	sjump .after_maizie_move
+; west (face right)
+.maizie_to_bottom_of_player
+	applymovement KURTSHOUSE_TWIN1, .MaizieToPlayerWest
+	;sjump .after_maizie_move
+.after_maizie_move
+	faceobject PLAYER, KURTSHOUSE_TWIN1
+	opentext
+	writetext .MaizieThank
+	closetext
+	faceobject PLAYER, KURTSHOUSE_KURT1
+	opentext
+	writetext .KurtGivesEggTxt1
+	waitbutton
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+	giveegg TOGEPI, 5 ; ORIJOEY
+	getstring STRING_BUFFER_4, .eggname
+	scall .giveegg
+	setevent EVENT_KURTS_HOUSE_RECEIVED_EGG
+	writetext .KurtGivesEggTxt2
+	closetext
+.ask_for_apricorns
+	opentext
+	writetext .KurtPromptsApricorn
+	waitbutton
+.PartyFull ; XXX deal with this later
+	closetext
+	end
+.giveegg
+	jumpstd receivetogepiegg
+	end
+.maizie_with_follower:
+	turnobject KURTSHOUSE_TWIN1, LEFT
+	sjump .after_maizie_move
+.eggname:
+	db "EGG@"
+
+.MaizieToPlayerSouth:
+	step LEFT
+	step_end
+
+.MaizieToPlayerEast:
+	step UP
+	turn_head LEFT
+	step_end
+
+.MaizieToPlayerWest:
+	step LEFT
+	step LEFT
+	step LEFT
+	turn_head UP
+	step_end
+
+.KurtIntro:
+	text "KURT: Ah, hello"
+	line "<PLAYER>!"
+	para "Welcome to my"
+	line "home. This is my"
+	para "beloved grandchild"
+	line "and assistant,"
+	cont "MAIZIE."
+	done
+
+.MaizieThank:
+	text "MAIZIE: Hi!"
+	line "Grandpa told me"
+	para "how you helped him"
+	line "and even beat him"
+	para "in a #MON"
+	line "battle<...>"
+	para "Thank you so much"
+	line "for saving him!"
+	para "Bring us lots of"
+	line "APRICORNS and we"
+	para "can make you"
+	line "special BALLS!"
+	done
+
+.KurtGivesEggTxt1:
+	text "KURT: I also have"
+	line "a gift for you, as"
+	cont "promised."
+	done
+
+.KurtGivesEggTxt2:
+	text "I found this egg"
+	line "on one of my"
+	cont "walks."
+	para "The nest seemed"
+	line "abandoned, so I"
+	para "figured I'd find a"
+	line "home for it."
+	para "I worry about what"
+	line "those ROCKETS are"
+	para "doing to our inno-"
+	line "cent wild #MON<...>"
+	para "But I'd rather look"
+	line "toward the future"
+	para "of this little"
+	line "one."
+	done
+
+.KurtPromptsApricorn:
+	text "Now, do you have"
+	line "APRICORNS for me?"
+	done
+
+MaizieHouseScript:
+	jumptextfaceplayer .Txt
+.Txt:
+	text "MAIZIE: Thanks for"
+	line "saving my grandpa!"
+	para "Come over and he'll"
+	line "make BALLS for"
+	cont "you!"
+	done
+	text "MAIZIE: Hey!"
+	para "Grandpa is working"
+	line "now, you can't"
+	cont "bother him!"
+	done
+
+	text "KURT: MAIZIE,"
+	line "could I borrow"
+	cont "your eyes?"
+	done
+
+	text "MAIZIE: Be right"
+	line "there, grandpa!"
+	para "<...>Your ball will be"
+	line "ready tomorrow!"
+	done
+
+	text "KURT: Oh, that's"
+	line "a letdown."
+	done
+
+	text "KURT: It'll take"
+	line "you a day, come"
+	para "back for your BALL"
+	line "tomorrow."
+	done
+
+	text "KURT: MAIZIE, come"
+	line "help your grandpa"
+	cont "here!"
+	done
+
+	text "MAIZIE: Okay"
+	line "grandpa!"
+	done
+
 KurtsHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -350,4 +529,8 @@ KurtsHouse_MapEvents:
 	db 1 ; bg events
 	bg_event 0, 0, BGEVENT_READ, KurtScroll
 
-	db 0 ; object events
+	db 4 ; object events
+	object_event  4,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_1
+	object_event 14,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURTS_HOUSE_KURT_2
+	object_event  6,  3, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MaizieHouseScript, EVENT_KURTS_HOUSE_TWIN_1
+	object_event 13,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURTS_HOUSE_TWIN_2
