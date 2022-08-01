@@ -360,20 +360,22 @@ KurtHouseScript:
 	ifequal RIGHT, .maizie_to_bottom_of_player
 ; south (face up)
 	applymovement KURTSHOUSE_TWIN1, .MaizieToPlayerSouth
+	scall .maizie_talk
+	applymovement KURTSHOUSE_TWIN1, .MaizieToChairSouth
 	sjump .after_maizie_move
 ; east (face left)
 .maizie_to_right_of_player
 	applymovement KURTSHOUSE_TWIN1, .MaizieToPlayerEast
+	scall .maizie_talk
+	applymovement KURTSHOUSE_TWIN1, .MaizieToChairEast
 	sjump .after_maizie_move
 ; west (face right)
 .maizie_to_bottom_of_player
 	applymovement KURTSHOUSE_TWIN1, .MaizieToPlayerWest
+	scall .maizie_talk
+	applymovement KURTSHOUSE_TWIN1, .MaizieToChairWest
 	;sjump .after_maizie_move
 .after_maizie_move
-	faceobject PLAYER, KURTSHOUSE_TWIN1
-	opentext
-	writetext .MaizieThank
-	closetext
 	faceobject PLAYER, KURTSHOUSE_KURT1
 	opentext
 	writetext .KurtGivesEggTxt1
@@ -399,15 +401,30 @@ KurtHouseScript:
 .maizie_with_follower:
 	turnobject KURTSHOUSE_TWIN1, LEFT
 	sjump .after_maizie_move
+.maizie_talk:
+	faceobject PLAYER, KURTSHOUSE_TWIN1
+	opentext
+	writetext .MaizieThank
+	waitbutton
+	closetext
+	end
 .eggname:
 	db "EGG@"
 
 .MaizieToPlayerSouth:
 	step LEFT
 	step_end
+.MaizieToChairSouth:
+	step RIGHT
+	turn_head LEFT
+	step_end
 
 .MaizieToPlayerEast:
 	step UP
+	turn_head LEFT
+	step_end
+.MaizieToChairEast:
+	step DOWN
 	turn_head LEFT
 	step_end
 
@@ -416,6 +433,12 @@ KurtHouseScript:
 	step LEFT
 	step LEFT
 	turn_head UP
+	step_end
+.MaizieToChairWest:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head LEFT
 	step_end
 
 .KurtIntro:
