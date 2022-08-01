@@ -13,7 +13,7 @@ KurtsHouse_MapScripts:
 KurtScroll:
 	opentext
 	writetext .IntroText
-	waitbutton
+	buttonsound
 .Loop:
 	writetext .PromptText
 	loadmenu .MenuHeader
@@ -130,82 +130,82 @@ x = x + 1
 
 .Sandshrew:
 	writetext .SandshrewText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Paras:
 	writetext .ParasText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Slowpoke:
 	writetext .SlowpokeText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Geodude:
 	writetext .GeodudeText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Grimer:
 	writetext .GrimerText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Exeggutor:
 	writetext .ExeggutorText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Lickitung:
 	writetext .LickitungText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Jynx:
 	writetext .JynxText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Magikarp:
 	writetext .MagikarpText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Porygon:
 	writetext .PorygonText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Elekid:
 	writetext .ElekidText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Granbull:
 	writetext .GranbullText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Unown:
 	writetext .UnownText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Misdreavus:
 	writetext .MisdreavusText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Bellossom:
 	writetext .BellossomText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 .Mankey:
 	writetext .MankeyText
-	waitbutton
+	buttonsound
 	sjump .Loop
 
 
