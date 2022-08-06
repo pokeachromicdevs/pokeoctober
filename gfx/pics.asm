@@ -754,8 +754,6 @@ WearlycanFrontpic: INCBIN "gfx/pokemon/wearlycan/front.animated.2bpp.lz"
 WearlycanBackpic:  INCBIN "gfx/pokemon/wearlycan/back.2bpp.lz"
 MolambinoFrontpic: INCBIN "gfx/pokemon/molambino/front.animated.2bpp.lz"
 MolambinoBackpic:  INCBIN "gfx/pokemon/molambino/back.2bpp.lz"
-BallerineFrontpic:	INCBIN "gfx/pokemon/ballerine/front.animated.2bpp.lz"
-BallerineBackpic:	INCBIN "gfx/pokemon/ballerine/back.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 
@@ -795,5 +793,10 @@ GorotoraFrontpic:	INCBIN "gfx/pokemon/gorotora/front.animated.2bpp.lz"
 GorotoraBackpic:	INCBIN "gfx/pokemon/gorotora/back.2bpp.lz"
 KoalyptusFrontpic:	INCBIN "gfx/pokemon/koalyptus/front.animated.2bpp.lz"
 KoalyptusBackpic:	INCBIN "gfx/pokemon/koalyptus/back.2bpp.lz"
+
+SECTION "Pics 23", ROMX
+
+BallerineFrontpic:	INCBIN "gfx/pokemon/ballerine/front.animated.2bpp.lz"
+BallerineBackpic:	INCBIN "gfx/pokemon/ballerine/back.2bpp.lz"
 OrefryFrontpic:	INCBIN "gfx/pokemon/orefry/front.animated.2bpp.lz"
 OrefryBackpic:	INCBIN "gfx/pokemon/orefry/back.2bpp.lz"
