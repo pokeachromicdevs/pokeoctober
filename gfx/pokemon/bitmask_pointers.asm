@@ -287,3 +287,4 @@ BitmasksPointers:
 	dw KoalyptusBitmasks
 	dw OrefryBitmasks
 	dw BallerineBitmasks
+	dw FennecurseBitmasks

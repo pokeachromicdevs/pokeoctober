@@ -182,6 +182,7 @@ HabitatPokedexOrder:
 	dw EKANS
 	dw ARBOK
 	dw KOALYPTUS
+	dw FENNECURSE
 
 ; SEA
 	dw GYARADOS

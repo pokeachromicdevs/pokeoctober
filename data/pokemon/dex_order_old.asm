@@ -142,6 +142,7 @@ OldPokedexOrder:
 	dw VULPIII
 	dw VULPIX
 	dw NINETALES
+	dw FENNECURSE
 	dw PUPPERON
 	dw GROWLITHE
 	dw ARCANINE

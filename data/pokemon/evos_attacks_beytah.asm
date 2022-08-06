@@ -28,8 +28,25 @@ EvosAttacksPointers3::
 	dw KoalyptusEvosAttacks
 	dw OrefryEvoAttacks
 	dw BallerineEvoAttacks
+	dw FennecurseEvoAttacks
 
 .End:
+
+FennecurseEvoAttacks:
+	db 0 ; no more evolutions
+	dbw 1, EMBER
+	dbw 1, TAIL_WHIP
+	dbw 6, QUICK_ATTACK
+	dbw 11, TEMPT
+	dbw 17, SPITE
+	dbw 22, FIRE_SPIN
+	dbw 28, CONFUSION
+	dbw 33, FLAMETHROWER
+	dbw 39, FAINT_ATTACK
+	dbw 44, CONFUSE_RAY
+	dbw 50, FIRE_BLAST
+	dbw 55, PSYCHIC
+	db 0 ; no more level-up moves
 
 BallerineEvoAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, MIMENTOR

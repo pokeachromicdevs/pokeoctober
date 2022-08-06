@@ -296,6 +296,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,  -$0a3,  $091 ; XXX KOALYPTUS
 	mon_cry CRY_CATERPIE,    $0a3,  $091 ; OREFRY
 	mon_cry CRY_KRABBY,      $160,  $0a0 ; BALLERINE
+	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; FENNECURSE
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

@@ -309,6 +309,7 @@ JOHTO_POKEMON EQU const_value
 	const KOALYPTUS
 	const OREFRY
 	const BALLERINE
+	const FENNECURSE
 
 NUM_POKEMON EQU const_value + -1
 

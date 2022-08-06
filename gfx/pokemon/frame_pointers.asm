@@ -287,3 +287,4 @@ FramesPointers:
 	dba KoalyptusFrames
 	dba OrefryFrames
 	dba BallerineFrames
+	dba FennecurseFrames

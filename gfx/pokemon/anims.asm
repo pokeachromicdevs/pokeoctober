@@ -286,6 +286,7 @@ GorotoraAnimation:   INCLUDE "gfx/pokemon/gorotora/anim.asm"
 KoalyptusAnimation:  INCLUDE "gfx/pokemon/koalyptus/anim.asm"
 OrefryAnimation:     INCLUDE "gfx/pokemon/orefry/anim.asm"
 BallerineAnimation:  INCLUDE "gfx/pokemon/ballerine/anim.asm"
+FennecurseAnimation: INCLUDE "gfx/pokemon/fennecurse/anim.asm"
 
 ;------------------------------------------------------
 EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"

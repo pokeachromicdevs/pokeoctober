@@ -286,6 +286,7 @@ GorotoraAnimationIdle:   INCLUDE "gfx/pokemon/gorotora/anim_idle.asm"
 KoalyptusAnimationIdle:   INCLUDE "gfx/pokemon/koalyptus/anim_idle.asm"
 OrefryAnimationIdle:     INCLUDE "gfx/pokemon/orefry/anim_idle.asm"
 BallerineAnimationIdle:  INCLUDE "gfx/pokemon/ballerine/anim_idle.asm"
+FennecurseAnimationIdle: INCLUDE "gfx/pokemon/fennecurse/anim_idle.asm"
 
 ;---------------------------------------------------------------
 EggAnimationIdle:        INCLUDE "gfx/pokemon/egg/anim_idle.asm"

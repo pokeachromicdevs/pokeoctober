@@ -589,6 +589,8 @@ PokemonPicPointers::
 	dba OrefryBackpic
 	dba BallerineFrontpic
 	dba BallerineBackpic
+	dba FennecurseFrontpic
+	dba FennecurseBackpic
 
 ;------------------------------------------------
 _NUM_POKEMON_PICS = (@ - PokemonPicPointers) / 6 - 1

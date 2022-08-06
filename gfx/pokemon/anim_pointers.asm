@@ -287,3 +287,4 @@ AnimationPointers:
 	dw KoalyptusAnimation
 	dw OrefryAnimation
 	dw BallerineAnimation
+	dw FennecurseAnimation

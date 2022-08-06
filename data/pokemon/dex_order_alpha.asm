@@ -72,6 +72,7 @@ AlphabeticalPokedexOrder:
 	dw EXEGGUTOR
 	dw FARFETCH_D
 	dw FEAROW
+	dw FENNECURSE
 	dw FERALIGATR
 	dw FLAAFFY
 	dw FLAREON
