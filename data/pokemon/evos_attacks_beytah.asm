@@ -29,8 +29,21 @@ EvosAttacksPointers3::
 	dw OrefryEvoAttacks
 	dw BallerineEvoAttacks
 	dw FennecurseEvoAttacks
+	dw OrijoeyEvoAttacks
 
 .End:
+
+OrijoeyEvoAttacks:
+	dbbw EVOLVE_LEVEL, 30, KANGASKHAN
+	db 0 ; no more evos
+	dbw  1, COMET_PUNCH
+	dbw  1, LEER
+	dbw  5, BITE
+	dbw 10, RAGE
+	dbw 15, FOCUS_ENERGY
+	dbw 20, CHARM
+	dbw 25, DIZZY_PUNCH
+	db 0 ; no more moves
 
 FennecurseEvoAttacks:
 	db 0 ; no more evolutions

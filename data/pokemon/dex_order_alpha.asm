@@ -176,6 +176,8 @@ AlphabeticalPokedexOrder:
 	dw OMANYTE
 	dw OMASTAR
 	dw ONIX
+	dw OREFRY
+	dw ORIJOEY
 	dw PARAS
 	dw PARASECT
 	dw PARASPOR

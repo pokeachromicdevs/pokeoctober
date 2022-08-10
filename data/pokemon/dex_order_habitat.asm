@@ -68,6 +68,7 @@ HabitatPokedexOrder:
 	dw BLISSEY
 	dw TANGELA
 	;dw JUNGELA
+	dw ORIJOEY
 	dw KANGASKHAN
 	dw GIRAFARIG
 	dw TOPSYSPOT

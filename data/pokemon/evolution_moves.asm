@@ -288,6 +288,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; OREFRY
 	dw NO_MOVE      ; BALLERINE
 	dw NO_MOVE      ; FENNECURSE
+	dw NO_MOVE      ; ORIJOEY
 
 ;----------------------------------
 _NUM_EVO_MOVES = (@ - EvolutionMoves) / 2

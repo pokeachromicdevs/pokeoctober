@@ -287,3 +287,4 @@ INCBIN "gfx/footprints/286.1bpp" ; XXX KOALYPTUS
 INCBIN "gfx/footprints/287.1bpp" ; XXX OREFRY
 INCBIN "gfx/footprints/ballerine.1bpp"
 INCBIN "gfx/footprints/288.1bpp" ; XXX FENNECURSE
+INCBIN "gfx/footprints/289.1bpp" ; XXX ORIJOEY

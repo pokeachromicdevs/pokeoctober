@@ -288,3 +288,4 @@ FramesPointers:
 	dba OrefryFrames
 	dba BallerineFrames
 	dba FennecurseFrames
+	dba OrijoeyFrames

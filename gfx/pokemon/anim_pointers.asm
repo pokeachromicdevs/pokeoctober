@@ -288,3 +288,4 @@ AnimationPointers:
 	dw OrefryAnimation
 	dw BallerineAnimation
 	dw FennecurseAnimation
+	dw OrijoeyAnimation
