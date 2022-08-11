@@ -288,6 +288,7 @@ OrefryAnimation:     INCLUDE "gfx/pokemon/orefry/anim.asm"
 BallerineAnimation:  INCLUDE "gfx/pokemon/ballerine/anim.asm"
 FennecurseAnimation: INCLUDE "gfx/pokemon/fennecurse/anim.asm"
 OrijoeyAnimation: INCLUDE "gfx/pokemon/orijoey/anim.asm"
+AggroswineAnimation: INCLUDE "gfx/pokemon/aggroswine/anim.asm"
 
 ;------------------------------------------------------
 EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"

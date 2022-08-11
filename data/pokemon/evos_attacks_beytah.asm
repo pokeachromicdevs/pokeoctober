@@ -30,8 +30,24 @@ EvosAttacksPointers3::
 	dw BallerineEvoAttacks
 	dw FennecurseEvoAttacks
 	dw OrijoeyEvoAttacks
+	dw AggroswineEvoAttacks
 
 .End:
+
+AggroswineEvoAttacks:
+	db 0 ; no evos?
+	dbw  1, RAGE
+	dbw  1, LEER
+	dbw  1, ENDURE
+	dbw  7, QUICK_ATTACK
+	dbw 14, BITE
+	dbw 21, FURY_ATTACK
+	dbw 28, PURSUIT
+	dbw 35, CRUNCH
+	dbw 42, HEADBUTT
+	dbw 49, ROAR
+	dbw 56, THRASH
+	db 0 ; no more attax
 
 OrijoeyEvoAttacks:
 	dbbw EVOLVE_LEVEL, 30, KANGASKHAN

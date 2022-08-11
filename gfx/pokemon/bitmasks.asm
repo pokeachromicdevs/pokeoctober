@@ -288,6 +288,7 @@ OrefryBitmasks:     INCLUDE "gfx/pokemon/orefry/bitmask.asm"
 BallerineBitmasks:  INCLUDE "gfx/pokemon/ballerine/bitmask.asm"
 FennecurseBitmasks: INCLUDE "gfx/pokemon/fennecurse/bitmask.asm"
 OrijoeyBitmasks:    INCLUDE "gfx/pokemon/orijoey/bitmask.asm"
+AggroswineBitmasks: INCLUDE "gfx/pokemon/aggroswine/bitmask.asm"
 
 ;--------------------------------------------------------
 EggBitmasks:        INCLUDE "gfx/pokemon/egg/bitmask.asm"

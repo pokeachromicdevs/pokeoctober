@@ -288,6 +288,7 @@ OrefryAnimationIdle:     INCLUDE "gfx/pokemon/orefry/anim_idle.asm"
 BallerineAnimationIdle:  INCLUDE "gfx/pokemon/ballerine/anim_idle.asm"
 FennecurseAnimationIdle: INCLUDE "gfx/pokemon/fennecurse/anim_idle.asm"
 OrijoeyAnimationIdle:    INCLUDE "gfx/pokemon/orijoey/anim_idle.asm"
+AggroswineAnimationIdle: INCLUDE "gfx/pokemon/aggroswine/anim_idle.asm"
 
 ;---------------------------------------------------------------
 EggAnimationIdle:        INCLUDE "gfx/pokemon/egg/anim_idle.asm"

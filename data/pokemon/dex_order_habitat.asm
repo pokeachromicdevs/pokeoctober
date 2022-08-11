@@ -184,6 +184,7 @@ HabitatPokedexOrder:
 	dw ARBOK
 	dw KOALYPTUS
 	dw FENNECURSE
+	dw AGGROSWINE
 
 ; SEA
 	dw GYARADOS

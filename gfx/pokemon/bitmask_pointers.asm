@@ -289,3 +289,4 @@ BitmasksPointers:
 	dw BallerineBitmasks
 	dw FennecurseBitmasks
 	dw OrijoeyBitmasks
+	dw AggroswineBitmasks

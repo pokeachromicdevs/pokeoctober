@@ -346,6 +346,7 @@ INCLUDE "data/pokemon/base_stats/orefry.asm"
 INCLUDE "data/pokemon/base_stats/ballerine.asm"
 INCLUDE "data/pokemon/base_stats/fennecurse.asm"
 INCLUDE "data/pokemon/base_stats/orijoey.asm"
+INCLUDE "data/pokemon/base_stats/aggroswine.asm"
 
 ;------------------------------------
 _NUM_BASE_STATS = (@ - BaseData1)/$25

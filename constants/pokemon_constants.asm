@@ -311,6 +311,7 @@ JOHTO_POKEMON EQU const_value
 	const BALLERINE
 	const FENNECURSE
 	const ORIJOEY
+	const AGGROSWINE
 
 NUM_POKEMON EQU const_value + -1
 

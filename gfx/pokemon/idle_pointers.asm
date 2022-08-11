@@ -289,3 +289,4 @@ AnimationIdlePointers:
 	dw BallerineAnimationIdle
 	dw FennecurseAnimationIdle
 	dw OrijoeyAnimationIdle
+	dw AggroswineAnimationIdle

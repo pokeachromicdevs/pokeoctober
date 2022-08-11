@@ -294,6 +294,7 @@ PokemonNames::
 	db "BALLERINE@"
 	db "FENNECURSE"
 	db "ORIJOEY@@@"
+	db "AGGROSWINE"
 
 ;--------------------------------------------------------------
 _NUM_POKEMON_NAMES = (@ - PokemonNames) / (MON_NAME_LENGTH - 1)

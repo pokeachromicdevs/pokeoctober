@@ -297,3 +297,4 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_OW_RED ;BALLERINE
 	follow_sprite WooperSpriteGFX, PAL_OW_RED ;FENNECURSE
 	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;ORIJOEY
+	follow_sprite WooperSpriteGFX, PAL_OW_BROWN ;AGGROSWINE

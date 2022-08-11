@@ -290,6 +290,7 @@ PokedexDataPointerTable:
 	dba BallerinePokedexEntry
 	dba FennecursePokedexEntry
 	dba OrijoeyPokedexEntry
+	dba AggroswinePokedexEntry
 
 ;-------------------------------------------------------
 _NUM_POKEDEX_ENTRIES = (@ - PokedexDataPointerTable) / 3

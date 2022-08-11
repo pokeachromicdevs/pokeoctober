@@ -289,3 +289,4 @@ AnimationPointers:
 	dw BallerineAnimation
 	dw FennecurseAnimation
 	dw OrijoeyAnimation
+	dw AggroswineAnimation

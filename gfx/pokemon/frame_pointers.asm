@@ -289,3 +289,4 @@ FramesPointers:
 	dba BallerineFrames
 	dba FennecurseFrames
 	dba OrijoeyFrames
+	dba AggroswineFrames

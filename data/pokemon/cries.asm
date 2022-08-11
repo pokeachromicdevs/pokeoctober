@@ -298,6 +298,7 @@ PokemonCries::
 	mon_cry CRY_KRABBY,      $160,  $0a0 ; BALLERINE
 	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; FENNECURSE
 	mon_cry CRY_KANGASKHAN,  $000,  $100 ; ORIJOEY
+	mon_cry CRY_MAGCARGO,   -$109,  $100 ; AGGROSWINE
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

@@ -288,3 +288,4 @@ INCBIN "gfx/footprints/287.1bpp" ; XXX OREFRY
 INCBIN "gfx/footprints/ballerine.1bpp"
 INCBIN "gfx/footprints/288.1bpp" ; XXX FENNECURSE
 INCBIN "gfx/footprints/289.1bpp" ; XXX ORIJOEY
+INCBIN "gfx/footprints/290.1bpp" ; XXX AGGROSWINE

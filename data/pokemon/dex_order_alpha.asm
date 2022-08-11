@@ -4,6 +4,7 @@ AlphabeticalPokedexOrder:
 	dw ABRA
 	dw ADBARSTORK
 	dw AERODACTYL
+	dw AGGROSWINE
 	dw AIPOM
 	dw ALAKAZAM
 	dw AMPHAROS

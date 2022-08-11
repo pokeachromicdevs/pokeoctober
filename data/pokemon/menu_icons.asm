@@ -291,6 +291,7 @@ MonMenuIcons:
 	db ICON_MR_MIME     ; BALLERINE
 	db ICON_VULPIX      ; FENNECURSE
 	db ICON_KANGASKHAN  ; ORIJOEY
+	db ICON_PILOSWINE   ; AGGROSWINE
 
 ; -----------------------------
 	db ICON_EGG         ; EGG
