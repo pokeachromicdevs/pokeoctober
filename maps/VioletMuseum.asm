@@ -2,12 +2,7 @@ VioletMuseum_MapScripts:
 	db 1 ; scene scripts
 	scene_script .Nothing
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .ResetMuseumStatus
-
-.ResetMuseumStatus:
-	clearevent EVENT_VIOLETMUSEUM_PAID_TICKET
-	return
+	db 0 ; callbacks
 
 .Nothing:
 	end
@@ -20,7 +15,7 @@ VioletMuseum_ReceptionistScript:
 	done
 
 VioletMuseum_AskEntry:
-	checkevent EVENT_VIOLETMUSEUM_PAID_TICKET
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .done
 
 	turnobject PLAYER, LEFT
@@ -38,7 +33,7 @@ VioletMuseum_AskEntry:
 	writetext .Text2
 	waitbutton
 	closetext
-	setevent EVENT_VIOLETMUSEUM_PAID_TICKET
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 .done
 	end
 
