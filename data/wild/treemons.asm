@@ -108,7 +108,7 @@ TreeMonSet_Lake:
 TreeMonSet_Forest:
 ; common
 	dbbw 50, 10, HOOTHOOT
-	dbbw 15, 10, PINECO
+	dbbw 15, 10, KOALYPTUS
 	dbbw 15, 10, PINECO
 	dbbw 10, 10, NOCTOWL
 	dbbw  5, 10, BUTTERFREE
