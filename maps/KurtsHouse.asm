@@ -7,7 +7,25 @@
 KurtsHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .PlaceKurtAppropriately
+
+.PlaceKurtAppropriately:
+; kurt and maizie around main chair
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue .MakingBalls
+	disappear KURTSHOUSE_KURT2
+	disappear KURTSHOUSE_TWIN2
+	appear KURTSHOUSE_KURT1
+	appear KURTSHOUSE_TWIN1
+	return
+.MakingBalls
+; kurt and maizie around table
+	appear KURTSHOUSE_KURT2
+	appear KURTSHOUSE_TWIN2
+	disappear KURTSHOUSE_KURT1
+	disappear KURTSHOUSE_TWIN1
+	return
 
 ; scripts here
 KurtScroll:
@@ -387,12 +405,86 @@ KurtHouseScript:
 	scall .giveegg
 	setevent EVENT_KURTS_HOUSE_RECEIVED_EGG
 	writetext .KurtGivesEggTxt2
+	waitbutton
 	closetext
 .ask_for_apricorns
 	opentext
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .kurt_just_given_task
 	writetext .KurtPromptsApricorn
+	buttonsound
+
+	checkitem RED_APRICORN
+	iftrue .which_apricorn
+	checkitem BLU_APRICORN
+	iftrue .which_apricorn
+	checkitem YLW_APRICORN
+	iftrue .which_apricorn
+	checkitem GRN_APRICORN
+	iftrue .which_apricorn
+	checkitem WHT_APRICORN
+	iftrue .which_apricorn
+	checkitem BLK_APRICORN
+	iftrue .which_apricorn
+	checkitem PNK_APRICORN
+	iftrue .which_apricorn
+
+	sjump .no_apricorns
+
+.which_apricorn
+; ask apricorn
+	special SelectApricornForKurt
+	ifequal FALSE, .no_apricorns
+	ifequal BLU_APRICORN, .Blu
+	ifequal YLW_APRICORN, .Ylw
+	ifequal GRN_APRICORN, .Grn
+	ifequal WHT_APRICORN, .Wht
+	ifequal BLK_APRICORN, .Blk
+	ifequal PNK_APRICORN, .Pnk
+; .Red
+	setevent EVENT_GAVE_KURT_RED_APRICORN
+	sjump .GaveKurtApricorns
+
+.Blu:
+	setevent EVENT_GAVE_KURT_BLU_APRICORN
+	sjump .GaveKurtApricorns
+
+.Ylw:
+	setevent EVENT_GAVE_KURT_YLW_APRICORN
+	sjump .GaveKurtApricorns
+
+.Grn:
+	setevent EVENT_GAVE_KURT_GRN_APRICORN
+	sjump .GaveKurtApricorns
+
+.Wht:
+	setevent EVENT_GAVE_KURT_WHT_APRICORN
+	sjump .GaveKurtApricorns
+
+.Blk:
+	setevent EVENT_GAVE_KURT_BLK_APRICORN
+	sjump .GaveKurtApricorns
+
+.Pnk:
+	setevent EVENT_GAVE_KURT_PNK_APRICORN
+	;sjump .GaveKurtApricorns
+.GaveKurtApricorns
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	setflag ENGINE_KURT_MAKING_BALLS
+.kurt_just_given_task
+	writetext .KurtTakeADayText
 	waitbutton
-.PartyFull ; XXX deal with this later
+	closetext
+	end
+.no_apricorns
+	writetext .KurtNoApricornsTxt
+	waitbutton
+	closetext
+	end
+
+.PartyFull
+	writetext .KurtNoRoomTxt
+	waitbutton
 	closetext
 	end
 .giveegg
@@ -400,6 +492,7 @@ KurtHouseScript:
 	end
 .maizie_with_follower:
 	turnobject KURTSHOUSE_TWIN1, LEFT
+	scall .maizie_talk
 	sjump .after_maizie_move
 .maizie_talk:
 	faceobject PLAYER, KURTSHOUSE_TWIN1
@@ -472,6 +565,20 @@ KurtHouseScript:
 	cont "promised."
 	done
 
+.KurtTakeADayText:
+	text "KURT: It'll take"
+	line "you a day, come"
+	para "back for your BALL"
+	line "tomorrow."
+	done
+
+.KurtNoRoomTxt:
+	text "Hmm<...> I can't give"
+	line "you this yet."
+	para "Your party seems"
+	line "to be full."
+	done
+
 .KurtGivesEggTxt2:
 	text "I found this egg"
 	line "on one of my"
@@ -495,6 +602,11 @@ KurtHouseScript:
 	line "APRICORNS for me?"
 	done
 
+.KurtNoApricornsTxt:
+	text "KURT: Oh, that's"
+	line "a letdown."
+	done
+
 MaizieHouseScript:
 	jumptextfaceplayer .Txt
 .Txt:
@@ -504,38 +616,71 @@ MaizieHouseScript:
 	line "make BALLS for"
 	cont "you!"
 	done
+
+MaizieNoticesPlayer:
+	checkevent EVENT_KURTS_HOUSE_KURT_WORKED
+	iftrue .Abridged
+	faceobject KURTSHOUSE_TWIN2, PLAYER
+	showemote EMOTE_SHOCK, KURTSHOUSE_TWIN2, 15
+	opentext
+	writetext .MaizieTxt1
+	waitbutton
+	closetext
+	faceobject KURTSHOUSE_KURT2, KURTSHOUSE_TWIN2
+	opentext
+	writetext .KurtTxt1
+	waitbutton
+	closetext
+	faceobject KURTSHOUSE_TWIN2, KURTSHOUSE_KURT2
+	opentext
+	writetext .MaizieTxt2
+	buttonsound
+	faceobject KURTSHOUSE_TWIN2, PLAYER
+	writetext .MaizieTxt2b
+	waitbutton
+	closetext
+	setevent EVENT_KURTS_HOUSE_KURT_WORKED
+	end
+
+.Abridged:
+	opentext
+	writetext .KurtTxt3
+	buttonsound
+	writetext .MaizieTxt3
+	waitbutton
+	closetext
+	end
+
+.MaizieTxt1:
 	text "MAIZIE: Hey!"
 	para "Grandpa is working"
 	line "now, you can't"
 	cont "bother him!"
 	done
 
+.KurtTxt1:
 	text "KURT: MAIZIE,"
 	line "could I borrow"
 	cont "your eyes?"
 	done
 
+.MaizieTxt2:
 	text "MAIZIE: Be right"
 	line "there, grandpa!"
-	para "<...>Your ball will be"
+	done
+
+.MaizieTxt2b:
+	text "<...>Your ball will be"
 	line "ready tomorrow!"
 	done
 
-	text "KURT: Oh, that's"
-	line "a letdown."
-	done
-
-	text "KURT: It'll take"
-	line "you a day, come"
-	para "back for your BALL"
-	line "tomorrow."
-	done
-
+.KurtTxt3:
 	text "KURT: MAIZIE, come"
 	line "help your grandpa"
 	cont "here!"
 	done
 
+.MaizieTxt3:
 	text "MAIZIE: Okay"
 	line "grandpa!"
 	done
@@ -554,6 +699,6 @@ KurtsHouse_MapEvents:
 
 	db 4 ; object events
 	object_event  4,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_1
-	object_event 14,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURTS_HOUSE_KURT_2
+	object_event 14,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MaizieNoticesPlayer, EVENT_KURTS_HOUSE_KURT_2
 	object_event  6,  3, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MaizieHouseScript, EVENT_KURTS_HOUSE_TWIN_1
-	object_event 13,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURTS_HOUSE_TWIN_2
+	object_event 13,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MaizieNoticesPlayer, EVENT_KURTS_HOUSE_TWIN_2
