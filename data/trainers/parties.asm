@@ -89,7 +89,7 @@ MortyGroup:
 		dw TOPSYSPOT
 		dw STOMP, PSYBEAM, LICK, CONFUSE_RAY
 		db 37
-		dw GENGAR ; TODO: fire-ghost fox
+		dw FENNECURSE
 		dw HYPNOSIS, SHADOW_BALL, MEAN_LOOK, DREAM_EATER
 	end_party
 	end_party_list
