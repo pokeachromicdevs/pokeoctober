@@ -296,8 +296,8 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,  -$0a3,  $091 ; XXX KOALYPTUS
 	mon_cry CRY_CATERPIE,    $0a3,  $091 ; OREFRY
 	mon_cry CRY_KRABBY,      $160,  $0a0 ; BALLERINE
-	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; FENNECURSE
-	mon_cry CRY_KANGASKHAN,  $000,  $100 ; ORIJOEY
+	mon_cry CRY_GROWLITHE,   $04c,  $04f ; FENNECURSE
+	mon_cry CRY_KANGASKHAN,  $0f0,  $04b ; ORIJOEY
 	mon_cry CRY_MAGCARGO,   -$109,  $100 ; AGGROSWINE
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
