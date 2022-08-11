@@ -382,7 +382,7 @@ KurtHouseScript:
 	waitbutton
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
-	giveegg TOGEPI, 5 ; ORIJOEY
+	giveegg ORIJOEY, 5
 	getstring STRING_BUFFER_4, .eggname
 	scall .giveegg
 	setevent EVENT_KURTS_HOUSE_RECEIVED_EGG
