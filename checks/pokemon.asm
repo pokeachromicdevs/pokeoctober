@@ -21,3 +21,6 @@ assert _NUM_POKEMON_PALETTES == NUM_POKEMON, "\n\t\tNumber of palette assignment
 
 ; data/pokemon/follow_sprite_pointers.asm
 assert _NUM_FOLLOW_SPRITES == NUM_POKEMON, "\n\t\tNumber of follower sprite assignments must match the number of Pokemon ({d:NUM_POKEMON}).\n\t\t({d:_NUM_FOLLOW_SPRITES} defined)"
+
+; data/pokemon/first_stages.asm
+assert _NUM_FIRST_EVOS == NUM_POKEMON, "\n\t\tNumber of first stage assignments must match the number of Pokemon ({d:NUM_POKEMON}).\n\t\t({d:_NUM_FIRST_EVOS} defined)"

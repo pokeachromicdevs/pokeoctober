@@ -114,14 +114,14 @@ FirstEvoStages::
 	dw RHYHORN    ;70
 	dw CHANSEY
 	dw BURGELA
-	dw KANGASKHAN
+	dw ORIJOEY
 	dw HORSEA
 	dw HORSEA
-	dw GOLDEEN
-	dw GOLDEEN
+	dw OREFRY
+	dw OREFRY
 	dw STARYU     ;78
 	dw STARYU
-	dw MR__MIME
+	dw BALLERINE
 	dw SCYTHER
 	dw SMOOCHUM
 	dw ELEKID
@@ -160,6 +160,7 @@ FirstEvoStages::
 	dw TOTODILE
 	dw TOTODILE
 	dw TOTODILE   ;a0
+	dw BAYLEEF
 	dw SENTRET
 	dw SENTRET
 	dw HOOTHOOT
@@ -169,6 +170,9 @@ FirstEvoStages::
 	dw SPINARAK
 	dw SPINARAK   ;a8
 	dw ZUBAT
+	dw YANMA
+	dw YANMA
+	dw BELLIGNAN
 	dw CHINCHOU
 	dw CHINCHOU
 	dw PICHU
@@ -176,6 +180,7 @@ FirstEvoStages::
 	dw IGGLYBUFF
 	dw TOGEPI
 	dw TOGEPI     ;b0
+	dw NATU
 	dw NATU
 	dw NATU
 	dw MAREEP
@@ -192,7 +197,7 @@ FirstEvoStages::
 	dw AIPOM
 	dw SUNKERN
 	dw SUNKERN    ;c0
-	dw YANMA
+	dw LUXSWAN
 	dw WOOPER
 	dw WOOPER
 	dw EEVEE
@@ -202,9 +207,13 @@ FirstEvoStages::
 	dw MISDREAVUS ;c8
 	dw UNOWN
 	dw WOBBUFFET
-	dw GIRAFARIG
+	dw BIPULLA
+	dw BIPULLA
+	dw TOPSYSPOT
 	dw PINECO
 	dw PINECO
+	dw SHUCKLE
+	dw SHUCKLE
 	dw DUNSPARCE
 	dw GLIGAR
 	dw ONIX       ;d0
@@ -212,13 +221,14 @@ FirstEvoStages::
 	dw SNUBBULL
 	dw QWILFISH
 	dw SCYTHER
-	dw SHUCKLE
-	dw HERACROSS
+	dw TRICULES
+	dw TRICULES
 	dw SNEASEL
 	dw TEDDIURSA  ;d8
 	dw TEDDIURSA
 	dw SLUGMA
 	dw SLUGMA
+	dw SWINUB
 	dw SWINUB
 	dw SWINUB
 	dw CORSOLA
@@ -275,3 +285,14 @@ FirstEvoStages::
 	dw KOTORA
 	dw KOTORA
 	dw KOTORA
+	dw KOALYPTUS
+	dw OREFRY
+	dw BALLERINE
+	dw FENNECURSE
+	dw ORIJOEY
+	dw AGGROSWINE
+
+
+
+;---------------------------------------------------------------------------------------------
+_NUM_FIRST_EVOS = (@ - FirstEvoStages)/2
