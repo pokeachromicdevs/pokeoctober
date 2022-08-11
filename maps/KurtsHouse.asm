@@ -408,9 +408,28 @@ KurtHouseScript:
 	waitbutton
 	closetext
 .ask_for_apricorns
+	faceplayer
 	opentext
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	iftrue .turned_out_great
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .kurt_just_given_task
+; kurt gives item
+	checkevent EVENT_GAVE_KURT_RED_APRICORN
+	iftrue .GiveLevelBall
+	checkevent EVENT_GAVE_KURT_BLU_APRICORN
+	iftrue .GiveLureBall
+	checkevent EVENT_GAVE_KURT_YLW_APRICORN
+	iftrue .GiveMoonBall
+	checkevent EVENT_GAVE_KURT_GRN_APRICORN
+	iftrue .GiveFriendBall
+	checkevent EVENT_GAVE_KURT_WHT_APRICORN
+	iftrue .GiveFastBall
+	checkevent EVENT_GAVE_KURT_BLK_APRICORN
+	iftrue .GiveHeavyBall
+	checkevent EVENT_GAVE_KURT_PNK_APRICORN
+	iftrue .GiveLoveBall
+; prompts for apricorn
 	writetext .KurtPromptsApricorn
 	buttonsound
 
@@ -482,18 +501,86 @@ KurtHouseScript:
 	closetext
 	end
 
+.GiveLevelBall:
+	writetext .KurtBallDoneTxt
+	buttonsound
+	verbosegiveitem LEVEL_BALL
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_RED_APRICORN
+	sjump .set_turned_out_great_flag
+
+.GiveLureBall:
+	writetext .KurtBallDoneTxt
+	buttonsound
+	verbosegiveitem LURE_BALL
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_BLU_APRICORN
+	sjump .set_turned_out_great_flag
+
+.GiveMoonBall:
+	writetext .KurtBallDoneTxt
+	buttonsound
+	verbosegiveitem MOON_BALL
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_YLW_APRICORN
+	sjump .set_turned_out_great_flag
+
+.GiveFriendBall:
+	writetext .KurtBallDoneTxt
+	buttonsound
+	verbosegiveitem FRIEND_BALL
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_GRN_APRICORN
+	sjump .set_turned_out_great_flag
+
+.GiveFastBall:
+	writetext .KurtBallDoneTxt
+	buttonsound
+	verbosegiveitem FAST_BALL
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_WHT_APRICORN
+	sjump .set_turned_out_great_flag
+
+.GiveHeavyBall:
+	writetext .KurtBallDoneTxt
+	buttonsound
+	verbosegiveitem HEAVY_BALL
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_BLK_APRICORN
+	sjump .set_turned_out_great_flag
+
+.GiveLoveBall:
+	writetext .KurtBallDoneTxt
+	buttonsound
+	verbosegiveitem LOVE_BALL
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURT_PNK_APRICORN
+	;sjump .set_turned_out_great_flag
+
+.set_turned_out_great_flag
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+.turned_out_great
+	writetext .KurtTurnedOutGreatTxt
+	waitbutton
+.NoRoomForBall
+	closetext
+	end
+
 .PartyFull
 	writetext .KurtNoRoomTxt
 	waitbutton
 	closetext
 	end
+
 .giveegg
 	jumpstd receivetogepiegg
 	end
+
 .maizie_with_follower:
 	turnobject KURTSHOUSE_TWIN1, LEFT
 	scall .maizie_talk
 	sjump .after_maizie_move
+
 .maizie_talk:
 	faceobject PLAYER, KURTSHOUSE_TWIN1
 	opentext
@@ -542,6 +629,20 @@ KurtHouseScript:
 	para "beloved grandchild"
 	line "and assistant,"
 	cont "MAIZIE."
+	done
+
+.KurtBallDoneTxt:
+	text "KURT: Ah, <PLAYER>!"
+	line "I just finished"
+	cont "your BALL. Here!"
+	done
+
+.KurtTurnedOutGreatTxt:
+	text "KURT: That turned"
+	line "out great."
+
+	para "Try catching"
+	line "#MON with it."
 	done
 
 .MaizieThank:
@@ -640,6 +741,7 @@ MaizieNoticesPlayer:
 	waitbutton
 	closetext
 	setevent EVENT_KURTS_HOUSE_KURT_WORKED
+	turnobject KURTSHOUSE_KURT2, UP
 	end
 
 .Abridged:
