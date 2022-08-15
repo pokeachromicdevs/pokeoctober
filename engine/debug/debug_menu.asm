@@ -346,6 +346,7 @@ Debug_Help:
 	dw .SoundTest
 	dw .ColorMenu
 	dw .TrainerMenu
+	dw .CryMenu
 .Dialogs_End:
 
 DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
@@ -363,6 +364,17 @@ DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
 	line "are enabled, hold B"
 	para "to run while in the"
 	line "overworld."
+	prompt
+
+.CryMenu:
+	text "L/R while holding"
+	line "START: offset 100"
+	para "L/R while holding"
+	line "SELECT: offset 10"
+	para "L/R only: offset 1"
+	para "A while holding"
+	line "SELECT: load cry"
+	para "A: play cry"
 	prompt
 
 .SoundTest:
@@ -427,6 +439,7 @@ endr
 	db "SOUND TEST@@@"
 	db "COLOR@@@@@@@@"
 	db "TRAINERS@@@@@"
+	db "PLAY CRY@@@@@"
 
 Debug_SoundTest:
 	ld de, MUSIC_NONE
