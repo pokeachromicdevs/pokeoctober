@@ -114,6 +114,38 @@ VioletMuseum_FossilGuyScript:
 	cont "action!"
 	done
 
+VioletMuseum_Necrorex:
+	jumptext .Text
+.Text:
+	text "It's a skeleton of"
+	line "a NECROREX!"
+	done
+
+VioletMuseum_Amber:
+	jumptext .Text
+.Text:
+	text "Is that a bug"
+	line "trapped in amber?"
+	done
+
+VioletMuseum_PraiseHelix:
+	jumptext .Text
+.Text:
+	text "It's a HELIX FOSSIL"
+	line "next to a minia-"
+	cont "ture statue of"
+	cont "OMANYTE!"
+	done
+
+VioletMuseum_AncientEggs:
+	jumptext .Text
+.Text:
+	text "It's a couple of"
+	line "prehistoric EGGS!"
+	para "I wonder if they"
+	line "could still hatch<...>"
+	done
+
 VioletMuseum_MapEvents:
 	db 0, 0 ; filler
 
@@ -124,7 +156,11 @@ VioletMuseum_MapEvents:
 	db 1 ; coord events
 	coord_event  3,  6, 0, VioletMuseum_AskEntry
 
-	db 0 ; bg events
+	db 4 ; bg events
+	bg_event 15,  3, BGEVENT_READ, VioletMuseum_Necrorex
+	bg_event  9,  7, BGEVENT_READ, VioletMuseum_Amber
+	bg_event 15,  7, BGEVENT_READ, VioletMuseum_PraiseHelix
+	bg_event  9,  3, BGEVENT_READ, VioletMuseum_AncientEggs
 
 	db 4 ; object events
 	object_event  1,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletMuseum_ReceptionistScript, -1

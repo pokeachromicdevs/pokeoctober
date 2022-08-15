@@ -366,7 +366,7 @@ GuideGentSeaText:
 	line "CHERRYGROVE CITY"
 	cont "GYM!"
 
-	para "GYMs are where"
+	para "GYMS are where"
 	line "GYM LEADERS are,"
 	cont "of course!"
 

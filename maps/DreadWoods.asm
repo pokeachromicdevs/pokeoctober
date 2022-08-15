@@ -10,8 +10,8 @@ DreadWoods_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
-TrainerSchoolboyAndy: 
+
+TrainerSchoolboyAndy:
 	trainer SCHOOLBOY, SCHOOLBOY_ANDY, EVENT_BEAT_SCHOOLBOY_ANDY, SchoolboyAndySeenText, SchoolboyAndyBeatenText, 0, .AfterScript
 
 .AfterScript:
@@ -21,7 +21,7 @@ TrainerSchoolboyAndy:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerManchildMiguel:
 	trainer MANCHILD, MIGUEL, EVENT_BEAT_MANCHILD_MIGUEL, ManchildMiguelSeenText, ManchildMiguelBeatenText, 0, .AfterScript
 
@@ -32,78 +32,78 @@ TrainerManchildMiguel:
 	waitbutton
 	closetext
 	end
-	
+
 SchoolboyAndySeenText:
 	text "This forest<...>I don't"
 	line "know why, but it"
-	
+
 	para "sends shivers down"
 	line "my spine<...>"
 	done
-	
+
 SchoolboyAndyBeatenText:
 	text "I<...>I think you're"
 	line "the reason why I'm"
 	cont "afraid of this"
-	
+
 	para "place."
 	done
-	
+
 SchoolboyAndyAfterBattleText:
 	text "Sigh<...>"
-	
+
 	para "Maybe I'm delusion-"
 	line "al, and there's"
-	
+
 	para "nothing wrong with"
 	line "these woods. Haha<...>"
-	done 
-	
+	done
+
 ManchildMiguelSeenText:
 	text "I'm scared, but my"
 	line "my mom told me to"
-	
+
 	para "stop calling her"
 	line "and grow up<...>"
-	
+
 	para "I haven't moved"
 	line "from this spot"
 	cont "since."
-	
+
 	para "Could you hold"
 	line "my hand?"
 	done
-	
+
 ManchildMiguelBeatenText:
 	text "Oh no, my only"
 	line "friends!"
 	done
-	
+
 ManchildMiguelAfterBattleText:
 	text "I went into the"
 	line "woods hoping to"
-	
+
 	para "end up in one of"
 	line "the fantasy worlds"
-	
+
 	para "I always dream of,"
 	line "only to experience"
-	
+
 	para "horror and fright"
 	line "beyond even my"
-	
+
 	para "late night horror"
 	line "marathons<...>"
-	done 
+	done
 
 DreadWoods_SleepyCopScript:
-	jumptextfaceplayer .Text 
+	jumptextfaceplayer .Text
 
 .Text:
 	text "Zzz<...> huh?"
 	para "Y-yeah, I'm keeping"
 	line "a lookout for"
-	cont "ROCKETs<...>"
+	cont "ROCKETS<...>"
 	para "Zzz<...>"
 	done
 
@@ -124,4 +124,3 @@ DreadWoods_MapEvents:
 	object_event 22, 7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerSchoolboyAndy, -1
 	object_event 21, 15, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerManchildMiguel, -1
 	object_event 14, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, DreadWoods_SleepyCopScript, EVENT_BEAT_WHITNEY
-

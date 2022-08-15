@@ -133,7 +133,7 @@ CitrineInn1FReceptionistScript:
 	para "We pride ourselves"
 	line "in providing a"
 	para "comfortable place"
-	line "for TRAINERs to"
+	line "for TRAINERS to"
 	cont "rest."
 
 	para "A single stay with"

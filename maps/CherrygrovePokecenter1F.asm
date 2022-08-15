@@ -39,7 +39,7 @@ CherrygrovePokecenter1F_MapScripts:
 
 CherrygrovePokecenter1FNurseScript:
 	jumpstd pokecenternurse
-	
+
 CherrygrovePokecenter1F_ElmsAideScript:
 	faceplayer
 	opentext
@@ -97,17 +97,17 @@ CherrygrovePokecenter1FFisherScript:
 
 CherrygrovePokecenter1FGentlemanScript:
 	jumptextfaceplayer CherrygrovePokecenter1FGentlemanText
-	
+
 CherrygrovePokecenter1FGentleman2Script:
 	checkscene
 	iftrue .line_forming
 	jumptextfaceplayer CherrygrovePokecenter1FGentleman2Text
 .line_forming
 	jumptextfaceplayer CherrygrovePokecenter1FGentleman2Text2
-	
+
 CherrygrovePokecenter1FBeautyScript:
 	jumptextfaceplayer CherrygrovePokecenter1FBeautyText
-	
+
 CherrygrovePokecenter1FTeacherScript:
 	faceplayer
 	opentext
@@ -123,7 +123,7 @@ CherrygrovePokecenter1FTeacherScript:
 	waitbutton
 	closetext
 	end
-	
+
 MovementData_AideWalksStraightOutOfPokecenter:
 	step DOWN
 	step LEFT
@@ -152,7 +152,7 @@ UnknownText_0x69555:
 	line "to you."
 	para "Firstly<...>"
 	done
-	
+
 GotUprootText:
 	text "HM01, UPROOT."
 	para "Unlike TMs, HMs"
@@ -166,16 +166,16 @@ GotUprootText:
 	para "And now for the"
 	line "second item<...>"
 	done
-	
+
 UnknownText_0x695c5:
 	text "Yes, the EGG that"
 	line "you retrieved for"
 	cont "ELM is now yours."
 	para "From all the stud-"
 	line "ies ELM has"
-	para "performed on EGGs,"
+	para "performed on EGGS,"
 	line "he's discovered"
-	para "that EGGs hatch"
+	para "that EGGS hatch"
 	line "faster when"
 	para "surrounded with"
 	line "other #MON."
@@ -254,7 +254,7 @@ CherrygrovePokecenter1FTeacherText_CommCenterOpen:
 	para "I traded #MON"
 	line "there already!"
 	done
-	
+
 CherrygrovePokecenter1FGentleman2Text:
 	text "Those hooligans"
 	line "from the DOJO get"
@@ -297,14 +297,14 @@ CherrygrovePokecenter1FBeautyText:
 	text "I heard there's a"
 	line "pagoda around here"
 	cont "somewhere that"
-	
-	para "sells special" 
+
+	para "sells special"
 	line "wares not normally"
 	cont "found elsewhere,"
-	
+
 	para "but I can't find"
 	line "it at all."
-	
+
 	para "How annoying…"
 	done
 

@@ -435,7 +435,7 @@ TrainerPokefanAriel:
 	trainer POKEFANF, PKF_ARIEL, EVENT_BEAT_PKF_ARIEL, PKFArielSeenTxt, PKFArielWinTxt, 0, PKFArielScript
 
 PKFArielSeenTxt:
-	text "Real #FANs like"
+	text "Real #FANS like"
 	line "me adore RAICHU!"
 	done
 

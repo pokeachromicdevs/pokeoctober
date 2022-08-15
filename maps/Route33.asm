@@ -284,7 +284,7 @@ Route33_EncounterKaren:
 	para "# BALLS that"
 	line "can master the"
 	para "likes of MASTER"
-	line "BALLs, and you're"
+	line "BALLS, and you're"
 	cont "going to like it!"
 	done
 
@@ -365,7 +365,7 @@ Route33_EncounterKaren:
 	para "I was able to"
 	line "drive off a few of"
 	para "those blasted"
-	line "ROCKETs, but"
+	line "ROCKETS, but"
 	para "eventually I got"
 	line "overwhelmed."
 
@@ -903,7 +903,7 @@ Route33_EncounterKurt:
 	line "realized that you"
 	para "must be quite"
 	line "strong to beat the"
-	para "ROCKETs that were"
+	para "ROCKETS that were"
 	line "harrassing me, and"
 	para "you even bested"
 	line "their commander to"
