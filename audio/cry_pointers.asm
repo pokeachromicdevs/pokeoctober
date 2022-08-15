@@ -75,3 +75,4 @@ Cries:
 	dba Cry_Elekid
 	dba Cry_Larvitar
 	dba Cry_Bipulla
+	dba Cry_Aggroswine

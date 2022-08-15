@@ -1,5 +1,5 @@
 ; to do: insert beta cries
-	
+
 Cry_Marill:
 	musicheader 3, 5, Cry_Marill_Ch5
 	musicheader 1, 6, Cry_Marill_Ch6
@@ -45,6 +45,11 @@ Cry_Cyndaquil:
 	musicheader 3, 5, Cry_Cyndaquil_Ch5
 	musicheader 1, 6, Cry_Cyndaquil_Ch6
 	musicheader 1, 8, Cry_Cyndaquil_Ch8
+
+Cry_Aggroswine:
+	musicheader 3, 5, Cry_Aggroswine_Ch5
+	musicheader 1, 6, Cry_Aggroswine_Ch6
+	musicheader 1, 8, Cry_Aggroswine_Ch8
 
 Cry_Chikorita:
 	musicheader 3, 5, Cry_Chikorita_Ch5
@@ -146,42 +151,42 @@ Cry_Mantine:
 Cry_Hoothoot_2ch:
 	musicheader 2, 5, Cry_Hoothoot_Ch5
 	musicheader 1, 6, Cry_Hoothoot_Ch6
-	
+
 Cry_Worfurs:
 	musicheader 3, 5, Cry_Worfurs_Ch5
 	musicheader 1, 6, Cry_Worfurs_Ch6
 	musicheader 1, 8, Cry_Worfurs_Ch8
-	
+
 Cry_Molambino:
 	channel_count 3
 	channel 5, Cry_Molambino_Ch5
 	channel 6, Cry_Molambino_Ch6
 	channel 8, Cry_Molambino_Ch8
-	
+
 Cry_Misdreavus:
 	channel_count 3
 	channel 5, Cry_Misdreavus_Ch5
 	channel 6, Cry_Misdreavus_Ch6
 	channel 8, Cry_Misdreavus_Ch8
-	
+
 Cry_Yanma:
 	channel_count 3
 	channel 5, Cry_Yanma_Ch5
 	channel 6, Cry_Yanma_Ch6
 	channel 8, Cry_Yanma_Ch8
-	
+
 Cry_Elekid:
 	channel_count 3
 	channel 5, Cry_Elekid_Ch5
 	channel 6, Cry_Elekid_Ch6
 	channel 8, Cry_Elekid_Ch8
-	
+
 Cry_Larvitar:
 	channel_count 3
 	channel 5, Cry_Larvitar_Ch5
 	channel 6, Cry_Larvitar_Ch6
 	channel 8, Cry_Larvitar_Ch8
-	
+
 Cry_Bipulla:
 	channel_count 3
 	channel 5, Cry_Bipulla_Ch5
@@ -480,6 +485,21 @@ Cry_Cyndaquil_Ch8:
 Cry_Gligar_Ch8:
 	noise __,  9, $3f, $52
 	noise C#,  1, $93, $4f
+	endchannel
+
+Cry_Aggroswine_Ch5:
+	callchannel Cry_Cyndaquil_Ch5
+	callchannel Cry_Cyndaquil_Ch5
+	endchannel
+
+Cry_Aggroswine_Ch6:
+	callchannel Cry_Cyndaquil_Ch6
+	callchannel Cry_Cyndaquil_Ch6
+	endchannel
+
+Cry_Aggroswine_Ch8:
+	callchannel Cry_Cyndaquil_Ch8
+	callchannel Cry_Cyndaquil_Ch8
 	endchannel
 
 Cry_Chikorita_Ch5:
@@ -2005,7 +2025,7 @@ Cry_Rattata_Ch6:
 	endchannel
 
 Cry_Rattata_Ch8:
-	noise __,  3, $92, $49   
+	noise __,  3, $92, $49
 	noise __,  8, $b5, $29
 	noise __,  2, $a2, $39
 	noise __,  9, $91, $49
@@ -2059,7 +2079,7 @@ Cry_Worfurs_Ch8:
 	noise __,  4, $ec, $4d
 	noise C_,  1, $d2, $4f
 	endchannel
-	
+
 Cry_Molambino_Ch5:
 	sound_duty 0, 1, 0, 2
 .loop1:
@@ -2092,12 +2112,12 @@ Cry_Molambino_Ch6:
 	square_note 8, 15, 8, 1927
 	square_note 24, 14, 2, 1923
 	sound_ret
-	
+
 Cry_Molambino_Ch8:
 	noise_note 8, 10, 6, 58
 	noise_note 8, 10, 1, 90
 	sound_ret
-	
+
 Cry_Misdreavus_Ch5:
 	sound_duty 1, 2, 1, 2
 	square_note 4, 7, 8, 1616
@@ -2128,7 +2148,7 @@ Cry_Misdreavus_Ch8:
 	noise_note 1, 9, 8, 94
 	noise_note 16, 10, 7, 110
 	sound_ret
-	
+
 Cry_Yanma_Ch5:
 	sound_duty 0, 3, 0, 2
 	square_note 8, 15, 8, 816
@@ -2207,7 +2227,7 @@ Cry_Larvitar_Ch8:
 	noise_note 3, 14, -4, 77
 	noise_note 16, 13, 2, 79
 	sound_ret
-	
+
 Cry_Bipulla_Ch5:
 	sound_duty 0, 3, 2, 1
 	soundinput $ff

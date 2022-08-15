@@ -80,3 +80,4 @@
 	const CRY_ELEKID
 	const CRY_LARVITAR
 	const CRY_BIPULLA
+	const CRY_AGGROSWINE ; 'quil but 2x
