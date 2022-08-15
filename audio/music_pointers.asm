@@ -1,6 +1,11 @@
 ; See song sections in audio.asm.
 
 Music:
+if def(_NO_MUSIC)
+rept NUM_MUSIC_TRACKS
+	dba Music_Nothing
+endr
+else
 ; entries correspond to MUSIC_* constants
 	dba Music_Nothing
 	dba Music_TitleScreen
@@ -119,7 +124,7 @@ Music:
 	dba Music_BlueBattle
 	dba Music_DreadWoods
 	dba Music_CinnabarMansion
-	dba Music_Pokemart 
+	dba Music_Pokemart
 	dba Music_CeruleanCave
 	dba Music_SafariZone
 	dba Music_CreditsG1
@@ -132,3 +137,4 @@ Music:
 	dba Music_KantoLegendBattleXY
 	dba Music_ImakuniTheme
 	dba Music_EliteFourBattle
+endc

@@ -39,8 +39,12 @@ IPSPATCH ?= tools/ipspatch
 ### Build targets
 
 .SUFFIXES:
+
+# main menu is always rebuilt to ensure accurate version indicator
+# music pointers is always rebuilt for the _NO_MUSIC build flag
 .PHONY: all clean tidy tools \
-	engine/menus/main_menu.asm # always rebuild this (ensuring the version is accurate)
+	engine/menus/main_menu.asm \
+	audio/music_pointers.asm
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
