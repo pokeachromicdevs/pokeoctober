@@ -106,6 +106,7 @@ KurtsHouseSign:
 	jumptext .Text
 .Text:
 	text "KURT's HOUSE"
+	done
 
 AzaleaGymSign:
 	jumptext .Text
