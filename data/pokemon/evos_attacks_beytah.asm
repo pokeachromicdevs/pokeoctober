@@ -504,6 +504,54 @@ GorotoraEvosAttacks:
 	dbw 51, THUNDERBOLT
 	dbw 58, SLASH
 	db 0 ; no more level-up moves
+	
+GermifrostEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ROLLOUT
+	dbw 1, GROWL
+	dbw 4, RAPID_SPIN
+	dbw 9, POWDER_SNOW
+	dbw 13, DEFENSE_CURL
+	dbw 18, ABSORB
+	dbw 24, CHARM
+	dbw 29, ICY_WIND
+	dbw 33, MEGA_DRAIN
+	dbw 38, MIST
+	dbw 42, ICE_BEAM
+	dbw 47, GIGA_DRAIN
+	db 0 ; no more level-up moves
+
+VegelancheEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ROLLOUT
+	dbw 1, GROWL
+	dbw 4, RAPID_SPIN
+	dbw 9, POWDER_SNOW
+	dbw 13, DEFENSE_CURL
+	dbw 18, ABSORB
+	dbw 24, CHARM
+	dbw 29, ICY_WIND
+	dbw 33, MEGA_DRAIN
+	dbw 38, MIST
+	dbw 42, ICE_BEAM
+	dbw 47, GIGA_DRAIN
+	db 0 ; no more level-up moves
+
+SnouwrbunEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ROLLOUT
+	dbw 1, GROWL
+	dbw 4, RAPID_SPIN
+	dbw 9, POWDER_SNOW
+	dbw 13, DEFENSE_CURL
+	dbw 18, ABSORB
+	dbw 24, CHARM
+	dbw 29, ICY_WIND
+	dbw 33, MEGA_DRAIN
+	dbw 38, MIST
+	dbw 42, ICE_BEAM
+	dbw 47, GIGA_DRAIN
+	db 0 ; no more level-up moves
 
 
 

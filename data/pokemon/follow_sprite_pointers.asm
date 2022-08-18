@@ -185,7 +185,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MEWTWO
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MEW
 ;Johto Icons
-	follow_sprite ChikoritaSpriteGFX, PAL_FOLLOWER_GREEN ;CHIKORITA
+		follow_sprite ChikoritaSpriteGFX, PAL_FOLLOWER_GREEN ;CHIKORITA
 	follow_sprite BlossomoleSpriteGFX, PAL_FOLLOWER_GREEN ;BLOSSOMOLE
 	follow_sprite MeganiumSpriteGFX, PAL_FOLLOWER_GREEN ;MEGANIUM
 	follow_sprite CyndaquilSpriteGFX, PAL_FOLLOWER_RED ;CYNDAQUIL
@@ -325,3 +325,6 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;FENNECURSE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;ORIJOEY
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;AGGROSWINE
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;GERMIFROST
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;VEGELANCHE
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;SNOUWRBUN

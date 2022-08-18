@@ -291,6 +291,9 @@ FirstEvoStages::
 	dw FENNECURSE
 	dw ORIJOEY
 	dw AGGROSWINE
+	dw CAMOUFLAKE
+	dw CAMOUFLAKE
+	dw CAMOUFLAKE
 
 
 

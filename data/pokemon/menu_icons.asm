@@ -292,6 +292,9 @@ MonMenuIcons:
 	db ICON_VULPIX      ; FENNECURSE
 	db ICON_KANGASKHAN  ; ORIJOEY
 	db ICON_PILOSWINE   ; AGGROSWINE
+	db ICON_VOLTORB		; GERMIFROST
+	db ICON_VOLTORB		; VEGELANCHE
+	db ICON_VOLTORB		; SNOUWRBUN
 
 ; -----------------------------
 	db ICON_EGG         ; EGG

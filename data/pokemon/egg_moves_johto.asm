@@ -589,3 +589,6 @@ KotoraEggMoves:
 	db TAKE_DOWN
 	db SCREECH
 	db -1 ; end
+	
+CamouflakeEggMoves:
+	db -1 ; end

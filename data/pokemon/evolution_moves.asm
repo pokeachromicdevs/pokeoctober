@@ -290,6 +290,9 @@ EvolutionMoves::
 	dw NO_MOVE      ; FENNECURSE
 	dw NO_MOVE      ; ORIJOEY
 	dw NO_MOVE      ; AGGROSWINE
+	dw NO_MOVE		; GERMIFROST
+	dw NO_MOVE		; VEGELANCHE
+	dw NO_MOVE		; SNOUWRBUN
 
 ;----------------------------------
 _NUM_EVO_MOVES = (@ - EvolutionMoves) / 2

@@ -82,6 +82,7 @@ AlphabeticalPokedexOrder:
 	dw GASTLY
 	dw GENGAR
 	dw GEODUDE
+	dw GERMIFROST
 	dw GIRAFARIG
 	dw GLIGAR
 	dw GLOOM
@@ -239,6 +240,7 @@ AlphabeticalPokedexOrder:
 	dw SMUJJ
 	dw SNEASEL
 	dw SNORLAX
+	dw SNOUWRBUN
 	dw SNUBBULL
 	dw SPEAROW
 	dw SPINARAK
@@ -271,6 +273,7 @@ AlphabeticalPokedexOrder:
 	dw UNOWN
 	dw URSARING
 	dw VAPOREON
+	dw VEGELANCHE
 	dw VENOMOTH
 	dw VENONAT
 	dw VENUSAUR

@@ -299,6 +299,9 @@ PokemonCries::
 	mon_cry CRY_CYNDAQUIL,   $303,  $1c0 ; FENNECURSE
 	mon_cry CRY_KANGASKHAN,  $0f0,  $04b ; ORIJOEY
 	mon_cry CRY_AGGROSWINE,  $1B7,  $068 ; AGGROSWINE
+	mon_cry CRY_PICHU,       $000,  $150 ; GERMIFROST (placeholder)
+	mon_cry CRY_PICHU,       $000,  $150 ; VEGELANCHE (placeholder)
+	mon_cry CRY_PICHU,       $000,  $150 ; SNOUWRBUN (placeholder)
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle

@@ -291,6 +291,9 @@ PokedexDataPointerTable:
 	dba FennecursePokedexEntry
 	dba OrijoeyPokedexEntry
 	dba AggroswinePokedexEntry
+	dba GermifrostPokedexEntry
+	dba VegelanchePokedexEntry
+	dba SnouwrbunPokedexEntry
 
 ;-------------------------------------------------------
 _NUM_POKEDEX_ENTRIES = (@ - PokedexDataPointerTable) / 3

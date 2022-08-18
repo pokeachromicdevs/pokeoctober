@@ -595,6 +595,12 @@ PokemonPicPointers::
 	dba OrijoeyBackpic
 	dba AggroswineFrontpic
 	dba AggroswineBackpic
+	dba GermifrostFrontpic
+	dba GermifrostBackpic
+	dba VegelancheFrontpic
+	dba VegelancheBackpic
+	dba SnouwrbunFrontpic
+	dba SnouwrbunBackpic
 
 ;------------------------------------------------
 _NUM_POKEMON_PICS = (@ - PokemonPicPointers) / 6 - 1
