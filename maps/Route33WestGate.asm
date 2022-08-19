@@ -13,6 +13,19 @@ Route33WestGateOfficerScript:
 	text "Zzz<...>"
 	done
 
+Route33WestGate_Lass:
+	jumptextfaceplayer .Text
+.Text:
+	text "That man over"
+	line "there is always"
+	cont "tired."
+	para "It must be hard"
+	line "staying up for"
+	para "hours in the night"
+	line "watching for"
+	cont "criminals."
+	done
+
 Route33WestGate_MapEvents:
 	db 0, 0 ; filler
 
@@ -27,5 +40,6 @@ Route33WestGate_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event  6,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route33WestGateOfficerScript, -1
+	object_event  2,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route33WestGate_Lass, -1
