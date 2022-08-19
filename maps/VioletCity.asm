@@ -196,7 +196,11 @@ VioletCityMuseumSage:
 	done
 
 VioletCityHeracrossGuy:
+	checkitem HONEY_POT
+	iftrue .has_pot
 	jumptextfaceplayer .Txt
+.has_pot
+	jumptextfaceplayer .Txt2
 .Txt:
 	text "Did you know that"
 	line "HERACROSS loves"
@@ -204,6 +208,20 @@ VioletCityHeracrossGuy:
 	para "Why not get some"
 	line "from the HONEY"
 	cont "GRANDMA?"
+	done
+.Txt2:
+	text "Hey! That's a HONEY"
+	line "POT!"
+	para "To catch a #MON"
+	line "from a tree that"
+	para "you slathered with"
+	line "SWEET HONEY, you"
+	para "need to HEADBUTT"
+	line "it."
+	para "I heard you can"
+	line "get HEADBUTT from"
+	para "the CHERRYGROVE"
+	line "PAGODA."
 	done
 
 VioletCityYoungster:
