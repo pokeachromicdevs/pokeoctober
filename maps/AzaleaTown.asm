@@ -138,8 +138,8 @@ AzaleaTown_MapEvents:
 	warp_event 15,  5, AZALEA_MART, 1
 	warp_event  5,  9, KURTS_HOUSE, 1
 	warp_event  4,  3, AZALEA_GYM, 1
-	warp_event 11, 11, AZALEA_GYM, 1
-	warp_event 15, 11, AZALEA_GYM, 1
+	warp_event 11, 11, AZALEA_LEFT_HOUSE, 1
+	warp_event 15, 11, AZALEA_RIGHT_HOUSE, 1
 
 	db 1 ; coord events
 	coord_event 9, 0, 0, AzaleaTown_GymBlocker

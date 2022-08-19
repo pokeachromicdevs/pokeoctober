@@ -226,6 +226,8 @@ ENDM
 	map_const ROUTE_33_WEST_GATE,                           7,  4 ; 22
 	map_const AZALEA_GYM,                                  10, 13 ;
 	map_const ROUTE_34,                                    10, 18 ;  1
+	map_const AZALEA_LEFT_HOUSE,                            4,  4
+	map_const AZALEA_RIGHT_HOUSE,                           4,  4
 
 	newgroup                                                      ;  9
 

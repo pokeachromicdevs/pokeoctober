@@ -526,3 +526,6 @@ INCLUDE "maps/CherrygrovePagoda2F.asm"
 INCLUDE "maps/CherrygrovePagoda3F.asm"
 INCLUDE "maps/CherrygrovePagoda4F.asm"
 INCLUDE "maps/CherrygrovePagoda5F.asm"
+
+INCLUDE "maps/AzaleaLeftHouse.asm"
+INCLUDE "maps/AzaleaRightHouse.asm"
