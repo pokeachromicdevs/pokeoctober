@@ -237,6 +237,71 @@ VioletFishingGuildJournal:
 	text "Keep reading?"
 	done
 
+VioletFishingGuild_RodGuy:
+	faceplayer
+	opentext
+	checkevent EVENT_RECEIVED_OLD_ROD_FROM_FISHER_IN_GUILD
+	iftrue .got_rod
+
+	writetext .Txt1
+	yesorno
+	iffalse .said_no
+
+	writetext .Txt2
+	buttonsound
+	verbosegiveitem OLD_ROD
+	iffalse .full
+
+	setevent EVENT_RECEIVED_OLD_ROD_FROM_FISHER_IN_GUILD
+
+.got_rod
+	writetext .Txt3
+	waitbutton
+.full
+	closetext
+	end
+
+.said_no
+	writetext .Txt4
+	waitbutton
+	closetext
+	end
+
+.Txt1:
+	text "Hey, kid! Me and"
+	line "my pals often chat"
+	para "here in the GUILD"
+	line "after we're done"
+	cont "fishing!"
+	para "Do you like to"
+	line "fish, too?"
+	done
+.Txt2:
+	text "Ah, you're"
+	line "cultured."
+	para "Here, take this"
+	line "and go fish!"
+	done
+.Txt3:
+	text "The OLD ROD is the"
+	line "weakest of the"
+	cont "three RODS."
+	para "Some of my buddies"
+	line "have the other"
+	para "two, but they live"
+	line "elsewhere in"
+	cont "JOHTO."
+	para "Good luck finding"
+	line "them!"
+	done
+.Txt4:
+	text "Are you sure?"
+	para "Feel free to come"
+	line "back to me when"
+	para "you change your"
+	line "mind!"
+	done
+
 VioletFishingGuild_MapEvents:
 	db 0, 0 ; filler
 
@@ -249,9 +314,10 @@ VioletFishingGuild_MapEvents:
 	db 1 ; bg events
 	bg_event 11,  6, BGEVENT_READ, VioletFishingGuildJournal
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event  7,  2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletFishingGuild_Fisher1Script, -1
 	object_event  2,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletFishingGuild_SailorScript, -1
 	object_event  2,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VioletFishingGuild_Fisher2Script, -1
 	object_event  7,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, VioletFishingGuild_Fisher3Script, -1
 	object_event 11,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, 16, 7, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletFishingGuild_TravellingFisherScript, -1
+	object_event 10,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletFishingGuild_RodGuy, -1

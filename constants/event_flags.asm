@@ -375,6 +375,7 @@
 
 ; violet fishing guild
 	const EVENT_RECEIVED_OREFRY_FROM_FISHER_IN_GUILD
+	const EVENT_RECEIVED_OLD_ROD_FROM_FISHER_IN_GUILD
 
 ; r34
 	const EVENT_BEAT_ROUTE34_WILL
@@ -403,7 +404,6 @@
 ; demo 1 limit
 	const EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
 
-	const EVENT_19d
 	const EVENT_19e
 	const EVENT_19f
 	const EVENT_1a0
