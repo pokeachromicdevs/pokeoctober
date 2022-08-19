@@ -107,6 +107,59 @@ DreadWoods_SleepyCopScript:
 	para "Zzz<...>"
 	done
 
+DreadWoods_SkateboardAd:
+	jumptext .Txt
+.Txt:
+	text "TRAINER TIPS"
+	para "Some ledges can be"
+	line "climbed using the"
+	cont "SKATEBOARD!"
+	para "Right now, you can"
+	line "get one at"
+	cont "GOLDENROD CITY."
+	done
+
+DreadWoods_NightMonSign:
+	jumptext .Txt
+.Txt:
+	text "Due to this area's"
+	line "high tree density,"
+	para "many #MON found"
+	line "only at night can"
+	para "be found here at"
+	line "any time of the"
+	cont "day."
+	done
+
+DreadWoods_BewareSign:
+	jumptext .Txt
+.Txt:
+	text "BEWARE OF MANKEY"
+	line "AND AGGROSWINE"
+	para "These #MON"
+	line "often team up to"
+	para "deal with anyone"
+	line "bothering them."
+	done
+
+DreadWoods_WarnGuy:
+	jumptextfaceplayer .Txt
+.Txt:
+	text "You really don't"
+	line "wanna mess with"
+	cont "these two #MON."
+	para "I've heard of some-"
+	line "one recently who"
+	para "got pelted by"
+	line "MANKEY droppings,"
+	para "and then getting"
+	line "mauled by a nearby"
+	cont "AGGROSWINE."
+	para "Needless to say,"
+	line "he's avoided this"
+	cont "place ever since."
+	done
+
 DreadWoods_MapEvents:
 	db 0, 0 ; filler
 
@@ -118,9 +171,13 @@ DreadWoods_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 3 ; bg events
+	bg_event 15, 27, BGEVENT_READ, DreadWoods_SkateboardAd
+	bg_event 15, 15, BGEVENT_READ, DreadWoods_NightMonSign
+	bg_event  5, 29, BGEVENT_READ, DreadWoods_BewareSign
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 22, 7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerSchoolboyAndy, -1
 	object_event 21, 15, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerManchildMiguel, -1
 	object_event 14, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, DreadWoods_SleepyCopScript, EVENT_BEAT_WHITNEY
+	object_event  6, 30, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, -1, DreadWoods_WarnGuy, -1
