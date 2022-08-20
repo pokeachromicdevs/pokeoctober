@@ -68,7 +68,7 @@ AzaleaLeftHouse_CoolM:
 	line "KANTO."
 	para "That was when she"
 	line "noticed OAK, who"
-	para "always had her in"
+	para "always had him in"
 	line "a good book."
 	para "Despite this, she'd"
 	line "challenge him, and"
