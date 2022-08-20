@@ -23,6 +23,7 @@ Route34_MapScripts:
 ; scripts here
 Route34Silver:
 	faceplayer
+	waitsfx
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, ROUTE34_SILVER, 15
 	opentext
