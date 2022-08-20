@@ -8,6 +8,15 @@ SetPartyNumberAsFollower::
 ; Follower flags = which number in party is following you
 	ld [wWhichPartyFollower], a
 
+; uncomment this to ensure palette appearing immediately (not in all cases)
+	;call LoadFollowerPalette
+	;ld hl, wOBPals1 palette PAL_OW_FOLLOWER
+	;ld bc, 1 palettes
+	;ld de, wOBPals2 palette PAL_OW_FOLLOWER
+	;ld a, BANK(wOBPals1)
+	;call FarCopyWRAM
+	;call ForceUpdateCGBPals
+
 ; kind of crude check
 	ld a, [wTileLeft]
 	call GetTileCollision
@@ -72,7 +81,7 @@ SetPartyNumberAsFollower::
 .got_spawn
 	ld b, FOLLOWER
 	farcall CopyDECoordsToMapObject
-	farcall ChangeFollowerColor
+	call LoadFollowerPalette
 	ld a, FOLLOWER
 	call _CopyObjectStruct
 	ret

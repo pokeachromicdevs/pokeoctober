@@ -17,7 +17,7 @@ NUM_SPRITEDATA_FIELDS EQU const_value
 ; sprite palettes
 	const_def
 	const PAL_OW_RED    ; 0
-	const PAL_OW_SILVER ; 1
+	const PAL_OW_FOLLOWER ; 1
 	const PAL_OW_BLUE   ; 2
 	const PAL_OW_GREEN  ; 3
 	const PAL_OW_BROWN  ; 4
@@ -29,7 +29,7 @@ NUM_SPRITEDATA_FIELDS EQU const_value
 ; MapObjectPals indexes (see gfx/overworld/npc_sprites.pal)
 	const_def 1 << 3
 	const PAL_NPC_RED    ; 8
-	const PAL_NPC_SILVER ; 9
+	const PAL_NPC_FOLLOWER ; 9
 	const PAL_NPC_BLUE   ; a
 	const PAL_NPC_GREEN  ; b
 	const PAL_NPC_BROWN  ; c

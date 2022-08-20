@@ -1,3 +1,41 @@
+LoadSpecialGrassPalette:
+	ld a, [wMapTileset]
+	cp TILESET_SNOW
+	jr z, .snow
+	cp TILESET_PARK
+	jr z, .park
+	ret
+
+.snow
+	ld hl, .SnowGrassPal
+	jr .got_pal
+
+.park
+	ld hl, .ParkGrassPal
+;	jr .got_pal
+
+.got_pal
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 1 palettes
+	call AddNTimes
+	ld de, wOBPals1 palette PAL_OW_TREE
+	ld bc, 1 palettes
+	ld a, BANK(wOBPals1)
+	jp FarCopyWRAM
+
+.SnowGrassPal:
+	RGB 28,31,16, 21,21,21, 13,13,13, 07,07,07 ; morn
+	RGB 27,31,27, 21,21,21, 13,13,13, 07,07,07 ; day
+	RGB 15,14,24, 11,11,19, 07,07,12, 00,00,00 ; nite
+	RGB 01,01,02, 00,00,00, 00,00,00, 00,00,00 ; dark
+
+.ParkGrassPal:
+	RGB 28,31,16, 31,19,10, 31,07,01, 00,00,00 ; morn
+	RGB 27,31,27, 31,19,10, 31,07,01, 00,00,00 ; day
+	RGB 15,14,24, 31,19,10, 31,07,01, 00,00,00 ; nite
+	RGB 01,01,02, 31,19,10, 31,07,01, 00,00,00 ; dark
+
 LoadSpecialMapPalette:
 	ld a, [wMapTileset]
 	cp TILESET_POKECOM_CENTER

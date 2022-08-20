@@ -8,7 +8,7 @@ GetFollowingSprite::
 
 	ld a, [hROMBank]
 	ld [hSavedROMBank], a
-	
+
 	ld a, BANK(FollowSpritePointers)
 	rst Bankswitch
 
@@ -38,6 +38,7 @@ GetFollowingPokemon::
 ; output:
 ;	hl = pokemon index
 	call GetFollowingPokemonSpeciesID
+	ret z
 	jp GetPokemonIndexFromID
 
 GetFollowingPokemonSpeciesID::
@@ -59,4 +60,44 @@ GetFollowingPokemonSpeciesID::
 	ld [wCurPartyMon], a
 	ld a, [hl]
 	ret
-	
+
+LoadFollowingPokemonPalette:
+; input:
+;	hl = Pokemon ID (starts at 1)
+	push bc
+	push de
+
+	call GetFollowingSprite ; c contains color to use
+
+	ld a, [hROMBank]
+	ld [hSavedROMBank], a
+
+	ld a, BANK(FollowSpritePalettes)
+	rst Bankswitch
+
+	ld hl, FollowSpritePalettes
+	ld b, 0
+	add hl, bc
+	add hl, bc
+
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+
+	; palette found, do copy
+	; in this case we don't care about time of day
+	ld de, wOBPals1 palette PAL_OW_FOLLOWER
+	ld a, BANK(wOBPals1)
+	call FarCopyWRAM
+
+	ld a, [hSavedROMBank]
+	rst Bankswitch
+
+	pop de
+	pop bc
+	ret
+
+LoadFollowerPalette::
+	call GetFollowingPokemon
+	ret z
+	jp LoadFollowingPokemonPalette

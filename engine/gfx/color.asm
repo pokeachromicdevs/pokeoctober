@@ -1280,7 +1280,8 @@ LoadMapPals:
 	ld bc, 8 palettes
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM
-
+	call LoadFollowerPalette
+	farcall LoadSpecialGrassPalette
 	ld a, [wEnvironment]
 	cp TOWN
 	jr z, .outside

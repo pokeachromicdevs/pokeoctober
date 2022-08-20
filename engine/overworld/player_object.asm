@@ -62,29 +62,8 @@ SpawnFollower::
 	call CopyPlayerObjectTemplate
 	ld b, FOLLOWER
 	call PlayerSpawn_ConvertCoords
-
-; fallthru
-
-ChangeFollowerColor::
-	push bc
-		call GetFollowingPokemon
-		call GetFollowingSprite ; c contains color
-
-		ld a, c
-	; assume we're using PAL_OW_* constants
-		set 3, a
-		swap a
-		add OBJECTTYPE_SCRIPT
-		ld e, a
-	pop bc
-
-	ld a, FOLLOWER_OBJECT
-	call GetMapObject
-	ld hl, MAPOBJECT_COLOR
-	add hl, bc
-	ld [hl], e
 	ret
-	
+
 PlayerObjectTemplate:
 ; A dummy map object used to initialize the player object.
 ; Shorter than the actual amount copied by two bytes.

@@ -893,7 +893,7 @@ MapObjectMovementPattern:
 	ld a, [hl]
 	and a
 	jr nz, .no_idle_action
-	
+
 	call Random
 	ldh a, [hRandomAdd]
 	and %01111111
@@ -907,7 +907,7 @@ MapObjectMovementPattern:
 	ld [hl], a
 
 	ret
-	
+
 .no_idle_action
 	dec [hl]
 	ret
@@ -2175,7 +2175,7 @@ SpawnShadow:
 
 .ShadowObject:
 	; vtile, palette, movement
-	db $00, PAL_OW_SILVER, SPRITEMOVEDATA_SHADOW
+	db $00, PAL_OW_RED, SPRITEMOVEDATA_SHADOW
 
 SpawnStrengthBoulderDust:
 	push bc
@@ -2186,10 +2186,32 @@ SpawnStrengthBoulderDust:
 	ret
 
 .BoulderDustObject:
-	db $00, PAL_OW_SILVER, SPRITEMOVEDATA_BOULDERDUST
+	db $00, PAL_OW_ROCK, SPRITEMOVEDATA_BOULDERDUST
 
 SpawnEmote:
 	push bc
+	push hl
+
+; force white background
+	ldh a, [rSVBK]
+	push af
+		ld a, BANK(wOBPals2)
+		ld [rSVBK], a
+
+	; using PAL_OW_ROCK hopefully there aren't any odd rocks nearby
+		ld hl, wOBPals2 palette PAL_OW_ROCK + 2
+		ld a, $ff
+		ld [hli], a
+		ld a, $7f
+		ld [hli], a
+	pop af
+	ld [rSVBK], a
+	ld a, 1
+	ldh [hCGBPalUpdate], a
+	call DelayFrame
+; background will return to normal after emote despawns
+
+	pop hl
 	ld de, .EmoteObject
 	call CopyTempObjectData
 	call InitTempObject
@@ -2197,30 +2219,11 @@ SpawnEmote:
 	ret
 
 .EmoteObject:
-	db $00, PAL_OW_SILVER, SPRITEMOVEDATA_EMOTE
+	db $00, PAL_OW_ROCK, SPRITEMOVEDATA_EMOTE
 
 ShakeGrass:
 	push bc
-	ld a, [wMapTileset]
-
-	cp TILESET_PARK
-	jr z, .redgrass
-
-	cp TILESET_SNOW
-	jr z, .whitegrass
-
 	ld de, .GrassObject
-	jr .finish
-
-.redgrass
-	ld de, .RedGrassObject
-	jr .finish
-
-.whitegrass
-	ld de, .SnowGrassObject
-	; jr .finish
-
-.finish
 	call CopyTempObjectData
 	call InitTempObject
 	pop bc
@@ -2228,12 +2231,6 @@ ShakeGrass:
 
 .GrassObject
 	db $00, PAL_OW_TREE, SPRITEMOVEDATA_GRASS
-
-.RedGrassObject
-	db $00, PAL_OW_RED, SPRITEMOVEDATA_GRASS
-	
-.SnowGrassObject
-	db $00, PAL_OW_SILVER, SPRITEMOVEDATA_GRASS
 
 ShakeScreen:
 	push bc
@@ -2247,7 +2244,7 @@ ShakeScreen:
 	ret
 
 .ScreenShakeObject:
-	db $00, PAL_OW_SILVER, SPRITEMOVEDATA_SCREENSHAKE
+	db $00, PAL_OW_RED, SPRITEMOVEDATA_SCREENSHAKE
 
 DespawnEmote:
 	push bc

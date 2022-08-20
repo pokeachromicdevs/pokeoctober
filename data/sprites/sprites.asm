@@ -100,7 +100,7 @@ OverworldSprites:
 	overworld_sprite FamicomSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite FruitTreeSpriteGFX, 4, STILL_SPRITE, PAL_OW_TREE
 	overworld_sprite GoldTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
-	overworld_sprite SilverTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER
+	overworld_sprite SilverTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_FOLLOWER ;PAL_OW_SILVER
 	overworld_sprite KrisSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite KrisBikeSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite SuicuneSpriteGFX, 4, STILL_SPRITE, PAL_OW_BLUE
@@ -118,6 +118,6 @@ OverworldSprites:
 	overworld_sprite ManchildSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite SchoolboySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite RockClimberSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
-	overworld_sprite WooperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE ; special follower sprite
+	overworld_sprite WooperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_FOLLOWER ; special follower sprite
 	overworld_sprite YanmegaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite ShuckleSpriteGFX, 12, STANDING_SPRITE, PAL_OW_RED

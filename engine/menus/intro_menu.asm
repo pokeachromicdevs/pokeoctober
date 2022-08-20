@@ -1112,7 +1112,7 @@ Intro_PlacePlayerSprite:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .male
-	ld b, PAL_OW_BLUE
+	ld b, 1 ;PAL_OW_BLUE ; fix inconsistent palette
 .male
 	ld a, b
 
