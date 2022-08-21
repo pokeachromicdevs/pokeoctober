@@ -795,7 +795,6 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 	
 LuxswanEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, LUXSWAN
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, LEER
