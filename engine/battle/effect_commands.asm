@@ -6584,16 +6584,21 @@ GetItemHeldEffect:
 	ret z
 
 	push hl
-	ld hl, ItemAttributes + ITEMATTR_EFFECT
-	dec a
-	ld c, a
-	ld b, 0
-	ld a, ITEMATTR_STRUCT_LENGTH
-	call AddNTimes
+
+	call GetItemIndexFromID
+	ld b, h
+	ld c, l
 	ld a, BANK(ItemAttributes)
-	call GetFarHalfword
-	ld b, l
-	ld c, h
+	ld hl, ItemAttributes
+	call LoadIndirectPointer
+
+	ld bc, ITEMATTR_EFFECT
+	add hl, bc
+
+	ld a, [hli]
+	ld b, [hl]
+	ld c, a
+
 	pop hl
 	ret
 

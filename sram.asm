@@ -102,14 +102,11 @@ sBackupPokemonData:: ds wPokemonDataEnd - wPokemonData
 sBackupGameDataEnd::
 
 sBackupPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
+sBackupItemIndexTable:: ds wItemIndexTableEnd - wItemIndexTable
 
 sBackupConversionTableChecksum:: dw
 
 sBackupSaveDataEnd::
-
-; bd85
-	ds $88
-; bf0d
 
 sBackupChecksum:: dw
 
@@ -133,14 +130,11 @@ sPokemonData:: ds wPokemonDataEnd - wPokemonData
 sGameDataEnd::
 
 sPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
+sItemIndexTable:: ds wItemIndexTableEnd - wItemIndexTable
 
 sConversionTableChecksum:: dw
 
 sSaveDataEnd::
-
-; ab85
-	ds $88
-; ad0d
 
 sChecksum:: dw
 

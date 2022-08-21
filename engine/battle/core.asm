@@ -1361,6 +1361,8 @@ HandleLeftovers:
 
 	callfar GetUserItem
 	ld a, [hl]
+	and a
+	ret z ; if no item
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ld a, b

@@ -5,11 +5,20 @@ _DoItemEffect::
 	call CopyName1
 	ld a, 1
 	ld [wItemEffectSucceeded], a
-	ld a, [wCurItem]
-	dec a
-	ld hl, ItemEffects
-	rst JumpTable
-	ret
+	push de
+		ld a, [wCurItem]
+		call GetItemIndexFromID
+		ld d, h
+		ld e, l
+		dec de
+		ld hl, ItemEffects
+		add hl, de
+		add hl, de
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+	pop de
+	jp hl
 
 ItemEffects:
 ; entries correspond to item ids

@@ -474,6 +474,10 @@ SaveIndexTables:
 	ld de, sPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
 	call CopyBytes
+	ld hl, wItemIndexTable
+	ld de, sItemIndexTable
+	ld bc, wItemIndexTableEnd - wItemIndexTable
+	call CopyBytes
 	ld a, BANK(sMoveIndexTable)
 	call GetSRAMBank
 	ld hl, wMoveIndexTable
@@ -582,6 +586,10 @@ SaveBackupIndexTables:
 	ld hl, wPokemonIndexTable
 	ld de, sBackupPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld hl, wItemIndexTable
+	ld de, sBackupItemIndexTable
+	ld bc, wItemIndexTableEnd - wItemIndexTable
 	call CopyBytes
 	ld a, BANK(sBackupMoveIndexTable)
 	call GetSRAMBank
@@ -800,6 +808,10 @@ LoadIndexTables:
 	ld de, wPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
 	call CopyBytes
+	ld hl, sItemIndexTable
+	ld de, wItemIndexTable
+	ld bc, wItemIndexTableEnd - wItemIndexTable
+	call CopyBytes
 	ld a, BANK(sMoveIndexTable)
 	call GetSRAMBank
 	ld hl, sMoveIndexTable
@@ -897,6 +909,10 @@ LoadBackupIndexTables:
 	ld hl, sBackupPokemonIndexTable
 	ld de, wPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld hl, sBackupItemIndexTable
+	ld de, wItemIndexTable
+	ld bc, wItemIndexTableEnd - wItemIndexTable
 	call CopyBytes
 	ld a, BANK(sBackupMoveIndexTable)
 	call GetSRAMBank

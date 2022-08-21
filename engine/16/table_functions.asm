@@ -157,10 +157,12 @@ ItemTableGarbageCollection:
 
 ; battle tower stuff should be here but this ROM hack doesn't care
 
+	ld a, BANK(wItemIndexTable)
+	ldh [rSVBK], a
+	___conversion_bitmap_free_unused wItemIndexTable, ITEM_TABLE
+
 	pop af
 	ldh [rSVBK], a
-
-	___conversion_bitmap_free_unused wItemIndexTable, ITEM_TABLE
 
 	pop de
 	ret
