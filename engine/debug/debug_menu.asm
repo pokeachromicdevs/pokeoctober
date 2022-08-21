@@ -1171,6 +1171,11 @@ Debug_GivePoke:
 	jp nc, .loop
 	ld [wCurPartyLevel], a
 	ldh a, [hDebugMenuDataBuffer + 3]
+	push hl
+		ld l, a
+		ld h, 0
+		call GetItemIDFromIndex
+	pop hl
 	ld [wCurItem], a
 	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
@@ -1250,9 +1255,16 @@ Debug_GivePoke:
 	ld bc, 18
 	ld a, " "
 	call ByteFill
+; force GC before setting an item
+	farcall ItemTableGarbageCollection
+
 	ldh a, [hDebugMenuDataBuffer + 3]
 	and a
 	jr z, .no_item_name
+; still limited to 255 items for now
+ 	ld l, a
+	ld h, 0
+	call GetItemIDFromIndex
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ld de, wStringBuffer1
