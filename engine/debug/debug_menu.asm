@@ -1,23 +1,3 @@
-smartcp: MACRO
-IF \1 == 0
-	and a
-ELSE
-	cp \1
-ENDC
-ENDM
-
-cphl16: MACRO
-; arg1: 16 bit register
-; arg2: value to compare to
-	ld a, h
-	smartcp HIGH(\1)
-	jr c, .done\@
-	jr nz, .done\@
-	ld a, l
-	smartcp LOW(\1)
-.done\@
-ENDM
-
 DebugMenu::
 	call ClearWindowData
 
@@ -1448,6 +1428,18 @@ Debug_PC:
 	ret
 
 Debug_FillBag:
+	ld a, BANK(.GiveLotsOfItems)
+	ld hl, .GiveLotsOfItems
+	jp CallScript
+.GiveLotsOfItems
+	giveitem AQUA_HORN
+	giveitem POTION, 5
+	giveitem MAX_POTION, 8
+	giveitem ITEM_101
+	giveitem ITEM_100
+	end
+
+; ------ old 8-bit code --------
 	ld hl, wNumItems
 	ld bc, wItemsEnd - wNumItems
 	xor a
