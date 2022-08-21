@@ -250,6 +250,26 @@ ItemEffects:
 	dw NoEffect       ; WOBBLY_BLOON
 	dw PokeBallEffect ; DIRECT_BALL
 	dw PokeBallEffect ; NIGHT_BALL
+	dw NoEffect       ; ITEM_EE
+	dw NoEffect       ; ITEM_EF
+	dw NoEffect       ; ITEM_F0
+	dw NoEffect       ; ITEM_F1
+	dw NoEffect       ; ITEM_F2
+	dw NoEffect       ; ITEM_F3
+	dw NoEffect       ; ITEM_F4
+	dw NoEffect       ; ITEM_F5
+	dw NoEffect       ; ITEM_F6
+	dw NoEffect       ; ITEM_F7
+	dw NoEffect       ; ITEM_F8
+	dw NoEffect       ; ITEM_F9
+	dw NoEffect       ; ITEM_FA
+	dw NoEffect       ; ITEM_FB
+	dw NoEffect       ; ITEM_FC
+	dw NoEffect       ; ITEM_FD
+	dw NoEffect       ; ITEM_FE
+	dw NoEffect       ; ITEM_FF
+	dw NoEffect       ; ITEM_100
+	dw NoEffect       ; ITEM_101
 .End:
 
 _NUM_ITEM_FX = (ItemEffects.End  - ItemEffects)/2
@@ -940,7 +960,7 @@ NightBallMultiplier:
 	cp MORN_HOUR
 	ret nc
 .is_night
-; x3	
+; x3
 	ld a, b
 	add a, a
 	jr c, .maxed_out
@@ -2047,19 +2067,36 @@ GetOneFifthMaxHP:
 GetHealingItemAmount:
 	push hl
 	ld a, [wCurItem]
+	call GetItemIndexFromID
+
+	ld b, h
+	ld c, l
 	ld hl, HealingHPAmounts
-	ld d, a
-.next
+
+; item index must be < $FF00 (65280)
 	ld a, [hli]
 	cp -1
-	jr z, .NotFound
-	cp d
-	jr z, .done
-	inc hl
-	inc hl
-	jr .next
+	jr z, .not_found
 
-.NotFound:
+.next_item
+	ld a, c
+	cp [hl]
+	jr nz, .skip_entry_1
+	inc hl
+	ld a, b
+	cp [hl]
+	jr nz, .skip_entry_2
+	jr .done
+
+.skip_entry_1
+	inc hl
+.skip_entry_2
+	inc hl
+	inc hl
+	inc hl
+	jr .next_item
+
+.not_found:
 	scf
 .done
 	ld e, [hl]
@@ -2148,12 +2185,12 @@ EscapeRopeEffect:
 	cp 1
 	call z, UseDisposableItem
 	ret
-	
+
 DiggingClawEffect:
 	call FieldMoveJumptableReset
 	ld a, $1
 	jr digclaw_incave
-	
+
 digclaw_incave:
 	ld [wBuffer2], a
 .loop
@@ -2205,7 +2242,7 @@ digclaw_incave:
 	call QueueScript
 	ld a, $81
 	ret
-	
+
 .FailDigClaw:
 	ld a, [wBuffer2]
 	cp $2
@@ -2252,12 +2289,12 @@ digclaw_incave:
 	show_object
 	return_dig 32
 	step_end
-	
+
 ;DiggingClawEffect:
 	;xor a
     ;ld [wItemEffectSucceeded], a
 	;cp HELD_DIGGING_CLAW
-	;farcall DigFunction	
+	;farcall DigFunction
 	;dig_incave:
 	;ld [wBuffer2], a
 ;.loop
@@ -2267,7 +2304,7 @@ digclaw_incave:
 	;and $7f
 	;ld [wFieldMoveSucceeded], a
 	;ret
-	
+
 	;ld a, [wItemEffectSucceeded]
 	;cp 1
 	;call z, UseDisposableItem
@@ -2806,7 +2843,7 @@ NoEffect:
 	cp OAKS_PARCEL
 	jp z, BelongsToSomeoneElseMessage
 	jp IsntTheTimeMessage
-	
+
 Play_SFX_FULL_HEAL:
 	push de
 	ld de, SFX_FULL_HEAL

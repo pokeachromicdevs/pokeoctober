@@ -552,7 +552,7 @@ ReceivedItemText:
 	text_far UnknownText_0x1c4719
 	text_end
 
-Script_verbosegiveitemvar:
+Script_verbosegiveitemvar: ; TODO 16-bit items
 ; script command 0x9f
 ; parameters: item, var
 
@@ -639,7 +639,7 @@ CurItemName:
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ret
-	
+
 CurTMHMName:
 	ld a, [wCurTMHM]
 	inc a
@@ -2057,10 +2057,19 @@ Script_giveitem:
 ; parameters: item, quantity
 
 	call GetScriptByte
-	cp ITEM_FROM_MEM
-	jr nz, .ok
+	ld l, a
+	call GetScriptByte
+	ld h, a
+
+	cphl16 ITEM_FROM_MEM ; for fruit trees and what not
+	jr z, .from_mem
+
+	call GetItemIDFromIndex
+	jr .got_item
+
+.from_mem
 	ld a, [wScriptVar]
-.ok
+.got_item
 	ld [wCurItem], a
 	call GetScriptByte
 	ld [wItemQuantityChangeBuffer], a
@@ -3080,4 +3089,3 @@ Script_ifequal16:
 .apply_jump
 	pop de
 	jp Script_sjump
-

@@ -203,7 +203,7 @@ if _NARG == 1
 	giveitem \1, 1
 else
 	db giveitem_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; quantity
 endc
 ENDM
@@ -214,7 +214,7 @@ if _NARG == 1
 	takeitem \1, 1
 else
 	db takeitem_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; quantity
 endc
 ENDM
@@ -222,7 +222,7 @@ ENDM
 	enum checkitem_command ; $21
 checkitem: MACRO
 	db checkitem_command
-	db \1 ; item
+	dw \1 ; item
 ENDM
 
 	enum givemoney_command ; $22
@@ -986,7 +986,7 @@ if _NARG == 1
 	verbosegiveitem \1, 1
 else
 	db verbosegiveitem_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; quantity
 endc
 ENDM

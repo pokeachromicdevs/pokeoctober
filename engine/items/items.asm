@@ -435,19 +435,25 @@ GetItemAttr:
 	push hl
 	push bc
 
-	ld hl, ItemAttributes
-	ld c, a
+	push af
+		xor a
+		ld [wItemAttributeParamBuffer], a
+
+		ld a, [wCurItem]
+		call GetItemIndexFromID
+
+		ld b, h
+		ld c, l
+
+		ld a, BANK(ItemAttributes)
+		ld hl, ItemAttributes
+		call LoadIndirectPointer
+	pop af
+
 	ld b, 0
-	add hl, bc
-
-	xor a
-	ld [wItemAttributeParamBuffer], a
-
-	ld a, [wCurItem]
-	dec a
 	ld c, a
-	ld a, ITEMATTR_STRUCT_LENGTH
-	call AddNTimes
+	add hl, bc ; offset attribute
+
 	ld a, BANK(ItemAttributes)
 	call GetFarByte
 
