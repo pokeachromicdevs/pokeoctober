@@ -92,3 +92,14 @@ DisableFollower::
 	xor a
 	ld [wWhichPartyFollower], a
 	ret
+
+IsMonFollowBlacklisted::
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld de, 2
+	ld hl, CantFollowList
+	jp IsInHalfwordArray
+
+INCLUDE "data/pokemon/follow_blacklist.asm"
