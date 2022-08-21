@@ -446,7 +446,7 @@ BattleTowerRoomMenu_InitRAM:
 	di
 	ldh a, [rIE]
 	ld [wcd32], a
-	call DoubleSpeed
+	; call DoubleSpeed
 	xor a
 	ldh [rIF], a
 	ld [wc300], a
@@ -503,7 +503,7 @@ BattleTowerRoomMenu_Cleanup:
 	ldh [hMobileReceive], a
 	ldh [hMobile], a
 	ldh [hVBlank], a
-	call NormalSpeed
+	; call NormalSpeed
 	xor a
 	ldh [rIF], a
 	ld a, [wcd32]

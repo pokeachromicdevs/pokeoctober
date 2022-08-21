@@ -76,7 +76,7 @@ EnableMobile:
 	call ByteFill
 
 	di
-	call DoubleSpeed
+	; call DoubleSpeed
 	xor a
 	ldh [rIF], a
 	ld a, IE_DEFAULT
@@ -98,7 +98,7 @@ DisableMobile:
 	ldh [hMobile], a
 	xor a
 	ldh [hVBlank], a
-	call NormalSpeed
+	; call NormalSpeed
 	xor a
 	ldh [rIF], a
 	ld a, [wBGMapBuffer]
@@ -1700,7 +1700,7 @@ SECTION "tetsuji", ROMX
 
 Unknown_100b0a:
 	db "tetsuji", 0
-	
+
 	popc
 
 
