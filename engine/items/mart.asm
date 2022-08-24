@@ -232,14 +232,37 @@ FarReadMart:
 	ld h, [hl]
 	ld l, a
 	ld de, wCurMart
-.CopyMart:
 	ld a, [wMartPointerBank]
 	call GetFarByte
-	ld [de], a
 	inc hl
+; store item count
+	ld [de], a
+	ld  c, a
 	inc de
-	cp -1
+.CopyMart:
+	push hl
+		push bc
+			ld a, [wMartPointerBank]
+			call GetFarByte
+			ld c, a
+			inc hl
+			ld a, [wMartPointerBank]
+			call GetFarByte
+			ld b, a
+			push bc
+			pop hl
+			call GetItemIDFromIndex
+		pop bc
+	pop hl
+	inc hl
+	inc hl
+	ld [de], a
+	inc de
+	dec c
 	jr nz, .CopyMart
+; end of list
+	ld a, -1
+	ld [de], a
 	ld hl, wMartItem1BCD
 	ld de, wCurMart + 1
 .ReadMartItem:
