@@ -6582,23 +6582,21 @@ GetItemHeldEffect:
 	ld a, b
 	and a
 	ret z
-
 	push hl
-
 	call GetItemIndexFromID
-	ld b, h
-	ld c, l
-	ld a, BANK(ItemAttributes)
-	ld hl, ItemAttributes
-	call LoadIndirectPointer
+		ld b, h
+		ld c, l
+		ld a, BANK(ItemAttributes)
+		ld hl, ItemAttributes
+		call LoadIndirectPointer
 
-	ld bc, ITEMATTR_EFFECT
-	add hl, bc
+		ld bc, ITEMATTR_EFFECT
+		add hl, bc
 
-	ld a, [hli]
-	ld b, [hl]
-	ld c, a
+		ld a, BANK(ItemAttributes)
+		call GetFarByte
 
+		ld b, a
 	pop hl
 	ret
 
