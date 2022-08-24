@@ -6248,10 +6248,11 @@ LoadEnemyMon:
 	ld a, [wBattleType]
 	cp BATTLETYPE_FORCEITEM
 ; 16 bit
-	push hl
+	push af
 		ld hl, wBaseItem1
 		call GetItemIDFromHL
-	pop hl
+		ld b, a
+	pop af
 	jr z, .UpdateItem
 
 ; Failing that, it's all up to chance
@@ -6263,26 +6264,25 @@ LoadEnemyMon:
 ; 25% chance of getting an item
 	call BattleRandom
 	cp 75 percent + 1
-	ld a, NO_ITEM
+	ld b, NO_ITEM
 	jr c, .UpdateItem
 
 ; From there, an 8% chance for Item2
 ; item 1
-	push hl
-		ld hl, wBaseItem1
-		call GetItemIDFromHL
-		call BattleRandom
-		cp 8 percent ; 8% of 25% = 2% Item2
-	pop hl
+	ld hl, wBaseItem1
+	call GetItemIDFromHL
+	ld b, a
+	call BattleRandom
+	cp 8 percent ; 8% of 25% = 2% Item2
 	jr nc, .UpdateItem
 
 ; item 2
-	push hl
-		ld hl, wBaseItem2
-		call GetItemIDFromHL
-	pop hl
+	ld hl, wBaseItem2
+	call GetItemIDFromHL
+	ld b, a
 
 .UpdateItem:
+	ld a, b
 	ld [wEnemyMonItem], a
 
 ; Initialize DVs
