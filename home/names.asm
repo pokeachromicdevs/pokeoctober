@@ -23,9 +23,10 @@ GetName::
 	dec a ; MOVE_NAME
 	ld hl, GetMoveName
 	jr z, .go
-	dec a
+	dec a ; ITEM_NAME
 	ld hl, GetItemName
 	jr z, .go
+	dec a ; ?
 	ld hl, .generic_function
 .go
 	call _hl_
