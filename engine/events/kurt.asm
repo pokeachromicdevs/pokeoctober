@@ -24,6 +24,9 @@ SelectApricornForKurt:
 	xor a
 	ld [wMenuScrollPosition], a
 	ld [wKurtApricornQuantity], a
+; clear 16-bit variable
+	ld [wScriptWordVar], a
+	ld [wScriptWordVar + 1], a
 .loop
 	push bc
 	call Kurt_PrintTextWhichApricorn
@@ -31,11 +34,18 @@ SelectApricornForKurt:
 	ld a, c
 	ld [wMenuSelection], a
 	call Kurt_SelectApricorn
-	ld a, c
-	ld [wScriptVar], a
 	and a
 	jr z, .done
+; got item
 	ld [wCurItem], a
+	ld a, c
+	call GetItemIndexFromID
+	ld d, h
+	ld e, l
+	ld hl, wScriptWordVar
+	ld [hl], e
+	inc hl
+	ld [hl], d
 	ld a, [wMenuCursorY]
 	ld c, a
 	push bc

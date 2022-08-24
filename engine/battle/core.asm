@@ -394,6 +394,7 @@ HandleBerserkGene:
 	push bc
 	callfar GetUserItem
 	ld a, [hl]
+; TODO: Berserk Gene to 16-bit 
 	ld [wNamedObjectIndexBuffer], a
 	sub BERSERK_GENE
 	pop bc
