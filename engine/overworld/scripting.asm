@@ -2110,6 +2110,10 @@ Script_checkitem:
 	xor a
 	ld [wScriptVar], a
 	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
