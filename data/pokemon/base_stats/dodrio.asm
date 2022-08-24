@@ -6,7 +6,7 @@
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate
 	db 158 ; base exp
-	db APPLE, FLEE_FEATHER ; items
+	dw APPLE, FLEE_FEATHER ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

@@ -6,7 +6,7 @@
 	db GRASS, GRASS ; type
 	db 140 ; catch rate
 	db 85 ; base exp
-	db LONG_VINE, LONG_VINE ; items
+	dw LONG_VINE, LONG_VINE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

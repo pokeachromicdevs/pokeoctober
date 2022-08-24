@@ -2244,9 +2244,9 @@ wBaseType1:: db ; d23d
 wBaseType2:: db ; d23e
 wBaseCatchRate:: db ; d23f
 wBaseExp:: db ; d240
-wBaseItems:: ; d241
-wBaseItem1:: db ; d241
-wBaseItem2:: db ; d242
+wBaseItems:: ; d241 these correspond to actual item indices, since these are just copied
+wBaseItem1:: dw ; d241
+wBaseItem2:: dw ; d242
 wBaseGender:: db ; d243
 wBaseUnknown1:: db ; d244
 wBaseEggSteps:: db ; d245

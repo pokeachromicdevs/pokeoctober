@@ -6,7 +6,7 @@
 	db ICE, ICE ; type
 	db 170 ; catch rate
 	db 75 ; base exp
-	db ICE_BERRY, ICE_FANG ; items
+	dw ICE_BERRY, ICE_FANG ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

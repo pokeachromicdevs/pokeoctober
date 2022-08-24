@@ -6,7 +6,7 @@
 	db DARK, DARK ; type
 	db 255 ; catch rate
 	db 69 ; base exp
-	db BERRY, AMULET_COIN ; items
+	dw BERRY, AMULET_COIN ; items
 	db GENDER_F100 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

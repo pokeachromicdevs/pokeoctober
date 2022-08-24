@@ -6,7 +6,7 @@
 	db ELECTRIC, ELECTRIC ; type
 	db 60 ; catch rate
 	db 150 ; base exp
-	db APPLE, BURST_ORB ; items
+	dw APPLE, BURST_ORB ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
