@@ -601,6 +601,7 @@ TryObjectEvent:
 	call GetMapScriptsBank
 	ld de, wItemBallData
 	call GetFarByte
+	push hl
 	push bc
 		ld c, a
 		inc hl
@@ -615,7 +616,10 @@ TryObjectEvent:
 		ld [de], a
 		inc de
 	pop bc
+	pop hl
 	inc hl
+	inc hl
+	call GetMapScriptsBank
 	call GetFarByte
 	ld [de], a
 	ld a, PLAYEREVENT_ITEMBALL
