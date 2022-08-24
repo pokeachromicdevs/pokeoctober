@@ -25,12 +25,12 @@ ROM0
 	org $0060
 	"joypad"
 	org $0080
+	"Follower Script Home" ; full!
 	"Free Space 0080"
 	org $0100
 	"Header"
 	org $0150
 	"Home"
-	"Follower Script Home" ; full!
 ROMX $01
 	"bank1"
 ROMX $02
