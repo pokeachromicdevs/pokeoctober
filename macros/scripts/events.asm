@@ -304,7 +304,7 @@ else
 	db givepoke_command
 	dw \1 ; pokemon
 	db \2 ; level
-	db \3 ; item
+	dw \3 ; item
 	db \4 ; trainer
 if \4
 	dw \5 ; trainer_name_pointer

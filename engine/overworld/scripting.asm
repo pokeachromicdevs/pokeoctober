@@ -2319,6 +2319,10 @@ Script_givepoke:
 	call GetScriptByte
 	ld [wCurPartyLevel], a
 	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call GetScriptByte
 	and a

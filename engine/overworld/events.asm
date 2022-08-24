@@ -600,8 +600,24 @@ TryObjectEvent:
 	ld l, a
 	call GetMapScriptsBank
 	ld de, wItemBallData
-	ld bc, wItemBallDataEnd - wItemBallData
-	call FarCopyBytes
+	call GetFarByte
+	push bc
+		ld c, a
+		inc hl
+		call GetMapScriptsBank
+		call GetFarByte
+		ld b, a
+	; bc = item index
+		push bc
+		pop hl
+	; bc -> hl
+		call GetItemIDFromIndex
+		ld [de], a
+		inc de
+	pop bc
+	inc hl
+	call GetFarByte
+	ld [de], a
 	ld a, PLAYEREVENT_ITEMBALL
 	scf
 	ret
