@@ -11,11 +11,18 @@ INCLUDE "home/interrupts.asm"
 
 SECTION "Free Space 0080", ROM0
 GetItemIDFromHL::
-	; hl = address of 16-bit item index
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp GetItemIDFromIndex
+; in:
+; 	[hl] = address of 16-bit item index
+; out:
+;	a  = found item ID
+; preserves all registers except output
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		call GetItemIDFromIndex
+	pop hl
+	ret
 
 
 

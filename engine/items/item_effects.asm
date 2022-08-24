@@ -1585,22 +1585,27 @@ HealStatus:
 
 GetItemHealingAction:
 	push hl
-	ld a, [wCurItem]
-	ld hl, StatusHealingActions
-	ld bc, 3
+		ld hl, StatusHealingActions
 .next
-	cp [hl]
-	jr z, .found_it
-	add hl, bc
-	jr .next
-
+; still no bounds checking here, bub
+		call GetItemIDFromHL
+		ld b, a
+		ld a, [wCurItem]
+		cp b
+		jr z, .found_it
+		inc hl
+		inc hl
+		inc hl
+		inc hl
+		jr .next
 .found_it
-	inc hl
-	ld b, [hl]
-	inc hl
-	ld a, [hl]
-	ld c, a
-	cp %11111111
+		inc hl
+		inc hl
+		ld b, [hl]
+		inc hl
+		ld a, [hl]
+		ld c, a
+		cp %11111111
 	pop hl
 	ret
 
@@ -2075,37 +2080,36 @@ GetOneFifthMaxHP:
 
 GetHealingItemAmount:
 	push hl
-	ld a, [wCurItem]
-	call GetItemIndexFromID
-
-	ld b, h
-	ld c, l
 	ld hl, HealingHPAmounts
+; [hl] == $ffff?
+.check
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		cphl16 $ffff
+	pop hl
+	jr z, .not_found ; branch if $ffff
+	call GetItemIDFromHL
+	ld b, a
+	ld a, [wCurItem]
 
-; item index must be < $FF00 (65280)
-	ld a, [hli]
-	cp -1
-	jr z, .not_found
-
-.next_item
-	ld a, c
-	cp [hl]
-	jr nz, .skip_entry_1
 	inc hl
-	ld a, b
-	cp [hl]
-	jr nz, .skip_entry_2
+	inc hl ; hl at price
+
+	cp b
+	jr nz, .next_item
+
 	jr .done
 
-.skip_entry_1
-	inc hl
-.skip_entry_2
+.next_item
 	inc hl
 	inc hl
-	inc hl
-	jr .next_item
+	jr .check
 
 .not_found:
+	inc hl
+	inc hl
 	scf
 .done
 	ld e, [hl]
@@ -2378,19 +2382,23 @@ DireHitEffect:
 
 XItemEffect:
 	call UseItemText
-
-	ld a, [wCurItem]
 	ld hl, XItemStats
-
 .loop
-	cp [hl]
+	call GetItemIDFromHL
+	ld b, a
+	ld a, [wCurItem]
+	cp b
 	jr z, .got_it
+; move to next item
+	inc hl
 	inc hl
 	inc hl
 	jr .loop
 
 .got_it
-	inc hl
+; hl at found entry
+	inc hl ; MSB of item
+	inc hl ; stat
 	ld b, [hl]
 	xor a
 	ldh [hBattleTurn], a
