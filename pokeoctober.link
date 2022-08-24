@@ -24,11 +24,13 @@ ROM0
 	"serial"
 	org $0060
 	"joypad"
+	org $0080
+	"Follower Script Home"
+	"Free Space 0080"
 	org $0100
 	"Header"
 	org $0150
 	"Home"
-	"Follower Script Home"
 ROMX $01
 	"bank1"
 ROMX $02

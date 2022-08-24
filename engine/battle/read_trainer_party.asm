@@ -92,17 +92,17 @@ ReadTrainerPartyPieces:
 	ld [wCurPartyLevel], a
 	call GetNextTrainerDataByte
 	push hl
-	push af
-	call GetNextTrainerDataByte
-	ld h, a
-	pop af
-	ld l, a
-	call GetPokemonIDFromIndex
-	ld [wCurPartySpecies], a
+		push af
+			call GetNextTrainerDataByte
+			ld h, a
+		pop af
+		ld l, a
+		call GetPokemonIDFromIndex
+		ld [wCurPartySpecies], a
 
-	ld a, OTPARTYMON
-	ld [wMonType], a
-	predef TryAddMonToParty
+		ld a, OTPARTYMON
+		ld [wMonType], a
+		predef TryAddMonToParty
 	pop hl
 	inc hl ;because hl was pushed before the last call to GetNextTrainerDataByte
 
@@ -110,15 +110,25 @@ ReadTrainerPartyPieces:
 	and TRAINERTYPE_ITEM
 	jr z, .no_item
 	push hl
-	ld a, [wOTPartyCount]
-	dec a
-	ld hl, wOTPartyMon1Item
-	call GetPartyLocation
-	ld d, h
-	ld e, l
+		ld a, [wOTPartyCount]
+		dec a
+		ld hl, wOTPartyMon1Item
+		call GetPartyLocation
+		ld d, h
+		ld e, l
 	pop hl
-	call GetNextTrainerDataByte
+	push hl
+		call GetNextTrainerDataByte
+		push af
+			call GetNextTrainerDataByte
+			ld h, a
+		pop af
+		ld l, a
+		call GetItemIDFromIndex
+	pop hl
 	ld [de], a
+	inc hl
+	inc hl
 .no_item
 
 	ld a, [wOtherTrainerType]

@@ -996,7 +996,7 @@ Battle_PlayerFirst:
 		cp HELD_FLEE_FEATHER
 	pop de
 	pop hl
-	
+
 	jr z, .skip_enemy_turn
 
 	call EnemyTurn_EndOpponentProtectEndureDestinyBond
@@ -2464,9 +2464,9 @@ WinTrainerBattle:
 	jr nz, .skip_heal
 	predef HealParty
 .skip_heal
-	ld a, [wDebugFlags]
-	bit DEBUG_BATTLE_F, a
-	jr nz, .skip_win_loss_text
+	;ld a, [wDebugFlags]
+	;bit DEBUG_BATTLE_F, a
+	;jr nz, .skip_win_loss_text
 	call PrintWinLossText
 
 .skip_win_loss_text
@@ -3014,9 +3014,9 @@ LostBattle:
 	ld c, 40
 	call DelayFrames
 
-	ld a, [wDebugFlags]
-	bit DEBUG_BATTLE_F, a
-	jr nz, .skip_win_loss_text
+	;ld a, [wDebugFlags]
+	;bit DEBUG_BATTLE_F, a
+	;jr nz, .skip_win_loss_text
 	call PrintWinLossText
 .skip_win_loss_text
 	ret
@@ -6246,7 +6246,11 @@ LoadEnemyMon:
 ; Used for Ho-Oh, Lugia and Snorlax encounters
 	ld a, [wBattleType]
 	cp BATTLETYPE_FORCEITEM
-	ld a, [wBaseItem1]
+; 16 bit
+	push hl
+		ld hl, wBaseItem1
+		call GetItemIDFromHL
+	pop hl
 	jr z, .UpdateItem
 
 ; Failing that, it's all up to chance
@@ -6262,11 +6266,20 @@ LoadEnemyMon:
 	jr c, .UpdateItem
 
 ; From there, an 8% chance for Item2
-	call BattleRandom
-	cp 8 percent ; 8% of 25% = 2% Item2
-	ld a, [wBaseItem1]
+; item 1
+	push hl
+		ld hl, wBaseItem1
+		call GetItemIDFromHL
+		call BattleRandom
+		cp 8 percent ; 8% of 25% = 2% Item2
+	pop hl
 	jr nc, .UpdateItem
-	ld a, [wBaseItem2]
+
+; item 2
+	push hl
+		ld hl, wBaseItem2
+		call GetItemIDFromHL
+	pop hl
 
 .UpdateItem:
 	ld [wEnemyMonItem], a

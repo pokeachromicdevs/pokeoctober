@@ -9,6 +9,15 @@ INCLUDE "home/rst.asm"
 
 INCLUDE "home/interrupts.asm"
 
+SECTION "Free Space 0080", ROM0
+GetItemIDFromHL::
+	; hl = address of 16-bit item index
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp GetItemIDFromIndex
+
+
 
 SECTION "Header", ROM0
 

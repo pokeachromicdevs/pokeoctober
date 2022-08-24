@@ -138,6 +138,7 @@ ItemTableGarbageCollection:
 ; check structs
 	; held items
 	___conversion_bitmap_check_structs wPartyMons + (wPartyMon1Item - wPartyMon1), PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, .set_bit
+	___conversion_bitmap_check_structs wOTPartyMons + (wOTPartyMon1Item - wOTPartyMon1), PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, .set_bit
 
 ; --bag items--
 	; items pocket
