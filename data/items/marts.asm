@@ -63,11 +63,11 @@ MartPagoda3F: ; manmades / super potions
 
 MartPagoda4F: ; expanded tm's
 	db 5
-	dw DYNAMICPUNCH_TMNUM
-	dw HEADBUTT_TMNUM
-	dw ROLLOUT_TMNUM
-	dw ROAR_TMNUM
-	dw PSYCH_UP_TMNUM
+	db DYNAMICPUNCH_TMNUM
+	db HEADBUTT_TMNUM
+	db ROLLOUT_TMNUM
+	db ROAR_TMNUM
+	db PSYCH_UP_TMNUM
 	db -1
 
 MartCherrygrove:
