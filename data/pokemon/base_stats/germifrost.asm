@@ -1,11 +1,11 @@
 	db 0 ; species ID placeholder
 
-	db  30,  20,  45,  75,  55,  35
+	db  40,  30,  65,  95,  75,  55
 	;   hp  atk  def  spd  sat  sdf
 
-	db ICE, ICE ; type
-	db 255 ; catch rate
-	db 91 ; base exp
+	db ICE, GRASS ; type
+	db 120 ; catch rate
+	db 126 ; base exp
 	db BERRY, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
