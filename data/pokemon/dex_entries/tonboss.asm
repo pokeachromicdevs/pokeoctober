@@ -1,10 +1,10 @@
-	db "BIG EATER@" ; species name
-	dw 200, 2315 ; height, weight
+	db "MANEUVER@" ; species name
+	dw 411, 950 ; height, weight
 
-	db   "In its desperation"
-	next "to gulp down food,"
-	next "it forgets about"
+	db   "It uses its large"
+	next "wings to maneuver"
+	next "through the air"
 
-	page "the food it has"
-	next "hidden under its"
-	next "fur.@"
+	page "and fly with"
+	next "speeds as fast as"
+	next "a jet plane.@"

@@ -1,10 +1,10 @@
-	db "BIG EATER@" ; species name
-	dw 200, 2315 ; height, weight
+	db "BREWER@" ; species name
+	dw 400, 1100 ; height, weight
 
-	db   "In its desperation"
-	next "to gulp down food,"
-	next "it forgets about"
+	db   "The drink it brews"
+	next "is only edible to"
+	next "itself and"
 
-	page "the food it has"
-	next "hidden under its"
-	next "fur.@"
+	page "SHUCKLE. Any other"
+	next "#MON faints by"
+	next "its scent alone.@"
