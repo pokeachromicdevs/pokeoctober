@@ -129,6 +129,21 @@ AzaleaTownSign:
 	line "Happy Harmony"
 	done
 
+AzaleaBeauty:
+	jumptextfaceplayer .Text
+.Text:
+	text "KURT has some"
+	line "pretty good BALLS"
+	para "for an old geezer,"
+	line "but I heard"
+	para "MORTY's been"
+	line "crafting # BALLS"
+	cont "lately."
+	para "I bet MORTY's"
+	line "BALLS are far"
+	cont "superior."
+	done
+
 AzaleaTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -149,6 +164,7 @@ AzaleaTown_MapEvents:
 	bg_event  7,  5, BGEVENT_READ, AzaleaGymSign
 	bg_event 10,  8, BGEVENT_READ, AzaleaTownSign
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 8, 0, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaTown_GymGuy, EVENT_BEAT_MORTY
 	object_event 13,  6, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaTown_GymGuy2, EVENT_GYM_GUY_IN_AZALEA_TOWN
+	object_event  8, 11, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaBeauty, -1
