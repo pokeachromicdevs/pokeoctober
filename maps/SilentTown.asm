@@ -187,6 +187,7 @@ SilentTownSilverBattleScript:
 .got_movement
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
+	setlasttalked NEWBARKTOWN_SILVER_2 ; ensure rival is visible
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext TimeToBattle
@@ -196,7 +197,6 @@ SilentTownSilverBattleScript:
 	waitbutton
 	closetext
 ; player has:
-	setlasttalked NEWBARKTOWN_SILVER_2 ; ensure rival is visible
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .TOTODILE
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
