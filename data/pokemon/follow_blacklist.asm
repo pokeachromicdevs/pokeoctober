@@ -147,8 +147,6 @@ CantFollowList:
 	dw SUNKERN
 	dw SUNFLORA
 	dw LUXSWAN
-	dw WOOPER
-	dw QUAGSIRE
 	dw ESPEON
 	dw UMBREON
 	dw MURKROW
