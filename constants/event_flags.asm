@@ -385,6 +385,7 @@
 	const EVENT_BEAT_LASS_NANCY
 	const EVENT_BEAT_LASS_CHARLOTTE
 	const EVENT_BEAT_PKF_ARIEL
+	const EVENT_BEAT_BIKER_HARLEY
 
 ; kurts house
 	const EVENT_KURTS_HOUSE_KURT_1
@@ -404,7 +405,6 @@
 ; demo 1 limit
 	const EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
 
-	const EVENT_19e
 	const EVENT_19f
 	const EVENT_1a0
 	const EVENT_1a1

@@ -482,26 +482,53 @@ Route34_PokefanFHack:
 	step LEFT
 	step_end
 
+TrainerBikerHarley:
+	trainer BIKER, HARLEY, EVENT_BEAT_BIKER_HARLEY, .SeenTxt, .WinTxt, 0, .Script
+
+.SeenTxt:
+	text "I claim this turf"
+	line "for the KANTO BIKE"
+	cont "FEDERATION!"
+	done
+
+.WinTxt:
+	text "Beaten by a"
+	line "passing punk!"
+	done
+
+.Script:
+	endifjustbattled
+	jumptextfaceplayer .Txt
+.Txt:
+	text "I'm a new member."
+	para "I was sent over to"
+	line "JOHTO to scout for"
+	para "some new land to"
+	line "claim for our"
+	cont "group."
+	done
+
 Route34_MapEvents:
 	db 0, 0 ; filler
 
 	db 0 ; warp events
 
-	db 3 ; coord events
+	db 2 ; coord events
 	coord_event 11, 28, SCENE_ROUTE34_NOTHING, Route34_WillEventTrigger1
 	coord_event 10, 28, SCENE_ROUTE34_NOTHING, Route34_WillEventTrigger2
-	coord_event  5,  9, SCENE_ROUTE34_FOUGHT_WILL, Route34_PokefanFHack
+	;coord_event  5,  9, SCENE_ROUTE34_FOUGHT_WILL, Route34_PokefanFHack
 
 	db 0 ; bg events
 
-	db 10 ; object events
+	db 8 ; object events
 	object_event  9,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Silver, -1
 	object_event  5, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  6, 23, SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  7, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  8, 14, SPRITE_SHUCKLE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Shuckle, EVENT_ENCOUNTERED_ROUTE34_SHUCKLE
 	object_event 10, 21, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerManchildZachary, -1
-	object_event 11, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassRuby, -1
+	;object_event 11, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassRuby, -1 ; -> TODO: to tower
+	object_event 11, 18, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerBikerHarley, -1
 	object_event 10, 15, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassNancy, -1
-	object_event 11, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassCharlotte, -1
-	object_event  3,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPokefanAriel, -1
+	;object_event 11, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassCharlotte, -1 ; -> TODO: to r35?
+	;object_event  3,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPokefanAriel, -1 ; -> TODO: to r35?

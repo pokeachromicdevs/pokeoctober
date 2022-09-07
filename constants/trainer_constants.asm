@@ -510,6 +510,7 @@ KRIS EQU __enum__
 	const RILEY
 	const JOEL
 	const GLENN
+	const HARLEY
 
 	trainerclass BLAINE ; 2e
 	const BLAINE1

@@ -3785,6 +3785,13 @@ BikerGroup:
 	dw WEEZING
 	end_party
 
+	next_party
+		string "HARLEY"
+		db     TRAINERTYPE_NORMAL
+		dbw    25, KOFFING
+		dbw    26, GRIMER
+	end_party
+
 	end_party_list
 
 BlaineGroup:
