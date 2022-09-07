@@ -290,3 +290,6 @@ BitmasksPointers:
 	dw FennecurseBitmasks
 	dw OrijoeyBitmasks
 	dw AggroswineBitmasks
+	dw GermifrostBitmasks
+	dw VegelancheBitmasks
+	dw SnouwrbunBitmasks

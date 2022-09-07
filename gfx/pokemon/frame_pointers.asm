@@ -290,3 +290,6 @@ FramesPointers:
 	dba FennecurseFrames
 	dba OrijoeyFrames
 	dba AggroswineFrames
+	dba GermifrostFrames
+	dba VegelancheFrames
+	dba SnouwrbunFrames

@@ -31,7 +31,9 @@ EvosAttacksPointers3::
 	dw FennecurseEvoAttacks
 	dw OrijoeyEvoAttacks
 	dw AggroswineEvoAttacks
-
+	dw GermifrostEvosAttacks
+	dw VegelancheEvosAttacks
+	dw SnouwrbunEvosAttacks
 .End:
 
 AggroswineEvoAttacks:
@@ -233,6 +235,7 @@ MallodyEvosAttacks:
 	db 0 ; no more level-up moves
 
 CamouflakeEvosAttacks:
+	dbbw EVOLVE_LEVEL, 18, GERMIFROST
 	db 0 ; no more evolutions
 	dbw 1, ROLLOUT
 	dbw 1, GROWL
@@ -506,6 +509,8 @@ GorotoraEvosAttacks:
 	db 0 ; no more level-up moves
 	
 GermifrostEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, VEGELANCHE
+	dbbw EVOLVE_ITEM, POISON_STONE, SNOUWRBUN
 	db 0 ; no more evolutions
 	dbw 1, ROLLOUT
 	dbw 1, GROWL

@@ -290,3 +290,6 @@ AnimationIdlePointers:
 	dw FennecurseAnimationIdle
 	dw OrijoeyAnimationIdle
 	dw AggroswineAnimationIdle
+	dw GermifrostAnimationIdle
+	dw VegelancheAnimationIdle
+	dw SnouwrbunAnimationIdle

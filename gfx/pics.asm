@@ -806,3 +806,12 @@ OrijoeyFrontpic:	INCBIN "gfx/pokemon/orijoey/front.animated.2bpp.lz"
 OrijoeyBackpic:	INCBIN "gfx/pokemon/orijoey/back.2bpp.lz"
 AggroswineFrontpic:	INCBIN "gfx/pokemon/aggroswine/front.animated.2bpp.lz"
 AggroswineBackpic:	INCBIN "gfx/pokemon/aggroswine/back.2bpp.lz"
+
+SECTION "Pics 24", ROMX
+
+GermifrostFrontpic:	INCBIN "gfx/pokemon/germifrost/front.animated.2bpp.lz"
+GermifrostBackpic:	INCBIN "gfx/pokemon/germifrost/back.2bpp.lz"
+VegelancheFrontpic:	INCBIN "gfx/pokemon/vegelanche/front.animated.2bpp.lz"
+VegelancheBackpic:	INCBIN "gfx/pokemon/vegelanche/back.2bpp.lz"
+SnouwrbunFrontpic:	INCBIN "gfx/pokemon/snouwrbun/front.animated.2bpp.lz"
+SnouwrbunBackpic:	INCBIN "gfx/pokemon/snouwrbun/back.2bpp.lz"
