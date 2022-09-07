@@ -335,29 +335,32 @@ Route34Shuckle:
 	text "Hydriiiiii!"
 	done
 
-TrainerSoldierGrant:
-	trainer SOLDIER, GRANT, EVENT_BEAT_SOLDIER_GRANT, .SeenTxt, .WinTxt, 0, .PostScript
+TrainerManchildZachary:
+	trainer MANCHILD, ZACHARY, EVENT_BEAT_MANCHILD_ZACHARY, .SeenTxt, .BeatenTxt, 0, .AfterScript
+
 .SeenTxt:
-	text "My ghosts served"
-	line "as my spies during"
-	cont "the war!"
-	para "Our bond is un-"
-	line "breakable!"
+	text "GHOST-types give"
+	line "me the shivers<...>"
+	para "Then why am I"
+	line "here? You'll see!"
 	done
 
-.WinTxt:
-	text "Beaten down!"
+.BeatenTxt:
+	text "But losing scares"
+	line "me more!"
 	done
 
-.PostScript:
+.AfterScript:
 	endifjustbattled
-	jumptextfaceplayer .PSTxt
-.PSTxt:
-	text "My ghost-type"
-	line "#MON helped me"
-	para "spy on the enemies"
-	line "using their super-"
-	cont "natural powers."
+	jumptextfaceplayer .AfterTxt
+
+.AfterTxt:
+	text "MORTY found me and"
+	line "took me in to help"
+	para "me overcome my"
+	line "fear."
+	para "I owe a lot to"
+	line "him."
 	done
 
 TrainerLassRuby:
@@ -497,7 +500,7 @@ Route34_MapEvents:
 	object_event  6, 23, SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  7, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  8, 14, SPRITE_SHUCKLE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Shuckle, EVENT_ENCOUNTERED_ROUTE34_SHUCKLE
-	object_event 10, 21, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerSoldierGrant, -1
+	object_event 10, 21, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerManchildZachary, -1
 	object_event 11, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassRuby, -1
 	object_event 10, 15, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassNancy, -1
 	object_event 11, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassCharlotte, -1

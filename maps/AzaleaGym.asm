@@ -13,32 +13,29 @@ AzaleaGymStatue:
 	gettrainername STRING_BUFFER_4, MORTY, MORTY1
 	jumpstd gymstatue2
 
-TrainerManchildZachary:
-	trainer MANCHILD, ZACHARY, EVENT_BEAT_MANCHILD_ZACHARY, .SeenTxt, .BeatenTxt, 0, .AfterScript
-
+TrainerSoldierGrant:
+	trainer SOLDIER, GRANT, EVENT_BEAT_SOLDIER_GRANT, .SeenTxt, .WinTxt, 0, .PostScript
 .SeenTxt:
-	text "GHOST-types give"
-	line "me the shivers<...>"
-	para "Then why am I"
-	line "here? You'll see!"
+	text "My ghosts served"
+	line "as my spies during"
+	cont "the war!"
+	para "Our bond is un-"
+	line "breakable!"
 	done
 
-.BeatenTxt:
-	text "But losing scares"
-	line "me more!"
+.WinTxt:
+	text "Beaten down!"
 	done
 
-.AfterScript:
+.PostScript:
 	endifjustbattled
-	jumptextfaceplayer .AfterTxt
-
-.AfterTxt:
-	text "MORTY found me and"
-	line "took me in to help"
-	para "me overcome my"
-	line "fear."
-	para "I owe a lot to"
-	line "him."
+	jumptextfaceplayer .PSTxt
+.PSTxt:
+	text "My ghost-type"
+	line "#MON helped me"
+	para "spy on the enemies"
+	line "using their super-"
+	cont "natural powers."
 	done
 
 TrainerBeautyAndrea:
@@ -281,7 +278,7 @@ AzaleaGym_MapEvents:
 	bg_event  6, 23, BGEVENT_READ, AzaleaGymStatue
 
 	db 5 ; object events
-	object_event  4, 18, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerManchildZachary, -1
+	object_event  4, 18, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSoldierGrant, -1
 	object_event  5, 12, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerBeautyAndrea, -1
 	object_event 17, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerInstructorFrank, -1
 	object_event 17,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumDorothy, -1
