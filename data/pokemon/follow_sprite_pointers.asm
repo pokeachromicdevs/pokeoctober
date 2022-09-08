@@ -1,7 +1,7 @@
 _NUM_FOLLOW_SPRITES = 0
 follow_sprite: MACRO
 	dba \1 ; sprite location
-	db  \2 ; which palette to use (see constants/sprite_data_constants.asm#sprite palettes)
+	db  \2 ; which palette to use (see data/pokemon/follow_sprite_pointers.asm#FollowSpritePalettes)
 _NUM_FOLLOW_SPRITES = _NUM_FOLLOW_SPRITES + 1
 ENDM
 
@@ -23,6 +23,8 @@ FollowSpritePalettes::
 ; custom palettes
 	const PAL_FOLLOWER_KOTORA
 	dw    .Kotora
+	const PAL_FOLLOWER_BULBASAUR
+	dw    .Bulba
 
 .Red:      RGB 31,31,31, 31,19,10, 31,07,01, 00,00,00
 .Blue:     RGB 31,31,31, 31,19,10, 10,09,31, 00,00,00
@@ -31,11 +33,12 @@ FollowSpritePalettes::
 .Pink:     RGB 31,31,31, 31,19,10, 21,15,23, 00,00,00
 .Silver:   RGB 31,31,31, 31,31,31, 13,13,13, 00,00,00
 .Kotora:   RGB 31,31,31, 31,30,19, 27,21,00, 00,00,00
+.Bulba:    RGB 31,31,31, 01,16,00, 07,23,03, 00,00,00
 
 FollowSpritePointers::
-	follow_sprite BulbasaurSpriteGFX, PAL_FOLLOWER_GREEN ;BULBASAUR
-	follow_sprite IvysaurSpriteGFX, PAL_FOLLOWER_GREEN ;IVYSAUR
-	follow_sprite VenusaurSpriteGFX, PAL_FOLLOWER_GREEN ;VENUSAUR
+	follow_sprite BulbasaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;BULBASAUR
+	follow_sprite IvysaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;IVYSAUR
+	follow_sprite VenusaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;VENUSAUR
 	follow_sprite CharmanderSpriteGFX, PAL_FOLLOWER_RED ;CHARMANDER
 	follow_sprite CharmeleonSpriteGFX, PAL_FOLLOWER_RED ;CHARMELEON
 	follow_sprite CharizardSpriteGFX, PAL_FOLLOWER_RED ;CHARIZARD
