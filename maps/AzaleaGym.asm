@@ -157,46 +157,68 @@ AzaleaGymMortyScript:
 	verbosegivetmhm SHADOW_BALL_TMNUM
 	;iffalse .NoRoomForShadowBall
 	setevent EVENT_GOT_TM30_SHADOW_BALL
-.AfterShadowBall:
+;.AfterShadowBall:
 	writetext .AfterTxt3
 	waitbutton
 ;.NoRoomForShadowBall:
 	closetext
 	end
+.AfterShadowBall:
+	writetext .AfterTxt4
+	waitbutton
+	closetext
+	end
 
 .BeginTxt:
 	text "Greetings,"
-	line "trainer."
+	line "<PLAYER>."
+
 	para "I saw you coming"
-	line "from a mile away."
+	line "from a mile away,"
+	para "and recognize your"
+	line "talent."
+
 	para "My name is MORTY,"
 	line "and I am known as"
-	para "'the mystic seer of"
-	line "the future.'"
+	para "the 'mystic seer"
+	line "of the future.'"
+
 	para "I have trained"
 	line "here my entire"
 	para "life, and becoming"
 	line "a GYM LEADER has"
 	para "only allowed me to"
-	line "hone my skills"
-	cont "further."
+	line "hone my mind"
+	para "further through"
+	line "battle."
+
 	para "It is because of"
-	line "my efforts that I"
+	line "my effort that I"
 	para "can now see what"
 	line "others cannot."
+
 	para "Perhaps one day,"
-	line "I'll be able to see"
-	para "the fabled rainbow"
-	line "colored #MON."
-	para "I'd like you to"
+	line "if I push just a"
+	para "bit further, I'll"
+	line "be able to see the"
+	para "#MON that"
+	line "shines with the"
+	para "colors of a"
+	line "rainbow<...>"
+
+	para "And you."
+
+	para "You're going to"
 	line "help me reach that"
-	cont "goal."
-	para "Let's go!"
+	cont "level!"
+
+	para "Come on!"
 	done
 
 .WinTxt:
-	text "I see now where I"
-	line "must improve."
+	text "I see now that I"
+	line "still have much"
+	cont "room to improve."
 	done
 
 .AfterTxt1:
@@ -212,29 +234,52 @@ AzaleaGymMortyScript:
 
 .AfterTxt2:
 	text "The FOGBADGE makes"
-	line "#MON up to"
-	para "level 50 obey you"
-	line "without question."
+	line "makes #MON up"
+	para "to level 50 obey"
+	line "you without"
+	cont "question."
+
 	para "It also allows the"
 	line "use of WATER SPORT"
-	cont "outside of battle."
+	para "outside of"
+	line "battle."
+
 	para "Here, take this as"
 	line "well."
 	done
 
 .AfterTxt3:
-	text "TM30 is SHADOW"
+	text "TM 30 is SHADOW"
 	line "BALL."
+
 	para "It's a powerful"
-	line "GHOST-type attack"
+	line "ghost-type attack"
 	para "that also has a"
 	line "chance of lowering"
 	para "the target's"
 	line "SPECIAL DEFENSE."
+
 	para "I hope that you"
 	line "make good use of"
-	para "it on your"
-	line "journey."
+	para "it on your journey"
+	line "as it is one of my"
+	para "personal"
+	line "favorites."
+	done
+
+.AfterTxt4:
+	text "At the end of our"
+	line "battle, I had a"
+	cont "brief vision."
+
+	para "Just the smallest"
+	line "glimpse of a"
+	cont "rainbow."
+
+	para "Keep growing"
+	line "stronger,"
+	para "<PLAYER>, as"
+	line "will I."
 	done
 
 AzaleaGym_MapEvents:
