@@ -30,7 +30,7 @@ CherrygroveGymFalknerScript:
 	waitsfx
 	setflag ENGINE_ZEPHYRBADGE
 .FightDone:
-	checkevent EVENT_GOT_TM31_MUD_SLAP
+	checkevent EVENT_GOT_TM56_WHIRLWIND
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
@@ -40,10 +40,10 @@ CherrygroveGymFalknerScript:
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound
-	verbosegivetmhm MUD_SLAP_TMNUM
+	verbosegivetmhm WHIRLWIND_TMNUM
 	iffalse .NoRoomForMudSlap
-	setevent EVENT_GOT_TM31_MUD_SLAP
-	writetext FalknerTMMudSlapText
+	setevent EVENT_GOT_TM56_WHIRLWIND
+	writetext FalknerTMWhirlwindText
 	waitbutton
 	closetext
 	end
@@ -179,31 +179,24 @@ FalknerZephyrBadgeText:
 	cont "this."
 	done
 
-FalknerTMMudSlapText:
+FalknerTMWhirlwindText:
 	text "That is a TM. Be"
-	line "wary-- TMs can be"
+	line "wary, TMs can be"
 	cont "used only once."
 
 	para "Make sure you know"
 	line "what you are doing"
 	cont "when using it."
 
-	para "That TM is TM 31--"
-	line "MUD-SLAP. Though"
-	para "it only deals"
-	line "small damage, it"
-	para "always reduces the"
-	line "accuracy of your"
-	cont "foes."
-
-	para "That said<...> it is"
-	line "a ground-type TM."
-	para "I wish I had a"
-	line "flying-type TM"
-	para "instead, but no"
-	line "such TM exists"
-	cont "yet."
-	para "It's embarrassing<...>"
+	para "That TM is TM 56,"
+	line "WHIRLWIND."
+	para "Though it deals no"
+	line "damage, you can"
+	para "force the current"
+	line "enemy POKEMON out,"
+	para "and another enemy"
+	line "will be forced out"
+	cont "onto the field."
 	done
 
 FalknerFightDoneText:
