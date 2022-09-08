@@ -318,7 +318,7 @@ InitializeNPCNames:
 .Red:    string "RED"
 .Green:  string "GREEN"
 .Mom:    string "MOM"
-.Player: string "GABE"
+.Player: string "ANON"
 
 InitializeWorld:
 	call ShrinkPlayer
@@ -656,7 +656,7 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 DefaultPlayerName:
-	db "GABE@@@@"
+	db "ANON@@@@"
 
 OakSpeech:
 	call RotateThreePalettesRight
