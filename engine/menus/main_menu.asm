@@ -247,9 +247,9 @@ MainMenu_PrintCurrentVersion:
 	db "("
 	db GIT_OFFSET
 IF DEF(_DEBUG)
-	db "d)"
+	db "d"
 endc
-	db "@"
+	db ")@"
 
 MainMenu_PrintCurrentTimeAndDay:
 	ld a, [wSaveFileExists]
