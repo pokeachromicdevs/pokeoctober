@@ -50,6 +50,8 @@ OctoberCredits_StringTable:
 			; sprite help
 		dw .Bimble, .Blank
 			; female trainer sprite
+		dw .Darkshade, .Blank
+			; follower sprites help
 		dw .Pik, .Blank
 			; sprite help
 		dw .Bloodless, .Blank
@@ -188,3 +190,4 @@ OctoberCredits_StringTable:
 .ThanksFor3:    db "       DEMO 2!      ";;
 .PressStart:    db "    -PRESS START-   ";;
 .Soul:          db "     SOULCATCHER    ";;
+.Darkshade:     db "      DARKSHADE     ";;
