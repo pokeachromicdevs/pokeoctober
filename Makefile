@@ -71,7 +71,7 @@ GIT_VERSION  := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$1}')
 GIT_OFFSET   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$2}')
 GIT_COMMIT   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$3}' | cut -c2-)
 
-RGBASMFLAGS = -DGIT_VERSION="\"$(GIT_VERSION)"\" -DGIT_OFFSET="\"$(GIT_OFFSET)"\" -DGIT_COMMIT="\"$(GIT_COMMIT)"\" 
+RGBASMFLAGS = -DGIT_VERSION="\"$(GIT_VERSION)"\" -DGIT_OFFSET="\"$(GIT_OFFSET)"\" -DGIT_COMMIT="\"$(GIT_COMMIT)"\" -DDISPLAY_DISCORD_LINK=""
 
 $(october_obj): RGBASMFLAGS += 
 $(october_debug_obj): RGBASMFLAGS += -D_DEBUG
