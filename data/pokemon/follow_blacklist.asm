@@ -1,8 +1,6 @@
 CantFollowList:
 ; these pokemon can't follow because its sprites haven't been created yet
 ; because if we waited any longer we'll NEVER get this thing out
-	dw VULPIX
-	dw NINETALES
 	dw JIGGLYPUFF
 	dw WIGGLYTUFF
 	dw ZUBAT
@@ -39,8 +37,6 @@ CantFollowList:
 	dw GEODUDE
 	dw GRAVELER
 	dw GOLEM
-	dw PONYTA
-	dw RAPIDASH
 	dw SLOWPOKE
 	dw SLOWBRO
 	dw MAGNEMITE
@@ -49,8 +45,6 @@ CantFollowList:
 	dw DODRIO
 	dw SEEL
 	dw DEWGONG
-	dw GRIMER
-	dw MUK
 	dw SHELLDER
 	dw CLOYSTER
 	dw GASTLY
@@ -75,7 +69,6 @@ CantFollowList:
 	dw RHYHORN
 	dw RHYDON
 	dw CHANSEY
-	dw TANGELA
 	dw KANGASKHAN
 	dw HORSEA
 	dw SEADRA
@@ -207,16 +200,12 @@ CantFollowList:
 	dw TYRANITAR
 	dw LUGIA
 	dw HO_OH
-	dw COINPUR
 	dw ADBARSTORK
 	dw PUPPERON
 	dw MOIBELLE
 	dw BELLEDAM
 	dw MALLODY
 	dw CAMOUFLAKE
-	dw COALTA
-	dw BURGELA
-	dw VULPIII
 	dw WORFURS
 	dw WEARLYCAN
 	dw DODAERIE
@@ -226,7 +215,9 @@ CantFollowList:
 	dw SILKANE
 	dw MORPHOBIA
 	dw TERRACHNID
-	dw SMUJJ
+	dw GERMIFROST ; completed, but TODO for Vegelanche and Snouwrbun
+	dw VEGELANCHE
+	dw SNOUWRBUN
 	dw KOALYPTUS
 	dw OREFRY
 	dw BALLERINE

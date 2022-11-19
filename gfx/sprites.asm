@@ -162,6 +162,8 @@ NidoqueenSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoqueen.2bpp"
 NidoranMSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoran_m.2bpp"
 NidorinoSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidorino.2bpp"
 NidokingSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoking.2bpp"
+GrimerSpriteGFX::            INCBIN "gfx/sprites/pokemon/grimer.2bpp"
+MukSpriteGFX::               INCBIN "gfx/sprites/pokemon/muk.2bpp"
 
 SECTION "Followers Johto", ROMX
 
@@ -182,3 +184,17 @@ FeraligatrSpriteGFX:: 		   INCBIN "gfx/sprites/pokemon/feraligator.2bpp"
 KotoraSpriteGFX::			   INCBIN "gfx/sprites/pokemon/kotora.2bpp"
 CleflingSpriteGFX::			   INCBIN "gfx/sprites/pokemon/clefling.2bpp"
 ShuckleSpriteGFX::			   INCBIN "gfx/sprites/pokemon/shuckle.2bpp"
+CoinpurSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/coinpur.2bpp"
+GermifrostSpriteGFX::          INCBIN "gfx/sprites/pokemon/germifrost.2bpp"
+SmujjSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/smujj.2bpp"
+VulpiiiSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/vulpiii.2bpp"
+BurgelaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/burgela.2bpp"
+CoaltaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/coalta.2bpp"
+
+; actually kanto
+; TODO: compress these sprites or something
+PonytaSpriteGFX::            INCBIN "gfx/sprites/pokemon/ponyta.2bpp"
+RapidashSpriteGFX::          INCBIN "gfx/sprites/pokemon/rapidash.2bpp"
+TangelaSpriteGFX::           INCBIN "gfx/sprites/pokemon/tangela.2bpp"
+VulpixSpriteGFX::            INCBIN "gfx/sprites/pokemon/vulpix.2bpp"
+NinetalesSpriteGFX::         INCBIN "gfx/sprites/pokemon/ninetales.2bpp"
