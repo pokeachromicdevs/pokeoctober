@@ -65,9 +65,11 @@ WarningScreen:
 	hlcoord 2, 6
 	ld de, .Body
 	call PlaceString
+IF DEF(DISPLAY_DISCORD_LINK)
 	hlcoord 0, 13
 	ld de, .URL
 	call PlaceString
+ENDC
 	hlcoord 4, 16
 	ld de, .PressStart
 	call PlaceString
