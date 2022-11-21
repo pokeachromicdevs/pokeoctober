@@ -215,9 +215,6 @@ CantFollowList:
 	dw SILKANE
 	dw MORPHOBIA
 	dw TERRACHNID
-	dw GERMIFROST ; completed, but TODO for Vegelanche and Snouwrbun
-	dw VEGELANCHE
-	dw SNOUWRBUN
 	dw KOALYPTUS
 	dw OREFRY
 	dw BALLERINE

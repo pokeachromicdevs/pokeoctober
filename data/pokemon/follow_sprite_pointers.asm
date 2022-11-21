@@ -25,6 +25,8 @@ FollowSpritePalettes::
 	dw    .Kotora
 	const PAL_FOLLOWER_BULBASAUR
 	dw    .Bulba
+	const PAL_FOLLOWER_SNOUWRBUN
+	dw    .Snouwrbun
 
 .Red:      RGB 31,31,31, 31,19,10, 31,07,01, 00,00,00
 .Blue:     RGB 31,31,31, 31,19,10, 10,09,31, 00,00,00
@@ -34,6 +36,7 @@ FollowSpritePalettes::
 .Silver:   RGB 31,31,31, 31,31,31, 13,13,13, 00,00,00
 .Kotora:   RGB 31,31,31, 31,30,19, 27,21,00, 00,00,00
 .Bulba:    RGB 31,31,31, 01,16,00, 07,23,03, 00,00,00
+.Snouwrbun: RGB 31,31,31, 31,19,10, 08,22,02, 00,00,00
 
 FollowSpritePointers::
 	follow_sprite BulbasaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;BULBASAUR
@@ -328,6 +331,6 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;FENNECURSE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;ORIJOEY
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;AGGROSWINE
-	follow_sprite GermifrostSpriteGFX, PAL_FOLLOWER_GREEN ;GERMIFROST
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;VEGELANCHE
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;SNOUWRBUN
+	follow_sprite GermifrostSpriteGFX, PAL_FOLLOWER_SNOUWRBUN ;GERMIFROST
+	follow_sprite VegelancheSpriteGFX, PAL_FOLLOWER_SNOUWRBUN ;VEGELANCHE
+	follow_sprite SnouwrbunSpriteGFX, PAL_FOLLOWER_SNOUWRBUN ;SNOUWRBUN
