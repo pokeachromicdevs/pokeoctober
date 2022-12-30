@@ -201,22 +201,22 @@ CantFollowList:
 	dw LUGIA
 	dw HO_OH
 	dw ADBARSTORK
-	dw PUPPERON
+	dw PUPPERON ; done but TODO: growlithe & arcanine
 	dw MOIBELLE
-	dw BELLEDAM
+	dw BELLEDAM ; done but TODO: moibelle
 	dw MALLODY
 	dw CAMOUFLAKE
 	dw WORFURS
 	dw WEARLYCAN
-	dw DODAERIE
-	dw PARASPOR
+	dw DODAERIE ; done but TODO: doduo & dodrio
+	dw PARASPOR ; done but TODO: paras & parasect
 	dw MOLAMBINO
 	dw KIWACKI
 	dw SILKANE
 	dw MORPHOBIA
 	dw TERRACHNID
 	dw KOALYPTUS
-	dw OREFRY
+	dw OREFRY ; done but TODO: goldeen & seaking
 	dw BALLERINE
 	dw FENNECURSE
 	dw ORIJOEY
