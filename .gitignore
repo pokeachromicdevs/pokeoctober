@@ -55,3 +55,6 @@ pokeoctober*-*.png
 *.stackdump
 **/desktop.ini
 .tags*
+
+# internal pls don't mind this
+gfx/sprites/pokemon/buffer

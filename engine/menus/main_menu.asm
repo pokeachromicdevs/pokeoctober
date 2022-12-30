@@ -242,6 +242,7 @@ MainMenu_PrintCurrentVersion:
 	db "@"
 
 .CommitString:
+IF DEF(_GIT_COMMIT)
 	db "rev."
 	db GIT_COMMIT
 	db "("
@@ -250,6 +251,13 @@ IF DEF(_DEBUG)
 	db "d"
 endc
 	db ")@"
+ELSE
+IF DEF(_DEBUG)
+	db "Debug@"
+ELSE
+	db "@"
+endc
+endc
 
 MainMenu_PrintCurrentTimeAndDay:
 	ld a, [wSaveFileExists]
