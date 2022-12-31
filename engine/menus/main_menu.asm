@@ -242,20 +242,20 @@ MainMenu_PrintCurrentVersion:
 	db "@"
 
 .CommitString:
-IF DEF(_GIT_COMMIT)
-	db "rev."
-	db GIT_COMMIT
-	db "("
-	db GIT_OFFSET
+IF STRLEN(GIT_COMMIT) > 0
+db "rev."
+db GIT_COMMIT
+db "("
+db GIT_OFFSET
 IF DEF(_DEBUG)
-	db "d"
+db "d"
 endc
-	db ")@"
+db ")@"
 ELSE
 IF DEF(_DEBUG)
-	db "Debug@"
+db "Debug@"
 ELSE
-	db "@"
+db "@"
 endc
 endc
 
