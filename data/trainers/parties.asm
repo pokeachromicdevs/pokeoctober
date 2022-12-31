@@ -1722,13 +1722,10 @@ CooltrainerFGroup:
 
 BeautyGroup:
 	next_party ; BEAUTY (1)
-	db "VICTORIA@", TRAINERTYPE_NORMAL
-	db 9
-	dw SENTRET
-	db 13
-	dw SENTRET
-	db 17
-	dw SENTRET
+	db "NINA@", TRAINERTYPE_NORMAL
+	dbw 14, MAREEP
+	dbw 17, MARILL
+	dbw 17, MISDREAVUS
 	end_party
 
 	next_party ; BEAUTY (2)
@@ -3106,13 +3103,11 @@ SwimmerFGroup:
 
 SailorGroup:
 	next_party ; SAILOR (1)
-	db "EUGENE@", TRAINERTYPE_NORMAL
-	db 17
-	dw POLIWHIRL
-	db 17
-	dw RATICATE
-	db 19
-	dw KRABBY
+	db "EDWARD@", TRAINERTYPE_NORMAL
+	dbw 14, SPEAROW
+	dbw 15, MURKROW
+	dbw 17, MACHOP
+	dbw 17, KRABBY
 	end_party
 
 	next_party ; SAILOR (2)
@@ -5032,9 +5027,11 @@ BlueGroup:
 
 OfficerGroup:
 	next_party ; OFFICER (1)
-	db "KEITH@", TRAINERTYPE_NORMAL
-	db 17
-	dw GROWLITHE
+	db "MANFRED@", TRAINERTYPE_NORMAL
+	dbw 15, ABRA
+	dbw 15, REMORAID
+	dbw 18, BALLERINE
+	dbw 19, SNUBBULL
 	end_party
 
 	next_party ; OFFICER (2)

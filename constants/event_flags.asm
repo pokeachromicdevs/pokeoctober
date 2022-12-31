@@ -257,6 +257,9 @@
 ; dread woods
 	const EVENT_BEAT_MANCHILD_MIGUEL
 	const EVENT_BEAT_SCHOOLBOY_ANDY
+	const EVENT_BEAT_BEAUTY_NINA
+	const EVENT_BEAT_OFFICER_MANFRED
+	const EVENT_BEAT_SAILOR_EDWARD
 
 ; alder gym
 	const EVENT_BEAT_TWINS_MEI_AND_LEI
@@ -405,9 +408,6 @@
 ; demo 1 limit
 	const EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
 
-	const EVENT_19f
-	const EVENT_1a0
-	const EVENT_1a1
 	const EVENT_1a2
 	const EVENT_1a3
 	const EVENT_1a4

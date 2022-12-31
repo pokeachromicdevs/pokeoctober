@@ -434,6 +434,7 @@ INCLUDE "maps/Route39.asm"
 INCLUDE "maps/Route40.asm"
 INCLUDE "maps/Route41.asm"
 INCLUDE "maps/Route12.asm"
+INCLUDE "maps/DreadWoods.asm"
 
 
 SECTION "Map Scripts 23", ROMX
@@ -513,7 +514,6 @@ INCLUDE "maps/capumon/CitrineInn2F.asm"
 INCLUDE "maps/capumon/CitrineDevHouse1F.asm"
 INCLUDE "maps/capumon/CitrineDevHouse2F.asm"
 
-INCLUDE "maps/DreadWoods.asm"
 INCLUDE "maps/ZenGarden.asm"
 INCLUDE "maps/ZenGardenGate.asm"
 INCLUDE "maps/VioletHerbShop.asm"
