@@ -318,9 +318,9 @@ MrPokemonsHouse_GetDexText:
 
 MrPokemonsHouse_OakText2:
 	text "I came down around"
-	line "this part of JOHTO"
-	para "to deliver the"
-	line "PARCEL, but I"
+	line "this part of"
+	para "KANSAI to deliver"
+	line "the PARCEL, but I"
 	para "stuck around to"
 	line "see my old pal MR."
 	cont "#MON."

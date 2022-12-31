@@ -26,8 +26,9 @@ CherrygroveGymSpeechHousePokefanMText:
 	para "You better visit"
 	line "the #MON GYMS"
 
-	para "all over JOHTO and"
-	line "collect BADGES."
+	para "all over KANSAI"
+	line "and collect"
+	cont "BADGES."
 	done
 
 CherrygroveGymSpeechHouseBugCatcherText:

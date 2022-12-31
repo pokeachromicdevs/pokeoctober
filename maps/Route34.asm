@@ -502,9 +502,9 @@ TrainerBikerHarley:
 .Txt:
 	text "I'm a new member."
 	para "I was sent over to"
-	line "JOHTO to scout for"
-	para "some new land to"
-	line "claim for our"
+	line "KANSAI to scout"
+	para "for some new land"
+	line "to claim for our"
 	cont "group."
 	done
 
