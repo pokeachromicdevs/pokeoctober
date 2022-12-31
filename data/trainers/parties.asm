@@ -82,13 +82,13 @@ BugsyGroup:
 MortyGroup:
 	next_party ; MORTY (1)
 		db "MORTY@", TRAINERTYPE_MOVES
-		db 34
+		db 29
 		dw HAUNTER
 		dw HYPNOSIS, MIMIC, CURSE, NIGHT_SHADE
-		db 35
-		dw TOPSYSPOT
+		db 30
+		dw GIRAFARIG
 		dw STOMP, PSYBEAM, LICK, CONFUSE_RAY
-		db 37
+		db 32
 		dw FENNECURSE
 		dw SPITE, FIRE_SPIN, CONFUSION, FLAMETHROWER
 	end_party
@@ -1859,7 +1859,7 @@ BeautyGroup:
 		db     TRAINERTYPE_NORMAL
 		;dbw    25, PANGSHI
 		dbw    25, GASTLY
-		;dbw    26, <something>
+		dbw    26, HAUNTER
 	end_party
 
 	next_party
@@ -3788,8 +3788,8 @@ BikerGroup:
 	next_party
 		string "HARLEY"
 		db     TRAINERTYPE_NORMAL
-		dbw    25, KOFFING
-		dbw    26, GRIMER
+		dbw    19, KOFFING
+		dbw    20, SMUJJ
 	end_party
 
 	end_party_list
@@ -4677,8 +4677,8 @@ MediumGroup:
 	next_party
 		string "DOROTHY"
 		db     TRAINERTYPE_NORMAL
-		dbw    27, BIPULLA
-		dbw    28, MISDREAVUS
+		dbw    25, BIPULLA
+		dbw    26, MISDREAVUS
 	end_party
 
 	end_party_list
@@ -5206,9 +5206,9 @@ InstructorGroup:
 	next_party
 		string "FRANK"
 		db     TRAINERTYPE_MOVES
-		dbw    25, HAUNTER
+		dbw    23, HAUNTER
 		dw     CURSE, NIGHT_SHADE, SPITE, NO_MOVE
-		dbw    26, GIRAFARIG
+		dbw    25, BIPULLA
 		dw     AGILITY, CONFUSION, FORESIGHT, FORESIGHT
 	end_party
 
@@ -5274,7 +5274,8 @@ SoldierGroup:
 	next_party
 		string "GRANT"
 		db TRAINERTYPE_NORMAL
-		dbw 25, MISDREAVUS
+		dbw 23, GASTLY
+		dbw 24, MISDREAVUS
 		;dbw 27, PHANDARIN ; XXX
 	end_party
 
