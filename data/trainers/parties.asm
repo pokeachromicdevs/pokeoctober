@@ -90,7 +90,7 @@ MortyGroup:
 		dw STOMP, PSYBEAM, LICK, CONFUSE_RAY
 		db 32
 		dw FENNECURSE
-		dw SPITE, FIRE_SPIN, CONFUSION, FLAMETHROWER
+		dw SHADOW_BALL, FIRE_SPIN, CONFUSION, FLAMETHROWER
 	end_party
 	end_party_list
 
@@ -3887,10 +3887,10 @@ FirebreatherGroup:
 
 	next_party ; FIREBREATHER (6)
 	db "WALT@", TRAINERTYPE_NORMAL
-	db 11
-	dw MAGMAR
-	db 13
-	dw MAGMAR
+	db 20
+	dw MAGBY
+	db 21
+	dw COALTA
 	end_party
 
 	next_party ; FIREBREATHER (7)
@@ -3914,13 +3914,11 @@ FirebreatherGroup:
 JugglerGroup:
 	next_party ; JUGGLER (1)
 	db "IRWIN@", TRAINERTYPE_NORMAL
-	db 2
+	db 18
 	dw VOLTORB
-	db 6
+	db 19
 	dw VOLTORB
-	db 10
-	dw VOLTORB
-	db 14
+	db 20
 	dw VOLTORB
 	end_party
 
