@@ -157,7 +157,15 @@ SilentTownTeacherScript:
 	end
 
 .MonIsAdorable:
+	checkfollower
+	iffalse .NoneFollowing
 	writetext Text_YourMonIsAdorable
+	waitbutton
+	closetext
+	end
+
+.NoneFollowing:
+	writetext Text_WheresYourMon
 	waitbutton
 	closetext
 	end
@@ -493,6 +501,15 @@ Text_YourMonIsAdorable:
 	text "Oh! Your #MON"
 	line "is adorable!"
 	cont "I wish I had one!"
+	done
+
+Text_WheresYourMon:
+	text "You got a #MON"
+	line "at the LAB?"
+	para "Can I see it,"
+	line "please?"
+	para "Take it for a"
+	line "walk with you!"
 	done
 
 Text_TellMomIfLeaving:
