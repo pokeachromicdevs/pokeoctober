@@ -201,7 +201,7 @@ AlderPokecenter1FKurt:
 	para "There's a scroll in"
 	line "my house listing"
 	para "them all, feel"
-	line "free to view it"
+	line "free to read it"
 	cont "anytime."
 	done
 
