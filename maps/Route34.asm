@@ -30,6 +30,10 @@ Route34Silver:
 	writetext .Text
 	waitbutton
 	closetext
+	applymovement ROUTE34_SILVER, .SilverOut
+	disappear ROUTE34_SILVER
+	playsound SFX_EXIT_BUILDING
+	pause 60
 	setevent EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
 	credits
 	end
@@ -51,6 +55,10 @@ Route34Silver:
 	cont "in GOLDENROD!"
 	para "Catch ya later!"
 	done
+
+.SilverOut:
+	big_step UP
+	step_end
 
 Route34_WillEventIntroText:
 	text "???: Well, I just"
