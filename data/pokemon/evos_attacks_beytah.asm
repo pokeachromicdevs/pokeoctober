@@ -306,6 +306,7 @@ VupiiiEvosAttacks:
 
 WorfursEvosAttacks:
 	dbbw EVOLVE_LEVEL, 31, WEARLYCAN
+	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 5, QUICK_ATTACK
@@ -507,7 +508,7 @@ GorotoraEvosAttacks:
 	dbw 51, THUNDERBOLT
 	dbw 58, SLASH
 	db 0 ; no more level-up moves
-	
+
 GermifrostEvosAttacks:
 	dbbw EVOLVE_ITEM, HEART_STONE, VEGELANCHE
 	dbbw EVOLVE_ITEM, POISON_STONE, SNOUWRBUN
