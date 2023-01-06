@@ -81,7 +81,7 @@ ElmsLab_MapScripts:
 	setevent EVENT_ELM_STILL_HAS_EMAIL_OPEN
 	closetext
 	end
-	
+
 ElmsLabSilverScript3:
 	jumptextfaceplayer Text_Best
 
@@ -89,11 +89,11 @@ ElmsLabSilverScript3:
 	writetext ElmText_ResearchAmbitions
 	waitbutton
 	closetext
-	
+
 HidePersonMovement:
 	hide_person
 	step_end
-	
+
 ProfElmScript:
 	faceplayer
 	opentext
@@ -315,7 +315,7 @@ ElmDirectionsScript:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
-	setscene SCENE_ELM_ENTRANCE_BATTLE 
+	setscene SCENE_ELM_ENTRANCE_BATTLE
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
 	setmapscene SILENT_TOWN, SCENE_FINISHED
 	end
@@ -387,7 +387,7 @@ ElmAfterTheftScript:
 	takeitem OAKS_PARCEL
 	waitbutton
 	closetext
-	
+
 	opentext
 	writetext ElmAfterTheftText5
 	waitsfx
@@ -400,7 +400,6 @@ ElmAfterTheftScript:
 	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	setevent EVENT_CHERRYGROVE_BIRD_KEEPER_NOT_BLOCK_GYM
 	clearevent EVENT_CHERRYGROVE_BIRD_KEEPER_BLOCKAGE
-	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES
 	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
 	writetext ElmAfterTheftText6
 	waitbutton
@@ -693,7 +692,7 @@ SilverGetCyndaquilMovement:
 	step RIGHT
 	turn_head UP
 	step_end
-	
+
 SilverGetChikoritaMovement:
 	step RIGHT
 	step DOWN
@@ -701,21 +700,21 @@ SilverGetChikoritaMovement:
 	step RIGHT
 	step UP
 	step_end
-	
+
 SilverGetTotodileMovement:
 	step DOWN
 	step RIGHT
 	step RIGHT
 	step UP
 	step_end
-	
+
 ElmsLabTrashcan2:
 ; unused
 	jumpstd trashcan
 
 ElmsLabBookshelf:
 	jumpstd difficultbookshelf
-	
+
 ElmsLabSilverScript:
 	checkscene
 	iftrue .letPlayerChoose
@@ -731,7 +730,7 @@ ElmsLabSilverScript:
 	jumptextfaceplayer Text_Best
 .letPlayerChoose
 	jumptextfaceplayer ElmsLabSilverText2
-	
+
 SilverLeavesLab:
 	step LEFT
 	step DOWN
@@ -741,22 +740,22 @@ SilverLeavesLab:
 	step DOWN
 	step DOWN
 	step_end
-	
+
 Movement_SilverDownOne:
 	step DOWN
 	return
 	step_end
-	
+
 Movement_SilverDownTwo:
 	step DOWN
 	step DOWN
 	return
 	step_end
-	
+
 Movement_DownOne:
 	step DOWN
 	turn_head UP
-	step_end	
+	step_end
 
 ElmsLab_WalkUpToPCMovement:
 	step UP
@@ -855,39 +854,39 @@ AfterChikoritaMovement:
 	step UP
 	step UP
 	step_end
-	
+
 Text_SilverTakeThisOne:
 	text "This #MON looks"
 	line "strong!"
-	
+
 	para "I will take this"
 	line "one."
 	done
-	
+
 Text_SilverGetCyndaquil:
 	text "<RIVAL> received"
 	line "CYNDAQUIL!"
 	done
-	
+
 Text_SilverGetChikorita:
 	text "<RIVAL> received"
 	line "CHIKORITA!"
 	done
-	
+
 Text_SilverGetTotodile:
 	text "<RIVAL> received"
 	line "TOTODILE!"
 	done
-	
+
 ElmsLabSilverText:
 	text "Yo <PLAY_G>!"
-	
+
 	para "Looks like PROF."
 	line "ELM isn't here!"
-	
+
 	para "I wonder when"
 	line "he would have"
-	
+
 	para "expected us to"
 	line "show up!"
 	done
@@ -898,7 +897,7 @@ ElmsLabSilverText2:
 	para "sure to be better"
 	line "than you, <PLAY_G>!"
 	done
-	
+
 ElmText_Intro:
 	text "Finally! We're all"
 	line "together now!"
@@ -919,16 +918,16 @@ ElmText_ResearchAmbitions:
 	line "going to get your"
 	cont "own #MON!"
 	done
-	
+
 SilverEmailShock:
 	text "<RIVAL>: Hey,"
 	line "ELM. What's with"
 	cont "your computer?"
 	done
-	
+
 ElmText_MissionFromMrPokemon:
 	text "ELM: Hmm…"
-	
+
 	para "Well, I just got"
 	line "an email from a"
 	para "colleague of mine,"
@@ -937,7 +936,7 @@ ElmText_MissionFromMrPokemon:
 	line "studying an EGG"
 	para "I sent him a few"
 	line "weeks ago."
-	
+
 	para "Normally, I would"
 	line "go get the EGG"
 	para "myself, but I'm"
@@ -972,11 +971,11 @@ ElmText_MissionFromMrPokemon2:
 	para "excited to run"
 	line "such a boring"
 	cont "errand!"
-	
+
 	para "I've got a huge"
 	line "adventure to"
 	cont "go on, you know!"
-	
+
 	para "ELM: Er<...> well"
 	line "then."
 	done
@@ -1063,7 +1062,7 @@ ElmDirectionsText1:
 	para "strange findings"
 	line "around there,"
 	cont "it's probably him."
-	
+
 	para "If you find a"
 	line "need to contact"
 	para "me, here's my"
@@ -1082,7 +1081,7 @@ ElmDirectionsText3:
 
 	para "Good luck!"
 	done
-	
+
 Text_Best:
 	text "My #MON is"
 	line "gonna be the best"
@@ -1104,7 +1103,7 @@ ElmDescribesMrPokemonText:
 	para "strange findings"
 	line "around there,"
 	cont "it's probably him."
-	
+
 	para "Good luck!"
 	done
 
@@ -1191,7 +1190,7 @@ ElmAfterTheftText5:
 	line "dreams are my"
 	cont "dreams!"
 	done
-	
+
 ElmGivesPokedexText:
 	text "<PLAYER> got a"
 	line "#DEX from ELM."
@@ -1220,7 +1219,7 @@ ElmAfterTheftText6:
 	para "And come to think"
 	line "of it<...>"
 	done
-	
+
 ElmTakesMonText:
 	text "This #MON needs"
 	line "a reason to get"

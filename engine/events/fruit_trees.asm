@@ -54,7 +54,6 @@ CheckFruitTree:
 	ret
 
 PickedFruitTree:
-	farcall StubbedTrainerRankings_FruitPicked
 	ld b, SET_FLAG
 	jp GetFruitTreeFlag
 

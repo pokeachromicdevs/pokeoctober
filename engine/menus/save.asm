@@ -106,7 +106,6 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call SaveBackupIndexTables
 	call SaveBackupChecksum
 	farcall BackupPartyMonMail
-	farcall BackupMobileEventIndex
 	farcall SaveRTC
 	call LoadBox
 	call ResumeGameLogic
@@ -250,7 +249,6 @@ SaveGameData:
 	call SaveBackupChecksum
 	call UpdateStackTop
 	farcall BackupPartyMonMail
-	farcall BackupMobileEventIndex
 	farcall SaveRTC
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
@@ -623,7 +621,6 @@ TryLoadSaveFile:
 	call LoadIndexTables
 	call LoadBox
 	farcall RestorePartyMonMail
-	farcall RestoreMobileEventIndex
 	farcall RestoreMysteryGift
 	call ValidateBackupSave
 	call SaveBackupOptions
@@ -642,7 +639,6 @@ TryLoadSaveFile:
 	call LoadBackupIndexTables
 	call LoadBox
 	farcall RestorePartyMonMail
-	farcall RestoreMobileEventIndex
 	farcall RestoreMysteryGift
 	call ValidateSave
 	call SaveOptions

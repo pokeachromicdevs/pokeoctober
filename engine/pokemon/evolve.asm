@@ -237,7 +237,6 @@ EvolveAfterBattle_MasterLoop:
 	push hl
 	ld hl, Text_EvolvedIntoPKMN
 	call PrintTextboxText
-	farcall StubbedTrainerRankings_MonsEvolved
 
 	ld de, MUSIC_NONE
 	call PlayMusic
@@ -354,7 +353,7 @@ EvolveAfterBattle_MasterLoop:
 	and a
 	call nz, RestartMapMusic
 	ret
-	
+
 LearnEvolutionMove:
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
@@ -711,7 +710,7 @@ DetermineEvolutionItemResults::
 	cp EVOLVE_ITEM
 	jr nz, .skip_species_parameter
 	call GetNextEvoAttackByte
-	ld b, a	
+	ld b, a
 	ld a, [wCurItem]
 	cp b
 	jr nz, .skip_species

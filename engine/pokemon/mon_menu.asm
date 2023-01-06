@@ -719,7 +719,6 @@ MonMenu_WindRide:
 	jr z, .Fail
 	cp $0
 	jr z, .Error
-	farcall StubbedTrainerRankings_Fly
 	ld b, $4
 	ld a, $2
 	ret

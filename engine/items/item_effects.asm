@@ -551,8 +551,6 @@ PokeBallEffect:
 	cp BATTLETYPE_TUTORIAL
 	jp z, .FinishTutorial
 
-	farcall StubbedTrainerRankings_WildMonsCaught
-
 	ld hl, Text_GotchaMonWasCaught
 	call PrintText
 
@@ -940,7 +938,7 @@ NightBallMultiplier:
 	cp MORN_HOUR
 	ret nc
 .is_night
-; x3	
+; x3
 	ld a, b
 	add a, a
 	jr c, .maxed_out
@@ -2148,12 +2146,12 @@ EscapeRopeEffect:
 	cp 1
 	call z, UseDisposableItem
 	ret
-	
+
 DiggingClawEffect:
 	call FieldMoveJumptableReset
 	ld a, $1
 	jr digclaw_incave
-	
+
 digclaw_incave:
 	ld [wBuffer2], a
 .loop
@@ -2205,7 +2203,7 @@ digclaw_incave:
 	call QueueScript
 	ld a, $81
 	ret
-	
+
 .FailDigClaw:
 	ld a, [wBuffer2]
 	cp $2
@@ -2252,12 +2250,12 @@ digclaw_incave:
 	show_object
 	return_dig 32
 	step_end
-	
+
 ;DiggingClawEffect:
 	;xor a
     ;ld [wItemEffectSucceeded], a
 	;cp HELD_DIGGING_CLAW
-	;farcall DigFunction	
+	;farcall DigFunction
 	;dig_incave:
 	;ld [wBuffer2], a
 ;.loop
@@ -2267,7 +2265,7 @@ digclaw_incave:
 	;and $7f
 	;ld [wFieldMoveSucceeded], a
 	;ret
-	
+
 	;ld a, [wItemEffectSucceeded]
 	;cp 1
 	;call z, UseDisposableItem
@@ -2806,7 +2804,7 @@ NoEffect:
 	cp OAKS_PARCEL
 	jp z, BelongsToSomeoneElseMessage
 	jp IsntTheTimeMessage
-	
+
 Play_SFX_FULL_HEAL:
 	push de
 	ld de, SFX_FULL_HEAL

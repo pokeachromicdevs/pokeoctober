@@ -133,7 +133,6 @@ MrPokemonsHouse_OakScript:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
-	special StubbedTrainerRankings_Healings
 	special HealParty
 	pause 60
 	special FadeInQuickly
@@ -198,7 +197,7 @@ MrPokemonsHouse_OakExits:
 	step_end
 
 MrPokemonIntroText1:
-	text "Ah, hello there!" 
+	text "Ah, hello there!"
 
 	para "You must be the"
 	line "trainer ELM sent."
@@ -224,9 +223,9 @@ MrPokemonIntroText3:
 	line "#MON we've"
 	para "never seen"
 	line "before!"
-	
+
 	para "Oh?"
-	
+
 	para "Speaking of"
 	line "#MON… it looks"
 	para "like yours really"
@@ -302,7 +301,7 @@ MrPokemonsHouse_OakText1b:
 	line "so happy<...> that"
 	para "sure does bring"
 	line "back memories!"
-	
+
 	para "Well, since you're"
 	line "heading right back"
 	para "to ELM, can you"

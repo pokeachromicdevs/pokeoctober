@@ -2704,8 +2704,8 @@ wVermilionPortSceneID::                           db ; d9bb
 wFastShip1FSceneID::                              db ; d9bc
 wFastShipB1FSceneID::                             db ; d9bd
 wMountMoonSquareSceneID::                         db ; d9be
-wMobileTradeRoomSceneID::                         db ; d9bf
-wMobileBattleRoomSceneID::                        db ; d9c0
+wNewMap1SceneID::                         db ; d9bf
+wNewMap2SceneID::                        db ; d9c0
 wCherrygrovePokecenter1FSceneID::                 db
 wRoute33EastGateSceneID::                         db
 wRoute34SceneID::                                 db

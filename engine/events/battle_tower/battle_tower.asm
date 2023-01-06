@@ -1,12 +1,6 @@
 BattleTowerRoomMenu:
 ; special
 	call InitBattleTowerChallengeRAM
-	farcall _BattleTowerRoomMenu
-	ret
-
-Function1700ba:
-	call InitBattleTowerChallengeRAM
-	farcall Function11811a
 	ret
 
 Function1700c4:
@@ -17,7 +11,6 @@ Function1700c4:
 
 	call Function17042c
 
-	ld a, BANK(s5_be45) ; aka BANK(s5_be46) and BANK(s5_aa41) and BANK(s5_aa5d)
 	call GetSRAMBank
 	ld a, 1
 	ld [s5_be45], a
@@ -31,7 +24,6 @@ Function1700c4:
 	ld de, s5_aa8e
 	ld bc, 7 * $cc ; length of battle tower struct from japanese games?
 	call CopyBytes
-	ld hl, s5_aa5d ; some sort of count
 	ld a, [hl]
 	inc [hl]
 	inc hl
@@ -50,12 +42,6 @@ Function1700c4:
 	ldh [rSVBK], a
 	ret
 
-Function170114:
-	call InitBattleTowerChallengeRAM
-	call .Function170121
-	farcall Function11805f
-	ret
-
 .Function170121:
 	ld a, BANK(s5_a948)
 	call GetSRAMBank
@@ -64,7 +50,18 @@ Function170114:
 	ld bc, 246
 	call CopyBytes
 	call CloseSRAM
-	call Function170c8b
+	jp Function170c8b
+	ret
+
+Function170c8b:
+	ld hl, wLastEnemyCounterMove
+	ld b, $5
+.asm_170c90
+	ld a, [hl]
+	xor $ff
+	ld [hli], a
+	dec b
+	jr nz, .asm_170c90
 	ret
 
 Function170139:
@@ -233,6 +230,16 @@ _BattleTowerBattle:
 	dw RunBattleTowerTrainer
 	dw SkipBattleTowerTrainer
 
+Clears5_a89a:
+	ld a, $5
+	call GetSRAMBank
+	ld hl, $a89a
+	xor a
+	ld [hli], a
+	ld [hl], a
+	call CloseSRAM
+	ret
+
 RunBattleTowerTrainer:
 	ld a, [wOptions]
 	push af
@@ -246,10 +253,9 @@ RunBattleTowerTrainer:
 
 	xor a
 	ld [wLinkMode], a
-	farcall StubbedTrainerRankings_Healings
 	farcall HealParty
 	call ReadBTTrainerParty
-	call Clears5_a89a
+	jp Clears5_a89a
 
 	predef StartBattle
 
@@ -288,7 +294,7 @@ ReadBTTrainerParty:
 ; with their species names.
 	ld de, wBT_OTTempMon1Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .skip_mon_1
 
 	ld a, [wBT_OTTempMon1]
@@ -303,7 +309,7 @@ ReadBTTrainerParty:
 .skip_mon_1
 	ld de, wBT_OTTempMon2Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .skip_mon_2
 	ld a, [wBT_OTTempMon2]
 	ld [wNamedObjectIndexBuffer], a
@@ -317,7 +323,7 @@ ReadBTTrainerParty:
 .skip_mon_2
 	ld de, wBT_OTTempMon3Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .skip_mon_3
 	ld a, [wBT_OTTempMon3]
 	ld [wNamedObjectIndexBuffer], a
@@ -339,7 +345,7 @@ ReadBTTrainerParty:
 ; Repair the trainer name if needed, then copy it to wOTPlayerName
 	ld de, wBT_OTTempName
 	ld c, NAME_LENGTH - 1
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .trainer_name_okay
 	ld hl, BT_ChrisName
 	jr .done_trainer_name
@@ -1227,13 +1233,11 @@ CheckMobileEventIndex: ; BattleTowerAction $0b something to do with GS Ball
 
 Function1708c8: ; BattleTowerAction $0c
 	call UpdateTime
-	ld a, BANK(s5_aa8b) ; aka BANK(s5_aa8c) and BANK(s5_aa5d) and BANK(s5_aa48) and BANK(s5_aa47)
 	call GetSRAMBank
 	ld a, [wCurDay]
 	ld [s5_aa8b], a
 	xor a
 	ld [s5_aa8c], a
-	ld a, [s5_aa5d]
 	cp 2
 	jr nc, .asm_1708ec
 	ld a, [wCurDay]
@@ -1260,9 +1264,7 @@ Function1708f0: ; BattleTowerAction $0d
 	ld a, c
 	cp [hl]
 	jr nz, Function170923
-	ld a, BANK(s5_aa5d)
 	call GetSRAMBank
-	ld a, [s5_aa5d]
 	call CloseSRAM
 	cp 5
 	ret c
@@ -1271,13 +1273,10 @@ Function1708f0: ; BattleTowerAction $0d
 	ret
 
 Function170923:
-	ld a, BANK(s5_aa48) ; aka BANK(s5_aa47) and BANK(s5_aa5d)
 	call GetSRAMBank
 	xor a
 	ld [s5_aa48], a
 	ld [s5_aa47], a
-	ld hl, s5_aa5d
-	ld bc, MOBILE_LOGIN_PASSWORD_LENGTH
 	call ByteFill
 	call CloseSRAM
 	ret
@@ -1395,7 +1394,6 @@ Function1709bb: ; BattleTowerAction $10
 	dw .NoAction
 	dw .DoAction1
 	dw .DoAction1
-	dw .Action4
 	dw .Action5
 
 .DoAction1:
@@ -1406,24 +1404,6 @@ Function1709bb: ; BattleTowerAction $10
 	call CloseSRAM
 
 .NoAction:
-	ret
-
-.Action4:
-	ld a, BANK(s5_b023) ; aka BANK(s5_a825) and BANK(s5_a826)
-	call GetSRAMBank
-	ld hl, s5_b023
-	ld de, wc608
-	ld bc, 105
-	call CopyBytes
-	ld a, [s5_a825]
-	ld [wcd30], a
-	ld a, [s5_a826]
-	ld [wcd31], a
-	call CloseSRAM
-	farcall Function11b6b4
-	farcall Function17d0f3
-	ld a, TRUE
-	ld [wScriptVar], a
 	ret
 
 .Action5:
@@ -1563,13 +1543,57 @@ BattleTowerAction_UbersCheck:
 	ld [wcd4f], a
 	xor a
 	ld [wScriptVar], a
-	farcall BattleTower_UbersCheck
+	call BattleTower_UbersCheck
 	ret nc
 	ld a, BANK(s5_b2fb)
 	call GetSRAMBank
 	ld a, [s5_b2fb]
 	call CloseSRAM
 	ld [wScriptVar], a
+	ret
+
+BattleTower_LevelCheck:
+	ldh a, [rSVBK]
+	push af
+	ld a, $1
+	ldh [rSVBK], a
+	ld a, [wcd4f]
+	ld c, 10
+	call SimpleMultiply
+	ld hl, wcd50
+	ld [hl], a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld de, wPartyMon1Level
+	ld a, [wPartyCount]
+.party_loop
+	push af
+	ld a, [de]
+	push hl
+	push de
+	pop hl
+	add hl, bc
+	push hl
+	pop de
+	pop hl
+	cp [hl]
+	jr z, .equal
+	jr nc, .exceeds
+.equal
+	pop af
+	dec a
+	jr nz, .party_loop
+	pop af
+	ldh [rSVBK], a
+	and a
+	ret
+
+.exceeds
+	pop af
+	ld a, $4
+	ld [wcf66], a
+	pop af
+	ldh [rSVBK], a
+	scf
 	ret
 
 LoadOpponentTrainerAndPokemonWithOTSprite:
@@ -1632,4 +1656,263 @@ CheckForBattleTowerRules:
 
 .end
 	ld [wScriptVar], a
+	ret
+
+CheckBTMonMovesForErrors:
+	ld c, BATTLETOWER_PARTY_LENGTH
+	ld hl, wBT_OTTempMon1Moves
+.loop
+	push hl
+	ld a, [hl]
+	cp MOVE_TABLE_ENTRIES + 1
+	jr c, .okay
+	push hl
+	ld hl, POUND
+	call GetMoveIDFromIndex
+	pop hl
+	ld [hl], a
+
+.okay
+	inc hl
+	ld b, NUM_MOVES - 1
+.loop2
+	ld a, [hl]
+	and a
+	jr z, .loop3
+	cp MOVE_TABLE_ENTRIES + 1
+	jr c, .next
+
+.loop3
+	xor a
+	ld [hl], a
+	inc hl
+	dec b
+	jr nz, .loop3
+	jr .done
+
+.next
+	inc hl
+	dec b
+	jr nz, .loop2
+
+.done
+	pop hl
+	ld de, NICKNAMED_MON_STRUCT_LENGTH
+	add hl, de
+	dec c
+	jr nz, .loop
+	ret
+
+CheckStringForErrors:
+; Valid character ranges:
+; $0, $5 - $13, $19 - $1c, $26 - $34, $3a - $3e, $40 - $48, $60 - $ff
+.loop
+	ld a, [de]
+	inc de
+	and a ; "<NULL>"
+	jr z, .NextChar
+	cp FIRST_REGULAR_TEXT_CHAR
+	jr nc, .NextChar
+	cp "<NEXT>"
+	jr z, .NextChar
+	cp "@"
+	jr z, .Done
+	cp "ガ"
+	jr c, .Fail
+	cp "<PLAY_G>"
+	jr c, .NextChar
+	cp "<JP_18>" + 1
+	jr c, .Fail
+	cp "<NI>"
+	jr c, .NextChar
+	cp "<NO>" + 1
+	jr c, .Fail
+	cp "<ROUTE>"
+	jr c, .NextChar
+	cp "<GREEN>" + 1
+	jr c, .Fail
+	cp "<ENEMY>"
+	jr c, .NextChar
+	cp "<ENEMY>" + 1
+	jr c, .Fail
+	cp "<MOM>"
+	jr c, .NextChar
+
+.Fail:
+	scf
+	ret
+
+.NextChar:
+	dec c
+	jr nz, .loop
+
+.Done:
+	and a
+	ret
+
+Function17d1f1:
+	ld a, [wCurPartySpecies]
+	call SetSeenAndCaughtMon
+
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		ret nz
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
+	ret nz
+
+	ld hl, wPartyMon1DVs
+	ld a, [wPartyCount]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	predef GetUnownLetter
+	callfar UpdateUnownDex
+	ld a, [wFirstUnownSeen]
+	and a
+	ret nz
+
+	ld a, [wUnownLetter]
+	ld [wFirstUnownSeen], a
+	ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Parameter: [wScriptVar] = 0..1
+;
+; if [wScriptVar] == FALSE
+;    Show japanese menu options
+;    - News - News - ??? - Cancel
+; if [wScriptVar] == TRUE
+;    Show BattleTower-Menu with 3 options in english language
+;    - Challenge - Explanation - Cancel
+Menu_ChallengeExplanationCancel:
+	ld a, [wScriptVar]
+	and a
+	jr nz, .English
+	ld a, $4
+	ld [wScriptVar], a
+	ld hl, MenuHeader_17d26a ; Japanese Menu, where you can choose 'News' as an option
+	jr .Load_Interpret
+
+.English:
+	ld a, $4
+	ld [wScriptVar], a
+	ld hl, MenuHeader_ChallengeExplanationCancel ; English Menu
+
+.Load_Interpret:
+	call LoadMenuHeader
+	call Function17d246
+	call CloseWindow
+	ret
+
+Function17d246:
+	call VerticalMenu
+	jr c, .Exit
+	ld a, [wScriptVar]
+	cp $5
+	jr nz, .UsewMenuCursorY
+	ld a, [wMenuCursorY]
+	cp $3
+	ret z
+	jr c, .UsewMenuCursorY
+	dec a
+	jr .LoadToScriptVar
+
+.UsewMenuCursorY:
+	ld a, [wMenuCursorY]
+
+.LoadToScriptVar:
+	ld [wScriptVar], a
+	ret
+
+.Exit:
+	ld a, $4
+	ld [wScriptVar], a
+	ret
+
+MenuHeader_ChallengeExplanationCancel:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 7
+	dw MenuData_ChallengeExplanationCancel
+	db 1 ; default option
+
+MenuData_ChallengeExplanationCancel:
+	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
+	db 3
+	db "Challenge@"
+	db "Explanation@"
+	db "Cancel@"
+
+BattleTower_UbersCheck:
+	ldh a, [rSVBK]
+	push af
+	ld a, [wcd4f]
+	cp 70 / 10
+	jr nc, .level_70_or_more
+	ld a, $1
+	ldh [rSVBK], a
+	ld hl, wPartyMon1Level
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld de, wPartySpecies
+	ld a, [wPartyCount]
+.loop
+	push af
+	ld a, [de]
+	push de
+	push bc
+	push hl
+	ld hl, .ubers
+	ld de, 2
+	call IsInHalfwordArray
+	pop hl
+	pop bc
+	pop de
+	jr nc, .next
+.uber
+	ld a, [hl]
+	cp 70
+	jr c, .uber_under_70
+.next
+	add hl, bc
+	inc de
+	pop af
+	dec a
+	jr nz, .loop
+.level_70_or_more
+	pop af
+	ldh [rSVBK], a
+	and a
+	ret
+
+.ubers
+	dw MEWTWO
+	dw MEW
+	dw LUGIA
+	dw HO_OH
+	dw CELEBI
+	dw -1
+
+.uber_under_70
+	pop af
+	ld a, [de]
+	ld [wNamedObjectIndexBuffer], a
+	call GetPokemonName
+	ld hl, wStringBuffer1
+	ld de, wcd49
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	ld a, $a
+	ld [wcf66], a
+	pop af
+	ldh [rSVBK], a
+	scf
 	ret

@@ -150,7 +150,7 @@ _CGB_FinishBattleScreenLayout:
 	ret
 
 InitPartyMenuBGPal7:
-	farcall Function100dc0
+	call Function100dc0
 Mobile_InitPartyMenuBGPal7:
 	ld hl, PartyMenuBGPalette
 	jr nc, .not_mobile
@@ -163,7 +163,7 @@ Mobile_InitPartyMenuBGPal7:
 	ret
 
 InitPartyMenuBGPal0:
-	farcall Function100dc0
+	call Function100dc0
 	ld hl, PartyMenuBGPalette
 	jr nc, .not_mobile
 	ld hl, PartyMenuBGMobilePalette
@@ -172,6 +172,13 @@ InitPartyMenuBGPal0:
 	ld bc, 1 palettes
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
+	ret
+
+Function100dc0:
+	ld a, [wLinkMode]
+	ld hl, wcd2a
+	bit 3, [hl]
+	scf
 	ret
 
 _CGB_PokegearPals:

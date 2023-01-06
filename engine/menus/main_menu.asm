@@ -54,8 +54,6 @@ MainMenu:
 	dw MainMenu_NewGame
 	dw MainMenu_Options
 	dw MainMenu_MysteryGift
-	dw MainMenu_Mobile
-	dw MainMenu_MobileStudium
 
 CONTINUE       EQU 0
 NEW_GAME       EQU 1

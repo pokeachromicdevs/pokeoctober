@@ -62,9 +62,6 @@ DoMysteryGift:
 	cp 4
 	jr z, .skip_append_save
 	call .SaveMysteryGiftTrainerName
-	farcall RestoreMobileEventIndex
-	farcall StubbedTrainerRankings_MysteryGift
-	farcall BackupMobileEventIndex
 .skip_append_save
 	ld a, [wMysteryGiftPartnerSentDeco]
 	and a
@@ -1428,7 +1425,6 @@ Function105688:
 	ld hl, Text_ReceivedCard
 	call PrintText
 	ld de, wMysteryGiftTrainerData
-	farcall Function8ac70
 	ld a, c
 	ld [wDeciramBuffer], a
 	ld hl, Text_CardNotRegistered
