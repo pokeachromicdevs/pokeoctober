@@ -13,8 +13,7 @@ data/pokemon/evos_attacks.o \
 engine/movie/credits.o \
 engine/overworld/events.o \
 gfx/pics.o \
-gfx/sprites.o \
-lib/mobile/main.o
+gfx/sprites.o
 
 october_obj       := $(rom_obj:.o=.o)
 october_debug_obj := $(rom_obj:.o=_debug.o)
@@ -73,7 +72,7 @@ GIT_COMMIT   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$3}' | cut -c
 
 RGBASMFLAGS = -DGIT_VERSION="\"$(GIT_VERSION)"\" -DGIT_OFFSET="\"$(GIT_OFFSET)"\" -DGIT_COMMIT="\"$(GIT_COMMIT)"\" -DDISPLAY_DISCORD_LINK=""
 
-$(october_obj): RGBASMFLAGS += 
+$(october_obj): RGBASMFLAGS +=
 $(october_debug_obj): RGBASMFLAGS += -D_DEBUG
 
 # The dep rules have to be explicit or else missing files won't be reported.
@@ -101,7 +100,7 @@ pokeoctober-v.$(GIT_VERSION).ips: pokeoctober.gbc baserom.gbc $(IPSPATCH)
 # check if baserom == crystal 1.1
 	[ $(shell sha1sum -b baserom.gbc | cut -c 1-40) = f2f52230b536214ef7c9924f483392993e226cfb ]
 	$(IPSPATCH) create baserom.gbc pokeoctober.gbc $@
-	
+
 poke%.gbc: $$(%_obj) pokeoctober.link
 	$(RGBLINK) -n poke$*.sym -m poke$*.map -l pokeoctober.link -o $@ $(filter %.o,$^)
 	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_OCTOBER $@
