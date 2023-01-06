@@ -4,7 +4,7 @@
 	const POKECENTER2F_TIME_CAPSULE_RECEPTIONIST
 
 Pokecenter2F_MapScripts:
-	db 6 ; scene scripts
+	db 4 ; scene scripts
 	scene_script .Scene0 ; SCENE_DEFAULT
 	scene_script .Scene1 ; SCENE_POKECENTER2F_LEAVE_TRADE_CENTER
 	scene_script .Scene2 ; SCENE_POKECENTER2F_LEAVE_COLOSSEUM
