@@ -3,7 +3,7 @@
 # Usage: tools/free_space.awk pokecrystal.map
 
 BEGIN {
-	total = free = 16384 * 128
+	total = free = 16384 * 256
 }
 /^  SECTION: \$[0-7]/ {
 	free -= strtonum("0x" substr($3, 3))
