@@ -780,15 +780,17 @@ IntroScene10:
 	ld bc, vTiles1 - vTiles0
 	call Decompress
 
-	;ld c, CHIKORITA
-	;ld de, vTiles0 tile $10
-	;farcall Intro_GetMonFrontpic
-	;ld c, CYNDAQUIL
-	;ld de, vTiles0 tile $29
-	;farcall Intro_GetMonFrontpic
-	;ld c, TOTODILE
-	;ld de, vTiles0 tile $42
-	;farcall Intro_GetMonFrontpic
+	ld bc, CHIKORITA
+	ld de, vTiles0 tile $10
+	farcall Intro_GetMonFrontpic
+
+	ld bc, CYNDAQUIL
+	ld de, vTiles0 tile $29
+	farcall Intro_GetMonFrontpic
+
+	ld bc, TOTODILE
+	ld de, vTiles0 tile $42
+	farcall Intro_GetMonFrontpic
 
 	call EnableLCD
 	ld a, 0
@@ -996,18 +998,18 @@ Intro_CheckSCYEvent:
 	jp hl
 
 .scy_jumptable
-	;dbw $86, Intro_LoadChikoritaPalette
-	;dbw $87, Intro_ChikoritaAppears
-	;dbw $88, Intro_FlashMonPalette
-	;dbw $98, Intro_FlashSilhouette
-	;dbw $99, Intro_LoadCyndaquilPalette
-	;dbw $af, Intro_CyndaquilAppears
-	;dbw $b0, Intro_FlashMonPalette
-	;dbw $c0, Intro_FlashSilhouette
-	;dbw $c1, Intro_LoadTotodilePalette
-	;dbw $d7, Intro_TotodileAppears
-	;dbw $d8, Intro_FlashMonPalette
-	;dbw $e8, Intro_FlashSilhouette
+	dbw $86, Intro_LoadChikoritaPalette
+	dbw $87, Intro_ChikoritaAppears
+	dbw $88, Intro_FlashMonPalette
+	dbw $98, Intro_FlashSilhouette
+	dbw $99, Intro_LoadCyndaquilPalette
+	dbw $af, Intro_CyndaquilAppears
+	dbw $b0, Intro_FlashMonPalette
+	dbw $c0, Intro_FlashSilhouette
+	dbw $c1, Intro_LoadTotodilePalette
+	dbw $d7, Intro_TotodileAppears
+	dbw $d8, Intro_FlashMonPalette
+	dbw $e8, Intro_FlashSilhouette
 	dbw $e9, Intro_LoadCharizardPalette
 	db -1
 
@@ -1050,27 +1052,26 @@ Intro_FlashSilhouette:
 	ret
 
 Intro_LoadChikoritaPalette:
-	ld c, CHIKORITA
+	ld bc, CHIKORITA
 	farcall Intro_LoadMonPalette
 	ret
 
 Intro_LoadCyndaquilPalette:
-	ld c, CYNDAQUIL
+	ld bc, CYNDAQUIL
 	farcall Intro_LoadMonPalette
 	ret
 
 Intro_LoadTotodilePalette:
-	ld c, TOTODILE
+	ld bc, TOTODILE
 	farcall Intro_LoadMonPalette
 	ret
 
 Intro_LoadCharizardPalette:
 	ldh a, [hCGB]
 	and a
-	ld c, CYNDAQUIL
-	jr nz, .got_mon
-	ld c, CHARIZARD
-.got_mon
+; 	ld c, CYNDAQUIL
+; 	jr nz, .got_mon
+	ld bc, CHARIZARD
 	farcall Intro_LoadMonPalette
 	ret
 

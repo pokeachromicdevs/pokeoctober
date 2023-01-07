@@ -317,20 +317,13 @@ GetMonBackpic:
 	ret
 
 Intro_GetMonFrontpic: ; TODO: Fix this
-	ld a, c
+	ld h,b
+	ld l,c
+	call GetPokemonIDFromIndex
+	ld [wCurPartySpecies], a
 	push de
-	ld hl, PokemonPicPointers
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld a, BANK(PokemonPicPointers)
-	call GetFarByte
-	;call FixPicBank
-	push af
-	inc hl
-	ld a, BANK(PokemonPicPointers)
-	call GetFarHalfword
-	pop af
+		call GetFrontpicPointer
+		ld a, b
 	pop de
 	call FarDecompress
 	ret
