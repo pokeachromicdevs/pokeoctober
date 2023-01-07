@@ -116,7 +116,7 @@ GetMonSubmenuItems:
 	call ResetMonSubmenu
 	ld a, [wCurPartySpecies]
 	cp EGG
-	jr z, .egg
+	jp z, .egg
 	ld a, [wLinkMode]
 	and a
 	jr nz, .skip_moves
@@ -151,6 +151,8 @@ GetMonSubmenuItems:
 	call AddMonMenuItem
 	ld a, MONMENUITEM_MOVE
 	call AddMonMenuItem
+	call DoesEmulatorSupportMBC30
+	jr nz, .skip_follow
 	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .add_follow

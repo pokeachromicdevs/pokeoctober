@@ -120,8 +120,7 @@ ManchildSpriteGFX::            INCBIN "gfx/sprites/manchild.2bpp"
 SchoolboySpriteGFX::           INCBIN "gfx/sprites/schoolboy.2bpp"
 RockClimberSpriteGFX::         INCBIN "gfx/sprites/rock_climber.2bpp"
 
-SECTION "Followers Kanto 1", ROMX
-
+SECTION "Follower Sprites 1", ROMX
 EeveeSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"
 FarfetchdSpriteGFX::		   INCBIN "gfx/sprites/pokemon/farfetch_d.2bpp"
 ClefairySpriteGFX::		       INCBIN "gfx/sprites/pokemon/clefairy.2bpp"
@@ -163,18 +162,14 @@ NidoranMSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoran_m.2bpp"
 NidorinoSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidorino.2bpp"
 NidokingSpriteGFX::          INCBIN "gfx/sprites/pokemon/nidoking.2bpp"
 GrimerSpriteGFX::            INCBIN "gfx/sprites/pokemon/grimer.2bpp"
+
+SECTION "Follower Sprites 2", ROMX
 MukSpriteGFX::               INCBIN "gfx/sprites/pokemon/muk.2bpp"
-
-SECTION "Followers Kanto 2", ROMX
-
 PonytaSpriteGFX::            INCBIN "gfx/sprites/pokemon/ponyta.2bpp"
 RapidashSpriteGFX::          INCBIN "gfx/sprites/pokemon/rapidash.2bpp"
 TangelaSpriteGFX::           INCBIN "gfx/sprites/pokemon/tangela.2bpp"
 VulpixSpriteGFX::            INCBIN "gfx/sprites/pokemon/vulpix.2bpp"
 NinetalesSpriteGFX::         INCBIN "gfx/sprites/pokemon/ninetales.2bpp"
-
-SECTION "Followers Johto", ROMX
-
 WooperSpriteGFX::         	   INCBIN "gfx/sprites/pokemon/wooper.2bpp"
 CelebiSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/celebi.2bpp"
 YanmaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/yanma.2bpp"

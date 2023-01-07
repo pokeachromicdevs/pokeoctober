@@ -157,8 +157,12 @@ SilentTownTeacherScript:
 	end
 
 .MonIsAdorable:
+	checkmbc30
+	iffalse .PretendToSeeMon
 	checkfollower
 	iffalse .NoneFollowing
+
+.PretendToSeeMon:
 	writetext Text_YourMonIsAdorable
 	waitbutton
 	closetext

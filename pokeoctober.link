@@ -138,6 +138,7 @@ ROMX $31
 	"Sprites 2"
 ROMX $32
 	"bank32"
+	"Sprites 3"
 ROMX $33
 	"Battle Animation Stuff"
 	"Extra Songs 2"
@@ -337,6 +338,10 @@ ROMX $8a
 ROMX $8b
 	"Pics 23 Animated"
 	"Pics 24 Animated"
+ROMX $8c
+	"Follower Sprites 1"
+ROMX $8d
+	"Follower Sprites 2"
 WRAM0
 	"Stack"
 	"Audio RAM"
