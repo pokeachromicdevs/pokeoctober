@@ -7,7 +7,8 @@ mon_pic: MACRO
 ENDM
 
 	dba EggPic ; EGG is now -3, so it must go *above* the label
-	ds 3 * 2 ; unused
+	dba EggPicAnim
+	ds 3 ; unused
 	ds 3 * 3 ; unused
 	ds 3 * 3 ; unused
 PokemonPicPointers::

@@ -266,6 +266,7 @@ RemoraidFrontpicAnim:    INCBIN "gfx/pokemon/remoraid/front.animated.2bpp.lz"
 PoliwagFrontpicAnim:     INCBIN "gfx/pokemon/poliwag/front.animated.2bpp.lz"
 SunkernFrontpicAnim:     INCBIN "gfx/pokemon/sunkern/front.animated.2bpp.lz"
 ElectrodeFrontpicAnim:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
+EggPicAnim:              INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
 
 SECTION "Pics 14 Animated", ROMX
 
