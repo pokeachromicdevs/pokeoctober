@@ -3620,6 +3620,9 @@ Function_SetEnemyMonAndSendOutAnimation:
 	farcall CheckBattleScene
 	jr c, .cry_no_anim
 
+	call DoesEmulatorSupportMBC30
+	jr nz, .cry_no_anim
+
 	hlcoord 12, 0
 	ld d, $0
 	ld e, ANIM_MON_SLOW
@@ -9335,6 +9338,9 @@ BattleStartMessage:
 
 	farcall CheckBattleScene
 	jr c, .cry_no_anim
+
+	call DoesEmulatorSupportMBC30
+	jr nz, .cry_no_anim
 
 	hlcoord 12, 0
 	ld d, $0

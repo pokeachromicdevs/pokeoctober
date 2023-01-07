@@ -7,7 +7,7 @@
 #include <stdint.h>
 
 static void usage(void) {
-	printf("Usage: pokemon_animation_graphics [-o outfile] [-t mapfile] 2bpp_file dimensions_file\n");
+	printf("Usage: pokemon_animation_graphics [-o outfile] [-s static_outfile] [-a anim_outfile] [-t mapfile] 2bpp_file dimensions_file\n");
 	exit(1);
 }
 
@@ -26,6 +26,7 @@ struct Tilemap {
 struct Graphic {
 	uint8_t* data;
 	int size;
+	int static_size;
 };
 
 void transpose_tiles(uint8_t* tiles, int width, int size, int tile_size) {
@@ -147,6 +148,8 @@ void create_tilemap(struct Tilemap* tilemap, struct Graphic* graphic, char* grap
 
 	graphic->data = malloc(graphic_size);
 	graphic->size = 16 * width * height;
+	graphic->static_size = graphic->size;
+	
 	memcpy(graphic->data, graphics, graphic->size);
 	for (i = width * height; i < tilemap->size; i++) {
 		tile = get_tile_index(graphics + 16 * i, graphic->data, graphic->size / 16, i % num_tiles_per_frame);
@@ -168,6 +171,8 @@ int main(int argc, char* argv[]) {
 	char* dimensions_filename;
 	char* graphics_filename;
 	char* outfile = NULL;
+	char* static_outfile = NULL;
+	char* anim_outfile = NULL;
 	char* mapfile = NULL;
 	FILE* f;
 	uint8_t bytes[1];
@@ -181,10 +186,12 @@ int main(int argc, char* argv[]) {
 			{"girafarig", no_argument, &Options.girafarig, 1},
 			{"tilemap", required_argument, 0, 't'},
 			{"output", required_argument, 0, 'o'},
+			{"static-output", required_argument, 0, 's'},
+			{"anim-output", required_argument, 0, 'a'},
 			{0}
 		};
 		int long_option_index = 0;
-		int opt = getopt_long(argc, argv, "o:t:", long_options, &long_option_index);
+		int opt = getopt_long(argc, argv, "o:t:s:a:", long_options, &long_option_index);
 		if (opt == -1) {
 			break;
 		}
@@ -196,6 +203,12 @@ int main(int argc, char* argv[]) {
 			break;
 		case 't':
 			mapfile = optarg;
+			break;
+		case 's':
+			static_outfile = optarg;
+			break;
+		case 'a':
+			anim_outfile = optarg;
 			break;
 		default:
 			usage();
@@ -230,6 +243,22 @@ int main(int argc, char* argv[]) {
 		f = fopen_verbose(outfile, "wb");
 		if (f) {
 			fwrite(graphic.data, 1, graphic.size, f);
+			fclose(f);
+		}
+	}
+	
+	if (static_outfile) {
+		f = fopen_verbose(static_outfile, "wb");
+		if (f) {
+			fwrite(graphic.data, 1, graphic.static_size, f);
+			fclose(f);
+		}
+	}
+	
+	if (anim_outfile) {
+		f = fopen_verbose(anim_outfile, "wb");
+		if (f) {
+			fwrite(graphic.data + graphic.static_size, 1, (graphic.size - graphic.static_size), f);
 			fclose(f);
 		}
 	}

@@ -55,7 +55,7 @@ debug: pokeoctober_debug.gbc
 
 clean: tidy
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" \) -delete
-	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
+	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animation.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
 	rm -f $(roms) $(october_obj) $(october_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) *.ips
@@ -110,14 +110,22 @@ poke%.gbc: $$(%_obj) pokeoctober.link
 	tools/lzcomp -- $< $@
 
 ### Pokemon pic animation rules
+# first frame of the image
+gfx/pokemon/%/front.static.2bpp: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
+	tools/pokemon_animation_graphics -s $@ $^
 
+# the animated frames
 gfx/pokemon/%/front.animated.2bpp: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
-	tools/pokemon_animation_graphics -o $@ $^
-gfx/pokemon/%/front.animated.tilemap: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
+	tools/pokemon_animation_graphics -a $@ $^
+
+# tilemap of the animations
+gfx/pokemon/%/front.animation.tilemap: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
 	tools/pokemon_animation_graphics -t $@ $^
-gfx/pokemon/%/bitmask.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/front.dimensions
+
+gfx/pokemon/%/bitmask.asm: gfx/pokemon/%/front.animation.tilemap gfx/pokemon/%/front.dimensions
 	tools/pokemon_animation -b $^ > $@
-gfx/pokemon/%/frames.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/front.dimensions
+
+gfx/pokemon/%/frames.asm: gfx/pokemon/%/front.animation.tilemap gfx/pokemon/%/front.dimensions
 	tools/pokemon_animation -f $^ > $@
 
 

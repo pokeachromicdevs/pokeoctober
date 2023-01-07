@@ -302,6 +302,41 @@ ROMX $7f
 	"Pokemon"
 ROMX $80
 	"MBC30 Verification"
+	"Pics 1 Animated"
+	"Pics 2 Animated"
+ROMX $81
+	"Pics 3 Animated"
+	"Pics 4 Animated"
+ROMX $82
+	"Pics 5 Animated"
+	"Pics 6 Animated"
+ROMX $83
+	"Pics 7 Animated"
+	"Pics 8 Animated"
+ROMX $84
+	"Pics 9 Animated"
+	"Pics 10 Animated"
+ROMX $85
+	"Pics 11 Animated"
+	"Pics 12 Animated"
+ROMX $86
+	"Pics 13 Animated"
+	"Pics 14 Animated"
+ROMX $87
+	"Pics 15 Animated"
+	"Pics 16 Animated"
+ROMX $88
+	"Pics 17 Animated"
+	"Pics 18 Animated"
+ROMX $89
+	"Pics 19 Animated"
+	"Pics 20 Animated"
+ROMX $8a
+	"Pics 21 Animated"
+	"Pics 22 Animated"
+ROMX $8b
+	"Pics 23 Animated"
+	"Pics 24 Animated"
 WRAM0
 	"Stack"
 	"Audio RAM"
