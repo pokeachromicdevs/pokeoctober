@@ -29,8 +29,22 @@ Copyright_GFPresents:
 
 	farcall GBCOnlyScreen
 	
+	ld a, [wAPScreenTriggered]
+	and a
+	jr nz, .gamefreak
+	
+	call ClearTileMap
+	call LoadStandardFont
+	call ClearSprites
+
+	call DoesEmulatorSupportMBC30
+	jr z, .skipmbcwarn
+	call CantDetectMBC30Screen
+
+.skipmbcwarn
 	call WarningScreen
 
+.gamefreak
 ; Play GameFreak logo animation
 	call GameFreakPresentsInit
 .loop
@@ -51,14 +65,35 @@ Copyright_GFPresents:
 	scf
 	ret
 
-WarningScreen:
-	ld a, [wAPScreenTriggered]
-	and a
+WarningScreen_WaitButton:
+.loop
+	call JoyTextDelay
+	ldh a, [hJoyLast]
+	and START | A_BUTTON | B_BUTTON | SELECT
 	ret nz
+	jr .loop
 
-	call ClearTileMap
-	call LoadStandardFont
-	call ClearSprites
+CantDetectMBC30Screen:
+	hlcoord 1, 3
+	ld de, .Tx1
+	call PlaceString
+	hlcoord 1, 10
+	ld de, .Tx2
+	call PlaceString
+	call WarningScreen_PrintPressStart
+	call WarningScreen_WaitButton
+	jp ClearTileMap
+
+.Tx1:
+	db   "This system doesn't"
+	next "support the MBC30"
+	next "mapper.@"
+
+.Tx2:
+	db   "Some features will"
+	next "be unavailable.@"
+
+WarningScreen:
 	hlcoord 3, 1
 	ld de, .Header
 	call PlaceString
@@ -70,14 +105,8 @@ IF DEF(DISPLAY_DISCORD_LINK)
 	ld de, .URL
 	call PlaceString
 ENDC
-	hlcoord 4, 16
-	ld de, .PressStart
-	call PlaceString
-.loop
-	call JoyTextDelay
-	ldh a, [hJoyLast]
-	and START | A_BUTTON | B_BUTTON | SELECT
-	jr z, .loop
+	call WarningScreen_PrintPressStart
+	call WarningScreen_WaitButton
 	call ClearTileMap
 
 	ld a, 1
@@ -99,6 +128,11 @@ ENDC
 	db " discord.gg/        "
 	db "         Fc4M7cJMjC "
 	db "@"
+
+WarningScreen_PrintPressStart:
+	hlcoord 4, 16
+	ld de, .PressStart
+	jp PlaceString
 
 .PressStart:
 	db "-PRESS START-"
