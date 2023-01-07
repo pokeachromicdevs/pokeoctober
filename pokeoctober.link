@@ -300,6 +300,8 @@ ROMX $7e
 	"Pokemon Follow Sprites"
 ROMX $7f
 	"Pokemon"
+ROMX $80
+	"MBC30 Verification"
 WRAM0
 	"Stack"
 	"Audio RAM"

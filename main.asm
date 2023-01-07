@@ -682,6 +682,11 @@ if DEF(_DEBUG)
 INCLUDE "engine/debug/debug_menu.asm"
 endc
 
+; mbc30 additions
+
+SECTION "MBC30 Verification", ROMX
+	db $80 ; verification byte, DO NOT CHANGE
+
 ; --------------------------
 INCLUDE "checks/events.asm"
 INCLUDE "checks/pokemon.asm"
