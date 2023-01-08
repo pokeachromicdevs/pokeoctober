@@ -1,13 +1,13 @@
-	frame 0, 15
-    frame 1, 15
-    frame 2, 15
-    frame 1, 15
-    frame 2, 15
-    frame 1, 15
-    frame 3, 7
-    frame 1, 7
-    frame 3, 7
-    frame 1, 7
-    frame 3, 7
-    frame 0, 15
-    endanim
+	frame  0, 00
+	frame  1, 09
+	frame  2, 09
+	frame  1, 09
+	frame  2, 09
+	frame  1, 04
+	frame  3, 04
+	frame  1, 04
+	frame  3, 04
+	frame  1, 04
+	frame  3, 04
+	frame  4, 53
+	endanim

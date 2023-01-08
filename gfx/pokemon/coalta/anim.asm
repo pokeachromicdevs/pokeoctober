@@ -10,11 +10,13 @@
 	frame  8, 07
 	frame  9, 07
 	frame 10, 07
-	setrepeat 1
 	frame 11, 07
 	frame 12, 01
 	frame 13, 05
 	frame 14, 07
-	dorepeat 13
+	frame 11, 07
+	frame 12, 01
+	frame 13, 05
+	frame 14, 07
 	frame 15, 07
 	endanim
