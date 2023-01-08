@@ -142,13 +142,8 @@ ROMX $32
 ROMX $33
 	"Battle Animation Stuff"
 	"Extra Songs 2"
-ROMX $34
-	"Pic Animations 1"
-ROMX $35
-	"Pic Animations 2"
 ROMX $36
 	"Font Inversed"
-	"Pic Animations 3"
 ROMX $37
 	"Tileset Data 6"
 ROMX $38
@@ -280,8 +275,6 @@ ROMX $74
 	"Pokedex Entries 193-251"
 ROMX $75
 	"16-bit ID stuff"
-ROMX $76
-	"Pic Animations 4"
 ROMX $77
 	"bank77"
 	"Tileset Data 7"
@@ -340,6 +333,22 @@ ROMX $88
 	"Follower Sprites 1"
 ROMX $89
 	"Follower Sprites 2"
+ROMX $8a
+	"Pic Animations Engine"
+	"Pic Animations Frame Pointers"
+	"Pic Animations Unown Anims"
+	"Pic Animations Unown Idle"
+	"Pic Animations Unown Bitmasks"
+	"Pic Animations Unown Frames"
+ROMX $8b
+	"Pic Animations Anims"
+	"Pic Animations Idles"
+	"Pic Animations Bitmasks"
+ROMX $8c
+	"Pic Animations Kanto Frames"
+	"Pic Animations Johto Frames"
+ROMX $8d
+	"Pic Animations Beytah Frames"
 WRAM0
 	"Stack"
 	"Audio RAM"

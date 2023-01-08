@@ -4,21 +4,28 @@
 Generates animation frames (front.png) and its corresponding
 animation sequence (anim.asm) from a single gif.
 
-Files are output in the current working directory.
+Files are output in the specified directory -- or, if
+omitted -- the current working directory.
 
 Zumi
 '''
 
 from PIL import Image, ImageSequence
 import sys
+import os
 import itertools
 
 try:
 	with open(sys.argv[1], 'r') as x:
 		pass
 except:
-	print("usage: gif2anim.py [something.gif]")
+	print("usage: gif2anim.py [something.gif] [which directory to]")
 	exit(1)
+	
+if len(sys.argv) > 2:
+	dir = sys.argv[2]
+else:
+	dir = '.'
 
 with Image.open(sys.argv[1]) as gif:
 	frames = []
@@ -65,10 +72,14 @@ with Image.open(sys.argv[1]) as gif:
 	unique_frames = unique_frames.quantize(palette=unique_frames_)
 	
 	# save frames
-	unique_frames.save('front.png')
+	unique_frames.save(
+		os.path.join(dir,'front.png')
+	)
 	
 	# save anim data
-	with open('anim.asm', 'w') as anim_asm:
+	with open(
+		os.path.join(dir,'anim.asm')
+	, 'w') as anim_asm:
 		for i in anim_sequence:
 			anim_asm.write('\tframe %2d, %02d\n' % (i['frame'], i['duration']))
 		anim_asm.write('\tendanim\n')
