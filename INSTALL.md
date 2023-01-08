@@ -66,12 +66,14 @@ sudo apk add py3-pip
 On Debian / Ubuntu:
 ```bash
 sudo apt update
-sudo apt install libpng-dev pkg-config build-essential bison git curl
+sudo apt install libpng-dev pkg-config build-essential bison git curl 
+sudo apt install python3-pip
 ```
 
-On Arch btw (i need to test):
+On Arch btw:
 ```bash
 sudo pacman -S libpng pkgconf git curl make bison gcc
+sudo pacman -S python-pip
 ```
 
 To install **rgbds** via rgbenv:
@@ -99,6 +101,10 @@ Install Debian using AnLinux, then follow the Debian / Ubuntu instructions above
 
 ## Build pokeoctober
 
+To install **pokeoctober** Python prerequisites:
+```bash
+pip3 install --user Pillow
+```
 To download the **pokeoctober** source files:
 
 ```bash
