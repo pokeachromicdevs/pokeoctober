@@ -6,7 +6,7 @@ It uses (and derives from) [early Johto and Kanto maps](https://tcrf.net/Develop
 
 It is fully open-source, as long as credit is given to this hack. If credit is not found to be given, the hack's
 author will be notified to do so. **[Additionally, Shockslayer, as well as anyone currently working on, moderating, or developing
-the Crystal Clear project is NOT allowed to use any of the code contained within this repository. You lot have already stolen enough.](https://youtu.be/_NzVmtbPOrM?t=40)**
+the Crystal Clear project is NOT allowed to use any of the code contained within this repository. You lot have already stolen enough.](https://youtu.be/_NzVmtbPOrM?t=58)**
 
 ## Screenshots
 
