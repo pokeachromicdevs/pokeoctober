@@ -53,11 +53,23 @@ def main():
 
     pixels = [[(0xFF, 0xFF, 0xFF)] * width for _ in range(height)]
     for bank, hits in enumerate(hit_data):
-        hue = 0 if not bank else 210 if bank % 2 else 270
+        if not bank:
+            hue = 0
+        else:
+            if bank > 0x7f:
+                if bank % 2:
+                    hue = 70
+                else:
+                    hue = 170
+            else:
+                if bank % 2:
+                    hue = 210
+                else:
+                    hue = 270
         for i, h in enumerate(hits):
             y = i // bank_width
             x = i % bank_width + bank * bank_width
-            hls = (hue / 360.0, 1.0 - (h / bpp * (100 - 15)) / 100.0, 1.0)
+            hls = (hue / 360.0, 1.0 - (h / bpp * (100 - 25)) / 100.0, 1.0)
             rgb = tuple(int(c * 255) for c in hls_to_rgb(*hls))
             pixels[y][x] = rgb
 
