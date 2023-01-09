@@ -142,6 +142,8 @@ ROMX $32
 ROMX $33
 	"Battle Animation Stuff"
 	"Extra Songs 2"
+ROMX $34
+	"Pic Animations Engine"
 ROMX $36
 	"Font Inversed"
 ROMX $37
@@ -334,7 +336,6 @@ ROMX $88
 ROMX $89
 	"Follower Sprites 2"
 ROMX $8a
-	"Pic Animations Engine"
 	"Pic Animations Frame Pointers"
 	"Pic Animations Unown Anims"
 	"Pic Animations Unown Idle"
