@@ -29,10 +29,20 @@ the Crystal Clear project is NOT allowed to use any of the code contained within
 * New items (e.g. beta Apricorn Balls)
 * [Sweet Honey](https://protocrystal.neocities.org/honey) in its full glory!
 * Type weakening hold items (Fire Mane, Mystic Petal, Ice Bikini)
-* [MBC30] New animations
-* [MBC30] Walking Pokémon, with actions for certain Pokémon
+* **(MBC30 only)** New animations
+* **(MBC30 only)** Walking Pokémon, with actions for certain Pokémon
 * And more&hellip;
 
 ## Build instructions
 
 See [INSTALL.md](INSTALL.md).
+
+## Credits
+
+* Scarlax: animated sprites
+* Pik, BloodlessNX, Kam, Poket, BimbelyGimbly: various sprites
+* Darkshade: overworld Pokemon sprites
+* Celadonk, Coraldev: custom music
+* FroggestSpirit, Mmmmmmmmmmmmmmmmm: music ports
+* AtmaBuster: walking/follower system base
+* Shadow Ball, Traiyu, Quent: maps, story, dialog help
