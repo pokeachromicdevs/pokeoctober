@@ -19,6 +19,7 @@ the Crystal Clear project is NOT allowed to use any of the code contained within
 ![](screenshots/pokeoctober_debug-6.png)
 ![](screenshots/pokeoctober_debug-7.png)
 ![](screenshots/pokeoctober_debug-8.png)
+![](screenshots/pokeoctober_debug-9.png)
 
 ## Currently implemented features
 
