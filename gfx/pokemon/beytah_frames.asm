@@ -1,5 +1,4 @@
-BeytahFrames: ; used only for BANK(Beytah Frames)
-
+BeytahFrames:
 CoinpurFrames:     INCLUDE "gfx/pokemon/coinpur/frames.asm"
 AdbarstorkFrames: INCLUDE "gfx/pokemon/adbarstork/frames.asm"
 PupperonFrames:   INCLUDE "gfx/pokemon/pupperon/frames.asm"
@@ -34,3 +33,6 @@ BallerineFrames:  INCLUDE "gfx/pokemon/ballerine/frames.asm"
 FennecurseFrames: INCLUDE "gfx/pokemon/fennecurse/frames.asm"
 OrijoeyFrames: INCLUDE "gfx/pokemon/orijoey/frames.asm"
 AggroswineFrames: INCLUDE "gfx/pokemon/aggroswine/frames.asm"
+GermifrostFrames: INCLUDE "gfx/pokemon/germifrost/frames.asm"
+VegelancheFrames: INCLUDE "gfx/pokemon/vegelanche/frames.asm"
+SnouwrbunFrames:  INCLUDE "gfx/pokemon/snouwrbun/frames.asm"

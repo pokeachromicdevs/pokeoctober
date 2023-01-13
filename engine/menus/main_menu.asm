@@ -54,8 +54,6 @@ MainMenu:
 	dw MainMenu_NewGame
 	dw MainMenu_Options
 	dw MainMenu_MysteryGift
-	dw MainMenu_Mobile
-	dw MainMenu_MobileStudium
 
 CONTINUE       EQU 0
 NEW_GAME       EQU 1
@@ -242,14 +240,22 @@ MainMenu_PrintCurrentVersion:
 	db "@"
 
 .CommitString:
-	db "rev."
-	db GIT_COMMIT
-	db "("
-	db GIT_OFFSET
+IF STRLEN(GIT_COMMIT) > 0
+db "rev."
+db GIT_COMMIT
+db "("
+db GIT_OFFSET
 IF DEF(_DEBUG)
-	db "d)"
+db "d"
 endc
-	db "@"
+db ")@"
+ELSE
+IF DEF(_DEBUG)
+db "Debug@"
+ELSE
+db "@"
+endc
+endc
 
 MainMenu_PrintCurrentTimeAndDay:
 	ld a, [wSaveFileExists]

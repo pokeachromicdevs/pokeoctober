@@ -1,16 +1,5 @@
 ; Functions relating to the timer interrupt and the real-time-clock.
 
-AskTimer::
-	push af
-	ldh a, [hMobile]
-	and a
-	jr z, .not_mobile
-	call Timer
-
-.not_mobile
-	pop af
-	reti
-
 LatchClock::
 ; latch clock counter data
 	ld a, 0

@@ -1,9 +1,9 @@
 ; Every Pokémon sorted in Old Pokédex Order.
 
 OldPokedexOrder:
-	dw BULBASAUR
-	dw IVYSAUR
-	dw VENUSAUR
+	dw CHIKORITA
+	dw PETAMOLE
+	dw MEGANIUM
 	dw CYNDAQUIL
 	dw QUILAVA
 	dw TYPHLOSION
@@ -19,6 +19,7 @@ OldPokedexOrder:
 	dw HOOTHOOT
 	dw NOCTOWL
 	dw CLEFLING
+	dw MALLODY
 	dw ADBARSTORK
 	dw KIWACKI
 	dw RATTATA
@@ -74,6 +75,7 @@ OldPokedexOrder:
 	dw BELLSPROUT
 	dw WEEPINBELL
 	dw VICTREEBEL
+	dw BELLIGNAN
 	dw HOPPIP
 	dw SKIPLOOM
 	dw JUMPLUFF
@@ -114,6 +116,7 @@ OldPokedexOrder:
 	dw NIDORINO
 	dw NIDOKING
 	dw YANMA
+	dw TONBOSS
 	dw SUNKERN
 	dw SUNFLORA
 	dw EXEGGCUTE
@@ -178,9 +181,11 @@ OldPokedexOrder:
 	dw JYNX
 	dw ELEKID
 	dw ELECTABUZZ
+	dw BALLERINE
 	dw MR__MIME
 	dw SMEARGLE
 	dw FARFETCH_D
+	dw LUXSWAN
 	dw NATU
 	dw KATU
 	dw XATU
@@ -220,6 +225,11 @@ OldPokedexOrder:
 	dw SWINUB
 	dw PILOSWINE
 	dw CHOMOSWINE
+	dw AGGROSWINE
+	dw CAMOUFLAKE
+	dw GERMIFROST
+	dw VEGELANCHE
+	dw SNOUWRBUN
 	dw TEDDIURSA
 	dw URSARING
 	dw PHANPY
@@ -229,10 +239,12 @@ OldPokedexOrder:
 	dw DODAERIE
 	dw DODUO
 	dw DODRIO
+	dw COALTA
 	dw PONYTA
 	dw RAPIDASH
 	dw CUBONE
 	dw MAROWAK
+	dw ORIJOEY
 	dw KANGASKHAN
 	dw RHYHORN
 	dw RHYDON
@@ -244,6 +256,7 @@ OldPokedexOrder:
 	dw SNEASEL
 	dw WORFURS
 	dw WEARLYCAN
+	dw KOALYPTUS
 	dw MISDREAVUS
 	dw PORYGON
 	dw PORYGON2
@@ -256,9 +269,9 @@ OldPokedexOrder:
 	dw KABUTOPS
 	dw AERODACTYL
 	dw SNORLAX
-	dw CHIKORITA
-	dw PETAMOLE
-	dw MEGANIUM
+	dw BULBASAUR
+	dw IVYSAUR
+	dw VENUSAUR
 	dw CHARMANDER
 	dw CHARMELEON
 	dw CHARIZARD

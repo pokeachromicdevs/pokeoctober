@@ -31,7 +31,9 @@ EvosAttacksPointers3::
 	dw FennecurseEvoAttacks
 	dw OrijoeyEvoAttacks
 	dw AggroswineEvoAttacks
-
+	dw GermifrostEvosAttacks
+	dw VegelancheEvosAttacks
+	dw SnouwrbunEvosAttacks
 .End:
 
 AggroswineEvoAttacks:
@@ -63,18 +65,18 @@ OrijoeyEvoAttacks:
 
 FennecurseEvoAttacks:
 	db 0 ; no more evolutions
-	dbw 1, EMBER
-	dbw 1, TAIL_WHIP
-	dbw 6, QUICK_ATTACK
-	dbw 11, TEMPT
-	dbw 17, SPITE
-	dbw 22, FIRE_SPIN
-	dbw 28, CONFUSION
-	dbw 33, FLAMETHROWER
-	dbw 39, FAINT_ATTACK
-	dbw 44, CONFUSE_RAY
-	dbw 50, FIRE_BLAST
-	dbw 55, PSYCHIC
+	dbw  1, FIRE_SPIN
+	dbw  1, LEER
+	dbw  6, FAINT_ATTACK
+	dbw 12, MEAN_LOOK
+	;dbw 17, EERIE_LIGHT ; TODO
+	dbw 22, FLAME_WHEEL
+	dbw 28, WILL_O_WISP
+	dbw 34, CURSE
+	dbw 39, SHADOW_BALL
+	dbw 44, SCARY_FACE
+	dbw 50, AMBUSH
+	dbw 56, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 BallerineEvoAttacks:
@@ -233,6 +235,7 @@ MallodyEvosAttacks:
 	db 0 ; no more level-up moves
 
 CamouflakeEvosAttacks:
+	dbbw EVOLVE_LEVEL, 18, GERMIFROST
 	db 0 ; no more evolutions
 	dbw 1, ROLLOUT
 	dbw 1, GROWL
@@ -303,6 +306,7 @@ VupiiiEvosAttacks:
 
 WorfursEvosAttacks:
 	dbbw EVOLVE_LEVEL, 31, WEARLYCAN
+	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 5, QUICK_ATTACK
@@ -503,6 +507,56 @@ GorotoraEvosAttacks:
 	dbw 45, CRUNCH
 	dbw 51, THUNDERBOLT
 	dbw 58, SLASH
+	db 0 ; no more level-up moves
+
+GermifrostEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, VEGELANCHE
+	dbbw EVOLVE_ITEM, POISON_STONE, SNOUWRBUN
+	db 0 ; no more evolutions
+	dbw 1, ROLLOUT
+	dbw 1, GROWL
+	dbw 4, RAPID_SPIN
+	dbw 9, POWDER_SNOW
+	dbw 13, DEFENSE_CURL
+	dbw 18, ABSORB
+	dbw 24, CHARM
+	dbw 29, ICY_WIND
+	dbw 33, MEGA_DRAIN
+	dbw 38, MIST
+	dbw 42, ICE_BEAM
+	dbw 47, GIGA_DRAIN
+	db 0 ; no more level-up moves
+
+VegelancheEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ROLLOUT
+	dbw 1, GROWL
+	dbw 4, RAPID_SPIN
+	dbw 9, POWDER_SNOW
+	dbw 13, DEFENSE_CURL
+	dbw 18, ABSORB
+	dbw 24, CHARM
+	dbw 29, ICY_WIND
+	dbw 33, MEGA_DRAIN
+	dbw 38, MIST
+	dbw 42, ICE_BEAM
+	dbw 47, GIGA_DRAIN
+	db 0 ; no more level-up moves
+
+SnouwrbunEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ROLLOUT
+	dbw 1, GROWL
+	dbw 4, RAPID_SPIN
+	dbw 9, POWDER_SNOW
+	dbw 13, DEFENSE_CURL
+	dbw 18, ABSORB
+	dbw 24, CHARM
+	dbw 29, ICY_WIND
+	dbw 33, MEGA_DRAIN
+	dbw 38, MIST
+	dbw 42, ICE_BEAM
+	dbw 47, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
 

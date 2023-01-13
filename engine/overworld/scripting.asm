@@ -246,6 +246,7 @@ ScriptCommandTable:
 	dw Script_ifequal16                  ; b4
 	dw Script_followerstop               ; b5
 	dw Script_followerresume             ; b6
+	dw Script_checkmbc30                 ; b7
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2807,8 +2808,6 @@ Script_halloffame:
 
 	ld hl, wGameTimerPause
 	res GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]
-	farcall StubbedTrainerRankings_HallOfFame
-	farcall StubbedTrainerRankings_HallOfFame2
 	farcall HallOfFame
 	ld hl, wGameTimerPause
 	set GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]
@@ -3097,3 +3096,15 @@ Script_ifequal16:
 .apply_jump
 	pop de
 	jp Script_sjump
+
+Script_checkmbc30:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no
+; yes
+	ld a, 1
+	ld [wScriptVar], a
+	ret
+.no
+	xor a
+	ld [wScriptVar], a
+	ret

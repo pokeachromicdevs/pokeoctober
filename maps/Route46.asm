@@ -286,7 +286,7 @@ CamperCraigSeenText:
 	cont "to survive the"
 	
 	para "wilderness of"
-	line "JOHTO!"
+	line "KANSAI!"
 	done
 	
 CamperCraigBeatenText:
@@ -300,7 +300,7 @@ CamperCraigAfterBattleText:
 	cont "others explore the"
 	
 	para "natural wonders"
-	line "JOHTO has to"
+	line "KANSAI has to"
 	cont "offer."
 	done
 

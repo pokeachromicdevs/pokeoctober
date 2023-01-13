@@ -4,9 +4,14 @@ OctoberCredits_StringTable:
 
 	dw .Blank, .Blank
 
-	dw .Directors, .Blank
+	dw .Producers, .Blank
 		dw .Gabe, .Blank
 			; manager
+
+	dw .Blank, .Blank
+	dw .Blank, .Blank
+
+	dw .Directors, .Blank
 		dw .TMShadow, .Blank
 			; literally everything
 		dw .Quent, .Blank
@@ -45,6 +50,8 @@ OctoberCredits_StringTable:
 			; sprite help
 		dw .Bimble, .Blank
 			; female trainer sprite
+		dw .Darkshade, .Blank
+			; follower sprites help
 		dw .Pik, .Blank
 			; sprite help
 		dw .Bloodless, .Blank
@@ -138,6 +145,7 @@ OctoberCredits_StringTable:
 
 .Blank:         db "                    ";;
 .Directors:     db "      DIRECTORS     ";;
+.Producers:     db "      PRODUCERS     ";;
 .Programmers:   db "     PROGRAMMERS    ";;
 .Music:         db "    CUSTOM  MUSIC   ";;
 .SpriteArtists: db "   SPRITE  ARTISTS  ";;
@@ -149,10 +157,10 @@ OctoberCredits_StringTable:
 .Gabe:          db "       GS33022      ";;
 .TMShadow:      db "  TM 30 SHADOW BALL ";;
 .Zumi:          db "        ZUMI        ";;
-.Cybershell:    db "    CYBERSHELL12    ";;
+.Cybershell:    db "     CYBERSHELL12   ";;
 .Quent:         db "        QUENT       ";;
 .Celadonk:      db "      CELADONK      ";;
-.AtmaBuster:    db "     ATMABUSTER     ";;
+.AtmaBuster:    db "      ATMABUSTER    ";;
 .TastySnax:     db "     TASTYSNAX12    ";;
 .Bimble:        db "       BIMBLE       ";;
 .Scarlax:       db "       SCARLAX      ";;
@@ -182,3 +190,4 @@ OctoberCredits_StringTable:
 .ThanksFor3:    db "       DEMO 2!      ";;
 .PressStart:    db "    -PRESS START-   ";;
 .Soul:          db "     SOULCATCHER    ";;
+.Darkshade:     db "      DARKSHADE     ";;

@@ -43,7 +43,7 @@ pokeoctober.txt
 *.2bpp
 *.1bpp
 *.lz
-*.animated.tilemap
+*.animation.tilemap
 gfx/pokemon/*/bitmask.asm
 gfx/pokemon/*/frames.asm
 !gfx/pokemon/unown/bitmask.asm
@@ -55,3 +55,6 @@ pokeoctober*-*.png
 *.stackdump
 **/desktop.ini
 .tags*
+
+# internal pls don't mind this
+gfx/sprites/pokemon/buffer

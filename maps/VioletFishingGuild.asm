@@ -119,7 +119,7 @@ VioletFishingGuild_Fisher3Script:
 	line "more!"
 	para "Thankfully, the"
 	line "people here in"
-	para "JOHTO actually"
+	para "KANSAI actually"
 	line "fight back against"
 	para "pollution, espe-"
 	line "cially my new pals"
@@ -290,7 +290,7 @@ VioletFishingGuild_RodGuy:
 	line "have the other"
 	para "two, but they live"
 	line "elsewhere in"
-	cont "JOHTO."
+	cont "KANSAI."
 	para "Good luck finding"
 	line "them!"
 	done

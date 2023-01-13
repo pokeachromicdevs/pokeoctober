@@ -2,9 +2,10 @@
 	const DREADWOODS_SCHOOLBOY
 	const DREADWOODS_MANCHILD
 	const DREADWOODS_OFFICER1
-	const DREADWOODS_SAILOR
+	const DREADWOODS_SCHOOLBOY2
 	const DREADWOODS_BEAUTY
 	const DREADWOODS_OFFICER2
+	const DREADWOODS_SAILOR
 
 DreadWoods_MapScripts:
 	db 0 ; scene scripts
@@ -160,6 +161,96 @@ DreadWoods_WarnGuy:
 	cont "place ever since."
 	done
 
+TrainerBeautyNina:
+	trainer BEAUTY, NINA, EVENT_BEAT_BEAUTY_NINA, .SeenText, .BeatenText, 0, .AfterScript
+.SeenText:
+	text "Many people fear"
+	line "these woods, but I"
+	para "quite like this"
+	line "place!"
+	done
+
+.BeatenText:
+	text "Even after a loss,"
+	line "the woods soothe"
+	cont "my soul!"
+	done
+
+.AfterScript:
+	jumptextfaceplayer .AfterText
+.AfterText:
+	text "Everything here is"
+	line "so beautiful."
+	para "The trees, the"
+	line "wind<...> if there"
+	para "were beautiful"
+	line "boys here, this"
+	para "place would be"
+	line "perfect!"
+	done
+
+
+TrainerOfficerManfred:
+	trainer OFFICER, MANFRED, EVENT_BEAT_OFFICER_MANFRED, .SeenText, .BeatenText, 0, .AfterScript
+.SeenText:
+	text "Why did I have to"
+	line "be stationed here?"
+	para "This place is full"
+	line "of ghosts!"
+	done
+
+.BeatenText:
+	text "I-it's not like"
+	line "I'm scared!"
+	done
+
+.AfterScript:
+	jumptextfaceplayer .AfterText
+.AfterText:
+	text "I ain't afraid of"
+	line "no ghosts!"
+	para "It's just that"
+	line "there's more"
+	para "exciting things I"
+	line "could be doing"
+	para "than sitting"
+	line "around in a lousy"
+	cont "forest!"
+	para "Yeah!"
+	done
+
+TrainerSailorEdward:
+	trainer SAILOR, SAILOR_EDWARD, EVENT_BEAT_SAILOR_EDWARD, .SeenText, .BeatenText, 0, .AfterScript
+.SeenText:
+	text "Argh! I'm going to"
+	line "build me pirate"
+	para "headquarters here,"
+	line "or my name isn't"
+	para "EDWARD, ruler of"
+	line "the KANSAI seas!"
+	done
+
+.BeatenText:
+	text "Ye POLIWAG!"
+	para "How dare ye defy"
+	line "me?!"
+	done
+
+.AfterScript:
+	jumptextfaceplayer .AfterText
+.AfterText:
+	text "I won't make ye"
+	line "walk the plank for"
+	cont "beating me."
+	para "Not today,"
+	line "anyways."
+	para "Consider yourself"
+	line "lucky, ye"
+	cont "scoundrel."
+	done
+
+
+
 DreadWoods_MapEvents:
 	db 0, 0 ; filler
 
@@ -176,8 +267,11 @@ DreadWoods_MapEvents:
 	bg_event 15, 15, BGEVENT_READ, DreadWoods_NightMonSign
 	bg_event  5, 29, BGEVENT_READ, DreadWoods_BewareSign
 
-	db 4 ; object events
+	db 7 ; object events
 	object_event 22, 7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerSchoolboyAndy, -1
 	object_event 21, 15, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 2, TrainerManchildMiguel, -1
 	object_event 14, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, DreadWoods_SleepyCopScript, EVENT_BEAT_WHITNEY
 	object_event  6, 30, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, -1, DreadWoods_WarnGuy, -1
+	object_event 25, 34, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerBeautyNina, -1
+	object_event 23, 25, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerOfficerManfred, -1
+	object_event  8, 37, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerSailorEdward, -1

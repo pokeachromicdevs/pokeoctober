@@ -94,6 +94,20 @@ _GetFrontpic:
 	ld a, b
 	ld de, wDecompressScratch
 	call FarDecompress
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_animation
+; if MBC30 - load animation tiles
+	push de
+		ld a, BANK(wCurPartySpecies)
+		ldh [rSVBK], a
+		; mbc30
+		call GetFrontAnimPicPointer
+		ld a, BANK(wDecompressScratch)
+		ldh [rSVBK], a
+		ld a, b
+	pop de
+	call FarDecompress ; decompress directly after static image
+.no_animation
 	; calculate tile count from final address; requires wDecompressScratch to be at the beginning of the bank
 	swap e
 	swap d
@@ -139,19 +153,33 @@ GetPicIndirectPointer:
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
 .done
-	ld a, 6
+	ld a, 9 ; frontpic + frontpicanim + backpic
 	jp AddNTimes
 
 .unown
 	ld a, [wUnownLetter]
 	ld c, a
 	ld b, 0
-	ld hl, UnownPicPointers - 6
+	ld hl, UnownPicPointers - 9
 	ld d, BANK(UnownPicPointers)
 	jr .done
 
 GetFrontpicPointer:
 	call GetPicIndirectPointer
+	ld a, d
+	call GetFarByte
+	push af
+	inc hl
+	ld a, d
+	call GetFarHalfword
+	pop bc
+	ret
+
+GetFrontAnimPicPointer:
+	call GetPicIndirectPointer
+	inc hl
+	inc hl
+	inc hl ; skip frontpic
 	ld a, d
 	call GetFarByte
 	push af
@@ -263,7 +291,10 @@ GetMonBackpic:
 
 	inc hl
 	inc hl
+	inc hl ; skip Frontpic
 	inc hl
+	inc hl
+	inc hl ; skip FrontpicAnim
 	ld a, d
 	call GetFarByte
 	push af
@@ -285,21 +316,14 @@ GetMonBackpic:
 	ldh [rSVBK], a
 	ret
 
-Intro_GetMonFrontpic:
-	ld a, c
+Intro_GetMonFrontpic: ; TODO: Fix this
+	ld h,b
+	ld l,c
+	call GetPokemonIDFromIndex
+	ld [wCurPartySpecies], a
 	push de
-	ld hl, PokemonPicPointers
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld a, BANK(PokemonPicPointers)
-	call GetFarByte
-	;call FixPicBank
-	push af
-	inc hl
-	ld a, BANK(PokemonPicPointers)
-	call GetFarHalfword
-	pop af
+		call GetFrontpicPointer
+		ld a, b
 	pop de
 	call FarDecompress
 	ret

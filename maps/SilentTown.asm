@@ -157,7 +157,19 @@ SilentTownTeacherScript:
 	end
 
 .MonIsAdorable:
+	checkmbc30
+	iffalse .PretendToSeeMon
+	checkfollower
+	iffalse .NoneFollowing
+
+.PretendToSeeMon:
 	writetext Text_YourMonIsAdorable
+	waitbutton
+	closetext
+	end
+
+.NoneFollowing:
+	writetext Text_WheresYourMon
 	waitbutton
 	closetext
 	end
@@ -187,6 +199,7 @@ SilentTownSilverBattleScript:
 .got_movement
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
+	setlasttalked NEWBARKTOWN_SILVER_2 ; ensure rival is visible
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext TimeToBattle
@@ -196,7 +209,6 @@ SilentTownSilverBattleScript:
 	waitbutton
 	closetext
 ; player has:
-	setlasttalked NEWBARKTOWN_SILVER_2 ; ensure rival is visible
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .TOTODILE
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
@@ -493,6 +505,15 @@ Text_YourMonIsAdorable:
 	text "Oh! Your #MON"
 	line "is adorable!"
 	cont "I wish I had one!"
+	done
+
+Text_WheresYourMon:
+	text "You got a #MON"
+	line "at the LAB?"
+	para "Can I see it,"
+	line "please?"
+	para "Take it for a"
+	line "walk with you!"
 	done
 
 Text_TellMomIfLeaving:

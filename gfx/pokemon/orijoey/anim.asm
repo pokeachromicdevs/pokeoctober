@@ -7,10 +7,10 @@
 	frame  5, 07
 	frame  6, 07
 	frame  5, 07
-	frame  7, 07
+	frame  4, 07
 	frame  5, 07
 	frame  6, 07
 	frame  5, 07
-	frame  8, 03
-	frame  9, 07
+	frame  3, 03
+	frame  7, 07
 	endanim

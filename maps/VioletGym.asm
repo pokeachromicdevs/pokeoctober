@@ -153,7 +153,7 @@ WhitneyBeforeText:
 	line "roughest, tough-"
 	cont "girl on this side"
 
-	para "of JOHTO! I've"
+	para "of KANSAI! I've"
 	line "even gone toe-to-"
 	cont "toe with wild"
 

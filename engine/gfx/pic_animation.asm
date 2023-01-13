@@ -150,67 +150,88 @@ ENDM
 	setup_command PokeAnim_StereoCry
 
 PokeAnim_SetWait:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_anim
 	ld a, 18
 	ld [wPokeAnimWaitCounter], a
+.no_anim
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
 
 PokeAnim_Wait:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_anim
 	ld hl, wPokeAnimWaitCounter
 	dec [hl]
 	ret nz
+.no_anim
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
 	ret
 
 PokeAnim_Setup:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_anim
 	ld c, FALSE
 	ld b, 0
 	call PokeAnim_InitAnim
 	call PokeAnim_SetVBank1
+.no_anim
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
 	ret
 
 PokeAnim_Setup2:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_anim
 	ld c, FALSE
 	ld b, 4
 	call PokeAnim_InitAnim
 	call PokeAnim_SetVBank1
+.no_anim
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
 	ret
 
 PokeAnim_Idle:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_anim
 	ld c, TRUE
 	ld b, 0
 	call PokeAnim_InitAnim
 	call PokeAnim_SetVBank1
+.no_anim
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
 	ret
 
 PokeAnim_Play:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_anim
 	call PokeAnim_DoAnimScript
 	ld a, [wPokeAnimJumptableIndex]
 	bit 7, a
 	ret z
 	call PokeAnim_PlaceGraphic
+.no_anim
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
 	ret
 
 PokeAnim_Play2:
+	call DoesEmulatorSupportMBC30
+	jr nz, .no_anim
 	call PokeAnim_DoAnimScript
 	ld a, [wPokeAnimJumptableIndex]
 	bit 7, a
 	ret z
+.no_anim
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a

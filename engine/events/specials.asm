@@ -92,7 +92,7 @@ NameRival:
 
 .default
 	db "SILVER@"
-	
+
 NameMom:
 	farcall ShowMomNamingChoices
 	ld a, [wMenuCursorY]
@@ -228,14 +228,6 @@ CardFlip:
 	ret c
 	ld a, BANK(_CardFlip)
 	ld hl, _CardFlip
-	call StartGameCornerGame
-	ret
-
-DummyNonfunctionalGameCornerGame:
-	call CheckCoinsAndCoinCase
-	ret c
-	ld a, BANK(_DummyGame)
-	ld hl, _DummyGame
 	call StartGameCornerGame
 	ret
 

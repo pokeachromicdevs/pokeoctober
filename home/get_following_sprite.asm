@@ -88,6 +88,7 @@ LoadFollowingPokemonPalette:
 	; in this case we don't care about time of day
 	ld de, wOBPals1 palette PAL_OW_FOLLOWER
 	ld a, BANK(wOBPals1)
+	ld bc, 1 palettes
 	call FarCopyWRAM
 
 	ld a, [hSavedROMBank]

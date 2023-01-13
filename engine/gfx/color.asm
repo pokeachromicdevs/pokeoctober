@@ -206,33 +206,10 @@ Unreferenced_Function8b67:
 	jp LoadHLPaletteIntoDE
 
 Intro_LoadMonPalette:
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld a, c
-	push af
-	ld hl, PalPacket_9ce6
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop af
-	call GetMonPalettePointer
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hl]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	jp PushSGBPals
-
-.cgb
 	ld de, wOBPals1
-	ld a, c
+	ld h, b
+	ld l, c
+	call GetPokemonIDFromIndex
 	call GetMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ret

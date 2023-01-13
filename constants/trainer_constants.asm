@@ -244,7 +244,7 @@ KRIS EQU __enum__
 	const CARA
 
 	trainerclass BEAUTY ; 1d
-	const VICTORIA
+	const NINA
 	const SAMANTHA
 	const JULIE
 	const JACLYN
@@ -434,7 +434,7 @@ KRIS EQU __enum__
 	const BRIANA
 
 	trainerclass SAILOR ; 28
-	const EUGENE
+	const SAILOR_EDWARD
 	const HUEY1
 	const TERRELL
 	const KENT
@@ -510,6 +510,7 @@ KRIS EQU __enum__
 	const RILEY
 	const JOEL
 	const GLENN
+	const HARLEY
 
 	trainerclass BLAINE ; 2e
 	const BLAINE1
@@ -710,7 +711,7 @@ KRIS EQU __enum__
 	const BLUE1
 
 	trainerclass OFFICER ; 41
-	const KEITH
+	const MANFRED
 	const DIRK
 	const MATT
 	const SAMSON

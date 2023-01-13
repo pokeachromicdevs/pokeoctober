@@ -1469,6 +1469,13 @@ _MonCantFollowText::
 	line "follow you!"
 	prompt
 
+_MonRefusedFollowText::
+	text_ram wMonOrItemNameBuffer
+	text ""
+	line "refused to tag"
+	cont "along<...>"
+	prompt
+
 UnknownText_0x1c1c09::
 	text "This item can't be"
 	line "held."

@@ -109,7 +109,6 @@ PokecenterNurseScript:
 	farwritetext NurseTakePokemonText
 	pause 20
 	hidefollower
-	special StubbedTrainerRankings_Healings
 	turnobject LAST_TALKED, LEFT
 	pause 10
 	special HealParty
@@ -687,7 +686,7 @@ NumberAcceptedMScript:
 	ifequal PHONE_FISHER_WILTON, .Wilton
 	ifequal PHONE_BLACKBELT_KENJI, .Kenji
 	ifequal PHONE_HIKER_PARRY, .Parry
-	
+
 .Huey:
 	farwritetext HueyNumberAcceptedText
 	waitbutton

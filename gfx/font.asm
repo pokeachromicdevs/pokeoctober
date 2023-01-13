@@ -42,8 +42,7 @@ PokegearPhoneIconGFX:
 INCBIN "gfx/font/phone_icon.2bpp"
 
 UnusedBoldFontGFX: ; unused bold letters + unown chars
-INCBIN "gfx/font/unused_bold_font.1bpp"
-
+;INCBIN "gfx/font/unused_bold_font.1bpp"
 TextboxSpaceGFX:
 INCBIN "gfx/frames/space.1bpp"
 

@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const EARLSPOKEMONACADEMY_EARL
+	const EARLSPOKEMONACADEMY_BOOK_YOUNGSTER
 
 EarlsPokemonAcademy_MapScripts:
 	db 0 ; scene scripts
@@ -165,6 +166,11 @@ EarlsPokemonAcademy_NotebookScript:
 	iffalse .done
 	writetext .Text3
 	waitbutton
+	closetext
+	turnobject EARLSPOKEMONACADEMY_BOOK_YOUNGSTER, UP
+	opentext
+	writetext .Text4
+	waitbutton
 .done
 	closetext
 	end
@@ -224,8 +230,10 @@ EarlsPokemonAcademy_NotebookScript:
 
 	para "The next page"
 	line "is… Blank!"
+	done
 
-	para "Boy: E-he-he…"
+.Text4:
+	text "Boy: E-he-he…"
 
 	para "I haven't written"
 	line "anymore…"

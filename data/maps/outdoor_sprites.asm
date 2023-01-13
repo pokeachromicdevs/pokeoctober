@@ -233,7 +233,8 @@ AzaleaGroupSprites:
 		static_sprite SPRITE_SHUCKLE
 		static_sprite SPRITE_SOLDIER
 		static_sprite SPRITE_LASS
-		static_sprite SPRITE_POKEFAN_F
+		;static_sprite SPRITE_POKEFAN_F
+		static_sprite SPRITE_BIKER
 	end_outdoor_sprites
 
 GoldenrodGroupSprites:

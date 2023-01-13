@@ -165,6 +165,9 @@ MonStopFollowAction:
 	jp CancelPokemonAction
 
 MonFollowAction:
+	callfar IsMonFollowBlacklisted
+	jr c, .refused_follow
+
 	callfar IsMonFainted
 	jr nz, .do_follow
 
@@ -173,6 +176,15 @@ MonFollowAction:
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 	ld hl, MonCantFollowText
+	call PrintText
+	jp CancelPokemonAction
+
+.refused_follow
+	ld hl, wStringBuffer1
+	ld de, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	ld hl, MonRefusedFollowText
 	call PrintText
 	jp CancelPokemonAction
 
@@ -494,6 +506,10 @@ MonCantFollowText:
 	text_far _MonCantFollowText
 	text_end
 
+MonRefusedFollowText:
+	text_far _MonRefusedFollowText
+	text_end
+
 SwitchAlreadyHoldingText:
 	text_far UnknownText_0x1c1bdc
 	text_end
@@ -703,7 +719,6 @@ MonMenu_WindRide:
 	jr z, .Fail
 	cp $0
 	jr z, .Error
-	farcall StubbedTrainerRankings_Fly
 	ld b, $4
 	ld a, $2
 	ret

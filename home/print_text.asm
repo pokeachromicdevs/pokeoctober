@@ -94,7 +94,6 @@ PrintNum::
 	ret
 
 MobilePrintNum::
-	homecall _MobilePrintNum
 	ret
 
 FarPrintText::

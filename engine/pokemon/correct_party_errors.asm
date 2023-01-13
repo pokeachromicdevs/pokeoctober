@@ -108,7 +108,6 @@ Unreferenced_CorrectPartyErrors:
 	push bc
 	call .GetLengthOfStringWith6CharCap
 	push de
-	farcall CheckStringForErrors
 	pop hl
 	pop bc
 	jr nc, .valid_nickname
@@ -146,7 +145,6 @@ Unreferenced_CorrectPartyErrors:
 	push bc
 	call .GetLengthOfStringWith6CharCap
 	push de
-	farcall CheckStringForErrors
 	pop hl
 	jr nc, .valid_ot_name
 	ld d, h

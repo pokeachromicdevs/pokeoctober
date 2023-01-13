@@ -1,10 +1,10 @@
-	db "BIG EATER@" ; species name
-	dw 200, 2315 ; height, weight
+	db "MELODY@" ; species name
+	dw 200, 100 ; height, weight
 
-	db   "In its desperation"
-	next "to gulp down food,"
-	next "it forgets about"
+	db  "MALLODY can make"
+	next "thousands of"
+	next "melodies using its"
 
-	page "the food it has"
-	next "hidden under its"
-	next "fur.@"
+	page "voice, from"
+	next "high-pitched opera"
+	next "to low growls.@"

@@ -1136,3 +1136,8 @@ ENDM
 followerresume: MACRO ; resumes walking pokemon
 	db followerresume_command
 ENDM
+
+	enum checkmbc30_command
+checkmbc30: MACRO ; checks if MBC30 is supported by the hardware, returns 1 if true
+	db checkmbc30_command
+ENDM

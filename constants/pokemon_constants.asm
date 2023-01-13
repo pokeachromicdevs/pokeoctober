@@ -312,6 +312,9 @@ JOHTO_POKEMON EQU const_value
 	const FENNECURSE
 	const ORIJOEY
 	const AGGROSWINE
+	const GERMIFROST
+	const VEGELANCHE
+	const SNOUWRBUN
 
 NUM_POKEMON EQU const_value + -1
 

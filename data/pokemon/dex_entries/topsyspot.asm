@@ -1,10 +1,10 @@
-	db "BIG EATER@" ; species name
-	dw 200, 2315 ; height, weight
+	db "DARKNESS@" ; species name
+	dw 502, 1023 ; height, weight
 
-	db   "In its desperation"
-	next "to gulp down food,"
-	next "it forgets about"
+	db   "The evil side of"
+	next "GIRAFARIG has"
+	next "taken over the"
 
-	page "the food it has"
-	next "hidden under its"
-	next "fur.@"
+	page "body, leaving it"
+	next "as a husk of its"
+	next "former self.@"

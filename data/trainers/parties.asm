@@ -82,15 +82,15 @@ BugsyGroup:
 MortyGroup:
 	next_party ; MORTY (1)
 		db "MORTY@", TRAINERTYPE_MOVES
-		db 34
+		db 29
 		dw HAUNTER
 		dw HYPNOSIS, MIMIC, CURSE, NIGHT_SHADE
-		db 35
-		dw TOPSYSPOT
+		db 30
+		dw GIRAFARIG
 		dw STOMP, PSYBEAM, LICK, CONFUSE_RAY
-		db 37
+		db 32
 		dw FENNECURSE
-		dw SPITE, FIRE_SPIN, CONFUSION, FLAMETHROWER
+		dw SHADOW_BALL, FIRE_SPIN, CONFUSION, FLAMETHROWER
 	end_party
 	end_party_list
 
@@ -1722,13 +1722,10 @@ CooltrainerFGroup:
 
 BeautyGroup:
 	next_party ; BEAUTY (1)
-	db "VICTORIA@", TRAINERTYPE_NORMAL
-	db 9
-	dw SENTRET
-	db 13
-	dw SENTRET
-	db 17
-	dw SENTRET
+	db "NINA@", TRAINERTYPE_NORMAL
+	dbw 14, MAREEP
+	dbw 17, MARILL
+	dbw 17, MISDREAVUS
 	end_party
 
 	next_party ; BEAUTY (2)
@@ -1859,7 +1856,7 @@ BeautyGroup:
 		db     TRAINERTYPE_NORMAL
 		;dbw    25, PANGSHI
 		dbw    25, GASTLY
-		;dbw    26, <something>
+		dbw    26, HAUNTER
 	end_party
 
 	next_party
@@ -3106,13 +3103,11 @@ SwimmerFGroup:
 
 SailorGroup:
 	next_party ; SAILOR (1)
-	db "EUGENE@", TRAINERTYPE_NORMAL
-	db 17
-	dw POLIWHIRL
-	db 17
-	dw RATICATE
-	db 19
-	dw KRABBY
+	db "EDWARD@", TRAINERTYPE_NORMAL
+	dbw 14, SPEAROW
+	dbw 15, MURKROW
+	dbw 17, MACHOP
+	dbw 17, KRABBY
 	end_party
 
 	next_party ; SAILOR (2)
@@ -3785,6 +3780,13 @@ BikerGroup:
 	dw WEEZING
 	end_party
 
+	next_party
+		string "HARLEY"
+		db     TRAINERTYPE_NORMAL
+		dbw    19, KOFFING
+		dbw    20, SMUJJ
+	end_party
+
 	end_party_list
 
 BlaineGroup:
@@ -3880,10 +3882,10 @@ FirebreatherGroup:
 
 	next_party ; FIREBREATHER (6)
 	db "WALT@", TRAINERTYPE_NORMAL
-	db 11
-	dw MAGMAR
-	db 13
-	dw MAGMAR
+	db 20
+	dw MAGBY
+	db 21
+	dw COALTA
 	end_party
 
 	next_party ; FIREBREATHER (7)
@@ -3907,13 +3909,11 @@ FirebreatherGroup:
 JugglerGroup:
 	next_party ; JUGGLER (1)
 	db "IRWIN@", TRAINERTYPE_NORMAL
-	db 2
+	db 18
 	dw VOLTORB
-	db 6
+	db 19
 	dw VOLTORB
-	db 10
-	dw VOLTORB
-	db 14
+	db 20
 	dw VOLTORB
 	end_party
 
@@ -4670,8 +4670,8 @@ MediumGroup:
 	next_party
 		string "DOROTHY"
 		db     TRAINERTYPE_NORMAL
-		dbw    27, BIPULLA
-		dbw    28, MISDREAVUS
+		dbw    25, BIPULLA
+		dbw    26, MISDREAVUS
 	end_party
 
 	end_party_list
@@ -5027,9 +5027,11 @@ BlueGroup:
 
 OfficerGroup:
 	next_party ; OFFICER (1)
-	db "KEITH@", TRAINERTYPE_NORMAL
-	db 17
-	dw GROWLITHE
+	db "MANFRED@", TRAINERTYPE_NORMAL
+	dbw 15, ABRA
+	dbw 15, REMORAID
+	dbw 18, BALLERINE
+	dbw 19, SNUBBULL
 	end_party
 
 	next_party ; OFFICER (2)
@@ -5199,9 +5201,9 @@ InstructorGroup:
 	next_party
 		string "FRANK"
 		db     TRAINERTYPE_MOVES
-		dbw    25, HAUNTER
+		dbw    23, HAUNTER
 		dw     CURSE, NIGHT_SHADE, SPITE, NO_MOVE
-		dbw    26, GIRAFARIG
+		dbw    25, BIPULLA
 		dw     AGILITY, CONFUSION, FORESIGHT, FORESIGHT
 	end_party
 
@@ -5267,7 +5269,8 @@ SoldierGroup:
 	next_party
 		string "GRANT"
 		db TRAINERTYPE_NORMAL
-		dbw 25, MISDREAVUS
+		dbw 23, GASTLY
+		dbw 24, MISDREAVUS
 		;dbw 27, PHANDARIN ; XXX
 	end_party
 

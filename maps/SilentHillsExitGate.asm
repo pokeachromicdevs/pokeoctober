@@ -26,7 +26,7 @@ WoodsExitGateSportsmanText:
 	line "done with my run"
 	cont "across all of"
 	
-	para "JOHTO! All I have"
+	para "KANSAI! All I have"
 	line "to do now is head"
 	cont "to SILENT TOWN!"
 	done

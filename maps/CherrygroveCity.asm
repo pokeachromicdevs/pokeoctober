@@ -432,7 +432,7 @@ CherrygroveTeacherText_NoMapCard:
 	cont "east gate?"
 
 	para "He'll put a MAP of"
-	line "JOHTO on your"
+	line "KANSAI on your"
 	cont "#GEAR."
 	done
 

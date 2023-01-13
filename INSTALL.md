@@ -1,11 +1,12 @@
 # Instructions
 
-These instructions explain how to set up the tools required to build **pokecrystal**, including [**rgbds**](https://github.com/rednex/rgbds), which assembles the source files into a ROM.
+These instructions *try to* explain how to set up the tools required to build **pokeoctober**, including RGBDS, which assembles the source files into a ROM.
 
-If you run into trouble, ask for help on IRC or Discord (see [README.md](README.md)).
+I'm shilling rgbenv here, I really don't want to have to keep up with new RGBDS versions deprecating everything every fortnight.
 
+inb4 they include rgbenv as a contrib script right before they release the Rust rewrite. Now that's trolling par excellence, gbdev style. GB dev is cool now.
 
-## Windows 10
+## Windows 10+
 
 Download and install [**Windows Subsystem for Linux**](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Then open the **WSL terminal**.
 
@@ -21,165 +22,98 @@ cd /mnt/c/Users/<user>/Desktop
 
 Then follow [the instructions for **Linux**](#linux).
 
-If this doesn't work, try following [the regular Windows instructions](#windows) below.
-
-
 ## Windows
 
-Download [**Cygwin**](http://cygwin.com/install.html): **setup-x86_64.exe** for 64-bit Windows, **setup-x86.exe** for 32-bit.
+Soon.
 
-Run setup and leave the default settings. At the "**Select Packages**" step, choose to install the following, all of which are in the "**Devel**" category:
+## Windows... XP?!
 
-- `make`
-- `git`
-- `gcc-core`
+All I know is that you need to "install" MSYS2 by copying a folder from [this 7zip archive](https://drive.google.com/file/d/1f0hXRpA0guvsQWfeJSWAtgKx0_HYm9AS/view?usp=sharing).
 
-Double click on the text that says "**Skip**" next to each package to select the most recent version to install.
+Then skip to the Linux rgbenv install instructions.
 
-Then download [**rgbds**](https://github.com/rednex/rgbds/releases/): the latest **win64.zip** or **win32.zip** release. Extract it and put all the `exe` and `dll` files individually in **C:\cygwin64\usr\local\bin**.
-
-**Note: If you already have an older rgbds, you will need to update to 0.3.8.** Ignore this if you have never installed rgbds before. If a version newer than 0.3.8 does not work, try downloading 0.3.8.
-
-Now open the **Cygwin terminal** and enter the following commands.
-
-Cygwin has its own file system that's within Windows, at **C:\cygwin64\home\\*\<user>***. If you don't want to store pokecrystal there, you'll have to change the **current working directory** every time you open Cygwin.
-
-For example, if you want to store pokecrystal in **C:\Users\\*\<user>*\Desktop**:
-
-```bash
-cd /cygdrive/c/Users/<user>/Desktop
-```
-
-(The Windows `C:\` drive is called `/cygdrive/c/` in Cygwin. Replace *\<user>* in the example path with your username.)
-
-Now you're ready to [build **pokecrystal**](#build-pokecrystal).
-
+You'll be happy to know that BGB still runs fine on XP. VBA can be used for testing incompatibilities.
 
 ## Mac OS X
 
-Open **Terminal** and enter the following commands.
-
-To install the **Xcode Command Line Tools**:
-
-```bash
-xcode-select --install
-```
-
-To install **rgbds**:
-
-```bash
-git clone --depth=1 https://github.com/rednex/rgbds
-sudo make -C rgbds CFLAGS=-O2 install
-```
-
-Now you're ready to [build **pokecrystal**](#build-pokecrystal).
-
+I wish I had one to test.
 
 ## Linux
 
-Open **Terminal** and enter the following commands, depending on which distro you're using.
-
-### Debian or Ubuntu
-
-To install the software required for **pokecrystal**:
-
-```bash
-sudo apt-get install make gcc git
-```
-
-To install **rgbds**:
-
-```bash
-sudo apt-get install pkg-config flex bison libpng-dev
-git clone --depth=1 https://github.com/rednex/rgbds
-sudo make -C rgbds CFLAGS=-O2 install
-```
-
-### OpenSUSE
-
-To install the software required for **pokecrystal**:
-
-```bash
-sudo zypper install make gcc git
-```
-
-To install **rgbds**:
-
-```bash
-sudo zypper install pkg-config flex bison libpng16-devel
-git clone --depth=1 https://github.com/rednex/rgbds
-sudo make -C rgbds CFLAGS=-O2 install
-```
-
-### Arch Linux
-
-To install the software required for **pokecrystal**:
-
-```bash
-sudo pacman -S make gcc git
-```
-
-**rgbds** is available on the [AUR](https://aur.archlinux.org/packages/rgbds/).
-
-Alternatively, to install **rgbds** manually:
-
-```bash
-sudo pacman -S pkg-config flex bison libpng
-git clone --depth=1 https://github.com/rednex/rgbds
-sudo make -C rgbds CFLAGS=-O2 install
-```
-
-### Termux
-
-To install the software required for **pokecrystal**:
-
-```bash
-sudo apt install make clang git sed
-```
-
-To install **rgbds**:
-
-```bash
-sudo apt install rgbds
-```
-
-### Other distros
-
-If your distro is not listed here, try to find the required software in its repositories:
+Try to find the required software in its repositories:
 
 - `make`
 - `gcc` (or `clang`)
 - `git`
-- `rgbds`
+- `python3`
+- `python3-pip`
 
-If `rgbds` is not available, you'll also need these:
+You'll also need these:
 
 - `pkg-config`
 - `flex`
 - `bison`
 - `libpng` (and the development headers)
+- `curl`
 
-To install **rgbds**:
+To install them in Alpine Linux:
 
 ```bash
-git clone --depth=1 https://github.com/rednex/rgbds
-sudo make -C rgbds CFLAGS=-O2 install
+sudo apk add findutils coreutils grep git curl make pkgconfig gcc libc-dev libpng-dev bison
+sudo apk add py3-pip
 ```
 
-Now you're ready to [build **pokecrystal**](#build-pokecrystal).
-
-
-## Build pokecrystal
-
-To download the **pokecrystal** source files:
-
+On Debian / Ubuntu:
 ```bash
-git clone https://github.com/pret/pokecrystal
-cd pokecrystal
+sudo apt update
+sudo apt install libpng-dev pkg-config build-essential bison git curl 
+sudo apt install python3-pip
 ```
 
-To build **pokecrystal.gbc**:
+On Arch btw:
+```bash
+sudo pacman -S libpng pkgconf git curl make bison gcc
+sudo pacman -S python-pip
+```
+
+To install **rgbds** via rgbenv:
 
 ```bash
-make
+sudo sh -c 'curl https://raw.githubusercontent.com/ZoomTen/rgbenv/master/rgbenv > /usr/local/bin/rgbenv'
+
+sudo chmod +x /usr/local/bin/rgbenv
+
+rgbenv install 0.4.1
+
+source ~/.profile
+```
+
+Verify your installation:
+```bash
+rgbasm -V
+```
+
+### Termux
+
+Install Debian using AnLinux, then follow the Debian / Ubuntu instructions above.
+
+**Good luck devving with this.**
+
+## Build pokeoctober
+
+To install **pokeoctober** Python prerequisites:
+```bash
+pip3 install --user Pillow
+```
+To download the **pokeoctober** source files:
+
+```bash
+git clone https://github.com/pokeachromicdevs/pokeoctober
+cd pokeoctober
+```
+
+To build **pokeoctober.gbc**:
+
+```bash
+rgbenv exec make
 ```

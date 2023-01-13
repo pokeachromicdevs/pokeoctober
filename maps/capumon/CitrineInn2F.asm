@@ -15,7 +15,6 @@ CitrineInn2F_HealMons:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	playmusic MUSIC_CITRINE_INN_REST
-	special StubbedTrainerRankings_Healings
 	special HealParty
 	pause 80
 	special FadeInQuickly
@@ -65,4 +64,3 @@ CitrineInn2F_MapEvents:
 	db 2 ; object events
 	object_event  8,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event 13,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-

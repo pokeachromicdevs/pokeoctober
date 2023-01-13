@@ -678,7 +678,7 @@ Debug_Warp:
 .LocNames:
 	db "HOME@@@@@@@@@"
 	db "DEBUG@@@@@@@@"
-	db " -- JOHTO --@"
+	db "-- KANSAI --@"
 	db "SILENT@@@@@@@"
 	db "SHIZUKANAOKA@"
 	db "CHERRYGROVE@@"

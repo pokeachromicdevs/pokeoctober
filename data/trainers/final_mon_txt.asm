@@ -14,6 +14,7 @@ FinalMonTexts::
 
 ; execs
 	dbw KAREN, .KarenText
+	dbw WILL,  .WillText
 	;dbw GIOVANNI, .GiovanniText
 
 ; e4
@@ -91,6 +92,11 @@ FinalMonTexts::
 	text "Why, you little"
 	line "nuisance<...>!"
 	para "I'll squash you!"
+	prompt
+
+.WillText:
+	text "You sure are a"
+	line "persistent one."
 	prompt
 
 .GiovanniText:

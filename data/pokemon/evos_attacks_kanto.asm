@@ -159,11 +159,11 @@ BulbasaurEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, LEECH_SEED
 	dbw 10, VINE_WHIP
-	dbw 15, SLEEP_POWDER
+	dbw 15, STUN_SPORE
 	dbw 21, RAZOR_LEAF
-	dbw 25, STUN_SPORE
+	dbw 25, POISONPOWDER
 	dbw 30, TAKE_DOWN
-	dbw 36, POISONPOWDER
+	dbw 36, SLEEP_POWDER
 	dbw 40, DOUBLE_EDGE
 	dbw 45, SYNTHESIS
 	dbw 51, SOLARBEAM
@@ -176,14 +176,14 @@ IvysaurEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, LEECH_SEED
 	dbw 10, VINE_WHIP
-	dbw 15, SLEEP_POWDER
-	dbw 23, RAZOR_LEAF
-	dbw 27, STUN_SPORE
-	dbw 32, TAKE_DOWN
-	dbw 38, POISONPOWDER
-	dbw 42, DOUBLE_EDGE
-	dbw 47, SYNTHESIS
-	dbw 53, SOLARBEAM
+	dbw 15, STUN_SPORE
+	dbw 21, RAZOR_LEAF
+	dbw 25, POISONPOWDER
+	dbw 30, TAKE_DOWN
+	dbw 36, SLEEP_POWDER
+	dbw 40, DOUBLE_EDGE
+	dbw 45, SYNTHESIS
+	dbw 51, SOLARBEAM
 	db 0 ; no more level-up moves
 
 VenusaurEvosAttacks:
@@ -192,14 +192,14 @@ VenusaurEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, LEECH_SEED
 	dbw 10, VINE_WHIP
-	dbw 15, SLEEP_POWDER
-	dbw 23, RAZOR_LEAF
-	dbw 27, STUN_SPORE
-	dbw 32, TAKE_DOWN
-	dbw 40, POISONPOWDER
-	dbw 44, DOUBLE_EDGE
-	dbw 49, SYNTHESIS
-	dbw 55, SOLARBEAM
+	dbw 15, STUN_SPORE
+	dbw 21, RAZOR_LEAF
+	dbw 25, POISONPOWDER
+	dbw 30, TAKE_DOWN
+	dbw 36, SLEEP_POWDER
+	dbw 40, DOUBLE_EDGE
+	dbw 45, SYNTHESIS
+	dbw 51, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CharmanderEvosAttacks:
@@ -482,24 +482,36 @@ PikachuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, THUNDERSHOCK
 	dbw 1, GROWL
-	dbw 6, TAIL_WHIP
-	dbw 8, THUNDER_WAVE
-	dbw 11, QUICK_ATTACK
-	dbw 15, DOUBLE_TEAM
-	dbw 20, SLAM
-	dbw 26, THUNDERBOLT
-	dbw 33, AGILITY
-	dbw 41, THUNDER
-	dbw 50, LIGHT_SCREEN
+	dbw 1, TAIL_WHIP
+	dbw 6, QUICK_ATTACK
+	dbw 11, THUNDER_WAVE
+	;dbw 15, THUNDERJOLT ; TODO
+	dbw 21, DOUBLE_TEAM
+	dbw 26, SWIFT
+	dbw 30, FAINT_ATTACK
+	dbw 36, THUNDERBOLT
+	dbw 41, AGILITY
+	dbw 45, SKULL_BASH
+	dbw 51, LIGHT_SCREEN
+	dbw 56, THUNDER
 	db 0 ; no more level-up moves
 
 RaichuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, THUNDERSHOCK
+	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
-	dbw 1, QUICK_ATTACK
-	dbw 1, THUNDERBOLT
-	dbw 4, THUNDERPUNCH
+	dbw 6, QUICK_ATTACK
+	dbw 11, THUNDER_WAVE
+	;dbw 15, THUNDERJOLT ; TODO
+	dbw 21, DOUBLE_TEAM
+	dbw 26, SWIFT
+	dbw 30, FAINT_ATTACK
+	dbw 36, THUNDERBOLT
+	dbw 41, AGILITY
+	dbw 45, SKULL_BASH
+	dbw 51, LIGHT_SCREEN
+	dbw 56, THUNDER
 	db 0 ; no more level-up moves
 
 SandshrewEvosAttacks:
@@ -533,71 +545,101 @@ SandslashEvosAttacks:
 NidoranFEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, NIDORINA
 	db 0 ; no more evolutions
-	dbw 1, GROWL
 	dbw 1, TACKLE
-	dbw 8, SCRATCH
-	dbw 12, DOUBLE_KICK
-	dbw 17, POISON_STING
-	dbw 23, TAIL_WHIP
-	dbw 30, BITE
-	dbw 38, FURY_SWIPES
+	dbw 1, GROWL
+	dbw 1, DEFENSE_CURL
+	dbw 6, SCRATCH
+	dbw 12, POISON_STING
+	dbw 18, DOUBLE_KICK
+	dbw 24, BITE
+	;dbw 30, POISON_FANG ; XXX
+	dbw 36, FURY_SWIPES
+	dbw 42, PROTECT
+	dbw 48, SLUDGE_BOMB
+	dbw 54, SKULL_BASH
 	db 0 ; no more level-up moves
 
 NidorinaEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, NIDOQUEEN
 	db 0 ; no more evolutions
-	dbw 1, GROWL
 	dbw 1, TACKLE
-	dbw 8, SCRATCH
-	dbw 12, DOUBLE_KICK
-	dbw 19, POISON_STING
-	dbw 27, TAIL_WHIP
-	dbw 36, BITE
-	dbw 46, FURY_SWIPES
+	dbw 1, GROWL
+	dbw 1, DEFENSE_CURL
+	dbw 6, SCRATCH
+	dbw 12, POISON_STING
+	dbw 18, DOUBLE_KICK
+	dbw 24, BITE
+	;dbw 30, POISON_FANG ; XXX
+	dbw 36, FURY_SWIPES
+	dbw 42, PROTECT
+	dbw 48, SLUDGE_BOMB
+	dbw 54, SKULL_BASH
 	db 0 ; no more level-up moves
 
 NidoqueenEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, SCRATCH
-	dbw 1, DOUBLE_KICK
-	dbw 1, TAIL_WHIP
-	dbw 4, BODY_SLAM
+	dbw 1, GROWL
+	dbw 1, DEFENSE_CURL
+	dbw 6, SCRATCH
+	dbw 12, POISON_STING
+	dbw 18, DOUBLE_KICK
+	dbw 24, BITE
+	;dbw 30, POISON_FANG ; XXX
+	dbw 36, FURY_SWIPES
+	dbw 42, PROTECT
+	dbw 48, SLUDGE_BOMB
+	dbw 54, SKULL_BASH
 	db 0 ; no more level-up moves
 
 NidoranMEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, NIDORINO
 	db 0 ; no more evolutions
-	dbw 1, LEER
 	dbw 1, TACKLE
-	dbw 8, HORN_ATTACK
-	dbw 12, DOUBLE_KICK
-	dbw 17, POISON_STING
-	dbw 23, FOCUS_ENERGY
-	dbw 30, FURY_ATTACK
-	dbw 38, HORN_DRILL
+	dbw 1, FOCUS_ENERGY
+	dbw 1, LEER
+	dbw 6, PECK
+	dbw 12, POISON_STING
+	dbw 18, DOUBLE_KICK
+	dbw 24, HORN_ATTACK
+	;dbw 30, POISON_FANG ; XXX
+	dbw 36, FURY_ATTACK
+	dbw 42, SWAGGER
+	dbw 48, SLUDGE_BOMB
+	dbw 54, HORN_DRILL
 	db 0 ; no more level-up moves
 
 NidorinoEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, NIDOKING
 	db 0 ; no more evolutions
-	dbw 1, LEER
 	dbw 1, TACKLE
-	dbw 8, HORN_ATTACK
-	dbw 12, DOUBLE_KICK
-	dbw 19, POISON_STING
-	dbw 27, FOCUS_ENERGY
+	dbw 1, FOCUS_ENERGY
+	dbw 1, LEER
+	dbw 6, PECK
+	dbw 12, POISON_STING
+	dbw 18, DOUBLE_KICK
+	dbw 24, HORN_ATTACK
+	;dbw 30, POISON_FANG ; XXX
 	dbw 36, FURY_ATTACK
-	dbw 46, HORN_DRILL
+	dbw 42, SWAGGER
+	dbw 48, SLUDGE_BOMB
+	dbw 54, HORN_DRILL
 	db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, HORN_ATTACK
-	dbw 1, DOUBLE_KICK
-	dbw 1, POISON_STING
-	dbw 4, THRASH
+	dbw 1, FOCUS_ENERGY
+	dbw 1, LEER
+	dbw 6, PECK
+	dbw 12, POISON_STING
+	dbw 18, DOUBLE_KICK
+	dbw 24, HORN_ATTACK
+	;dbw 30, POISON_FANG ; XXX
+	dbw 36, FURY_ATTACK
+	dbw 42, SWAGGER
+	dbw 48, SLUDGE_BOMB
+	dbw 54, HORN_DRILL
 	db 0 ; no more level-up moves
 
 ClefairyEvosAttacks:
@@ -855,7 +897,7 @@ MeowthEvosAttacks:
 PersianEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
-	dbw 1, SWIFT 
+	dbw 1, SWIFT
 	dbw 1, GROWL
 	dbw 15, BITE
 	dbw 21, PAY_DAY
@@ -1208,8 +1250,8 @@ PonytaEvosAttacks:
 	dbw 42, AGILITY
 	dbw 47, SUNNY_DAY
 	dbw 52, FIRE_BLAST
-	db 0 ; no more level-up moves 
-	
+	db 0 ; no more level-up moves
+
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
@@ -1225,7 +1267,7 @@ RapidashEvosAttacks:
 	dbw 44, AGILITY
 	dbw 49, SUNNY_DAY
 	dbw 54, FIRE_BLAST
-	db 0 ; no more level-up moves 
+	db 0 ; no more level-up moves
 
 SlowpokeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, SLOWBRO

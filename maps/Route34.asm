@@ -4,7 +4,7 @@
 	const ROUTE34_WILL
 	const ROUTE34_ROCKET2
 	const ROUTE34_SHUCKLE
-	const ROUTE34_SOLDIER
+	;const ROUTE34_SOLDIER
 	const ROUTE34_LASS1
 	const ROUTE34_LASS2
 	const ROUTE34_LASS3
@@ -30,6 +30,10 @@ Route34Silver:
 	writetext .Text
 	waitbutton
 	closetext
+	applymovement ROUTE34_SILVER, .SilverOut
+	disappear ROUTE34_SILVER
+	playsound SFX_EXIT_BUILDING
+	pause 60
 	setevent EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
 	credits
 	end
@@ -51,6 +55,10 @@ Route34Silver:
 	cont "in GOLDENROD!"
 	para "Catch ya later!"
 	done
+
+.SilverOut:
+	big_step UP
+	step_end
 
 Route34_WillEventIntroText:
 	text "???: Well, I just"
@@ -335,30 +343,33 @@ Route34Shuckle:
 	text "Hydriiiiii!"
 	done
 
-TrainerSoldierGrant:
-	trainer SOLDIER, GRANT, EVENT_BEAT_SOLDIER_GRANT, .SeenTxt, .WinTxt, 0, .PostScript
-.SeenTxt:
-	text "My ghosts served"
-	line "as my spies during"
-	cont "the war!"
-	para "Our bond is un-"
-	line "breakable!"
-	done
-
-.WinTxt:
-	text "Beaten down!"
-	done
-
-.PostScript:
-	endifjustbattled
-	jumptextfaceplayer .PSTxt
-.PSTxt:
-	text "My ghost-type"
-	line "#MON helped me"
-	para "spy on the enemies"
-	line "using their super-"
-	cont "natural powers."
-	done
+; TrainerManchildZachary:
+; 	trainer MANCHILD, ZACHARY, EVENT_BEAT_MANCHILD_ZACHARY, .SeenTxt, .BeatenTxt, 0, .AfterScript
+;
+; .SeenTxt:
+; 	text "GHOST-types give"
+; 	line "me the shivers<...>"
+; 	para "Then why am I"
+; 	line "here? You'll see!"
+; 	done
+;
+; .BeatenTxt:
+; 	text "But losing scares"
+; 	line "me more!"
+; 	done
+;
+; .AfterScript:
+; 	endifjustbattled
+; 	jumptextfaceplayer .AfterTxt
+;
+; .AfterTxt:
+; 	text "MORTY found me and"
+; 	line "took me in to help"
+; 	para "me overcome my"
+; 	line "fear."
+; 	para "I owe a lot to"
+; 	line "him."
+; 	done
 
 TrainerLassRuby:
 	trainer LASS, RUBY, EVENT_BEAT_LASS_RUBY, .SeenTxt, .WinTxt, 0, .PostScript
@@ -410,56 +421,84 @@ TrainerLassNancy:
 	line "well."
 	done
 
-TrainerLassCharlotte:
-	trainer LASS, CHARLOTTE, EVENT_BEAT_LASS_CHARLOTTE, .SeenTxt, .WinTxt, 0, .PostScript
+; TrainerLassCharlotte:
+; 	trainer LASS, CHARLOTTE, EVENT_BEAT_LASS_CHARLOTTE, .SeenTxt, .WinTxt, 0, .PostScript
+; .SeenTxt:
+; 	text "My PICHU is the"
+; 	line "greatest!"
+; 	done
+;
+; .WinTxt:
+; 	text "No, my PICHU!"
+; 	done
+;
+; .PostScript:
+; 	endifjustbattled
+; 	jumptextfaceplayer .PSTxt
+; .PSTxt:
+; 	text "Why does everyone"
+; 	line "go crazy over"
+; 	para "PIKACHU when PICHU"
+; 	line "is clearly so much"
+; 	cont "more cuter?"
+; 	done
+
+TrainerFireBreatherWalt:
+	trainer FIREBREATHER, WALT, EVENT_BEAT_FIREBREATHER_WALT, .SeenTxt, .WinTxt, 0, .PostScript
 .SeenTxt:
-	text "My PICHU is the"
-	line "greatest!"
+	text "Fire can be used"
+	line "for warmth, or it"
+	para "can be used for"
+	line "destruction."
 	done
 
 .WinTxt:
-	text "No, my PICHU!"
+	text "As for me?"
+	para "I used it for fire"
+	line "dancing!"
 	done
 
 .PostScript:
 	endifjustbattled
 	jumptextfaceplayer .PSTxt
 .PSTxt:
-	text "Why does everyone"
-	line "go crazy over"
-	para "PIKACHU when PICHU"
-	line "is clearly so much"
-	cont "more cuter?"
+	text "I often travel to"
+	line "HAWAII with my"
+	para "fire-type #MON"
+	line "in order to put on"
+	cont "a show."
+	para "We love it there!"
 	done
 
-TrainerPokefanAriel:
-	trainer POKEFANF, PKF_ARIEL, EVENT_BEAT_PKF_ARIEL, PKFArielSeenTxt, PKFArielWinTxt, 0, PKFArielScript
+TrainerJugglerIrwin:
+	trainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, PKFArielSeenTxt, PKFArielWinTxt, 0, PKFArielScript
 
 PKFArielSeenTxt:
-	text "Real #FANS like"
-	line "me adore RAICHU!"
+	text "Behold my graceful"
+	line "BALL dexterity!"
 	done
 
 PKFArielWinTxt:
-	text "No! My precious"
-	line "RAICHU!"
+	text "Whew! That was a"
+	line "jolt!"
 	done
 
 PKFArielScript:
 	endifjustbattled
 	jumptextfaceplayer .Txt
 .Txt:
-	text "Seriously, RAICHU"
-	line "is the best."
-	para "Too bad everyone's"
-	line "busy fawning over"
-	cont "PIKACHU<...>"
+	text "I was going to"
+	line "dazzle you with my"
+	cont "prize #MON."
+
+	para "But your prowess"
+	line "electrified me!"
 	done
 
 Route34_PokefanFHack:
-	checkevent EVENT_BEAT_PKF_ARIEL
+	checkevent EVENT_BEAT_JUGGLER_IRWIN
 	iftrue .skip
-	loadtrainer POKEFANF, PKF_ARIEL
+	loadtrainer JUGGLER, IRWIN1
 	encountermusic
 	setlasttalked ROUTE34_POKEFAN
 	showemote EMOTE_SHOCK, LAST_TALKED, 30
@@ -471,13 +510,39 @@ Route34_PokefanFHack:
 	winlosstext PKFArielWinTxt, 0
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_PKF_ARIEL
+	setevent EVENT_BEAT_JUGGLER_IRWIN
 .skip
 	end
 
 .PlayerToTrainer: ; we do a little trolling
 	step LEFT
 	step_end
+
+TrainerBikerHarley:
+	trainer BIKER, HARLEY, EVENT_BEAT_BIKER_HARLEY, .SeenTxt, .WinTxt, 0, .Script
+
+.SeenTxt:
+	text "I claim this turf"
+	line "for the KANTO BIKE"
+	cont "FEDERATION!"
+	done
+
+.WinTxt:
+	text "Beaten by a"
+	line "passing punk!"
+	done
+
+.Script:
+	endifjustbattled
+	jumptextfaceplayer .Txt
+.Txt:
+	text "I'm a new member."
+	para "I was sent over to"
+	line "KANSAI to scout"
+	para "for some new land"
+	line "to claim for our"
+	cont "group."
+	done
 
 Route34_MapEvents:
 	db 0, 0 ; filler
@@ -497,8 +562,15 @@ Route34_MapEvents:
 	object_event  6, 23, SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  7, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  8, 14, SPRITE_SHUCKLE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Shuckle, EVENT_ENCOUNTERED_ROUTE34_SHUCKLE
-	object_event 10, 21, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerSoldierGrant, -1
-	object_event 11, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassRuby, -1
-	object_event 10, 15, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassNancy, -1
-	object_event 11, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassCharlotte, -1
-	object_event  3,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPokefanAriel, -1
+	;object_event 10, 21, SPRITE_MANCHILD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerManchildZachary, -1 -> TODO: where to?
+
+	;object_event 11, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassRuby, -1 ; -> TODO: to tower
+	object_event 11, 24, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerBikerHarley, -1 ; ^ replacing
+
+	object_event 10, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassNancy, -1
+
+	;object_event 11, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassCharlotte, -1 ; -> TODO: to r35?
+	object_event 11, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFireBreatherWalt, -1 ; ^ replacing
+
+	;object_event  3,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPokefanAriel, -1 ; -> TODO: to r35?
+	object_event  3,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerJugglerIrwin, -1 ; ^ replacing

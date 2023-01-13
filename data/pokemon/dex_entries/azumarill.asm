@@ -1,10 +1,10 @@
 	db "AQUARABBIT@" ; species name
 	dw 207, 630 ; height, weight
 
-	db   "The bubble-like"
-	next "pattern on its"
-	next "stomach helps it"
+	db   "The sound of its"
+	next "fatty tails"
+	next "hitting its"
 
-	page "camouflage itself"
-	next "when it's in the"
-	next "water.@"
+	page "stomach sounds"
+	next "like a drum after"
+	next "a good meal.@"

@@ -87,7 +87,6 @@ _SlotMachine:
 	call PlaySFX
 	call WaitSFX
 	call ClearBGPalettes
-	farcall StubbedTrainerRankings_EndSlotsWinStreak
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
 	ld hl, rLCDC
@@ -844,22 +843,6 @@ Slots_UpdateReelPositionAndOAM:
 	cp 2 * TILE_WIDTH
 	jr nz, .loop
 	ret
-
-Unreferenced_Function92bbe:
-	push hl
-	srl a
-	srl a
-	add LOW(.Unknown_92bce)
-	ld l, a
-	ld a, 0
-	adc HIGH(.Unknown_92bce)
-	ld h, a
-	ld a, [hl]
-	pop hl
-	ret
-
-.Unknown_92bce:
-	db 0, 1, 2, 3, 4, 5
 
 ReelActionJumptable:
 	ld hl, REEL_ACTION
@@ -1827,7 +1810,6 @@ Slots_GetPayout:
 	ld a, [hl]
 	ld [wPayout], a
 	ld d, a
-	farcall StubbedTrainerRankings_AddToSlotsPayouts
 	ret
 
 .PayoutTable:
@@ -1851,7 +1833,6 @@ Slots_PayoutText:
 	jr nz, .MatchedSomething
 	ld hl, .Text_Darn
 	call PrintText
-	farcall StubbedTrainerRankings_EndSlotsWinStreak
 	ret
 
 .MatchedSomething:
@@ -1875,7 +1856,6 @@ Slots_PayoutText:
 .return
 	ld hl, .Text_PrintPayout
 	call PrintText
-	farcall StubbedTrainerRankings_AddToSlotsWinStreak
 	ret
 
 .PayoutStrings:

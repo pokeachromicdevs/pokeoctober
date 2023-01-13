@@ -290,3 +290,6 @@ AnimationPointers:
 	dw FennecurseAnimation
 	dw OrijoeyAnimation
 	dw AggroswineAnimation
+	dw GermifrostAnimation
+	dw VegelancheAnimation
+	dw SnouwrbunAnimation

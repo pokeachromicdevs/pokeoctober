@@ -1,7 +1,7 @@
 	db "SLUDGE@" ; species name
 	dw 101, 101 ; height, weight
 
-	db   "Smujj's poison"
+	db   "SMUJJ's poison"
 	next "is used as an"
 	next "ingredient to"
 
