@@ -303,11 +303,14 @@ PokeBallEffect:
 	xor a
 	ld [wWildMon], a
 	ld a, [wCurItem]
-	cp PARK_BALL
-	call nz, ReturnToBattle_UseBall
-	cp SAFARI_BALL
-	call nz, ReturnToBattle_UseBall
+	call GetItemIndexFromID
+	cphl16 PARK_BALL
+	jr z, .skip_returning_to_battle
+	cphl16 SAFARI_BALL
+	jr z, .skip_returning_to_battle
+	call ReturnToBattle_UseBall
 
+.skip_returning_to_battle
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
 	ld hl, UsedItemText
@@ -319,38 +322,57 @@ PokeBallEffect:
 	cp BATTLETYPE_TUTORIAL
 	jp z, .catch_without_fail
 	ld a, [wCurItem]
-	cp MASTER_BALL
+	call GetItemIndexFromID
+	cphl16 MASTER_BALL
 	jp z, .catch_without_fail
-	ld a, [wCurItem]
 	ld c, a
-	ld hl, BallMultiplierFunctionTable
 
+	ld de, BallMultiplierFunctionTable
 .get_multiplier_loop
-	ld a, [hli]
+	ld a, [de]
+	inc de
 	cp $ff
+	jr z, .next_num
+	cp l
+	jr nz, .skip_entry
+.next_num
+	ld a, [de]
+	cp -1 ; no balls above $ff00
+	inc de
 	jr z, .skip_or_return_from_ball_fn
-	cp c
+	cp h
+.got_mult_index
 	jr z, .call_ball_function
-	inc hl
-	inc hl
+	inc de
+	inc de
 	jr .get_multiplier_loop
-
+.skip_entry
+	inc de
+	inc de
+	inc de
+	jr .get_multiplier_loop
+	
+	
 .call_ball_function
-	ld a, [hli]
-	ld h, [hl]
+	ld a, [de]
 	ld l, a
+	inc de
+	ld a, [de]
+	ld h, a
 	ld de, .skip_or_return_from_ball_fn
 	push de
 	jp hl
 
 .skip_or_return_from_ball_fn
 	ld a, [wCurItem]
-	cp DIRECT_BALL
+	call GetItemIndexFromID
+	cphl16 PARK_BALL
 	ld a, b
 	jp z, .skip_hp_calc
 
 	ld a, [wCurItem]
-	cp LEVEL_BALL
+	call GetItemIndexFromID
+	cphl16 LEVEL_BALL
 	ld a, b
 	jp z, .skip_hp_calc
 
@@ -474,7 +496,8 @@ PokeBallEffect:
 	call DelayFrames
 
 	ld a, [wCurItem]
-	cp POKE_BALL + 1 ; Assumes Master/Ultra/Great come before
+	call GetItemIndexFromID
+	cphl16 POKE_BALL + 1 ; Assumes Master/Ultra/Great come before
 	jr c, .not_kurt_ball
 	ld a, POKE_BALL
 .not_kurt_ball
@@ -631,7 +654,8 @@ PokeBallEffect:
 	farcall SetCaughtData
 
 	ld a, [wCurItem]
-	cp FRIEND_BALL
+	call GetItemIndexFromID
+	cphl16 FRIEND_BALL
 	jr nz, .SkipPartyMonFriendBall
 
 	ld a, [wPartyCount]
@@ -696,7 +720,8 @@ PokeBallEffect:
 	set BATTLERESULT_BOX_FULL, [hl]
 .BoxNotFullYet:
 	ld a, [wCurItem]
-	cp FRIEND_BALL
+	call GetItemIndexFromID
+	cphl16 FRIEND_BALL
 	jr nz, .SkipBoxMonFriendBall
 	; The captured mon is now first in the box
 	ld a, FRIEND_BALL_HAPPINESS
@@ -800,19 +825,19 @@ PokeBallEffect:
 BallMultiplierFunctionTable:
 ; table of routines that increase or decrease the catch rate based on
 ; which ball is used in a certain situation.
-	dbw ULTRA_BALL,  UltraBallMultiplier
-	dbw GREAT_BALL,  GreatBallMultiplier
-	dbw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
-	dbw HEAVY_BALL,  HeavyBallMultiplier
-	dbw LEVEL_BALL,  LevelBallMultiplier
-	dbw LURE_BALL,   LureBallMultiplier
-	dbw FAST_BALL,   FastBallMultiplier
-	dbw MOON_BALL,   MoonBallMultiplier
-	dbw LOVE_BALL,   LoveBallMultiplier
-	dbw PARK_BALL,   ParkBallMultiplier
-	dbw NIGHT_BALL,  NightBallMultiplier
-	dbw DIRECT_BALL, DirectBallMultiplier
-	db -1 ; end
+	dw ULTRA_BALL,  UltraBallMultiplier
+	dw GREAT_BALL,  GreatBallMultiplier
+	dw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
+	dw HEAVY_BALL,  HeavyBallMultiplier
+	dw LEVEL_BALL,  LevelBallMultiplier
+	dw LURE_BALL,   LureBallMultiplier
+	dw FAST_BALL,   FastBallMultiplier
+	dw MOON_BALL,   MoonBallMultiplier
+	dw LOVE_BALL,   LoveBallMultiplier
+	dw PARK_BALL,   ParkBallMultiplier
+	dw NIGHT_BALL,  NightBallMultiplier
+	dw DIRECT_BALL, DirectBallMultiplier
+	dw -1 ; end
 
 UltraBallMultiplier:
 ; multiply catch rate by 2

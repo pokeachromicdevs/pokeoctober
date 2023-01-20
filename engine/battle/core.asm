@@ -5133,19 +5133,22 @@ BattleMenu_SafariBall:
 
 .tutorial
 	farcall TutorialPack
-	ld a, POKE_BALL
+	ld hl, POKE_BALL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call DoItemEffect
 	jr .got_item
 
 .safari
-	ld a, SAFARI_BALL
+	ld hl, SAFARI_BALL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call DoItemEffect
 	jr .UseItem
 
 .contest
-	ld a, PARK_BALL
+	ld hl, PARK_BALL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call DoItemEffect
 
