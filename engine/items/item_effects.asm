@@ -351,8 +351,8 @@ PokeBallEffect:
 	inc de
 	inc de
 	jr .get_multiplier_loop
-	
-	
+
+
 .call_ball_function
 	ld a, [de]
 	ld l, a
@@ -1028,10 +1028,12 @@ MoonBallMultiplier:
 	ld hl, EvosAttacksPointers
 	ld a, BANK(EvosAttacksPointers)
 	call LoadDoubleIndirectPointer
-
 	ld a, [wCurItem]
 	ld c, a
-	ld a, MOON_STONE
+	push hl
+		ld hl, MOON_STONE
+		call GetItemIDFromIndex
+	pop hl
 	ld [wCurItem], a
 	ld d, h
 	ld e, l
@@ -1378,26 +1380,35 @@ StatStrings:
 
 GetStatExpRelativePointer:
 	ld a, [wCurItem]
-	ld hl, Table_eeeb
+	call GetItemIndexFromID
+	ld de, .StatExpPointers
 .next
-	cp [hl]
-	inc hl
+	ld a, [de]
+	inc de
+	cp l
+	jr nz, .skip_entry
+	ld a, [de]
+	inc de
+	cp h
 	jr z, .got_it
-	inc hl
+	inc de
+	jr .next ; possible infinite loop here
+.skip_entry
+	inc de
+	inc de
 	jr .next
-
 .got_it
-	ld a, [hl]
+	ld a, [de]
 	ld c, a
 	ld b, 0
 	ret
 
-Table_eeeb:
-	db HP_UP,    MON_HP_EXP - MON_STAT_EXP
-	db PROTEIN, MON_ATK_EXP - MON_STAT_EXP
-	db IRON,    MON_DEF_EXP - MON_STAT_EXP
-	db CARBOS,  MON_SPD_EXP - MON_STAT_EXP
-	db CALCIUM, MON_SPC_EXP - MON_STAT_EXP
+.StatExpPointers:
+	dwb HP_UP,    MON_HP_EXP - MON_STAT_EXP
+	dwb PROTEIN, MON_ATK_EXP - MON_STAT_EXP
+	dwb IRON,    MON_DEF_EXP - MON_STAT_EXP
+	dwb CARBOS,  MON_SPD_EXP - MON_STAT_EXP
+	dwb CALCIUM, MON_SPC_EXP - MON_STAT_EXP
 
 RareCandy_StatBooster_GetParameters:
 	ld a, [wCurPartySpecies]
@@ -1697,7 +1708,10 @@ RevivePokemon:
 	xor a
 	ld [wLowHealthAlarm], a
 	ld a, [wCurItem]
-	cp REVIVE
+	push hl
+		call GetItemIDFromIndex
+		cphl16 REVIVE
+	pop hl
 	jr z, .revive_half_hp
 
 	call ReviveFullHP
@@ -2584,14 +2598,16 @@ RestorePPEffect:
 
 .loop2
 	ld a, [wd002]
-	cp MAX_ELIXER
+	call GetItemIndexFromID
+	cphl16 MAX_ELIXER
 	jp z, Elixer_RestorePPofAllMoves
-	cp ELIXER
+	cphl16 ELIXER
 	jp z, Elixer_RestorePPofAllMoves
 
 	ld hl, TextJump_RaiseThePPOfWhichMove
 	ld a, [wd002]
-	cp PP_UP
+	call GetItemIndexFromID
+	cphl16 PP_UP
 	jr z, .ppup
 	ld hl, TextJump_RestoreThePPOfWhichMove
 
@@ -2622,7 +2638,8 @@ RestorePPEffect:
 	pop hl
 
 	ld a, [wd002]
-	cp PP_UP
+	call GetItemIndexFromID
+	cphl16 PP_UP
 	jp nz, Not_PP_Up
 
 	ld a, [hl]
@@ -2651,7 +2668,7 @@ RestorePPEffect:
 .pp_is_maxed_out
 	ld hl, TextJump_PPIsMaxedOut
 	call PrintText
-	jr .loop2
+	jp .loop2
 
 .do_ppup
 	ld a, [hl]
@@ -2784,9 +2801,10 @@ RestorePP:
 	jr nc, .dont_restore
 
 	ld a, [wd002]
-	cp MAX_ELIXER
+	call GetItemIndexFromID
+	cphl16 MAX_ELIXER
 	jr z, .restore_all
-	cp MAX_ETHER
+	cphl16 MAX_ETHER
 	jr z, .restore_all
 
 	ld c, 5
@@ -2880,7 +2898,8 @@ OpenBox:
 
 NoEffect:
 	ld a, [wCurItem]
-	cp OAKS_PARCEL
+	call GetItemIndexFromID
+	cphl16 OAKS_PARCEL
 	jp z, BelongsToSomeoneElseMessage
 	jp IsntTheTimeMessage
 
