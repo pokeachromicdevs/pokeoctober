@@ -14,6 +14,7 @@ from PIL import Image, ImageSequence
 import sys
 import os
 import itertools
+import math
 
 try:
 	with open(sys.argv[1], 'r') as x:
@@ -38,7 +39,7 @@ with Image.open(sys.argv[1]) as gif:
 		f_ = frame.copy()
 		pixels = f_.getdata()
 		hsh = hash(tuple(pixels))
-		duration = int(f_.info['duration']/(1000/60))
+		duration = math.ceil(f_.info['duration']/(1000/60))
 		
 		# and try to build an animation sequence
 		try:
