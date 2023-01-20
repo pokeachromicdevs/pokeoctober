@@ -1449,6 +1449,37 @@ Debug_FillBag:
 	giveitem MAX_POTION, 8
 	giveitem ITEM_101
 	giveitem ITEM_100
+	giveitem POTION
+	giveitem MASTER_BALL
+	giveitem ULTRA_BALL
+	giveitem GREAT_BALL
+	giveitem POKE_BALL
+	giveitem SMOKE_BALL
+	giveitem GS_BALL
+	giveitem HEAVY_BALL
+	giveitem LEVEL_BALL
+	giveitem LURE_BALL
+	giveitem FAST_BALL
+	giveitem LIGHT_BALL
+	giveitem FRIEND_BALL
+	giveitem MOON_BALL
+	giveitem LOVE_BALL
+	giveitem PARK_BALL
+	giveitem SAFARI_BALL
+	giveitem DIRECT_BALL
+	giveitem NIGHT_BALL
+	giveitem RED_APRICORN
+	giveitem BLU_APRICORN
+	giveitem YLW_APRICORN
+	giveitem GRN_APRICORN
+	giveitem WHT_APRICORN
+	giveitem BLK_APRICORN
+	giveitem PNK_APRICORN
+	giveitem HP_UP
+	giveitem PROTEIN
+	giveitem IRON
+	giveitem CARBOS
+	giveitem CALCIUM
 	end
 
 ; ------ old 8-bit code --------
