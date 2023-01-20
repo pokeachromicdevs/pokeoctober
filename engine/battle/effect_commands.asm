@@ -6597,6 +6597,12 @@ GetItemHeldEffect:
 		call GetFarByte
 
 		ld b, a
+
+		inc hl
+		ld a, BANK(ItemAttributes)
+		call GetFarByte
+
+		ld c, a
 	pop hl
 	ret
 
