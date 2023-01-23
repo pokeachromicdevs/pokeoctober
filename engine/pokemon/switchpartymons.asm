@@ -19,21 +19,31 @@ _SwitchPartyMons:
 	and a
 	ret z
 
-; offset temporary buffer by +1
+; offset temporary buffer by +1 (because follower index starts at 1)
 	ld hl, wBuffer2
 	inc [hl]
 	inc hl
 	inc [hl]
 
-; change follower position appropriately
+; is follower affected by the switch?
+	ld [wWhichPartyFollower], a
 	ld b, a
 	ld a, [wBuffer2]
 	cp b
-	jr z, .use_other_buffer
-	jr .done
-.use_other_buffer
+	jr z, .switch1
 	ld a, [wBuffer3]
-.done
+	cp b
+	jr z, .switch2
+; no change here
+	ret
+
+.switch1
+	ld a, [wBuffer3]
+	ld [wWhichPartyFollower], a
+	ret
+
+.switch2
+	ld a, [wBuffer2]
 	ld [wWhichPartyFollower], a
 	ret
 
