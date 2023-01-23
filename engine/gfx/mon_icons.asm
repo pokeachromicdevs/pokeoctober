@@ -58,7 +58,7 @@ LoadPartyMenuMonIconColors:
 	ld [wCurPartySpecies], a
 	ld a, MON_DVS
 	call GetPartyParamLocation
-	call GetMenuMonIconPalette
+	;call GetMenuMonIconPalette
 	ld hl, wVirtualOAMSprite00Attributes
 	push af
 	ld a, [wCurPartyMon]

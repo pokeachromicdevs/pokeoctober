@@ -3,7 +3,7 @@ SetPartyNumberAsFollower::
 ;	If this is 0, it disables follower instead.
 	ld a, b
 	and a
-	jr z, DisableFollower
+	jp z, DisableFollower
 
 ; Follower flags = which number in party is following you
 	ld [wWhichPartyFollower], a
@@ -18,6 +18,7 @@ SetPartyNumberAsFollower::
 	;call ForceUpdateCGBPals
 
 ; kind of crude check
+; check for tiles first
 	ld a, [wTileLeft]
 	call GetTileCollision
 	jr z, .spawn_left
@@ -41,6 +42,9 @@ SetPartyNumberAsFollower::
 	ld a, [wYCoord]
 	add 5
 	ld e, a
+; check for people in the way
+	farcall IsNPCAtCoord
+	jr c, .spawn_right
 	jr .got_spawn
 
 .spawn_up
@@ -50,6 +54,8 @@ SetPartyNumberAsFollower::
 	ld a, [wYCoord]
 	add 3
 	ld e, a
+	farcall IsNPCAtCoord
+	jr c, .spawn_left
 	jr .got_spawn
 
 .spawn_left
@@ -59,6 +65,8 @@ SetPartyNumberAsFollower::
 	ld a, [wYCoord]
 	add 4
 	ld e, a
+	farcall IsNPCAtCoord
+	jr c, .spawn_down
 	jr .got_spawn
 
 .spawn_right
@@ -68,6 +76,8 @@ SetPartyNumberAsFollower::
 	ld a, [wYCoord]
 	add 4
 	ld e, a
+	farcall IsNPCAtCoord
+	jr c, .spawn_up
 	jr .got_spawn
 
 .spawn_center ; if all else fails
