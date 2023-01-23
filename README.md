@@ -6,7 +6,7 @@ It uses (and derives from) [early Johto and Kanto maps](https://tcrf.net/Develop
 
 It is fully open-source, as long as credit is given to this hack. If credit is not found to be given, the hack's
 author will be notified to do so. **[Additionally, Shockslayer, as well as anyone currently working on, moderating, or developing
-the Crystal Clear project is NOT allowed to use any of the code contained within this repository, as long as they refuse to share their code for the wider ROM hacking community, *BESIDES* music ports.](https://youtu.be/_NzVmtbPOrM?t=58)**
+the Crystal Clear project is NOT allowed to use any of the code contained within this repository, as long as they refuse to share their code (besides music ports) for the wider ROM hacking community.](https://youtu.be/_NzVmtbPOrM?t=58)**
 
 ## Screenshots
 
@@ -43,7 +43,7 @@ See [INSTALL.md](INSTALL.md).
 * Scarlax: animated sprites
 * Pik, BloodlessNX, Kam, Poket, BimbelyGimbly: various sprites
 * Darkshade: overworld Pokemon sprites
-* Celadonk, Coraldev: custom music
+* Celadonk: custom music
 * FroggestSpirit, Mmmmmmmmmmmmmmmmm: music ports
 * AtmaBuster: walking/follower system base
 * Shadow Ball, Traiyu, Quent: maps, story, dialog help
