@@ -434,7 +434,7 @@ ENDM
 	enum getitemname_command ; $41
 getitemname: MACRO
 	db getitemname_command
-	db \2 ; item
+	dw \2 ; item
 	db \1 ; string_buffer
 ENDM
 
@@ -994,7 +994,7 @@ ENDM
 	enum verbosegiveitemvar_command ; $9f
 verbosegiveitemvar: MACRO
 	db verbosegiveitemvar_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; var
 ENDM
 

@@ -1897,14 +1897,21 @@ Script_getitemname:
 ; parameters: string_buffer, item_id (0 aka USE_SCRIPT_VAR to use wScriptVar)
 
 	call GetScriptByte
-	and a ; USE_SCRIPT_VAR
-	jr nz, .ok
-	ld a, [wScriptVar]
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	or l
+	jr z, .use_script_var
+	call GetItemIDFromIndex
 .ok
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ld de, wStringBuffer1
 	jr GetStringBuffer
+.use_script_var
+	ld a, [wScriptVar]
+	jr .ok
+	
 
 Script_getcurlandmarkname:
 ; script command 0x42
@@ -2092,6 +2099,10 @@ Script_takeitem:
 	xor a
 	ld [wScriptVar], a
 	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call GetScriptByte
 	ld [wItemQuantityChangeBuffer], a
