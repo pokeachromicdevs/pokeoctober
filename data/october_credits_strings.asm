@@ -113,6 +113,7 @@ OctoberCredits_StringTable:
 	dw .BugTesters, .Blank
 		dw .NieNie, .Blank
 		dw .Soul, .Blank
+		dw .Josh, .Blank
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -191,3 +192,4 @@ OctoberCredits_StringTable:
 .PressStart:    db "    -PRESS START-   ";;
 .Soul:          db "     SOULCATCHER    ";;
 .Darkshade:     db "      DARKSHADE     ";;
+.Josh:          db "      JO19SH92      ";;
