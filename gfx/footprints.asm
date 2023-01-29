@@ -280,12 +280,12 @@ INCBIN "gfx/footprints/silkane.1bpp"
 INCBIN "gfx/footprints/morphobia.1bpp"
 INCBIN "gfx/footprints/terrachnid.1bpp"
 INCBIN "gfx/footprints/smujj.1bpp"
-INCBIN "gfx/footprints/283.1bpp" ; XXX KOTORA
-INCBIN "gfx/footprints/284.1bpp" ; XXX RAITORA
-INCBIN "gfx/footprints/285.1bpp" ; XXX GOROTORA
-INCBIN "gfx/footprints/286.1bpp" ; XXX KOALYPTUS
-INCBIN "gfx/footprints/287.1bpp" ; XXX OREFRY
+INCBIN "gfx/footprints/kotora.1bpp"
+INCBIN "gfx/footprints/raitora.1bpp"
+INCBIN "gfx/footprints/gorotora.1bpp"
+INCBIN "gfx/footprints/koalyptus.1bpp"
+INCBIN "gfx/footprints/orefry.1bpp"
 INCBIN "gfx/footprints/ballerine.1bpp"
-INCBIN "gfx/footprints/288.1bpp" ; XXX FENNECURSE
-INCBIN "gfx/footprints/289.1bpp" ; XXX ORIJOEY
-INCBIN "gfx/footprints/290.1bpp" ; XXX AGGROSWINE
+INCBIN "gfx/footprints/fennecurse.1bpp"
+INCBIN "gfx/footprints/orijoey.1bpp"
+INCBIN "gfx/footprints/aggroswine.1bpp"
