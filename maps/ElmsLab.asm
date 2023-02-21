@@ -636,11 +636,14 @@ ElmsAideScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue .AlwaysBusy
+	iftrue .InCharge
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue .ExplainBalls
 .AlwaysBusy:
 	writetext AideText_AlwaysBusy
+	sjump .End
+.InCharge:
+	writetext AideText_InCharge
 	sjump .End
 .ExplainBalls:
 	writetext AideText_ExplainBalls
@@ -1421,6 +1424,17 @@ AideText_AlwaysBusy:
 	text "There are only two"
 	line "of us, so we're"
 	cont "always busy."
+	done
+
+AideText_InCharge:
+	text "ELM's left the lab"
+	line "already, so I'm"
+	para "watching over the"
+	line "lab while he's"
+	cont "gone."
+	para "In the meantime,"
+	line "take good care of"
+	cont "the EGG."
 	done
 
 AideText_GiveYouBalls:
