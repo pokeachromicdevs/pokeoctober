@@ -129,9 +129,9 @@ FisherBillyAfterText:
 	done
 	
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
-	text "MR.#MON's"
-	line "house? It's a bit"
-	cont "farther ahead."
+	text "MR. #MON's house"
+	line "is right up ahead."
+	para "You can't miss it!"
 	done
 
 Route30YoungsterText_EveryoneIsBattling:
