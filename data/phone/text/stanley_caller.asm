@@ -18,6 +18,7 @@ UnknownText_0x175869:
 	line "encountered a"
 	cont "wild @"
 	text_ram wStringBuffer4
+	text ""
 	para "just a little"
 	line "bit ago."
 
@@ -33,6 +34,7 @@ UnknownText_0x1758e4:
 	text "By the way, a"
 	line "wild @"
 	text_ram wStringBuffer4
+	text ""
 	para "slipped from my"
 
 	line "grasp earlier."
