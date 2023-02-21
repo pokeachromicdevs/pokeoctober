@@ -614,12 +614,6 @@ AideScript_WalkBalls2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
-AideScript_ExplainBalls:
-	writetext AideText_ExplainBalls
-	waitbutton
-	closetext
-	end
-
 AideScript_GiveYouBalls:
 	opentext
 	writetext AideText_GiveYouBalls
@@ -649,8 +643,8 @@ ElmsAideScript:
 	writetext AideText_AlwaysBusy
 	sjump .End
 .ExplainBalls:
-	writetext AideScript_ExplainBalls
-	sjump .End
+	writetext AideText_ExplainBalls
+	;sjump .End
 .End:
 	waitbutton
 	closetext
