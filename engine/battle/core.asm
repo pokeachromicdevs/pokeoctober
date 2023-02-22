@@ -385,7 +385,7 @@ HandleBerserkGene:
 	push bc
 	callfar GetUserItem
 	ld a, [hl]
-; TODO: Berserk Gene to 16-bit 
+; TODO: Berserk Gene to 16-bit
 	ld [wNamedObjectIndexBuffer], a
 	sub BERSERK_GENE
 	pop bc
@@ -6231,7 +6231,7 @@ LoadEnemyMon:
 	ld a, [wCurPartyMon]
 	ld hl, wOTPartyMon1Item
 	call GetPartyLocation ; bc = PartyMon[wCurPartyMon] - wPartyMons
-	ld a, [hl]
+	ld b, [hl]
 	jr .UpdateItem
 
 .WildItem:
