@@ -636,7 +636,7 @@ ElmsAideScript:
 	faceplayer
 	opentext
 	checkevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
-	iftrue .ShowHatchedEgg
+	iftrue .CheckHatched
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue .CheckHatched
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
