@@ -68,7 +68,7 @@ ElmPhoneEggHatchedText:
 	cont "#MON is it?"
 
 	para "Please come show"
-	line "me now!"
+	line "it to my AIDE now!"
 	done
 
 ElmPhoneDiscovery1Text:

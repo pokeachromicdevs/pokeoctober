@@ -635,14 +635,26 @@ AideScript_ReceiveTheBalls:
 ElmsAideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
+	iftrue .ShowHatchedEgg
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue .InCharge
+	iftrue .CheckHatched
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue .ExplainBalls
 .AlwaysBusy:
 	writetext AideText_AlwaysBusy
 	sjump .End
-.InCharge:
+.CheckHatched:
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
+	iftrue .InChargeNotEgg
+	checkevent EVENT_TOGEPI_HATCHED
+	iftrue .ShowHatchedEgg
+; in charge
+	writetext AideText_InCharge
+	buttonsound
+	writetext AideText_InChargeEgg
+	sjump .End
+.InChargeNotEgg:
 	writetext AideText_InCharge
 	sjump .End
 .ExplainBalls:
@@ -652,6 +664,58 @@ ElmsAideScript:
 	waitbutton
 	closetext
 	end
+.ShowHatchedEgg:
+	writetext AideEggHatchedText
+	buttonsound
+	loadmonindex 1, TOGEPI
+	special FindPartyMonThatSpeciesYourTrainerID
+	iftrue .HatchedMonPresent
+	loadmonindex 2, TOGETIC
+	special FindPartyMonThatSpeciesYourTrainerID
+	iftrue .HatchedMonPresent
+	writetext AideThoughtEggHatchedText
+	waitbutton
+	closetext
+	end
+.HatchedMonPresent:
+	writetext AideEggHatchedShowText
+	buttonsound
+	setevent EVENT_SHOWED_TOGEPI_TO_ELM
+	verbosegiveitem EVERSTONE
+	iffalse .EverstoneFail
+	writetext ElmGiveEverstoneText2
+	waitbutton
+	setevent EVENT_GOT_EVERSTONE_FROM_ELM
+.EverstoneFail:
+	closetext
+	end
+
+AideEggHatchedText:
+	text "What is it?"
+	para "The EGG hatched?"
+	done
+
+AideThoughtEggHatchedText:
+	text "<...>Where is the"
+	line "#MON, though?"
+	done
+
+AideEggHatchedShowText:
+	text "Ah, there it is."
+	para "So it seems that"
+	line "some #MON are"
+	cont "born from eggs<...>"
+	para "ELM would be"
+	line "delighted to"
+	cont "hear that!"
+	para "We'll need to do"
+	line "more research on"
+	para "this matter,"
+	line "regardless."
+	para "As thanks, ELM"
+	line "told me to give"
+	cont "this item to you."
+	done
 
 ElmsLabWindow:
 	jumptext ElmsLabWindowText1
@@ -1432,7 +1496,10 @@ AideText_InCharge:
 	para "watching over the"
 	line "lab while he's"
 	cont "gone."
-	para "In the meantime,"
+	done
+
+AideText_InChargeEgg:
+	text "In the meantime,"
 	line "take good care of"
 	cont "the EGG."
 	done
