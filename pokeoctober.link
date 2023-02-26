@@ -301,10 +301,10 @@ ROMX $7e
 ROMX $7f
 	"Pokemon"
 ROMX $80
-	"MBC30 Verification"
 	"Pics 1 Animated"
 	"Pics 2 Animated"
 ROMX $81
+	"MBC30 Verification"
 	"Pics 3 Animated"
 	"Pics 4 Animated"
 ROMX $82

@@ -700,7 +700,8 @@ endc
 ; mbc30 additions
 
 SECTION "MBC30 Verification", ROMX
-	db $80 ; verification byte, DO NOT CHANGE
+EXROM_Sentinel::
+	db BANK(@)
 
 ; --------------------------
 INCLUDE "checks/events.asm"
