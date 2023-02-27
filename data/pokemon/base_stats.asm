@@ -350,6 +350,7 @@ INCLUDE "data/pokemon/base_stats/aggroswine.asm"
 INCLUDE "data/pokemon/base_stats/germifrost.asm"
 INCLUDE "data/pokemon/base_stats/vegelanche.asm"
 INCLUDE "data/pokemon/base_stats/snouwrbun.asm"
+INCLUDE "data/pokemon/base_stats/necrorex.asm"
 
 ;------------------------------------
 _NUM_BASE_STATS = (@ - BaseData1)/$27

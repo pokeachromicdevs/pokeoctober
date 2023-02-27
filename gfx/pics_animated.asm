@@ -392,3 +392,4 @@ SECTION "Pics 24 Animated", ROMX
 GermifrostFrontpicAnim:	INCBIN "gfx/pokemon/germifrost/front.animated.2bpp.lz"
 VegelancheFrontpicAnim:	INCBIN "gfx/pokemon/vegelanche/front.animated.2bpp.lz"
 SnouwrbunFrontpicAnim:	INCBIN "gfx/pokemon/snouwrbun/front.animated.2bpp.lz"
+NecrorexFrontpicAnim:	INCBIN "gfx/pokemon/necrorex/front.animated.2bpp.lz"

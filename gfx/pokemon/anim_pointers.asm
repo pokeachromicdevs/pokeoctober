@@ -293,3 +293,4 @@ AnimationPointers:
 	dw GermifrostAnimation
 	dw VegelancheAnimation
 	dw SnouwrbunAnimation
+	dw NecrorexAnimation

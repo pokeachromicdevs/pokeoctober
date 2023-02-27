@@ -293,6 +293,7 @@ EvolutionMoves::
 	dw NO_MOVE		; GERMIFROST
 	dw PETAL_DANCE	; VEGELANCHE
 	dw LEECH_SEED	; SNOUWRBUN
+	dw NO_MOVE	; NECROREX ; TODO: necro's evo moves
 
 ;----------------------------------
 _NUM_EVO_MOVES = (@ - EvolutionMoves) / 2

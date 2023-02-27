@@ -165,6 +165,7 @@ AlphabeticalPokedexOrder:
 	dw MUK
 	dw MURKROW
 	dw NATU
+	dw NECROREX
 	dw NIDOKING
 	dw NIDOQUEEN
 	dw NIDORAN_F

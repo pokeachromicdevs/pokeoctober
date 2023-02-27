@@ -138,6 +138,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw NoEggMoves2
 
 ChikoritaEggMoves:
 	dw VINE_WHIP
@@ -589,6 +590,6 @@ KotoraEggMoves:
 	db TAKE_DOWN
 	db SCREECH
 	db -1 ; end
-	
+
 CamouflakeEggMoves:
 	db -1 ; end

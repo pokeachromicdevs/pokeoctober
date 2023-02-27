@@ -34,7 +34,23 @@ EvosAttacksPointers3::
 	dw GermifrostEvosAttacks
 	dw VegelancheEvosAttacks
 	dw SnouwrbunEvosAttacks
+	dw NecrorexEvosAttacks
 .End:
+
+NecrorexEvosAttacks:
+	db 0 ; no evos?
+	dbw 1, RAGE
+	dbw 1, SCREECH
+	dbw 7, FOCUS_ENERGY
+	dbw 14, DRAGONBREATH
+	dbw 21, BONE_RUSH
+	dbw 28, THRASH
+	dbw 35, ROAR
+	dbw 42, ROCK_HEAD
+	dbw 49, OUTRAGE
+	dbw 56, ROCK_SLASH
+	dbw 63, HYPER_BEAM
+	db 0 ; no more attax
 
 AggroswineEvoAttacks:
 	db 0 ; no evos?
