@@ -9,7 +9,7 @@
 CherrygroveCity_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_CHERRYGROVECITY_NOTHING
-	scene_script .DummyScene1 ; SCENE_CHERRYGROVECITY_MEET_RIVAL
+	scene_script .DummyScene1 ; SCENE_CHERRYGROVECITY_ALREADY_GUIDED
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -34,15 +34,28 @@ CherrygroveCity_MapScripts:
 	return
 
 CherrygroveCityGuideGent:
+	checkevent EVENT_GUIDE_GENT_IN_HIS_HOUSE
+	iftrue .skip_and_set_scene
 	faceplayer
 	opentext
-	writetext GuideGentIntroText
-	yesorno
-	iffalse .No
-	sjump .Yes
-.Yes:
-	writetext GuideGentTourText1
+	writetext GuideGentNoticeText
 	waitbutton
+	closetext
+	callasm .Check2StepsAway
+	iftrue .WalkToGent2steps
+	callasm .Check3StepsAway
+	iftrue .WalkToGent3steps
+	faceobject PLAYER, CHERRYGROVECITY_GRAMPS
+.ContinueIntro
+	opentext
+	writetext GuideGentIntroText
+	waitbutton
+	; yesorno
+	; iffalse .No
+	; sjump .Yes
+; .Yes:
+	; writetext GuideGentTourText1
+	; waitbutton
 	closetext
 	playmusic MUSIC_SHOW_ME_AROUND
 	follow CHERRYGROVECITY_GRAMPS, PLAYER
@@ -102,6 +115,50 @@ CherrygroveCityGuideGent:
 	waitsfx
 	end
 
+.skip_and_set_scene
+	setscene SCENE_CHERRYGROVECITY_ALREADY_GUIDED
+	end
+
+.Check2StepsAway: ; AAAAAAAAAAAAAAAAAAAAAAA
+	ld a, [wPlayerStandingMapY]
+	cp 26 + 4
+	jr nz, .no__
+	ld a, 1
+	ld [wScriptVar], a
+	ret
+.no__
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.Check3StepsAway: ; AAAAAAAAAAAAAAAAAAAAAAA
+	ld a, [wPlayerStandingMapY]
+	cp 27 + 4
+	jr nz, .no___
+	ld a, 1
+	ld [wScriptVar], a
+	ret
+.no___
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.WalkToGent2steps:
+	showemote EMOTE_SHOCK, PLAYER, 15
+	applymovement PLAYER, .Twostepsup
+	sjump .ContinueIntro
+
+.WalkToGent3steps:
+	showemote EMOTE_SHOCK, PLAYER, 15
+	applymovement PLAYER, .Threestepsup
+	sjump .ContinueIntro
+
+.Threestepsup:
+	step UP
+.Twostepsup:
+	step UP
+	step_end
+
 .JumpstdReceiveItem:
 	jumpstd receiveitem
 	end
@@ -109,11 +166,11 @@ CherrygroveCityGuideGent:
 .mapcardname
 	db "MAP CARD@"
 
-.No:
-	writetext GuideGentNoText
-	waitbutton
-	closetext
-	end
+; .No:
+; 	writetext GuideGentNoText
+; 	waitbutton
+; 	closetext
+; 	end
 
 CherrygroveTeacherScript:
 	faceplayer
@@ -282,24 +339,22 @@ CherrygroveCity_UnusedMovementData:
 	turn_head DOWN
 	step_end
 
-GuideGentIntroText:
+GuideGentNoticeText:
 	text "Ah, another"
 	line "rookie, eh?"
+	done
 
-	para "Haha!"
+GuideGentIntroText:
+	text "Haha!"
 	line "Don't sweat it!"
 
 	para "Everyone starts"
 	line "out as a rookie,"
 	cont "after all!"
 
-	para "Anyways, want me"
-	line "to show you the"
-	cont "ropes?"
-
-	para "They don't call"
-	line "me the GUIDE GENT"
-	cont "for no reason!"
+	para "Come on, let me"
+	line "show you the"
+	cont "ropes!"
 	done
 
 GuideGentTourText1:
@@ -416,15 +471,15 @@ GuideGentPokegearText:
 	line "finding it!"
 	done
 
-GuideGentNoText:
-	text "Oh… but it's my"
-	line "passion to show"
-	para "show people around"
-	line "town…"
-	para "It's the least"
-	line "I can contribute"
-	cont "to society now!"
-	done
+; GuideGentNoText:
+; 	text "Oh… but it's my"
+; 	line "passion to show"
+; 	para "show people around"
+; 	line "town…"
+; 	para "It's the least"
+; 	line "I can contribute"
+; 	cont "to society now!"
+; 	done
 
 CherrygroveTeacherText_NoMapCard:
 	text "Did you talk to"
@@ -569,7 +624,10 @@ CherrygroveCity_MapEvents:
 	warp_event  7, 11, FIGHTING_DOJO, 1
 	warp_event 35,  7, CHERRYGROVE_PAGODA_1F, 1
 
-	db 0 ; coord events
+	db 3 ; coord events
+	coord_event 36, 25, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent
+	coord_event 36, 26, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent
+	coord_event 36, 27, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent
 
 	db 5 ; bg events
 	bg_event 33, 27, BGEVENT_READ, CherrygroveCitySign
