@@ -55,6 +55,7 @@ DoAnimFrame:
 	dw .GSIntroFireball
 	dw .GSIntroChikoritaTotodile
 	dw .GSIntroCyndaquil
+	dw .SW97TitleParticles
 
 .Null:
 	ret
@@ -1350,6 +1351,54 @@ DoAnimFrame:
 	ld [hl], a
 	ret
 
+.SW97TitleParticles
+	call .AnonymousJumptable
+	jp hl
+; anonymous jumptable
+	dw .SW97TitleParticles_1
+	dw .SW97TitleParticles_2
+
+.SW97TitleParticles_1
+	call .IncrementJumptableIndex
+	ld hl, SPRITEANIMSTRUCT_INDEX
+	add hl, bc
+	ld a, [hl]
+	ld hl, SPRITEANIMSTRUCT_0D
+	add hl, bc
+	and %11
+	ld [hl], a
+	inc [hl]
+	swap a
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	ld [hl], a
+
+.SW97TitleParticles_2
+	ld hl, SPRITEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld a, [hl]
+	ld hl, SPRITEANIMSTRUCT_0D
+	add hl, bc
+	sub [hl]
+	ld hl, SPRITEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld [hl], a
+	ld hl, SPRITEANIMSTRUCT_0D
+	add hl, bc
+	ld a, [hl]
+	sla a
+	sla a
+	ld d, a
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	ld a, [hl]
+	add a, 2
+	ld [hl], a
+	call .Sprites_Sine
+	ld hl, SPRITEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+	ret
 
 .EZChatCursor
 	ret

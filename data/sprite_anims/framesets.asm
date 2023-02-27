@@ -73,10 +73,16 @@ SpriteAnimFrameData:
 	dw .Frameset_GSIntroChikorita
 	dw .Frameset_GSIntroCyndaquil
 	dw .Frameset_GSIntroTotodile
+	dw .Frameset_SW97TitleParticles
 
 .Frameset_00:
 	frame SPRITE_ANIM_OAMSET_RED_WALK_1, 32
 	endanim
+
+.Frameset_SW97TitleParticles:
+	frame SPRITE_ANIM_OAMSET_GBC_SCREEN_FLAMES_1,  3
+	frame SPRITE_ANIM_OAMSET_GBC_SCREEN_FLAMES_2,  3
+	dorestart
 
 .Frameset_PartyMon:
 	frame SPRITE_ANIM_OAMSET_PARTY_MON_1,  8
