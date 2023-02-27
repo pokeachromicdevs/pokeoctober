@@ -33,6 +33,36 @@ CherrygroveCity_MapScripts:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	return
 
+CherrygroveCityGuideGent_2:
+	checkevent EVENT_GUIDE_GENT_IN_HIS_HOUSE
+	iftrue CherrygroveCityGuideGent.skip_and_set_scene
+	faceplayer
+	opentext
+	writetext GuideGentNoticeText
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
+	applymovement PLAYER, CherrygroveCity_PlayerToGuideGent_2
+	sjump CherrygroveCityGuideGent.ContinueIntro
+
+CherrygroveCityGuideGent_3:
+	checkevent EVENT_GUIDE_GENT_IN_HIS_HOUSE
+	iftrue CherrygroveCityGuideGent.skip_and_set_scene
+	faceplayer
+	opentext
+	writetext GuideGentNoticeText
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
+	applymovement PLAYER, CherrygroveCity_PlayerToGuideGent_3
+	sjump CherrygroveCityGuideGent.ContinueIntro
+
+CherrygroveCity_PlayerToGuideGent_3:
+	step UP
+CherrygroveCity_PlayerToGuideGent_2:
+	step UP
+	step_end
+
 CherrygroveCityGuideGent:
 	checkevent EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	iftrue .skip_and_set_scene
@@ -41,10 +71,6 @@ CherrygroveCityGuideGent:
 	writetext GuideGentNoticeText
 	waitbutton
 	closetext
-	callasm .Check2StepsAway
-	iftrue .WalkToGent2steps
-	callasm .Check3StepsAway
-	iftrue .WalkToGent3steps
 	faceobject PLAYER, CHERRYGROVECITY_GRAMPS
 .ContinueIntro
 	opentext
@@ -118,46 +144,6 @@ CherrygroveCityGuideGent:
 .skip_and_set_scene
 	setscene SCENE_CHERRYGROVECITY_ALREADY_GUIDED
 	end
-
-.Check2StepsAway: ; AAAAAAAAAAAAAAAAAAAAAAA
-	ld a, [wPlayerStandingMapY]
-	cp 26 + 4
-	jr nz, .no__
-	ld a, 1
-	ld [wScriptVar], a
-	ret
-.no__
-	xor a
-	ld [wScriptVar], a
-	ret
-
-.Check3StepsAway: ; AAAAAAAAAAAAAAAAAAAAAAA
-	ld a, [wPlayerStandingMapY]
-	cp 27 + 4
-	jr nz, .no___
-	ld a, 1
-	ld [wScriptVar], a
-	ret
-.no___
-	xor a
-	ld [wScriptVar], a
-	ret
-
-.WalkToGent2steps:
-	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement PLAYER, .Twostepsup
-	sjump .ContinueIntro
-
-.WalkToGent3steps:
-	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement PLAYER, .Threestepsup
-	sjump .ContinueIntro
-
-.Threestepsup:
-	step UP
-.Twostepsup:
-	step UP
-	step_end
 
 .JumpstdReceiveItem:
 	jumpstd receiveitem
@@ -353,14 +339,13 @@ GuideGentIntroText:
 	cont "after all!"
 
 	para "Come on, let me"
-	line "show you the"
-	cont "ropes!"
+	line "show you around!"
 	done
 
-GuideGentTourText1:
-	text "Splendid!"
-	line "Come with me!"
-	done
+; GuideGentTourText1:
+; 	text "Splendid!"
+; 	line "Come with me!"
+; 	done
 
 GuideGentPokecenterText:
 	text "This here is the"
@@ -626,8 +611,8 @@ CherrygroveCity_MapEvents:
 
 	db 3 ; coord events
 	coord_event 36, 25, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent
-	coord_event 36, 26, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent
-	coord_event 36, 27, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent
+	coord_event 36, 26, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent_2
+	coord_event 36, 27, SCENE_CHERRYGROVECITY_NOTHING, CherrygroveCityGuideGent_3
 
 	db 5 ; bg events
 	bg_event 33, 27, BGEVENT_READ, CherrygroveCitySign
