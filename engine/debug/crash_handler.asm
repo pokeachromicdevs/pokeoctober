@@ -123,8 +123,18 @@ endr
 ; put arrow
 	hlcoord 13, 11
 	ld [hl], "▶"
-.inf
 
+; place version
+	ld de, CrashOveride_VersionString
+	hlcoord 1, 8
+	call PlaceString
+
+	ld de, CrashOveride_GitString
+	hlcoord 1, 9
+	call PlaceString
+
+
+.inf
 	call DelayFrame
 	jr .inf
 
@@ -207,3 +217,28 @@ CrashOveride_ErrorStrings:
 
 ;CrashOveride_ErrorUnknown:
 ;	db "Unknown@"
+
+; duplicates of the one in main_menu
+
+CrashOveride_VersionString:
+	db "ver."
+	db GIT_VERSION
+	db "@"
+
+CrashOveride_GitString:
+IF STRLEN(GIT_COMMIT) > 0
+	db "rev."
+	db GIT_COMMIT
+	db "("
+	db GIT_OFFSET
+IF DEF(_DEBUG)
+	db "d"
+endc
+	db ")@"
+ELSE
+IF DEF(_DEBUG)
+	db "Debug@"
+ELSE
+	db "@"
+endc
+endc
