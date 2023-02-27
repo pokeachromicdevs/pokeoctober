@@ -243,6 +243,8 @@ NEXTU ; c300
 ; mobile data
 if DEF(_DEBUG)
 wDebugColorPickerPal:: ds 1 palettes
+wDebugPlayerXCalc:: db
+wDebugPlayerYCalc:: db
 endc
 NEXTU
 wc300:: ds 1

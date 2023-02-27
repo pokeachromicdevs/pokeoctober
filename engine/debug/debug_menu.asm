@@ -91,12 +91,13 @@ DebugMenu::
 	string "FOLLOW"
 	string "CREDITS"
 	string "TOGGLE RUN"
+	string "SHOW POS."
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 18
-	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17
+	db 19
+	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19
 	db -1
 
 .Jumptable
@@ -119,6 +120,24 @@ DebugMenu::
 	dw Debug_ToggleFollow
 	dw Debug_Credits
 	dw Debug_ToggleRun
+	dw Debug_ShowPosition
+
+Debug_ShowPosition:
+	ld a, [wPlayerStandingMapX]
+	sub 4
+	ld [wDebugPlayerXCalc], a
+	ld a, [wPlayerStandingMapY]
+	sub 4
+	ld [wDebugPlayerYCalc], a
+	ld hl, .Text
+	jp PrintText
+.Text:
+	text "X: @"
+	text_decimal wDebugPlayerXCalc, 1, 3
+	text ", Y: @"
+	text_decimal wDebugPlayerYCalc, 1, 3
+	text ""
+	prompt
 
 Debug_Credits:
 	ld a, BANK(.RunCredits)
