@@ -287,14 +287,30 @@ wGlobalAnimYOffset:: db
 wGlobalAnimXOffset:: db
 wSpriteAnimsEnd::
 
-	ds 11
+; crash handler
+wCrashRegisters::
+wCrashA:: db
+wCrashF:: db
+wCrashB:: db
+wCrashC:: db
+wCrashD:: db
+wCrashE:: db
+wCrashH:: db
+wCrashL:: db
+wCrashIE:: db
+wCrashLCDC:: db
+wCrashSP:: dw ; [+0] == LOW(sp)
+              ; [+1] == HIGH(sp)
+wCrashStackBackup:: ds 24
+wCrashTmpStack:: dw
+wCrashROMBank:: db
+wCrashWRAMBank:: db
 
-; mobile data
 if DEF(_DEBUG)
 wDebugItemPickerBuffer::
 endc
-wc3cc:: ds 1
-wc3cd:: ds 31
+
+wc3cd:: ds 3
 wc3ec:: ds 1
 wc3ed:: ds 1
 wc3ee:: ds 1
@@ -314,7 +330,6 @@ wc3fb:: ds 1
 wc3fc:: ds 1
 
 	ds 3
-
 
 SECTION "Sprites", WRAM0
 

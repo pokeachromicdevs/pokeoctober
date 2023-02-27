@@ -169,6 +169,7 @@ ROMX $3e
 ROMX $3f
 	"bank3F"
 	"Debug Menu"
+	"Crash Handler"
 ROMX $41
 	"bank41"
 	"Enemy Trainer Parties 1"

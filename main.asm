@@ -697,6 +697,9 @@ if DEF(_DEBUG)
 INCLUDE "engine/debug/debug_menu.asm"
 endc
 
+SECTION "Crash Handler", ROMX
+INCLUDE "engine/debug/crash_handler.asm"
+
 ; mbc30 additions
 
 SECTION "MBC30 Verification", ROMX
