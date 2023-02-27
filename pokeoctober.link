@@ -27,6 +27,8 @@ ROM0
 	org $0080
 	"Follower Script Home" ; full!
 	"Free Space 0080"
+	org $00f9
+	"Reset Crash Handler"
 	org $0100
 	"Header"
 	org $0150

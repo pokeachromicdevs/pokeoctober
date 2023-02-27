@@ -202,6 +202,7 @@ CrashOveride_ErrorStrings:
 	db "S.overflow@"
 	db "S.underflow@"
 	db "Win.stack!@"
+	db "Wrong call@"
 
 ;CrashOveride_ErrorUnknown:
 ;	db "Unknown@"

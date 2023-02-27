@@ -24,7 +24,12 @@ GetItemIDFromHL::
 	pop hl
 	ret
 
+SECTION "Reset Crash Handler", ROM0
 
+HandleResetError::
+	ldh [hBuffer], a
+	ld a, E_INVALID_CALL
+	jp CrashOveride
 
 SECTION "Header", ROM0
 
