@@ -133,6 +133,18 @@ endr
 	hlcoord 1, 9
 	call PlaceString
 
+; indicate if MBC30 is enabled:
+	ld de, CrashOveride_MBC30String
+	hlcoord 1, 14
+	call PlaceString
+
+	call DoesEmulatorSupportMBC30
+	jr z, .inf ; supported
+
+; indicate no support
+	ld de, CrashOveride_NotString
+	hlcoord 1, 13
+	call PlaceString
 
 .inf
 	call DelayFrame
@@ -242,3 +254,9 @@ ELSE
 	db "@"
 endc
 endc
+
+CrashOveride_NotString:
+	db "NOT@"
+
+CrashOveride_MBC30String:
+	db "MBC30@"
