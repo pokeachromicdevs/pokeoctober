@@ -13,13 +13,14 @@ _CrashOveride::
 	call SetPalettes
 	callfar ClearSpriteAnims
 	call ClearSprites
-	call EnableLCD
-	call ClearScreen
 
 	ld de, Font
 	ld hl, vTiles1
 	lb bc, BANK(Font), $80
-	call Get1bpp
+	call Copy1bpp
+
+	call EnableLCD
+	call ClearScreen
 
 ; we can take our sweet-ass time here
 	ld de, CrashTxt1
