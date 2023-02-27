@@ -3,7 +3,8 @@
 SECTION "rst0", ROM0
 ; 2 ops before jump to account for $ffff being called
 	nop
-	nop
+	ldh [hBuffer], a
+	ld a, E_RST_00_CALL
 	jp CrashOveride
 
 SECTION "rst8", ROM0 ; rst FarCall
@@ -15,9 +16,13 @@ SECTION "rst10", ROM0 ; rst Bankswitch
 	ret
 
 SECTION "rst18", ROM0
+	ldh [hBuffer], a
+	ld a, E_RST_18_CALL
 	jp CrashOveride
 
 SECTION "rst20", ROM0
+	ldh [hBuffer], a
+	ld a, E_RST_20_CALL
 	jp CrashOveride
 
 SECTION "rst28", ROM0 ; rst JumpTable
@@ -36,4 +41,6 @@ SECTION "rst28", ROM0 ; rst JumpTable
 ; rst30 is midst rst28
 
 SECTION "rst38", ROM0
+	ldh [hBuffer], a
+	ld a, E_RST_38_CALL
 	jp CrashOveride

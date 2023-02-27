@@ -35,6 +35,10 @@ SimpleMultiply::
 
 SimpleDivide::
 ; Divide a by c. Return quotient b and remainder a.
+	inc c
+	dec c
+	jr z, .div0
+
 	ld b, 0
 .loop
 	inc b
@@ -43,6 +47,11 @@ SimpleDivide::
 	dec b
 	add c
 	ret
+
+.div0
+	ldh [hBuffer], a
+	ld a, E_DIV_ZERO
+	jp CrashOveride
 
 Multiply::
 ; Multiply hMultiplicand (3 bytes) by hMultiplier. Result in hProduct.

@@ -21,7 +21,7 @@ hMinutes:: db ; ff96
 hSeconds:: db ; ff98
 	ds 1
 
-	ds 1
+hCrashCode:: db
 
 hVBlankCounter:: db ; ff9b
 

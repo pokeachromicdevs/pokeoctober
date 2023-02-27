@@ -18,9 +18,16 @@
 ; (stack numbers in little endian)
 
 CrashOveride::
-	ld b, b ; set breakpoint here
-; dump registers ASAP
+; This assumes A is saved to hBuffer first
+; Upon calling, A contains the error code.
+
 	di
+	ld b, b ; set breakpoint here
+
+	ldh [hCrashCode], a
+
+; dump registers ASAP
+	ldh a, [hBuffer]
 	ld [wCrashA], a
 	ld a, b
 	ld [wCrashB], a
@@ -78,7 +85,6 @@ CrashOveride::
 	and %111
 	ld [wCrashWRAMBank], a
 
-.write_cause
 ; we ain't ever going back, so...
 	ld a, BANK(_CrashOveride)
 	rst Bankswitch

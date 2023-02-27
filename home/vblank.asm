@@ -28,11 +28,34 @@ VBlank::
 
 	call GameTimer
 
+	ldh a, [hCrashCode]
+	and a
+	jr nz, .no_crash
+
+	ld hl, sp+$0
+	ld a, h
+	cp HIGH(wStackBottom)
+	jr c, .stack_over_crash
+	jr nz, .stack_under_crash
+
+ .no_crash
 	pop hl
 	pop de
 	pop bc
 	pop af
 	reti
+
+.stack_over_crash
+	ldh [hBuffer], a
+	ld a, E_STACK_OVERFLOW
+	jr .crash
+
+.stack_under_crash
+	ldh [hBuffer], a
+	ld a, E_STACK_UNDERFLOW
+	;jr .crash
+.crash
+	jp CrashOveride
 
 .VBlanks:
 	dw VBlank0

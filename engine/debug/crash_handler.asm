@@ -38,6 +38,30 @@ _CrashOveride::
 	hlcoord 1, 11
 	call PlaceString
 
+; determine cause of crash
+	ld de, CrashOveride_ErrorStrings
+	ldh a, [hCrashCode]
+	and a
+	jr z, .place_error
+	cp NUM_E_CODES
+	jr c, .not_unknown
+
+	;ld de, CrashOveride_ErrorUnknown
+	jr .place_error
+
+.not_unknown
+	ld c, a
+.find_str_loop
+	ld a, [de]
+	inc de
+	cp "@"
+	jr nz, .find_str_loop
+	dec c
+	jr nz, .find_str_loop ; not yet
+.place_error
+	hlcoord 8, 1
+	call PlaceString
+
 ; af
 	hlcoord 4, 4
 	ld de, wCrashA
@@ -104,7 +128,7 @@ endr
 	jr .inf
 
 CrashTxt1:
-	db "CRASH!!@"
+	db "CRASH:@"
 
 CrashTxt2:
 	db "Please file a bug!@"
@@ -167,3 +191,17 @@ CrashOveride_ResetLY:
 	dec c
 	jr nz, .loop
 	ret
+
+CrashOveride_ErrorStrings:
+	db "Unknown@"
+	db "opcode C7@"
+	db "opcode DF@"
+	db "opcode E7@"
+	db "opcode FF@"
+	db "Div. by 0@"
+	db "S.overflow@"
+	db "S.underflow@"
+	db "Win.stack!@"
+
+;CrashOveride_ErrorUnknown:
+;	db "Unknown@"

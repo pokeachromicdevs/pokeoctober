@@ -534,13 +534,23 @@ _PushWindow::
 
 .done
 	pop hl
-	call .ret ; empty function
 	ld a, h
 	ld [de], a
 	dec de
 	ld a, l
 	ld [de], a
 	dec de
+
+	ld a, d
+	cp $d0
+	jr nc, .not_overflow
+
+	ldh [hBuffer], a
+	ld a, E_WINSTACK_OVERFLOW
+	ldh [hCrashCode], a
+	jp CrashOveride
+
+.not_overflow
 	ld hl, wWindowStackPointer
 	ld [hl], e
 	inc hl
