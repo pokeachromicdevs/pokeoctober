@@ -903,22 +903,12 @@ UnknownText_0x1c55d6::
 	done
 
 UnknownText_0x1c55db::
-	text "Password OK."
-	line "Select CONTINUE &"
-	cont "reset settings."
-	prompt
-
-UnknownText_0x1c560b::
-	text "Wrong password!"
+	text "Select CONTINUE &"
+	line "reset settings."
 	prompt
 
 UnknownText_0x1c561c::
 	text "Reset the clock?"
-	done
-
-UnknownText_0x1c562e::
-	text "Please enter the"
-	line "password."
 	done
 
 UnknownText_0x1c564a::
@@ -1481,8 +1471,8 @@ UnknownText_0x1c5ff1::
 
 UnknownText_0x1c6000::
 	text "Do you want to"
-	line "switch to Daylight"
-	cont "Saving Time?"
+	line "switch to DAYLIGHT"
+	cont "SAVING TIME?"
 	done
 
 UnknownText_0x1c6030::
@@ -1492,8 +1482,8 @@ UnknownText_0x1c6030::
 	prompt
 
 UnknownText_0x1c6056::
-	text "Is Daylight Saving"
-	line "Time over?"
+	text "Is DAYLIGHT SAVING"
+	line "TIME over?"
 	done
 
 UnknownText_0x1c6075::
@@ -1505,8 +1495,8 @@ UnknownText_0x1c6095::
 	text "Do you want to"
 	line "adjust your clock"
 
-	para "for Daylight"
-	line "Saving Time?"
+	para "for DAYLIGHT"
+	line "SAVING TIME?"
 	done
 
 UnknownText_0x1c60d1::

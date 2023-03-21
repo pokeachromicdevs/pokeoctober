@@ -33,7 +33,7 @@ RGBGFX  ?= $(RGBDS)rgbgfx
 RGBLINK ?= $(RGBDS)rgblink
 
 # must be python 3
-PYTHON ?= python
+PYTHON ?= python3
 
 IPSPATCH ?= tools/ipspatch
 
