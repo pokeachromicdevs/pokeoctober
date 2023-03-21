@@ -293,3 +293,4 @@ AnimationIdlePointers:
 	dw GermifrostAnimationIdle
 	dw VegelancheAnimationIdle
 	dw SnouwrbunAnimationIdle
+	dw NecrorexAnimationIdle

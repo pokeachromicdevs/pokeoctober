@@ -1,5 +1,5 @@
-NUM_MOM_ITEMS_1 EQUS "((MomItems_1.End - MomItems_1) / 8)"
-NUM_MOM_ITEMS_2 EQUS "((MomItems_2.End - MomItems_2) / 8)"
+NUM_MOM_ITEMS_1 EQUS "((MomItems_1.End - MomItems_1) / 9)"
+NUM_MOM_ITEMS_2 EQUS "((MomItems_2.End - MomItems_2) / 9)"
 
 	const_def 1
 	const MOM_ITEM
@@ -143,7 +143,12 @@ Mom_GiveItemOrDoll:
 	ret
 
 .not_doll
-	ld a, [hl]
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		call GetItemIDFromIndex
+	pop hl
 	ld [wCurItem], a
 	ld a, 1
 	ld [wItemQuantityChangeBuffer], a
@@ -182,7 +187,7 @@ GetItemFromMom:
 	jr z, .zero
 	dec a
 	ld de, MomItems_1
-	jr .GetFromList1
+	jr .GetFromList
 
 .zero
 	ld a, [wWhichMomItem]
@@ -193,18 +198,22 @@ GetItemFromMom:
 .ok
 	ld de, MomItems_2
 
-.GetFromList1:
+.GetFromList:
 	ld l, a
 	ld h, 0
-rept 3 ; multiply hl by 8
+; multiply hl by 9
 	add hl, hl
-endr
+	add hl, hl
+	add hl, hl
+	push de
+		ld d, h
+		ld e, l
+		add hl, de
+	pop de
 	add hl, de
 	ret
 
 INCLUDE "data/items/mom_phone.asm"
-
-	db 0, 0, 0 ; unused
 
 _MomText_HiHowAreYou:
 	; Hi,  ! How are you?

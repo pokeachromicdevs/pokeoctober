@@ -6,7 +6,7 @@
 	db PSYCHIC, PSYCHIC ; type
 	db 200 ; catch rate
 	db 73 ; base exp
-	db SPOON, TWISTED_SPOON ; items
+	dw SPOON, TWISTED_SPOON ; items
 	db GENDER_F25 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

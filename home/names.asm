@@ -1,6 +1,5 @@
 NamesPointers::
 ; entries correspond to GetName constants (see constants/text_constants.asm); MON_NAME and MOVE_NAME are not handled by this table
-	dba ItemNames           ; ITEM_NAME
 	dbw 0, wPartyMonOT      ; PARTY_OT_NAME
 	dbw 0, wOTPartyMonOT    ; ENEMY_OT_NAME
 	dba TrainerClassNames   ; TRAINER_NAME
@@ -24,7 +23,10 @@ GetName::
 	dec a ; MOVE_NAME
 	ld hl, GetMoveName
 	jr z, .go
-	dec a
+	dec a ; ITEM_NAME
+	ld hl, GetItemName
+	jr z, .go
+	dec a ; ?
 	ld hl, .generic_function
 .go
 	call _hl_
@@ -153,15 +155,34 @@ GetPokemonName::
 
 GetItemName::
 ; Get item name for wNamedObjectIndexBuffer.
-
 	push hl
 	push bc
+
+	ldh a, [hROMBank]
+	push af
+
+	ld a, BANK(ItemNames)
+	rst Bankswitch
+
 	ld a, [wNamedObjectIndexBuffer]
-	ld [wCurSpecies], a
-	ld a, ITEM_NAME
-	ld [wNamedObjectTypeBuffer], a
-	call GetName
+	call GetItemIndexFromID
+
+	dec hl
+	ld b, h
+	ld c, l
+
+	ld hl, ItemNames
+	call GetNthString16
+
 	ld de, wStringBuffer1
+	push de
+		ld bc, ITEM_NAME_LENGTH
+		call CopyBytes
+	pop de
+
+	pop af
+	rst Bankswitch
+
 	pop bc
 	pop hl
 	ret

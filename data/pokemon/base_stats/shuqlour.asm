@@ -6,7 +6,7 @@
 	db ROCK, POISON ; type
 	db 190 ; catch rate
 	db 174 ; base exp
-	db APPLE, APPLE ; items
+	dw APPLE, APPLE ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

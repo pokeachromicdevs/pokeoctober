@@ -6,7 +6,7 @@
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
 	db 211 ; base exp
-	db SHARP_HORN, NO_ITEM ; items
+	dw SHARP_HORN, NO_ITEM ; items
 	db GENDER_F0 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

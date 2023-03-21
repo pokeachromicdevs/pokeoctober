@@ -90,6 +90,7 @@ NUM_SPRITEANIMDICT_ENTRIES EQU 10
 	const SPRITE_ANIM_INDEX_GS_INTRO_CHIKORITA        ; 32
 	const SPRITE_ANIM_INDEX_GS_INTRO_CYNDAQUIL        ; 33
 	const SPRITE_ANIM_INDEX_GS_INTRO_TOTODILE         ; 34
+	const SPRITE_ANIM_INDEX_GBC_SCREEN_FLAMES         ; 35
 
 ; DoAnimFrame.Jumptable indexes (see engine/gfx/sprite_anims.asm)
 	const_def
@@ -135,6 +136,7 @@ NUM_SPRITEANIMDICT_ENTRIES EQU 10
 	const SPRITE_ANIM_SEQ_GS_INTRO_FIREBALL           ; 27
 	const SPRITE_ANIM_SEQ_GS_INTRO_CHIKORITA_TOTODILE ; 28
 	const SPRITE_ANIM_SEQ_GS_INTRO_CYNDAQUIL          ; 29
+	const SPRITE_ANIM_SEQ_GBC_SCREEN_FLAMES           ; 2a
 
 ; SpriteAnimFrameData indexes (see data/sprite_anims/framesets.asm)
 	const_def
@@ -211,6 +213,7 @@ NUM_SPRITEANIMDICT_ENTRIES EQU 10
 	const SPRITE_ANIM_FRAMESET_GS_INTRO_CHIKORITA        ; 46
 	const SPRITE_ANIM_FRAMESET_GS_INTRO_CYNDAQUIL        ; 47
 	const SPRITE_ANIM_FRAMESET_GS_INTRO_TOTODILE         ; 48
+	const SPRITE_ANIM_FRAMESET_GBC_SCREEN_FLAMES         ; 49
 
 ; SpriteAnimOAMData indexes (see data/sprite_anims/oam.asm)
 	const_def
@@ -356,3 +359,5 @@ NUM_SPRITEANIMDICT_ENTRIES EQU 10
 	const SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_11          ; 8b
 	const SPRITE_ANIM_OAMSET_PARTY_MON_1                ; 8c
 	const SPRITE_ANIM_OAMSET_PARTY_MON_2                ; 8d
+	const SPRITE_ANIM_OAMSET_GBC_SCREEN_FLAMES_1         ; 8e
+	const SPRITE_ANIM_OAMSET_GBC_SCREEN_FLAMES_2         ; 8f

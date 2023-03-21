@@ -80,6 +80,10 @@ _Multiply::
 	ret
 
 _Divide::
+	ldh a, [hDivisor]
+	and a
+	jp z, .div0
+
 	xor a
 	ldh [hMathBuffer], a
 	ldh [hMathBuffer + 1], a
@@ -187,3 +191,9 @@ _Divide::
 	ldh [hQuotient], a
 
 	ret
+
+.div0
+	ldh [hBuffer], a
+	ld a, E_DIV_ZERO
+	ldh [hCrashCode], a
+	jp CrashOveride

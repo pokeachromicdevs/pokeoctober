@@ -44,7 +44,14 @@ HerbShop:
 	ret
 
 PagodaSellers:
+	ld a, [wMartType]
+	cp MARTTYPE_PAGODA_TM
+	jr nz, .item_mart
+	call FarCopyMart
+	jr .got_mart_entries
+.item_mart
 	call FarReadMart
+.got_mart_entries
 	call LoadStandardMenuHeader
 	ld hl, Text_PagodaSellers_Intro
 	call MartTextbox
@@ -226,20 +233,64 @@ StandardMart:
 	ld a, STANDARDMART_TOPMENU
 	ret
 
-FarReadMart:
+FarCopyMart: ; copy the mart directly
 	ld hl, wMartPointer
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
 	ld de, wCurMart
-.CopyMart:
 	ld a, [wMartPointerBank]
 	call GetFarByte
 	ld [de], a
 	inc hl
 	inc de
-	cp -1
+	ld c, a
+	ld b, 0
+	ld a, [wMartPointerBank]
+	call FarCopyBytes
+; end list
+	ld a, -1
+	ld [de], a
+	jr FarReadMart.ReadPrices
+
+FarReadMart: ; read mart items (index -> ID conversion)
+	ld hl, wMartPointer
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld de, wCurMart
+	ld a, [wMartPointerBank]
+	call GetFarByte
+	inc hl
+; store item count
+	ld [de], a
+	ld  c, a
+	inc de
+.CopyMart:
+	push hl
+		push bc
+			ld a, [wMartPointerBank]
+			call GetFarByte
+			ld c, a
+			inc hl
+			ld a, [wMartPointerBank]
+			call GetFarByte
+			ld b, a
+			push bc
+			pop hl
+			call GetItemIDFromIndex
+		pop bc
+	pop hl
+	inc hl
+	inc hl
+	ld [de], a
+	inc de
+	dec c
 	jr nz, .CopyMart
+; end of list
+	ld a, -1
+	ld [de], a
+.ReadPrices:
 	ld hl, wMartItem1BCD
 	ld de, wCurMart + 1
 .ReadMartItem:
@@ -251,7 +302,6 @@ FarReadMart:
 	call GetMartItemPrice
 	pop de
 	jr .ReadMartItem
-
 .done
 	ret
 

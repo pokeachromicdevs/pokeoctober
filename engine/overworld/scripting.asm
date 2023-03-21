@@ -553,7 +553,7 @@ ReceivedItemText:
 	text_far UnknownText_0x1c4719
 	text_end
 
-Script_verbosegiveitemvar:
+Script_verbosegiveitemvar: ; TODO 16-bit items
 ; script command 0x9f
 ; parameters: item, var
 
@@ -1490,9 +1490,6 @@ ScriptCall:
 	ret
 
 CallCallback::
-	ld a, [wScriptBank]
-	or $80
-	ld [wScriptBank], a
 	jp ScriptCall
 
 Script_sjump:
@@ -1897,14 +1894,21 @@ Script_getitemname:
 ; parameters: string_buffer, item_id (0 aka USE_SCRIPT_VAR to use wScriptVar)
 
 	call GetScriptByte
-	and a ; USE_SCRIPT_VAR
-	jr nz, .ok
-	ld a, [wScriptVar]
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	or l
+	jr z, .use_script_var
+	call GetItemIDFromIndex
 .ok
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ld de, wStringBuffer1
 	jr GetStringBuffer
+.use_script_var
+	ld a, [wScriptVar]
+	jr .ok
+	
 
 Script_getcurlandmarkname:
 ; script command 0x42
@@ -2058,10 +2062,19 @@ Script_giveitem:
 ; parameters: item, quantity
 
 	call GetScriptByte
-	cp ITEM_FROM_MEM
-	jr nz, .ok
+	ld l, a
+	call GetScriptByte
+	ld h, a
+
+	cphl16 ITEM_FROM_MEM ; for fruit trees and what not
+	jr z, .from_mem
+
+	call GetItemIDFromIndex
+	jr .got_item
+
+.from_mem
 	ld a, [wScriptVar]
-.ok
+.got_item
 	ld [wCurItem], a
 	call GetScriptByte
 	ld [wItemQuantityChangeBuffer], a
@@ -2083,6 +2096,10 @@ Script_takeitem:
 	xor a
 	ld [wScriptVar], a
 	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call GetScriptByte
 	ld [wItemQuantityChangeBuffer], a
@@ -2102,6 +2119,10 @@ Script_checkitem:
 	xor a
 	ld [wScriptVar], a
 	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
@@ -2307,6 +2328,10 @@ Script_givepoke:
 	call GetScriptByte
 	ld [wCurPartyLevel], a
 	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call GetScriptByte
 	and a
@@ -2759,7 +2784,6 @@ ExitScriptSubroutine:
 	add hl, de
 	ld a, [hli]
 	ld b, a
-	and " "
 	ld [wScriptBank], a
 	ld a, [hli]
 	ld e, a

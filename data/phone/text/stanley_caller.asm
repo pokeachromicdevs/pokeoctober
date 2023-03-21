@@ -6,55 +6,45 @@ StanleyAreYouGrowingText:
 	line "as usual."
 
 	para "Although,"
-	line "sometimes they" 
-	cont "are a little"
-	
-	para "too lively to"
-	line "handle, haha!"
+	line "sometimes they"
+	para "are a little"
+	line "too lively to"
+	cont "handle, haha!"
 	done
 
 UnknownText_0x175869:
 	text "By the way, I"
-	line "encountered a"
-	cont "wild @"
+	line "encountered a wild"
+	para "@"
 	text_ram wStringBuffer4
-	para "just a little"
-	line "bit ago."
-
-	para "My tactics plus"
-	line "my #MON's"
-
-	para "power made it an"
-	line "easy victory for"
-	cont "us."
+	text " just a"
+	line "little bit ago."
+	para "My tactics plus my"
+	line "#MON's power"
+	para "made it an easy"
+	line "victory for us!"
 	done
 
 UnknownText_0x1758e4:
 	text "By the way, a"
 	line "wild @"
 	text_ram wStringBuffer4
+	text ""
 	para "slipped from my"
-
 	line "grasp earlier."
-	cont "It's a shame,"
-
-	para "since it's a"
-	line "#MON that I've"
-
-	cont "been watching to"
-	para "catch for a while"
-	line "now."
-	
-	cont "Farewell for"
-	para "now!"
+	para "It's a shame, since"
+	line "it's a #MON that"
+	para "I've been wanting"
+	line "to catch for a"
+	cont "while now."
 	done
 
 UnknownText_0x175976:
 	text "You feel like"
 	line "having a rematch?"
-	
+
 	para "I sure have been."
-	
+
 	para "Meet me at"
 	line "@"
 	text_ram wStringBuffer5
@@ -66,7 +56,7 @@ UnknownText_0x175976:
 	done
 
 UnknownText_0x1759e7:
-	text "Farewell!"
+	text "Farewell for now!"
 	done
 
 StanleyBugCatchingContestText:
@@ -99,16 +89,14 @@ StanleyFoundBerryText:
 UnknownText_0x175abe:
 	text "If you're calling"
 	line "about BERRIES, I'm"
-
 	para "afraid I have no"
 	line "extras at the"
+	cont "moment. Sorry!"
 
-	para "moment. Sorry!"
-	
 	para "I'll find more"
 	line "soon enough"
 	cont "though!"
-	
+
 	para "I'll call you"
 	line "then."
 	done
@@ -117,7 +105,7 @@ UnknownText_0x175b1e:
 	text "You feel like"
 	line "having a rematch?"
 	cont "I sure have been."
-	
+
 	para "Meet me at"
 	line "@"
 	text_ram wStringBuffer5
@@ -131,14 +119,13 @@ UnknownText_0x175b1e:
 UnknownText_0x175b6d:
 	text "I hate to sound"
 	line "possibly annoying,"
-	
+
 	para "but have you"
 	line "forgotten about"
 	cont "our rematch?"
-	
+
 	para "I'm still here at"
-	
-	para "@"
+	line "@"
 	text_ram wStringBuffer5
 	text "."
 	done

@@ -133,17 +133,28 @@ LoadBattleAnimGFX:
 	ld [rSVBK], a
 	; store the current item in b
 	ld a, [wCurItem]
-	ld b, a
+	call GetItemIndexFromID
 	; seek for the BallColors entry matching the current item
-	ld hl, BallColors
+	ld de, BallColors
 .loop
-	ld a, [hli]
-	cp b ; did we find the current ball?
+	ld a, [de]
+	inc de
+	cp l
+	jr nz, .skip_entry
+	ld a, [de]
+	inc de
+	cp -1 ; no balls above $ff00
 	jr z, .done
-	cp -1 ; did we reach the end of the list?
+	cp h
+.got_ball_color
 	jr z, .done
 rept PAL_COLOR_SIZE * 2
-	inc hl ; skip over the two RGB colors to the next entry
+	inc de
+endr
+	jr .loop
+.skip_entry
+rept (PAL_COLOR_SIZE * 2) + 1
+	inc de
 endr
 	jr .loop
 .done
@@ -151,14 +162,14 @@ endr
 	ld a, BANK(wOBPals2)
 	ld [rSVBK], a
 	; load the RGB colors into the middle two colors of PAL_BATTLE_OB_RED
-	ld de, wOBPals2 palette PAL_BATTLE_OB_RED color 1
+	ld hl, wOBPals2 palette PAL_BATTLE_OB_RED color 1
 rept PAL_COLOR_SIZE * 2 - 1
-	ld a, [hli]
-	ld [de], a
+	ld a, [de]
 	inc de
+	ld [hli], a
 endr
-	ld a, [hl]
-	ld [de], a
+	ld a, [de]
+	ld [hl], a
 	; apply the updated colors to the palette RAM
 	ld a, $1
 	ldh [hCGBPalUpdate], a

@@ -6,7 +6,7 @@
 	db BUG, POISON ; type
 	db 255 ; catch rate
 	db 52 ; base exp
-	db BERRY, TOXIC_NEEDLE ; items
+	dw BERRY, TOXIC_NEEDLE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 15 ; step cycles to hatch

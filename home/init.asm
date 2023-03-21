@@ -148,12 +148,6 @@ Init::
 	ld [MBC3LatchClock], a
 	ld [MBC3SRamEnable], a
 
-	ldh a, [hCGB]
-	and a
-	jr z, .no_double_speed
-	call NormalSpeed
-.no_double_speed
-
 	xor a
 	ldh [rIF], a
 	ld a, IE_DEFAULT

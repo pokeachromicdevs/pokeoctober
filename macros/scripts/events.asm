@@ -203,7 +203,7 @@ if _NARG == 1
 	giveitem \1, 1
 else
 	db giveitem_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; quantity
 endc
 ENDM
@@ -214,7 +214,7 @@ if _NARG == 1
 	takeitem \1, 1
 else
 	db takeitem_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; quantity
 endc
 ENDM
@@ -222,7 +222,7 @@ ENDM
 	enum checkitem_command ; $21
 checkitem: MACRO
 	db checkitem_command
-	db \1 ; item
+	dw \1 ; item
 ENDM
 
 	enum givemoney_command ; $22
@@ -304,7 +304,7 @@ else
 	db givepoke_command
 	dw \1 ; pokemon
 	db \2 ; level
-	db \3 ; item
+	dw \3 ; item
 	db \4 ; trainer
 if \4
 	dw \5 ; trainer_name_pointer
@@ -434,7 +434,7 @@ ENDM
 	enum getitemname_command ; $41
 getitemname: MACRO
 	db getitemname_command
-	db \2 ; item
+	dw \2 ; item
 	db \1 ; string_buffer
 ENDM
 
@@ -986,7 +986,7 @@ if _NARG == 1
 	verbosegiveitem \1, 1
 else
 	db verbosegiveitem_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; quantity
 endc
 ENDM
@@ -994,7 +994,7 @@ ENDM
 	enum verbosegiveitemvar_command ; $9f
 verbosegiveitemvar: MACRO
 	db verbosegiveitemvar_command
-	db \1 ; item
+	dw \1 ; item
 	db \2 ; var
 ENDM
 

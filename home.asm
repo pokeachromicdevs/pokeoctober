@@ -9,6 +9,27 @@ INCLUDE "home/rst.asm"
 
 INCLUDE "home/interrupts.asm"
 
+SECTION "Free Space 0080", ROM0
+GetItemIDFromHL::
+; in:
+; 	[hl] = address of 16-bit item index
+; out:
+;	a  = found item ID
+; preserves all registers except output
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		call GetItemIDFromIndex
+	pop hl
+	ret
+
+SECTION "Reset Crash Handler", ROM0
+
+HandleResetError::
+	ldh [hBuffer], a
+	ld a, E_INVALID_CALL
+	jp CrashOveride
 
 SECTION "Header", ROM0
 
@@ -245,3 +266,4 @@ INCLUDE "home/indirection.asm"
 INCLUDE "home/16bit.asm"
 INCLUDE "home/get_following_sprite.asm"
 INCLUDE "home/check_mbc30_support.asm"
+INCLUDE "home/crashed.asm"

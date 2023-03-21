@@ -124,7 +124,8 @@ HabitatPokedexOrder:
 	dw CROBAT
 	dw GLIGAR
 	dw DELIBIRD
-	dw STANTLER;
+	dw STANTLER
+	dw NECROREX ; TODO: place necrorex in correct habitat order
 
 ; WATER/PLANT
 	dw SQUIRTLE

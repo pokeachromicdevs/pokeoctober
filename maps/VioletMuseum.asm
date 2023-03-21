@@ -115,6 +115,10 @@ VioletMuseum_FossilGuyScript:
 	done
 
 VioletMuseum_Necrorex:
+	refreshscreen
+	pokepic NECROREX
+	waitbutton
+	closepokepic
 	jumptext .Text
 .Text:
 	text "It's a skeleton of"

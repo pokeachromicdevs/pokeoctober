@@ -36,7 +36,9 @@ RGBLINK ?= $(RGBDS)rgblink
 PYTHON ?= python3
 
 IPSPATCH ?= tools/ipspatch
+IPSPATCH_COMMAND ?= create
 
+# to specify FLIPS should be used, set IPSPATCH="flips" and IPSPATCH_COMMAND="--create"
 
 ### Build targets
 
@@ -99,10 +101,10 @@ endif
 
 patch: pokeoctober-v.$(GIT_VERSION).ips
 
-pokeoctober-v.$(GIT_VERSION).ips: pokeoctober.gbc baserom.gbc $(IPSPATCH)
+pokeoctober-v.$(GIT_VERSION).ips: pokeoctober.gbc baserom.gbc
 # check if baserom == crystal 1.1
 	[ $(shell sha1sum -b baserom.gbc | cut -c 1-40) = f2f52230b536214ef7c9924f483392993e226cfb ]
-	$(IPSPATCH) create baserom.gbc pokeoctober.gbc $@
+	$(IPSPATCH) $(IPSPATCH_COMMAND) baserom.gbc pokeoctober.gbc $@
 
 poke%.gbc: $$(%_obj) pokeoctober.link
 	$(RGBLINK) -n poke$*.sym -m poke$*.map -l pokeoctober.link -o $@ $(filter %.o,$^)

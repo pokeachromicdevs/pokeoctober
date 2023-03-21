@@ -295,3 +295,4 @@ OldPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
+	dw NECROREX

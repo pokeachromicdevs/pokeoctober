@@ -1,23 +1,3 @@
-smartcp: MACRO
-IF \1 == 0
-	and a
-ELSE
-	cp \1
-ENDC
-ENDM
-
-cphl16: MACRO
-; arg1: 16 bit register
-; arg2: value to compare to
-	ld a, h
-	smartcp HIGH(\1)
-	jr c, .done\@
-	jr nz, .done\@
-	ld a, l
-	smartcp LOW(\1)
-.done\@
-ENDM
-
 DebugMenu::
 	call ClearWindowData
 
@@ -111,12 +91,13 @@ DebugMenu::
 	string "FOLLOW"
 	string "CREDITS"
 	string "TOGGLE RUN"
+	string "SHOW POS."
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 18
-	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17
+	db 19
+	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19
 	db -1
 
 .Jumptable
@@ -139,6 +120,24 @@ DebugMenu::
 	dw Debug_ToggleFollow
 	dw Debug_Credits
 	dw Debug_ToggleRun
+	dw Debug_ShowPosition
+
+Debug_ShowPosition:
+	ld a, [wPlayerStandingMapX]
+	sub 4
+	ld [wDebugPlayerXCalc], a
+	ld a, [wPlayerStandingMapY]
+	sub 4
+	ld [wDebugPlayerYCalc], a
+	ld hl, .Text
+	jp PrintText
+.Text:
+	text "X: @"
+	text_decimal wDebugPlayerXCalc, 1, 3
+	text ", Y: @"
+	text_decimal wDebugPlayerYCalc, 1, 3
+	text ""
+	prompt
 
 Debug_Credits:
 	ld a, BANK(.RunCredits)
@@ -1191,6 +1190,11 @@ Debug_GivePoke:
 	jp nc, .loop
 	ld [wCurPartyLevel], a
 	ldh a, [hDebugMenuDataBuffer + 3]
+	push hl
+		ld l, a
+		ld h, 0
+		call GetItemIDFromIndex
+	pop hl
 	ld [wCurItem], a
 	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
@@ -1270,9 +1274,16 @@ Debug_GivePoke:
 	ld bc, 18
 	ld a, " "
 	call ByteFill
+; force GC before setting an item
+	farcall ItemTableGarbageCollection
+
 	ldh a, [hDebugMenuDataBuffer + 3]
 	and a
 	jr z, .no_item_name
+; still limited to 255 items for now
+ 	ld l, a
+	ld h, 0
+	call GetItemIDFromIndex
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ld de, wStringBuffer1
@@ -1448,6 +1459,49 @@ Debug_PC:
 	ret
 
 Debug_FillBag:
+	ld a, BANK(.GiveLotsOfItems)
+	ld hl, .GiveLotsOfItems
+	jp CallScript
+.GiveLotsOfItems
+	giveitem AQUA_HORN
+	giveitem POTION, 5
+	giveitem MAX_POTION, 8
+	giveitem ITEM_101
+	giveitem ITEM_100
+	giveitem POTION
+	giveitem MASTER_BALL
+	giveitem ULTRA_BALL
+	giveitem GREAT_BALL
+	giveitem POKE_BALL
+	giveitem SMOKE_BALL
+	giveitem GS_BALL
+	giveitem HEAVY_BALL
+	giveitem LEVEL_BALL
+	giveitem LURE_BALL
+	giveitem FAST_BALL
+	giveitem LIGHT_BALL
+	giveitem FRIEND_BALL
+	giveitem MOON_BALL
+	giveitem LOVE_BALL
+	giveitem PARK_BALL
+	giveitem SAFARI_BALL
+	giveitem DIRECT_BALL
+	giveitem NIGHT_BALL
+	giveitem RED_APRICORN
+	giveitem BLU_APRICORN
+	giveitem YLW_APRICORN
+	giveitem GRN_APRICORN
+	giveitem WHT_APRICORN
+	giveitem BLK_APRICORN
+	giveitem PNK_APRICORN
+	giveitem HP_UP
+	giveitem PROTEIN
+	giveitem IRON
+	giveitem CARBOS
+	giveitem CALCIUM
+	end
+
+; ------ old 8-bit code --------
 	ld hl, wNumItems
 	ld bc, wItemsEnd - wNumItems
 	xor a

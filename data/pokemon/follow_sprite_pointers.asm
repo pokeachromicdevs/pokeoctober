@@ -334,3 +334,4 @@ FollowSpritePointers::
 	follow_sprite GermifrostSpriteGFX, PAL_FOLLOWER_SNOUWRBUN ;GERMIFROST
 	follow_sprite VegelancheSpriteGFX, PAL_FOLLOWER_SNOUWRBUN ;VEGELANCHE
 	follow_sprite SnouwrbunSpriteGFX, PAL_FOLLOWER_SNOUWRBUN ;SNOUWRBUN
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;NECROREX

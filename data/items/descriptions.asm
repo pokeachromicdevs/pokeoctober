@@ -1,4 +1,12 @@
 ItemDescriptions:
+	indirect_table 2, 1
+	indirect_entries NUM_ITEMS, ItemDescriptions1
+	indirect_table_end
+
+InvalidItemDesc:
+	db "?@"
+
+ItemDescriptions1:
 ; entries correspond to item ids
 	dw MasterBallDesc
 	dw UltraBallDesc
@@ -237,6 +245,26 @@ ItemDescriptions:
 	dw WobblyBloonDesc
 	dw DirectBallDesc
 	dw NightBallDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
 .End:
 
 IceBikiniDesc:
@@ -897,9 +925,6 @@ RainbowWingDesc:
 	db   "A mystical feather"
 	next "of rainbow colors.@"
 
-QuestionMarkDesc:
-	db   "?@"
-
 BrickPieceDesc:
 	db   "A rare chunk of"
 	next "tile.@"
@@ -1089,4 +1114,4 @@ SteelShellDesc:
 	next "DEFENSE. (HOLD)@"
 
 ;--------------------------------------------------------------------
-_NUM_ITEM_DESCRIPTIONS = (ItemDescriptions.End  - ItemDescriptions)/2
+_NUM_ITEM_DESCRIPTIONS = (ItemDescriptions1.End  - ItemDescriptions1)/2

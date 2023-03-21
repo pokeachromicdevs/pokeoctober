@@ -6,7 +6,7 @@
 	db PSYCHIC, PSYCHIC ; type
 	db 100 ; catch rate
 	db 145 ; base exp
-	db SPOON, NO_ITEM ; items, add SW97 Twistedspoon to the second slot when implemented
+	dw SPOON, NO_ITEM ; items, add SW97 Twistedspoon to the second slot when implemented
 	db GENDER_F25 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

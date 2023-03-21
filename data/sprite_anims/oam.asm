@@ -143,10 +143,19 @@ SpriteAnimOAMData:
 	dbw $00, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_11
 	dbw $00, .OAMData_PartyMon                 ; SPRITE_ANIM_OAMSET_PARTY_MON_1
 	dbw $04, .OAMData_PartyMon                 ; SPRITE_ANIM_OAMSET_PARTY_MON_2
+	dbw $00, .OAMData_SW97TitleParticles       ; SPRITE_ANIM_OAMSET_GBC_SCREEN_FLAMES_1
+	dbw $04, .OAMData_SW97TitleParticles       ; SPRITE_ANIM_OAMSET_GBC_SCREEN_FLAMES_2
 	
 .OAMData_1x1_Palette0:
 	db 1
 	dsprite -1,  4, -1,  4, $00, 0
+
+.OAMData_SW97TitleParticles:
+	db 4
+	dsprite  0,  0,  0,  0, $00, 0
+	dsprite  0,  0,  1,  0, $01, 0
+	dsprite  1,  0,  0,  0, $02, 0
+	dsprite  1,  0,  1,  0, $03, 0
 
 .OAMData_GSIntroShellder:
 	db 4

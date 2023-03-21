@@ -96,6 +96,9 @@ _ResetWRAM:
 	ld hl, wMoveIndexTable
 	ld bc, wMoveIndexTableEnd - wMoveIndexTable
 	call ByteFill
+	ld hl, wItemIndexTable
+	ld bc, wItemIndexTableEnd - wItemIndexTable
+	call ByteFill
 
 	ld a, 1
 	ldh [rSVBK], a

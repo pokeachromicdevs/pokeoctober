@@ -453,13 +453,13 @@ KurtHouseScript:
 .which_apricorn
 ; ask apricorn
 	special SelectApricornForKurt
-	ifequal FALSE, .no_apricorns
-	ifequal BLU_APRICORN, .Blu
-	ifequal YLW_APRICORN, .Ylw
-	ifequal GRN_APRICORN, .Grn
-	ifequal WHT_APRICORN, .Wht
-	ifequal BLK_APRICORN, .Blk
-	ifequal PNK_APRICORN, .Pnk
+	ifequal16 0, .no_apricorns
+	ifequal16 BLU_APRICORN, .Blu
+	ifequal16 YLW_APRICORN, .Ylw
+	ifequal16 GRN_APRICORN, .Grn
+	ifequal16 WHT_APRICORN, .Wht
+	ifequal16 BLK_APRICORN, .Blk
+	ifequal16 PNK_APRICORN, .Pnk
 ; .Red
 	setevent EVENT_GAVE_KURT_RED_APRICORN
 	sjump .GaveKurtApricorns

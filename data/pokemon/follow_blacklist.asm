@@ -221,4 +221,5 @@ CantFollowList:
 	dw FENNECURSE
 	dw ORIJOEY
 	dw AGGROSWINE
+	dw NECROREX
 	dw -1

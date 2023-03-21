@@ -243,6 +243,8 @@ NEXTU ; c300
 ; mobile data
 if DEF(_DEBUG)
 wDebugColorPickerPal:: ds 1 palettes
+wDebugPlayerXCalc:: db
+wDebugPlayerYCalc:: db
 endc
 NEXTU
 wc300:: ds 1
@@ -287,14 +289,30 @@ wGlobalAnimYOffset:: db
 wGlobalAnimXOffset:: db
 wSpriteAnimsEnd::
 
-	ds 11
+; crash handler
+wCrashRegisters::
+wCrashA:: db
+wCrashF:: db
+wCrashB:: db
+wCrashC:: db
+wCrashD:: db
+wCrashE:: db
+wCrashH:: db
+wCrashL:: db
+wCrashIE:: db
+wCrashLCDC:: db
+wCrashSP:: dw ; [+0] == LOW(sp)
+              ; [+1] == HIGH(sp)
+wCrashStackBackup:: ds 24
+wCrashTmpStack:: dw
+wCrashROMBank:: db
+wCrashWRAMBank:: db
 
-; mobile data
 if DEF(_DEBUG)
 wDebugItemPickerBuffer::
 endc
-wc3cc:: ds 1
-wc3cd:: ds 31
+
+wc3cd:: ds 3
 wc3ec:: ds 1
 wc3ed:: ds 1
 wc3ee:: ds 1
@@ -314,7 +332,6 @@ wc3fb:: ds 1
 wc3fc:: ds 1
 
 	ds 3
-
 
 SECTION "Sprites", WRAM0
 
@@ -2244,9 +2261,9 @@ wBaseType1:: db ; d23d
 wBaseType2:: db ; d23e
 wBaseCatchRate:: db ; d23f
 wBaseExp:: db ; d240
-wBaseItems:: ; d241
-wBaseItem1:: db ; d241
-wBaseItem2:: db ; d242
+wBaseItems:: ; d241 these correspond to actual item indices, since these are just copied
+wBaseItem1:: dw ; d241
+wBaseItem2:: dw ; d242
 wBaseGender:: db ; d243
 wBaseUnknown1:: db ; d244
 wBaseEggSteps:: db ; d245
@@ -3036,6 +3053,7 @@ SECTION "16-bit WRAM tables", WRAMX
 ; align this section to $100
 	wram_conversion_table wPokemonIndexTable, MON_TABLE
 	wram_conversion_table wMoveIndexTable, MOVE_TABLE
+	wram_conversion_table wItemIndexTable, ITEM_TABLE
 
 
 SECTION "Battle Tower RAM", WRAMX

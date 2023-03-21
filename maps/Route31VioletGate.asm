@@ -27,54 +27,50 @@ TrainerOfficerMatt:
 Route31VioletGateOfficerText:
 	text "Sheesh. I've been"
 	line "bombarded with"
-	cont "question after"
-	
-	para "question just be-"
-	line "cause three"
-	cont "weirdos walked" 
-	
+	para "question after"
+	line "question just"
+	para "because three"
+	line "weirdos walked"
 	para "through here"
-	line "earlier. I just"
-	cont "want to go home" 
-	
-	para "already…"
+	line "earlier."
+	para "I just want to go"
+	line "home already<...>"
 	done
 
 Route31VioletGateCooltrainerFText:
 	text "SPROUT TOWER sure"
-	line "is one tall build-"
-	cont "ing. It has nine"
+	line "is one tall"
+	cont "building."
 	
-	para "floors and looms"
-	line "over the rest of"
-	cont "the city!"
+	para "It has nine floors"
+	line "and looms over the"
+	cont "rest of the city!"
 	done
 	
 OfficerMattSeenText:
 	text "A criminal always"
 	line "returns to the"
-	cont "scene of the"
+	para "scene of the"
+	line "crime!"
 	
-	para "crime! Which"
-	line "means…you must be"
-	cont "one of those"
+	para "Which means<...>"
 	
-	para "ROCKETS that came"
-	line "by here!"
+	para "You must be one of"
+	line "those ROCKETS that"
+	cont "came by here!"
 	done
 	
 OfficerMattBeatenText:
-	text "Or…not."
+	text "Or… not."
 	done
 	
 OfficerMattAfterText:
 	text "Three ROCKETS were"
 	line "spotted around"
-	cont "here earlier,"
-	
-	para "passing through"
-	line "here and heading"
-	cont "into VIOLET CITY."
+	para "here earlier,"
+	line "passing through"
+	para "here and heading"
+	line "into VIOLET CITY."
 	
 	para "You better keep an"
 	line "eye out."

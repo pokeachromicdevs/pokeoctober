@@ -294,6 +294,7 @@ FirstEvoStages::
 	dw CAMOUFLAKE
 	dw CAMOUFLAKE
 	dw CAMOUFLAKE
+	dw NECROREX
 
 
 

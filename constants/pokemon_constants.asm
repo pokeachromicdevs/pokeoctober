@@ -315,6 +315,7 @@ JOHTO_POKEMON EQU const_value
 	const GERMIFROST
 	const VEGELANCHE
 	const SNOUWRBUN
+	const NECROREX ; sans undertale
 
 NUM_POKEMON EQU const_value + -1
 

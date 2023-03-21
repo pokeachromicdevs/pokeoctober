@@ -33,15 +33,15 @@ FalknerGroup:
 		db "FALKNER@", TRAINERTYPE_ITEM_MOVES
 		db 10
 		dw PIDGEY
-		db NO_ITEM
+		dw NO_ITEM
 		dw MUD_SLAP, QUICK_ATTACK, GUST, NO_MOVE
 		db 11
 		dw NATU
-		db NO_ITEM
+		dw NO_ITEM
 		dw PECK, NIGHT_SHADE, NO_MOVE, NO_MOVE
 		db 14
 		dw ADBARSTORK
-		db BERRY
+		dw BERRY
 		dw FURY_ATTACK, GROWL, WHIRLWIND, NO_MOVE
 	end_party
 	end_party_list
@@ -51,15 +51,15 @@ WhitneyGroup:
 		db "WHITNEY@", TRAINERTYPE_ITEM_MOVES
 
 		dbw 17, KOALYPTUS
-		db  NO_ITEM
+		dw  NO_ITEM
 		dw  RAZOR_LEAF, DEFENSE_CURL, VINE_WHIP, GROWL
 
 		dbw 19, FARFETCH_D
-		db  NO_ITEM
+		dw  NO_ITEM
 		dw  GUST, SAND_ATTACK, FURY_ATTACK, MUD_SLAP
 
 		dbw 20, MILTANK
-		db  PRZCUREBERRY
+		dw  PRZCUREBERRY
 		dw  ROLLOUT, ATTRACT, STOMP, MILK_DRINK
 	end_party
 	end_party_list
@@ -68,13 +68,13 @@ BugsyGroup:
 	next_party ; BUGSY (1)
 		db "BUGSY@", TRAINERTYPE_ITEM_MOVES
 		dbw 23, LEDIAN
-		db FIRE_MANE
+		dw NO_ITEM
 		dw TACKLE, SUPERSONIC, COMET_PUNCH, ROLLOUT
 		dbw 24, ARIADOS
-		db FIRE_MANE
+		dw FIRE_MANE
 		dw POISON_STING, BITE, SPIDER_WEB, NIGHT_SHADE
 		dbw 26, HERACROSS
-		db SILVERPOWDER
+		dw SILVERPOWDER
 		dw FURY_CUTTER, DETECT, HORN_ATTACK, ENDURE
 	end_party
 	end_party_list
@@ -1378,15 +1378,15 @@ CooltrainerMGroup:
 	db "GAVEN@", TRAINERTYPE_ITEM_MOVES
 	db 39
 	dw VICTREEBEL
-	db NO_ITEM
+	dw NO_ITEM
 	dw GIGA_DRAIN, TOXIC, SLUDGE_BOMB, RAZOR_LEAF
 	db 39
 	dw KINGLER
-	db KINGS_ROCK
+	dw KINGS_ROCK
 	dw SURF, STOMP, GUILLOTINE, BLIZZARD
 	db 39
 	dw FLAREON
-	db NO_ITEM
+	dw NO_ITEM
 	dw FLAMETHROWER, QUICK_ATTACK, BITE, FIRE_SPIN
 	end_party
 
@@ -1675,7 +1675,7 @@ CooltrainerFGroup:
 	db "BETH@", TRAINERTYPE_ITEM_MOVES
 	db 43
 	dw RAPIDASH
-	db FOCUS_ORB
+	dw FOCUS_ORB
 	dw STOMP, FIRE_SPIN, FURY_ATTACK, FIRE_BLAST
 	end_party
 
@@ -1693,15 +1693,15 @@ CooltrainerFGroup:
 	db "REENA@", TRAINERTYPE_ITEM_MOVES
 	db 38
 	dw STARMIE
-	db NO_ITEM
+	dw NO_ITEM
 	dw DOUBLE_TEAM, PSYCHIC_M, WATERFALL, CONFUSE_RAY
 	db 40
 	dw NIDOQUEEN
-	db PINK_BOW
+	dw PINK_BOW
 	dw EARTHQUAKE, DOUBLE_KICK, TOXIC, BODY_SLAM
 	db 38
 	dw STARMIE
-	db NO_ITEM
+	dw NO_ITEM
 	dw BLIZZARD, PSYCHIC_M, WATERFALL, RECOVER
 	end_party
 
@@ -4712,131 +4712,131 @@ PokefanMGroup:
 	db "WILLIAM@", TRAINERTYPE_ITEM
 	db 14
 	dw RAICHU
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (2)
 	db "DEREK@", TRAINERTYPE_ITEM
 	db 17
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (3)
 	db "ROBERT@", TRAINERTYPE_ITEM
 	db 33
 	dw QUAGSIRE
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (4)
 	db "JOSHUA@", TRAINERTYPE_ITEM
 	db 23
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	db 23
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	db 23
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	db 23
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	db 23
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	db 23
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (5)
 	db "CARTER@", TRAINERTYPE_ITEM
 	db 29
 	dw BULBASAUR
-	db BERRY
+	dw BERRY
 	db 29
 	dw CHARMANDER
-	db BERRY
+	dw BERRY
 	db 29
 	dw SQUIRTLE
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (6)
 	db "TREVOR@", TRAINERTYPE_ITEM
 	db 33
 	dw PSYDUCK
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (7)
 	db "BRANDON@", TRAINERTYPE_ITEM
 	db 13
 	dw SNUBBULL
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (8)
 	db "JEREMY@", TRAINERTYPE_ITEM
 	db 28
 	dw MEOWTH
-	db BERRY
+	dw BERRY
 	db 28
 	dw MEOWTH
-	db BERRY
+	dw BERRY
 	db 28
 	dw MEOWTH
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (9)
 	db "COLIN@", TRAINERTYPE_ITEM
 	db 32
 	dw DELIBIRD
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (10)
 	db "DEREK@", TRAINERTYPE_ITEM
 	db 19
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (11)
 	db "DEREK@", TRAINERTYPE_ITEM
 	db 36
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (12)
 	db "ALEX@", TRAINERTYPE_ITEM
 	db 29
 	dw NIDOKING
-	db BERRY
+	dw BERRY
 	db 29
 	dw SLOWKING
-	db BERRY
+	dw BERRY
 	db 29
 	dw SEAKING
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (13)
 	db "REX@", TRAINERTYPE_ITEM
 	db 35
 	dw PHANPY
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANM (14)
 	db "ALLAN@", TRAINERTYPE_ITEM
 	db 35
 	dw TEDDIURSA
-	db BERRY
+	dw BERRY
 	end_party
 
 	end_party_list
@@ -5642,61 +5642,61 @@ PokefanFGroup:
 	db "BEVERLY@", TRAINERTYPE_ITEM
 	db 14
 	dw SNUBBULL
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANF (2)
 	db "RUTH@", TRAINERTYPE_ITEM
 	db 17
 	dw PIKACHU
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANF (3)
 	db "BEVERLY@", TRAINERTYPE_ITEM
 	db 18
 	dw SNUBBULL
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANF (4)
 	db "BEVERLY@", TRAINERTYPE_ITEM
 	db 30
 	dw GRANBULL
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANF (5)
 	db "GEORGIA@", TRAINERTYPE_ITEM
 	db 23
 	dw SENTRET
-	db BERRY
+	dw BERRY
 	db 23
 	dw SENTRET
-	db BERRY
+	dw BERRY
 	db 23
 	dw SENTRET
-	db BERRY
+	dw BERRY
 	db 28
 	dw FURRET
-	db BERRY
+	dw BERRY
 	db 23
 	dw SENTRET
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party ; POKEFANF (6)
 	db "JAIME@", TRAINERTYPE_ITEM
 	db 16
 	dw MEOWTH
-	db BERRY
+	dw BERRY
 	end_party
 
 	next_party
 		string "ARIEL"
 		db TRAINERTYPE_ITEM
-		dbwb 21, MEOWTH, BERRY
-		dbwb 26, RAICHU, BERRY
+		dbww 21, MEOWTH, BERRY
+		dbww 26, RAICHU, BERRY
 	end_party
 
 	end_party_list

@@ -95,7 +95,8 @@ itemball: MACRO
 if _NARG == 1
 	itemball \1, 1
 else
-	db \1, \2
+	dw \1
+	db \2
 endc
 ENDM
 

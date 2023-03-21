@@ -5,11 +5,20 @@ _DoItemEffect::
 	call CopyName1
 	ld a, 1
 	ld [wItemEffectSucceeded], a
-	ld a, [wCurItem]
-	dec a
-	ld hl, ItemEffects
-	rst JumpTable
-	ret
+	push de
+		ld a, [wCurItem]
+		call GetItemIndexFromID
+		ld d, h
+		ld e, l
+		dec de
+		ld hl, ItemEffects
+		add hl, de
+		add hl, de
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+	pop de
+	jp hl
 
 ItemEffects:
 ; entries correspond to item ids
@@ -250,6 +259,26 @@ ItemEffects:
 	dw NoEffect       ; WOBBLY_BLOON
 	dw PokeBallEffect ; DIRECT_BALL
 	dw PokeBallEffect ; NIGHT_BALL
+	dw NoEffect       ; ITEM_EE
+	dw NoEffect       ; ITEM_EF
+	dw NoEffect       ; ITEM_F0
+	dw NoEffect       ; ITEM_F1
+	dw NoEffect       ; ITEM_F2
+	dw NoEffect       ; ITEM_F3
+	dw NoEffect       ; ITEM_F4
+	dw NoEffect       ; ITEM_F5
+	dw NoEffect       ; ITEM_F6
+	dw NoEffect       ; ITEM_F7
+	dw NoEffect       ; ITEM_F8
+	dw NoEffect       ; ITEM_F9
+	dw NoEffect       ; ITEM_FA
+	dw NoEffect       ; ITEM_FB
+	dw NoEffect       ; ITEM_FC
+	dw NoEffect       ; ITEM_FD
+	dw NoEffect       ; ITEM_FE
+	dw NoEffect       ; ITEM_FF
+	dw NoEffect       ; ITEM_100
+	dw NoEffect       ; ITEM_101
 .End:
 
 _NUM_ITEM_FX = (ItemEffects.End  - ItemEffects)/2
@@ -274,11 +303,14 @@ PokeBallEffect:
 	xor a
 	ld [wWildMon], a
 	ld a, [wCurItem]
-	cp PARK_BALL
-	call nz, ReturnToBattle_UseBall
-	cp SAFARI_BALL
-	call nz, ReturnToBattle_UseBall
+	call GetItemIndexFromID
+	cphl16 PARK_BALL
+	jr z, .skip_returning_to_battle
+	cphl16 SAFARI_BALL
+	jr z, .skip_returning_to_battle
+	call ReturnToBattle_UseBall
 
+.skip_returning_to_battle
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
 	ld hl, UsedItemText
@@ -290,38 +322,57 @@ PokeBallEffect:
 	cp BATTLETYPE_TUTORIAL
 	jp z, .catch_without_fail
 	ld a, [wCurItem]
-	cp MASTER_BALL
+	call GetItemIndexFromID
+	cphl16 MASTER_BALL
 	jp z, .catch_without_fail
-	ld a, [wCurItem]
 	ld c, a
-	ld hl, BallMultiplierFunctionTable
 
+	ld de, BallMultiplierFunctionTable
 .get_multiplier_loop
-	ld a, [hli]
+	ld a, [de]
+	inc de
 	cp $ff
+	jr z, .next_num
+	cp l
+	jr nz, .skip_entry
+.next_num
+	ld a, [de]
+	cp -1 ; no balls above $ff00
+	inc de
 	jr z, .skip_or_return_from_ball_fn
-	cp c
+	cp h
+.got_mult_index
 	jr z, .call_ball_function
-	inc hl
-	inc hl
+	inc de
+	inc de
+	jr .get_multiplier_loop
+.skip_entry
+	inc de
+	inc de
+	inc de
 	jr .get_multiplier_loop
 
+
 .call_ball_function
-	ld a, [hli]
-	ld h, [hl]
+	ld a, [de]
 	ld l, a
+	inc de
+	ld a, [de]
+	ld h, a
 	ld de, .skip_or_return_from_ball_fn
 	push de
 	jp hl
 
 .skip_or_return_from_ball_fn
 	ld a, [wCurItem]
-	cp DIRECT_BALL
+	call GetItemIndexFromID
+	cphl16 PARK_BALL
 	ld a, b
 	jp z, .skip_hp_calc
 
 	ld a, [wCurItem]
-	cp LEVEL_BALL
+	call GetItemIndexFromID
+	cphl16 LEVEL_BALL
 	ld a, b
 	jp z, .skip_hp_calc
 
@@ -445,7 +496,8 @@ PokeBallEffect:
 	call DelayFrames
 
 	ld a, [wCurItem]
-	cp POKE_BALL + 1 ; Assumes Master/Ultra/Great come before
+	call GetItemIndexFromID
+	cphl16 POKE_BALL + 1 ; Assumes Master/Ultra/Great come before
 	jr c, .not_kurt_ball
 	ld a, POKE_BALL
 .not_kurt_ball
@@ -602,7 +654,8 @@ PokeBallEffect:
 	farcall SetCaughtData
 
 	ld a, [wCurItem]
-	cp FRIEND_BALL
+	call GetItemIndexFromID
+	cphl16 FRIEND_BALL
 	jr nz, .SkipPartyMonFriendBall
 
 	ld a, [wPartyCount]
@@ -667,7 +720,8 @@ PokeBallEffect:
 	set BATTLERESULT_BOX_FULL, [hl]
 .BoxNotFullYet:
 	ld a, [wCurItem]
-	cp FRIEND_BALL
+	call GetItemIndexFromID
+	cphl16 FRIEND_BALL
 	jr nz, .SkipBoxMonFriendBall
 	; The captured mon is now first in the box
 	ld a, FRIEND_BALL_HAPPINESS
@@ -771,19 +825,19 @@ PokeBallEffect:
 BallMultiplierFunctionTable:
 ; table of routines that increase or decrease the catch rate based on
 ; which ball is used in a certain situation.
-	dbw ULTRA_BALL,  UltraBallMultiplier
-	dbw GREAT_BALL,  GreatBallMultiplier
-	dbw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
-	dbw HEAVY_BALL,  HeavyBallMultiplier
-	dbw LEVEL_BALL,  LevelBallMultiplier
-	dbw LURE_BALL,   LureBallMultiplier
-	dbw FAST_BALL,   FastBallMultiplier
-	dbw MOON_BALL,   MoonBallMultiplier
-	dbw LOVE_BALL,   LoveBallMultiplier
-	dbw PARK_BALL,   ParkBallMultiplier
-	dbw NIGHT_BALL,  NightBallMultiplier
-	dbw DIRECT_BALL, DirectBallMultiplier
-	db -1 ; end
+	dw ULTRA_BALL,  UltraBallMultiplier
+	dw GREAT_BALL,  GreatBallMultiplier
+	dw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
+	dw HEAVY_BALL,  HeavyBallMultiplier
+	dw LEVEL_BALL,  LevelBallMultiplier
+	dw LURE_BALL,   LureBallMultiplier
+	dw FAST_BALL,   FastBallMultiplier
+	dw MOON_BALL,   MoonBallMultiplier
+	dw LOVE_BALL,   LoveBallMultiplier
+	dw PARK_BALL,   ParkBallMultiplier
+	dw NIGHT_BALL,  NightBallMultiplier
+	dw DIRECT_BALL, DirectBallMultiplier
+	dw -1 ; end
 
 UltraBallMultiplier:
 ; multiply catch rate by 2
@@ -974,10 +1028,12 @@ MoonBallMultiplier:
 	ld hl, EvosAttacksPointers
 	ld a, BANK(EvosAttacksPointers)
 	call LoadDoubleIndirectPointer
-
 	ld a, [wCurItem]
 	ld c, a
-	ld a, MOON_STONE
+	push hl
+		ld hl, MOON_STONE
+		call GetItemIDFromIndex
+	pop hl
 	ld [wCurItem], a
 	ld d, h
 	ld e, l
@@ -1324,26 +1380,35 @@ StatStrings:
 
 GetStatExpRelativePointer:
 	ld a, [wCurItem]
-	ld hl, Table_eeeb
+	call GetItemIndexFromID
+	ld de, .StatExpPointers
 .next
-	cp [hl]
-	inc hl
+	ld a, [de]
+	inc de
+	cp l
+	jr nz, .skip_entry
+	ld a, [de]
+	inc de
+	cp h
 	jr z, .got_it
-	inc hl
+	inc de
+	jr .next ; possible infinite loop here
+.skip_entry
+	inc de
+	inc de
 	jr .next
-
 .got_it
-	ld a, [hl]
+	ld a, [de]
 	ld c, a
 	ld b, 0
 	ret
 
-Table_eeeb:
-	db HP_UP,    MON_HP_EXP - MON_STAT_EXP
-	db PROTEIN, MON_ATK_EXP - MON_STAT_EXP
-	db IRON,    MON_DEF_EXP - MON_STAT_EXP
-	db CARBOS,  MON_SPD_EXP - MON_STAT_EXP
-	db CALCIUM, MON_SPC_EXP - MON_STAT_EXP
+.StatExpPointers:
+	dwb HP_UP,    MON_HP_EXP - MON_STAT_EXP
+	dwb PROTEIN, MON_ATK_EXP - MON_STAT_EXP
+	dwb IRON,    MON_DEF_EXP - MON_STAT_EXP
+	dwb CARBOS,  MON_SPD_EXP - MON_STAT_EXP
+	dwb CALCIUM, MON_SPC_EXP - MON_STAT_EXP
 
 RareCandy_StatBooster_GetParameters:
 	ld a, [wCurPartySpecies]
@@ -1554,22 +1619,27 @@ HealStatus:
 
 GetItemHealingAction:
 	push hl
-	ld a, [wCurItem]
-	ld hl, StatusHealingActions
-	ld bc, 3
+		ld hl, StatusHealingActions
 .next
-	cp [hl]
-	jr z, .found_it
-	add hl, bc
-	jr .next
-
+; still no bounds checking here, bub
+		call GetItemIDFromHL
+		ld b, a
+		ld a, [wCurItem]
+		cp b
+		jr z, .found_it
+		inc hl
+		inc hl
+		inc hl
+		inc hl
+		jr .next
 .found_it
-	inc hl
-	ld b, [hl]
-	inc hl
-	ld a, [hl]
-	ld c, a
-	cp %11111111
+		inc hl
+		inc hl
+		ld b, [hl]
+		inc hl
+		ld a, [hl]
+		ld c, a
+		cp %11111111
 	pop hl
 	ret
 
@@ -1638,7 +1708,10 @@ RevivePokemon:
 	xor a
 	ld [wLowHealthAlarm], a
 	ld a, [wCurItem]
-	cp REVIVE
+	push hl
+		call GetItemIDFromIndex
+		cphl16 REVIVE
+	pop hl
 	jr z, .revive_half_hp
 
 	call ReviveFullHP
@@ -2044,20 +2117,36 @@ GetOneFifthMaxHP:
 
 GetHealingItemAmount:
 	push hl
-	ld a, [wCurItem]
 	ld hl, HealingHPAmounts
-	ld d, a
-.next
-	ld a, [hli]
-	cp -1
-	jr z, .NotFound
-	cp d
-	jr z, .done
-	inc hl
-	inc hl
-	jr .next
+; [hl] == $ffff?
+.check
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		cphl16 $ffff
+	pop hl
+	jr z, .not_found ; branch if $ffff
+	call GetItemIDFromHL
+	ld b, a
+	ld a, [wCurItem]
 
-.NotFound:
+	inc hl
+	inc hl ; hl at price
+
+	cp b
+	jr nz, .next_item
+
+	jr .done
+
+.next_item
+	inc hl
+	inc hl
+	jr .check
+
+.not_found:
+	inc hl
+	inc hl
 	scf
 .done
 	ld e, [hl]
@@ -2330,19 +2419,23 @@ DireHitEffect:
 
 XItemEffect:
 	call UseItemText
-
-	ld a, [wCurItem]
 	ld hl, XItemStats
-
 .loop
-	cp [hl]
+	call GetItemIDFromHL
+	ld b, a
+	ld a, [wCurItem]
+	cp b
 	jr z, .got_it
+; move to next item
+	inc hl
 	inc hl
 	inc hl
 	jr .loop
 
 .got_it
-	inc hl
+; hl at found entry
+	inc hl ; MSB of item
+	inc hl ; stat
 	ld b, [hl]
 	xor a
 	ldh [hBattleTurn], a
@@ -2505,14 +2598,16 @@ RestorePPEffect:
 
 .loop2
 	ld a, [wd002]
-	cp MAX_ELIXER
+	call GetItemIndexFromID
+	cphl16 MAX_ELIXER
 	jp z, Elixer_RestorePPofAllMoves
-	cp ELIXER
+	cphl16 ELIXER
 	jp z, Elixer_RestorePPofAllMoves
 
 	ld hl, TextJump_RaiseThePPOfWhichMove
 	ld a, [wd002]
-	cp PP_UP
+	call GetItemIndexFromID
+	cphl16 PP_UP
 	jr z, .ppup
 	ld hl, TextJump_RestoreThePPOfWhichMove
 
@@ -2543,7 +2638,8 @@ RestorePPEffect:
 	pop hl
 
 	ld a, [wd002]
-	cp PP_UP
+	call GetItemIndexFromID
+	cphl16 PP_UP
 	jp nz, Not_PP_Up
 
 	ld a, [hl]
@@ -2572,7 +2668,7 @@ RestorePPEffect:
 .pp_is_maxed_out
 	ld hl, TextJump_PPIsMaxedOut
 	call PrintText
-	jr .loop2
+	jp .loop2
 
 .do_ppup
 	ld a, [hl]
@@ -2705,9 +2801,10 @@ RestorePP:
 	jr nc, .dont_restore
 
 	ld a, [wd002]
-	cp MAX_ELIXER
+	call GetItemIndexFromID
+	cphl16 MAX_ELIXER
 	jr z, .restore_all
-	cp MAX_ETHER
+	cphl16 MAX_ETHER
 	jr z, .restore_all
 
 	ld c, 5
@@ -2801,7 +2898,8 @@ OpenBox:
 
 NoEffect:
 	ld a, [wCurItem]
-	cp OAKS_PARCEL
+	call GetItemIndexFromID
+	cphl16 OAKS_PARCEL
 	jp z, BelongsToSomeoneElseMessage
 	jp IsntTheTimeMessage
 

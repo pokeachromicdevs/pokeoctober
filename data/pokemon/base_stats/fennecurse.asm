@@ -6,7 +6,7 @@
 	db FIRE, GHOST ; type
 	db 45 ; catch rate
 	db 172 ; base exp
-	db BERRY, FIRE_MANE ; items
+	dw BERRY, FIRE_MANE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

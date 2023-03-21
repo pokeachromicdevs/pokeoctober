@@ -217,6 +217,8 @@ StartMenu_PrintBugContestStatus:
 
 FindApricornsInBag:
 ; Checks the bag for Apricorns.
+
+; fill with $FF
 	ld hl, wBuffer1
 	xor a
 	ld [hli], a
@@ -224,25 +226,28 @@ FindApricornsInBag:
 	ld bc, 10
 	call ByteFill
 
+; then check each item
 	ld hl, ApricornBalls
 .loop
-	ld a, [hl]
-	cp -1
-	jr z, .done
 	push hl
-	ld [wCurItem], a
-	ld hl, wNumItems
-	call CheckItem
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		cphl16 $ffff
+		jr z, .done
+		call GetItemIDFromIndex
+		ld [wCurItem], a
+		ld hl, wNumItems
+		call CheckItem
 	pop hl
-	jr nc, .nope
-	ld a, [hl]
+	inc hl
+	inc hl
+	jr nc, .loop
 	call .addtobuffer
-.nope
-	inc hl
-	inc hl
 	jr .loop
-
 .done
+	pop hl
+	farcall ItemTableGarbageCollection
 	ld a, [wBuffer1]
 	and a
 	ret nz
@@ -256,6 +261,7 @@ FindApricornsInBag:
 	ld e, [hl]
 	ld d, 0
 	add hl, de
+	ld a, [wCurItem]
 	ld [hl], a
 	pop hl
 	ret

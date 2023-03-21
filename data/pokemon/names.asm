@@ -298,6 +298,7 @@ PokemonNames::
 	db "GERMIFROST"
 	db "VEGELANCHE"
 	db "SNOUWRBUN@"
+	db "NECROREX@@"
 
 ;--------------------------------------------------------------
 _NUM_POKEMON_NAMES = (@ - PokemonNames) / (MON_NAME_LENGTH - 1)

@@ -295,6 +295,7 @@ MonMenuIcons:
 	db ICON_VOLTORB		; GERMIFROST
 	db ICON_VOLTORB		; VEGELANCHE
 	db ICON_VOLTORB		; SNOUWRBUN
+	db ICON_CUBONE      ; NECROREX
 
 ; -----------------------------
 	db ICON_EGG         ; EGG

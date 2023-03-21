@@ -6582,18 +6582,27 @@ GetItemHeldEffect:
 	ld a, b
 	and a
 	ret z
-
 	push hl
-	ld hl, ItemAttributes + ITEMATTR_EFFECT
-	dec a
-	ld c, a
-	ld b, 0
-	ld a, ITEMATTR_STRUCT_LENGTH
-	call AddNTimes
-	ld a, BANK(ItemAttributes)
-	call GetFarHalfword
-	ld b, l
-	ld c, h
+	call GetItemIndexFromID
+		ld b, h
+		ld c, l
+		ld a, BANK(ItemAttributes)
+		ld hl, ItemAttributes
+		call LoadIndirectPointer
+
+		ld bc, ITEMATTR_EFFECT
+		add hl, bc
+
+		ld a, BANK(ItemAttributes)
+		call GetFarByte
+
+		ld b, a
+
+		inc hl
+		ld a, BANK(ItemAttributes)
+		call GetFarByte
+
+		ld c, a
 	pop hl
 	ret
 

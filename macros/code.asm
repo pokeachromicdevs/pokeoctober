@@ -104,3 +104,23 @@ if _NARG == 0
 	sine_table 32
 endc
 ENDM
+
+smartcp: MACRO
+IF \1 == 0
+	and a
+ELSE
+	cp \1
+ENDC
+ENDM
+
+cphl16: MACRO
+; arg1: 16 bit register
+; arg2: value to compare to
+	ld a, h
+	smartcp HIGH(\1)
+	jr c, .done\@
+	jr nz, .done\@
+	ld a, l
+	smartcp LOW(\1)
+.done\@
+ENDM

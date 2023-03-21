@@ -24,11 +24,15 @@ ROM0
 	"serial"
 	org $0060
 	"joypad"
+	org $0080
+	"Follower Script Home" ; full!
+	"Free Space 0080"
+	org $00f9
+	"Reset Crash Handler"
 	org $0100
 	"Header"
 	org $0150
 	"Home"
-	"Follower Script Home"
 ROMX $01
 	"bank1"
 ROMX $02
@@ -167,6 +171,7 @@ ROMX $3e
 ROMX $3f
 	"bank3F"
 	"Debug Menu"
+	"Crash Handler"
 ROMX $41
 	"bank41"
 	"Enemy Trainer Parties 1"
@@ -299,10 +304,10 @@ ROMX $7e
 ROMX $7f
 	"Pokemon"
 ROMX $80
-	"MBC30 Verification"
 	"Pics 1 Animated"
 	"Pics 2 Animated"
 ROMX $81
+	"MBC30 Verification"
 	"Pics 3 Animated"
 	"Pics 4 Animated"
 ROMX $82

@@ -129,9 +129,9 @@ FisherBillyAfterText:
 	done
 	
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
-	text "MR.#MON's"
-	line "house? It's a bit"
-	cont "farther ahead."
+	text "MR. #MON's house"
+	line "is right up ahead."
+	para "You can't miss it!"
 	done
 
 Route30YoungsterText_EveryoneIsBattling:
@@ -187,11 +187,10 @@ Route30_MapEvents:
 	bg_event 13,  5, BGEVENT_READ, Route30TrainerTips
 	bg_event  6, 16, BGEVENT_ITEM, Route30HiddenPotion
 
-	db 7 ; object events
+	db 6 ; object events
 	object_event  8, 22, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSoldierDwight, -1
 	object_event  8,  19, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerFisherBilly, -1
 	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
 	object_event 12,  15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
-	object_event  4,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, -1, OBJECTTYPE_3, 0, -1, -1
 	object_event 12, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
 	object_event  5, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE

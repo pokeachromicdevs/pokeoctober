@@ -49,9 +49,9 @@ BaseData::
 	; the parameter to indirect_table must be a compile-time constant, and BASE_DATA_SIZE is not
 	if ((__RGBDS_MAJOR__ << 24) | (__RGBDS_MINOR__ << 8) | __RGBDS_PATCH__) >= $400
 		; if this version of RGBDS supports asserts, just assert that the size is correct
-		assert $25 == BASE_DATA_SIZE, "Please adjust the table size (and this assertion) to match BASE_DATA_SIZE"
+		assert $27 == BASE_DATA_SIZE, "Please adjust the table size (and this assertion) to match BASE_DATA_SIZE"
 	endc
-	indirect_table $25, 1
+	indirect_table $27, 1
 	indirect_entries NUM_POKEMON, BaseData1
 	indirect_table_end
 
@@ -350,6 +350,7 @@ INCLUDE "data/pokemon/base_stats/aggroswine.asm"
 INCLUDE "data/pokemon/base_stats/germifrost.asm"
 INCLUDE "data/pokemon/base_stats/vegelanche.asm"
 INCLUDE "data/pokemon/base_stats/snouwrbun.asm"
+INCLUDE "data/pokemon/base_stats/necrorex.asm"
 
 ;------------------------------------
-_NUM_BASE_STATS = (@ - BaseData1)/$25
+_NUM_BASE_STATS = (@ - BaseData1)/$27

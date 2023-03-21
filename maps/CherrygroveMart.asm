@@ -49,9 +49,15 @@ CherrygroveMartCooltrainerMText:
 	done
 
 CherrygroveMartCooltrainerMText_PokeBallsInStock:
-	text "# BALLS are in"
-	line "stock! Now I can"
-	cont "catch #MON!"
+	text "I wonder when"
+	line "# BALLS will"
+	cont "be back in stock<...>"
+	para "Oh, what?"
+	para "Huh, looks like"
+	line "they restocked and"
+	cont "I didn't notice."
+	para "That's cool, I"
+	line "guess."
 	done
 
 CherrygroveMartYoungsterText:
