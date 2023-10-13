@@ -107,7 +107,6 @@ KRIS EQU __enum__
 	trainerclass YOUNGSTER ; 16
 	const JOEY1
 	const MIKEY
-	const ALBERT
 	const GORDON
 	const SAMUEL
 	const IAN
@@ -144,7 +143,6 @@ KRIS EQU __enum__
 	const ROD
 	const ABE
 	const BRYAN
-	const THEO
 	const TOBY
 	const DENIS
 	const VANCE1
@@ -191,6 +189,7 @@ KRIS EQU __enum__
 	const NIECHELLE2
 	const NIECHELLE3
 	const NIECHELLE4
+	const NIECHELLE5
 	const RUBY
 	const NANCY
 	const CHARLOTTE

@@ -3,22 +3,22 @@
 	frame  2, 06
 	frame  2, 06
 	frame  3, 06
-	frame  4, 09
+	frame  4, 10
 	frame  3, 06
-	frame  4, 07
-	frame  5, 04
-	frame  6, 05
+	frame  4, 08
+	frame  5, 05
+	frame  6, 06
 	frame  7, 06
-	frame  8, 07
+	frame  8, 08
 	frame  7, 06
-	frame  8, 07
-	frame  9, 05
-	frame  6, 05
-	frame 10, 09
+	frame  8, 08
+	frame  9, 06
+	frame  6, 06
+	frame 10, 10
 	frame  3, 06
-	frame 10, 09
-	frame  3, 05
-	frame  4, 07
+	frame 10, 10
+	frame  3, 06
+	frame  4, 08
 	frame  3, 06
 	frame  2, 06
 	frame  1, 06
