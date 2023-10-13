@@ -3,19 +3,19 @@
 	frame  2, 06
 	frame  1, 06
 	frame  3, 06
-	frame  4, 03
+	frame  4, 04
 	frame  5, 12
-	frame  4, 03
-	frame  6, 07
-	frame  7, 07
-	frame  8, 07
-	frame  9, 07
-	frame 10, 07
-	frame 11, 07
-	frame 12, 07
+	frame  4, 04
+	frame  6, 08
+	frame  7, 08
+	frame  8, 08
+	frame  9, 08
+	frame 10, 08
+	frame 11, 08
+	frame 12, 08
 	frame 13, 06
 	frame 14, 06
 	frame  2, 06
-	frame  1, 09
+	frame  1, 10
 	frame  2, 06
 	endanim

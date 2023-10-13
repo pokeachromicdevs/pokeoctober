@@ -208,7 +208,7 @@ Rival1Group:
 	next_party ; RIVAL1 (8)
 		db "?@", TRAINERTYPE_NORMAL
 		dbw 21, PHANPY
-		dbw 21, VULPIX ; CORASUN
+		dbw 21, MOLAMBINO
 		dbw 22, GOLBAT
 		dbw 22, QUILAVA
 	end_party
@@ -601,14 +601,6 @@ YoungsterGroup:
 		dw RATTATA
 	end_party
 
-	next_party ; YOUNGSTER (3)
-		db "ALBERT@", TRAINERTYPE_NORMAL
-		db 6
-		dw RATTATA
-		db 8
-		dw ZUBAT
-	end_party
-
 	next_party ; YOUNGSTER (4)
 		db "GORDON@", TRAINERTYPE_NORMAL
 		db 10
@@ -879,20 +871,6 @@ BirdKeeperGroup:
 	dw PIDGEY
 	db 14
 	dw PIDGEOTTO
-	end_party
-
-	next_party ; BIRD_KEEPER (4)
-	db "THEO@", TRAINERTYPE_NORMAL
-	db 17
-	dw PIDGEY
-	db 15
-	dw PIDGEY
-	db 19
-	dw PIDGEY
-	db 15
-	dw PIDGEY
-	db 15
-	dw PIDGEY
 	end_party
 
 	next_party ; BIRD_KEEPER (5)
@@ -1242,7 +1220,7 @@ LassGroup:
 	next_party ; LASS (23)
 		string "TINA"
 		db     TRAINERTYPE_NORMAL
-		dbw    10, BUTTERFREE
+		dw    10, BUTTERFREE
 	end_party
 
 	next_party ; LASS (19) NIE NIE 2
@@ -1267,6 +1245,16 @@ LassGroup:
 		dw CAMOUFLAKE
 		db 14
 		dw CAMOUFLAKE
+	end_party
+	
+	next_party ; LASS (20) NIE NIE 5
+		db "NIECHELLE@", TRAINERTYPE_NORMAL
+		db 16 
+		dw CAMOUFLAKE
+		db 18
+		dw CAMOUFLAKE
+		db 20
+		dw JIGGLYPUFF
 	end_party
 
 	next_party

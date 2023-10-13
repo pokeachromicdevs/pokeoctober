@@ -2,7 +2,7 @@
 	frame  1, 06
 	frame  2, 18
 	frame  1, 06
-	frame  2, 14
+	frame  2, 15
 	frame  1, 06
 	frame  3, 06
 	frame  4, 06

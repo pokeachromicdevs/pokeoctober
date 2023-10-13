@@ -1,12 +1,12 @@
 	frame  0, 06
 	frame  1, 06
 	frame  2, 06
-	frame  3, 03
-	frame  4, 03
-	frame  5, 03
-	frame  3, 03
-	frame  4, 03
-	frame  5, 03
+	frame  3, 04
+	frame  4, 04
+	frame  5, 04
+	frame  3, 04
+	frame  4, 04
+	frame  5, 04
 	frame  6, 06
 	frame  7, 12
 	frame  8, 06
@@ -17,16 +17,16 @@
 	frame  9, 06
 	frame 11, 06
 	frame 12, 06
-	frame 13, 03
+	frame 13, 04
 	frame 14, 06
 	frame 15, 06
-	frame 16, 01
+	frame 16, 02
 	frame 17, 12
-	frame 18, 07
-	frame 19, 09
-	frame 20, 05
-	frame 21, 03
-	frame  7, 09
-	frame 21, 03
+	frame 18, 08
+	frame 19, 10
+	frame 20, 06
+	frame 21, 04
+	frame  7, 10
+	frame 21, 04
 	frame 22, 06
 	endanim

@@ -1,12 +1,12 @@
 	frame  0, 06
 	frame  1, 06
 	frame  2, 06
-	frame  3, 03
+	frame  3, 04
 	frame  4, 06
-	frame  3, 03
-	frame  5, 09
+	frame  3, 04
+	frame  5, 10
 	frame  2, 12
-	frame  5, 09
+	frame  5, 10
 	frame  6, 06
 	frame  7, 06
 	frame  8, 06
@@ -16,9 +16,9 @@
 	frame  7, 06
 	frame  8, 06
 	frame 10, 06
-	frame  3, 03
+	frame  3, 04
 	frame  4, 06
-	frame  3, 03
+	frame  3, 04
 	frame  2, 12
 	frame  1, 06
 	frame 11, 06
