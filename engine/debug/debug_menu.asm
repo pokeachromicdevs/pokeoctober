@@ -92,12 +92,13 @@ DebugMenu::
 	string "CREDITS"
 	string "TOGGLE RUN"
 	string "SHOW POS."
+	string "GET CALLED"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 19
-	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19
+	db 20
+	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19, 20
 	db -1
 
 .Jumptable
@@ -121,6 +122,7 @@ DebugMenu::
 	dw Debug_Credits
 	dw Debug_ToggleRun
 	dw Debug_ShowPosition
+	dw Debug_GetCalled
 
 Debug_ShowPosition:
 	ld a, [wPlayerStandingMapX]
@@ -439,6 +441,149 @@ endr
 	db "COLOR@@@@@@@@"
 	db "TRAINERS@@@@@"
 	db "PLAY CRY@@@@@"
+
+
+Debug_GetCalled:
+	xor a
+	ldh [hDebugMenuDataBuffer], a
+	ldh [hDebugMenuDataBuffer + 1], a
+	ldh [hDebugMenuDataBuffer + 2], a
+	ldh [hDebugMenuDataBuffer + 3], a
+	hlcoord 0, 0
+	lb bc, 3, SCREEN_WIDTH - 2
+	call Textbox
+	call WaitBGMap2
+	ld a, 1
+	ldh [hDebugMenuCursorPos], a
+	call .update_display
+	xor a
+	ldh [hDebugMenuCursorPos], a
+	call .update_display
+.loop
+	call JoyTextDelay
+	ldh a, [hJoyLast]
+	cp B_BUTTON
+	ret z
+	cp D_LEFT
+	jr z, .left
+	cp D_RIGHT
+	jr z, .right
+	cp A_BUTTON
+	jp z, .play
+	jr .loop
+
+.left
+	call .get_value
+.left_loop
+	push af
+	ld a, e
+	or d
+	jr nz, .dec_music
+	ld de, NUM_PHONE_CONTACTS - 1
+	jr .left_cont
+.dec_music
+	dec de
+.left_cont
+	pop af
+	dec a
+	jr nz, .left_loop
+	call .put_value
+	call .update_display
+	jr .loop
+
+.right
+	call .get_value
+.right_loop
+	inc de
+
+	push af
+	ld a, d
+	cp HIGH(NUM_PHONE_CONTACTS)
+	jr c, .right_cont
+	jr nz, .right_cont
+	ld a, e
+	cp LOW(NUM_PHONE_CONTACTS)
+	jr c, .right_cont
+	xor a
+	ld d, a
+	ld e, a
+.right_cont
+	pop af
+	dec a
+	jr nz, .right_loop
+	call .put_value
+	call .update_display
+	jr .loop
+
+.update_display
+	hlcoord 1, 2
+	ld a, "▶"
+	ldi [hl], a
+	inc hl
+	ld a, " "
+	ldi [hl], a
+	ldi [hl], a
+	ldi [hl], a
+	ldi [hl], a
+	ld [hl], a
+	hlcoord 3, 2
+	ld de, hDebugMenuDataBuffer
+	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
+	call PrintNum
+	hlcoord 1, 3
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+	ld hl, Debug_CalleeNames
+	ld bc, 18
+	ldh a, [hDebugMenuDataBuffer + 1]
+	cp a, NUM_PHONE_CONTACTS
+	jp nc, .loop
+	call AddNTimes
+	ld d, h
+	ld e, l
+	hlcoord 1, 3
+	call PlaceString
+	ret
+
+.play
+	call .get_value
+	ld a, e
+	or d
+	ret z
+	farcall LoadCallerScript
+	ld a, BANK(Script_ReceivePhoneCall)
+	ld hl, Script_ReceivePhoneCall
+	jp CallScript
+
+.get_value
+	ldh a, [hDebugMenuCursorPos]
+	ld hl, hDebugMenuDataBuffer
+	add a
+	add l
+	ld l, a
+	ldi a, [hl]
+	ld e, [hl]
+	ld d, a
+	ldh a, [hJoyDown]
+	and SELECT
+	ld a, 1
+	ret z
+	ld a, 10
+	ret
+
+.put_value
+	ldh a, [hDebugMenuCursorPos]
+	ld hl, hDebugMenuDataBuffer
+	add a
+	add l
+	ld l, a
+	ld a, d
+	ldi [hl], a
+	ld [hl], e
+	ret
+	
+INCLUDE "engine/debug/callee_names.asm"
 
 Debug_SoundTest:
 	ld de, MUSIC_NONE

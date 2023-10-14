@@ -1,3 +1,4 @@
+NUM_PHONE_CONTACTS = 0
 phone: MACRO
 ; trainer class, trainer id, map, callee time, callee script, caller time, caller script
 	db \1, \2
@@ -6,6 +7,7 @@ phone: MACRO
 	dba \5
 	db \6
 	dba \7
+NUM_PHONE_CONTACTS = NUM_PHONE_CONTACTS + 1
 ENDM
 
 PhoneContacts:
