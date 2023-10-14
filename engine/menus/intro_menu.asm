@@ -189,6 +189,12 @@ endr
 	dec a
 	ld [hl], a
 	call CloseSRAM
+	
+	ld a, BANK(sCreditsPlayed)
+	call GetSRAMBank
+	xor a
+	ld [sCreditsPlayed], a
+	call CloseSRAM
 
 	call LoadOrRegenerateLuckyIDNumber
 	call InitializeMagikarpHouse
