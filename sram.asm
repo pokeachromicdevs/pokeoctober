@@ -143,11 +143,11 @@ sCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruptio
 
 SECTION "Active Box", SRAM
 
-; ad10
 sBox:: box sBox
-; b160
 
-	ds $f4
+SECTION "Miscellaneous Data", SRAM
+
+sCreditsPlayed:: db
 
 
 SECTION "Link Battle Data", SRAM

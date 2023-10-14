@@ -402,6 +402,8 @@ SRAM $00
 SRAM $01
 	"Save"
 	"Active Box"
+	"Miscellaneous Data"
+	org $b2c0
 	"Link Battle Data"
 	"SRAM Hall of Fame"
 	"SRAM Crystal Data"

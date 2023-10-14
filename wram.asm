@@ -1200,8 +1200,10 @@ wBGMapBufferEnd::
 NEXTU ; cd20
 ; credits
 wCreditsPos:: db
+wCreditsScrollY:: ; october
 wCreditsUnusedCD21:: db
 wCreditsTimer:: db
+wCreditsAlreadyPlayed:: db ; so we don't need to load from SRAM each time
 
 NEXTU ; cd20
 ; mobile data

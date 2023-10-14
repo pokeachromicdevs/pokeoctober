@@ -1,5 +1,7 @@
 SECTION "October Credits", ROMX
 
+CREDITS_FINISHED EQU -5
+
 OctoberCredits::
 ; set spawn
 	ld a, SPAWN_RED
@@ -43,8 +45,9 @@ OctoberCredits::
 	xor a
 	ldh [hBGMapMode], a
 	ld [wCreditsPos], a
-	ld [wCreditsUnusedCD21], a
+	ld [wCreditsScrollY], a
 	ld [wCreditsTimer], a
+	ld [wCreditsAlreadyPlayed], a
 
 	ld c, 60
 	call DelayFrames
@@ -64,6 +67,14 @@ OctoberCredits::
 	xor a
 	ldh [hBGMapMode], a
 
+; did we have credits played?
+	ld a, BANK(sCreditsPlayed)
+	call GetSRAMBank
+	ld a, [sCreditsPlayed]
+	ld [wCreditsAlreadyPlayed], a
+	call CloseSRAM
+
+; wait a bit until we start scrolling
 	ld c, 120
 	call DelayFrames
 
@@ -79,17 +90,71 @@ OctoberCredits::
 
 .execution_loop
 	call OctoberCredits_ScrollScreen
-	call DelayFrame
+	call DelayFrame ; slow down a bit
 	call OctoberCredits_ApplyScroll
-	ld hl, hSCY
-	inc [hl]
+	;ld hl, hSCY
+	;inc [hl]
 	call OctoberCredits_HandleAButton
-	jr nz, .exit_credits
+	jr c, .exit_credits
 	call DelayFrame
 	jr .execution_loop
 
 .exit_credits
-	farcall FadeInPalettes
+	ld a, [wCreditsAlreadyPlayed]
+	and a
+	jr nz, .normal
+	
+; fade music out
+	ld a, 10
+	ld [wMusicFade], a
+	xor a
+	ld [wMusicFadeID], a
+	ld [wMusicFadeID + 1], a
+
+	call OctoberCredits_FadeToBlack
+	
+; setup new screen
+	xor a
+	ld [wCreditsScrollY], a
+	call OctoberCredits_ApplyScroll
+
+	ld a, 1
+	ldh [hBGMapMode], a
+	
+	call ClearScreen
+	
+	hlcoord 0, 6
+	ld de, OctoberCredits_RIPText
+	call PlaceString
+	ld c, 3
+	call DelayFrames
+
+	call OctoberCredits_FadeBackIn
+
+; 5 seconds
+	ld c, 60 * 4
+	call DelayFrames
+	ld c, 60
+	call DelayFrames
+	
+	call OctoberCredits_FadeToBlack
+	
+	call ClearScreen
+	
+	ld c, 60
+	call DelayFrames
+	
+; let us know that the credits have already been played at least once
+	ld a, BANK(sCreditsPlayed)
+	call GetSRAMBank
+	ld a, 1
+	ld [sCreditsPlayed], a
+	call CloseSRAM
+	jr .abrupt_cut
+
+.normal
+	call OctoberCredits_FadeToWhiteQuick
+.abrupt_cut
 	call ClearBGPalettes
 	xor a
 	ldh [hLCDCPointer], a
@@ -101,25 +166,43 @@ OctoberCredits::
 	ret
 
 OctoberCredits_HandleAButton:
+; carry flag set when credits is skipped
+	ld a, [wCreditsAlreadyPlayed]
+	and a
+	jr nz, .always_skippable
+	
+	ld a, [wCreditsPos]
+	cp CREDITS_FINISHED
+	jr nz, .no_skip
+
+.always_skippable
 	ldh a, [hJoypadDown]
 	and START | A_BUTTON | B_BUTTON | SELECT
+	jr nz, .yes_skip
+.no_skip ; carry == 0
+	scf
+	ccf
+	ret
+.yes_skip
+	scf
 	ret
 
 OctoberCredits_ScrollScreen:
-	ld a, [wCreditsPos]
-	cp -5
-	jr z, .skip
-	ld a, [wCreditsUnusedCD21]
+	ld a, [wCreditsPos] ; end
+	cp CREDITS_FINISHED
+	ret z
+
+	ld a, [wCreditsScrollY]
 	inc a
-	ld [wCreditsUnusedCD21], a
+	ld [wCreditsScrollY], a
 	ld a, [wCreditsTimer]
 	inc a
 	cp 8
 	jr z, .scrollCredits
 	ld [wCreditsTimer], a
 	call DelayFrame
-.skip
 	ret
+
 .scrollCredits
 	ld a, [wCreditsPos]
 	inc a
@@ -157,7 +240,7 @@ OctoberCredits_ScrollScreen:
 	ret
 
 OctoberCredits_ApplyScroll:
-	ld a, [wCreditsUnusedCD21]
+	ld a, [wCreditsScrollY]
 	ld hl, wLYOverrides
 	ld bc, 144
 	call ByteFill
@@ -171,9 +254,10 @@ OctoberCredits_LoadNextString:
 	ld a, [wCreditsPos]
 	cp MAX_OCTOBER_CREDITS
 	jr c, .load
-	ld a, -5
+	ld a, CREDITS_FINISHED
 	ld [wCreditsPos], a
 	ret
+
 .load
 	ld hl, OctoberCredits_StringTable
 	ld e, a
@@ -197,3 +281,75 @@ OctoberCredits_HeaderText:
 	db   "   #MON OCTOBER"
 	next "     (GOLD 1998)"
 	next "   DEMO 1 CREDITS@"
+
+OctoberCredits_RIPText:
+	db   "    in memory of"
+	next ""
+	next "      NIECHELLE"
+	next "     (2002-2023)@"
+
+OctoberCredits_FadeToWhiteQuick:: ; copy of ConvertTimePalsDecHL
+	ld hl, .Table
+
+	ld b, 4
+
+.loop
+	push de
+	ld a, [hli]
+	call DmgToCgbBGPals
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+	call DmgToCgbObjPals
+	ld c, 2
+	call DelayFrames
+	pop de
+	dec b
+	ret z
+	jr .loop
+
+.Table
+	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
+	dc 3,3,2,1, 3,3,2,1, 3,3,2,1
+	dc 3,3,3,2, 3,3,3,2, 3,3,3,2
+	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
+
+OctoberCredits_FadeToBlack::
+; we aren't considering DMG
+	ld hl, .gradTable
+	ld b, 10
+	jp RotatePalettesRight
+.gradTable
+	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
+	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
+	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
+	
+	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
+	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
+	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
+	
+	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
+	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
+	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
+	
+	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
+
+OctoberCredits_FadeBackIn::
+	ld hl, .gradTable
+	ld b, 10
+	jp RotatePalettesRight
+.gradTable
+	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
+	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
+	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
+	
+	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
+	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
+	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
+	
+	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
+	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
+	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
+	
+	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
