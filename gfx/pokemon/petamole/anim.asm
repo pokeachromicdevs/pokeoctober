@@ -4,17 +4,17 @@
 	frame  1, 06
 	frame  3, 06
 	frame  4, 06
-	frame  5, 07
-	frame  4, 07
-	frame  5, 07
-	frame  4, 07
-	frame  5, 07
+	frame  5, 08
+	frame  4, 08
+	frame  5, 08
+	frame  4, 08
+	frame  5, 08
 	frame  6, 18
-	frame  7, 07
-	frame  8, 07
-	frame  5, 07
-	frame  7, 07
-	frame  8, 07
-	frame  5, 07
+	frame  7, 08
+	frame  8, 08
+	frame  5, 08
+	frame  7, 08
+	frame  8, 08
+	frame  5, 08
 	frame  3, 06
 	endanim
