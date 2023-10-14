@@ -49,7 +49,7 @@ SpawnPoints:
 	spawn CITRINE_ISLAND,             24, 28
 
 ; special
-	spawn AZALEA_POKECENTER_1F,         5,  3
+	spawn PLAYERS_HOUSE_2F,            3,  3
 
 ; end of
 	spawn N_A,                        -1, -1

@@ -2,28 +2,9 @@
 	const AZALEAPOKECENTER1F_NURSE
 
 AzaleaPokecenter1F_MapScripts:
-	db 1 ; scene scripts
-	scene_script .CheckShouldPlayerPromptSave
+	db 0 ; scene scripts
 
 	db 0 ; callbacks
-
-.CheckShouldPlayerPromptSave:
-	checkevent EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
-	iftrue .DoPrompt
-	end
-.DoPrompt:
-	opentext
-	writetext .PromptSaveText
-	waitbutton
-	closetext
-	clearevent EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
-	end
-
-.PromptSaveText:
-	text "Make sure you save"
-	line "here first before"
-	cont "playing DEMO 2!"
-	done
 
 ; scripts here
 AzaleaPokecenter1FNurseScript:
