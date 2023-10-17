@@ -29,6 +29,12 @@ TrainerBugCatcherTimothy:
 	closetext
 	end
 
+AlwaysJigglypuffScript:
+	loadwildmon JIGGLYPUFF, 5
+	startbattle
+	reloadmapafterbattle
+	end
+
 SilentHillsNameRaterSign:
 	jumptext SilentHillsNameRaterSignText
 
@@ -131,7 +137,8 @@ SilentHills_MapEvents:
 	warp_event 29,  1, ROUTE_29_ROUTE_46_GATE, 3
 	warp_event 19,  7, SILENT_HILLS_NAME_RATER, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event 33, 16, SCENE_DEFAULT, AlwaysJigglypuffScript
 
 	db 5 ; bg events
 	bg_event 17,  7, BGEVENT_READ, SilentHillsNameRaterSign

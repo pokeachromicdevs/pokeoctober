@@ -86,4 +86,5 @@ MapScenes::
 	scene_var ROUTE_34,                                    wRoute34SceneID
 	scene_var AZALEA_POKECENTER_1F,                        Start ; always 0
 	scene_var VIOLET_MUSEUM,                               Start ; always 0
+	scene_var SILENT_HILLS,                                Start ; always 0
 	db -1 ; end
