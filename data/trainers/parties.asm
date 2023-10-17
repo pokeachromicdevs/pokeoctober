@@ -1225,36 +1225,48 @@ LassGroup:
 
 	next_party ; LASS (19) NIE NIE 2
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 7
+		db 10
 		dw CAMOUFLAKE
-		db 8
+		db 11
 		dw CAMOUFLAKE
+		db 12
+		dw JIGGLYPUFF
 	end_party
 
 	next_party ; LASS (19) NIE NIE 3
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 9
+		db 40
 		dw CAMOUFLAKE
-		db 10
+		db 41
 		dw CAMOUFLAKE
+		db 42
+		dw JIGGLYPUFF
+		dw 43
+		dw SNUBBULL
 	end_party
 
 	next_party ; LASS (19) NIE NIE 4
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 12
+		db 45
 		dw CAMOUFLAKE
-		db 14
+		db 46
 		dw CAMOUFLAKE
+		db 47
+		dw JIGGLYPUFF
+		db 48
+		dw SNUBBULL
 	end_party
 	
 	next_party ; LASS (20) NIE NIE 5
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 16 
+		db 52
 		dw CAMOUFLAKE
-		db 18
+		db 53
 		dw CAMOUFLAKE
-		db 20
+		db 54
 		dw JIGGLYPUFF
+		db 55
+		dw GRANBULL
 	end_party
 
 	next_party

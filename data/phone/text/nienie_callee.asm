@@ -46,12 +46,7 @@ UnknownText_0x1b75ac:
 	done
 
 UnknownText_0x1b75c9:
-	text "<PLAY_G>!"
-
-	para "It`s @"
-	text_ram wStringBuffer3
-	text "!"
-	line "Were you up?"
+	text "Hello, <PLAY_G>?"
 	done
 
 UnknownText_0x1b75e5:

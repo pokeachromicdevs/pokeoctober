@@ -42,14 +42,18 @@ TrainerLassNiechelle:
 	scall Route46RematchF
 	winlosstext LassNiechelleBeatenText, 0
 	readmem wNiechelleFightCount
+	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
+.Fight3:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight3
 .Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	checkevent EVENT_BEAT_JASMINE
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_BEAT_ELITE_FOUR
+	checkevent EVENT_BEAT_BUGSY
 	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer LASS, NIECHELLE2
@@ -66,9 +70,17 @@ TrainerLassNiechelle:
 	loadmem wNiechelleFightCount, 2
 	clearflag ENGINE_NIECHELLE
 	end
-
+	
 .LoadFight2:
 	loadtrainer LASS, NIECHELLE4
+	startbattle
+	reloadmapafterbattle
+	loadmem wNiechelleFightCount, 3
+	clearflag ENGINE_NIECHELLE
+	end
+
+.LoadFight3:
+	loadtrainer LASS, NIECHELLE5
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_NIECHELLE
@@ -77,7 +89,7 @@ TrainerLassNiechelle:
 	checkevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
 	iftrue .GotCalciumAlready
 	scall Route46RematchGiftF
-	verbosegiveitem CALCIUM
+	verbosegiveitem POKE_DOLL
 	iffalse NiechelleNoRoomForCalcium
 	setevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
 	sjump Route46NumberAcceptedF
@@ -89,7 +101,7 @@ TrainerLassNiechelle:
 	opentext
 	writetext LassNiechelle2BeatenText
 	waitbutton
-	verbosegiveitem CALCIUM
+	verbosegiveitem POKE_DOLL
 	iffalse NiechelleNoRoomForCalcium
 	clearevent EVENT_NIECHELLE_CALCIUM
 	setevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
@@ -198,7 +210,7 @@ LassNiechelleBeatenText:
 LassNiechelleAfterBattleText:
 	text "My CAMOUFLAKE"
 	line "sure are cute,"
-	cont "aren't they?"
+	cont "aren`t they?"
 	
 	para "We even like to"
 	line "play in the snow"
@@ -206,18 +218,8 @@ LassNiechelleAfterBattleText:
 	done
 
 LassNiechelle2BeatenText:
-	text "Aww… I keep losing"
-	line "all the time!"
-
-	para "I'll just have to"
-	line "try harder!"
-
-	para "Anyway, thanks for"
-	line "battling me again"
-
-	para "and again. Here's"
-	line "that present from"
-	cont "the other time."
+	text "Oh no! My"
+	line "adorable orbs!"
 	done
 	
 YoungsterBennySeenText:

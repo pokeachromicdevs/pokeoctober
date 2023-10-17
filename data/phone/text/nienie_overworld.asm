@@ -42,8 +42,12 @@ NiechellePhoneFullText:
 	done
 
 NiechelleRematchText:
-	text "Yay! I waited!"
-	line "Let`s start now!"
+	text "Hi, <PLAY_G>!"
+	line "Time for us to"
+	cont "show you our new"
+	
+	para "pretty and pink"
+	line "power!"
 	done
 
 NiechellePackFullText:
@@ -55,11 +59,9 @@ NiechellePackFullText:
 	done
 
 NiechelleRematchGiftText:
-	text "Aww… I lost again!"
-
-	para "I wonder how many"
-	line "times that is…"
-
-	para "Thanks for coming!"
-	line "Here`s a present!"
+	text "Here, this is to"
+	line "thank you for"
+	cont "being my practice"
+	
+	para "partner!"
 	done
