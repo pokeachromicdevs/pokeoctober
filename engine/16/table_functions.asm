@@ -141,14 +141,34 @@ ItemTableGarbageCollection:
 	___conversion_bitmap_check_structs wOTPartyMons + (wOTPartyMon1Item - wOTPartyMon1), PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, .set_bit
 
 ; --bag items--
+
 	; items pocket
-	___conversion_bitmap_check_structs wItems, 2, MAX_ITEMS, .set_bit
+___item = 0
+	rept MAX_ITEMS
+	___conversion_bitmap_check_values .set_bit, wItems + (___item * 2)
+___item = ___item + 1
+	endr
+	
 	; key items pocket
-	___conversion_bitmap_check_structs wKeyItems, 2, MAX_KEY_ITEMS, .set_bit
+___item = 0
+	rept MAX_KEY_ITEMS
+	___conversion_bitmap_check_values .set_bit, wKeyItems + ___item
+___item = ___item + 1
+	endr
+	
 	; balls pocket
-	___conversion_bitmap_check_structs wBalls, 2, MAX_BALLS, .set_bit
+___item = 0
+	rept MAX_BALLS
+	___conversion_bitmap_check_values .set_bit, wBalls + (___item * 2)
+___item = ___item + 1
+	endr
+	
 	; pc items
-	___conversion_bitmap_check_structs wPCItems, 2, MAX_PC_ITEMS, .set_bit
+___item = 0
+	rept MAX_PC_ITEMS
+	___conversion_bitmap_check_values .set_bit, wPCItems + (___item * 2)
+___item = ___item + 1
+	endr
 
 ; check individual variables
 	___conversion_bitmap_check_values .set_bit, \
