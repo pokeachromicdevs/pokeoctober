@@ -472,6 +472,8 @@ SaveIndexTables:
 	ld de, sPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
 	call CopyBytes
+	ld a, BANK(sItemIndexTable)
+	call GetSRAMBank
 	ld hl, wItemIndexTable
 	ld de, sItemIndexTable
 	ld bc, wItemIndexTableEnd - wItemIndexTable
@@ -804,6 +806,8 @@ LoadIndexTables:
 	ld de, wPokemonIndexTable
 	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
 	call CopyBytes
+	ld a, BANK(sItemIndexTable)
+	call GetSRAMBank
 	ld hl, sItemIndexTable
 	ld de, wItemIndexTable
 	ld bc, wItemIndexTableEnd - wItemIndexTable
