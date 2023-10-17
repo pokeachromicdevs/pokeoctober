@@ -94,12 +94,13 @@ DebugMenu::
 	string "SHOW POS."
 	string "GET CALLED"
 	string "GET 1 ITEM"
+	string "DO GC NOW"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 21
-	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19, 20, 21
+	db 22
+	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19, 20, 21, 22
 	db -1
 
 .Jumptable
@@ -125,6 +126,29 @@ DebugMenu::
 	dw Debug_ShowPosition
 	dw Debug_GetCalled
 	dw Debug_GetOneItem
+	dw Debug_GarbageCollectNow
+
+Debug_GarbageCollectNow:
+	ld hl, .FixEventsText
+	call PrintText
+	call .YesNo
+	ret nz
+; gc everything
+	farcall ForceGarbageCollection
+	ret
+
+.YesNo
+	call YesNoBox
+	ld a, [wMenuCursorY]
+	dec a
+	and a
+	ret
+
+.FixEventsText
+	text "Perform garbage"
+	line "collection?"
+	done
+
 
 Debug_ShowPosition:
 	ld a, [wPlayerStandingMapX]
