@@ -93,12 +93,13 @@ DebugMenu::
 	string "TOGGLE RUN"
 	string "SHOW POS."
 	string "GET CALLED"
+	string "GET 1 ITEM"
 
 .MenuItems
 ;	db 14
 ;	db 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-	db 20
-	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19, 20
+	db 21
+	db 14, 18, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19, 20, 21
 	db -1
 
 .Jumptable
@@ -123,6 +124,7 @@ DebugMenu::
 	dw Debug_ToggleRun
 	dw Debug_ShowPosition
 	dw Debug_GetCalled
+	dw Debug_GetOneItem
 
 Debug_ShowPosition:
 	ld a, [wPlayerStandingMapX]
@@ -584,6 +586,135 @@ Debug_GetCalled:
 	ret
 	
 INCLUDE "engine/debug/callee_names.asm"
+
+Debug_GetOneItem:
+	xor a
+	ldh [hDebugMenuDataBuffer], a
+	ldh [hDebugMenuDataBuffer + 1], a
+	ldh [hDebugMenuDataBuffer + 2], a
+	ldh [hDebugMenuDataBuffer + 3], a
+	hlcoord 0, 0
+	lb bc, 3, SCREEN_WIDTH - 2
+	call Textbox
+	call WaitBGMap2
+	ldh [hDebugMenuCursorPos], a
+	call .update_display
+.loop
+	call JoyTextDelay
+	ldh a, [hJoyLast]
+	cp B_BUTTON
+	ret z
+	cp D_LEFT
+	jr z, .left
+	cp D_RIGHT
+	jr z, .right
+	cp A_BUTTON
+	jp z, .play
+	jr .loop
+
+.left
+	call .get_value
+	ld a, h
+	or l
+	jr nz, .dec_value
+	ld hl, NUM_ITEMS
+	jr .left_cont
+.dec_value
+	dec hl
+.left_cont
+	;dec b
+	;jr nz, .leftloop
+	call .put_value
+	call .update_display
+	jr .loop
+
+.right
+	call .get_value
+	cphl16 NUM_ITEMS
+	jr c, .inc_value
+	ld hl, 1
+	jr .right_cont
+.inc_value
+	inc hl
+.right_cont
+	;dec b
+	;jr nz, .rightloop
+	call .put_value
+	call .update_display
+	jr .loop
+
+.update_display
+	hlcoord 1, 2
+	ld a, "▶"
+	ldi [hl], a
+	inc hl
+	ld a, " "
+	ldi [hl], a
+	ldi [hl], a
+	ldi [hl], a
+	ldi [hl], a
+	ld [hl], a
+	hlcoord 3, 2
+	ld de, hDebugMenuDataBuffer
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
+	call PrintNum
+	hlcoord 1, 3
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+	;farcall ItemTableGarbageCollection
+	
+	ldh a, [hDebugMenuDataBuffer + 1]
+	ld h, a
+	ldh a, [hDebugMenuDataBuffer + 0]
+	or h
+	jr z, .no_item_name
+
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	ld de, wStringBuffer1
+	hlcoord 1, 3
+	call PlaceString
+	ret
+
+.no_item_name
+	hlcoord 1, 3
+	ld de, .BlankItemName
+	jp PlaceString
+
+.BlankItemName:
+	string "------"
+
+.play
+	call .get_value
+	ld a, l
+	or h
+	ret z
+	call GetItemIDFromIndex
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantityChangeBuffer], a
+	ld hl, wNumItems
+	jp ReceiveItem
+
+.get_value
+	ld hl, hDebugMenuDataBuffer
+	ldi a, [hl]
+	ld h, [hl]
+	ld l, a
+	ret
+
+.put_value
+	ld c, LOW(hDebugMenuDataBuffer)
+	ld a, l
+	ld [c], a
+	inc c
+	ld a, h
+	ld [c], a
+	ret
+
 
 Debug_SoundTest:
 	ld de, MUSIC_NONE

@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+# -*- coding: utf-8 -*-
+
 import argparse as AP
 from coverage.mapreader import MapReader
 import sys
@@ -91,6 +95,10 @@ def seek_through_table(save_file: BinaryIO, start_from: int,
                        item_names: dict[int, str],
                        num_items: int, num_locked: int, num_cached: int,
                        num_saved_recent: int):
+    assert (
+            ((num_items * 2) + num_locked + num_cached + num_saved_recent + 2) % 0x100 == 0
+    ), "length of table must be divisible by 0x100?"
+
     save_file.seek(start_from)
 
     items: list[int] = []
@@ -103,7 +111,7 @@ def seek_through_table(save_file: BinaryIO, start_from: int,
     print("---peeking through entries---")
     for i in range(num_items):
         item_num = int.from_bytes(save_file.read(2), "little")
-        print("%2d (0x%02x): %s" % (
+        print("%3d (0x%02x): %s" % (
             i, i,
             ("%04x -> %s" % (
                 item_num,
@@ -253,12 +261,14 @@ def reg_subparsers(sp: Any):  # can't import _SubParsersAction :(
         elif command_func == command_check_items:
             ps = sp.add_parser(
                 name=command_name,
-                help="Check item index table"
+                help="Check item index table. Better used with zero-initialized save files (Uninitialized RAM -> fill "
+                     "with value: 00 in BGB)"
             )
         elif command_func == command_check_moves:
             ps = sp.add_parser(
                 name=command_name,
-                help="Check move index table"
+                help="Check move index table. Better used with zero-initialized save files (Uninitialized RAM -> fill "
+                     "with value: 00 in BGB)"
             )
         else:
             raise Exception("I shouldn't be here")
@@ -274,7 +284,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "romname",
-        help="Basename. There must be a file with this name ending in .sav and .map (lowercase)"
+        help="Basename. There must be a file with this name ending in .sav and .map (lowercase)."
     )
     reg_subparsers(sp)
     args = parser.parse_args()
