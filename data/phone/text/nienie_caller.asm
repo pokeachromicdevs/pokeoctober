@@ -8,8 +8,8 @@ NiechelleMuchStrongerTxt:
 	text "My snowballs and I"
 	line "are staying perky"
 	para "in the cold, but"
-	line "I've noticed they"
-	para "don't like the in-"
+	line "I`ve noticed they"
+	para "don`t like the in-"
 	line "doors very much."
 	done
 
@@ -39,7 +39,7 @@ NiechelleWildMonGotAwayTxt:
 	text_start
 	line "got away from me"
 
-	para "again. It's just"
+	para "again. It`s just"
 	line "not fair!"
 	done
 
@@ -52,23 +52,23 @@ NiechellRematchCallerTxt:
 	line "ing and I think"
 	para "we can take you"
 	line "this time!"
-	para "We'll be waiting on"
+	para "We`ll be waiting on"
 	line "@"
 	text_ram wStringBuffer5
 	text " for you!"
-	para "Please hurry, it's"
+	para "Please hurry, it`s"
 	line "very cold out"
 	cont "here."
 	done
 
 NiecheleByeTxt:
-	text "Oh, I've kept you"
+	text "Oh, I`ve kept you"
 	line "too long."
 	para "Talk to you later!"
 	done
 
 NiechelleWorkingHardText:
-	text "I'm working hard"
+	text "I`m working hard"
 	line "to raise my"
 	cont "#MON!"
 
@@ -81,7 +81,7 @@ NiechelleComeBattleText:
 	line "Come battle"
 	cont "me!"
 
-	para "I'll be waiting on"
+	para "I`ll be waiting on"
 	line "@"
 	text_ram wStringBuffer5
 	text "!"

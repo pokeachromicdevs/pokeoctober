@@ -175,6 +175,14 @@
 	charmap "'t",        $d5
 	charmap "'v",        $d6
 
+	charmap "`d",        $d7
+	charmap "`l",        $d8
+	charmap "`m",        $d9
+	charmap "`r",        $da
+	charmap "`s",        $db
+	charmap "`t",        $dc
+	charmap "`v",        $dd
+
 	charmap "←",         $df
 	charmap "'",         $e0
 	charmap "<PK>",      $e1

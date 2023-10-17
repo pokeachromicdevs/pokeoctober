@@ -30,7 +30,7 @@ UnknownText_0x1b756f:
 UnknownText_0x1b758f:
 	text "<PLAY_G>!"
 
-	para "It's @"
+	para "It`s @"
 	text_ram wStringBuffer3
 	text "!"
 	line "Good morning!"
@@ -39,7 +39,7 @@ UnknownText_0x1b758f:
 UnknownText_0x1b75ac:
 	text "<PLAY_G>!"
 
-	para "It's @"
+	para "It`s @"
 	text_ram wStringBuffer3
 	text "!"
 	line "Working hard?"
@@ -48,7 +48,7 @@ UnknownText_0x1b75ac:
 UnknownText_0x1b75c9:
 	text "<PLAY_G>!"
 
-	para "It's @"
+	para "It`s @"
 	text_ram wStringBuffer3
 	text "!"
 	line "Were you up?"
@@ -60,7 +60,7 @@ UnknownText_0x1b75e5:
 
 	para "Hey, @"
 	text_ram wStringBuffer3
-	text "'s"
+	text "`s"
 	line "@"
 	text_ram wStringBuffer4
 	text " is"
