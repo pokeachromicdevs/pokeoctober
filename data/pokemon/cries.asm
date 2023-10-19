@@ -288,7 +288,6 @@ PokemonCries::
  	mon_cry CRY_DIGLETT,     $010,   $010 ; MORPHOBIA
  	mon_cry CRY_DIGLETT,     $020,   $040 ; MORPHOBIA
 	mon_cry CRY_GLIGAR,     -$045,  $120  ; TERRACHNID
- 	;mon_cry CRY_GLIGAR,     $090,  $095 ; TERRACHNID (beta cry)
 	mon_cry CRY_GRIMER,      $100,  $100 ; SMUJJ
 	mon_cry CRY_PICHU,       $f60,  $200 ; KOTORA
 	mon_cry CRY_LARVITAR,    $db3,  $168 ; RAITORA
@@ -299,10 +298,12 @@ PokemonCries::
 	mon_cry CRY_CYNDAQUIL,   $303,  $1c0 ; FENNECURSE
 	mon_cry CRY_KANGASKHAN,  $0f0,  $04b ; ORIJOEY
 	mon_cry CRY_AGGROSWINE,  $1B7,  $068 ; AGGROSWINE
-	mon_cry CRY_PICHU,       $000,  $150 ; TODO: GERMIFROST
-	mon_cry CRY_PICHU,       $000,  $150 ; TODO: VEGELANCHE
-	mon_cry CRY_PICHU,       $000,  $150 ; TODO: SNOUWRBUN
+	mon_cry CRY_PICHU,       $030,  $150 ; TODO: GERMIFROST
+	mon_cry CRY_PICHU,       $060,  $140 ; TODO: VEGELANCHE
+	mon_cry CRY_PICHU,       $070,  $140 ; TODO: SNOUWRBUN
 	mon_cry CRY_PICHU,       $000,  $150 ; TODO: NECROREX
 
 	;Beytah/new cries: Typhlosion, Pichu, Quagsire, Umbreon, Dunsparce, Sneasel, Houndour/Houndoom, Donphan, Coinpur, Katu, Adbarstork, Clefling, Mallody, Camouflake
 	;test pitches Adbarstork: Entei, Sunflora, Swinub, Squirtle
+
+	;mon_cry CRY_GLIGAR,     $090,  $095 ; TERRACHNID (beta cry)
