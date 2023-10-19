@@ -716,34 +716,6 @@ YoungsterGroup:
 SECTION "Enemy Trainer Parties 2", ROMX
 
 SchoolboyGroup:
-	next_party ; SCHOOLBOY (1)
-	db "JOHNNY@", TRAINERTYPE_NORMAL
-	db 29
-	dw BELLSPROUT
-	db 31
-	dw WEEPINBELL
-	db 33
-	dw VICTREEBEL
-	end_party
-
-	next_party ; SCHOOLBOY (2)
-	db "DANNY@", TRAINERTYPE_NORMAL
-	db 31
-	dw JYNX
-	db 31
-	dw ELECTABUZZ
-	db 31
-	dw MAGMAR
-	end_party
-
-	next_party ; SCHOOLBOY (3)
-	db "TOMMY@", TRAINERTYPE_NORMAL
-	db 32
-	dw XATU
-	db 34
-	dw ALAKAZAM
-	end_party
-
 	next_party ; SCHOOLBOY (4)
 	db "DUDLEY@", TRAINERTYPE_NORMAL
 	db 35
@@ -881,16 +853,6 @@ BirdKeeperGroup:
 	dw DODUO
 	db 17
 	dw DODUO
-	end_party
-
-	next_party ; BIRD_KEEPER (6)
-	db "DENIS@", TRAINERTYPE_NORMAL
-	db 18
-	dw SPEAROW
-	db 20
-	dw FEAROW
-	db 18
-	dw SPEAROW
 	end_party
 
 	next_party ; BIRD_KEEPER (7)
@@ -1225,48 +1187,55 @@ LassGroup:
 
 	next_party ; LASS (19) NIE NIE 2
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
+		db 8
+		dw CAMOUFLAKE
+		db 9
+		dw CAMOUFLAKE
 		db 10
-		dw CAMOUFLAKE
-		db 11
-		dw CAMOUFLAKE
-		db 12
 		dw JIGGLYPUFF
 	end_party
 
 	next_party ; LASS (19) NIE NIE 3
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 40
-		dw CAMOUFLAKE
-		db 41
-		dw CAMOUFLAKE
-		db 42
+		db 18
+		dw GERMIFROST
+		db 19
+		dw GERMIFROST
+		db 20
 		dw JIGGLYPUFF
-		dw 43
+		dw 21
 		dw SNUBBULL
 	end_party
 
 	next_party ; LASS (19) NIE NIE 4
 		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 45
-		dw CAMOUFLAKE
-		db 46
-		dw CAMOUFLAKE
-		db 47
+		db 30
+		dw VEGELANCHE
+		db 32
+		dw SNOUWRBUN
+		db 34
 		dw JIGGLYPUFF
-		db 48
+		db 36
 		dw SNUBBULL
 	end_party
 	
 	next_party ; LASS (20) NIE NIE 5
-		db "NIECHELLE@", TRAINERTYPE_NORMAL
+		db "NIECHELLE@", TRAINERTYPE_MOVES
 		db 52
-		dw CAMOUFLAKE
+		dw VEGELANCHE
+		dw SOLARBEAM, ICE_BEAM, LEECH_SEED, EARTHQUAKE
 		db 53
-		dw CAMOUFLAKE
+		dw SNOUWRBUN
+		dw RAZOR_LEAF, ICE_BEAM, PURSUIT, GIGA_DRAIN
 		db 54
 		dw JIGGLYPUFF
+		dw BODY_SLAM, RETURN, SWEET_KISS, PROTECT
 		db 55
 		dw GRANBULL
+		dw CRUNCH, HYPER_BEAM, PROTECT, SHADOW_BALL
+		db 58
+		dw JIGGLYPUFF ; SAKURAQUA
+		dw SOLARBEAM, SWEET_KISS, BUBBLEBEAM, PETAL_DANCE
 	end_party
 
 	next_party

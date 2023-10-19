@@ -407,8 +407,10 @@
 
 ; demo 1 limit
 	const EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
-
-	const EVENT_1a2
+	
+; olivine city
+	const EVNT_BEAT_JASMINE
+	
 	const EVENT_1a3
 	const EVENT_1a4
 	const EVENT_1a5

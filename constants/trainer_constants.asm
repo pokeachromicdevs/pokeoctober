@@ -123,9 +123,6 @@ KRIS EQU __enum__
 	const DAN
 
 	trainerclass SCHOOLBOY ; 17
-	const JOHNNY
-	const DANNY
-	const TOMMY
 	const DUDLEY
 	const JOE
 	const BILLY
@@ -144,7 +141,6 @@ KRIS EQU __enum__
 	const ABE
 	const BRYAN
 	const TOBY
-	const DENIS
 	const VANCE1
 	const HANK
 	const ROY
@@ -386,7 +382,6 @@ KRIS EQU __enum__
 	const MANNY
 	const FISHER_GEORGE
 	const KOI
-
 
 	trainerclass SWIMMERM ; 26
 	const HAROLD

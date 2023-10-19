@@ -23,10 +23,10 @@ NiechelleBeatMonTxt:
 	
 	para "Do you know"
 	line "JIGGLYPUFF?"
-	cont "I love JIGGLY-"
+	cont "I love JIGGLYPUFF!"
 	
-	para "PUFF! I`m think-"
-	line "ing of getting"
+	para "I`m thinking"
+	line "of getting"
 	cont "one."
 	
 	para "It`ll be fluffier"
@@ -70,7 +70,7 @@ NiechellRematchCallerTxt:
 NiecheleByeTxt:
 	text "Oh, my boyfriend"
 	line "is calling me!"
-	para "Let's chat again"
+	para "Let`s chat again"
 	line "sometime!"
 	done
 

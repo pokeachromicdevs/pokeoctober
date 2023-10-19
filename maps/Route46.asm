@@ -50,7 +50,7 @@ TrainerLassNiechelle:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
 .Fight2:
-	checkevent EVENT_BEAT_JASMINE
+	checkevent EVENT_BEAT_ELITE_FOUR; EVENT_BEAT_JASMINE
 	iftrue .LoadFight2
 .Fight1:
 	checkevent EVENT_BEAT_BUGSY
