@@ -551,12 +551,12 @@ VegelancheEvosAttacks:
 	dbw 9, POWDER_SNOW
 	dbw 13, DEFENSE_CURL
 	dbw 18, ABSORB
-	dbw 24, CHARM
-	dbw 29, ICY_WIND
-	dbw 33, MEGA_DRAIN
-	dbw 38, MIST
-	dbw 42, ICE_BEAM
-	dbw 47, GIGA_DRAIN
+	dbw 26, CHARM
+	dbw 31, ICY_WIND
+	dbw 35, MEGA_DRAIN
+	dbw 40, MIST
+	dbw 44, ICE_BEAM
+	dbw 49, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
 SnouwrbunEvosAttacks:
@@ -567,12 +567,12 @@ SnouwrbunEvosAttacks:
 	dbw 9, POWDER_SNOW
 	dbw 13, DEFENSE_CURL
 	dbw 18, ABSORB
-	dbw 24, CHARM
-	dbw 29, ICY_WIND
-	dbw 33, MEGA_DRAIN
-	dbw 38, MIST
-	dbw 42, ICE_BEAM
-	dbw 47, GIGA_DRAIN
+	dbw 26, CHARM
+	dbw 31, PURSUIT
+	dbw 35, MEGA_DRAIN
+	dbw 40, MIST
+	dbw 44, FAINT_ATTACK
+	dbw 49, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
 
