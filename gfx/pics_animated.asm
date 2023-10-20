@@ -340,7 +340,6 @@ ShuckleFrontpicAnim: INCBIN "gfx/pokemon/shuckle/front.animated.2bpp.lz"
 SECTION "Pics 20 Animated", ROMX
 
 BellignanFrontpicAnim: INCBIN "gfx/pokemon/bellignan/front.animated.2bpp.lz"
-LuxswanFrontpicAnim: INCBIN "gfx/pokemon/luxswan/front.animated.2bpp.lz"
 PhanpyFrontpicAnim: INCBIN "gfx/pokemon/phanpy/front.animated.2bpp.lz"
 HoppipFrontpicAnim: INCBIN "gfx/pokemon/hoppip/front.animated.2bpp.lz"
 TonbossFrontpicAnim: INCBIN "gfx/pokemon/tonboss/front.animated.2bpp.lz"
@@ -386,6 +385,7 @@ OrefryFrontpicAnim:	INCBIN "gfx/pokemon/orefry/front.animated.2bpp.lz"
 FennecurseFrontpicAnim:	INCBIN "gfx/pokemon/fennecurse/front.animated.2bpp.lz"
 OrijoeyFrontpicAnim:	INCBIN "gfx/pokemon/orijoey/front.animated.2bpp.lz"
 AggroswineFrontpicAnim:	INCBIN "gfx/pokemon/aggroswine/front.animated.2bpp.lz"
+LuxswanFrontpicAnim: INCBIN "gfx/pokemon/luxswan/front.animated.2bpp.lz"
 
 SECTION "Pics 24 Animated", ROMX
 
