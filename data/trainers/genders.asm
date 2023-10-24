@@ -79,3 +79,4 @@ BTTrainerClassGenders:
 	db MALE   ; ROCKCLIMBER
 	db MALE   ; SPORTSMAN
 	db MALE   ; MANCHILD
+	db FEMALE ; NIECHELLE

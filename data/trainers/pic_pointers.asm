@@ -79,3 +79,4 @@ TrainerPicPointers::
 	dba RockClimberPic
 	dba SportsmanPic
 	dba ManchildPic
+	dba NiechellePic

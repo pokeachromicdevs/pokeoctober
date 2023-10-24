@@ -80,3 +80,4 @@ TrainerEncounterMusic::
 	db MUSIC_HIKER_ENCOUNTER       ; rockclimber
 	db MUSIC_OFFICER_ENCOUNTER     ; sportsman
 	db MUSIC_HIKER_ENCOUNTER       ; manchild
+	db MUSIC_LASS_ENCOUNTER        ; niechelle

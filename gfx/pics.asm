@@ -809,5 +809,6 @@ SnouwrbunFrontpic:	INCBIN "gfx/pokemon/snouwrbun/front.static.2bpp.lz"
 SnouwrbunBackpic:	INCBIN "gfx/pokemon/snouwrbun/back.2bpp.lz"
 NecrorexFrontpic:	INCBIN "gfx/pokemon/necrorex/front.static.2bpp.lz"
 NecrorexBackpic:	INCBIN "gfx/pokemon/necrorex/back.2bpp.lz"
+NiechellePic:       INCBIN "gfx/trainers/niechelle.2bpp.lz"
 
 INCLUDE "gfx/pics_animated.asm"

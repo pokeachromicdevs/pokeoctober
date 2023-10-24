@@ -84,3 +84,4 @@ INCBIN "gfx/trainers/mystic.gbcpal", middle_colors
 INCBIN "gfx/trainers/rockclimber.gbcpal", middle_colors
 INCBIN "gfx/trainers/sportsman.gbcpal", middle_colors
 INCBIN "gfx/trainers/manchild.gbcpal", middle_colors
+INCBIN "gfx/trainers/niechelle.gbcpal", middle_colors

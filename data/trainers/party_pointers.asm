@@ -79,3 +79,4 @@ TrainerGroups:
 	dba RockClimberGroup
 	dba SportsmanGroup
 	dba ManchildGroup
+	dba NiechelleGroup

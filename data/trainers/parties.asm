@@ -1131,14 +1131,6 @@ LassGroup:
 		dw SENTRET
 	end_party
 
-	next_party ; LASS (19)
-		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 3
-		dw CAMOUFLAKE
-		db 4
-		dw CAMOUFLAKE
-	end_party
-
 	next_party ; LASS (20)
 		db "YURI@", TRAINERTYPE_NORMAL
 		db 2
@@ -1183,59 +1175,6 @@ LassGroup:
 		string "TINA"
 		db     TRAINERTYPE_NORMAL
 		dw    10, BUTTERFREE
-	end_party
-
-	next_party ; LASS (19) NIE NIE 2
-		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 8
-		dw CAMOUFLAKE
-		db 9
-		dw CAMOUFLAKE
-		db 10
-		dw JIGGLYPUFF
-	end_party
-
-	next_party ; LASS (19) NIE NIE 3
-		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 18
-		dw GERMIFROST
-		db 19
-		dw GERMIFROST
-		db 20
-		dw JIGGLYPUFF
-		dw 21
-		dw SNUBBULL
-	end_party
-
-	next_party ; LASS (19) NIE NIE 4
-		db "NIECHELLE@", TRAINERTYPE_NORMAL
-		db 30
-		dw VEGELANCHE
-		db 32
-		dw SNOUWRBUN
-		db 34
-		dw JIGGLYPUFF
-		db 36
-		dw SNUBBULL
-	end_party
-	
-	next_party ; LASS (20) NIE NIE 5
-		db "NIECHELLE@", TRAINERTYPE_MOVES
-		db 52
-		dw VEGELANCHE
-		dw SOLARBEAM, ICE_BEAM, LEECH_SEED, EARTHQUAKE
-		db 53
-		dw SNOUWRBUN
-		dw RAZOR_LEAF, ICE_BEAM, PURSUIT, GIGA_DRAIN
-		db 54
-		dw JIGGLYPUFF
-		dw BODY_SLAM, RETURN, SWEET_KISS, PROTECT
-		db 55
-		dw GRANBULL
-		dw CRUNCH, HYPER_BEAM, PROTECT, SHADOW_BALL
-		db 58
-		dw JIGGLYPUFF ; SAKURAQUA
-		dw SOLARBEAM, SWEET_KISS, BUBBLEBEAM, PETAL_DANCE
 	end_party
 
 	next_party
@@ -5668,4 +5607,68 @@ PokefanFGroup:
 		dbww 26, RAICHU, BERRY
 	end_party
 
+	end_party_list
+
+NiechelleGroup:
+	next_party ; LASS (19)
+	db "NIECHELLE@", TRAINERTYPE_NORMAL
+	db 3
+	dw CAMOUFLAKE
+	db 4
+	dw CAMOUFLAKE
+	end_party
+	
+	next_party ; LASS (19) NIE NIE 2
+	db "NIECHELLE@", TRAINERTYPE_NORMAL
+	db 8
+	dw CAMOUFLAKE
+	db 9
+	dw CAMOUFLAKE
+	db 10
+	dw JIGGLYPUFF
+	end_party
+
+	next_party ; LASS (19) NIE NIE 3
+	db "NIECHELLE@", TRAINERTYPE_NORMAL
+	db 18
+	dw GERMIFROST
+	db 19
+	dw GERMIFROST
+	db 20
+	dw JIGGLYPUFF
+	dw 21
+	dw SNUBBULL
+	end_party
+
+	next_party ; LASS (19) NIE NIE 4
+	db "NIECHELLE@", TRAINERTYPE_NORMAL
+	db 30
+	dw VEGELANCHE
+	db 32
+	dw SNOUWRBUN
+	db 34
+	dw JIGGLYPUFF
+	db 36
+	dw SNUBBULL
+	end_party
+	
+	next_party ; LASS (20) NIE NIE 5
+	db "NIECHELLE@", TRAINERTYPE_MOVES
+	db 52
+	dw VEGELANCHE
+	dw SOLARBEAM, ICE_BEAM, LEECH_SEED, EARTHQUAKE
+	db 53
+	dw SNOUWRBUN
+	dw RAZOR_LEAF, ICE_BEAM, PURSUIT, GIGA_DRAIN
+	db 54
+	dw JIGGLYPUFF
+	dw BODY_SLAM, RETURN, SWEET_KISS, PROTECT
+	db 55
+	dw GRANBULL
+	dw CRUNCH, HYPER_BEAM, PROTECT, SHADOW_BALL
+	db 58
+	dw JIGGLYPUFF ; SAKURAQUA
+	dw SOLARBEAM, SWEET_KISS, BUBBLEBEAM, PETAL_DANCE
+	end_party
+	
 	end_party_list

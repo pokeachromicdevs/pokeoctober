@@ -11,7 +11,7 @@ Route46_MapScripts:
 	db 0 ; callbacks
 
 TrainerLassNiechelle:
-	trainer LASS, NIECHELLE, EVENT_BEAT_LASS_NIECHELLE, LassNiechelleSeenText, LassNiechelleBeatenText, 0, .Script
+	trainer LASSNIENIE, NIECHELLE, EVENT_BEAT_LASS_NIECHELLE, LassNiechelleSeenText, LassNiechelleBeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_LASS_NIECHELLE
@@ -34,7 +34,7 @@ TrainerLassNiechelle:
 	askforphonenumber PHONE_LASS_NIECHELLE
 	ifequal PHONE_CONTACTS_FULL, Route46PhoneFullF
 	ifequal PHONE_CONTACT_REFUSED, Route46NumberDeclinedF
-	gettrainername STRING_BUFFER_3, LASS, NIECHELLE
+	gettrainername STRING_BUFFER_3, LASSNIENIE, NIECHELLE
 	scall Route46RegisteredNumberF
 	sjump Route46NumberAcceptedF
 
@@ -56,7 +56,7 @@ TrainerLassNiechelle:
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer LASS, NIECHELLE2
+	loadtrainer LASSNIENIE, NIECHELLE2
 	startbattle
 	reloadmapafterbattle
 	loadmem wNiechelleFightCount, 1
@@ -64,7 +64,7 @@ TrainerLassNiechelle:
 	end
 
 .LoadFight1:
-	loadtrainer LASS, NIECHELLE3
+	loadtrainer LASSNIENIE, NIECHELLE3
 	startbattle
 	reloadmapafterbattle
 	loadmem wNiechelleFightCount, 2
@@ -72,7 +72,7 @@ TrainerLassNiechelle:
 	end
 	
 .LoadFight2:
-	loadtrainer LASS, NIECHELLE4
+	loadtrainer LASSNIENIE, NIECHELLE4
 	startbattle
 	reloadmapafterbattle
 	loadmem wNiechelleFightCount, 3
@@ -80,7 +80,7 @@ TrainerLassNiechelle:
 	end
 
 .LoadFight3:
-	loadtrainer LASS, NIECHELLE5
+	loadtrainer LASSNIENIE, NIECHELLE5
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_NIECHELLE

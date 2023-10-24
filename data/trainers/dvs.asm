@@ -78,3 +78,5 @@ TrainerClassDVs:
 	dn  9,  9,  8,  8 ; ROCKCLIMBER
 	dn  9,  8,  8,  8 ; SPORTSMAN
 	dn  7,  8,  8,  8 ; MANCHILD
+	dn  5,  8,  8,  8 ; NIENIE
+

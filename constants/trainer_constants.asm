@@ -176,16 +176,11 @@ KRIS EQU __enum__
 	const DANA5
 	const ARIEL
 	const LASS_SAM
-	const NIECHELLE
 	const YURI
 	const HELEN
 	const JUNE
 	const ANNIE
 	const TINA
-	const NIECHELLE2
-	const NIECHELLE3
-	const NIECHELLE4
-	const NIECHELLE5
 	const RUBY
 	const NANCY
 	const CHARLOTTE
@@ -767,5 +762,12 @@ KRIS EQU __enum__
 	const MIGUEL
 	const MARCO
 	const ZACHARY
+	
+	trainerclass LASSNIENIE
+	const NIECHELLE
+	const NIECHELLE2
+	const NIECHELLE3
+	const NIECHELLE4
+	const NIECHELLE5
 
 NUM_TRAINER_CLASSES EQU __enum__

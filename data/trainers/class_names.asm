@@ -77,3 +77,4 @@ TrainerClassNames::
 	db "ROCKCLIMBER@"
 	db "SPORTSMAN@"
 	db "MANCHILD@"
+	db "LASS@"
