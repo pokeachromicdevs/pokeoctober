@@ -199,6 +199,7 @@ JigglypuffSpriteGFX::          INCBIN "gfx/sprites/pokemon/jigglypuff.2bpp"
 WigglytuffSpriteGFX::        INCBIN "gfx/sprites/pokemon/wigglytuff.2bpp"
 ZubatSpriteGFX::               INCBIN "gfx/sprites/pokemon/zubat.2bpp"
 GolbatSpriteGFX::              INCBIN "gfx/sprites/pokemon/golbat.2bpp"
+OddishSpriteGFX::              INCBIN "gfx/sprites/pokemon/oddish.2bpp"
 
 
 
