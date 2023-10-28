@@ -16,8 +16,8 @@ FollowSpritePalettes::
 	dw    .Green
 	const PAL_FOLLOWER_BROWN
 	dw    .Brown
-	const PAL_FOLLOWER_PINK
-	dw    .Pink
+	const PAL_FOLLOWER_PURPLE	
+	dw    .Purple
 	const PAL_FOLLOWER_SILVER
 	dw    .Silver
 ; custom palettes
@@ -27,60 +27,93 @@ FollowSpritePalettes::
 	dw    .Bulba
 	const PAL_FOLLOWER_SNOUWRBUN
 	dw    .Snouwrbun
-
+	const PAL_FOLLOWER_JIGGLYPUFF ; used for other pinkmons like Clefairy too
+	dw    .Jigglypuff
+	const PAL_FOLLOWER_CATERPIE
+	dw    .Caterpie
+	const PAL_FOLLOWER_METAPOD
+	dw    .Metapod
+	const PAL_FOLLOWER_BUTTERFREE
+	dw    .Butterfree
+	const PAL_FOLLOWER_BEEDRILL ; used for other yellowmons like Pikachu too 
+	dw    .Beedrill
+	const PAL_FOLLOWER_WIGGLYTUFF ; to include white belly
+	dw    .Wigglytuff
+	const PAL_FOLLOWER_IVYSAUR
+	dw    .Ivysaur
+	const PAL_FOLLOWER_VENUSAUR
+	dw    .Ivysaur
+	const PAL_FOLLOWER_SQUIRTLE
+	dw    .Squirtle
+	const PAL_FOLLOWER_WARTORTLE
+	dw    .Wartortle
+	const PAL_FOLLOWER_BLASTOISE
+	dw    .Blastoise
+	
 .Red:      RGB 31,31,31, 31,19,10, 31,07,01, 00,00,00
 .Blue:     RGB 31,31,31, 31,19,10, 10,09,31, 00,00,00
 .Green:    RGB 31,31,31, 31,19,10, 07,23,03, 00,00,00
 .Brown:    RGB 31,31,31, 31,19,10, 15,10,03, 00,00,00
-.Pink:     RGB 31,31,31, 31,19,10, 21,15,23, 00,00,00
+.Purple:   RGB 31,31,31, 31,19,10, 21,15,23, 00,00,00
 .Silver:   RGB 31,31,31, 31,31,31, 13,13,13, 00,00,00
 .Kotora:   RGB 31,31,31, 31,30,19, 27,21,00, 00,00,00
 .Bulba:    RGB 31,31,31, 01,16,00, 07,23,03, 00,00,00
 .Snouwrbun: RGB 31,31,31, 31,19,10, 08,22,02, 00,00,00
+.Jigglypuff: RGB 31,31,31, 31,14,21, 06,16,31, 00,00,00
+.Caterpie: RGB 31,31,31, 12,22,06, 31,09,15, 00,00,00
+.Metapod: RGB 31,31,31, 09,14,01, 15,31,00, 00,00,00 
+.Butterfree: RGB 31,31,31, 18,25,31, 26,05,13, 00,00,00
+.Beedrill: RGB 31,31,31, 31,19,04, 30,04,01, 00,00,00 ; different from Kotora
+.Wigglytuff: RGB 31,31,31, 31,31,31, 31,14,21, 00,00,00
+.Ivysaur:  RGB 31,31,31, 31,10,16, 12,31,11, 00,00,00 
+.Venusaur: RGB 31,31,31, 29,07,14, 08,25,11, 00,00,00
+.Squirtle: RGB 31,31,31, 22,18,08, 10,15,31, 00,00,00
+.Wartortle: RGB 31,31,31, 22,18,08, 10,14,31, 00,00,00
+.Blastoise: RGB 31,31,31, 24,20,03, 08,11,31, 00,00,00
 
 FollowSpritePointers::
 	follow_sprite BulbasaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;BULBASAUR
-	follow_sprite IvysaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;IVYSAUR
-	follow_sprite VenusaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;VENUSAUR
+	follow_sprite IvysaurSpriteGFX, PAL_FOLLOWER_IVYSAUR ;IVYSAUR
+	follow_sprite VenusaurSpriteGFX, PAL_FOLLOWER_VENUSAUR ;VENUSAUR
 	follow_sprite CharmanderSpriteGFX, PAL_FOLLOWER_RED ;CHARMANDER
 	follow_sprite CharmeleonSpriteGFX, PAL_FOLLOWER_RED ;CHARMELEON
 	follow_sprite CharizardSpriteGFX, PAL_FOLLOWER_RED ;CHARIZARD
-	follow_sprite SquirtleSpriteGFX, PAL_FOLLOWER_BLUE ;SQUIRTLE
-	follow_sprite WartortleSpriteGFX, PAL_FOLLOWER_BLUE ;WARTORTLE
-	follow_sprite BlastoiseSpriteGFX, PAL_FOLLOWER_BLUE ;BLASTOISE
-	follow_sprite CaterpieSpriteGFX, PAL_FOLLOWER_GREEN ;CATERPIE
-	follow_sprite MetapodSpriteGFX, PAL_FOLLOWER_GREEN ;METAPOD
-	follow_sprite ButterfreeSpriteGFX, PAL_FOLLOWER_RED ;BUTTERFREE
+	follow_sprite SquirtleSpriteGFX, PAL_FOLLOWER_SQUIRTLE ;SQUIRTLE
+	follow_sprite WartortleSpriteGFX, PAL_FOLLOWER_WARTORTLE ;WARTORTLE
+	follow_sprite BlastoiseSpriteGFX, PAL_FOLLOWER_BLASTOISE ;BLASTOISE
+	follow_sprite CaterpieSpriteGFX, PAL_FOLLOWER_CATERPIE ;CATERPIE
+	follow_sprite MetapodSpriteGFX, PAL_FOLLOWER_METAPOD ;METAPOD
+	follow_sprite ButterfreeSpriteGFX, PAL_FOLLOWER_BUTTERFREE ;BUTTERFREE
 	follow_sprite WeedleSpriteGFX, PAL_FOLLOWER_RED ;WEEDLE
 	follow_sprite KakunaSpriteGFX, PAL_FOLLOWER_BROWN ;KAKUNA
-	follow_sprite BeedrillSpriteGFX, PAL_FOLLOWER_RED ;BEEDRILL
+	follow_sprite BeedrillSpriteGFX, PAL_FOLLOWER_BEEDRILL ;BEEDRILL
 	follow_sprite PidgeySpriteGFX, PAL_FOLLOWER_BROWN ;PIDGEY
 	follow_sprite PidgeottoSpriteGFX, PAL_FOLLOWER_BROWN ;PIDGEOTTO
 	follow_sprite PidgeotSpriteGFX, PAL_FOLLOWER_BROWN ;PIDGEOT
-	follow_sprite RattataSpriteGFX, PAL_FOLLOWER_PINK ;RATTATA
+	follow_sprite RattataSpriteGFX, PAL_FOLLOWER_PURPLE ;RATTATA
 	follow_sprite RaticateSpriteGFX, PAL_FOLLOWER_BROWN ;RATICATE
 	follow_sprite SpearowSpriteGFX, PAL_FOLLOWER_BROWN ;SPEAROW
 	follow_sprite FearowSpriteGFX, PAL_FOLLOWER_BROWN ;FEAROW
-	follow_sprite EkansSpriteGFX, PAL_FOLLOWER_PINK ;EKANS
-	follow_sprite ArbokSpriteGFX, PAL_FOLLOWER_PINK ;ARBOK
-	follow_sprite PikachuSpriteGFX, PAL_FOLLOWER_RED ;PIKACHU
+	follow_sprite EkansSpriteGFX, PAL_FOLLOWER_PURPLE ;EKANS
+	follow_sprite ArbokSpriteGFX, PAL_FOLLOWER_PURPLE ;ARBOK
+	follow_sprite PikachuSpriteGFX, PAL_FOLLOWER_BEEDRILL ;PIKACHU
 	follow_sprite RaichuSpriteGFX, PAL_FOLLOWER_RED ;RAICHU
 	follow_sprite SandshrewSpriteGFX, PAL_FOLLOWER_BROWN ;SANDSHREW
 	follow_sprite SandslashSpriteGFX, PAL_FOLLOWER_BROWN ;SANDSLASH
 	follow_sprite NidoranFSpriteGFX, PAL_FOLLOWER_BLUE ;NIDORAN_F
 	follow_sprite NidorinaSpriteGFX, PAL_FOLLOWER_BLUE ;NIDORINA
 	follow_sprite NidoqueenSpriteGFX, PAL_FOLLOWER_BLUE ;NIDOQUEEN
-	follow_sprite NidoranMSpriteGFX, PAL_FOLLOWER_PINK ;NIDORAN_M
-	follow_sprite NidorinoSpriteGFX, PAL_FOLLOWER_PINK ;NIDORINO
-	follow_sprite NidokingSpriteGFX, PAL_FOLLOWER_PINK ;NIDOKING
-	follow_sprite ClefairySpriteGFX, PAL_FOLLOWER_RED ;CLEFAIRY
-	follow_sprite ClefableSpriteGFX, PAL_FOLLOWER_RED ;CLEFABLE,
+	follow_sprite NidoranMSpriteGFX, PAL_FOLLOWER_PURPLE ;NIDORAN_M
+	follow_sprite NidorinoSpriteGFX, PAL_FOLLOWER_PURPLE ;NIDORINO
+	follow_sprite NidokingSpriteGFX, PAL_FOLLOWER_PURPLE ;NIDOKING
+	follow_sprite ClefairySpriteGFX, PAL_FOLLOWER_JIGGLYPUFF ;CLEFAIRY
+	follow_sprite ClefableSpriteGFX, PAL_FOLLOWER_JIGGLYPUFF ;CLEFABLE
 	follow_sprite VulpixSpriteGFX, PAL_FOLLOWER_RED ;VULPIX
 	follow_sprite NinetalesSpriteGFX, PAL_FOLLOWER_RED ;NINETALES
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;JIGGLYPUFF
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;WIGGLYTUFF
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ZUBAT
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GOLBAT
+	follow_sprite JigglypuffSpriteGFX, PAL_FOLLOWER_JIGGLYPUFF ;JIGGLYPUFF
+	follow_sprite WigglytuffSpriteGFX, PAL_FOLLOWER_WIGGLYTUFF ;WIGGLYTUFF
+	follow_sprite ZubatSpriteGFX, PAL_FOLLOWER_PURPLE ;ZUBAT
+	follow_sprite GolbatSpriteGFX, PAL_FOLLOWER_PURPLE ;GOLBAT
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ODDISH
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GLOOM
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;VILEPLUME
@@ -191,7 +224,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MEWTWO
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MEW
 ;Johto Icons
-		follow_sprite ChikoritaSpriteGFX, PAL_FOLLOWER_GREEN ;CHIKORITA
+	follow_sprite ChikoritaSpriteGFX, PAL_FOLLOWER_GREEN ;CHIKORITA
 	follow_sprite BlossomoleSpriteGFX, PAL_FOLLOWER_GREEN ;BLOSSOMOLE
 	follow_sprite MeganiumSpriteGFX, PAL_FOLLOWER_GREEN ;MEGANIUM
 	follow_sprite CyndaquilSpriteGFX, PAL_FOLLOWER_RED ;CYNDAQUIL
@@ -207,7 +240,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;NOCTOWL
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;LEDYBA
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;LEDIAN
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_PINK ;SPINARAK
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_PURPLE ;SPINARAK
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ARIADOS
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;CROBAT
 	follow_sprite YanmaSpriteGFX,  PAL_FOLLOWER_GREEN ;YANMA
@@ -320,8 +353,8 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;KIWACKI
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;SILKANE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MORPHOBIA
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_PINK ;TERRACHNID
-	follow_sprite SmujjSpriteGFX, PAL_FOLLOWER_PINK ;SMUJJ
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_PURPLE ;TERRACHNID
+	follow_sprite SmujjSpriteGFX, PAL_FOLLOWER_PURPLE ;SMUJJ
 	follow_sprite KotoraSpriteGFX, PAL_FOLLOWER_KOTORA ;KOTORA
 	follow_sprite KotoraSpriteGFX, PAL_FOLLOWER_KOTORA ;RAITORA
 	follow_sprite KotoraSpriteGFX, PAL_FOLLOWER_KOTORA ;GOROTORA

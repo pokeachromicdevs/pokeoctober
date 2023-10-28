@@ -195,3 +195,11 @@ BurgelaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/burgela.2bpp"
 CoaltaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/coalta.2bpp"
 SnouwrbunSpriteGFX::           INCBIN "gfx/sprites/pokemon/snouwrbun.2bpp"
 VegelancheSpriteGFX::          INCBIN "gfx/sprites/pokemon/vegelanche.2bpp"
+JigglypuffSpriteGFX::          INCBIN "gfx/sprites/pokemon/jigglypuff.2bpp"
+WigglytuffSpriteGFX::        INCBIN "gfx/sprites/pokemon/wigglytuff.2bpp"
+ZubatSpriteGFX::               INCBIN "gfx/sprites/pokemon/zubat.2bpp"
+GolbatSpriteGFX::              INCBIN "gfx/sprites/pokemon/golbat.2bpp"
+
+
+
+
