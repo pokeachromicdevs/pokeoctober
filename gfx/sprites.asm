@@ -196,10 +196,18 @@ CoaltaSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/coalta.2bpp"
 SnouwrbunSpriteGFX::           INCBIN "gfx/sprites/pokemon/snouwrbun.2bpp"
 VegelancheSpriteGFX::          INCBIN "gfx/sprites/pokemon/vegelanche.2bpp"
 JigglypuffSpriteGFX::          INCBIN "gfx/sprites/pokemon/jigglypuff.2bpp"
-WigglytuffSpriteGFX::        INCBIN "gfx/sprites/pokemon/wigglytuff.2bpp"
+WigglytuffSpriteGFX::          INCBIN "gfx/sprites/pokemon/wigglytuff.2bpp"
 ZubatSpriteGFX::               INCBIN "gfx/sprites/pokemon/zubat.2bpp"
 GolbatSpriteGFX::              INCBIN "gfx/sprites/pokemon/golbat.2bpp"
 OddishSpriteGFX::              INCBIN "gfx/sprites/pokemon/oddish.2bpp"
+
+SECTION "Follower Sprites 3", ROMX
+GloomSpriteGFX::               INCBIN "gfx/sprites/pokemon/gloom.2bpp"
+VileplumeSpriteGFX::           INCBIN "gfx/sprites/pokemon/vileplume.2bpp"
+ParasSpriteGFX::               INCBIN "gfx/sprites/pokemon/paras.2bpp"
+ParasectSpriteGFX::            INCBIN "gfx/sprites/pokemon/parasect.2bpp"
+
+
 
 
 

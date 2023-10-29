@@ -61,10 +61,18 @@ FollowSpritePalettes::
 	dw    .Sandshrew
 	const PAL_FOLLOWER_SANDSLASH
 	dw    .Sandslash
-	const PAL_FOLLOWER_ZUBAT ; also used for Golbat (they have the same sprite palette)
+	const PAL_FOLLOWER_ZUBAT ; also used for Golbat
 	dw    .Zubat
 	const PAL_FOLLOWER_TONBOSS
 	dw    .Tonboss
+	const PAL_FOLLOWER_GLOOM
+	dw    .Gloom
+	const PAL_FOLLOWER_VILEPLUME
+	dw    .Vileplume
+	const PAL_FOLLOWER_PARAS
+	dw    .Paras
+	const PAL_FOLLOWER_PARASECT
+	dw    .Parasect
 	
 .Red:      RGB 31,31,31, 31,19,10, 31,07,01, 00,00,00
 .Blue:     RGB 31,31,31, 31,19,10, 10,09,31, 00,00,00
@@ -94,6 +102,10 @@ FollowSpritePalettes::
 .Sandslash: RGB 31,31,31, 23,18,00, 13,07,00, 00,00,00 
 .Zubat: RGB 31,31,31, 12,15,19, 05,08,17, 00,00,00 
 .Tonboss: RGB 31,31,31, 26,07,03, 14,27,05, 00,00,00
+.Gloom: RGB 31,31,31, 31,12,00, 08,09,13, 00,00,00 
+.Vileplume: RGB 31,31,31, 31,31,31, 30,04,01, 00,00,00
+.Paras: RGB 31,31,31, 27,19,03, 31,12,03, 00,00,00
+.Parasect: RGB 31,31,31, 31,31,31, 18,03,07, 00,00,00
 
 FollowSpritePointers::
 	follow_sprite BulbasaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;BULBASAUR
@@ -139,10 +151,10 @@ FollowSpritePointers::
 	follow_sprite ZubatSpriteGFX, PAL_FOLLOWER_ZUBAT ;ZUBAT
 	follow_sprite GolbatSpriteGFX, PAL_FOLLOWER_ZUBAT ;GOLBAT
 	follow_sprite OddishSpriteGFX, PAL_FOLLOWER_GREEN ;ODDISH
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GLOOM
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;VILEPLUME
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PARAS
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PARASECT
+	follow_sprite GloomSpriteGFX, PAL_FOLLOWER_GLOOM ;GLOOM
+	follow_sprite VileplumeSpriteGFX, PAL_FOLLOWER_VILEPLUME ;VILEPLUME
+	follow_sprite ParasSpriteGFX, PAL_FOLLOWER_PARAS ;PARAS
+	follow_sprite ParasectSpriteGFX, PAL_FOLLOWER_PARASECT ;PARASECT
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;VENONAT
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;VENOMOTH
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;DIGLETT
