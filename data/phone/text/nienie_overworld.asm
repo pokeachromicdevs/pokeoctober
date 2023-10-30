@@ -1,44 +1,45 @@
 NiechelleAskNumber1Text:
-	text "It really made me"
-	line "angry to lose."
+	text "That was fun!"
+	line "I`m NIECHELLE!"
 
-	para "I`ll have to train"
-	line "much harder…"
+	para "Do you want my"
+	line "number?"
 
-	para "Here`s my number."
-	line "I`m NIECHELLE-"
-	cont "don`t forget!"
-	
-	para "Want to battle"
-	line "me again?"
+	para "We can battle"
+	line "again sometime!"
 	done
 
 NiechelleAskNumber2Text:
-	text "I want to battle"
-	line "with you again."
-
-	para "Do you want to"
-	line "exchange numbers?"
+	text "Oh! Did you"
+	line "change your"
+	
+	para "mind about more"
+	line "battles?"
 	done
 
 NiechelleNumberAcceptedText:
-	text "I`ll remember to"
-	line "call when I want"
-	cont "to battle again!"
+	text "Wonderful! I`ll"
+	line "give you a call"
+	cont "when we`ve round-"
+	
+	para "ed our strategy"
+	line "some more!"
 	done
 
 NiechelleNumberDeclinedText:
-	text "Oh… I`m sad…"
-	line "If you do want to"
+	text "Oh no… well, come"
+	line "back if you change"
 
-	para "battle, come see"
-	line "NIECHELLE--that`s"
-	cont "me!"
+	para "your mind!… maybe"
+	line "my boyfriend is"
+	cont "free."
 	done
 
 NiechellePhoneFullText:
-	text "Oh no. Your phone"
-	line "is all filled up."
+	text "Too many numbers?"
+	line "You must be"
+
+	para "popular!"
 	done
 
 NiechelleRematchText:

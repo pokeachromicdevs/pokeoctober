@@ -271,7 +271,6 @@ SnowGroupSprites:
 BlackthornGroupSprites:
 CitrineGroupSprites:
 	def_walk_sprite
-		walk_sprite SPRITE_GRAMPS
 		walk_sprite SPRITE_YOUNGSTER
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_SUPER_NERD
@@ -279,12 +278,13 @@ CitrineGroupSprites:
 		walk_sprite SPRITE_SPORTSMAN
 		walk_sprite SPRITE_POKEFAN_M
 		walk_sprite SPRITE_CAMPER
-
+		walk_sprite SPRITE_NIENIE
+		
 	def_static_sprite
 		static_sprite SPRITE_FISHER
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_POKE_BALL
-
+		
 	end_outdoor_sprites
 
 DungeonsGroupSprites:
