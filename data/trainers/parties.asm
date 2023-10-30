@@ -5610,28 +5610,31 @@ PokefanFGroup:
 	end_party_list
 
 NiechelleGroup:
-	next_party ; LASS (19)
+	next_party ; LASS (19) NIE NIE 1
 	db "NIECHELLE@", TRAINERTYPE_NORMAL
-	db 3
+	db 5
+	dw MAREEP
+	db 6
 	dw CAMOUFLAKE
-	db 4
-	dw CAMOUFLAKE
+	db 7
+	dw JIGGLYPUFF
 	end_party
+
 	
 	next_party ; LASS (19) NIE NIE 2
 	db "NIECHELLE@", TRAINERTYPE_NORMAL
-	db 8
-	dw CAMOUFLAKE
-	db 9
-	dw CAMOUFLAKE
 	db 10
+	dw MAREEP
+	db 11
+	dw CAMOUFLAKE
+	db 12
 	dw JIGGLYPUFF
 	end_party
 
 	next_party ; LASS (19) NIE NIE 3
 	db "NIECHELLE@", TRAINERTYPE_NORMAL
 	db 18
-	dw GERMIFROST
+	dw FLAAFFY
 	db 19
 	dw GERMIFROST
 	db 20
@@ -5643,20 +5646,20 @@ NiechelleGroup:
 	next_party ; LASS (19) NIE NIE 4
 	db "NIECHELLE@", TRAINERTYPE_NORMAL
 	db 30
-	dw VEGELANCHE
+	dw AMPHAROS
 	db 32
-	dw SNOUWRBUN
+	dw VEGELANCHE
 	db 34
 	dw JIGGLYPUFF
 	db 36
-	dw SNUBBULL
+	dw GRANBULL
 	end_party
 	
 	next_party ; LASS (20) NIE NIE 5
 	db "NIECHELLE@", TRAINERTYPE_MOVES
 	db 52
-	dw VEGELANCHE
-	dw SOLARBEAM, ICE_BEAM, LEECH_SEED, EARTHQUAKE
+	dw AMPHAROS
+	dw THUNDERBOLT, ICE_PUNCH, FIRE_PUNCH, IRON_TAIL
 	db 53
 	dw SNOUWRBUN
 	dw RAZOR_LEAF, ICE_BEAM, PURSUIT, GIGA_DRAIN
@@ -5666,7 +5669,7 @@ NiechelleGroup:
 	db 55
 	dw GRANBULL
 	dw CRUNCH, HYPER_BEAM, PROTECT, SHADOW_BALL
-	db 58
+	db 56
 	dw JIGGLYPUFF ; SAKURAQUA
 	dw SOLARBEAM, SWEET_KISS, BUBBLEBEAM, PETAL_DANCE
 	end_party

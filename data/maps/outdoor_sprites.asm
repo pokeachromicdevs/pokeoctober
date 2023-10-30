@@ -196,7 +196,7 @@ EcruteakGroupSprites:
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_OFFICER
 		walk_sprite SPRITE_YOUNGSTER
-		walk_sprite SPRITE_COOLTRAINER_M
+		walk_sprite SPRITE_NIENIE
 		walk_sprite SPRITE_COOLTRAINER_F
 		walk_sprite SPRITE_SAGE
 		walk_sprite SPRITE_FLEDGLING
@@ -271,6 +271,7 @@ SnowGroupSprites:
 BlackthornGroupSprites:
 CitrineGroupSprites:
 	def_walk_sprite
+		walk_sprite SPRITE_GRAMPS
 		walk_sprite SPRITE_YOUNGSTER
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_SUPER_NERD
@@ -278,12 +279,33 @@ CitrineGroupSprites:
 		walk_sprite SPRITE_SPORTSMAN
 		walk_sprite SPRITE_POKEFAN_M
 		walk_sprite SPRITE_CAMPER
-		walk_sprite SPRITE_NIENIE
 		
 	def_static_sprite
 		static_sprite SPRITE_FISHER
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_POKE_BALL
+		
+	end_outdoor_sprites
+	
+ZenGardenSprites:
+	def_walk_sprite
+		walk_sprite SPRITE_FISHER
+		walk_sprite SPRITE_NIENIE
+		walk_sprite SPRITE_OFFICER
+		walk_sprite SPRITE_YOUNGSTER
+		walk_sprite SPRITE_SAILOR
+		walk_sprite SPRITE_COOLTRAINER_F
+		walk_sprite SPRITE_SAGE
+		walk_sprite SPRITE_FLEDGLING
+
+	def_static_sprite
+		static_sprite SPRITE_POKE_BALL
+		static_sprite SPRITE_FRUIT_TREE
+		static_sprite SPRITE_GYM_GUY
+		static_sprite SPRITE_GRANNY
+		static_sprite SPRITE_SAGE
+		static_sprite SPRITE_MYSTIC
+		static_sprite SPRITE_BUG_CATCHER
 		
 	end_outdoor_sprites
 

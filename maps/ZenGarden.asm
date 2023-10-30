@@ -2,6 +2,165 @@ ZenGarden_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+TrainerLassNiechelle:
+	trainer LASSNIENIE, NIECHELLE, EVENT_BEAT_LASS_NIECHELLE, LassNiechelleSeenText, LassNiechelleBeatenText, 0, .Script
+
+.Script:
+	loadvar VAR_CALLERID, PHONE_LASS_NIECHELLE
+	opentext
+	checkflag ENGINE_NIECHELLE
+	iftrue .WantsBattle
+	checkcellnum PHONE_LASS_NIECHELLE
+	iftrue Route46NumberAcceptedF
+	checkevent EVENT_NIECHELLE_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext LassNiechelleAfterBattleText
+	buttonsound
+	setevent EVENT_NIECHELLE_ASKED_FOR_PHONE_NUMBER
+	scall Route46AskNumber1F
+	sjump .AskForNumber
+
+.AskedAlready:
+	scall Route46AskNumber2F
+.AskForNumber:
+	askforphonenumber PHONE_LASS_NIECHELLE
+	ifequal PHONE_CONTACTS_FULL, Route46PhoneFullF
+	ifequal PHONE_CONTACT_REFUSED, Route46NumberDeclinedF
+	gettrainername STRING_BUFFER_3, LASSNIENIE, NIECHELLE
+	scall Route46RegisteredNumberF
+	sjump Route46NumberAcceptedF
+
+.WantsBattle:
+	scall Route46RematchF
+	winlosstext LassNiechelleBeatenText, 0
+	readmem wNiechelleFightCount
+	ifequal 3, .Fight3
+	ifequal 2, .Fight2
+	ifequal 1, .Fight1
+	ifequal 0, .LoadFight0
+.Fight3:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight3
+.Fight2:
+	checkevent EVENT_BEAT_JASMINE; EVENT_BEAT_JASMINE
+	iftrue .LoadFight2
+.Fight1:
+	checkevent EVENT_BEAT_BUGSY
+	iftrue .LoadFight1
+.LoadFight0:
+	loadtrainer LASSNIENIE, NIECHELLE2
+	startbattle
+	reloadmapafterbattle
+	loadmem wNiechelleFightCount, 1
+	clearflag ENGINE_NIECHELLE
+	end
+
+.LoadFight1:
+	loadtrainer LASSNIENIE, NIECHELLE3
+	startbattle
+	reloadmapafterbattle
+	loadmem wNiechelleFightCount, 2
+	clearflag ENGINE_NIECHELLE
+	end
+	
+.LoadFight2:
+	loadtrainer LASSNIENIE, NIECHELLE4
+	startbattle
+	reloadmapafterbattle
+	loadmem wNiechelleFightCount, 3
+	clearflag ENGINE_NIECHELLE
+	end
+
+.LoadFight3:
+	loadtrainer LASSNIENIE, NIECHELLE5
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_NIECHELLE
+	checkevent EVENT_NIECHELLE_CALCIUM
+	iftrue .HasCalcium
+	checkevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
+	iftrue .GotCalciumAlready
+	scall Route46RematchGiftF
+	verbosegiveitem POKE_DOLL
+	iffalse NiechelleNoRoomForCalcium
+	setevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
+	sjump Route46NumberAcceptedF
+
+.GotCalciumAlready:
+	end
+
+.HasCalcium:
+	opentext
+	writetext LassNiechelle2BeatenText
+	waitbutton
+	verbosegiveitem POKE_DOLL
+	iffalse NiechelleNoRoomForCalcium
+	clearevent EVENT_NIECHELLE_CALCIUM
+	setevent EVENT_GOT_CALCIUM_FROM_NIECHELLE
+	sjump Route46NumberAcceptedF
+
+Route46AskNumber1F:
+	jumpstd asknumber1f
+	end
+
+Route46AskNumber2F:
+	jumpstd asknumber2f
+	end
+
+Route46RegisteredNumberF:
+	jumpstd registerednumberf
+	end
+
+Route46NumberAcceptedF:
+	jumpstd numberacceptedf
+	end
+
+Route46NumberDeclinedF:
+	jumpstd numberdeclinedf
+	end
+
+Route46PhoneFullF:
+	jumpstd phonefullf
+	end
+
+Route46RematchF:
+	jumpstd rematchf
+	end
+
+NiechelleNoRoomForCalcium:
+	setevent EVENT_NIECHELLE_CALCIUM
+	jumpstd packfullf
+	end
+
+Route46RematchGiftF:
+	jumpstd rematchgiftf
+	end
+	
+LassNiechelleSeenText:
+	text "Eek! Are you here"
+	line "to gawk at my"
+	cont "snowballs, too?"
+	done
+
+LassNiechelleBeatenText:
+	text "I guess not…"
+	done
+
+LassNiechelleAfterBattleText:
+	text "My CAMOUFLAKE"
+	line "sure are cute,"
+	cont "aren`t they?"
+	
+	para "We even like to"
+	line "play in the snow"
+	cont "together!"
+	done
+
+LassNiechelle2BeatenText:
+	text "Oh no! My"
+	line "adorable orbs!"
+	done
 
 ZenGardenMediumScript:
 	jumptextfaceplayer .Txt
@@ -192,7 +351,7 @@ ZenGarden_MapEvents:
 	db 1 ; bg events
 	bg_event 22,  6, BGEVENT_READ, SakuraShrineSign
 
-	db 8 ; object events
+	db 9 ; object events
 	object_event 21,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenMediumScript, -1
 	object_event 21, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ZenGardenSageScript, -1
 	object_event 29, 11, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZenGardenGrampsScript, -1
@@ -201,3 +360,4 @@ ZenGarden_MapEvents:
 	object_event  7,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageChen, -1
 	object_event  9, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSageMonty, -1
 	object_event 35, 13, SPRITE_MYSTIC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 1, TrainerMysticSonia, -1
+	object_event 29,  6, SPRITE_NIENIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerLassNiechelle, -1
