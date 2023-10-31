@@ -73,6 +73,8 @@ FollowSpritePalettes::
 	dw    .Paras
 	const PAL_FOLLOWER_PARASECT
 	dw    .Parasect
+	const PAL_FOLLOWER_OREFRY
+	dw    .Orefry
 	
 .Red:      RGB 31,31,31, 31,19,10, 31,07,01, 00,00,00
 .Blue:     RGB 31,31,31, 31,19,10, 10,09,31, 00,00,00
@@ -106,6 +108,7 @@ FollowSpritePalettes::
 .Vileplume: RGB 31,31,31, 31,31,31, 30,04,01, 00,00,00
 .Paras: RGB 31,31,31, 27,19,03, 31,12,03, 00,00,00
 .Parasect: RGB 31,31,31, 31,31,31, 18,03,07, 00,00,00
+.Orefry: RGB 31,31,31, 31,31,31, 31,12,03, 00,00,00
 
 FollowSpritePointers::
 	follow_sprite BulbasaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;BULBASAUR
@@ -225,8 +228,8 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;KANGASKHAN
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;HORSEA
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;SEADRA
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GOLDEEN
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;SEAKING
+	follow_sprite GoldeenSpriteGFX, PAL_FOLLOWER_OREFRY ;GOLDEEN
+	follow_sprite SeakingSpriteGFX, PAL_FOLLOWER_OREFRY ;SEAKING
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;STARYU
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;STARMIE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MR__MIME
@@ -384,7 +387,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;WORFURS
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;WEARLYCAN
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;DODAERIE
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PARASPOR
+	follow_sprite ParasporSpriteGFX, PAL_FOLLOWER_RED ;PARASPOR
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MOLAMBINO
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;KIWACKI
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;SILKANE
@@ -395,7 +398,7 @@ FollowSpritePointers::
 	follow_sprite KotoraSpriteGFX, PAL_FOLLOWER_KOTORA ;RAITORA
 	follow_sprite KotoraSpriteGFX, PAL_FOLLOWER_KOTORA ;GOROTORA
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_SILVER ;KOALYPTUS
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;OREFRY
+	follow_sprite OrefrySpriteGFX, PAL_FOLLOWER_OREFRY ;OREFRY
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;BALLERINE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;FENNECURSE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;ORIJOEY

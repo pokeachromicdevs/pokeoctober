@@ -207,6 +207,12 @@ GloomSpriteGFX::               INCBIN "gfx/sprites/pokemon/gloom.2bpp"
 VileplumeSpriteGFX::           INCBIN "gfx/sprites/pokemon/vileplume.2bpp"
 ParasSpriteGFX::               INCBIN "gfx/sprites/pokemon/paras.2bpp"
 ParasectSpriteGFX::            INCBIN "gfx/sprites/pokemon/parasect.2bpp"
+ParasporSpriteGFX::            INCBIN "gfx/sprites/pokemon/paraspor.2bpp"
+OrefrySpriteGFX::              INCBIN "gfx/sprites/pokemon/orefry.2bpp"
+GoldeenSpriteGFX::             INCBIN "gfx/sprites/pokemon/goldeen.2bpp"
+SeakingSpriteGFX::             INCBIN "gfx/sprites/pokemon/seaking.2bpp"
+
+
 
 
 

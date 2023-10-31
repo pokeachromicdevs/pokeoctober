@@ -138,23 +138,30 @@ Route46RematchGiftF:
 	end
 	
 LassNiechelleSeenText:
-	text "Eek! Are you here"
-	line "to gawk at my"
-	cont "snowballs, too?"
+	text "Ah<...>"
+	
+	para "My boyfriend"
+	line "would love this"
+	cont "garden<...>"
 	done
 
 LassNiechelleBeatenText:
-	text "I guess not…"
+	text "It gives me so"
+	line "much joy<...>"
 	done
 
 LassNiechelleAfterBattleText:
-	text "My CAMOUFLAKE"
-	line "sure are cute,"
-	cont "aren`t they?"
+	text "I often come"
+	line "here to feel"
+	cont "peace."
 	
-	para "We even like to"
-	line "play in the snow"
-	cont "together!"
+	para "I want to take"
+	line "my boyfriend Gabe"
+	cont "here one day, but"
+	
+	para "he lives in KANTO."
+	line "We`re planning a"
+	cont "visit soon."
 	done
 
 LassNiechelle2BeatenText:

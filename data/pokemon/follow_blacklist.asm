@@ -63,8 +63,6 @@ CantFollowList:
 	dw KANGASKHAN
 	dw HORSEA
 	dw SEADRA
-	dw GOLDEEN
-	dw SEAKING
 	dw STARYU
 	dw STARMIE
 	dw MR__MIME
@@ -200,14 +198,12 @@ CantFollowList:
 	dw WORFURS
 	dw WEARLYCAN
 	dw DODAERIE ; done but TODO: doduo & dodrio
-	dw PARASPOR ; done but TODO: paras & parasect
 	dw MOLAMBINO
 	dw KIWACKI
 	dw SILKANE
 	dw MORPHOBIA
 	dw TERRACHNID
 	dw KOALYPTUS
-	dw OREFRY ; done but TODO: goldeen & seaking
 	dw BALLERINE
 	dw FENNECURSE
 	dw ORIJOEY
