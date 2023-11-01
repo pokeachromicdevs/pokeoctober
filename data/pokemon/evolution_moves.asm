@@ -20,7 +20,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; RATTATA
 	dw SCARY_FACE   ; RATICATE
 	dw NO_MOVE      ; SPEAROW
-	dw NO_MOVE      ; FEAROW
+	dw TWISTER      ; FEAROW
 	dw NO_MOVE      ; EKANS
 	dw CRUNCH       ; ARBOK
 	dw NO_MOVE      ; PIKACHU
