@@ -1,10 +1,6 @@
 CantFollowList:
 ; these pokemon can't follow because its sprites haven't been created yet
 ; because if we waited any longer we'll NEVER get this thing out
-	dw VENONAT
-	dw VENOMOTH
-	dw DIGLETT
-	dw DUGTRIO
 	dw PSYDUCK
 	dw GOLDUCK
 	dw MANKEY
@@ -32,8 +28,6 @@ CantFollowList:
 	dw SLOWBRO
 	dw MAGNEMITE
 	dw MAGNETON
-	dw DODUO
-	dw DODRIO
 	dw SEEL
 	dw DEWGONG
 	dw SHELLDER
@@ -197,7 +191,6 @@ CantFollowList:
 	dw CAMOUFLAKE
 	dw WORFURS
 	dw WEARLYCAN
-	dw DODAERIE ; done but TODO: doduo & dodrio
 	dw MOLAMBINO
 	dw KIWACKI
 	dw SILKANE

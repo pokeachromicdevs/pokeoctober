@@ -211,6 +211,13 @@ ParasporSpriteGFX::            INCBIN "gfx/sprites/pokemon/paraspor.2bpp"
 OrefrySpriteGFX::              INCBIN "gfx/sprites/pokemon/orefry.2bpp"
 GoldeenSpriteGFX::             INCBIN "gfx/sprites/pokemon/goldeen.2bpp"
 SeakingSpriteGFX::             INCBIN "gfx/sprites/pokemon/seaking.2bpp"
+DodaerieSpriteGFX::            INCBIN "gfx/sprites/pokemon/dodaerie.2bpp"
+DoduoSpriteGFX::               INCBIN "gfx/sprites/pokemon/doduo.2bpp"
+DodrioSpriteGFX::              INCBIN "gfx/sprites/pokemon/dodrio.2bpp"
+VenonatSpriteGFX::             INCBIN "gfx/sprites/pokemon/venonat.2bpp"
+VenomothSpriteGFX::            INCBIN "gfx/sprites/pokemon/venomoth.2bpp"
+DiglettSpriteGFX::             INCBIN "gfx/sprites/pokemon/diglett.2bpp"
+DugtrioSpriteGFX::             INCBIN "gfx/sprites/pokemon/dugtrio.2bpp"
 
 
 
