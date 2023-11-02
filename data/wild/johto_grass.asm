@@ -1355,19 +1355,19 @@ JohtoGrassWildMons:
 	map_id ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, PIDGEY
-	dbw 2, RATTATA
+	dbw 2, SUNKERN
+	dbw 2, SUNKERN
 	dbw 3, SENTRET
-	dbw 3, PUPPERON
+	dbw 3, SENTRET
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
 	; day
-	dbw 2, PIDGEY
-	dbw 2, SENTRET
-	dbw 3, PIDGEY
-	dbw 3, VULPIII
 	dbw 2, RATTATA
+	dbw 2, RATTATA
+	dbw 3, SENTRET
+	dbw 3, SENTRET
+	dbw 2, PIDGEY
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
 	; nite
@@ -1384,19 +1384,19 @@ JohtoGrassWildMons:
 	; morn
 	dbw 4, CATERPIE
 	dbw 4, PIDGEY
-	dbw 5, WOOPER
-	dbw 4, PIDGEY
+	dbw 5, PIDGEY
 	dbw 4, WEEDLE
-	dbw 5, SUNKERN
+	dbw 4, WOOPER
+	dbw 5, WOOPER
 	dbw 5, HOPPIP
 	; day
-	dbw 4, HOPPIP
 	dbw 4, CATERPIE
-	dbw 5, SUNKERN
-	dbw 4, COINPUR
+	dbw 4, PIDGEY
+	dbw 5, PIDGEY
 	dbw 4, WEEDLE
-	dbw 5, WOOPER
-	dbw 5, HOPPIP
+	dbw 4, MARILL
+	dbw 5, MARILL
+	dbw 5, BURGELA
 	; nite
 	dbw 4, SPINARAK
 	dbw 4, HOOTHOOT
@@ -1465,7 +1465,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 7, SNUBBULL
 	dbw 8, RATTATA
-	dbw 10, BELLSPROUT
+	dbw 10, MAREEP
 	dbw 9, MAREEP
 	dbw 10, PIDGEY
 	dbw 10, HOPPIP
@@ -1473,9 +1473,9 @@ JohtoGrassWildMons:
 	; day
 	dbw 7, SNUBBULL
 	dbw 8, EKANS
-	dbw 10, BELLSPROUT
+	dbw 10, KOTORA
 	dbw 9, KOTORA
-	dbw 10, RATTATA
+	dbw 10, SNUBBULL
 	dbw 10, KOTORA
 	dbw 10, HOPPIP
 	; nite
@@ -1490,29 +1490,29 @@ JohtoGrassWildMons:
 	map_id DREAD_WOODS
 	db 14 percent, 14 percent, 14 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 6, MANKEY
-	dbw 7, ODDISH
-	dbw 9, BELLSPROUT
-	dbw 8, PARASPOR
-	dbw 9, AGGROSWINE
-	dbw 9, MURKROW
-	dbw 9, MISDREAVUS
-	; day
-	dbw 6, MANKEY
-	dbw 7, AGGROSWINE
-	dbw 9, ODDISH
-	dbw 8, VENONAT
+	dbw 7, MANKEY
+	dbw 8, ODDISH
+	dbw 10, BELLSPROUT
 	dbw 9, PARASPOR
-	dbw 9, MURKROW
-	dbw 9, MISDREAVUS
+	dbw 10, AGGROSWINE
+	dbw 10, MURKROW
+	dbw 10, MISDREAVUS
+	; day
+	dbw 7, MANKEY
+	dbw 8, AGGROSWINE
+	dbw 10, ODDISH
+	dbw 9, VENONAT
+	dbw 10, PARASPOR
+	dbw 10, MURKROW
+	dbw 10, MISDREAVUS
 	; nite
-	dbw 6, MANKEY
-	dbw 7, HOOTHOOT
-	dbw 9, ODDISH
-	dbw 8, VENONAT
-	dbw 9, AGGROSWINE
-	dbw 9, MURKROW
-	dbw 9, MISDREAVUS
+	dbw 7, MANKEY
+	dbw 9, HOOTHOOT
+	dbw 10, ODDISH
+	dbw 9, VENONAT
+	dbw 10, AGGROSWINE
+	dbw 10, MURKROW
+	dbw 10, MISDREAVUS
 
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1573,19 +1573,19 @@ JohtoGrassWildMons:
 	; morn
 	dbw 12, SNUBBULL
 	dbw 14, PIDGEY
-	dbw 13, GROWLITHE
+	dbw 13, PUPPERON
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 12, YANMA
+	dbw 12, TONBOSS
 	; day
 	dbw 12, SNUBBULL
 	dbw 14, PIDGEY
-	dbw 13, GROWLITHE
+	dbw 13, VULPIII
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 12, YANMA
+	dbw 12, TONBOSS
 	; nite
 	dbw 12, DROWZEE
 	dbw 14, HOOTHOOT
@@ -1593,7 +1593,7 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 12, YANMA
+	dbw 12, TONBOSS
 
 	map_id ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1628,15 +1628,15 @@ JohtoGrassWildMons:
 	dbw 13, LEDYBA
 	dbw 14, GROWLITHE
 	dbw 15, PIDGEY
-	dbw 16, GROWLITHE
+	dbw 16, PUPPERON
 	dbw 15, PIDGEOTTO
-	dbw 15, VULPIX
+	dbw 15, VULPIII
 	dbw 18, LEDIAN
 	; day
 	dbw 13, PIDGEY
-	dbw 14, GROWLITHE
-	dbw 15, VULPIX
-	dbw 16, GROWLITHE
+	dbw 14, PUPPERON
+	dbw 15, VULPIII
+	dbw 16, PUPPERON
 	dbw 15, PIDGEOTTO
 	dbw 15, PIDGEY
 	dbw 15, PIDGEY
@@ -1646,7 +1646,7 @@ JohtoGrassWildMons:
 	dbw 15, HOOTHOOT
 	dbw 16, STANTLER
 	dbw 15, NOCTOWL
-	dbw 15, VULPIX
+	dbw 15, VULPIII
 	dbw 15, ARIADOS
 
 	map_id ROUTE_38
@@ -1868,15 +1868,15 @@ JohtoGrassWildMons:
 	map_id SILENT_HILLS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, PIDGEY;PIDGEY
-	dbw 3, BURGELA;BURGELA
+	dbw 3, PIDGEY
+	dbw 3, BURGELA
 	dbw 4, YANMA
 	dbw 3, CLEFLING
 	dbw 3, LEDYBA
 	dbw 4, FARFETCH_D
 	dbw 4, FARFETCH_D
 
-	dbw 3, PIDGEY;SAME AS ABOVE
+	dbw 3, PIDGEY
 	dbw 3, BELLSPROUT
 	dbw 4, YANMA
 	dbw 3, CLEFLING
@@ -1895,28 +1895,28 @@ JohtoGrassWildMons:
 	map_id ZEN_GARDEN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, PIDGEY
-	dbw 2, NATU
-	dbw 2, RATTATA
+	dbw 5, PIDGEY
 	dbw 4, NATU
-	dbw 2, SUNKERN
-	dbw 4, PIDGEY
 	dbw 4, RATTATA
-	; day
-	dbw 3, PIDGEY
-	dbw 2, NATU
-	dbw 2, RATTATA
-	dbw 4, PIDGEY
-	dbw 2, SUNKERN
-	dbw 4, NATU
+	dbw 6, NATU
 	dbw 4, SUNKERN
+	dbw 6, PIDGEY
+	dbw 6, RATTATA
+	; day
+	dbw 5, PIDGEY
+	dbw 4, NATU
+	dbw 4, RATTATA
+	dbw 6, PIDGEY
+	dbw 4, SUNKERN
+	dbw 6, NATU
+	dbw 6, SUNKERN
 	; nite
-	dbw 3, HOOTHOOT
-	dbw 2, BIPULLA
-	dbw 2, HOOTHOOT
-	dbw 4, DROWZEE
-	dbw 2, DROWZEE
+	dbw 5, HOOTHOOT
 	dbw 4, BIPULLA
-	dbw 4, ODDISH
+	dbw 4, HOOTHOOT
+	dbw 6, DROWZEE
+	dbw 4, DROWZEE
+	dbw 6, BIPULLA
+	dbw 6, ODDISH
 
 	db -1 ; end
