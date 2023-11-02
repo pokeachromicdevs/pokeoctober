@@ -1,10 +1,6 @@
 CantFollowList:
 ; these pokemon can't follow because its sprites haven't been created yet
 ; because if we waited any longer we'll NEVER get this thing out
-	dw PSYDUCK
-	dw GOLDUCK
-	dw MANKEY
-	dw PRIMEAPE
 	dw GROWLITHE
 	dw ARCANINE
 	dw POLIWAG

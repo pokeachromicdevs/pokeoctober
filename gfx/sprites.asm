@@ -218,8 +218,10 @@ VenonatSpriteGFX::             INCBIN "gfx/sprites/pokemon/venonat.2bpp"
 VenomothSpriteGFX::            INCBIN "gfx/sprites/pokemon/venomoth.2bpp"
 DiglettSpriteGFX::             INCBIN "gfx/sprites/pokemon/diglett.2bpp"
 DugtrioSpriteGFX::             INCBIN "gfx/sprites/pokemon/dugtrio.2bpp"
-
-
+PsyduckSpriteGFX::             INCBIN "gfx/sprites/pokemon/psyduck.2bpp"
+GolduckSpriteGFX::             INCBIN "gfx/sprites/pokemon/golduck.2bpp"
+MankeySpriteGFX::              INCBIN "gfx/sprites/pokemon/mankey.2bpp"
+PrimeapeSpriteGFX::            INCBIN "gfx/sprites/pokemon/primeape.2bpp"
 
 
 

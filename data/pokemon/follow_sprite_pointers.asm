@@ -79,8 +79,10 @@ FollowSpritePalettes::
 	dw    .Venonat
 	const PAL_FOLLOWER_DIGLETT ; also used for Dugtrio
 	dw    .Diglett
-	const PAL_FOLLOWER_MEOWTH ; also used for Coinpur and Persian
+	const PAL_FOLLOWER_MEOWTH ; also used for Coinpur, Persian, Mankey line
 	dw    .Meowth
+	const PAL_FOLLOWER_PSYDUCK
+	dw    .Psyduck
 	
 .Red:      RGB 31,31,31, 31,19,10, 31,07,01, 00,00,00
 .Blue:     RGB 31,31,31, 31,19,10, 10,09,31, 00,00,00
@@ -118,6 +120,7 @@ FollowSpritePalettes::
 .Venonat: RGB 31,31,31, 30,04,01, 21,15,23, 00,00,00
 .Diglett: RGB 31,31,31, 15,10,03, 31,07,01, 00,00,00
 .Meowth: RGB 31,31,31, 31,28,10, 12,09,04, 00,00,00
+.Psyduck: RGB 31,31,31, 31,31,31, 31,28,10, 00,00,00
 
 FollowSpritePointers::
 	follow_sprite BulbasaurSpriteGFX, PAL_FOLLOWER_BULBASAUR ;BULBASAUR
@@ -173,10 +176,10 @@ FollowSpritePointers::
 	follow_sprite DugtrioSpriteGFX, PAL_FOLLOWER_DIGLETT ;DUGTRIO
 	follow_sprite MeowthSpriteGFX, PAL_FOLLOWER_MEOWTH ;MEOWTH
 	follow_sprite PersianSpriteGFX, PAL_FOLLOWER_MEOWTH ;PERSIAN
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PSYDUCK
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GOLDUCK
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MANKEY
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PRIMEAPE
+	follow_sprite PsyduckSpriteGFX, PAL_FOLLOWER_PSYDUCK ;PSYDUCK
+	follow_sprite GolduckSpriteGFX, PAL_FOLLOWER_BLUE ;GOLDUCK
+	follow_sprite MankeySpriteGFX, PAL_FOLLOWER_MEOWTH ;MANKEY
+	follow_sprite PrimeapeSpriteGFX, PAL_FOLLOWER_MEOWTH ;PRIMEAPE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GROWLITHE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ARCANINE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;POLIWAG
