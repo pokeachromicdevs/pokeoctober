@@ -1427,7 +1427,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 4, SPINARAK
 	dbw 4, POLIWAG
-	dbw 5, BELLSPROUT
+	dbw 5, MOIBELLE
 	dbw 5, HOOTHOOT
 	dbw 4, ZUBAT
 	dbw 5, GASTLY
@@ -1577,7 +1577,7 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 12, TONBOSS
+	dbw 12, YANMA
 	; day
 	dbw 12, SNUBBULL
 	dbw 14, PIDGEY
@@ -1585,7 +1585,7 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 12, TONBOSS
+	dbw 12, YANMA
 	; nite
 	dbw 12, DROWZEE
 	dbw 14, HOOTHOOT
@@ -1593,34 +1593,34 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 12, TONBOSS
+	dbw 12, YANMA
 
 	map_id ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 5, LEDYBA
-	dbw 5, YANMA
-	dbw 6, BELLSPROUT
-	dbw 6, PUPPERON
-	dbw 6, VULPIII
-	dbw 7, PIDGEY
-	dbw 7, PIDGEY
+	dbw 7, LEDYBA
+	dbw 7, YANMA
+	dbw 8, BELLSPROUT
+	dbw 8, PUPPERON
+	dbw 8, VULPIII
+	dbw 9, PIDGEY
+	dbw 9, PIDGEY
 	; day
-	dbw 5, YANMA
-	dbw 5, VULPIII
-	dbw 6, BELLSPROUT
-	dbw 6, PUPPERON
-	dbw 6, VULPIII
-	dbw 7, PIDGEY
-	dbw 7, PIDGEY
+	dbw 7, YANMA
+	dbw 7, VULPIII
+	dbw 8, BELLSPROUT
+	dbw 8, PUPPERON
+	dbw 8, VULPIII
+	dbw 9, PIDGEY
+	dbw 9, PIDGEY
 	; nite
-	dbw 5, SPINARAK
-	dbw 5, HOOTHOOT
-	dbw 6, MOIBELLE
-	dbw 6, HOOTHOOT
-	dbw 6, HOOTHOOT
-	dbw 7, GASTLY
-	dbw 7, GASTLY
+	dbw 7, SPINARAK
+	dbw 7, HOOTHOOT
+	dbw 8, MOIBELLE
+	dbw 8, HOOTHOOT
+	dbw 8, HOOTHOOT
+	dbw 9, GASTLY
+	dbw 9, GASTLY
 
 	map_id ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1878,19 +1878,19 @@ JohtoGrassWildMons:
 
 	dbw 3, PIDGEY
 	dbw 3, BELLSPROUT
-	dbw 4, YANMA
-	dbw 3, CLEFLING
-	dbw 3, FARFETCH_D
 	dbw 4, LEDYBA
+	dbw 3, CLEFLING
+	dbw 3, YANMA
+	dbw 4, FARFETCH_D
 	dbw 4, FARFETCH_D
 	; nite
 	dbw 3, ODDISH
-	dbw 3, MOIBELLE
+	dbw 3, HOOTHOOT
 	dbw 4, VENONAT
-	dbw 3, PARASPOR
 	dbw 3, SPINARAK
+	dbw 3, PARASPOR
 	dbw 4, MOIBELLE
-	dbw 4, PARASPOR
+	dbw 4, MOIBELLE
 
 	map_id ZEN_GARDEN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
