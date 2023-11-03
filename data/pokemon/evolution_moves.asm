@@ -34,13 +34,13 @@ EvolutionMoves::
 	dw NO_MOVE      ; NIDORINO
 	dw THRASH       ; NIDOKING
 	dw NO_MOVE      ; CLEFAIRY
-	dw METRONOME    ; CLEFABLE
+	dw NO_MOVE      ; CLEFABLE
 	dw NO_MOVE      ; VULPIX
-	dw NO_MOVE      ; NINETALES, Synchronoise
+	dw NO_MOVE      ; NINETALES, SYNCHRONIZE
 	dw NO_MOVE      ; JIGGLYPUFF
 	dw PERISH_SONG  ; WIGGLYTUFF
 	dw NO_MOVE      ; ZUBAT
-	dw CRUNCH       ; GOLBAT
+	dw MEAN_LOOK    ; GOLBAT
 	dw NO_MOVE      ; ODDISH
 	dw NO_MOVE      ; GLOOM
 	dw SLUDGE_BOMB  ; VILEPLUME
@@ -168,7 +168,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; LEDIAN
 	dw NO_MOVE      ; SPINARAK
 	dw SWORDS_DANCE ; ARIADOS
-	dw NO_MOVE      ; CROBAT
+	dw EXTREMESPEED ; CROBAT
 	dw NO_MOVE      ; YANMA
 	dw NO_MOVE      ; TONBOSS
 	dw LOVELY_KISS  ; BELLIGNAN
@@ -185,7 +185,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; MAREEP
 	dw NO_MOVE      ; FLAAFFY
 	dw THUNDERPUNCH ; AMPHAROS
-	dw NO_MOVE      ; BELLOSSOM
+	dw SWORDS_DANCE ; BELLOSSOM
 	dw NO_MOVE      ; MARILL
 	dw NO_MOVE      ; AZUMARILL
 	dw NO_MOVE      ; SUDOWOODO

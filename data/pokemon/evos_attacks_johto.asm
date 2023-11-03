@@ -418,16 +418,18 @@ AriadosEvosAttacks:
 
 CrobatEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, SCREECH
 	dbw 1, LEECH_LIFE
 	dbw 1, SUPERSONIC
-	dbw 1, HAZE
-	dbw 6, SUPERSONIC
-	dbw 12, BITE
-	dbw 19, CONFUSE_RAY
-	dbw 30, WING_ATTACK
-	dbw 42, MEAN_LOOK
-	dbw 55, FLY
+	dbw 6, POISON_STING
+	dbw 11, BITE
+	dbw 17, WING_ATTACK
+	dbw 22, CONFUSE_RAY
+	dbw 30, TACKLE ; TOXIC_LEECH
+	dbw 35, SCREECH
+	dbw 41, CRUNCH
+	dbw 46, FLY
+	dbw 52, HAZE
+	dbw 57, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
@@ -521,20 +523,33 @@ CleffaEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
 	db 0 ; no more evolutions
 	dbw 1, POUND
-	dbw 1, CHARM
-	dbw 4, ENCORE
-	dbw 8, SING
-	dbw 13, SWEET_KISS
+	dbw 1, GROWL
+	dbw 5, ENCORE
+	dbw 11, DOUBLESLAP
+	dbw 18, METRONOME
+	dbw 23, SWIFT
+	dbw 29, SWEET_KISS
+	dbw 36, MINIMIZE
+	dbw 42, DIZZY_PUNCH
+	dbw 48, MOONLIGHT
+	dbw 55, TACKLE ; STAR_FREEZE
 	db 0 ; no more level-up moves
 
 IgglybuffEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, JIGGLYPUFF
 	db 0 ; no more evolutions
-	dbw 1, SING
-	dbw 1, CHARM
-	dbw 4, DEFENSE_CURL
-	dbw 9, POUND
-	dbw 14, SWEET_KISS
+	dbw 1, POUND
+	dbw 4, SING
+	dbw 1, DEFENSE_CURL
+	dbw 6, DOUBLESLAP
+	dbw 11, DISABLE
+	dbw 18, ROLLOUT
+	dbw 24, MEGAPHONE
+	dbw 30, BODY_SLAM
+	dbw 36, CHARM
+	dbw 42, REST
+	dbw 48, WHIRLWIND
+	dbw 54, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TogepiEvosAttacks:
@@ -571,7 +586,7 @@ NatuEvosAttacks:
 	dbw 25, PSYBEAM
 	dbw 30, PURSUIT
 	dbw 40, CONFUSE_RAY
-	dbw 45, WING_ATTACK ; put Synchronoise in this slot for final
+	dbw 45, TACKLE ; SYNCHRONIZE
 	dbw 48, DRILL_PECK
 	dbw 56, PSYCHIC_M
 	db 0 ; no more level-up moves
@@ -589,7 +604,7 @@ KatuEvosAttacks:
 	dbw 30, PSYBEAM
 	dbw 35, PURSUIT
 	dbw 45, CONFUSE_RAY
-	dbw 50, WING_ATTACK ; put Synchronoise in this slot for final
+	dbw 50, TACKLE ; SYNCHRONIZE
 	dbw 53, DRILL_PECK
 	dbw 61, PSYCHIC_M
 	db 0 ; no more level-up moves
@@ -606,7 +621,7 @@ XatuEvosAttacks:
 	dbw 35, PSYBEAM
 	dbw 40, PURSUIT
 	dbw 50, CONFUSE_RAY
-	dbw 55, WING_ATTACK ; put Synchronoise in this slot for final
+	dbw 55, TACKLE ; SYNCHRONIZE
 	dbw 58, DRILL_PECK
 	dbw 66, PSYCHIC_M
 	db 0 ; no more level-up moves
@@ -653,10 +668,18 @@ AmpharosEvosAttacks:
 BellossomEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
-	dbw 1, SWEET_SCENT
 	dbw 1, STUN_SPORE
-	dbw 1, PETAL_DANCE
-	dbw 55, SOLARBEAM
+	dbw 5, LEECH_SEED
+	dbw 10, POISONPOWDER
+	dbw 13, ACID
+	dbw 18, SLEEP_POWDER
+	dbw 25, MEGA_DRAIN
+	dbw 28, CHARM
+	dbw 33, GIGA_DRAIN
+	dbw 38, TOXIC
+	dbw 41, BODY_SLAM
+	dbw 46, MOONLIGHT
+	dbw 52, PETAL_DANCE
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
@@ -1152,9 +1175,11 @@ HeracrossEvosAttacks:
 	dbw 6, HORN_ATTACK
 	dbw 12, ENDURE
 	dbw 19, FURY_ATTACK
-	dbw 27, COUNTER
-	dbw 35, TAKE_DOWN
-	dbw 44, REVERSAL
+	dbw 26, COUNTER
+	dbw 31, TAKE_DOWN
+	dbw 37, LOW_KICK
+	dbw 44, CROSS_CUTTER
+	dbw 49, SUBMISSION
 	dbw 54, MEGAHORN
 	db 0 ; no more level-up moves
 

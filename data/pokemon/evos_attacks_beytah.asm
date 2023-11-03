@@ -306,15 +306,16 @@ BurgelaEvosAttacks:
 VupiiiEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, VULPIX
 	db 0 ; no more evolutions
+	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
 	dbw 6, QUICK_ATTACK
 	dbw 11, TEMPT
 	dbw 17, SPITE
 	dbw 22, FIRE_SPIN
-	dbw 28, CONFUSION
-	dbw 33, FLAMETHROWER
-	dbw 39, FAINT_ATTACK
+	dbw 28, FAINT_ATTACK
+	dbw 33, TACKLE ; MAGMA_RING
+	dbw 39, WILL_O_WISP
 	dbw 44, CONFUSE_RAY
 	dbw 50, FIRE_BLAST
 	dbw 55, PSYCHIC
