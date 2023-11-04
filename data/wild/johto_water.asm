@@ -15,8 +15,8 @@ JohtoWaterWildMons:
 
 	map_id AZALEA_TOWN
 	db 2 percent ; encounter rate
-	dbw 15, CORASUN
-	dbw 15, CORASUN
+	dbw 15, MOLAMBINO
+	dbw 15, MOLAMBINO
 
 	map_id UNION_CAVE_1F
 	db 2 percent ; encounter rate
