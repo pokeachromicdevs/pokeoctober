@@ -250,7 +250,6 @@ ENDM
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  7
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
 	map_const VIOLET_POKECENTER_1F,                         8,  4 ;  9
-	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 10
 	map_const SILENT_HILLS_EXIT_GATE,                  6,  4 ; 11
 	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 13
@@ -267,7 +266,6 @@ ENDM
 	map_const SAKURA_SHRINE,                                5,  4
 	map_const VIOLET_MUSEUM,                               10,  5
 	map_const VIOLET_FISHING_GUILD,                         7,  4
-
 
 	newgroup                                                      ; 11
 
@@ -522,6 +520,7 @@ ENDM
 	map_const CHERRYGROVE_PAGODA_3F,                        4,  4
 	map_const CHERRYGROVE_PAGODA_4F,                        4,  4
 	map_const CHERRYGROVE_PAGODA_5F,                        3,  3
+	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 10
 
 	newgroup                                                      ; 27
 	map_const CITRINE_ISLAND,                              20, 18 ;  1
