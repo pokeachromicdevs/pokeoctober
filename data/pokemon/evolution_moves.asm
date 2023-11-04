@@ -170,7 +170,7 @@ EvolutionMoves::
 	dw SWORDS_DANCE ; ARIADOS
 	dw EXTREMESPEED ; CROBAT
 	dw NO_MOVE      ; YANMA
-	dw NO_MOVE      ; TONBOSS
+	dw BITE         ; TONBOSS
 	dw LOVELY_KISS  ; BELLIGNAN
 	dw NO_MOVE      ; CHINCHOU
 	dw NO_MOVE      ; LANTURN
@@ -192,7 +192,7 @@ EvolutionMoves::
 	dw PERISH_SONG  ; POLITOED
 	dw NO_MOVE      ; HOPPIP
 	dw NO_MOVE      ; SKIPLOOM
-	dw NO_MOVE      ; JUMPLUFF
+	dw COTTON_SPORE ; JUMPLUFF
 	dw NO_MOVE      ; AIPOM
 	dw NO_MOVE      ; SUNKERN
 	dw NO_MOVE      ; SUNFLORA

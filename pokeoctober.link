@@ -298,7 +298,6 @@ ROMX $7c
 ROMX $7d
 	"Evolutions and Attacks 2"
 	"Cries"
-	"Extra Songs 1"
 ROMX $7e
 	"Pokemon Follow Sprites"
 ROMX $7f
@@ -355,6 +354,7 @@ ROMX $8c
 	"Pic Animations Johto Frames"
 ROMX $8d
 	"Pic Animations Beytah Frames"
+	"Extra Songs 1"
 WRAM0
 	"Stack"
 	"Audio RAM"

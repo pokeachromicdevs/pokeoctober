@@ -1114,13 +1114,16 @@ LassGroup:
 	end_party
 
 	next_party ; LASS (18)
-		db "ARIEL@", TRAINERTYPE_NORMAL
+		db "ARIEL@", TRAINERTYPE_MOVES
 		db 5
 		dw ZUBAT
+		dw HAZE, LEECH_LIFE, SUPERSONIC, NO_MOVE
 		db 7
 		dw PIDGEY
+		dw TACKLE, SAND_ATTACK, QUICK_ATTACK, NO_MOVE
 		db 8
 		dw HOPPIP
+		dw QUICK_ATTACK, SPLASH, TAIL_WHIP, NO_MOVE
 	end_party
 
 	next_party ; LASS (18)
