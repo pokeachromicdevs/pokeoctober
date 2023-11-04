@@ -31,7 +31,7 @@ FishGroups:
 	dbbw  90 percent + 1, 20, KRABBY
 	dbbw 100 percent,      0, TIME_GROUP
 .Shore_Super:
-	dbbw  40 percent,     40, KRABBY
+	dbbw  40 percent,     40, MARILL
 	dbbw  70 percent,      1, TIME_GROUP
 	dbbw  90 percent + 1, 40, KRABBY
 	dbbw 100 percent,     40, KINGLER

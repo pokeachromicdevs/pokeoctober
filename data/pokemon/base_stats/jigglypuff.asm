@@ -1,6 +1,6 @@
 	db 0 ; species ID placeholder
 
-	db 115,  45,  20,  20,  45,  25
+	db 115,  45,  35,  20,  50,  25
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type

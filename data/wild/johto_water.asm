@@ -13,10 +13,10 @@ JohtoWaterWildMons:
 	dbw 12, REMORAID
 	dbw 14, QWILFISH
 
-	;map_id AZALEA_TOWN
-	;db 2 percent ; encounter rate
-	;dbw 15, CORASUN
-	;dbw 15, CORASUN
+	map_id AZALEA_TOWN
+	db 2 percent ; encounter rate
+	dbw 15, CORASUN
+	dbw 15, CORASUN
 
 	map_id UNION_CAVE_1F
 	db 2 percent ; encounter rate
@@ -207,7 +207,7 @@ JohtoWaterWildMons:
 	map_id VIOLET_CITY
 	db 2 percent ; encounter rate
 	dbw 20, POLIWAG
-	dbw 15, POLIWAG
+	dbw 15, MARILL
 	dbw 20, POLIWHIRL
 
 	map_id CIANWOOD_CITY
