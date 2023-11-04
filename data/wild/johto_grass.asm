@@ -1301,28 +1301,28 @@ JohtoGrassWildMons:
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, PHANPY
-	dbw 2, ZUBAT
+	dbw 3, ZUBAT
+	dbw 2, PHANPY
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
 	dbw 2, TEDDIURSA
 	dbw 4, BIPULLA
 	dbw 4, DUNSPARCE
 	; day
-	dbw 3, PHANPY
-	dbw 2, ZUBAT
+	dbw 3, ZUBAT
+	dbw 2, PHANPY
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
 	dbw 2, TEDDIURSA
 	dbw 4, BIPULLA
 	dbw 4, DUNSPARCE
 	; nite
-	dbw 3, GEODUDE
+	dbw 3, ZUBAT
 	dbw 2, BIPULLA
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
-	dbw 2, ZUBAT
-	dbw 4, BIPULLA
+	dbw 2, CLEFFA
+	dbw 4, CLEFFA
 	dbw 4, DUNSPARCE
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
@@ -1358,18 +1358,18 @@ JohtoGrassWildMons:
 	dbw 2, SUNKERN
 	dbw 2, SUNKERN
 	dbw 3, SENTRET
-	dbw 3, SENTRET
-	dbw 2, RATTATA
 	dbw 3, HOPPIP
+	dbw 2, RATTATA
+	dbw 3, SENTRET
 	dbw 3, HOPPIP
 	; day
 	dbw 2, RATTATA
 	dbw 2, RATTATA
 	dbw 3, SENTRET
+	dbw 3, HOPPIP
+	dbw 2, SENTRET
 	dbw 3, SENTRET
-	dbw 2, PIDGEY
-	dbw 3, HOPPIP
-	dbw 3, HOPPIP
+	dbw 3, RATTATA
 	; nite
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
@@ -1421,7 +1421,7 @@ JohtoGrassWildMons:
 	dbw 4, CATERPIE
 	dbw 5, BELLSPROUT
 	dbw 5, PHANPY
-	dbw 4, WEEDLE
+	dbw 4, PICHU
 	dbw 5, HOPPIP
 	dbw 5, HOPPIP
 	; nite
@@ -1546,15 +1546,15 @@ JohtoGrassWildMons:
 	; morn
 	dbw 15, SNUBBULL
 	dbw 16, RATTATA
-	dbw 17, PIDGEY
-	dbw 15, CLEFLING
+	dbw 17, CLEFLING
+	dbw 15, ABRA
 	dbw 17, JIGGLYPUFF
 	dbw 15, SMEARGLE
 	dbw 15, DITTO
 	; day
 	dbw 15, SNUBBULL
 	dbw 16, RATTATA
-	dbw 17, PIDGEY
+	dbw 17, CLEFLING
 	dbw 15, ABRA
 	dbw 17, JIGGLYPUFF
 	dbw 15, DITTO
@@ -1868,29 +1868,29 @@ JohtoGrassWildMons:
 	map_id SILENT_HILLS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, PIDGEY
-	dbw 3, BURGELA
-	dbw 4, YANMA
-	dbw 3, CLEFLING
-	dbw 3, LEDYBA
-	dbw 4, FARFETCH_D
-	dbw 4, FARFETCH_D
-
-	dbw 3, PIDGEY
-	dbw 3, BELLSPROUT
-	dbw 4, LEDYBA
 	dbw 3, CLEFLING
 	dbw 3, YANMA
-	dbw 4, FARFETCH_D
-	dbw 4, FARFETCH_D
+	dbw 4, BURGELA
+	dbw 3, FARFETCH_D
+	dbw 3, LEDYBA
+	dbw 4, YANMA
+	dbw 4, YANMA
+
+	dbw 3, CLEFLING
+	dbw 3, LEDYBA
+	dbw 4, BELLSPROUT
+	dbw 3, FARFETCH_D
+	dbw 3, YANMA
+	dbw 4, LEDYBA
+	dbw 4, LEDYBA
 	; nite
-	dbw 3, ODDISH
 	dbw 3, HOOTHOOT
-	dbw 4, VENONAT
-	dbw 3, SPINARAK
 	dbw 3, PARASPOR
-	dbw 4, MOIBELLE
-	dbw 4, MOIBELLE
+	dbw 4, VENONAT
+	dbw 3, MOIBELLE
+	dbw 3, SPINARAK
+	dbw 4, HOOTHOOT
+	dbw 4, HOOTHOOT
 
 	map_id ZEN_GARDEN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

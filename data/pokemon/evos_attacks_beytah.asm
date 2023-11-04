@@ -306,7 +306,6 @@ BurgelaEvosAttacks:
 VupiiiEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, VULPIX
 	db 0 ; no more evolutions
-	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
 	dbw 6, QUICK_ATTACK
