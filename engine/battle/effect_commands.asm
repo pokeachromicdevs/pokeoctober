@@ -5938,6 +5938,8 @@ EndRechargeOpp:
 
 INCLUDE "engine/battle/move_effects/rage.asm"
 
+INCLUDE "engine/battle/move_effects/evil_eye.asm"
+
 BattleCommand_DoubleFlyingDamage:
 ; doubleflyingdamage
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP

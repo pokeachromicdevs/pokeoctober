@@ -271,3 +271,4 @@ MoveNames::
 	move_name "MEGAPHONE"
 	move_name "AMBUSH"
 	move_name "WILL-O-WISP"
+	move_name "EVIL EYE"

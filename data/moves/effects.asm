@@ -2209,3 +2209,24 @@ DoBurn:
 	checksafeguard
 	burntarget
 	endmove
+	
+EvilEye:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	evileye
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

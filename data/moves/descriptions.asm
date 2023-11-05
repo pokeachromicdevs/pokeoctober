@@ -270,6 +270,8 @@ MoveDescriptions1:
 	dw InkSprayDescription
 	dw MegaphoneDescription
 	dw AmbushDescription
+	dw WillOWispDescription
+	dw EvilEyeDescription
 .End:
 	
 InvalidMoveDescription:
@@ -1323,6 +1325,10 @@ MegaphoneDescription:
 WillOWispDescription:
 	db "An attack that may"
 	next "burn the foe.@"
+	
+EvilEyeDescription:
+	db "Damage doubles if"
+	next "foe has status.@"
 
 ;--------------------------------------------------------------------
 _NUM_MOVE_DESCRIPTIONS = (MoveDescriptions1.End  - MoveDescriptions1)/2

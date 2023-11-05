@@ -272,6 +272,7 @@
 	const MEGAPHONE
 	const AMBUSH
 	const WILL_O_WISP
+	const EVIL_EYE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

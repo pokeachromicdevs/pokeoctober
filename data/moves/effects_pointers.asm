@@ -161,3 +161,4 @@ MoveEffectsPointers:
 	dw Bounce
 	dw SpeedDown2Hit
 	dw DoBurn
+	dw EvilEye

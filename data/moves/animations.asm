@@ -290,6 +290,7 @@ BattleAnimations::
 	dw BattleAnim_Megaphone
 	dw BattleAnim_Ambush
 	dw BattleAnim_WillOWisp
+	dw BattleAnim_EvilEye
 	dw BattleAnim_SweetScent2
 .End:
 
@@ -3893,6 +3894,7 @@ BattleAnim_SteelWing:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_EvilEye:
 BattleAnim_MeanLook:
 	anim_1gfx ANIM_GFX_PSYCHIC
 	anim_obp0 $e0

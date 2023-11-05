@@ -182,7 +182,7 @@ ENDM
 	command curl                    ; af
 	command coinhurl                ; b0
 	command notifyweakenedeffect    ; b1
-
+	command evileye                 ; b2
 
 	enum_start $fe
 	command endturn                 ; fe

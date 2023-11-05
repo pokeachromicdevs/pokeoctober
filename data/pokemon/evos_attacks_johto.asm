@@ -918,14 +918,17 @@ SlowkingEvosAttacks:
 
 MisdreavusEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, TACKLE ; EERIE_LIGHT
 	dbw 1, GROWL
-	dbw 1, PSYWAVE
-	dbw 6, SPITE
-	dbw 12, CONFUSE_RAY
-	dbw 19, MEAN_LOOK
-	dbw 27, PSYBEAM
-	dbw 36, PAIN_SPLIT
-	dbw 46, PERISH_SONG
+	dbw 6, PSYWAVE
+	dbw 12, NIGHT_SHADE
+	dbw 18, MEGAPHONE
+	dbw 24, EVIL_EYE
+	dbw 30, SCREECH
+	dbw 36, MEAN_LOOK
+	dbw 42, SHADOW_BALL
+	dbw 48, PAIN_SPLIT
+	dbw 54, PERISH_SONG
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:
