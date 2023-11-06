@@ -270,6 +270,7 @@ ROMX $6e
 	"Pokedex Entries 065-128"
 ROMX $6f
 	"Text 1"
+	"Extra Songs 1"
 ROMX $70
 	"Text 2"
 ROMX $71
@@ -298,7 +299,6 @@ ROMX $7c
 ROMX $7d
 	"Evolutions and Attacks 2"
 	"Cries"
-	"Extra Songs 1"
 ROMX $7e
 	"Pokemon Follow Sprites"
 ROMX $7f
