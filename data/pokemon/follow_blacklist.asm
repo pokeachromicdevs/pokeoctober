@@ -110,6 +110,7 @@ CantFollowList:
 	dw BELLOSSOM
 	dw MARILL
 	dw AZUMARILL
+	dw PHANDARIN
 	dw SUDOWOODO
 	dw POLITOED
 	dw HOPPIP

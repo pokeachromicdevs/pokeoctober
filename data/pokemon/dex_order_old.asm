@@ -152,6 +152,7 @@ OldPokedexOrder:
 	dw STANTLER
 	dw MARILL
 	dw AZUMARILL
+	dw PHANDARIN
 	dw DIGLETT
 	dw DUGTRIO
 	dw MANKEY

@@ -186,6 +186,7 @@ AlphabeticalPokedexOrder:
 	dw PARASPOR
 	dw PERSIAN
 	dw PETAMOLE
+	dw PHANDARIN
 	dw PHANPY
 	dw PICHU
 	dw PIDGEOT

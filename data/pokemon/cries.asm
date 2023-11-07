@@ -196,6 +196,7 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,      $084,  $150 ; BELLOSSOM
 	mon_cry CRY_MARILL,      $11b,  $120 ; MARILL
 	mon_cry CRY_MARILL,      $0b6,  $180 ; AZUMARILL
+	mon_cry CRY_CYNDAQUIL,   $049,  $080 ; PHANDARIN
 	mon_cry CRY_CLEFFA,      $f40,  $180 ; SUDOWOODO
 	mon_cry CRY_CLEFFA,     -$2a3,  $1c8 ; POLITOED
 	mon_cry CRY_CLEFFA,      $03b,  $0c8 ; HOPPIP

@@ -189,6 +189,7 @@ FirstEvoStages::
 	dw ODDISH
 	dw MARILL
 	dw MARILL     ;b8
+	dw PHANDARIN
 	dw SUDOWOODO
 	dw POLIWAG
 	dw HOPPIP

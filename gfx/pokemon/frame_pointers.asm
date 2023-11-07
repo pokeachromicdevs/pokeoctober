@@ -188,6 +188,7 @@ FramesPointers:
 	dba BellossomFrames
 	dba MarillFrames
 	dba AzumarillFrames
+	dba PhandarinFrames
 	dba SudowoodoFrames
 	dba PolitoedFrames
 	dba HoppipFrames

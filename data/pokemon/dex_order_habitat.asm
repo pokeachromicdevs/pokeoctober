@@ -253,6 +253,7 @@ HabitatPokedexOrder:
 	dw GASTLY
 	dw HAUNTER
 	dw GENGAR
+	dw PHANDARIN
 	dw MISDREAVUS
 	dw SMEARGLE
 	dw SHUCKLE

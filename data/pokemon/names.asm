@@ -193,6 +193,7 @@ PokemonNames::
 	db "BELLOSSOM@"
 	db "MARILL@@@@"
 	db "AZUMARILL@"
+	db "PHANDARIN@"
 	db "SUDOWOODO@"
 	db "POLITOED@@"
 	db "HOPPIP@@@@"

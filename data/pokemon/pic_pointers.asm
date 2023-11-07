@@ -203,6 +203,7 @@ PokemonPicPointers::
 	mon_pic Bellossom
 	mon_pic Marill
 	mon_pic Azumarill
+	mon_pic Phandarin
 	mon_pic Sudowoodo
 	mon_pic Politoed
 	mon_pic Hoppip
