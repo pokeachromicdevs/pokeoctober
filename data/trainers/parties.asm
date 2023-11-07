@@ -1757,16 +1757,16 @@ BeautyGroup:
 		db     TRAINERTYPE_NORMAL
 
 		dbw    17, MOIBELLE
-		;dbw    17, KOIJACK
+		dbw    17, OREFRY
 		dbw    18, SMOOCHUM
 	end_party
 
 	next_party
 		string "ANDREA"
 		db     TRAINERTYPE_NORMAL
-		;dbw    25, PANGSHI
-		dbw    25, GASTLY
-		dbw    26, HAUNTER
+		dbw    23, PANGSHI
+		dbw    23, GASTLY
+		dbw    24, HAUNTER
 	end_party
 
 	next_party
@@ -4580,8 +4580,8 @@ MediumGroup:
 	next_party
 		string "DOROTHY"
 		db     TRAINERTYPE_NORMAL
-		dbw    25, BIPULLA
-		dbw    26, MISDREAVUS
+		dbw    23, BIPULLA
+		dbw    24, MISDREAVUS
 	end_party
 
 	end_party_list
@@ -5113,8 +5113,8 @@ InstructorGroup:
 		db     TRAINERTYPE_MOVES
 		dbw    23, HAUNTER
 		dw     CURSE, NIGHT_SHADE, SPITE, NO_MOVE
-		dbw    25, BIPULLA
-		dw     AGILITY, CONFUSION, FORESIGHT, FORESIGHT
+		dbw    24, BIPULLA
+		dw     LICK, CONFUSION, LICK, FORESIGHT
 	end_party
 
 	end_party_list
@@ -5179,9 +5179,9 @@ SoldierGroup:
 	next_party
 		string "GRANT"
 		db TRAINERTYPE_NORMAL
-		dbw 23, GASTLY
-		dbw 24, MISDREAVUS
-		;dbw 27, PHANDARIN ; XXX
+		dbw 22, GASTLY
+		dbw 22, MISDREAVUS
+		dbw 23, PHANDARIN
 	end_party
 
 	end_party_list
