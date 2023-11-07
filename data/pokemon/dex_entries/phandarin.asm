@@ -1,10 +1,10 @@
-``	db "TALISMAN@" ; species name
+	db "TALISMAN@" ; species name
 	dw 211, 240 ; height, weight
 
-	db   "Despite its cute"
-	next "face and jolly"
-	next "hopping, it will"
+	db   "It hops around"
+	next "in dark places"
+	next "so that it can"
 
-	page "attempt to drain"
-	next "the life force"
-	next "of its victims.@"
+	page "hide and drain"
+	next "the life energy"
+	next "of its prey.@"

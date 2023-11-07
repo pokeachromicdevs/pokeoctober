@@ -188,6 +188,7 @@ EvolutionMoves::
 	dw SWORDS_DANCE ; BELLOSSOM
 	dw NO_MOVE      ; MARILL
 	dw NO_MOVE      ; AZUMARILL
+	dw NO_MOVE      ; PHANDARIN
 	dw NO_MOVE      ; SUDOWOODO
 	dw PERISH_SONG  ; POLITOED
 	dw NO_MOVE      ; HOPPIP

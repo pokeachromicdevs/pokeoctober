@@ -152,7 +152,6 @@ OldPokedexOrder:
 	dw STANTLER
 	dw MARILL
 	dw AZUMARILL
-	dw PHANDARIN
 	dw DIGLETT
 	dw DUGTRIO
 	dw MANKEY
@@ -258,6 +257,7 @@ OldPokedexOrder:
 	dw WORFURS
 	dw WEARLYCAN
 	dw KOALYPTUS
+	dw PHANDARIN
 	dw MISDREAVUS
 	dw PORYGON
 	dw PORYGON2

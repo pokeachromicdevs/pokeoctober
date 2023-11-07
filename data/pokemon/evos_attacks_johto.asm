@@ -39,6 +39,7 @@ EvosAttacksPointers2::
 	dw BellossomEvosAttacks
 	dw MarillEvosAttacks
 	dw AzumarillEvosAttacks
+	dw PhandarinEvosAttacks
 	dw SudowoodoEvosAttacks
 	dw PolitoedEvosAttacks
 	dw HoppipEvosAttacks
@@ -705,6 +706,11 @@ AzumarillEvosAttacks:
 	dbw 25, BUBBLEBEAM
 	dbw 36, DOUBLE_EDGE
 	dbw 48, RAIN_DANCE
+	db 0 ; no more level-up moves
+	
+PhandarinEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 SudowoodoEvosAttacks:

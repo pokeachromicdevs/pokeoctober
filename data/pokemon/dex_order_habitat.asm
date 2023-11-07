@@ -241,8 +241,8 @@ HabitatPokedexOrder:
 	dw LUXSWAN
 
 ; URBAN
-	dw GRIMER
 	dw SMUJJ
+	dw GRIMER
 	dw MUK
 	dw PORYGON
 	dw PORYGON2

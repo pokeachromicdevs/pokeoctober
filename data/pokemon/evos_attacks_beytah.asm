@@ -35,7 +35,6 @@ EvosAttacksPointers3::
 	dw VegelancheEvosAttacks
 	dw SnouwrbunEvosAttacks
 	dw NecrorexEvosAttacks
-	dw PhandarinEvosAttacks
 .End:
 
 NecrorexEvosAttacks:
@@ -576,24 +575,8 @@ SnouwrbunEvosAttacks:
 	dbw 49, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
-PhandarinEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, GROWL
-	dbw 1, TACKLE
-	dbw 1, PSYWAVE
-	dbw 6, SPITE
-	dbw 10, FAINT_ATTACK
-	dbw 15, CURSE
-	dbw 19, PSYBEAM
-	dbw 24, MEAN_LOOK
-	dbw 28, CONFUSE_RAY
-	dbw 29, CRUNCH
-	dbw 35, NIGHT_SHADE
-	dbw 42, BODY_SLAM
-	dbw 48, PAIN_SPLIT
-	dbw 55, SHADOW_BALL
-	dbw 61, PERISH_SONG
-	db 0 ; no more level-up moves
+
+
 
 ;---------------------------------------------------------------------------------------------
 _NUM_EVOS_ATTACKS = _NUM_EVOS_ATTACKS + ((EvosAttacksPointers3.End  - EvosAttacksPointers3)/2)

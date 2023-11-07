@@ -349,12 +349,12 @@ ROMX $8a
 ROMX $8b
 	"Pic Animations Anims"
 	"Pic Animations Idles"
-	"Pic Animations Bitmasks"
 ROMX $8c
 	"Pic Animations Kanto Frames"
 	"Pic Animations Johto Frames"
 ROMX $8d
 	"Pic Animations Beytah Frames"
+	"Pic Animations Bitmasks"
 WRAM0
 	"Stack"
 	"Audio RAM"
