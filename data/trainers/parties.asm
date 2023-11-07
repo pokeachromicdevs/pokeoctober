@@ -1764,7 +1764,7 @@ BeautyGroup:
 	next_party
 		string "ANDREA"
 		db     TRAINERTYPE_NORMAL
-		dbw    23, PANGSHI
+		dbw    23, PHANDARIN
 		dbw    23, GASTLY
 		dbw    24, HAUNTER
 	end_party

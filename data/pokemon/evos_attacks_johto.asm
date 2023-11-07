@@ -710,7 +710,16 @@ AzumarillEvosAttacks:
 	
 PhandarinEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SPLASH
+	dbw 1, LEECH_LIFE
+	dbw 6, DISABLE
+	dbw 11, SPITE
+	dbw 16, PURSUIT
+	dbw 22, NIGHT_SHADE
+	dbw 26, STOMP
+	dbw 32, CONFUSE_RAY
+	dbw 37, BODY_SLAM
+	dbw 43, SHADOW_BALL
 	db 0 ; no more level-up moves
 
 SudowoodoEvosAttacks:
