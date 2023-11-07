@@ -4689,12 +4689,14 @@ BattleAnim_CrossCutter:
 	anim_wait 32
 	anim_ret
 	
-BattleAnim_Tempt:	
-	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_EXPLOSION
-	anim_sound 6, 2, SFX_THROW_BALL
-	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
-	anim_wait 16
-	anim_ret
+BattleAnim_Tempt:
+    anim_2gfx ANIM_GFX_STATUS, ANIM_GFX_OBJECTS
+    anim_sound 0, 1, SFX_PRESENT
+    anim_obj ANIM_OBJ_CAKE, 64, 88, $6c
+    anim_wait 56
+    anim_obj ANIM_OBJ_HEART, 104, 48, $0
+    anim_wait 48
+    anim_ret
 	
 BattleAnim_CoinHurl:
 	anim_3gfx ANIM_GFX_HIT, ANIM_GFX_STATUS, ANIM_GFX_SPEED
