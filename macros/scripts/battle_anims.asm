@@ -163,27 +163,28 @@ anim_0xe7: MACRO
 ENDM
 
 	enum anim_updateactorpic_command ; $e8
-MACRO anim_updateactorpic
+anim_updateactorpic: MACRO 
 	db anim_updateactorpic_command
 ENDM
 
 	enum anim_minimize_command ; $e9
-MACRO anim_minimize
+anim_minimize: MACRO 
 	db anim_minimize_command
 ENDM
 
 	enum anim_setbgpal_command ; ea
-MACRO anim_setbgpal
+anim_setbgpal: MACRO 
 	db anim_setbgpal_command
 	db \1 ; pal index to set (0-7)
 	db \2 ; battle pal
 ENDM
 
 	enum anim_setobjpal_command ; eb
-MACRO anim_setobjpal
+anim_setobjpal: MACRO 
 	db anim_setobjpal_command
 	db \1 ; pal index to set (0-7)
 	db \2 ; battle pal
+ENDM
 
 	enum anim_0xec_command ; $ec
 anim_0xec: MACRO
