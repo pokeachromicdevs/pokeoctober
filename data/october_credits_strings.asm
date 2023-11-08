@@ -28,6 +28,7 @@ OctoberCredits_StringTable:
 		dw .AtmaBuster, .Blank
 			; programming help & map rips
 			; crystalleaf follower mechanic
+		dw .Soup, .Blank
 			
 	dw .Blank, .Blank
 	dw .Blank, .Blank
