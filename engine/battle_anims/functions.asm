@@ -93,6 +93,8 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_4D ; 4d
 	dw BattleAnimFunction_4E ; 4e
 	dw BattleAnimFunction_4F ; 4f
+	dw BattleAnimFunc_BubbleSplash
+	dw BattleAnimFunction_RadialMoveOut
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -959,6 +961,12 @@ Functioncd557:
 	ld de, -$100
 	ret
 
+BattleAnimFunc_BubbleSplash:
+	call BattleAnim_AnonJumptable
+
+	dw BattleAnimFunction_4E.after_frameset
+	dw BattleAnimFunction_4E.one
+; fallthrough
 BattleAnimFunction_4E:
 	call BattleAnim_AnonJumptable
 .anon_dw
@@ -975,6 +983,7 @@ BattleAnimFunction_4E:
 	ld hl, BATTLEANIMSTRUCT_FRAMESET_ID
 	add hl, bc
 	ld [hl], a
+.after_frameset
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
@@ -4046,6 +4055,64 @@ BattleAnimFunction_4D:
 
 .asm_ce6ed
 	call DeinitBattleAnimation
+	ret
+
+BattleAnimFunction_RadialMoveOut:
+	call BattleAnim_AnonJumptable
+
+	dw InitRadial
+	dw Step
+
+InitRadial:
+	ld hl, BATTLEANIMSTRUCT_VAR2
+	add hl, bc
+	xor a
+	ld [hld], a
+	ld [hl], a ; initial position = 0
+	call BattleAnim_IncAnonJumptableIndex
+
+Step:
+	call Get_Rad_Pos
+	ld hl, 6.0 ; speed
+	call Set_Rad_Pos
+	cp 80 ; final position
+	jmp nc, DeinitBattleAnimation
+	jr Rad_Move
+
+Get_Rad_Pos:
+	ld hl, BATTLEANIMSTRUCT_VAR1
+	add hl, bc
+	ld a, [hli]
+	ld e, [hl]
+	ld d, a
+	ret 
+
+Set_Rad_Pos:
+	add hl, de
+	ld a, h
+	ld e, l
+	ld hl, BATTLEANIMSTRUCT_VAR1
+	add hl, bc
+	ld [hli], a
+	ld [hl], e
+	ret
+
+Rad_Move:
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld e, [hl]
+	push de
+	ld a, e
+	call Sine
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+	pop de
+	ld a, e
+	call Cosine
+	ld hl, BATTLEANIMSTRUCT_XOFFSET
+	add hl, bc
+	ld [hl], a
 	ret
 
 Functionce6f1:

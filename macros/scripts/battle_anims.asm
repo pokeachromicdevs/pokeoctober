@@ -163,12 +163,12 @@ anim_0xe7: MACRO
 ENDM
 
 	enum anim_updateactorpic_command ; $e8
-anim_updateactorpic: MACRO
+MACRO anim_updateactorpic
 	db anim_updateactorpic_command
 ENDM
 
 	enum anim_minimize_command ; $e9
-anim_minimize: MACRO
+MACRO anim_minimize
 	db anim_minimize_command
 ENDM
 
