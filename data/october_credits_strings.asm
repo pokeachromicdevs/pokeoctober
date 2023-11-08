@@ -29,6 +29,7 @@ OctoberCredits_StringTable:
 			; programming help & map rips
 			; crystalleaf follower mechanic
 		dw .Soup, .Blank
+			; move anim code
 			
 	dw .Blank, .Blank
 	dw .Blank, .Blank
