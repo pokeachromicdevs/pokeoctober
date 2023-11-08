@@ -69,6 +69,7 @@ NewPokedexOrder:
 	dw GASTLY
 	dw HAUNTER
 	dw GENGAR
+	dw STROMEN
 	dw UNOWN
 	dw ONIX
 	dw STEELIX

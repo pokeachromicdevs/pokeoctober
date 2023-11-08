@@ -1756,7 +1756,6 @@ BeautyGroup:
 	next_party
 		string "PEONY"
 		db     TRAINERTYPE_NORMAL
-
 		dbw    17, MOIBELLE
 		dbw    17, OREFRY
 		dbw    18, SMOOCHUM
@@ -1765,8 +1764,8 @@ BeautyGroup:
 	next_party
 		string "ANDREA"
 		db     TRAINERTYPE_NORMAL
+		dbw    23, STROMEN
 		dbw    23, PHANDARIN
-		dbw    23, GASTLY
 		dbw    24, HAUNTER
 	end_party
 
@@ -4581,8 +4580,8 @@ MediumGroup:
 	next_party
 		string "DOROTHY"
 		db     TRAINERTYPE_NORMAL
-		dbw    23, BIPULLA
-		dbw    24, MISDREAVUS
+		dbw    23, STROMEN
+		dbw    24, BIPULLA
 	end_party
 
 	end_party_list

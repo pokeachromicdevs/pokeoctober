@@ -252,6 +252,8 @@ PokemonCries::
 	mon_cry CRY_LARVITAR,    $06b,  $280 ; SKARMORY, needs fixing
 	mon_cry CRY_CYNDAQUIL,     0,  288   ; HOUNDOUR
 	mon_cry CRY_CYNDAQUIL,   531,  128   ; HOUNDOOM
+	mon_cry CRY_CYNDAQUIL,   $303,  $1c0 ; FENNECURSE
+	mon_cry CRY_GRIMER,      $210,  $100 ; STROMEN
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
 	mon_cry CRY_SENTRET,     $048,  $230 ; PHANPY
 	mon_cry CRY_SENTRET,    -184,  768   ; DONPHAN
@@ -296,7 +298,6 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,  -$0a3,  $091 ; XXX KOALYPTUS
 	mon_cry CRY_CATERPIE,    $0a3,  $091 ; OREFRY
 	mon_cry CRY_KRABBY,      $160,  $0a0 ; BALLERINE
-	mon_cry CRY_CYNDAQUIL,   $303,  $1c0 ; FENNECURSE
 	mon_cry CRY_KANGASKHAN,  $0f0,  $04b ; ORIJOEY
 	mon_cry CRY_AGGROSWINE,  $1B7,  $068 ; AGGROSWINE
 	mon_cry CRY_PICHU,       $030,  $150 ; TODO: GERMIFROST

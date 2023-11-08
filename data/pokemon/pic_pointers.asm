@@ -262,6 +262,8 @@ PokemonPicPointers::
 	mon_pic Skarmory
 	mon_pic Houndour
 	mon_pic Houndoom
+	mon_pic Fennecurse
+	mon_pic Stromen
 	mon_pic Kingdra
 	mon_pic Phanpy
 	mon_pic Donphan
@@ -306,7 +308,6 @@ PokemonPicPointers::
 	mon_pic Koalyptus
 	mon_pic Orefry
 	mon_pic Ballerine
-	mon_pic Fennecurse
 	mon_pic Orijoey
 	mon_pic Aggroswine
 	mon_pic Germifrost

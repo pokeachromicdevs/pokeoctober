@@ -244,6 +244,8 @@ FramesPointers:
 	dba SkarmoryFrames
 	dba HoundourFrames
 	dba HoundoomFrames
+	dba FennecurseFrames
+	dba StromenFrames
 	dba KingdraFrames
 	dba PhanpyFrames
 	dba DonphanFrames
@@ -288,7 +290,6 @@ FramesPointers:
 	dba KoalyptusFrames
 	dba OrefryFrames
 	dba BallerineFrames
-	dba FennecurseFrames
 	dba OrijoeyFrames
 	dba AggroswineFrames
 	dba GermifrostFrames

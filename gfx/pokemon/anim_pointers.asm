@@ -244,6 +244,8 @@ AnimationPointers:
 	dw SkarmoryAnimation
 	dw HoundourAnimation
 	dw HoundoomAnimation
+	dw FennecurseAnimation
+	dw StromenAnimation
 	dw KingdraAnimation
 	dw PhanpyAnimation
 	dw DonphanAnimation
@@ -288,7 +290,6 @@ AnimationPointers:
 	dw KoalyptusAnimation
 	dw OrefryAnimation
 	dw BallerineAnimation
-	dw FennecurseAnimation
 	dw OrijoeyAnimation
 	dw AggroswineAnimation
 	dw GermifrostAnimation

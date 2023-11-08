@@ -245,6 +245,8 @@ PokedexDataPointerTable:
 	dba SkarmoryPokedexEntry
 	dba HoundourPokedexEntry
 	dba HoundoomPokedexEntry
+	dba FennecursePokedexEntry
+	dba StromenPokedexEntry
 	dba KingdraPokedexEntry
 	dba PhanpyPokedexEntry
 	dba DonphanPokedexEntry
@@ -289,7 +291,6 @@ PokedexDataPointerTable:
 	dba KoalyptusPokedexEntry
 	dba OrefryPokedexEntry
 	dba BallerinePokedexEntry
-	dba FennecursePokedexEntry
 	dba OrijoeyPokedexEntry
 	dba AggroswinePokedexEntry
 	dba GermifrostPokedexEntry

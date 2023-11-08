@@ -244,6 +244,8 @@ EvolutionMoves::
 	dw NO_MOVE      ; SKARMORY
 	dw NO_MOVE      ; HOUNDOUR
 	dw NO_MOVE      ; HOUNDOOM
+	dw NO_MOVE      ; FENNECURSE
+	dw NO_MOVE      ; STROMEN
 	dw NO_MOVE      ; KINGDRA
 	dw NO_MOVE      ; PHANPY
 	dw FURY_ATTACK  ; DONPHAN
@@ -288,7 +290,6 @@ EvolutionMoves::
 	dw NO_MOVE      ; KOALYPTUS
 	dw NO_MOVE      ; OREFRY
 	dw NO_MOVE      ; BALLERINE
-	dw NO_MOVE      ; FENNECURSE
 	dw NO_MOVE      ; ORIJOEY
 	dw NO_MOVE      ; AGGROSWINE
 	dw NO_MOVE		; GERMIFROST

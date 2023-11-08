@@ -266,6 +266,8 @@ JOHTO_POKEMON EQU const_value
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
 	const HOUNDOOM   ; e5
+	const FENNECURSE
+	const STROMEN
 	const KINGDRA    ; e6
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
@@ -310,7 +312,6 @@ JOHTO_POKEMON EQU const_value
 	const KOALYPTUS
 	const OREFRY
 	const BALLERINE
-	const FENNECURSE
 	const ORIJOEY
 	const AGGROSWINE
 	const GERMIFROST

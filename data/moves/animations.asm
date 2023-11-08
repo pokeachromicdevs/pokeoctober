@@ -4695,7 +4695,7 @@ BattleAnim_Tempt:
     anim_obj ANIM_OBJ_CAKE, 64, 88, $6c
     anim_wait 56
     anim_obj ANIM_OBJ_HEART, 104, 48, $0
-    anim_wait 48
+    anim_wait 48  
     anim_ret
 	
 BattleAnim_CoinHurl:

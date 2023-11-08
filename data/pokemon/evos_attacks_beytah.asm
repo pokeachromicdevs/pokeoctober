@@ -23,7 +23,6 @@ EvosAttacksPointers3::
 	dw KoalyptusEvosAttacks
 	dw OrefryEvoAttacks
 	dw BallerineEvoAttacks
-	dw FennecurseEvoAttacks
 	dw OrijoeyEvoAttacks
 	dw AggroswineEvoAttacks
 	dw GermifrostEvosAttacks
@@ -73,22 +72,6 @@ OrijoeyEvoAttacks:
 	dbw 20, CHARM
 	dbw 25, DIZZY_PUNCH
 	db 0 ; no more moves
-
-FennecurseEvoAttacks:
-	db 0 ; no more evolutions
-	dbw  1, FIRE_SPIN
-	dbw  1, LEER
-	dbw  6, FAINT_ATTACK
-	dbw 12, MEAN_LOOK
-	;dbw 17, EERIE_LIGHT ; TODO
-	dbw 22, FLAME_WHEEL
-	dbw 28, WILL_O_WISP
-	dbw 34, CURSE
-	dbw 39, SHADOW_BALL
-	dbw 44, SCARY_FACE
-	dbw 50, AMBUSH
-	dbw 56, FLAMETHROWER
-	db 0 ; no more level-up moves
 
 BallerineEvoAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, MIMENTOR

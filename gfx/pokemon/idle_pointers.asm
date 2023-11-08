@@ -244,6 +244,8 @@ AnimationIdlePointers:
 	dw SkarmoryAnimationIdle
 	dw HoundourAnimationIdle
 	dw HoundoomAnimationIdle
+	dw FennecurseAnimationIdle
+	dw StromenAnimationIdle
 	dw KingdraAnimationIdle
 	dw PhanpyAnimationIdle
 	dw DonphanAnimationIdle
@@ -288,7 +290,6 @@ AnimationIdlePointers:
 	dw KoalyptusAnimationIdle
 	dw OrefryAnimationIdle
 	dw BallerineAnimationIdle
-	dw FennecurseAnimationIdle
 	dw OrijoeyAnimationIdle
 	dw AggroswineAnimationIdle
 	dw GermifrostAnimationIdle

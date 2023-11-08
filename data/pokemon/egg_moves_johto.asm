@@ -95,6 +95,8 @@ EggMovePointers2::
 	dw HoundourEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw NoEggMoves2
+	dw NoEggMoves2
 	dw PhanpyEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2

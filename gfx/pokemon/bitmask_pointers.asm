@@ -244,6 +244,8 @@ BitmasksPointers:
 	dw SkarmoryBitmasks
 	dw HoundourBitmasks
 	dw HoundoomBitmasks
+	dw FennecurseBitmasks
+	dw StromenBitmasks
 	dw KingdraBitmasks
 	dw PhanpyBitmasks
 	dw DonphanBitmasks
@@ -288,7 +290,6 @@ BitmasksPointers:
 	dw KoalyptusBitmasks
 	dw OrefryBitmasks
 	dw BallerineBitmasks
-	dw FennecurseBitmasks
 	dw OrijoeyBitmasks
 	dw AggroswineBitmasks
 	dw GermifrostBitmasks

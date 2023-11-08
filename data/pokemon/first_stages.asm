@@ -245,6 +245,8 @@ FirstEvoStages::
 	dw SKARMORY
 	dw HOUNDOUR
 	dw HOUNDOUR
+	dw FENNECURSE
+	dw STROMEN
 	dw HORSEA
 	dw PHANPY
 	dw PHANPY     ;e8
@@ -289,7 +291,6 @@ FirstEvoStages::
 	dw KOALYPTUS
 	dw OREFRY
 	dw BALLERINE
-	dw FENNECURSE
 	dw ORIJOEY
 	dw AGGROSWINE
 	dw CAMOUFLAKE

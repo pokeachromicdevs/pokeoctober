@@ -95,6 +95,8 @@ EvosAttacksPointers2::
 	dw SkarmoryEvosAttacks
 	dw HoundourEvosAttacks
 	dw HoundoomEvosAttacks
+	dw FennecurseEvosAttacks
+	dw StromenEvosAttacks
 	dw KingdraEvosAttacks
 	dw PhanpyEvosAttacks
 	dw DonphanEvosAttacks
@@ -1518,7 +1520,39 @@ HoundoomEvosAttacks:
 	dbw 35, FLAMETHROWER
 	dbw 52, CRUNCH
 	db 0 ; no more level-up moves
+	
+FennecurseEvosAttacks:
+	db 0 ; no more evolutions
+	dbw  1, FIRE_SPIN
+	dbw  1, LEER
+	dbw  6, FAINT_ATTACK
+	dbw 12, MEAN_LOOK
+	;dbw 17, EERIE_LIGHT ; TODO
+	dbw 22, FLAME_WHEEL
+	dbw 28, WILL_O_WISP
+	dbw 34, CURSE
+	dbw 39, SHADOW_BALL
+	dbw 44, SCARY_FACE
+	dbw 50, AMBUSH
+	dbw 56, FLAMETHROWER
+	db 0 ; no more level-up moves
 
+StromenEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PSYWAVE
+	dbw 1, GROWL
+	dbw 6, SPITE
+	dbw 11, PIN_MISSILE
+	dbw 15, FAINT_ATTACK
+	dbw 22, NIGHT_SHADE
+	dbw 28, CURSE
+	dbw 34, PAIN_SPLIT
+	dbw 40, AMBUSH
+	dbw 46, SHADOW_BALL
+	dbw 53, DESTINY_BOND
+	dbw 58, PSYCHIC_M
+	db 0 ; no more level-up moves
+	
 KingdraEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE

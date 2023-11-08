@@ -251,6 +251,7 @@ AlphabeticalPokedexOrder:
 	dw STARMIE
 	dw STARYU
 	dw STEELIX
+	dw STROMEN
 	dw SUDOWOODO
 	dw SUICUNE
 	dw SUNFLORA
