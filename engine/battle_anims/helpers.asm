@@ -103,7 +103,7 @@ GetBattleAnimOAMPointer:
 
 LoadBattleAnimGFX:
 	push hl
-	cp ANIM_GFX_POKE_BALL
+	cp BATTLE_ANIM_GFX_POKE_BALL
 	call z, .LoadBallPalette
 	ld l, a
 	ld h, 0
@@ -177,7 +177,7 @@ endr
 	pop af
 	ld [rSVBK], a
 	; restore the graphics index to be loaded
-	ld a, ANIM_GFX_POKE_BALL
+	ld a, BATTLE_ANIM_GFX_POKE_BALL
 	ret
 
 INCLUDE "data/battle_anims/ball_colors.asm"
