@@ -173,6 +173,9 @@ PokedexDataPointerTable:
 	dba YanmaPokedexEntry
 	dba TonbossPokedexEntry
 	dba BellignanPokedexEntry
+	dba CoinpurPokedexEntry
+	dba MoibellePokedexEntry
+	dba BelledamPokedexEntry
 	dba ChinchouPokedexEntry
 	dba LanturnPokedexEntry
 	dba PichuPokedexEntry
@@ -262,11 +265,8 @@ PokedexDataPointerTable:
 	dba LugiaPokedexEntry
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
-	dba CoinpurPokedexEntry
 	dba AdbarstorkPokedexEntry
 	dba PupperonPokedexEntry
-	dba MoibellePokedexEntry
-	dba BelledamPokedexEntry
 	dba CleflingPokedexEntry
 	dba MallodyPokedexEntry
 	dba CamouflakePokedexEntry

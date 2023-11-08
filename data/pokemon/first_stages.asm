@@ -172,9 +172,12 @@ FirstEvoStages::
 	dw ZUBAT
 	dw YANMA
 	dw YANMA
-	dw BELLIGNAN
+	dw BELLSPROUT
 	dw CHINCHOU
 	dw CHINCHOU
+	dw COINPUR
+	dw MOIBELLE
+	dw MOIBELLE
 	dw PICHU
 	dw CLEFFA
 	dw IGGLYBUFF
@@ -198,7 +201,7 @@ FirstEvoStages::
 	dw AIPOM
 	dw SUNKERN
 	dw SUNKERN    ;c0
-	dw LUXSWAN
+	dw FARFETCH_D
 	dw WOOPER
 	dw WOOPER
 	dw EEVEE
@@ -210,7 +213,7 @@ FirstEvoStages::
 	dw WOBBUFFET
 	dw BIPULLA
 	dw BIPULLA
-	dw TOPSYSPOT
+	dw BIPULLA
 	dw PINECO
 	dw PINECO
 	dw SHUCKLE
@@ -222,8 +225,8 @@ FirstEvoStages::
 	dw SNUBBULL
 	dw QWILFISH
 	dw SCYTHER
-	dw TRICULES
-	dw TRICULES
+	dw PINSIR
+	dw PINSIR
 	dw SNEASEL
 	dw TEDDIURSA  ;d8
 	dw TEDDIURSA
@@ -262,11 +265,8 @@ FirstEvoStages::
 	dw LUGIA
 	dw HO_OH
 	dw CELEBI
-	dw COINPUR
 	dw ADBARSTORK
 	dw PUPPERON
-	dw MOIBELLE
-	dw MOIBELLE
 	dw CLEFLING
 	dw CLEFLING
 	dw CAMOUFLAKE

@@ -1,11 +1,8 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
-	dw CoinpurEvosAttacks
 	dw AdbarstorkEvosAttacks
 	dw PupperonEvosAttacks
-	dw MoibelleEvosAttacks
-	dw BelledamEvosAttacks
 	dw CleflingEvosAttacks
 	dw MallodyEvosAttacks
 	dw CamouflakeEvosAttacks
@@ -143,24 +140,6 @@ KoalyptusEvosAttacks:
 	dbw 42, BELLY_DRUM
 	db 0 ; no more level-up moves
 
-CoinpurEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
-	db 0 ; no more evolutions
-	dbw 1, SCRATCH
-	dbw 1, GROWL
-	dbw 1, TAIL_WHIP
-	dbw 6, BITE
-	dbw 12, TEMPT
-	dbw 16, PAY_DAY
-	dbw 22, FAINT_ATTACK
-	dbw 28, FURY_SWIPES
-	dbw 32, SCREECH
-	dbw 38, COIN_HURL
-	dbw 44, CHARM
-	dbw 48, SWAGGER
-	dbw 54, SLASH
-	db 0 ; no more level-up moves
-
 AdbarstorkEvosAttacks:
 	db  0; no more evolutions
 	dbw 1, PECK
@@ -190,40 +169,6 @@ PupperonEvosAttacks:
 	dbw 45, CRUNCH
 	dbw 50, OUTRAGE
 	dbw 56, FIRE_BLAST
-	db 0 ; no more level-up moves
-
-MoibelleEvosAttacks:
-	dbbw EVOLVE_LEVEL, 28, BELLEDAM
-	db 0 ; no more evolutions
-	dbw 1, LICK
-	dbw 1, TAIL_WHIP
-	dbw 4, QUICK_ATTACK
-	dbw 10, FAINT_ATTACK
-	dbw 14, MEGAPHONE
-	dbw 20, HEAL_BELL
-	dbw 24, NIGHT_SHADE
-	dbw 30, TEMPT
-	dbw 34, CRUNCH
-	dbw 40, SLASH
-	dbw 44, MOONLIGHT
-	dbw 50, SHADOW_BALL
-	db 0 ; no more level-up moves
-
-BelledamEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, SCRATCH
-	dbw 1, GROWL
-	dbw 10, PURSUIT
-	dbw 18, BITE
-	dbw 21, COIN_HURL
-	dbw 26, FURY_SWIPES
-	dbw 30, HEAL_BELL
-	dbw 33, FAINT_ATTACK
-	dbw 36, LOVELY_KISS
-	dbw 36, SWEET_KISS
-	dbw 43, CONFUSE_RAY
-	dbw 48, ATTRACT
-	dbw 53, SLASH
 	db 0 ; no more level-up moves
 
 CleflingEvosAttacks:

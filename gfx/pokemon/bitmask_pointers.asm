@@ -172,6 +172,9 @@ BitmasksPointers:
 	dw YanmaBitmasks
 	dw TonbossBitmasks
 	dw BellignanBitmasks
+	dw CoinpurBitmasks
+	dw MoibelleBitmasks
+	dw BelledamBitmasks
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
 	dw PichuBitmasks
@@ -261,11 +264,8 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
-	dw CoinpurBitmasks
 	dw AdbarstorkBitmasks
 	dw PupperonBitmasks
-	dw MoibelleBitmasks
-	dw BelledamBitmasks
 	dw CleflingBitmasks
 	dw MallodyBitmasks
 	dw CamouflakeBitmasks

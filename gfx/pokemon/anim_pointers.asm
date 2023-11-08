@@ -172,6 +172,9 @@ AnimationPointers:
 	dw YanmaAnimation
 	dw TonbossAnimation
 	dw BellignanAnimation
+	dw CoinpurAnimation
+	dw MoibelleAnimation
+	dw BelledamAnimation
 	dw ChinchouAnimation
 	dw LanturnAnimation
 	dw PichuAnimation
@@ -261,11 +264,8 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
-	dw CoinpurAnimation
 	dw AdbarstorkAnimation
 	dw PupperonAnimation
-	dw MoibelleAnimation
-	dw BelledamAnimation
 	dw CleflingAnimation
 	dw MallodyAnimation
 	dw CamouflakeAnimation

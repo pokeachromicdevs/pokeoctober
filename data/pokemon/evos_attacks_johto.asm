@@ -23,6 +23,9 @@ EvosAttacksPointers2::
 	dw YanmaEvosAttacks
 	dw TonbossEvosAttacks
 	dw BellignanEvosAttacks
+	dw CoinpurEvosAttacks
+	dw MoibelleEvosAttacks
+	dw BelledamEvosAttacks
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
 	dw PichuEvosAttacks
@@ -461,6 +464,57 @@ BellignanEvosAttacks:
 	dbw 42, CONFUSE_RAY
 	dbw 50, GIGA_DRAIN
 	dbw 54, SOLARBEAM
+	db 0 ; no more level-up moves
+	
+CoinpurEvosAttacks:
+	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
+	dbw 6, BITE
+	dbw 12, TEMPT
+	dbw 16, PAY_DAY
+	dbw 22, FAINT_ATTACK
+	dbw 28, FURY_SWIPES
+	dbw 32, SCREECH
+	dbw 38, COIN_HURL
+	dbw 44, CHARM
+	dbw 48, SWAGGER
+	dbw 54, SLASH
+	db 0 ; no more level-up moves
+
+MoibelleEvosAttacks:
+	dbbw EVOLVE_HAPPINESS, TR_NITE, BELLEDAM
+	db 0 ; no more evolutions
+	dbw 1, LICK
+	dbw 1, TAIL_WHIP
+	dbw 4, QUICK_ATTACK
+	dbw 10, FAINT_ATTACK
+	dbw 14, MEGAPHONE
+	dbw 20, HEAL_BELL
+	dbw 24, NIGHT_SHADE
+	dbw 30, TEMPT
+	dbw 34, CRUNCH
+	dbw 40, SLASH
+	dbw 44, MOONLIGHT
+	dbw 50, SHADOW_BALL
+	db 0 ; no more level-up moves
+
+BelledamEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, LICK
+	dbw 1, TAIL_WHIP
+	dbw 4, QUICK_ATTACK
+	dbw 10, FAINT_ATTACK
+	dbw 14, MEGAPHONE
+	dbw 20, HEAL_BELL
+	dbw 26, NIGHT_SHADE
+	dbw 32, TEMPT
+	dbw 36, CRUNCH
+	dbw 42, SLASH
+	dbw 46, MOONLIGHT
+	dbw 52, SHADOW_BALL
 	db 0 ; no more level-up moves
 
 ChinchouEvosAttacks:

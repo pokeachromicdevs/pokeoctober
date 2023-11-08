@@ -194,6 +194,9 @@ JOHTO_POKEMON EQU const_value
 	const YANMA
 	const TONBOSS
 	const BELLIGNAN
+	const COINPUR
+	const MOIBELLE
+	const BELLEDAM
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
 	const PICHU      ; ac
@@ -283,11 +286,8 @@ JOHTO_POKEMON EQU const_value
 	const LUGIA      ; f9
 	const HO_OH      ; fa
 	const CELEBI     ; fb
-	const COINPUR    ; fc
 	const ADBARSTORK ; fe
 	const PUPPERON   ; ff
-	const MOIBELLE
-	const BELLEDAM
 	const CLEFLING
 	const MALLODY
 	const CAMOUFLAKE

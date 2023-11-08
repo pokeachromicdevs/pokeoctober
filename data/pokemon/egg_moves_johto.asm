@@ -22,6 +22,9 @@ EggMovePointers2::
 	dw YanmaEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw CoinpurEggMoves
+	dw MoibelleEggMoves
+	dw NoEggMoves2
 	dw ChinchouEggMoves
 	dw NoEggMoves2
 	dw PichuEggMoves
@@ -111,10 +114,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
-	dw CoinpurEggMoves
 	dw AdbarstorkEggMoves
-	dw NoEggMoves2
-	dw MoibelleEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -202,6 +202,19 @@ YanmaEggMoves:
 	dw WHIRLWIND
 	dw REVERSAL
 	dw LEECH_LIFE
+	dw -1 ; end
+	
+CoinpurEggMoves:
+	dw SPITE
+	dw CHARM
+	dw HYPNOSIS
+	dw AMNESIA
+	dw -1 ; end
+	
+MoibelleEggMoves:
+	dw BEAT_UP
+	dw SING
+	dw SWEET_KISS
 	dw -1 ; end
 
 ChinchouEggMoves:
@@ -502,28 +515,12 @@ LarvitarEggMoves:
 	dw FOCUS_ENERGY
 	dw ANCIENTPOWER
 
-CoinpurEggMoves:
-	dw SPITE
-	dw CHARM
-	dw HYPNOSIS
-	dw AMNESIA
-	dw -1 ; end
-
 AdbarstorkEggMoves:
 	dw GUST
 	dw SKY_ATTACK
 	dw CHARM
 	dw PURSUIT
 	dw FAINT_ATTACK
-	dw -1 ; end
-
-NoEggMoves2:
-	dw -1 ; end
-
-MoibelleEggMoves:
-	dw BEAT_UP
-	dw SING
-	dw SWEET_KISS
 	dw -1 ; end
 
 CoaltaEggMoves:
@@ -591,6 +588,6 @@ KotoraEggMoves:
 	db TAKE_DOWN
 	db SCREECH
 	db -1 ; end
-
-CamouflakeEggMoves:
+	
+NoEggMoves2:
 	db -1 ; end

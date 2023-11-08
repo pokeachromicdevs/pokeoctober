@@ -172,6 +172,9 @@ EvolutionMoves::
 	dw NO_MOVE      ; YANMA
 	dw BITE         ; TONBOSS
 	dw LOVELY_KISS  ; BELLIGNAN
+	dw NO_MOVE      ; COINPUR
+	dw NO_MOVE      ; MOIBELLE
+	dw NO_MOVE      ; BELLEDAM
 	dw NO_MOVE      ; CHINCHOU
 	dw NO_MOVE      ; LANTURN
 	dw NO_MOVE      ; PICHU
@@ -261,11 +264,8 @@ EvolutionMoves::
 	dw NO_MOVE      ; LUGIA
 	dw NO_MOVE      ; HO_OH
 	dw NO_MOVE      ; CELEBI
-	dw NO_MOVE      ; COINPUR
-	dw NO_MOVE      ; AdwARSTORK
+	dw NO_MOVE      ; ADBARSTORK
 	dw NO_MOVE      ; PUPPERON
-	dw NO_MOVE      ; MOIBELLE
-	dw NO_MOVE      ; BELLEDAM
 	dw NO_MOVE      ; CLEFLING
 	dw NO_MOVE      ; MALLODY
 	dw NO_MOVE      ; CAMOUFLAKE

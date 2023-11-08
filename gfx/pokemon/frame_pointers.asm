@@ -172,6 +172,9 @@ FramesPointers:
 	dba YanmaFrames
 	dba TonbossFrames
 	dba BellignanFrames
+	dba CoinpurFrames
+	dba MoibelleFrames
+	dba BelledamFrames
 	dba ChinchouFrames
 	dba LanturnFrames
 	dba PichuFrames
@@ -261,11 +264,8 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
-	dba CoinpurFrames
 	dba AdbarstorkFrames
 	dba PupperonFrames
-	dba MoibelleFrames
-	dba BelledamFrames
 	dba CleflingFrames
 	dba MallodyFrames
 	dba CamouflakeFrames

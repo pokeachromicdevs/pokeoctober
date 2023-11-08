@@ -172,6 +172,9 @@ AnimationIdlePointers:
 	dw YanmaAnimationIdle
 	dw TonbossAnimationIdle
 	dw BellignanAnimationIdle
+	dw CoinpurAnimationIdle
+	dw MoibelleAnimationIdle
+	dw BelledamAnimationIdle
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
 	dw PichuAnimationIdle
@@ -261,11 +264,8 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
-	dw CoinpurAnimationIdle
 	dw AdbarstorkAnimationIdle
 	dw PupperonAnimationIdle
-	dw MoibelleAnimationIdle
-	dw BelledamAnimationIdle
 	dw CleflingAnimationIdle
 	dw MallodyAnimationIdle
 	dw CamouflakeAnimationIdle

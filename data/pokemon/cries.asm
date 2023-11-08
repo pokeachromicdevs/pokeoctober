@@ -180,6 +180,9 @@ PokemonCries::
 	mon_cry CRY_YANMA,       $031,  $0c8 ; YANMA
 	mon_cry CRY_YANMA,      -$022,  $200 ; TONBOSS
 	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
+	mon_cry CRY_MARILL,      $0f4,  $0c0 ; COINPUR
+	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
+	mon_cry CRY_RATTATA,     $065,  $180 ; BELLEDAM
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
 	mon_cry CRY_SPINARAK,    0,     256  ; PICHU
@@ -269,11 +272,8 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-	mon_cry CRY_MARILL,      $0f4,  $0c0 ; COINPUR
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
-	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
-	mon_cry CRY_RATTATA,     $065,  $180 ; BELLEDAM
 	mon_cry CRY_SPEAROW,     185,   $100 ; CLEFLING
 	mon_cry CRY_SPEAROW,     185,   $100 ; MALLODY (placeholder)
 	mon_cry CRY_PICHU,       $000,  $150 ; CAMOUFLAKE

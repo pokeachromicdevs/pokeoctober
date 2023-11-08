@@ -297,6 +297,9 @@ FollowSpritePointers::
 	follow_sprite YanmaSpriteGFX,  PAL_FOLLOWER_GREEN ;YANMA
 	follow_sprite YanmegaSpriteGFX, PAL_FOLLOWER_TONBOSS ;TONBOSS
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;BELLIGNAN
+	follow_sprite CoinpurSpriteGFX, PAL_FOLLOWER_MEOWTH ;COINPUR
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MOIBELLE
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;BELLEDAM
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;CHINCHOU
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;LANTURN
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;PICHU
@@ -386,11 +389,8 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;LUGIA
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;HO_OH
 	follow_sprite CelebiSpriteGFX, PAL_FOLLOWER_BROWN;CELEBI
-	follow_sprite CoinpurSpriteGFX, PAL_FOLLOWER_MEOWTH ;COINPUR
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ADBARSTORK
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;PUPPERON
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MOIBELLE
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;BELLEDAM
 	follow_sprite CleflingSpriteGFX, PAL_FOLLOWER_RED ;CLEFLING
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MALLODY
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_SILVER  ;CAMOUFLAKE

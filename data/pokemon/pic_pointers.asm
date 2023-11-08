@@ -187,6 +187,9 @@ PokemonPicPointers::
 	mon_pic Yanma
 	mon_pic Tonboss
 	mon_pic Bellignan
+	mon_pic Coinpur
+	mon_pic Moibelle
+	mon_pic Belledam
 	mon_pic Chinchou
 	mon_pic Lanturn
 	mon_pic Pichu
@@ -279,11 +282,8 @@ PokemonPicPointers::
 	mon_pic Lugia
 	mon_pic HoOh
 	mon_pic Celebi
-	mon_pic Coinpur
 	mon_pic Adbarstork
 	mon_pic Pupperon
-	mon_pic Moibelle
-	mon_pic Belledam
 	mon_pic Clefling
 	mon_pic Mallody
 	mon_pic Camouflake
