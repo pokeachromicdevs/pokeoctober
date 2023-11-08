@@ -41,6 +41,7 @@ INCLUDE "engine/pokemon/move_mon.asm"
 INCLUDE "engine/pokemon/bills_pc_top.asm"
 INCLUDE "engine/pokemon/breedmon_level_growth.asm"
 INCLUDE "engine/events/bug_contest/caught_mon.asm"
+INCLUDE "engine/events/bug_contest/display_stats.asm"
 INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/battle_anims/pokeball_wobble.asm"
 INCLUDE "engine/pokemon/knows_move.asm"
@@ -422,7 +423,6 @@ INCBIN "gfx/credits/theend.2bpp"
 
 SECTION "Battle Animation Stuff", ROMX
 
-INCLUDE "engine/events/bug_contest/display_stats.asm"
 INCLUDE "engine/battle_anims/anim_commands.asm"
 INCLUDE "engine/battle_anims/core.asm"
 INCLUDE "data/battle_anims/objects.asm"
