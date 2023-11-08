@@ -455,7 +455,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 13, RATTATA
 	dbw 14, KOFFING
-	dbw 15, RATTATA
+	dbw 15, HOUNDOUR
 	dbw 14, ZUBAT
 	dbw 15, RATTATA
 	dbw 15, RATICATE
@@ -468,25 +468,25 @@ JohtoGrassWildMons:
 	dbw 14, KOFFING
 	dbw 16, KOFFING
 	dbw 15, ZUBAT
-	dbw 12, KOFFING
+	dbw 12, MAGBY
 	dbw 16, KOFFING
 	dbw 16, WEEZING
 	; day
 	dbw 14, RATTATA
 	dbw 14, KOFFING
 	dbw 16, KOFFING
-	dbw 15, ZUBAT
-	dbw 12, KOFFING
+	dbw 15, MAGBY
+	dbw 12, RATTATA
 	dbw 16, KOFFING
 	dbw 16, WEEZING
 	; nite
 	dbw 14, RATTATA
 	dbw 14, KOFFING
-	dbw 16, KOFFING
+	dbw 16, HOUNDOUR
 	dbw 15, ZUBAT
-	dbw 12, KOFFING
-	dbw 16, KOFFING
-	dbw 16, WEEZING
+	dbw 12, MAGBY
+	dbw 16, STROMEN
+	dbw 16, FENNECURSE
 
 	map_id NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
