@@ -28,6 +28,19 @@ OctoberCredits_StringTable:
 		dw .AtmaBuster, .Blank
 			; programming help & map rips
 			; crystalleaf follower mechanic
+			
+	dw .Blank, .Blank
+	dw .Blank, .Blank
+
+	dw .GameScenario, .Blank
+		dw .TMShadow, .Blank
+		; this guy, man, holy shit he did everything lmfao
+		dw .Quent, .Blank
+		; world building feedback
+		dw .Gabe, .Blank
+		; literally just along for the ride at this point lmao
+		dw .Tajiri, .Blank
+		; piecing his stuff together
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -60,6 +73,8 @@ OctoberCredits_StringTable:
 			; sprite help
 		dw .Poket, .Blank
 			; sprite help
+		dw .Soup,  .Blank
+			; Reforged assets/custom animations
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -129,6 +144,8 @@ OctoberCredits_StringTable:
 			; pokecrystal disassembly
 		dw .TCRF, .Blank
 			; the place where everything is compiled
+		dw .MeanShape, .Blank
+			; idea help
 
 ; last screen
 	dw .Blank, .Blank
@@ -174,7 +191,7 @@ OctoberCredits_StringTable:
 .M17:           db "  MMMMMMMMMMMMMMMMM ";;
 .Gelius:        db "       GELIUS       ";;
 .NieNie:        db "       NIE NIE      ";;
-.Traiyu:        db "       TRAIYU       ";;
+.Traiyu:        db "     SILENTREALM    ";;
 .Kam:           db "         KAM        ";;
 .Poket:         db "        POKET       ";;
 .CoralDev:      db "       CORALDEV     ";;
@@ -193,3 +210,6 @@ OctoberCredits_StringTable:
 .Soul:          db "     SOULCATCHER    ";;
 .Darkshade:     db "      DARKSHADE     ";;
 .Josh:          db "      JO19SH92      ";;
+.MeanShape:     db "    MEANSHAPE101    ";;
+.GameScenario:  db "    GAME SCENARIO   ";;
+.Tajiri:        db "    SATOSHI TAJIRI  ";;
