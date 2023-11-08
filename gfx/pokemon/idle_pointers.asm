@@ -162,6 +162,8 @@ AnimationIdlePointers:
 	dw BayleefAnimationIdle
 	dw SentretAnimationIdle
 	dw FurretAnimationIdle
+	dw CleflingAnimationIdle
+	dw MallodyAnimationIdle
 	dw HoothootAnimationIdle
 	dw NoctowlAnimationIdle
 	dw LedybaAnimationIdle
@@ -182,6 +184,9 @@ AnimationIdlePointers:
 	dw IgglybuffAnimationIdle
 	dw TogepiAnimationIdle
 	dw TogeticAnimationIdle
+	dw BipullaAnimationIdle
+	dw GirafarigAnimationIdle
+	dw TopsyspotAnimationIdle
 	dw NatuAnimationIdle
 	dw KatuAnimationIdle
 	dw XatuAnimationIdle
@@ -210,9 +215,6 @@ AnimationIdlePointers:
 	dw MisdreavusAnimationIdle
 	dw UnownAnimationIdle
 	dw WobbuffetAnimationIdle
-	dw BipullaAnimationIdle
-	dw GirafarigAnimationIdle
-	dw TopsyspotAnimationIdle
 	dw PinecoAnimationIdle
 	dw ForretressAnimationIdle
 	dw ShuckleAnimationIdle
@@ -266,8 +268,6 @@ AnimationIdlePointers:
 	dw CelebiAnimationIdle
 	dw AdbarstorkAnimationIdle
 	dw PupperonAnimationIdle
-	dw CleflingAnimationIdle
-	dw MallodyAnimationIdle
 	dw CamouflakeAnimationIdle
 	dw CoaltaAnimationIdle
 	dw BurgelaAnimationIdle

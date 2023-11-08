@@ -163,6 +163,8 @@ FirstEvoStages::
 	dw BAYLEEF
 	dw SENTRET
 	dw SENTRET
+	dw CLEFLING
+	dw CLEFLING
 	dw HOOTHOOT
 	dw HOOTHOOT
 	dw LEDYBA
@@ -183,6 +185,9 @@ FirstEvoStages::
 	dw IGGLYBUFF
 	dw TOGEPI
 	dw TOGEPI     ;b0
+	dw BIPULLA
+	dw BIPULLA
+	dw BIPULLA
 	dw NATU
 	dw NATU
 	dw NATU
@@ -211,9 +216,6 @@ FirstEvoStages::
 	dw MISDREAVUS ;c8
 	dw UNOWN
 	dw WOBBUFFET
-	dw BIPULLA
-	dw BIPULLA
-	dw BIPULLA
 	dw PINECO
 	dw PINECO
 	dw SHUCKLE
@@ -267,8 +269,6 @@ FirstEvoStages::
 	dw CELEBI
 	dw ADBARSTORK
 	dw PUPPERON
-	dw CLEFLING
-	dw CLEFLING
 	dw CAMOUFLAKE
 	dw COALTA
 	dw BURGELA

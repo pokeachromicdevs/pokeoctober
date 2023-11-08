@@ -371,13 +371,14 @@ WillGroup:
 		; db 42
 		; dw XATU
 		; dw QUICK_ATTACK, FUTURE_SIGHT, CONFUSE_RAY, PSYCHIC_M
-		string "WILL"
-		db TRAINERTYPE_NORMAL
-		dbw 28, SLOWPOKE
-		dbw 29, GASTLY
-		dbw 30, NATU
+	db "WILL@", TRAINERTYPE_NORMAL
+		db 28
+		dw SLOWPOKE
+		db 29 
+		dw GASTLY
+		db 30 
+		dw NATU
 	end_party
-
 	end_party_list
 
 PKMNTrainerGroup:
@@ -1173,10 +1174,10 @@ LassGroup:
 		dw ZUBAT
 	end_party
 
-	next_party ; LASS (23)
-		string "TINA"
-		db     TRAINERTYPE_NORMAL
-		dw    10, BUTTERFREE
+	next_party
+	db "TINA@", TRAINERTYPE_NORMAL
+	db 10
+	dw BUTTERFREE
 	end_party
 
 	next_party

@@ -12,6 +12,8 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw SentretEggMoves
 	dw NoEggMoves2
+	dw NoEggMoves2
+	dw NoEggMoves2
 	dw HoothootEggMoves
 	dw NoEggMoves2
 	dw LedybaEggMoves
@@ -31,6 +33,9 @@ EggMovePointers2::
 	dw CleffaEggMoves
 	dw IgglybuffEggMoves
 	dw TogepiEggMoves
+	dw NoEggMoves2
+	dw BipullaEggMoves
+	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NatuEggMoves
 	dw NoEggMoves2
@@ -58,9 +63,6 @@ EggMovePointers2::
 	dw MurkrowEggMoves
 	dw NoEggMoves2
 	dw MisdreavusEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw BipullaEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw PinecoEggMoves
@@ -115,8 +117,6 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw AdbarstorkEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw CoaltaEggMoves
@@ -253,6 +253,12 @@ TogepiEggMoves:
 	dw FORESIGHT
 	dw FUTURE_SIGHT
 	dw -1 ; end
+	
+BipullaEggMoves:
+	dw MIST
+	dw SPITE
+	dw DISABLE
+	dw -1 ; end
 
 NatuEggMoves:
 	dw HAZE
@@ -325,12 +331,6 @@ MurkrowEggMoves:
 MisdreavusEggMoves:
 	dw SCREECH
 	dw DESTINY_BOND
-	dw -1 ; end
-
-BipullaEggMoves:
-	dw MIST
-	dw SPITE
-	dw DISABLE
 	dw -1 ; end
 
 PinecoEggMoves:

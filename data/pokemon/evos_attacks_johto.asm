@@ -13,6 +13,8 @@ EvosAttacksPointers2::
 	dw BayleefEvosAttacks
 	dw SentretEvosAttacks
 	dw FurretEvosAttacks
+	dw CleflingEvosAttacks
+	dw MallodyEvosAttacks
 	dw HoothootEvosAttacks
 	dw NoctowlEvosAttacks
 	dw LedybaEvosAttacks
@@ -33,6 +35,9 @@ EvosAttacksPointers2::
 	dw IgglybuffEvosAttacks
 	dw TogepiEvosAttacks
 	dw TogeticEvosAttacks
+	dw BipullaEvosAttacks
+	dw GirafarigEvosAttacks
+	dw TopsyspotEvosAttacks
 	dw NatuEvosAttacks
 	dw KatuEvosAttacks
 	dw XatuEvosAttacks
@@ -61,9 +66,6 @@ EvosAttacksPointers2::
 	dw MisdreavusEvosAttacks
 	dw UnownEvosAttacks
 	dw WobbuffetEvosAttacks
-	dw BipullaEvosAttacks
-	dw GirafarigEvosAttacks
-	dw TopsyspotEvosAttacks
 	dw PinecoEvosAttacks
 	dw ForretressEvosAttacks
 	dw ShuckleEvosAttacks
@@ -316,6 +318,30 @@ FurretEvosAttacks:
 	dbw 41, REST
 	dbw 46, AMNESIA
 	dbw 50, BODY_SLAM
+	db 0 ; no more level-up moves
+	
+CleflingEvosAttacks:
+	dbbw EVOLVE_LEVEL, 16, MALLODY
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, MIRROR_MOVE
+	dbw 5, PECK
+	dbw 10, SING
+	dbw 15, SCREECH
+	db 0 ; no more level-up moves
+
+MallodyEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 16, WING_ATTACK
+	dbw 20, WATER_GUN
+	dbw 24, TWISTER
+	dbw 30, DISABLE
+	dbw 34, FLY
+	dbw 38, REST
+	dbw 38, SNORE
+	dbw 44, SLEEP_TALK
+	dbw 48, PERISH_SONG
 	db 0 ; no more level-up moves
 
 HoothootEvosAttacks:

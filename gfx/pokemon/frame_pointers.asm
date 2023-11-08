@@ -162,6 +162,8 @@ FramesPointers:
 	dba BayleefFrames
 	dba SentretFrames
 	dba FurretFrames
+	dba CleflingFrames
+	dba MallodyFrames
 	dba HoothootFrames
 	dba NoctowlFrames
 	dba LedybaFrames
@@ -182,6 +184,9 @@ FramesPointers:
 	dba IgglybuffFrames
 	dba TogepiFrames
 	dba TogeticFrames
+	dba BipullaFrames
+	dba GirafarigFrames
+	dba TopsyspotFrames
 	dba NatuFrames
 	dba KatuFrames
 	dba XatuFrames
@@ -210,9 +215,6 @@ FramesPointers:
 	dba MisdreavusFrames
 	dba UnownFrames
 	dba WobbuffetFrames
-	dba BipullaFrames
-	dba GirafarigFrames
-	dba TopsyspotFrames
 	dba PinecoFrames
 	dba ForretressFrames
 	dba ShuckleFrames
@@ -266,8 +268,6 @@ FramesPointers:
 	dba CelebiFrames
 	dba AdbarstorkFrames
 	dba PupperonFrames
-	dba CleflingFrames
-	dba MallodyFrames
 	dba CamouflakeFrames
 	dba CoaltaFrames
 	dba BurgelaFrames

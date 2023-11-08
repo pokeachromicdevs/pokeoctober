@@ -162,6 +162,8 @@ BitmasksPointers:
 	dw BayleefBitmasks
 	dw SentretBitmasks
 	dw FurretBitmasks
+	dw CleflingBitmasks
+	dw MallodyBitmasks
 	dw HoothootBitmasks
 	dw NoctowlBitmasks
 	dw LedybaBitmasks
@@ -182,6 +184,9 @@ BitmasksPointers:
 	dw IgglybuffBitmasks
 	dw TogepiBitmasks
 	dw TogeticBitmasks
+	dw BipullaBitmasks
+	dw GirafarigBitmasks
+	dw TopsyspotBitmasks
 	dw NatuBitmasks
 	dw KatuBitmasks
 	dw XatuBitmasks
@@ -210,9 +215,6 @@ BitmasksPointers:
 	dw MisdreavusBitmasks
 	dw UnownBitmasks
 	dw WobbuffetBitmasks
-	dw BipullaBitmasks
-	dw GirafarigBitmasks
-	dw TopsyspotBitmasks
 	dw PinecoBitmasks
 	dw ForretressBitmasks
 	dw ShuckleBitmasks
@@ -266,8 +268,6 @@ BitmasksPointers:
 	dw CelebiBitmasks
 	dw AdbarstorkBitmasks
 	dw PupperonBitmasks
-	dw CleflingBitmasks
-	dw MallodyBitmasks
 	dw CamouflakeBitmasks
 	dw CoaltaBitmasks
 	dw BurgelaBitmasks

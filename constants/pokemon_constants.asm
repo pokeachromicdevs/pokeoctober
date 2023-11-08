@@ -184,6 +184,8 @@ JOHTO_POKEMON EQU const_value
 	const BAYLEEF
 	const SENTRET    ; a1
 	const FURRET     ; a2
+	const CLEFLING
+	const MALLODY
 	const HOOTHOOT   ; a3
 	const NOCTOWL    ; a4
 	const LEDYBA     ; a5
@@ -204,6 +206,9 @@ JOHTO_POKEMON EQU const_value
 	const IGGLYBUFF  ; ae
 	const TOGEPI     ; af
 	const TOGETIC    ; b0
+	const BIPULLA
+	const GIRAFARIG
+	const TOPSYSPOT
 	const NATU       ; b1
 	const KATU
 	const XATU       ; b2
@@ -232,9 +237,6 @@ JOHTO_POKEMON EQU const_value
 	const MISDREAVUS ; c8
 	const UNOWN      ; c9
 	const WOBBUFFET  ; ca
-	const BIPULLA
-	const GIRAFARIG  ; cb
-	const TOPSYSPOT
 	const PINECO     ; cc
 	const FORRETRESS ; cd
 	const SHUCKLE
@@ -288,8 +290,6 @@ JOHTO_POKEMON EQU const_value
 	const CELEBI     ; fb
 	const ADBARSTORK ; fe
 	const PUPPERON   ; ff
-	const CLEFLING
-	const MALLODY
 	const CAMOUFLAKE
 	const COALTA
 	const BURGELA

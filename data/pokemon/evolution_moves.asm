@@ -162,6 +162,8 @@ EvolutionMoves::
 	dw NO_MOVE      ; BAYLEEF
 	dw NO_MOVE      ; SENTRET
 	dw AGILITY      ; FURRET
+	dw NO_MOVE      ; CLEFLING
+	dw NO_MOVE      ; MALLODY
 	dw NO_MOVE      ; HOOTHOOT
 	dw NO_MOVE      ; NOCTOWL
 	dw NO_MOVE      ; LEDYBA
@@ -182,6 +184,9 @@ EvolutionMoves::
 	dw NO_MOVE      ; IGGLYBUFF
 	dw NO_MOVE      ; TOGEPI
 	dw NO_MOVE      ; TOGETIC
+	dw NO_MOVE      ; BIPULLA
+	dw DOUBLE_KICK  ; GIRAFARIG
+	dw NO_MOVE      ; TOPSYSPOT
 	dw NO_MOVE      ; NATU
 	dw FLY          ; KATU
 	dw FUTURE_SIGHT ; XATU
@@ -210,9 +215,6 @@ EvolutionMoves::
 	dw NO_MOVE      ; MISDREAVUS
 	dw NO_MOVE      ; UNOWN
 	dw NO_MOVE      ; WOBBUFFET
-	dw NO_MOVE      ; BIPULLA
-	dw DOUBLE_KICK  ; GIRAFARIG
-	dw NO_MOVE      ; TOPSYSPOT
 	dw NO_MOVE      ; PINECO
 	dw NO_MOVE      ; FORRETRESS
 	dw NO_MOVE      ; SHUCKLE
@@ -266,8 +268,6 @@ EvolutionMoves::
 	dw NO_MOVE      ; CELEBI
 	dw NO_MOVE      ; ADBARSTORK
 	dw NO_MOVE      ; PUPPERON
-	dw NO_MOVE      ; CLEFLING
-	dw NO_MOVE      ; MALLODY
 	dw NO_MOVE      ; CAMOUFLAKE
 	dw NO_MOVE      ; COALTA
 	dw NO_MOVE      ; BURGELA

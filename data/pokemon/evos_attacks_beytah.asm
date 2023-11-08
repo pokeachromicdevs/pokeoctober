@@ -3,8 +3,6 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw AdbarstorkEvosAttacks
 	dw PupperonEvosAttacks
-	dw CleflingEvosAttacks
-	dw MallodyEvosAttacks
 	dw CamouflakeEvosAttacks
 	dw CoaltaEvosAttacks
 	dw BurgelaEvosAttacks
@@ -169,30 +167,6 @@ PupperonEvosAttacks:
 	dbw 45, CRUNCH
 	dbw 50, OUTRAGE
 	dbw 56, FIRE_BLAST
-	db 0 ; no more level-up moves
-
-CleflingEvosAttacks:
-	dbbw EVOLVE_LEVEL, 16, MALLODY
-	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, GROWL
-	dbw 1, MIRROR_MOVE
-	dbw 5, PECK
-	dbw 10, SING
-	dbw 15, SCREECH
-	db 0 ; no more level-up moves
-
-MallodyEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 16, WING_ATTACK
-	dbw 20, WATER_GUN
-	dbw 24, TWISTER
-	dbw 30, DISABLE
-	dbw 34, FLY
-	dbw 38, REST
-	dbw 38, SNORE
-	dbw 44, SLEEP_TALK
-	dbw 48, PERISH_SONG
 	db 0 ; no more level-up moves
 
 CamouflakeEvosAttacks:

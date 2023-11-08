@@ -287,6 +287,8 @@ FollowSpritePointers::
 	follow_sprite BayleefSpriteGFX, PAL_FOLLOWER_GREEN ;BAYLEEF
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;SENTRET
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;FURRET
+	follow_sprite CleflingSpriteGFX, PAL_FOLLOWER_RED ;CLEFLING
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MALLODY
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;HOOTHOOT
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;NOCTOWL
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;LEDYBA
@@ -307,6 +309,9 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;IGGLYBUFF
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;TOGEPI
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;TOGETIC
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;BIPULLA
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GIRAFARIG
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;TOPSYSPOT
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;NATU
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;KATU
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_GREEN ;XATU
@@ -335,9 +340,6 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MISDREAVUS
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;UNOWN
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;WOBBUFFET
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;BIPULLA
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;GIRAFARIG
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;TOPSYSPOT
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PINECO
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;FORRETRESS
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;SHUCKLE
@@ -391,8 +393,6 @@ FollowSpritePointers::
 	follow_sprite CelebiSpriteGFX, PAL_FOLLOWER_BROWN;CELEBI
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ADBARSTORK
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_RED ;PUPPERON
-	follow_sprite CleflingSpriteGFX, PAL_FOLLOWER_RED ;CLEFLING
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MALLODY
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_SILVER  ;CAMOUFLAKE
 	follow_sprite CoaltaSpriteGFX, PAL_FOLLOWER_RED ;COALTA
 	follow_sprite BurgelaSpriteGFX, PAL_FOLLOWER_BLUE ;BURGELA

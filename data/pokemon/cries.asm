@@ -170,8 +170,10 @@ PokemonCries::
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
 	mon_cry CRY_SENTRET,     $08a,  $0b8 ; SENTRET
 	mon_cry CRY_SENTRET,     $06b,  $102 ; FURRET
-	mon_cry CRY_HOOTHOOT_2CH,    $000,  $0a0 ; HOOTHOOT
-	mon_cry CRY_HOOTHOOT,   -$08e,  $100 ; NOCTOWL
+	mon_cry CRY_HOOTHOOT_2CH,    $000,  $0a0 ; CLEFLING
+	mon_cry CRY_SPEAROW,     185,   $100 ; MALLODY
+	mon_cry CRY_MISDREAVUS,    $091,  $0d8 ; HOOTHOOT
+	mon_cry CRY_MISDREAVUS,    $000,  $1a0 ; NOCTOWL
 	mon_cry CRY_LEDYBA,      $000,  $0de ; LEDYBA
 	mon_cry CRY_LEDYBA,     -$096,  $138 ; LEDIAN
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
@@ -190,6 +192,9 @@ PokemonCries::
 	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF
 	mon_cry CRY_TOGEPI,      $010,  $100 ; TOGEPI
 	mon_cry CRY_TOGETIC,     $03b,  $038 ; TOGETIC
+	mon_cry CRY_BIPULLA,     -264,  320  ; TWINZ (unique!, add this beta base cry in)
+	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
+	mon_cry CRY_GIRAFARIG,   $3fc,  $210 ; TOPSYSPOT
 	mon_cry CRY_NATU,       -$067,  $100 ; NATU
 	mon_cry CRY_NATU,       -$07c,  $166 ; KATU
 	mon_cry CRY_NATU,       -$0a7,  $168 ; XATU
@@ -218,9 +223,6 @@ PokemonCries::
 	mon_cry CRY_MISDREAVUS,  $130,  $0e8 ; MISDREAVUS
 	mon_cry CRY_MISDREAVUS,  $162,  $100 ; UNOWN
 	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET, needs fixing
-	mon_cry CRY_BIPULLA,     -264,  320 ; TWINZ (unique!, add this beta base cry in)
-	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
-	mon_cry CRY_GIRAFARIG,   $3fc,  $210 ; TOPSYSPOT
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
 	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
 	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; SHUCKLE
@@ -274,8 +276,6 @@ PokemonCries::
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
 	mon_cry CRY_SUNFLORA,   -$060,  $19f ; ADBARSTORK
 	mon_cry CRY_GROWLITHE,   $0a1,  $0e8 ; PUPPERON
-	mon_cry CRY_SPEAROW,     185,   $100 ; CLEFLING
-	mon_cry CRY_SPEAROW,     185,   $100 ; MALLODY (placeholder)
 	mon_cry CRY_PICHU,       $000,  $150 ; CAMOUFLAKE
 	mon_cry CRY_MARILL,      $0c0,  $090 ; COALTA
 	mon_cry CRY_MARILL,      $f4c,  $110 ; BURGELA

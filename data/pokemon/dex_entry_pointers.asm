@@ -163,6 +163,8 @@ PokedexDataPointerTable:
 	dba BayleefPokedexEntry
 	dba SentretPokedexEntry
 	dba FurretPokedexEntry
+	dba CleflingPokedexEntry
+	dba MallodyPokedexEntry
 	dba HoothootPokedexEntry
 	dba NoctowlPokedexEntry
 	dba LedybaPokedexEntry
@@ -183,6 +185,9 @@ PokedexDataPointerTable:
 	dba IgglybuffPokedexEntry
 	dba TogepiPokedexEntry
 	dba TogeticPokedexEntry
+	dba BipullaPokedexEntry
+	dba GirafarigPokedexEntry
+	dba TopsyspotPokedexEntry
 	dba NatuPokedexEntry
 	dba KatuPokedexEntry
 	dba XatuPokedexEntry
@@ -211,9 +216,6 @@ PokedexDataPointerTable:
 	dba MisdreavusPokedexEntry
 	dba UnownPokedexEntry
 	dba WobbuffetPokedexEntry
-	dba BipullaPokedexEntry
-	dba GirafarigPokedexEntry
-	dba TopsyspotPokedexEntry
 	dba PinecoPokedexEntry
 	dba ForretressPokedexEntry
 	dba ShucklePokedexEntry
@@ -267,8 +269,6 @@ PokedexDataPointerTable:
 	dba CelebiPokedexEntry
 	dba AdbarstorkPokedexEntry
 	dba PupperonPokedexEntry
-	dba CleflingPokedexEntry
-	dba MallodyPokedexEntry
 	dba CamouflakePokedexEntry
 	dba CoaltaPokedexEntry
 	dba BurgelaPokedexEntry

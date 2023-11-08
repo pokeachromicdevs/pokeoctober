@@ -177,6 +177,8 @@ PokemonPicPointers::
 	mon_pic Bayleef
 	mon_pic Sentret
 	mon_pic Furret
+	mon_pic Clefling
+	mon_pic Mallody
 	mon_pic Hoothoot
 	mon_pic Noctowl
 	mon_pic Ledyba
@@ -197,6 +199,9 @@ PokemonPicPointers::
 	mon_pic Igglybuff
 	mon_pic Togepi
 	mon_pic Togetic
+	mon_pic Bipulla
+	mon_pic Girafarig
+	mon_pic Topsyspot
 	mon_pic Natu
 	mon_pic Katu
 	mon_pic Xatu
@@ -228,9 +233,6 @@ PokemonPicPointers::
 	ds 3 * 3
 
 	mon_pic Wobbuffet
-	mon_pic Bipulla
-	mon_pic Girafarig
-	mon_pic Topsyspot
 	mon_pic Pineco
 	mon_pic Forretress
 	mon_pic Shuckle
@@ -284,8 +286,6 @@ PokemonPicPointers::
 	mon_pic Celebi
 	mon_pic Adbarstork
 	mon_pic Pupperon
-	mon_pic Clefling
-	mon_pic Mallody
 	mon_pic Camouflake
 	mon_pic Coalta
 	mon_pic Burgela
