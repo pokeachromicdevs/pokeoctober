@@ -269,6 +269,6 @@ MoveNames::
 	move_name "ROCK SLASH"
 	move_name "INK SPRAY"
 	move_name "MEGAPHONE"
-	move_name "AMBUSH"
+	move_name "BLINDSIDE"
 	move_name "WILL-O-WISP"
 	move_name "EVIL EYE"
