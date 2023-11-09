@@ -231,7 +231,10 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLE_ANIM_OBJ_DAZZLE              ; c4
 	const BATTLE_ANIM_OBJ_MEGAPHONE           ; c5
 	const BATTLE_ANIM_OBJ_CAKE                ; c6
-
+	const ANIM_OBJ_WATER_SPORT                ; c7
+	const BATTLE_ANIM_OBJ_WATER_SPOUT_RISING  ; c8
+	const BATTLE_ANIM_OBJ_WATER_SPOUT_FALLING ; c9
+	
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
 	const BATTLE_ANIM_FUNC_NULL                      ; 00
@@ -314,7 +317,8 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLE_ANIM_FUNC_ANCIENT_POWER             ; 4d
 	const BATTLE_ANIM_FUNC_ROCK_SMASH                ; 4e
 	const BATTLE_ANIM_FUNC_COTTON                    ; 4f
-	const BATTLEANIMFUNC_RADIAL_MOVE_OUT             ; 50
+	const BATTLE_ANIM_FUNC_BUBBLE_SPLASH             ; 50
+	const BATTLE_ANIM_FUNC_RADIAL_MOVE_OUT           ; 51
 
 ; BattleAnimFrameData indexes (see data/battle_anims/framesets.asm)
 	const_def

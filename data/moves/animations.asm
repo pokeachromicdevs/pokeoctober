@@ -4964,7 +4964,7 @@ BattleAnim_Megaphone:
 	
 BattleAnim_WillOWisp:
 	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_WILL_O_WISP
-	anim_1gfx ANIM_GFX_FIRE
+	anim_1gfx BATTLE_ANIM_GFX_FIRE
 	anim_bgp $1b
 	anim_sound 6, 2, SFX_SLUDGE_BOMB
 	anim_obj BATTLE_ANIM_OBJ_DRAGON_RAGE, 64, 92, $0
