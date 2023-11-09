@@ -2207,7 +2207,7 @@ DoBurn:
 	stab
 	checkhit
 	checksafeguard
-	burntarget
+	burn
 	endmove
 	
 EvilEye:

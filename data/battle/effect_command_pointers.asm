@@ -182,3 +182,4 @@ BattleCommandPointers:
 	dw BattleCommand_CoinHurl
 	dw BattleCommand_NotifyWeakenedEffect
 	dw BattleCommand_EvilEye
+	dw BattleCommand_Burn
