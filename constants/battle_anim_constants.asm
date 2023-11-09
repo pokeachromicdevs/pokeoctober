@@ -231,7 +231,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLE_ANIM_OBJ_DAZZLE              ; c4
 	const BATTLE_ANIM_OBJ_MEGAPHONE           ; c5
 	const BATTLE_ANIM_OBJ_CAKE                ; c6
-	const ANIM_OBJ_WATER_SPORT                ; c7
+	const BATTLE_ANIM_OBJ_WATER_SPORT         ; c7
 	const BATTLE_ANIM_OBJ_WATER_SPOUT_RISING  ; c8
 	const BATTLE_ANIM_OBJ_WATER_SPOUT_FALLING ; c9
 	
