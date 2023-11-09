@@ -2625,6 +2625,7 @@ BattleAnim_Guillotine:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_BrightMoss:
 BattleAnim_Flash:
 	anim_1gfx BATTLE_ANIM_GFX_SPEED
 	anim_sound 0, 1, SFX_FLASH
@@ -4073,6 +4074,7 @@ BattleAnim_SteelWing:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_EvilEye:
 BattleAnim_MeanLook:
 	anim_1gfx BATTLE_ANIM_GFX_PSYCHIC
 	anim_obp0 $e0
@@ -4810,7 +4812,7 @@ BattleAnim_RockHead:
 	anim_wait 8
 	anim_sound 0, 1, SFX_KARATE_CHOP
 	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
-	anim_obj ANIM_OBJ_01, 128, 56, $0
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 128, 56, $0
 	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 128, 64, $28
 	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 128, 64, $5c
 	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 128, 64, $10
@@ -4826,30 +4828,30 @@ BattleAnim_RockHead:
 	anim_ret
 	
 BattleAnim_WaterSport:
-	anim_1gfx ANIM_GFX_WATER
+	anim_1gfx BATTLE_ANIM_GFX_WATER
 	anim_setobjpal PAL_BATTLE_OB_BLUE, PAL_BTLCUSTOM_WATER
-	anim_call BattleAnim_TargetObj_2Row_2
-	anim_bgeffect ANIM_BG_BOUNCE_DOWN, $0, $1, $0
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect BATTLE_BG_EFFECT_BOUNCE_DOWN, $0, $1, $0
 	anim_wait 22
 	anim_call BattleAnim_WaterSport_branch
-	anim_incbgeffect ANIM_BG_BOUNCE_DOWN
-	anim_call BattleAnim_ShowMon_0_2
+	anim_incbgeffect BATTLE_BG_EFFECT_BOUNCE_DOWN
+	anim_call BattleAnim_ShowMon_0
 	anim_clearobjs
 .loop
 	anim_sound 6, 2, SFX_SQUEAK
-	anim_obj ANIM_OBJ_WATER_SPORT, 40, 20, $10
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPORT, 40, 20, $10
 	anim_wait 8
 	anim_sound 6, 2, SFX_SQUEAK
-	anim_obj ANIM_OBJ_WATER_SPORT, 90, 20, $10
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPORT, 90, 20, $10
 	anim_wait 8
 	anim_sound 6, 2, SFX_SQUEAK
-	anim_obj ANIM_OBJ_WATER_SPORT, 140, 20, $10
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPORT, 140, 20, $10
 	anim_wait 8
 	anim_sound 6, 2, SFX_SQUEAK
-	anim_obj ANIM_OBJ_WATER_SPORT, 65, 20, $10
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPORT, 65, 20, $10
 	anim_wait 8
 	anim_sound 6, 2, SFX_SQUEAK
-	anim_obj ANIM_OBJ_WATER_SPORT, 115, 20, $10
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPORT, 115, 20, $10
 	anim_wait 8
 	anim_sound 6, 2, SFX_SQUEAK
 	anim_loop 2, .loop
@@ -4859,13 +4861,13 @@ BattleAnim_WaterSport:
 BattleAnim_WaterSport_branch:
 .loop
 	anim_sound 0, 1, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $32
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $32
 	anim_wait 2
-	anim_obj ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $2e
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $2e
 	anim_wait 2
-	anim_obj ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $31
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $31
 	anim_wait 2
-	anim_obj ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $2f
+	anim_obj BATTLE_ANIM_OBJ_WATER_SPOUT_RISING, 48, 80, $2f
 	anim_wait 28
 	anim_loop 2, .loop
 	anim_ret
@@ -4965,11 +4967,11 @@ BattleAnim_WillOWisp:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_bgp $1b
 	anim_sound 6, 2, SFX_SLUDGE_BOMB
-	anim_obj ANIM_OBJ_DRAGON_RAGE, 64, 92, $0
+	anim_obj BATTLE_ANIM_OBJ_DRAGON_RAGE, 64, 92, $0
 	anim_wait 40
 	anim_sound 0, 0, SFX_CURSE
 .loop
-	anim_obj ANIM_OBJ_SACRED_FIRE, 132, 68, $0
+	anim_obj BATTLE_ANIM_OBJ_SACRED_FIRE, 132, 68, $0
 	anim_wait 8
 	anim_loop 4, .loop
 	anim_wait 48
