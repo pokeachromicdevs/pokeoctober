@@ -4073,7 +4073,7 @@ InitRadial:
 
 Step:
 	call Get_Rad_Pos
-	ld hl, 6.0 ; speed
+	ld hl, 6 ; speed
 	call Set_Rad_Pos
 	cp 80 ; final position
 	jp nc, DeinitBattleAnimation
