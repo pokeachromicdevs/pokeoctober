@@ -9,6 +9,13 @@ SECTION "rst0", ROM0
 
 SECTION "rst8", ROM0 ; rst FarCall
 	jp FarCall_hl
+	
+SwapHLDE::
+	push de
+	ld d, h
+	ld e, l
+	pop hl
+	ret
 
 SECTION "rst10", ROM0 ; rst Bankswitch
 	ldh [hROMBank], a
@@ -19,13 +26,7 @@ SECTION "rst18", ROM0
 	ldh [hBuffer], a
 	ld a, E_RST_18_CALL
 	jp CrashOveride
-	
-SwapHLDE::
-	push de
-	ld d, h
-	ld e, l
-	pop hl
-	ret
+
 
 SECTION "rst20", ROM0
 	ldh [hBuffer], a

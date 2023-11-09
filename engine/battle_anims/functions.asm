@@ -4076,7 +4076,7 @@ Step:
 	ld hl, 6.0 ; speed
 	call Set_Rad_Pos
 	cp 80 ; final position
-	jmp nc, DeinitBattleAnimation
+	jp nc, DeinitBattleAnimation
 	jr Rad_Move
 
 Get_Rad_Pos:

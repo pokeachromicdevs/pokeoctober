@@ -145,7 +145,6 @@ ROMX $32
 	"Sprites 3"
 ROMX $33
 	"Battle Animation Stuff"
-	"Extra Songs 2"
 ROMX $34
 	"Pic Animations Engine"
 ROMX $36
@@ -161,6 +160,7 @@ ROMX $3a
 	"Songs 1"
 ROMX $3b
 	"Songs 2"
+	"Extra Songs 2"
 ROMX $3c
 	"Songs 3"
 	"Sound Effects"

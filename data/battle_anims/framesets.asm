@@ -239,11 +239,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_4C,  2
 	frame BATTLE_ANIM_OAMSET_4D,  4
 	frame BATTLE_ANIM_OAMSET_4E,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2
 	delanim
 
@@ -252,11 +252,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_4C,  2, OAM_X_FLIP
 	frame BATTLE_ANIM_OAMSET_4D,  4, OAM_X_FLIP
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP
 	delanim
 
@@ -265,11 +265,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_4C,  2, OAM_X_FLIP, OAM_Y_FLIP
 	frame BATTLE_ANIM_OAMSET_4D,  4, OAM_X_FLIP, OAM_Y_FLIP
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
 	delanim
 
@@ -281,11 +281,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_50,  1
 	frame BATTLE_ANIM_OAMSET_51,  1
 	frame BATTLE_ANIM_OAMSET_52,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2
 	delanim
 
@@ -297,11 +297,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_50,  1, OAM_X_FLIP
 	frame BATTLE_ANIM_OAMSET_51,  1, OAM_X_FLIP
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP
 	delanim
 
@@ -377,13 +377,13 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_10,  3
 	frame BATTLE_ANIM_OAMSET_0F,  3
 	frame BATTLE_ANIM_OAMSET_12,  1
-	oamwait 1
+	dowait 1
 	frame BATTLE_ANIM_OAMSET_12,  1
-	oamwait 1
+	dowait 1
 	frame BATTLE_ANIM_OAMSET_12,  1
-	oamwait 1
+	dowait 1
 	frame BATTLE_ANIM_OAMSET_12,  1
-	oamwait 1
+	dowait 1
 	frame BATTLE_ANIM_OAMSET_12,  3
 	delanim
 
@@ -544,13 +544,13 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_34, 32
 	frame BATTLE_ANIM_OAMSET_35, 32 ; fallthrough
 .Frameset_Frozen:
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_35,  4
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_35,  4
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_35,  4
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_35,  4
 	delanim
 
@@ -588,13 +588,13 @@ BattleAnimFrameData:
 
 .Frameset_ThunderWaveExtra:
 	frame BATTLE_ANIM_OAMSET_40,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_40,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_41,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_41,  2
-	oamwait 2
+	dowait 2
 	dorestart
 
 .Frameset_ThunderBoltSparks:
@@ -606,7 +606,7 @@ BattleAnimFrameData:
 
 .Frameset_ThunderBoltCore:
 	frame BATTLE_ANIM_OAMSET_19,  2
-	oamwait 2
+	dowait 2
 	dorestart
 
 .Frameset_ThunderShockSparks:
@@ -616,7 +616,7 @@ BattleAnimFrameData:
 
 .Frameset_ThunderShockCore:
 	frame BATTLE_ANIM_OAMSET_18,  2
-	oamwait 2
+	dowait 2
 	dorestart
 
 .Frameset_Clamp:
@@ -648,15 +648,15 @@ BattleAnimFrameData:
 	endanim
 
 .Frameset_AbsorbCenter:
-	oamwait 20
+	dowait 20
 	frame BATTLE_ANIM_OAMSET_55, 40
 	frame BATTLE_ANIM_OAMSET_54, 40
 	frame BATTLE_ANIM_OAMSET_53, 20
-	oamwait 4
+	dowait 4
 	frame BATTLE_ANIM_OAMSET_53,  4
-	oamwait 4
+	dowait 4
 	frame BATTLE_ANIM_OAMSET_53,  4
-	oamwait 4
+	dowait 4
 	frame BATTLE_ANIM_OAMSET_53,  4
 	delanim
 
@@ -667,11 +667,11 @@ BattleAnimFrameData:
 	delanim
 
 .Frameset_Gust:
-	oamwait 0
+	dowait 0
 	frame BATTLE_ANIM_OAMSET_14,  0
 	frame BATTLE_ANIM_OAMSET_15,  0
 	frame BATTLE_ANIM_OAMSET_14,  0, OAM_X_FLIP
-	oamwait 0
+	dowait 0
 	frame BATTLE_ANIM_OAMSET_16,  0, OAM_X_FLIP
 	frame BATTLE_ANIM_OAMSET_15,  0
 	frame BATTLE_ANIM_OAMSET_16,  0
@@ -876,7 +876,7 @@ BattleAnimFrameData:
 	delanim
 
 .Frameset_DigPile:
-	oamwait 15
+	dowait 15
 	frame BATTLE_ANIM_OAMSET_84, 15
 	frame BATTLE_ANIM_OAMSET_85, 15
 	frame BATTLE_ANIM_OAMSET_29, 15
@@ -979,11 +979,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_9C,  2
 	frame BATTLE_ANIM_OAMSET_9D,  2
 	frame BATTLE_ANIM_OAMSET_9E,  8
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_9E,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_9E,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_9E,  2
 	delanim
 
@@ -1169,11 +1169,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_50,  1
 	frame BATTLE_ANIM_OAMSET_51,  1
 	frame BATTLE_ANIM_OAMSET_52,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2
 	delanim
 
@@ -1187,11 +1187,11 @@ BattleAnimFrameData:
 	frame BATTLE_ANIM_OAMSET_50,  1, OAM_X_FLIP, OAM_Y_FLIP
 	frame BATTLE_ANIM_OAMSET_51,  1, OAM_X_FLIP, OAM_Y_FLIP
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
-	oamwait 2
+	dowait 2
 	frame BATTLE_ANIM_OAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
 	delanim
 
