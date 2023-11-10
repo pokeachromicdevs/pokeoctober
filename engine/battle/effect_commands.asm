@@ -5948,7 +5948,8 @@ BattleCommand_Burn:
 	ld hl, ApplyBrnEffectOnAttack
 	call CallBattleCore
 	call UpdateBattleHuds
-	call PrintBurn
+	ld hl, WasBurnedText
+	jp StdBattleTextbox
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
 
