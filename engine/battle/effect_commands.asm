@@ -5893,7 +5893,7 @@ BattleCommand_Burn:
 	jr nz, .burned
 	ld a, [wTypeModifier]
 	and $7f
-	jr z, .didnt_affect
+	jp z, .didnt_affect
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_BURN
