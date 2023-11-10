@@ -4072,32 +4072,21 @@ InitRadial:
 	call BattleAnim_IncAnonJumptableIndex
 
 Step:
-	call Get_Rad_Pos
-	ld hl, 6 ; speed
-	call Set_Rad_Pos
-	cp 80 ; final position
-	jp nc, DeinitBattleAnimation
-	jr Rad_Move
-
-Get_Rad_Pos:
 	ld hl, BATTLEANIMSTRUCT_VAR1
 	add hl, bc
+	push hl
 	ld a, [hli]
 	ld e, [hl]
 	ld d, a
-	ret 
-
-Set_Rad_Pos:
+	ld hl, 6 ; speed
 	add hl, de
 	ld a, h
 	ld e, l
-	ld hl, BATTLEANIMSTRUCT_VAR1
-	add hl, bc
+	pop hl
 	ld [hli], a
 	ld [hl], e
-	ret
-
-Rad_Move:
+	cp 80 ; final position
+	jp nc, DeinitBattleAnimation
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld e, [hl]
