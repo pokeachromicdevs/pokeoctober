@@ -532,12 +532,11 @@ BirdKeeperBlocking:
 
 	para "Apparently,"
 	line "someone claims"
-
-	para "they saw some"
-	line "ROCKET goons"
-
-	para "wandering around"
-	line "here, so FALKNER"
+	cont "they saw some"
+	
+	para "ROCKET goons"
+	line"wandering around"
+	cont "here, so FALKNER"
 
 	para "decided to scout"
 	line "for the criminals"
