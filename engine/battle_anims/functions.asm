@@ -4103,13 +4103,13 @@ Rad_Move:
 	ld e, [hl]
 	push de
 	ld a, e
-	call Sine
+	call BattleAnim_Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	ld a, e
-	call Cosine
+	call BattleAnim_Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
