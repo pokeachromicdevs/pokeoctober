@@ -472,6 +472,7 @@ INCLUDE "maps/SilentHills.asm"
 INCLUDE "maps/SilentTown.asm"
 INCLUDE "maps/SakuraShrine.asm"
 INCLUDE "maps/VioletMuseum.asm"
+INCLUDE "maps/HillsGustHouse.asm"
 
 
 SECTION "Map Scripts 26", ROMX

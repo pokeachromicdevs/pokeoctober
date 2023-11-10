@@ -521,6 +521,8 @@ ENDM
 	map_const CHERRYGROVE_PAGODA_4F,                        4,  4
 	map_const CHERRYGROVE_PAGODA_5F,                        3,  3
 	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 10
+	map_const HILLS_GUST_HOUSE,                             4,  4
+
 
 	newgroup                                                      ; 27
 	map_const CITRINE_ISLAND,                              20, 18 ;  1

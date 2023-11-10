@@ -183,6 +183,7 @@ CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
 AzaleaLeftHouse_Blocks:
 AzaleaRightHouse_Blocks:
+HillsGustHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 SafariZoneFuchsiaGateBeta_Blocks:

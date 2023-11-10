@@ -718,6 +718,7 @@ ENDM
 	map_attributes SilentPokecenter1F, SILENT_POKECENTER_1F, $00, 0
 	map_attributes AlderPokecenter1F, ALDER_POKECENTER_1F, $00, 0
 	map_attributes AlderMart, ALDER_MART, $00, 0
+	map_attributes HillsGustHouse, HILLS_GUST_HOUSE, $00, 0
 
 	map_attributes CitrineIsland, CITRINE_ISLAND, $41, 0
 	map_attributes CitrineMart, CITRINE_MART, $00, 0

@@ -45,11 +45,12 @@ CherrygrovePokecenter1F_ElmsAideScript:
 	opentext
 	writetext UnknownText_0x69555
 	waitbutton
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+	waitbutton
 	verbosegivetmhm UPROOT_TMNUM
 	writetext GotUprootText
 	waitbutton
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .PartyFull
 	giveegg TOGEPI, 5
 	getstring STRING_BUFFER_4, .eggname
 	scall .AideGivesEgg
@@ -210,7 +211,9 @@ UnknownText_0x69693:
 
 	para "I'll wait here"
 	line "while you make"
-	cont "room for the EGG."
+	cont "room for PROF."
+	
+	para "ELM's gifts."
 	done
 
 UnknownText_0x696f2:
