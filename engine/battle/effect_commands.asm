@@ -5949,7 +5949,7 @@ BattleCommand_Burn:
 	call CallBattleCore
 	call UpdateBattleHuds
 	ld hl, WasBurnedText
-	jp StdBattleTextbox
+	call StdBattleTextbox
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
 
