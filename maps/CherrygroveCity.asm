@@ -535,7 +535,7 @@ BirdKeeperBlocking:
 	cont "they saw some"
 	
 	para "ROCKET goons"
-	line"wandering around"
+	line "wandering around"
 	cont "here, so FALKNER"
 
 	para "decided to scout"
