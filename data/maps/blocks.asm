@@ -183,6 +183,7 @@ CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
 AzaleaLeftHouse_Blocks:
 AzaleaRightHouse_Blocks:
+VioletKylesHouse_Blocks:
 HillsGustHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
@@ -397,7 +398,6 @@ TimeCapsule_Blocks:
 EcruteakLugiaSpeechHouse_Blocks:
 EcruteakItemfinderHouse_Blocks:
 VioletNicknameSpeechHouse_Blocks:
-VioletKylesHouse_Blocks:
 	INCBIN "maps/House2.blk"
 
 UnionCaveB1F_Blocks:
