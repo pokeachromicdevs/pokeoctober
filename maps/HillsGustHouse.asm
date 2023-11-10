@@ -42,8 +42,11 @@ GustAfterText:
 	line "flying-type move."
 	
 	para "Try teaching it"
-	line "to a compatible"
-	cont "#MON."
+	line "to a #MON that"
+	cont "can stir up wind,"
+	
+	para "like PIDGEY or"
+	line "JIGGLYPUFF."
 	done
 
 HillsGustHouse_MapEvents:
