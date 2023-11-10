@@ -192,6 +192,12 @@ Cry_Bipulla:
 	channel 5, Cry_Bipulla_Ch5
 	channel 6, Cry_Bipulla_Ch6
 	channel 8, Cry_Bipulla_Ch8
+	
+Cry_Tricules:
+	channel_count 3
+	channel 5, Cry_Tricules_Ch5
+	channel 6, Cry_Tricules_Ch6
+	channel 8, Cry_Tricules_Ch8
 
 Cry_Entei_Ch5:
 	; soundinput $ff
@@ -2259,3 +2265,33 @@ Cry_Bipulla_Ch8:
 	noise_note 2, 9, 4, 111
 	noise_note 2, 6, 1, 107
 	sound_ret
+
+Cry_Tricules_Ch5:
+	sound_duty 2, 3, 1, 3
+.loop
+	sound __,  2, $c1, $0520
+	sound __,  2, $a1, $0420
+	loopchannel 4, .loop
+	dutycycle $0
+	sound __,  5, $78, $0760
+	sound __,  5, $78, $0730
+	sound C_,  9, $c2, $0420
+	endchannel
+
+Cry_Tricules_Ch6:
+	sound_duty 2, 0, 3, 0
+	sound __,  9, $f8, $0700
+	sound __,  8, $f8, $0720
+	sound __,  5, $f8, $0790
+	sound __,  5, $f8, $0760
+	sound C_,  9, $f2, $0730
+	endchannel
+
+Cry_Tricules_Ch8:
+	noise __,  5, $88, $6d
+	noise __,  5, $d8, $68
+	noise __,  8, $c8, $69
+	noise __,  5, $98, $3a
+	noise __,  5, $98, $3c
+	noise C_,  9, $d2, $5b
+	endchannel

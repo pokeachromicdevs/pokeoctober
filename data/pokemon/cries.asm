@@ -222,7 +222,7 @@ PokemonCries::
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
 	mon_cry CRY_MISDREAVUS,  $130,  $0e8 ; MISDREAVUS
 	mon_cry CRY_MISDREAVUS,  $162,  $100 ; UNOWN
-	mon_cry CRY_AMPHAROS,    $27b,  $144 ; WOBBUFFET, needs fixing
+	mon_cry CRY_TRICULES,    $27b,  $144 ; WOBBUFFET, needs fixing
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
 	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
 	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; SHUCKLE
@@ -233,9 +233,9 @@ PokemonCries::
 	mon_cry CRY_DUNSPARCE,   $112,  $0e8 ; SNUBBULL
 	mon_cry CRY_DUNSPARCE,   $000,  $180 ; GRANBULL
 	mon_cry CRY_SLOWKING,    $160,  $0e0 ; QWILFISH
-	mon_cry CRY_AMPHAROS,    $000,  $160 ; SCIZOR, needs fixing
-	mon_cry CRY_AMPHAROS,    555,  336   ; TRICULES, needs fixing
-	mon_cry CRY_AMPHAROS,    $035,  $0e0 ; HERACROSS, needs fixing
+	mon_cry CRY_TRICULES,    $000,  $160 ; SCIZOR, needs fixing
+	mon_cry CRY_TRICULES,    555,  336   ; TRICULES, needs fixing
+	mon_cry CRY_TRICULES,    $035,  $0e0 ; HERACROSS, needs fixing
 	mon_cry CRY_WOOPER,       15,   191  ; SNEASEL
 	mon_cry CRY_TEDDIURSA,   $7a2,  $06e ; TEDDIURSA
 	mon_cry CRY_TEDDIURSA,   $640,  $0d8 ; URSARING
