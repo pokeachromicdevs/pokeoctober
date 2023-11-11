@@ -120,6 +120,8 @@ ManchildSpriteGFX::            INCBIN "gfx/sprites/manchild.2bpp"
 SchoolboySpriteGFX::           INCBIN "gfx/sprites/schoolboy.2bpp"
 RockClimberSpriteGFX::         INCBIN "gfx/sprites/rock_climber.2bpp"
 NieNieSpriteGFX::              INCBIN "gfx/sprites/niechelle.2bpp"
+LadySpriteGFX::                INCBIN "gfx/sprites/lady.2bpp"
+FirebreatherSpriteGFX::        INCBIN "gfx/sprites/firebreather.2bpp"
 
 SECTION "Follower Sprites 1", ROMX
 EeveeSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"
@@ -222,8 +224,6 @@ PsyduckSpriteGFX::             INCBIN "gfx/sprites/pokemon/psyduck.2bpp"
 GolduckSpriteGFX::             INCBIN "gfx/sprites/pokemon/golduck.2bpp"
 MankeySpriteGFX::              INCBIN "gfx/sprites/pokemon/mankey.2bpp"
 PrimeapeSpriteGFX::            INCBIN "gfx/sprites/pokemon/primeape.2bpp"
-
-
 
 
 

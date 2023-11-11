@@ -122,3 +122,6 @@ OverworldSprites:
 	overworld_sprite YanmegaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite ShuckleSpriteGFX, 12, STANDING_SPRITE, PAL_OW_RED
 	overworld_sprite NieNieSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite LadySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite FirebreatherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite JugglerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE

@@ -570,7 +570,7 @@ Route34_MapEvents:
 	;object_event 10, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassNancy, -1
 
 	;object_event 11, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerLassCharlotte, -1 ; -> TODO: to r35?
-	object_event 10, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFireBreatherWalt, -1 ; ^ replacing
+	object_event 10, 16, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFireBreatherWalt, -1 ; ^ replacing
 
 	;object_event  3,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPokefanAriel, -1 ; -> TODO: to r35?
-	object_event  5,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerJugglerIrwin, -1 ; ^ replacing
+	object_event  5,  8, SPRITE_JUGGLER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerJugglerIrwin, -1 ; ^ replacing

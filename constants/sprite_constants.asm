@@ -118,6 +118,9 @@
 	const SPRITE_YANMEGA ; 72
 	const SPRITE_SHUCKLE ; 73
 	const SPRITE_NIENIE
+	const SPRITE_LADY ; vanilla teacher OW
+	const SPRITE_FIREBREATHER
+	const SPRITE_JUGGLER
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
