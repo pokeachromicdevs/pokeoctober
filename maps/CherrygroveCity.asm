@@ -430,7 +430,7 @@ GuideGentGiftText:
 	cont "well!"
 
 	para "Most of the time,"
-	line "people straggled"
+	line "people straggle"
 	cont "behind me!"
 
 	para "Here, have a small"
@@ -554,20 +554,25 @@ BlackbeltBlockage:
 
 .Text:
 	text "Oi!"
+	
 	para "We don't just"
 	line "allow anyone to"
 	cont "wander on in here!"
+	
 	para "This is the"
 	line "CHERRYGROVE DOJO!"
+	
 	para "We're too tough"
 	line "for the average"
 	cont "trainer!"
+	
 	para "But if you can"
 	line "handle the elder"
-	para "SAGE at the top of"
-	line "SPROUT TOWER,"
-	para "maybe we'll let"
-	line "you in."
+	cont "SAGE at the top of"
+	
+	para "SPROUT TOWER,"
+	line "maybe we'll let"
+	cont "you in."
 	done
 
 CherrygroveLassExposition:
@@ -576,18 +581,23 @@ CherrygroveLassExposition:
 .Text:
 	text "FALKNER used to"
 	line "have an older"
-	para "cousin around"
-	line "here, but he left"
-	para "this place a few"
-	line "years back."
+	cont "cousin around"
+	
+	para "here, but he left"
+	line "this place a few"
+	cont "years back."
+	
 	para "Unfortunately, I've"
 	line "heard the poor"
-	para "man's constantly"
-	line "been losing what-"
-	para "ever job he gets,"
-	line "and can't even win"
+	cont "man's constantly"
+	
+	para "been losing what-"
+	line "ever job he gets,"
+	cont "and can't even win"
+	
 	para "enough battles to"
 	line "get money."
+	
 	para "I hope he's gotten"
 	line "back on his feet<...>"
 	done
