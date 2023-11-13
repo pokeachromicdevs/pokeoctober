@@ -4,6 +4,7 @@
 	const ROUTE46_FRUIT_TREE1
 	const ROUTE46_FRUIT_TREE2
 	const ROUTE46_SPORTSMAN
+	const ROUTE46_HIKER
 
 Route46_MapScripts:
 	db 0 ; scene scripts
@@ -53,6 +54,31 @@ TrainerCamperCraig:
 	waitbutton
 	closetext
 	end
+	
+HikerBlockage:
+	faceplayer
+	checkitem FRESH_WATER
+	iftrue .HikerFreshWaterScript
+	opentext
+	writetext HikerNoFreshWaterText
+	waitbutton
+	closetext
+	end
+	
+.HikerFreshWaterScript:
+	opentext
+	writetext HikerFreshWaterText
+	takeitem FRESH_WATER
+	waitbutton
+	closetext
+	applymovement ROUTE46_HIKER, .HikerBoing
+	disappear ROUTE46_HIKER
+	end
+	
+.HikerBoing:
+	step RIGHT
+	step RIGHT
+	step_end
 
 Route46Sign:
 	jumptext Route46SignText
@@ -151,6 +177,39 @@ Route46SignText:
 	text "ROUTE 46"
 	line "MOUNTAIN RD. AHEAD"
 	done
+	
+HikerNoFreshWaterText:
+	text "I'm might thirsty,"
+	line "kid!"
+	
+	para "If you could bring"
+	line "me some FRESH"
+	cont "WATER, I'll be"
+	
+	para "really grateful!"
+	done
+	
+HikerFreshWaterText:
+	text "Huh? What's that"
+	line "you got there?"
+	
+	para "Some FRESH WATER?"
+	line "For me? WOO!"
+	
+	para "My legs don't just"
+	line "feel better, they"
+	cont "feel decades"
+	
+	para "younger! Bless"
+	line "this amazing MT."
+	cont "SILVER water, and"
+	
+	para "bless you for"
+	line "bringing this to"
+	cont "me! So long,"
+	
+	para "kiddo!"
+	done
 
 Route46_MapEvents:
 	db 0, 0 ; filler
@@ -165,11 +224,12 @@ Route46_MapEvents:
 	db 1 ; bg events
 	bg_event 10, 30, BGEVENT_READ, Route46Sign
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 11, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerYoungsterBenny, -1
 	object_event  9, 15, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1
 	object_event  6, 28, SPRITE_SPORTSMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerSportsmanJayden, -1
 	object_event  4, 17, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassYuri, -1
 	object_event  4, 12, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperCraig, -1
+	object_event  4,  8, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 1, HikerBlockage, -1
 

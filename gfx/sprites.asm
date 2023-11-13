@@ -122,6 +122,7 @@ RockClimberSpriteGFX::         INCBIN "gfx/sprites/rock_climber.2bpp"
 NieNieSpriteGFX::              INCBIN "gfx/sprites/niechelle.2bpp"
 LadySpriteGFX::                INCBIN "gfx/sprites/lady.2bpp"
 FirebreatherSpriteGFX::        INCBIN "gfx/sprites/firebreather.2bpp"
+JugglerSpriteGFX::             INCBIN "gfx/sprites/juggler.2bpp"
 
 SECTION "Follower Sprites 1", ROMX
 EeveeSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"

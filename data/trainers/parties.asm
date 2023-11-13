@@ -5172,7 +5172,7 @@ SoldierGroup:
 	db "DWIGHT@", TRAINERTYPE_NORMAL
 	db 3
 	dw RATTATA
-	db 3
+	db 4
 	dw SENTRET
 	end_party
 
