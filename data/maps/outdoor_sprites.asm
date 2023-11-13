@@ -275,7 +275,7 @@ CitrineGroupSprites:
 		walk_sprite SPRITE_GRAMPS
 		walk_sprite SPRITE_YOUNGSTER
 		walk_sprite SPRITE_LASS
-		walk_sprite SPRITE_SUPER_NERD
+		walk_sprite SPRITE_HIKER
 		walk_sprite SPRITE_COOLTRAINER_M
 		walk_sprite SPRITE_SPORTSMAN
 		walk_sprite SPRITE_POKEFAN_M
