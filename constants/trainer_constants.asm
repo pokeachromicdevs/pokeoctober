@@ -252,7 +252,6 @@ KRIS EQU __enum__
 	const VALERIE
 	const OLIVIA
 	const PEONY
-	const ANDREA
 	const CELICA
 	const SARAH
 
@@ -632,6 +631,7 @@ KRIS EQU __enum__
 	const KOJI
 	const CHEN
 	const MONTY
+	const TAKAO
 
 	trainerclass MEDIUM ; 39
 	const MARTHA
@@ -750,6 +750,7 @@ KRIS EQU __enum__
 	trainerclass MYSTIC
 	const STELLA
 	const SONIA
+	const ANDREA
 
 	trainerclass ROCKCLIMBER
 	const HENRY_T

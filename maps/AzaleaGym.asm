@@ -13,47 +13,50 @@ AzaleaGymStatue:
 	gettrainername STRING_BUFFER_4, MORTY, MORTY1
 	jumpstd gymstatue2
 
-TrainerSoldierGrant:
-	trainer SOLDIER, GRANT, EVENT_BEAT_SOLDIER_GRANT, .SeenTxt, .WinTxt, 0, .PostScript
+TrainerSageTakao:
+	trainer SAGE, TAKAO, EVENT_BEAT_SAGE_TAKAO, .SeenTxt, .WinTxt, 0, .PostScript
 .SeenTxt:
-	text "My ghosts served"
-	line "as my spies during"
-	cont "the war!"
-	para "Our bond is un-"
-	line "breakable!"
+	text "The mystic #MON"
+	line "that used to"
+	cont "rest here<...>"
+	para "Is your heart"
+	line "pure enough to"
+	cont "get it to return?"
 	done
 
 .WinTxt:
-	text "Beaten down!"
+	text "Your heart<...> it's"
+	line "pure indeed!"
 	done
 
 .PostScript:
 	endifjustbattled
 	jumptextfaceplayer .PSTxt
 .PSTxt:
-	text "My ghost-type"
-	line "#MON helped me"
-	para "spy on the enemies"
-	line "using their super-"
-	cont "natural powers."
+	text "When ILEX FOREST"
+	line "got cut down,"
+	para "CELEBI fled some-"
+	line "where within the"
+	cont "ORANGE ISLANDS."
+	para "It's quite sad."
+	line "I hope that"
+	para "it'll come back"
+	line "one day."
 	done
 
-TrainerBeautyAndrea:
-	trainer BEAUTY, ANDREA, EVENT_BEAT_BEAUTY_ANDREA, .SeenTxt, .BeatenTxt, 0, .AfterScript
+TrainerMysticAndrea:
+	trainer MYSTIC, ANDREA, EVENT_BEAT_MYSTIC_ANDREA, .SeenTxt, .BeatenTxt, 0, .AfterScript
 
 .SeenTxt:
-	text "Brains and stra-"
-	line "tegy are more"
-	para "important than"
-	line "pure power!"
-	para "My GHOST-types"
-	line "will prove that"
-	cont "to you!"
+	text "Let me read"
+	line "your fortune"
+	para "using my ghost-"
+	line "type #MON!"
 	done
 
 .BeatenTxt:
-	text "Looks like you"
-	line "understood that."
+	text "Oh, I didn't"
+	line "foresee that!"
 	done
 
 .AfterScript:
@@ -106,8 +109,8 @@ TrainerMediumDorothy:
 	done
 
 .BeatenTxt:
-	text "Oh, I"
-	line "miscalculated!"
+	text "Oh, I mis-"
+	line "calculated!"
 	done
 
 .AfterScript:
@@ -147,8 +150,8 @@ AzaleaGymMortyScript:
 .AfterFight:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .AfterShadowBall
-	setevent EVENT_BEAT_MANCHILD_ZACHARY
-	setevent EVENT_BEAT_BEAUTY_ANDREA
+	setevent EVENT_BEAT_SAGE_TAKAO
+	setevent EVENT_BEAT_MYSTIC_ANDREA
 	setevent EVENT_BEAT_INSTRUCTOR_FRANK
 	setevent EVENT_BEAT_MEDIUM_DOROTHY
 	variablesprite SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITE_WILL
@@ -173,46 +176,42 @@ AzaleaGymMortyScript:
 	text "Greetings,"
 	line "<PLAYER>."
 
-	para "I saw you coming"
-	line "from a mile away,"
-	para "and recognize your"
-	line "talent."
+	para "You've proven your"
+	line "wisdom in battle"
+	para "by reaching the"
+	line "end of my GYM."
 
-	para "My name is MORTY,"
-	line "and I am known as"
-	para "the 'mystic seer"
-	line "of the future.'"
+	para "I am MORTY, LEADER"
+	line "of the AZALEA GYM."
+	
+	para "Legends of this"
+	line "town say that a"
+	para "mysterious #MON"
+	line "once inhabited the"
+	para "forest that stood"
+	line "here long before."
 
-	para "I have trained"
-	line "here my entire"
-	para "life, and becoming"
-	line "a GYM LEADER has"
-	para "only allowed me to"
-	line "hone my mind"
-	para "further through"
-	line "battle."
+	para "I've looked into"
+	line "both the past and"
+	para "the future hoping"
+	line "to gain a clearer"
+	cont "picture."
 
-	para "It is because of"
-	line "my effort that I"
-	para "can now see what"
-	line "others cannot."
+	para "With a little more"
+	line "power, I can"
+	para "surely fulfill my"
+	line "dream of meeting"
+	para "the forest"
+	line "#MON that"
+	para "leaps through"
+	line "time."
 
-	para "Perhaps one day,"
-	line "if I push just a"
-	para "bit further, I'll"
-	line "be able to see the"
-	para "#MON that"
-	line "shines with the"
-	para "colors of a"
-	line "rainbow<...>"
-
-	para "And you."
+	para "And now, I"
+	line "believe<...>"
 
 	para "You're going to"
 	line "help me reach that"
 	cont "level!"
-
-	para "Come on!"
 	done
 
 .WinTxt:
@@ -323,8 +322,8 @@ AzaleaGym_MapEvents:
 	bg_event  6, 23, BGEVENT_READ, AzaleaGymStatue
 
 	db 5 ; object events
-	object_event  4, 18, SPRITE_SOLDIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSoldierGrant, -1
-	object_event  5, 12, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerBeautyAndrea, -1
+	object_event  4, 18, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerSageTakao, -1
+	object_event  5, 12, SPRITE_MYSTIC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMysticAndrea, -1
 	object_event 17, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerInstructorFrank, -1
 	object_event 17,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerMediumDorothy, -1
 	object_event  6,  3, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymMortyScript, -1

@@ -179,8 +179,8 @@ Route46SignText:
 	done
 	
 HikerNoFreshWaterText:
-	text "I'm might thirsty,"
-	line "kid!"
+	text "I'm mighty"
+	line "thirsty, kid!"
 	
 	para "If you could bring"
 	line "me some FRESH"

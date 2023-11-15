@@ -1762,14 +1762,6 @@ BeautyGroup:
 	end_party
 
 	next_party
-		string "ANDREA"
-		db     TRAINERTYPE_NORMAL
-		dbw    23, STROMEN
-		dbw    23, PHANDARIN
-		dbw    24, HAUNTER
-	end_party
-
-	next_party
 		string "CELICA"
 		db     TRAINERTYPE_NORMAL
 		dbw    14, COINPUR
@@ -4521,6 +4513,14 @@ SageGroup:
 		dbw 5, SANDSHREW
 		dbw 7, ONIX
 	end_party
+	
+	next_party
+		string "TAKAO"
+		db TRAINERTYPE_NORMAL
+		dbw 22, GASTLY
+		dbw 22, MISDREAVUS
+		dbw 23, PHANDARIN
+	end_party
 
 	end_party_list
 
@@ -5270,6 +5270,14 @@ MysticGroup:
 		db TRAINERTYPE_NORMAL
 		dbw 6, SPINARAK
 		dbw 8, NATU
+	end_party
+	
+	next_party
+		string "ANDREA"
+		db     TRAINERTYPE_NORMAL
+		dbw    23, STROMEN
+		dbw    23, PHANDARIN
+		dbw    24, HAUNTER
 	end_party
 
 	end_party_list
