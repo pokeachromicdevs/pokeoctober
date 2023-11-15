@@ -1355,21 +1355,21 @@ JohtoGrassWildMons:
 	map_id ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, SUNKERN
-	dbw 2, SUNKERN
+	dbw 2, PIDGEY
+	dbw 2, RATTATA
 	dbw 3, SENTRET
 	dbw 3, HOPPIP
-	dbw 2, RATTATA
+	dbw 2, CATERPIE
 	dbw 3, SENTRET
 	dbw 3, HOPPIP
 	; day
-	dbw 2, RATTATA
+	dbw 2, PIDGEY
 	dbw 2, RATTATA
 	dbw 3, SENTRET
 	dbw 3, HOPPIP
-	dbw 2, SENTRET
+	dbw 2, WEEDLE
 	dbw 3, SENTRET
-	dbw 3, RATTATA
+	dbw 3, HOPPIP
 	; nite
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
@@ -1382,20 +1382,20 @@ JohtoGrassWildMons:
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 4, CATERPIE
-	dbw 4, PIDGEY
-	dbw 5, PIDGEY
-	dbw 4, WEEDLE
+	dbw 4, CLEFLING
+	dbw 4, RATTATA
+	dbw 5, LEDYBA
+	dbw 4, SUNKERN
 	dbw 4, WOOPER
 	dbw 5, WOOPER
 	dbw 5, HOPPIP
 	; day
-	dbw 4, CATERPIE
 	dbw 4, PIDGEY
-	dbw 5, PIDGEY
+	dbw 4, RATTATA
+	dbw 5, CATERPIE
 	dbw 4, WEEDLE
-	dbw 4, MARILL
-	dbw 5, MARILL
+	dbw 4, WOOPER
+	dbw 5, WOOPER
 	dbw 5, BURGELA
 	; nite
 	dbw 4, SPINARAK
@@ -1900,8 +1900,8 @@ JohtoGrassWildMons:
 	dbw 4, RATTATA
 	dbw 6, NATU
 	dbw 4, SUNKERN
-	dbw 6, PIDGEY
-	dbw 6, RATTATA
+	dbw 6, PUPPERON
+	dbw 6, SUNKERN
 	; day
 	dbw 5, PIDGEY
 	dbw 4, NATU
@@ -1909,14 +1909,14 @@ JohtoGrassWildMons:
 	dbw 6, PIDGEY
 	dbw 4, SUNKERN
 	dbw 6, NATU
-	dbw 6, SUNKERN
+	dbw 6, RATTATA
 	; nite
 	dbw 5, HOOTHOOT
 	dbw 4, BIPULLA
 	dbw 4, HOOTHOOT
 	dbw 6, DROWZEE
 	dbw 4, DROWZEE
-	dbw 6, BIPULLA
+	dbw 6, VULPIII
 	dbw 6, ODDISH
 
 	db -1 ; end
