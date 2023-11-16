@@ -1,6 +1,5 @@
 	object_const_def ; object_event constants
 	const PLAYERSNEIGHBORSHOUSE_COOLTRAINER_F
-	const PLAYERSNEIGHBORSHOUSE_POKEFAN_F
 
 PlayersNeighborsHouse_MapScripts:
 	db 0 ; scene scripts
@@ -9,9 +8,6 @@ PlayersNeighborsHouse_MapScripts:
 
 PlayersNeighborsDaughterScript:
 	jumptextfaceplayer PlayersNeighborsDaughterText
-
-PlayersNeighborScript:
-	jumptextfaceplayer PlayersNeighborText
 
 PlayersNeighborsHouseBookshelfScript:
 	jumpstd magazinebookshelf
@@ -45,35 +41,14 @@ PlayersNeighborsHouseRadioScript:
 	end
 
 PlayersNeighborsDaughterText:
-	text "PIKACHU is an"
-	line "evolved #MON."
-
-	para "I was amazed by"
-	line "PROF.ELM's find-"
-	cont "ings."
-
-	para "He's so famous for"
-	line "his research on"
-	cont "#MON evolution."
-
-	para "…sigh…"
-
-	para "I wish I could be"
-	line "a researcher like"
-	cont "him…"
-	done
-
-PlayersNeighborText:
-	text "My daughter is"
-	line "adamant about"
-
-	para "becoming PROF."
-	line "ELM's assistant."
-
-	para "She really loves"
-	line "#MON!"
-
-	para "But then, so do I!"
+	text "The other day,"
+	line "I encountered"
+	
+	para "a strangly-"
+	line "colored PIDGEY!"
+	
+	para "It took my"
+	line "breath away!"
 	done
 
 PlayerNeighborRadioText1:
@@ -110,6 +85,5 @@ PlayersNeighborsHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, PlayersNeighborsHouseBookshelfScript
 	bg_event  7,  1, BGEVENT_READ, PlayersNeighborsHouseRadioScript
 
-	db 2 ; object events
+	db 1 ; object events
 	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PlayersNeighborsDaughterScript, -1
-	object_event  5,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PlayersNeighborScript, EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR

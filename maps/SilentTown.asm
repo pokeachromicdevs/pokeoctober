@@ -611,7 +611,8 @@ SilentTownElmsLabSignText:
 	done
 
 SilentTownElmsHouseSignText:
-	text "ELM'S HOUSE"
+	text "<RIVAL>'s"
+	line "HOUSE"
 	done
 
 KantoRockText:
@@ -679,7 +680,7 @@ SilentTown_MapEvents:
 	db 4 ; warp events
 	warp_event 13, 15, ELMS_LAB, 1
 	warp_event  5,  7, PLAYERS_HOUSE_1F, 1
-	warp_event  3, 15, ELMS_HOUSE, 1
+	warp_event  3, 15, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11,  7, SILENT_POKECENTER_1F, 1
 
 	db 4 ; coord events
