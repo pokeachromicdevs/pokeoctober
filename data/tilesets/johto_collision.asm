@@ -169,3 +169,32 @@
 	tilecoll TALL_GRASS, TALL_GRASS, FLOOR, FLOOR ; a8
 	tilecoll FLOOR, TALL_GRASS, FLOOR, TALL_GRASS ; a9
 	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; aa
+	tilecoll WARP_CARPET_UP, WALL, FLOOR, WALL ; ab
+	tilecoll WALL, WARP_CARPET_UP, WALL, FLOOR ; ac
+	tilecoll WALL, WALL, DOOR, WALL ; ad
+	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; ae
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; af
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; b0
+	tilecoll WALL, TALL_GRASS, WALL, TALL_GRASS ; b1
+	tilecoll TALL_GRASS, FLOOR, TALL_GRASS, FLOOR ; b2
+	tilecoll TALL_GRASS, WALL, TALL_GRASS, WALL ; b3
+	tilecoll FLOOR, TALL_GRASS, FLOOR, TALL_GRASS ; b4
+	tilecoll TALL_GRASS, WALL, TALL_GRASS, WALL ; b5
+	tilecoll WATER, WALL, WATER, WALL ; b6
+	tilecoll FLOOR, WATER, FLOOR, WATER ; b7
+	tilecoll FLOOR, FLOOR, WATER, WATER ; b8
+	tilecoll WATER, FLOOR, WATER, FLOOR ; b9
+	tilecoll WATER, WATER, WATER, WATER ; ba
+	tilecoll WATER, WATER, WATER, WATER ; bb
+	tilecoll WATER, WATER, WATER, WATER ; bc
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bd
+	tilecoll WATER, WATER, WATER, WATER ; be
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bf
+	tilecoll , , ,  ; c0
+	tilecoll , , ,  ; c1
+	tilecoll , , ,  ; c2
+	tilecoll , , ,  ; c3
+	tilecoll , , ,  ; c4
+	tilecoll , , ,  ; c5
+	tilecoll , , ,  ; c6
+	tilecoll , , ,  ; c7

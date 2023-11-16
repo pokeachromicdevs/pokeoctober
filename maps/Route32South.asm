@@ -117,8 +117,8 @@ Route32South_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2, 14, DREAD_WOODS, 3
-	warp_event  2, 15, DREAD_WOODS, 4
+	warp_event  3, 10, DREAD_WOODS, 3
+	warp_event  0,  8, DREAD_WOODS, 4
 
 	db 0 ; coord events
 
