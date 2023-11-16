@@ -190,11 +190,3 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bd
 	tilecoll WATER, WATER, WATER, WATER ; be
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bf
-	tilecoll , , ,  ; c0
-	tilecoll , , ,  ; c1
-	tilecoll , , ,  ; c2
-	tilecoll , , ,  ; c3
-	tilecoll , , ,  ; c4
-	tilecoll , , ,  ; c5
-	tilecoll , , ,  ; c6
-	tilecoll , , ,  ; c7
