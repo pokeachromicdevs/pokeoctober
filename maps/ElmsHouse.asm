@@ -88,9 +88,8 @@ ElmsHousePCText:
 ElmsHouse_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event  6,  7, SILENT_TOWN, 3
-	warp_event  7,  7, SILENT_TOWN, 3
+	db 1 ; warp events
+	warp_event  0,  6, ELMS_LAB,    3
 
 	db 0 ; coord events
 
@@ -105,4 +104,4 @@ ElmsHouse_MapEvents:
 
 	db 2 ; object events
 	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
-	object_event  9,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+	object_event  9,  3, SPRITE_FLEDGLING, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1

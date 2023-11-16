@@ -109,8 +109,8 @@ TrainerMediumDorothy:
 	done
 
 .BeatenTxt:
-	text "Oh, I mis-"
-	line "calculated!"
+	text "Oh, I"
+	line "miscalculated!"
 	done
 
 .AfterScript:

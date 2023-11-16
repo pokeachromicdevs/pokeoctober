@@ -412,7 +412,7 @@
 	const EVENT_BEAT_JASMINE
 	const EVENT_GOT_TM63_GUST
 	const EVENT_BEAT_SAGE_TAKAO
-	const EVENT_1a5
+	const EVENT_GAVE_FRESH_WATER ; route 46 hiker
 	const EVENT_1a6
 	const EVENT_1a7
 	const EVENT_1a8
