@@ -4060,45 +4060,51 @@ BattleAnimFunction_4D:
 BattleAnimFunction_RadialMoveOut:
 	call BattleAnim_AnonJumptable
 
-	dw InitRadial
-	dw Step
+	dw .Init
+	dw .Step
 
-InitRadial:
-	ld hl, BATTLEANIMSTRUCT_VAR2
+.Init:
+	ld hl, BATTLEANIMSTRUCT_VAR2 ; position counter
 	add hl, bc
 	xor a
 	ld [hld], a
 	ld [hl], a ; initial position = 0
 	call BattleAnim_IncAnonJumptableIndex
 
-Step:
+.Step:
 	ld hl, BATTLEANIMSTRUCT_VAR1
 	add hl, bc
+	
 	push hl
-	ld a, [hli]
-	ld e, [hl]
-	ld d, a
-	ld hl, 6 ; speed
-	add hl, de
-	ld a, h
-	ld e, l
+		ld a, [hli]
+		ld e, [hl]
+		ld d, a
+	
+		lb hl, 3, 0 ; speed (coarse, finetune)
+		add hl, de
+		
+		ld a, h
+		ld e, l
 	pop hl
+	
 	ld [hli], a
 	ld [hl], e
-	ld d, e
+	
 	cp 80 ; final position
 	jp nc, DeinitBattleAnimation
-	ld hl, BATTLEANIMSTRUCT_PARAM
+	
+	ld hl, BATTLEANIMSTRUCT_PARAM ; angle
 	add hl, bc
 	ld e, [hl]
 	push de
-	ld a, e
-	call BattleAnim_Sine
-	ld hl, BATTLEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
+		ld a, e
+		call BattleAnim_Sine
+		ld hl, BATTLEANIMSTRUCT_YOFFSET
+		add hl, bc
+		ld [hl], a
 	pop de
-	ld a, e
+	
+	ld a, e ; reload angle
 	call BattleAnim_Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
