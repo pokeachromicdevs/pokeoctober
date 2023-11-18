@@ -4085,6 +4085,7 @@ Step:
 	pop hl
 	ld [hli], a
 	ld [hl], e
+	ld d, e
 	cp 80 ; final position
 	jp nc, DeinitBattleAnimation
 	ld hl, BATTLEANIMSTRUCT_PARAM
