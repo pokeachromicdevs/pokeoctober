@@ -180,14 +180,14 @@ Route46SignText:
 	done
 	
 HikerNoFreshWaterText:
-	text "I'm mighty"
-	line "thirsty, kid!"
+	text "I'm mighty thirsty,"
+	line "kid!"
 	
 	para "If you could bring"
 	line "me some FRESH"
-	cont "WATER, I'll be"
 	
-	para "really grateful!"
+	para "WATER, I'll be"
+	line "really grateful!"
 	done
 	
 HikerFreshWaterText:
@@ -199,17 +199,18 @@ HikerFreshWaterText:
 	
 	para "My legs don't just"
 	line "feel better, they"
-	cont "feel decades"
 	
-	para "younger! Bless"
-	line "this amazing MT."
-	cont "SILVER water, and"
+	para "feel decades"
+	line "younger! Bless"
+	
+	para "this amazing MT."
+	line "SILVER water, and"
 	
 	para "bless you for"
 	line "bringing this to"
-	cont "me! So long,"
+	cont "me!"
 	
-	para "kiddo!"
+	para "So long, kiddo!"
 	done
 
 Route46_MapEvents:
