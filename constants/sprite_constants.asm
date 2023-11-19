@@ -121,6 +121,7 @@
 	const SPRITE_LADY ; vanilla teacher OW
 	const SPRITE_FIREBREATHER
 	const SPRITE_JUGGLER
+	const SPRITE_PRODIGY
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

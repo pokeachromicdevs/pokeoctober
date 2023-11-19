@@ -25,18 +25,17 @@ CherrygroveEvolutionSpeechHouseBookshelf:
 	jumpstd magazinebookshelf
 
 CherrygroveEvolutionSpeechHouseYoungsterText:
-	text "#MON gain expe-"
-	line "rience in battle"
-
-	para "and change their"
-	line "form."
+	text "You can TAG ALONG"
+	line "with #MON by"
+	cont "using the menu."
 	done
 
 CherrygroveEvolutionSpeechHouseLassText:
-	text "#MON change?"
+	text "I know!"
 
-	para "I would be shocked"
-	line "if one did that!"
+	para "I walk with my"
+	line "CHIKORITA every-"
+	cont "where!"
 	done
 
 CherrygroveEvolutionSpeechHouse_MapEvents:

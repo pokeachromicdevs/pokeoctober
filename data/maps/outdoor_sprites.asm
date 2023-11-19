@@ -197,10 +197,10 @@ EcruteakGroupSprites:
 		walk_sprite SPRITE_LASS
 		walk_sprite SPRITE_OFFICER
 		walk_sprite SPRITE_YOUNGSTER
-		walk_sprite SPRITE_NIENIE
 		walk_sprite SPRITE_COOLTRAINER_F
 		walk_sprite SPRITE_SAGE
 		walk_sprite SPRITE_FLEDGLING
+		walk_sprite SPRITE_SCHOOLBOY
 
 	def_static_sprite
 		static_sprite SPRITE_POKE_BALL
@@ -210,6 +210,8 @@ EcruteakGroupSprites:
 		static_sprite SPRITE_BIG_SNORLAX
 		static_sprite SPRITE_MYSTIC
 		static_sprite SPRITE_BUG_CATCHER
+		static_sprite SPRITE_NIENIE
+		static_sprite SPRITE_PRODIGY
 	end_outdoor_sprites
 
 AzaleaGroupSprites:

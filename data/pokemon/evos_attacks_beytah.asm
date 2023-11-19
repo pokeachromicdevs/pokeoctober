@@ -227,33 +227,33 @@ WorfursEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 5, QUICK_ATTACK
+	dbw 5, ROAR
 	dbw 10, POWDER_SNOW
-	dbw 19, DEFENSE_CURL
-	dbw 24, ICY_WIND
-	dbw 29, MIMIC
-	dbw 33, ICE_PUNCH
-	dbw 38, DIG
-	dbw 43, ROAR
-	dbw 47, THRASH
-	dbw 52, BLIZZARD
+	dbw 14, PURSUIT
+	dbw 19, ICY_WIND
+	dbw 25, MIMIC
+	dbw 31, ICE_PUNCH
+	dbw 36, DIG
+	dbw 41, AMBUSH
+	dbw 47, THRASH ; WINTER CLAWS
+	dbw 52, THRASH
 	db 0 ; no more level-up moves
 
 WearlycanEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, LEER
-	dbw 7, QUICK_ATTACK
-	dbw 12, POWDER_SNOW
-	dbw 21, DEFENSE_CURL
-	dbw 26, ICY_WIND
-	dbw 30, MIMIC
-	dbw 35, ICE_PUNCH
-	dbw 40, DIG
-	dbw 45, ROAR
-	dbw 49, THRASH
-	dbw 54, BLIZZARD
-	db 0 ; no more level-up moves
+    db 0 ; no more evolutions
+    dbw 1, TACKLE
+    dbw 1, LEER
+    dbw 5, ROAR
+    dbw 10, POWDER_SNOW
+    dbw 14, PURSUIT
+    dbw 19, ICY_WIND
+    dbw 27, MIMIC
+    dbw 33, ICE_PUNCH
+    dbw 38, DIG
+    dbw 43, AMBUSH
+    dbw 49, THRASH ; WINTER CLAWS
+    dbw 54, THRASH
+    db 0 ; no more level-up moves
 
 DodaerieEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, DODUO

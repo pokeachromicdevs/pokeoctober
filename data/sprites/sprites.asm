@@ -125,3 +125,4 @@ OverworldSprites:
 	overworld_sprite LadySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite FirebreatherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite JugglerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite ProdigySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE

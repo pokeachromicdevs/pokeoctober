@@ -112,6 +112,41 @@ TrainerLassTina:
 	big_step UP
 	big_step UP
 	step_end
+	
+TrainerProdigyAxel:
+	trainer PRODIGY, AXEL, EVENT_BEAT_PRODIGY_AXEL, .SeenTxt, .WinTxt, 0, .PostScript
+
+.SeenTxt:
+	text "Haha!"
+	
+	para "I'm stronger than"
+	line "everyone in"
+	cont "VIOLET's school!"
+	
+	para "Including you!"
+	done
+
+.WinTxt:
+	text "My pride! It's"
+	line "wounded!"
+	done
+
+
+.PostScript:
+	endifjustbattled
+	jumptextfaceplayer .PSTxt
+
+.PSTxt:
+	text "Bleh<...>"
+	
+	para "I used to be the"
+	line "best in my school"
+	cont "like how my big"
+	
+	para "sis is at her"
+	line "school<...> now I'm"
+	cont "just a loser<...>"
+	done
 
 Route32Sign1:
 	jumptext .Text
@@ -140,8 +175,9 @@ Route32North_MapEvents:
 
 	db 2 ; bg events
 	bg_event 12, 10, BGEVENT_READ, Route32Sign1
-	bg_event  3, 11, BGEVENT_READ, DreadWoodsSign1
+	bg_event  5, 13, BGEVENT_READ, DreadWoodsSign1
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event  4, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassTina, EVENT_TALKED_TO_LASS_TINA
 	object_event 10, 15, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFisherKoi, -1
+	object_event 10, 10, SPRITE_PRODIGY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerProdigyAxel, -1

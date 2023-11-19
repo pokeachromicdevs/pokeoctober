@@ -10,7 +10,7 @@ EggMovePointers1:
 	dw SquirtleEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
-	dw NoEggMoves1
+	dw CaterpieEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -177,11 +177,26 @@ SquirtleEggMoves:
 	dw FORESIGHT
 	dw FLAIL
 	dw -1 ; end
+	
+CaterpieEggMoves:
+	dw SPIDER_WEB
+	dw PIN_MISSILE
+	dw BIDE
+	dw TAKE_DOWN
+	dw -1 ; end
+	
+WeedleEggMoves:
+	dw HEADBUTT
+	dw BIDE
+	dw LEECH_LIFE
+	dw MEGAHORN
+	dw -1 ; end
 
 PidgeyEggMoves:
 	dw PURSUIT
 	dw FAINT_ATTACK
 	dw FORESIGHT
+	dw PECK
 	dw -1 ; end
 
 RattataEggMoves:

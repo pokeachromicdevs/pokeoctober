@@ -1174,10 +1174,12 @@ LassGroup:
 		dw ZUBAT
 	end_party
 
-	next_party
-	db "TINA@", TRAINERTYPE_NORMAL
-	db 10
-	dw BUTTERFREE
+	next_party ; FISHER (29)
+		string "TINA"
+		db TRAINERTYPE_MOVES
+		db 10
+		dw BUTTERFREE
+		dw TACKLE, STRING_SHOT, CONFUSION, GUST
 	end_party
 
 	next_party
@@ -2648,13 +2650,26 @@ FisherGroup:
 
 	next_party ; FISHER (29)
 		string "KOI"
-		db     TRAINERTYPE_NORMAL
-		dbw    9, MAGIKARP
-		dbw    9, MAGIKARP
-		dbw    9, MAGIKARP
+		db TRAINERTYPE_MOVES
+		db 15 
+		dw MAGIKARP
+		dw SPLASH, TWISTER, TACKLE, FLAIL
+		db 15
+		dw MAGIKARP
+		dw SPLASH, WATER_GUN, TACKLE, FLAIL
+		db 15 
+		dw MAGIKARP
+		dw SPLASH, MINIMIZE, TACKLE, FLAIL
 	end_party
 
-
+	next_party ; PRODIGY (1)
+	db "ISSAC@", TRAINERTYPE_NORMAL
+	db 8
+	dw MOLAMBINO
+	db 9
+	dw SLOWPOKE
+	end_party
+	
 	end_party_list
 
 SwimmerMGroup:
@@ -5155,13 +5170,13 @@ ProfessorGroup:
 ProdigyGroup:
 	next_party ; PRODIGY (1)
 	db "AXEL@", TRAINERTYPE_NORMAL
-	db 8
+	db 7
 	dw CHIKORITA
-	db 8
+	db 7
 	dw CYNDAQUIL
-	db 8
+	db 7
 	dw TOTODILE
-	db 9
+	db 8
 	dw CUBONE
 	end_party
 

@@ -376,6 +376,7 @@ KRIS EQU __enum__
 	const MANNY
 	const FISHER_GEORGE
 	const KOI
+	const FISHER_ISSAC
 
 	trainerclass SWIMMERM ; 26
 	const HAROLD

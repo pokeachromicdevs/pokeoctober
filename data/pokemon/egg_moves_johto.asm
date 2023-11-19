@@ -53,7 +53,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw AipomEggMoves
-	dw NoEggMoves2
+	dw SunkernEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw WooperEggMoves
@@ -313,6 +313,10 @@ AipomEggMoves:
 	dw SLAM
 	dw DOUBLESLAP
 	dw BEAT_UP
+	dw -1 ; end
+	
+SunkernEggMoves:
+	dw LEECH_SEED
 	dw -1 ; end
 
 WooperEggMoves:
