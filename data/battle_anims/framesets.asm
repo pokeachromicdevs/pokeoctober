@@ -1307,9 +1307,9 @@ BattleAnimFrameData:
 	endanim
 
 .Frameset_WaterSpoutRising:
-	frame BATTLE_ANIM_OAMSET_DA,  8
+	frame BATTLE_ANIM_OAMSET_D9,  8
 	endanim
 
 .Frameset_WaterSpoutFalling:
-	frame BATTLE_ANIM_OAMSET_D9,  8
+	frame BATTLE_ANIM_OAMSET_DA,  8
 	endanim
