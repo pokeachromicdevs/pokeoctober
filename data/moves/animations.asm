@@ -2958,12 +2958,7 @@ BattleAnim_QuickAttack:
 	anim_2gfx BATTLE_ANIM_GFX_SPEED, BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, $1, $0
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 24, 88, $2
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 32, 88, $1
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 40, 88, $0
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 48, 88, $80
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 56, 88, $81
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_call BattleAnimSub_QuickAttack
 	anim_wait 12
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
@@ -3048,14 +3043,7 @@ BattleAnim_Agility:
 	anim_obp0 $fc
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING, $0, $1, $40
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 24, $10
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 48, $2
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 88, $8
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 32, $6
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 56, $c
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 80, $4
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 104, $e
+	anim_call BattleAnimSub_Agility
 .loop
 	anim_sound 0, 0, SFX_RAZOR_WIND
 	anim_wait 4
@@ -3567,12 +3555,7 @@ BattleAnim_MachPunch:
 	anim_2gfx BATTLE_ANIM_GFX_SPEED, BATTLE_ANIM_GFX_HIT
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, $1, $0
 	anim_sound 0, 0, SFX_MENU
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 24, 88, $2
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 32, 88, $1
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 40, 88, $0
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 48, 88, $80
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 56, 88, $81
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_call BattleAnimSub_QuickAttack
 	anim_wait 12
 	anim_sound 0, 1, SFX_MEGA_PUNCH
 	anim_obj BATTLE_ANIM_OBJ_PUNCH, 136, 56, $0
@@ -3894,7 +3877,6 @@ BattleAnim_GigaDrain:
 	anim_if_var_equal $d, .done
 	anim_if_var_equal $4, .spawn
 	anim_jump .loop
-
 .spawn
 	anim_obj BATTLE_ANIM_OBJ_ABSORB_CENTER, 44, 88, $0
 	anim_jump .loop
@@ -4044,7 +4026,6 @@ BattleAnim_FuryCutter:
 	anim_if_param_and %00000001, .obj1
 	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_LEFT, 152, 40, $0
 	anim_jump .okay
-
 .obj1
 	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_RIGHT, 112, 40, $0
 .okay
@@ -4328,30 +4309,9 @@ BattleAnim_Encore:
 
 BattleAnim_Pursuit:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
-	anim_if_param_equal $1, .pursued
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
 	anim_wait 16
-	anim_ret
-
-.pursued:
-	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, $0, $0
-	anim_wait 4
-	anim_call BattleAnim_UserObj_1Row
-	anim_obj BATTLE_ANIM_OBJ_BETA_PURSUIT, 132, 64, $0
-	anim_wait 64
-	anim_obj BATTLE_ANIM_OBJ_BETA_PURSUIT, 132, 64, $1
-	anim_sound 0, 1, SFX_BALL_POOF
-	anim_bgeffect BATTLE_BG_EFFECT_ENTER_MON, $0, $0, $0
-	anim_wait 64
-	anim_incobj 3
-	anim_wait 16
-	anim_sound 0, 1, SFX_MEGA_PUNCH
-	anim_obj BATTLE_ANIM_OBJ_HIT_BIG_YFIX, 120, 56, $0
-	anim_bgeffect BATTLE_BG_EFFECT_BETA_PURSUIT, $0, $0, $0
-	anim_wait 16
-	anim_call BattleAnim_ShowMon_1
-	anim_wait 1
 	anim_ret
 
 BattleAnim_RapidSpin:
@@ -4675,19 +4635,27 @@ BattleAnim_PsychUp:
 	anim_ret
 
 BattleAnim_Extremespeed:
-	anim_2gfx BATTLE_ANIM_GFX_SPEED, BATTLE_ANIM_GFX_CUT
+	anim_1gfx BATTLE_ANIM_GFX_SPEED
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, $1, $0
-	anim_sound 0, 0, SFX_MENU
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 24, 88, $2
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 32, 88, $1
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 40, 88, $0
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 48, 88, $80
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 56, 88, $81
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_call BattleAnimSub_QuickAttack
 	anim_wait 12
-	anim_sound 0, 1, SFX_CUT
-	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_LEFT, 152, 40, $0
+	anim_2gfx BATTLE_ANIM_GFX_HIT, BATTLE_ANIM_GFX_WIND
+	anim_call BattleAnimSub_Agility
 	anim_wait 32
+	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $6, $0
+	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $0a, $2, $0
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj BATTLE_ANIM_OBJ_HIT, 152, 48, $0
+	anim_wait 5
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 44, $0
+	anim_wait 5
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj BATTLE_ANIM_OBJ_HIT, 120, 52, $0
+	anim_wait 24
+	anim_clearobjs
+	anim_wait 8
 	anim_bgeffect BATTLE_BG_EFFECT_SHOW_MON, $0, $1, $0
 	anim_wait 16
 	anim_ret
@@ -4735,14 +4703,7 @@ BattleAnim_FutureSight:
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_bgeffect BATTLE_BG_EFFECT_ALTERNATE_HUES, $0, $2, $0
 	anim_bgeffect BATTLE_BG_EFFECT_PSYCHIC, $0, $0, $0
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 24, $10
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 48, $2
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 88, $8
-	anim_wait 4
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 32, $6
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 56, $c
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 80, $4
-	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 104, $e
+	anim_call BattleAnimSub_Agility
 .loop
 	anim_sound 0, 0, SFX_THROW_BALL
 	anim_wait 16
@@ -4827,7 +4788,7 @@ BattleAnim_RockHead:
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
-	
+
 BattleAnim_WaterSport:
 	anim_1gfx BATTLE_ANIM_GFX_WATER
 	anim_setobjpal PAL_BATTLE_OB_BLUE, PAL_BTLCUSTOM_WATER
@@ -4881,7 +4842,7 @@ BattleAnim_CrossCutter:
 	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_RIGHT, 118, 40, $0
 	anim_wait 32
 	anim_ret
-	
+
 BattleAnim_Tempt:
 	anim_2gfx BATTLE_ANIM_GFX_STATUS, BATTLE_ANIM_GFX_OBJECTS
 	anim_sound 0, 1, SFX_PRESENT
@@ -4890,11 +4851,10 @@ BattleAnim_Tempt:
 	anim_obj BATTLE_ANIM_OBJ_HEART, 104, 48, $0
 	anim_wait 48  
 	anim_ret
-	
+
 BattleAnim_CoinHurl:
 	anim_3gfx BATTLE_ANIM_GFX_HIT, BATTLE_ANIM_GFX_STATUS, BATTLE_ANIM_GFX_SPEED
 	anim_sound 0, 0, SFX_METRONOME
-	
 .loop
 	anim_wait 8
 	anim_obj BATTLE_ANIM_OBJ_SHOOTING_SPARKLE, 64, 88, $4
@@ -4905,7 +4865,6 @@ BattleAnim_CoinHurl:
 	anim_wait 8
 	anim_sound 0, 1, SFX_POUND
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 128, 56, $0
-	
 .loop2
 	anim_sound 0, 1, SFX_PAY_DAY
 	anim_obj BATTLE_ANIM_OBJ_PAY_DAY, 120, 76, $1
@@ -4913,7 +4872,7 @@ BattleAnim_CoinHurl:
 	anim_loop 3, .loop2
 	anim_wait 8
 	anim_ret
-	
+
 BattleAnim_RockSlash:
 	anim_2gfx BATTLE_ANIM_GFX_ROCKS, BATTLE_ANIM_GFX_CUT
 	anim_sound 0, 1, SFX_CUT
@@ -4926,18 +4885,13 @@ BattleAnim_RockSlash:
 	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_LEFT, 150, 40, $0
 	anim_wait 32
 	anim_ret
-	
+
 BattleAnim_WindRide:
 	anim_2gfx BATTLE_ANIM_GFX_SPEED, BATTLE_ANIM_GFX_SKY_ATTACK
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect BATTLE_BG_EFFECT_HIDE_MON, $0, $1, $0
 	anim_1gfx BATTLE_ANIM_GFX_SKY_ATTACK
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 24, 88, $2
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 32, 88, $1
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 40, 88, $0
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 48, 88, $80
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 56, 88, $81
-	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_call BattleAnimSub_QuickAttack
 	anim_wait 12
 	anim_sound 0, 1, SFX_WING_ATTACK
 	anim_wait 24
@@ -4962,7 +4916,7 @@ BattleAnim_Megaphone:
 	anim_loop 2, .loop
 	anim_wait 8
 	anim_ret
-	
+
 BattleAnim_WillOWisp:
 	anim_setobjpal PAL_BATTLE_OB_RED, PAL_BTLCUSTOM_WILL_O_WISP
 	anim_1gfx BATTLE_ANIM_GFX_FIRE
@@ -5159,6 +5113,26 @@ BattleAnimSub_Glimmer2:
 	anim_wait 5
 	anim_loop 2, .loop
 	anim_wait 16
+	anim_ret
+
+BattleAnimSub_QuickAttack:
+	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 24, 88, $2
+	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 32, 88, $1
+	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 40, 88, $0
+	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 48, 88, $80
+	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 56, 88, $81
+	anim_obj BATTLE_ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_ret
+
+BattleAnimSub_Agility:
+	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 24, $10
+	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 48, $2
+	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 88, $8
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 32, $6
+	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 56, $c
+	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 80, $4
+	anim_obj BATTLE_ANIM_OBJ_AGILITY, 8, 104, $e
 	anim_ret
 
 BattleAnim_TargetObj_1Row:

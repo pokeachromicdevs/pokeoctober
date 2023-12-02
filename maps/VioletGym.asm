@@ -207,7 +207,8 @@ WhitneyPlainBadgeText:
 	done
 
 WhitneyAttractText:
-	text "TM45, ATTRACT!"
+	text "TM45, A.K.A."
+	line "ATTRACT!"
 
 	para "Have your POKEMON"
 	line "use it on foes of"

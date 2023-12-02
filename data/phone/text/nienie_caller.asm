@@ -53,9 +53,9 @@ NiechelleWildMonGotAwayTxt:
 NiechellRematchCallerTxt:
 	text "This is NIECHELLE"
 	line "calling. How are"
-	cont "you? My CAMOUFLAKE"
-	para "and I have been"
-	line "on a roll lately!"
+	cont "you? My team and"
+	para "I have been on"
+	line "a roll lately!"
 	cont "We`re getting so"
 	para "much tougher!"
 	line "If you want a"
