@@ -11,5 +11,5 @@ bin           = @["gif2anim"]
 # Dependencies
 
 requires "nim >= 2.0.0"
-requires "results"
-requires "docopt"
+requires "results#f3c666a"
+requires "docopt#efaa112"

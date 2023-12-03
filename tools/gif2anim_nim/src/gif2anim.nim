@@ -52,14 +52,14 @@ proc makeAnimFrames(myImage: Image, basedir: Path): Result[void, string] {.raise
     format: Color32,
     numFrames: 1'u32,
     dimensions: (
-      myImage.dimensions[0],
-      myImage.dimensions[1] * imgMap.len.uint32
+      myImage.dimensions.width,
+      myImage.dimensions.height * imgMap.len.uint32
     ),
     imagePalettes: myImage.imagePalettes,
     imageData: newSeq[uint64](
       imgMap.len *
-      myImage.dimensions[0].int *
-      myImage.dimensions[1].int
+      myImage.dimensions.width.int *
+      myImage.dimensions.height.int
     )
   )
 

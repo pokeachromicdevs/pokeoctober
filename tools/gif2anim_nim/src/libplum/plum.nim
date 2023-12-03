@@ -68,11 +68,15 @@ type
       frameAreas*: seq[PlumRect]
     else: discard
 
+  ImageDimensions = tuple
+    width: uint32
+    height: uint32
+
   Image* = object
     imageType*: PlumImageType
     format*: PlumFlags
     numFrames*: uint32 = 1
-    dimensions*: (uint32, uint32) = (1, 1)
+    dimensions*: ImageDimensions = (1, 1)
     metadata*: seq[ImageMetadata]
     #[
     TODO: these vary depending on format,
@@ -85,7 +89,6 @@ func errorToResult (errorNum: cuint): Result[void, cstring] =
   return errorNum.plumgeterrortext().err()
 
 func loadImage*(filename: Path, loadMode: int): Result[Image, string] =
-  var img = Image()
   var errNum: cuint
 
   let plumImg = plumLoadImage(
@@ -100,12 +103,14 @@ func loadImage*(filename: Path, loadMode: int): Result[Image, string] =
       "While loading " & filename.string & ": " & $(errNum.errorToResult.error())
     )
 
-  img.imageType = cast[PlumImageType](plumImg.typefield)
-  img.format = cast[PlumFlags](plumImg.colorFormat)
-  img.numFrames = plumImg.frames
-  img.dimensions = (plumImg.width, plumImg.height)
+  var img = Image(
+    imageType: cast[PlumImageType](plumImg.typefield),
+    format: cast[PlumFlags](plumImg.colorFormat),
+    numFrames: plumImg.frames,
+    dimensions: (plumImg.width, plumImg.height)
+  )
 
-  if plumImg.palette.palettes != nil and plumImg.maxPaletteIndex > 0:
+  if plumImg.palette.palettes != nil:
     for i in 0..plumImg.maxPaletteIndex.int:
       case img.format
       of Color16: img.imagePalettes.add plumImg.palette.palettes16[i].uint64
@@ -157,69 +162,69 @@ func loadImage*(filename: Path, loadMode: int): Result[Image, string] =
   return ok(img)
 
 proc saveAs*(image: Image, filename: Path): Result[csize_t, string] =
-  if image.imagePalettes.len < 1 or image.imageData.len < 1:
+  if image.imageData.len < 1:
     return err("No image data")
 
   if (
-    image.dimensions[0].int * image.dimensions[1].int * image.numFrames.int
-  ) != image.imageData.len:
-    return err("Image data size mismatch (" &
-      $image.imageData.len & " vs " &
-      $(image.dimensions[0].int * image.dimensions[1].int * image.numFrames.int) &
-      ")"
+    let requiredLen = image.dimensions.width.int * image.dimensions.height.int * image.numFrames.int
+    requiredLen != image.imageData.len
+  ):
+    return err(
+      "Image data size mismatch (" & $image.imageData.len & " vs " & $requiredLen & ")"
     )
 
-  var sampleImage = structplumimage()
-  sampleImage.typefield = cast[uint8](image.imageType)
-  sampleImage.colorFormat = cast[uint8](image.format)
-  sampleImage.width = image.dimensions[0]
-  sampleImage.height = image.dimensions[1]
-  sampleImage.frames = 1 # TODO: support frames
+  var newPlumImage = structplumimage(
+    typefield: cast[uint8](image.imageType),
+    colorFormat: cast[uint8](image.format),
+    width: image.dimensions.width,
+    height: image.dimensions.height,
+    frames: 1 # TODO: support frames
+  )
 
   # turn uint64s back into the correct format :(
   if image.imagePalettes.len > 0:
-    sampleImage.maxPaletteIndex = (image.imagePalettes.len-1).uint8
+    newPlumImage.maxPaletteIndex = (image.imagePalettes.len-1).uint8
 
     case image.format
     of Color16:
       var newPals: seq[uint16] = newSeq[uint16](image.imagePalettes.len)
       for i in 0..<image.imagePalettes.len:
         newPals[i] = image.imagePalettes[i].uint16
-      sampleImage.palette.palettes16 = cast[ptr UncheckedArray[uint16]](newPals[0].addr)
+      newPlumImage.palette.palettes16 = cast[ptr UncheckedArray[uint16]](newPals[0].addr)
     of Color32, Color32x:
       var newPals: seq[uint32] = newSeq[uint32](image.imagePalettes.len)
       for i in 0..<image.imagePalettes.len:
         newPals[i] = image.imagePalettes[i].uint32
-      sampleImage.palette.palettes32 = cast[ptr UncheckedArray[uint32]](newPals[0].addr)
+      newPlumImage.palette.palettes32 = cast[ptr UncheckedArray[uint32]](newPals[0].addr)
     of Color64:
-      sampleImage.palette.palettes64 = cast[ptr UncheckedArray[uint64]](image.imagePalettes[0].addr)
+      newPlumImage.palette.palettes64 = cast[ptr UncheckedArray[uint64]](image.imagePalettes[0].addr)
     else:
       return err("Unknown image format")
 
     var newData: seq[uint8] = newSeq[uint8](image.imageData.len)
     for i in 0..<image.imageData.len:
       newData[i] = image.imageData[i].uint8
-    sampleImage.data.data8 = cast[ptr UncheckedArray[uint8]](newData[0].addr)
+    newPlumImage.data.data8 = cast[ptr UncheckedArray[uint8]](newData[0].addr)
   else:
     case image.format
     of Color16:
       var newData: seq[uint16] = newSeq[uint16](image.imagePalettes.len)
       for i in 0..<image.imageData.len:
         newData[i] = image.imageData[i].uint16
-      sampleImage.data.data16 = cast[ptr UncheckedArray[uint16]](newData[0].addr)
+      newPlumImage.data.data16 = cast[ptr UncheckedArray[uint16]](newData[0].addr)
     of Color32, Color32x:
       var newData: seq[uint32] = newSeq[uint32](image.imagePalettes.len)
       for i in 0..<image.imageData.len:
         newData[i] = image.imageData[i].uint32
-      sampleImage.data.data32 = cast[ptr UncheckedArray[uint32]](newData[0].addr)
+      newPlumImage.data.data32 = cast[ptr UncheckedArray[uint32]](newData[0].addr)
     of Color64:
-      sampleImage.data.data64 = cast[ptr UncheckedArray[uint64]](image.imageData[0].addr)
+      newPlumImage.data.data64 = cast[ptr UncheckedArray[uint64]](image.imageData[0].addr)
     else:
       return err("Unknown image format")
 
   var errNum: cuint
   let plumImg = plumStoreImage(
-    sampleImage.addr,
+    newPlumImage.addr,
     filename.cstring,
     cast[csize_t](ModeFilename),
     errNum.addr
@@ -232,7 +237,7 @@ proc saveAs*(image: Image, filename: Path): Result[csize_t, string] =
 
 func getFrameOffset*(image: Image, frame: int): int =
   return
-    image.dimensions[0].int * image.dimensions[1].int * frame
+    image.dimensions.width.int * image.dimensions.height.int * frame
 
 func getFrameData*(image: Image, frame: int): seq[uint64] =
   return
