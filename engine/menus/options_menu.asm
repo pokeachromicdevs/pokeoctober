@@ -469,20 +469,33 @@ Options_Frame:
 .RightPressed:
 	ld a, [hl]
 	inc a
+	cp NUM_FRAMES
+	jr c, .Save
+	xor a
 	jr .Save
 
 .LeftPressed:
 	ld a, [hl]
-	dec a
+	sub a, 1
+	jr nc, .Save
+	ld a, NUM_FRAMES - 1
 
 .Save:
-	maskbits NUM_FRAMES
 	ld [hl], a
 UpdateFrame:
-	ld a, [wTextboxFrame]
 	hlcoord 16, 15 ; where on the screen the number is drawn
-	add "1"
-	ld [hl], a
+	; clear the number
+	ld a, " "
+	ld [hli], a
+	ld [hli], a
+	dec hl
+	dec hl
+	; before printing it
+	ld a, [wTextboxFrame]
+	inc a
+	call Print8BitNumRightAlign
+	;add "1"
+	;ld [hl], a
 	call LoadFontsExtra
 	and a
 	ret

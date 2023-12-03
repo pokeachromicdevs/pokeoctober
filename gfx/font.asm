@@ -18,6 +18,14 @@ INCBIN "gfx/frames/7.1bpp"
 INCBIN "gfx/frames/8.1bpp"
 INCBIN "gfx/frames/9.1bpp"
 
+Frames2bpp:
+INCBIN "gfx/frames/10.2bpp"
+INCBIN "gfx/frames/11.2bpp"
+INCBIN "gfx/frames/12.2bpp"
+INCBIN "gfx/frames/13.2bpp"
+INCBIN "gfx/frames/14.2bpp"
+INCBIN "gfx/frames/15.2bpp"
+
 ; Various misc graphics here.
 
 StatsScreenPageTilesGFX:

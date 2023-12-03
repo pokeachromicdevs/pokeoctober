@@ -77,6 +77,9 @@ _LoadFontsBattleExtra::
 LoadFrame:
 	ld a, [wTextboxFrame]
 	maskbits NUM_FRAMES
+	cp a, NUM_1BPP_FRAMES
+	jr nc, .fourColorFrame
+; two colors
 	ld bc, 6 * LEN_1BPP_TILE
 	ld hl, Frames
 	call AddNTimes
@@ -85,6 +88,18 @@ LoadFrame:
 	ld hl, vTiles2 tile "┌" ; $79
 	lb bc, BANK(Frames), 6 ; "┌" to "┘"
 	call Get1bpp_2
+	jr .textboxSpace
+.fourColorFrame
+	sbc a, NUM_1BPP_FRAMES
+	ld bc, 6 * LEN_2BPP_TILE
+	ld hl, Frames2bpp
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, vTiles2 tile "┌" ; $79
+	lb bc, BANK(Frames2bpp), 6 ; "┌" to "┘"
+	call Get2bpp_2
+.textboxSpace
 	ld hl, vTiles2 tile " " ; $7f
 	ld de, TextboxSpaceGFX
 	lb bc, BANK(TextboxSpaceGFX), 1

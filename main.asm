@@ -509,7 +509,6 @@ INCBIN "gfx/splash/copyright_octo.2bpp"
 
 SECTION "bank3E", ROMX
 
-INCLUDE "engine/gfx/load_font.asm"
 INCLUDE "engine/link/time_capsule.asm"
 INCLUDE "engine/events/name_rater.asm"
 INCLUDE "engine/events/play_slow_cry.asm"
@@ -517,7 +516,6 @@ INCLUDE "engine/link/time_capsule_2.asm"
 INCLUDE "engine/pokedex/unown_dex.asm"
 INCLUDE "engine/events/magikarp.asm"
 INCLUDE "engine/battle/hidden_power.asm"
-
 INCLUDE "data/wild/love_ball_mons.asm"
 
 
@@ -527,6 +525,9 @@ INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
 INCLUDE "engine/battle/misc.asm"
+
+SECTION "Font Loading", ROMX
+INCLUDE "engine/gfx/load_font.asm"
 
 
 SECTION "bank41", ROMX
