@@ -437,7 +437,7 @@ static N_NIMCALL(void, TM__V84sYTa2XfwkRnO1E5HVXQ_4)(void);
 N_LIB_PRIVATE N_NIMCALL(void, docopt__OOZOOZOOZOOZOOZstorageZOnimbleZpkgs50Zdocopt4548O55O4945515655f49ae4955f51b55545048c55564952cf5252a5350d51d5749b56574854e57Zdocopt_u4877)(NimStringDesc* doc_p0, tySequence__sM4lkSb7zS6F7OVMvW9cffQ* argv_p1, NIM_BOOL help_p2, NimStringDesc* version_p3, NIM_BOOL options_first_p4, NIM_BOOL quit_p5, tyObject_Table__tiAvDfi9asEUun0f3cf2Cng* Result);
 N_LIB_PRIVATE N_NIMCALL(tySequence__sM4lkSb7zS6F7OVMvW9cffQ*, commandLineParams__stdZcmdline_u60)(void);
 static N_NIMCALL(void, TM__V84sYTa2XfwkRnO1E5HVXQ_5)(void);
-N_LIB_PRIVATE N_NIMCALL(void, loadImage__libplumZplum_u111)(NimStringDesc* filename_p0, NI loadMode_p1, tyObject_Result__4RXiJqjprpcyegaiDWMJrA* Result);
+N_LIB_PRIVATE N_NIMCALL(void, loadImage__libplumZplum_u116)(NimStringDesc* filename_p0, NI loadMode_p1, tyObject_Result__4RXiJqjprpcyegaiDWMJrA* Result);
 N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, dollar___OOZOOZOOZOOZOOZstorageZOnimbleZpkgs50Zdocopt4548O55O4945515655f49ae4955f51b55545048c55564952cf5252a5350d51d5749b56574854e57Zdocopt_u144)(tyObject_Value__eFHG7xUHF3nm4gy19bWHtZA v_p0);
 N_LIB_PRIVATE N_NIMCALL(void, X5BX5D___gif50anim_u2531)(tyObject_Table__tiAvDfi9asEUun0f3cf2Cng t_p0, NimStringDesc* key_p1, tyObject_Value__eFHG7xUHF3nm4gy19bWHtZA* Result);
 static N_INLINE(void, nimZeroMem)(void* p_p0, NI size_p1);
@@ -451,7 +451,7 @@ N_LIB_PRIVATE N_NIMCALL(void, unsureAsgnRef)(void** dest_p0, void* src_p1);
 N_LIB_PRIVATE N_NIMCALL(void, initTable__gif50anim_u173)(NI initialSize_p0, tyObject_Table__ssICsAjqOGwJT9bLimvbCgA* Result);
 static N_NIMCALL(void, Marker_tySequence__9at6AhlsdqrskS09cVgj8g5w)(void* p, NI op);
 N_LIB_PRIVATE N_NIMCALL(NI, hash__gif50anim_u217)(NU64* x_p0, NI x_p0Len_0);
-N_LIB_PRIVATE N_NIMCALL(tySequence__YdLNCDKYeipzJx3I8Xw82Q*, getFrameData__libplumZplum_u810)(tyObject_Image__zBV2iak9cX7UnDZyTKvgWMA* image_p0, NI frame_p1);
+N_LIB_PRIVATE N_NIMCALL(tySequence__YdLNCDKYeipzJx3I8Xw82Q*, getFrameData__libplumZplum_u813)(tyObject_Image__zBV2iak9cX7UnDZyTKvgWMA* image_p0, NI frame_p1);
 N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, hasKey__gif50anim_u303)(tyObject_Table__ssICsAjqOGwJT9bLimvbCgA t_p0, NI key_p1);
 N_LIB_PRIVATE N_NIMCALL(NI*, X5BX5D___gif50anim_u602)(tyObject_Table__ssICsAjqOGwJT9bLimvbCgA* t_p0, NI key_p1);
 N_LIB_PRIVATE N_NIMCALL(TGenericSeq*, incrSeqV3)(TGenericSeq* s_p0, TNimType* typ_p1);
@@ -464,10 +464,10 @@ static N_INLINE(NIM_BOOL, isFilled__pureZcollectionsZtables_u31)(NI hcode_p0);
 static N_INLINE(void, nimCopyMem)(void* dest_p0, void* source_p1, NI size_p2);
 N_LIB_PRIVATE N_NIMCALL(void, X5BX5Deq___gif50anim_u2213)(tySequence__YdLNCDKYeipzJx3I8Xw82Q** s_p0, tyObject_HSlice__M59bWryXDzi9cuLaUQXWQ7fg x_p1, NU64* b_p2, NI b_p2Len_0);
 static N_INLINE(tyObject_HSlice__M59bWryXDzi9cuLaUQXWQ7fg, dotdot___stdZstrbasics_u48)(NI a_p0, NI b_p1);
-N_LIB_PRIVATE N_NIMCALL(NI, getFrameOffset__libplumZplum_u806)(tyObject_Image__zBV2iak9cX7UnDZyTKvgWMA* image_p0, NI frame_p1);
+N_LIB_PRIVATE N_NIMCALL(NI, getFrameOffset__libplumZplum_u809)(tyObject_Image__zBV2iak9cX7UnDZyTKvgWMA* image_p0, NI frame_p1);
 static N_INLINE(NF, slash___system_u1721)(NI x_p0, NI y_p1);
 static N_INLINE(NF, toFloat__system_u1709)(NI i_p0);
-N_LIB_PRIVATE N_NIMCALL(void, saveAs__libplumZplum_u493)(tyObject_Image__zBV2iak9cX7UnDZyTKvgWMA* image_p0, NimStringDesc* filename_p1, tyObject_Result__QF5QAO9a8LBls9cj5CczyUkA* Result);
+N_LIB_PRIVATE N_NIMCALL(void, saveAs__libplumZplum_u498)(tyObject_Image__zBV2iak9cX7UnDZyTKvgWMA* image_p0, NimStringDesc* filename_p1, tyObject_Result__QF5QAO9a8LBls9cj5CczyUkA* Result);
 static N_INLINE(NimStringDesc*, slash___stdZpaths_u45)(NimStringDesc* head_p0, NimStringDesc* tail_p1);
 N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, nosjoinPath)(NimStringDesc* head_p0, NimStringDesc* tail_p1);
 N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, error__gif50anim_u2381)(tyObject_Result__QF5QAO9a8LBls9cj5CczyUkA self_p0);
@@ -1020,7 +1020,7 @@ N_LIB_PRIVATE N_NIMCALL(void, makeAnimFrames__gif50anim_u167)(tyObject_Image__zB
 				if (!(i_2 < colontmp_)) goto LA3;
 				i = i_2;
 				T4_ = NIM_NIL;
-				T4_ = getFrameData__libplumZplum_u810(myImage_p0, i);
+				T4_ = getFrameData__libplumZplum_u813(myImage_p0, i);
 				hash = hash__gif50anim_u217((T4_) ? (T4_->data) : NIM_NIL, (T4_ ? T4_->Sup.len : 0));
 				{
 					NIM_BOOL T7_;
@@ -1099,12 +1099,12 @@ LA5_: ;
 						k = imgMap.data->data[h].Field1;
 						nimCopyMem((void*)v, (NIM_CONST void*)imgMap.data->data[h].Field2, sizeof(tyArray__HU7qaqKu9czJLT84iCBJnsA));
 						T27_ = (NI)0;
-						T27_ = getFrameOffset__libplumZplum_u806(myImage_p0, v[(((NI)0))- 0]);
+						T27_ = getFrameOffset__libplumZplum_u809(myImage_p0, v[(((NI)0))- 0]);
 						T28_ = (NI)0;
-						T28_ = getFrameOffset__libplumZplum_u806(myImage_p0, (NI)(v[(((NI)0))- 0] + ((NI)1)));
+						T28_ = getFrameOffset__libplumZplum_u809(myImage_p0, (NI)(v[(((NI)0))- 0] + ((NI)1)));
 						T29_ = dotdot___stdZstrbasics_u48(T27_, (NI)(T28_ - ((NI)1)));
 						T30_ = NIM_NIL;
-						T30_ = getFrameData__libplumZplum_u810(myImage_p0, v[(((NI)1))- 0]);
+						T30_ = getFrameData__libplumZplum_u813(myImage_p0, v[(((NI)1))- 0]);
 						X5BX5Deq___gif50anim_u2213((&animImage.imageData), T29_, (T30_) ? (T30_->data) : NIM_NIL, (T30_ ? T30_->Sup.len : 0));
 					}
 LA25_: ;
@@ -1169,7 +1169,7 @@ LA37_: ;
 		nimZeroMem((void*)(&animImageFile), sizeof(tyObject_Result__QF5QAO9a8LBls9cj5CczyUkA));
 		T47_ = NIM_NIL;
 		T47_ = slash___stdZpaths_u45(basedir_p1, ((NimStringDesc*) &TM__V84sYTa2XfwkRnO1E5HVXQ_9));
-		saveAs__libplumZplum_u493((&animImage), T47_, (&animImageFile));
+		saveAs__libplumZplum_u498((&animImage), T47_, (&animImageFile));
 		if (!!(animImageFile.oResultPrivate)) goto LA48_;
 		switch ((*Result).oResultPrivate) {
 		case NIM_FALSE:
@@ -1657,7 +1657,7 @@ N_LIB_PRIVATE N_NIMCALL(void, NimMainModule)(void) {
 	X5BX5D___gif50anim_u2531(args__gif50anim_u2477, ((NimStringDesc*) &TM__V84sYTa2XfwkRnO1E5HVXQ_6), (&T3_));
 	T4_ = NIM_NIL;
 	T4_ = dollar___OOZOOZOOZOOZOOZstorageZOnimbleZpkgs50Zdocopt4548O55O4945515655f49ae4955f51b55545048c55564952cf5252a5350d51d5749b56574854e57Zdocopt_u144(T3_);
-	loadImage__libplumZplum_u111(T4_, ((NI)13824), (&origImage__gif50anim_u2601));
+	loadImage__libplumZplum_u116(T4_, ((NI)13824), (&origImage__gif50anim_u2601));
 	{
 		tyArray__nHXaesL0DJZHyVS07ARPRA T9_;
 		if (!!(origImage__gif50anim_u2601.oResultPrivate)) goto LA7_;

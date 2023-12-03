@@ -399,7 +399,7 @@ N_LIB_PRIVATE N_NOINLINE(void, raiseResultDefect__OOZOOZOOZOOZOOZstorageZOnimble
 	if (T2_) nimGCunrefNoCycle(T2_);
 	raiseExceptionEx((Exception*)T1_, "ResultDefect", "raiseResultDefect", "results.nim", 376);
 }
-N_LIB_PRIVATE N_NIMCALL(NCSTRING, error__libplumZplum_u130)(tyObject_Result__BULvxrJwginKKDXJqdyZZA self_p0) {
+N_LIB_PRIVATE N_NIMCALL(NCSTRING, error__libplumZplum_u134)(tyObject_Result__BULvxrJwginKKDXJqdyZZA self_p0) {
 	NCSTRING result;
 	result = (NCSTRING)0;
 	switch (self_p0.oResultPrivate) {
