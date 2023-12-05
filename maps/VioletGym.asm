@@ -340,9 +340,15 @@ VioletGymGuyText:
 	done
 
 VioletGymGuyWinText:
-	text "You won? Great! I"
-	line "was busy admiring"
-	cont "the ladies here."
+	text "You won? Great!"
+	line "Maybe now WHITNEY"
+	
+	para "and I can finally"
+	line "have some alone"
+	cont "time<...>"
+	
+	para "Oops! Forget I"
+	line "said that!"
 	done
 
 VioletGym_MapEvents:
