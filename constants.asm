@@ -1,3 +1,5 @@
+INCLUDE "checks/rgbasm_version.asm"
+
 INCLUDE "charmap.asm"
 
 INCLUDE "macros.asm"
