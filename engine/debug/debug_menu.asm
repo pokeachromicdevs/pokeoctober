@@ -374,6 +374,7 @@ Debug_Help:
 	dw .ColorMenu
 	dw .TrainerMenu
 	dw .CryMenu
+	dw .GetItemMenu
 .Dialogs_End:
 
 DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
@@ -402,6 +403,24 @@ DEBUG_NUM_HELP_ITEMS EQU (Debug_Help.Dialogs_End - Debug_Help.Dialogs) / 2
 	para "A while holding"
 	line "SELECT: load cry"
 	para "A: play cry"
+	prompt
+
+.GetItemMenu:
+	text "L/R only: offset 1"
+
+	para "L/R while holding"
+	line "SELECT: offset 10"
+
+	para "L/R while holding"
+	line "START: offset 255"
+
+	para "A: give one item"
+
+	para "Key items begin"
+	line "at 256."
+
+	para "Ball items begin"
+	line "at 512."
 	prompt
 
 .SoundTest:
@@ -467,6 +486,7 @@ endr
 	db "COLOR@@@@@@@@"
 	db "TRAINERS@@@@@"
 	db "PLAY CRY@@@@@"
+	db "GET 1 ITEM@@@"
 
 
 Debug_GetCalled:
@@ -638,31 +658,42 @@ Debug_GetOneItem:
 
 .left
 	call .get_value
-	ld a, h
-	or l
+.left_loop
+	push af
+	ld a, l
+	or h
 	jr nz, .dec_value
-	ld hl, NUM_ITEMS
+	ld de, $FFFF
 	jr .left_cont
 .dec_value
 	dec hl
 .left_cont
-	;dec b
-	;jr nz, .leftloop
+	pop af
+	dec a
+	jr nz, .left_loop
 	call .put_value
 	call .update_display
 	jr .loop
 
 .right
 	call .get_value
-	cphl16 NUM_ITEMS
-	jr c, .inc_value
-	ld hl, 1
-	jr .right_cont
-.inc_value
+.right_loop
 	inc hl
+	push af
+	ld a, h
+	cp $FF
+	jr c, .right_cont
+	jr nz, .right_cont
+	ld a, l
+	cp $FF
+	jr c, .right_cont
+	xor a
+	ld h, a
+	ld l, a
 .right_cont
-	;dec b
-	;jr nz, .rightloop
+	pop af
+	dec a
+	jr nz, .right_loop
 	call .put_value
 	call .update_display
 	jr .loop
@@ -680,21 +711,20 @@ Debug_GetOneItem:
 	ld [hl], a
 	hlcoord 3, 2
 	ld de, hDebugMenuDataBuffer
-	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
+	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
 	call PrintNum
+
 	hlcoord 1, 3
 	ld bc, 18
 	ld a, " "
 	call ByteFill
-	;farcall ItemTableGarbageCollection
-	
-	ldh a, [hDebugMenuDataBuffer + 1]
-	ld h, a
+
 	ldh a, [hDebugMenuDataBuffer + 0]
+	ld h, a
+	ldh a, [hDebugMenuDataBuffer + 1]
+	ld l, a
 	or h
 	jr z, .no_item_name
-
-	ld l, a
 	call GetItemIDFromIndex
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
@@ -726,17 +756,29 @@ Debug_GetOneItem:
 .get_value
 	ld hl, hDebugMenuDataBuffer
 	ldi a, [hl]
-	ld h, [hl]
-	ld l, a
+	ld l, [hl]
+	ld h, a
+	ldh a, [hJoyDown]
+	and SELECT
+	ld a, 1
+	jr z, .chk_start
+	ld a, 10
+	ret
+.chk_start
+	ldh a, [hJoyDown]
+	and START
+	ld a, 1
+	ret z
+	ld a, $FF
 	ret
 
 .put_value
-	ld c, LOW(hDebugMenuDataBuffer)
-	ld a, l
-	ld [c], a
-	inc c
+	ld de, hDebugMenuDataBuffer
 	ld a, h
-	ld [c], a
+	ld [de], a
+	inc de
+	ld a, l
+	ld [de], a
 	ret
 
 
