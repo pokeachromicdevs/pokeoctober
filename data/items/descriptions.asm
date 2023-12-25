@@ -1,6 +1,13 @@
 ItemDescriptions:
 	indirect_table 2, 1
-	indirect_entries NUM_ITEMS, ItemDescriptions1
+	indirect_entries NUM_ITEM_POCKET, ItemDescriptions1
+	indirect_entries FIRST_KEY_ITEM - 1
+
+	indirect_entries (FIRST_KEY_ITEM - 1) + NUM_KEY_ITEM_POCKET, ItemKeyDescriptions
+	indirect_entries FIRST_BALL_ITEM - 1
+
+	indirect_entries (FIRST_BALL_ITEM - 1) + NUM_BALL_ITEM_POCKET, ItemBallDescriptions
+
 	indirect_table_end
 
 InvalidItemDesc:
@@ -8,13 +15,7 @@ InvalidItemDesc:
 
 ItemDescriptions1:
 ; entries correspond to item ids
-	dw MasterBallDesc
-	dw UltraBallDesc
 	dw BrightpowderDesc
-	dw GreatBallDesc
-	dw PokeBallDesc
-	dw TownMapDesc
-	dw BicycleDesc
 	dw MoonStoneDesc
 	dw AntidoteDesc
 	dw BurnHealDesc
@@ -32,7 +33,6 @@ ItemDescriptions1:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw HoneyPotDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -52,7 +52,6 @@ ItemDescriptions1:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw OaksParcelDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
@@ -61,24 +60,12 @@ ItemDescriptions1:
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
-	dw CoinCaseDesc
-	dw ItemfinderDesc
-	dw PokeFluteDesc
 	dw ExpShareDesc
-	dw OldRodDesc
-	dw GoodRodDesc
 	dw SilverLeafDesc
-	dw SuperRodDesc
 	dw PPUpDesc
 	dw EtherDesc
 	dw MaxEtherDesc
 	dw ElixerDesc
-	dw RedScaleDesc
-	dw SecretPotionDesc
-	dw SSTicketDesc
-	dw ElmsEggDesc
-	dw ClearBellDesc
-	dw SilverWingDesc
 	dw MoomooMilkDesc
 	dw QuickClawDesc
 	dw PsnCureBerryDesc
@@ -122,8 +109,6 @@ ItemDescriptions1:
 	dw EverStoneDesc
 	dw SpellTagDesc
 	dw RageCandyBarDesc
-	dw GSBallDesc
-	dw BlueCardDesc
 	dw MiracleSeedDesc
 	dw ThickClubDesc
 	dw FocusOrbDesc
@@ -134,14 +119,8 @@ ItemDescriptions1:
 	dw RevivalHerbDesc
 	dw HardStoneDesc
 	dw LuckyEggDesc
-	dw CardKeyDesc
-	dw MachinePartDesc
-	dw EggTicketDesc
-	dw LostItemDesc
 	dw StardustDesc
 	dw StarPieceDesc
-	dw BasementKeyDesc
-	dw PassDesc
 	dw WhiteFeatherDesc
 	dw ElectricPouchDesc
 	dw CharcoalDesc
@@ -162,16 +141,9 @@ ItemDescriptions1:
 	dw GuardThreadDesc
 	dw IceBikiniDesc
 	dw SacredAshDesc
-	dw HeavyBallDesc
 	dw FlowerMailDesc
-	dw LevelBallDesc
-	dw LureBallDesc
-	dw FastBallDesc
 	dw WisdomOrbDesc
 	dw LightBallDesc
-	dw FriendBallDesc
-	dw MoonBallDesc
-	dw LoveBallDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
@@ -180,10 +152,7 @@ ItemDescriptions1:
 	dw UpGradeDesc
 	dw BerryDesc
 	dw AppleDesc
-	dw SquirtBottleDesc
 	dw WaterTailDesc
-	dw ParkBallDesc
-	dw RainbowWingDesc
 	dw CountercuffDesc
 	dw BrickPieceDesc
 	dw SurfMailDesc
@@ -195,8 +164,6 @@ ItemDescriptions1:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MewMailDesc
-	dw VoucherDesc
-	dw TickleStickDesc
 	dw PrettyTailDesc
 	dw BurstOrbDesc
 	dw HiddenNeedleDesc
@@ -220,11 +187,6 @@ ItemDescriptions1:
 	dw TinyScalesDesc
 	dw SteelScalesDesc
 	dw MysticTagDesc
-	dw HeavyAmberDesc
-	dw ToxicAmberDesc
-	dw OldAmberDesc
-	dw DomeFossilDesc
-	dw HelixFossilDesc
 	dw FleeFeatherDesc
 	dw CranidosFossilDesc
 	dw MysticWaterDesc
@@ -240,31 +202,82 @@ ItemDescriptions1:
 	dw MomsLoveDesc
 	dw MysticThreadDesc
 	dw MysticNeedleDesc
-	dw SafariBallDesc
 	dw FujisLetterDesc
 	dw WobblyBloonDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+	dw InvalidItemDesc
+.End:
+
+ItemKeyDescriptions:
+	dw TownMapDesc
+	dw BicycleDesc
+	dw HoneyPotDesc
+	dw OaksParcelDesc
+	dw CoinCaseDesc
+	dw ItemfinderDesc
+	dw PokeFluteDesc
+	dw OldRodDesc
+	dw GoodRodDesc
+	dw SuperRodDesc
+	dw RedScaleDesc
+	dw SecretPotionDesc
+	dw SSTicketDesc
+	dw ElmsEggDesc
+	dw ClearBellDesc
+	dw SilverWingDesc
+	dw GSBallDesc
+	dw BlueCardDesc
+	dw CardKeyDesc
+	dw MachinePartDesc
+	dw EggTicketDesc
+	dw LostItemDesc
+	dw BasementKeyDesc
+	dw PassDesc
+	dw SquirtBottleDesc
+	dw RainbowWingDesc
+	dw VoucherDesc
+	dw TickleStickDesc
+	dw HeavyAmberDesc
+	dw ToxicAmberDesc
+	dw OldAmberDesc
+	dw DomeFossilDesc
+	dw HelixFossilDesc
+.End:
+
+ItemBallDescriptions:
+	dw MasterBallDesc
+	dw UltraBallDesc
+	dw GreatBallDesc
+	dw PokeBallDesc
+	dw HeavyBallDesc
+	dw LevelBallDesc
+	dw LureBallDesc
+	dw FastBallDesc
+	dw FriendBallDesc
+	dw MoonBallDesc
+	dw LoveBallDesc
+	dw ParkBallDesc
+	dw SafariBallDesc
 	dw DirectBallDesc
 	dw NightBallDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
-	dw InvalidItemDesc
 .End:
 
 IceBikiniDesc:

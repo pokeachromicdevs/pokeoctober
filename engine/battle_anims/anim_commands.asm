@@ -354,7 +354,7 @@ BattleAnimCommands::
 	dw BattleAnimCmd_OAMOff
 	dw BattleAnimCmd_ClearObjs
 	dw BattleAnimCmd_BeatUp
-	dw BattleAnimCmd_E7
+	dw BattleAnimCmd_IfParamItemEqual
 	dw BattleAnimCmd_UpdateActorPic
 	dw BattleAnimCmd_Minimize
 	dw BattleAnimCmd_SetBgPal
@@ -541,8 +541,18 @@ BattleAnimCmd_IfVarEqual:
 	ld [hl], d
 	ret
 
+BattleAnimCmd_IfParamItemEqual:
+	call GetBattleAnimByte
+	ld l, a
+	call GetBattleAnimByte
+	ld h, a
+	call GetItemIDFromIndex
+	jr BattleAnimCmd_IfParamItemEqualContinue
+
 BattleAnimCmd_IfParamEqual:
 	call GetBattleAnimByte
+
+BattleAnimCmd_IfParamItemEqualContinue:
 	ld hl, wBattleAnimParam
 	cp [hl]
 	jr z, .jump
@@ -885,9 +895,6 @@ BattleAnimCmd_CheckPokeball:
 	callfar GetPokeBallWobble
 	ld a, c
 	ld [wBattleAnimVar], a
-	ret
-
-BattleAnimCmd_E7:
 	ret
 
 BattleAnimCmd_Transform:

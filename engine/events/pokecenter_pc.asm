@@ -308,6 +308,8 @@ UnknownText_0x157cc:
 	text_end
 
 PlayerWithdrawItemMenu:
+	ld hl, wItemFlags
+	set IN_PC_F, [hl]
 	call LoadStandardMenuHeader
 	farcall ClearPCItemScreen
 .loop
@@ -318,6 +320,8 @@ PlayerWithdrawItemMenu:
 
 .quit
 	call CloseSubmenu
+	ld hl, wItemFlags
+	res IN_PC_F, [hl]
 	xor a
 	ret
 
@@ -384,6 +388,8 @@ PlayerWithdrawItemMenu:
 	text_end
 
 PlayerTossItemMenu:
+	ld hl, wItemFlags
+	set IN_PC_F, [hl]
 	call LoadStandardMenuHeader
 	farcall ClearPCItemScreen
 .loop
@@ -395,6 +401,8 @@ PlayerTossItemMenu:
 
 .quit
 	call CloseSubmenu
+	ld hl, wItemFlags
+	res IN_PC_F, [hl]
 	xor a
 	ret
 
@@ -414,6 +422,8 @@ PlayerLogOffMenu:
 PlayerDepositItemMenu:
 	call .CheckItemsInBag
 	jr c, .nope
+	ld hl, wItemFlags
+	set IN_BAG_F, [hl]
 	call DisableSpriteUpdates
 	call LoadStandardMenuHeader
 	farcall DepositSellInitPackBuffers
@@ -427,6 +437,8 @@ PlayerDepositItemMenu:
 	jr .loop
 
 .close
+	ld hl, wItemFlags
+	res IN_BAG_F, [hl]
 	call CloseSubmenu
 
 .nope

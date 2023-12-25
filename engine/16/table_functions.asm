@@ -140,41 +140,17 @@ ItemTableGarbageCollection:
 	___conversion_bitmap_check_structs wPartyMons + (wPartyMon1Item - wPartyMon1), PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, .set_bit
 	___conversion_bitmap_check_structs wOTPartyMons + (wOTPartyMon1Item - wOTPartyMon1), PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, .set_bit
 
-; --bag items--
-
-	; items pocket
-___item = 0
-	rept MAX_ITEMS
-	___conversion_bitmap_check_values .set_bit, wItems + (___item * 2)
-___item = ___item + 1
-	endr
-	
-	; key items pocket
-___item = 0
-	rept MAX_KEY_ITEMS
-	___conversion_bitmap_check_values .set_bit, wKeyItems + ___item
-___item = ___item + 1
-	endr
-	
-	; balls pocket
-___item = 0
-	rept MAX_BALLS
-	___conversion_bitmap_check_values .set_bit, wBalls + (___item * 2)
-___item = ___item + 1
-	endr
-	
-	; pc items
-___item = 0
-	rept MAX_PC_ITEMS
-	___conversion_bitmap_check_values .set_bit, wPCItems + (___item * 2)
-___item = ___item + 1
-	endr
+	; kurt temp items
+	;___conversion_bitmap_check_structs wKurtApricornItems, 1, 10, .set_bit
 
 ; check individual variables
 	___conversion_bitmap_check_values .set_bit, \
 		wSwitchItem, wPackUsedItem, wTempMonItem, wMartItemID, \
 		wCurItem, wEnemyMonItem, wBattleMonItem, wWhichMomItem, \
-		wItemBallItemID, wContestMonItem
+		wItemBallItemID, wContestMonItem, wBattleAnimParam, \
+		wScriptVar, wCurEnemyItem, wEnemyTrainerItem1, \
+		wEnemyTrainerItem2, wNamedObjectIndexBuffer, wBaseItem1, \
+		wBaseItem2
 
 ; battle tower stuff should be here but this ROM hack doesn't care
 
@@ -184,6 +160,15 @@ ___item = ___item + 1
 
 	pop af
 	ldh [rSVBK], a
+
+; check boxed mons
+	ldh a, [hSRAMBank]
+	push af
+		ld a, BANK(sBox)
+		call OpenSRAM
+		___conversion_bitmap_check_structs sBoxMon1Item, BOXMON_STRUCT_LENGTH, MONS_PER_BOX, .set_bit
+	pop af
+	call OpenSRAM ; closes SRAM if hSRAMBank was -1
 
 	pop de
 	ret

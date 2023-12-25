@@ -86,6 +86,8 @@ SECTION "Saved 16-bit conversion tables", SRAM
 ; the Pokémon index table isn't stored here to improve save data packing
 sMoveIndexTable:: ds wMoveIndexTableEnd - wMoveIndexTable
 sBackupMoveIndexTable:: ds wMoveIndexTableEnd - wMoveIndexTable
+sItemIndexTable:: ds wItemIndexTableEnd - wItemIndexTable
+sBackupItemIndexTable:: ds wItemIndexTableEnd - wItemIndexTable
 
 SECTION "Backup Save", SRAM
 
@@ -102,7 +104,6 @@ sBackupPokemonData:: ds wPokemonDataEnd - wPokemonData
 sBackupGameDataEnd::
 
 sBackupPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
-sBackupItemIndexTable:: ds wItemIndexTableEnd - wItemIndexTable
 
 sBackupConversionTableChecksum:: dw
 
@@ -130,7 +131,6 @@ sPokemonData:: ds wPokemonDataEnd - wPokemonData
 sGameDataEnd::
 
 sPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
-sItemIndexTable:: ds wItemIndexTableEnd - wItemIndexTable
 
 sConversionTableChecksum:: dw
 

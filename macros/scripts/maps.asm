@@ -103,7 +103,7 @@ ENDM
 hiddenitem: MACRO
 ;\1: item: from constants/item_constants.asm
 ;\2: flag: an EVENT_* constant
-	dwb \2, \1
+	dw \2, \1
 ENDM
 
 elevfloor: MACRO

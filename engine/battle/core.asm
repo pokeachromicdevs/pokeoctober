@@ -385,13 +385,17 @@ HandleBerserkGene:
 	push bc
 	callfar GetUserItem
 	ld a, [hl]
-; TODO: Berserk Gene to 16-bit
 	ld [wNamedObjectIndexBuffer], a
+	push hl
+		call GetItemIndexFromID
+		cphl16 BERSERK_GENE
+	pop hl
 	sub BERSERK_GENE
 	pop bc
 	pop de
 	ret nz
 
+	xor a
 	ld [hl], a
 
 	ld h, d
@@ -2308,7 +2312,10 @@ IsAnyMonHoldingExpShare:
 	ld a, [hl]
 	pop hl
 
-	cp EXP_SHARE
+	push hl
+		call GetItemIndexFromID
+		cphl16 EXP_SHARE
+	pop hl
 	jr nz, .next
 	ld a, d
 	or c
@@ -7404,7 +7411,8 @@ GiveExperiencePoints:
 	ld a, MON_ITEM
 	call GetPartyParamLocation
 	ld a, [hl]
-	cp LUCKY_EGG
+	call GetItemIndexFromID
+	cphl16 LUCKY_EGG
 	call z, BoostExp
 	ldh a, [hQuotient + 3]
 	ld [wStringBuffer2 + 1], a

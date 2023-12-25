@@ -84,8 +84,14 @@ ReadAnyMail:
 	ld c, 0
 .loop2
 	ld a, [hli]
+	push hl
+		ld h, [hl]
+		ld l, a
+		call GetItemIDFromIndex
+	pop hl
 	cp b
 	jr z, .got_pointer
+	ld a, [hli]
 	cp -1
 	jr z, .invalid
 	inc c
@@ -98,6 +104,7 @@ ReadAnyMail:
 	inc hl
 
 .got_pointer
+	inc hl
 	ld a, c
 	ld [wBuffer3], a
 	ld a, [hli]
@@ -111,17 +118,17 @@ ReadAnyMail:
 	ret
 
 MailGFXPointers:
-	dbw FLOWER_MAIL,  LoadFlowerMailGFX
-	dbw SURF_MAIL,    LoadSurfMailGFX
-	dbw LITEBLUEMAIL, LoadLiteBlueMailGFX
-	dbw PORTRAITMAIL, LoadPortraitMailGFX
-	dbw LOVELY_MAIL,  LoadLovelyMailGFX
-	dbw EON_MAIL,     LoadEonMailGFX
-	dbw MORPH_MAIL,   LoadMorphMailGFX
-	dbw BLUESKY_MAIL, LoadBlueSkyMailGFX
-	dbw MUSIC_MAIL,   LoadMusicMailGFX
-	dbw MIRAGE_MAIL,  LoadMirageMailGFX
-	db -1
+	dw FLOWER_MAIL,  LoadFlowerMailGFX
+	dw SURF_MAIL,    LoadSurfMailGFX
+	dw LITEBLUEMAIL, LoadLiteBlueMailGFX
+	dw PORTRAITMAIL, LoadPortraitMailGFX
+	dw LOVELY_MAIL,  LoadLovelyMailGFX
+	dw EON_MAIL,     LoadEonMailGFX
+	dw MORPH_MAIL,   LoadMorphMailGFX
+	dw BLUESKY_MAIL, LoadBlueSkyMailGFX
+	dw MUSIC_MAIL,   LoadMusicMailGFX
+	dw MIRAGE_MAIL,  LoadMirageMailGFX
+	dw -1
 
 LoadSurfMailGFX:
 	push bc
@@ -912,9 +919,15 @@ LoadMailGFX_Color3:
 INCLUDE "gfx/mail.asm"
 
 ItemIsMail:
+	push bc
 	ld a, d
+	call GetItemIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, MailItems
-	ld de, 1
-	jp IsInArray
+	ld de, 2
+	call IsInHalfwordArray
+	pop bc
+	ret
 
 INCLUDE "data/items/mail_items.asm"

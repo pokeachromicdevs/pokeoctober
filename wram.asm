@@ -1391,7 +1391,7 @@ wCurSpecies:: db ; cf60
 
 wNamedObjectTypeBuffer:: db
 
-	ds 1
+wItemFlags:: db
 
 wJumptableIndex::
 wBattleTowerBattleEnded::
@@ -1859,7 +1859,7 @@ NEXTU ; d03e
 ; hidden item data
 wHiddenItemData::
 wHiddenItemEvent:: dw
-wHiddenItemID:: db
+wHiddenItemID:: dw
 wHiddenItemDataEnd::
 
 NEXTU ; d03e
@@ -2514,7 +2514,7 @@ wObjectStructsEnd:: ; d6de
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-; ds 40
+	ds 4 ; TODO: is this needed?
 
 wMapObjects:: ; d71e
 wPlayerObject:: map_object wPlayer ; 1 - Player
@@ -2604,7 +2604,7 @@ wTMsHMs:: ; d859
 wTMsHMsEnd::
 
 wNumItems:: db ; d892
-wItems:: ds MAX_ITEMS * 2 + 1 ; d893
+wItems:: ds MAX_ITEMS * 3 + 1 ; d893
 wItemsEnd::
 
 wNumKeyItems:: db ; d8bc
@@ -2616,7 +2616,7 @@ wBalls:: ds MAX_BALLS * 2 + 1 ; d8d8
 wBallsEnd::
 
 wNumPCItems:: db
-wPCItems:: ds MAX_PC_ITEMS * 2 + 1 ; d8f1
+wPCItems:: ds MAX_PC_ITEMS * 3 + 1 ; d8f1
 wPCItemsEnd::
 
 wPokegearFlags::

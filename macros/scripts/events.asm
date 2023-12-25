@@ -1141,3 +1141,15 @@ ENDM
 checkmbc30: MACRO ; checks if MBC30 is supported by the hardware, returns 1 if true
 	db checkmbc30_command
 ENDM
+
+	enum loaditemindex_command
+loaditemindex: MACRO
+	db loaditemindex_command
+	dw \2 ; pokemon
+	db \1 ; 0: don't reserve, 1-8: reserve in specific spot
+ENDM
+
+	enum checkmaplockeditems_command
+checkmaplockeditems: MACRO
+	db checkmaplockeditems_command
+ENDM

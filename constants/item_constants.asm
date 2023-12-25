@@ -6,13 +6,9 @@
 ; - ItemEffects (see engine/items/item_effects.asm)
 	const_def
 	const NO_ITEM
-	const MASTER_BALL       ; 0001
-	const ULTRA_BALL        ; 0002
+
+	const_def 1 ; reg'o items
 	const BRIGHTPOWDER      ; 0003
-	const GREAT_BALL        ; 0004
-	const POKE_BALL         ; 0005
-	const TOWN_MAP          ; 0006
-	const BICYCLE           ; 0007
 	const MOON_STONE        ; 0008
 	const ANTIDOTE          ; 0009
 	const BURN_HEAL         ; 000a
@@ -30,7 +26,6 @@
 	const FIRE_STONE        ; 0016
 	const THUNDERSTONE      ; 0017
 	const WATER_STONE       ; 0018
-	const HONEY_POT         ; 0019
 	const HP_UP             ; 001a
 	const PROTEIN           ; 001b
 	const IRON              ; 001c
@@ -50,7 +45,6 @@
 	const SUPER_REPEL       ; 002a
 	const MAX_REPEL         ; 002b
 	const DIRE_HIT          ; 002c
-	const OAKS_PARCEL       ; 002d
 	const FRESH_WATER       ; 002e
 	const SODA_POP          ; 002f
 	const LEMONADE          ; 0030
@@ -59,24 +53,12 @@
 	const X_DEFEND          ; 0033
 	const X_SPEED           ; 0034
 	const X_SPECIAL         ; 0035
-	const COIN_CASE         ; 0036
-	const ITEMFINDER        ; 0037
-	const POKE_FLUTE        ; 0038
 	const EXP_SHARE         ; 0039
-	const OLD_ROD           ; 003a
-	const GOOD_ROD          ; 003b
 	const SILVER_LEAF       ; 003c
-	const SUPER_ROD         ; 003d
 	const PP_UP             ; 003e
 	const ETHER             ; 003f
 	const MAX_ETHER         ; 0040
 	const ELIXER            ; 0041
-	const RED_SCALE         ; 0042
-	const SECRETPOTION      ; 0043
-	const S_S_TICKET        ; 0044
-	const ELMS_EGG          ; 0045
-	const CLEAR_BELL        ; 0046
-	const SILVER_WING       ; 0047
 	const MOOMOO_MILK       ; 0048
 	const QUICK_CLAW        ; 0049
 	const PSNCUREBERRY      ; 004a
@@ -120,8 +102,6 @@
 	const EVERSTONE         ; 0070
 	const SPELL_TAG         ; 0071
 	const RAGECANDYBAR      ; 0072
-	const GS_BALL           ; 0073
-	const BLUE_CARD         ; 0074
 	const MIRACLE_SEED      ; 0075
 	const THICK_CLUB        ; 0076
 	const FOCUS_ORB         ; 0077
@@ -132,14 +112,8 @@
 	const REVIVAL_HERB      ; 007c
 	const HARD_STONE        ; 007d
 	const LUCKY_EGG         ; 007e
-	const CARD_KEY          ; 007f
-	const MACHINE_PART      ; 0080
-	const EGG_TICKET        ; 0081
-	const LOST_ITEM         ; 0082
 	const STARDUST          ; 0083
 	const STAR_PIECE        ; 0084
-	const BASEMENT_KEY      ; 0085
-	const PASS              ; 0086
 	const WHITE_FEATHER     ; 0087
 	const ELECTRIC_POUCH    ; 0088
 	const CHARCOAL          ; 0089
@@ -160,16 +134,9 @@
 	const GUARD_THREAD      ; 0098
 	const ICE_BIKINI        ; 0099
 	const SACRED_ASH        ; 009a
-	const HEAVY_BALL        ; 009b
 	const FLOWER_MAIL       ; 009c
-	const LEVEL_BALL        ; 009d
-	const LURE_BALL         ; 009e
-	const FAST_BALL         ; 009f
 	const WISDOM_ORB        ; 00a0
 	const LIGHT_BALL        ; 00a1
-	const FRIEND_BALL       ; 00a2
-	const MOON_BALL         ; 00a3
-	const LOVE_BALL         ; 00a4
 	const NORMAL_BOX        ; 00a5
 	const GORGEOUS_BOX      ; 00a6
 	const SUN_STONE         ; 00a7
@@ -178,10 +145,7 @@
 	const UP_GRADE          ; 00aa
 	const BERRY             ; 00ab
 	const APPLE             ; 00ac
-	const SQUIRTBOTTLE      ; 00ad
 	const WATER_TAIL        ; 00ae
-	const PARK_BALL         ; 00af
-	const RAINBOW_WING      ; 00b0
 	const COUNTERCUFF       ; 00b1
 	const BRICK_PIECE       ; 00b2
 	const SURF_MAIL         ; 00b3
@@ -193,8 +157,6 @@
 	const BLUESKY_MAIL      ; 00b9
 	const MUSIC_MAIL        ; 00ba
 	const MIRAGE_MAIL       ; 00bb
-	const VOUCHER           ; 00bc
-	const TICKLE_STICK      ; 00bd
 	const PRETTY_TAIL       ; 00be
 	const BURST_ORB         ; 00bf
 	const HIDDEN_NEEDLE     ; 00c0
@@ -218,11 +180,6 @@
 	const TINY_SCALES       ; 00d2
 	const STEEL_SCALES      ; 00d3
 	const MYSTIC_TAG        ; 00d4
-	const HEAVY_AMBER       ; 00d5
-	const TOXIC_AMBER       ; 00d6
-	const OLD_AMBER         ; 00d7
-	const DOME_FOSSIL       ; 00d8
-	const HELIX_FOSSIL      ; 00d9
 	const FLEE_FEATHER      ; 00da
 	const CRANIDOS_FOSSIL   ; 00db
 	const MYSTIC_WATER      ; 00dc
@@ -238,11 +195,8 @@
 	const MOMS_LOVE         ; 00e6
 	const MYSTIC_THREAD     ; 00e7
 	const MYSTIC_NEEDLE     ; 00e8
-	const SAFARI_BALL       ; 00e9
 	const FUJIS_LETTER      ; 00ea
 	const WOBBLY_BLOON      ; 00eb
-	const DIRECT_BALL       ; 00ec
-	const NIGHT_BALL        ; 00ed
 	const ITEM_EE           ; 00ee
 	const ITEM_EF           ; 00ef
 	const ITEM_F0           ; 00f0
@@ -263,8 +217,66 @@
 	const ITEM_FF           ; 00ff
 	const ITEM_100          ; 0100
 	const ITEM_101          ; 0101
+NUM_ITEM_POCKET equ const_value - 1
 
-NUM_ITEMS equ const_value - 1
+	const_def $100 ; key items
+FIRST_KEY_ITEM equ const_value
+	const TOWN_MAP          ; 0100
+	const BICYCLE           ; 0101
+	const HONEY_POT         ; 0102
+	const OAKS_PARCEL       ; 0103
+	const COIN_CASE         ; 0104
+	const ITEMFINDER        ; 0105
+	const POKE_FLUTE        ; 0106
+	const OLD_ROD           ; 0107
+	const GOOD_ROD          ; 0108
+	const SUPER_ROD         ; 0109
+	const RED_SCALE         ; 010a
+	const SECRETPOTION      ; 010b
+	const S_S_TICKET        ; 010c
+	const ELMS_EGG          ; 010d
+	const CLEAR_BELL        ; 010e
+	const SILVER_WING       ; 010f
+	const GS_BALL           ; 0110
+	const BLUE_CARD         ; 0111
+	const CARD_KEY          ; 0112
+	const MACHINE_PART      ; 0113
+	const EGG_TICKET        ; 0114
+	const LOST_ITEM         ; 0115
+	const BASEMENT_KEY      ; 0116
+	const PASS              ; 0117
+	const SQUIRTBOTTLE      ; 0118
+	const RAINBOW_WING      ; 0119
+	const VOUCHER           ; 011a
+	const TICKLE_STICK      ; 011b
+	const HEAVY_AMBER       ; 011c
+	const TOXIC_AMBER       ; 011d
+	const OLD_AMBER         ; 011e
+	const DOME_FOSSIL       ; 011f
+	const HELIX_FOSSIL      ; 0120
+NUM_KEY_ITEM_POCKET equ const_value - FIRST_KEY_ITEM
+
+
+	const_def $200 ; key items
+FIRST_BALL_ITEM equ const_value
+	const MASTER_BALL       ; 0200
+	const ULTRA_BALL        ; 0201
+	const GREAT_BALL        ; 0202
+	const POKE_BALL         ; 0203
+	const HEAVY_BALL        ; 0204
+	const LEVEL_BALL        ; 0205
+	const LURE_BALL         ; 0206
+	const FAST_BALL         ; 0207
+	const FRIEND_BALL       ; 0208
+	const MOON_BALL         ; 0209
+	const LOVE_BALL         ; 020a
+	const PARK_BALL         ; 020b
+	const SAFARI_BALL       ; 020c
+	const DIRECT_BALL       ; 020d
+	const NIGHT_BALL        ; 020e
+NUM_BALL_ITEM_POCKET equ const_value - FIRST_BALL_ITEM
+
+NUM_ITEMS equ const_value - 1 ; ?
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ffff
@@ -272,3 +284,5 @@ ITEM_FROM_MEM  EQU $ffff
 ; leftovers from red
 MOON_STONE_RED EQU $0a ; BURN_HEAL
 FULL_HEAL_RED  EQU $34 ; X_SPEED
+
+MAX_ITEM_STACK EQU 99

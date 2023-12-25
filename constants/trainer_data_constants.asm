@@ -1,7 +1,9 @@
 ; TrainerClassAttributes struct members (see data/trainers/attributes.asm)
 	const_def
 	const TRNATTR_ITEM1           ; 0
+	const TRNATTR_ITEM1A
 	const TRNATTR_ITEM2           ; 1
+	const TRNATTR_ITEM2A
 	const TRNATTR_BASEMONEY       ; 2
 	const TRNATTR_AI_MOVE_WEIGHTS ; 3
 	const TRNATTR_AI2             ; 4

@@ -7,6 +7,30 @@ PlaceMenuItemName:
 	call PlaceString
 	ret
 
+PlaceMenuItemBallName:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_BALL_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	pop hl
+	call PlaceString
+	ret
+
+PlaceMenuKeyItemName:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_KEY_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	pop hl
+	call PlaceString
+	ret
+
 PlaceMenuTMHMName:
 	push de
 	ld a, [wMenuSelection]
@@ -20,6 +44,52 @@ PlaceMenuTMHMName:
 PlaceMenuItemQuantity:
 	push de
 	ld a, [wMenuSelection]
+	ld [wCurItem], a
+	farcall _CheckTossableItem
+	ld a, [wItemAttributeParamBuffer]
+	pop hl
+	and a
+	jr nz, .done
+	ld de, $15
+	add hl, de
+	ld [hl], "×"
+	inc hl
+	ld de, wMenuSelectionQuantity
+	lb bc, 1, 2
+	call PrintNum
+
+.done
+	ret
+
+PlaceMenuItemBallQuantity:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_BALL_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wCurItem], a
+	farcall _CheckTossableItem
+	ld a, [wItemAttributeParamBuffer]
+	pop hl
+	and a
+	jr nz, .done
+	ld de, $15
+	add hl, de
+	ld [hl], "×"
+	inc hl
+	ld de, wMenuSelectionQuantity
+	lb bc, 1, 2
+	call PrintNum
+
+.done
+	ret
+
+PlaceMenuKeyItemQuantity:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_KEY_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	farcall _CheckTossableItem
 	ld a, [wItemAttributeParamBuffer]

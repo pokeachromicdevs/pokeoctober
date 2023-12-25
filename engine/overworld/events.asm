@@ -135,11 +135,6 @@ EnterMap:
 	ld [wMapStatus], a
 	ret
 
-UnusedWait30Frames:
-	ld c, 30
-	call DelayFrames
-	ret
-
 HandleMap:
 	call ResetOverworldDelay
 	call HandleMapTimeAndJoypad
@@ -480,11 +475,6 @@ CheckTimeEvents:
 	scf
 	ret
 
-.unused
-	ld a, 8
-	scf
-	ret
-
 OWPlayerInput:
 	call PlayerMovement
 	ret c
@@ -709,6 +699,16 @@ TryBGEvent:
 	ld de, wHiddenItemData
 	ld bc, wHiddenItemDataEnd - wHiddenItemData
 	call FarCopyBytes
+
+	ld hl, wHiddenItemID
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		call GetItemIDFromIndex
+	pop hl
+	ld [hl], a
+
 	ld a, BANK(HiddenItemScript)
 	ld hl, HiddenItemScript
 	call CallScript
@@ -722,6 +722,16 @@ TryBGEvent:
 	ld de, wHiddenItemData
 	ld bc, wHiddenItemDataEnd - wHiddenItemData
 	call FarCopyBytes
+
+	ld hl, wHiddenItemID
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		call GetItemIDFromIndex
+	pop hl
+	ld [hl], a
+
 	jr .dontread
 
 .ifset
@@ -1030,9 +1040,6 @@ PlayerEventScriptPointers:
 	dba Invalid_0x96c2d          ; (NUM_PLAYER_EVENTS)
 
 Invalid_0x96c2d:
-	end
-
-; unused
 	end
 
 HatchEggScript:

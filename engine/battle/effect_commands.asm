@@ -1187,7 +1187,10 @@ BattleCommand_Critical:
 	endc
 	jr nz, .Farfetchd
 	ld a, b
-	cp LUCKY_PUNCH
+	push hl
+		call GetItemIndexFromID
+		cphl16 LUCKY_PUNCH
+	pop hl
 	jr nz, .FocusEnergy
 
 ; +2 critical level
@@ -1210,7 +1213,10 @@ BattleCommand_Critical:
 	endc
 	jr nz, .FocusEnergy
 	ld a, b
-	cp STICK
+	push hl
+		call GetItemIndexFromID
+		cphl16 STICK
+	pop hl
 	jr nz, .FocusEnergy
 
 ; +2 critical level
@@ -2614,7 +2620,10 @@ DittoMetalPowder:
 	push bc
 	call GetOpponentItem
 	ld a, [hl]
-	cp METAL_POWDER
+	push hl
+		call GetItemIndexFromID
+		cphl16 METAL_POWDER
+	pop hl
 	pop bc
 	ret nz
 
@@ -2824,7 +2833,11 @@ ThickClubBoost:
 	push bc
 	push de
 	ld bc, CUBONE
-	ld d, THICK_CLUB
+	push hl
+		ld hl, THICK_CLUB
+		call GetItemIDFromIndex
+		ld d, a
+	pop hl
 	call SpeciesItemBoost
 	if MAROWAK == (CUBONE + 1)
 		inc bc
@@ -2844,7 +2857,11 @@ LightBallBoost:
 	push bc
 	push de
 	ld bc, PIKACHU
-	ld d, LIGHT_BALL
+	push hl
+		ld hl, LIGHT_BALL
+		call GetItemIDFromIndex
+		ld d, a
+	pop hl
 	call SpeciesItemBoost
 	pop de
 	pop bc

@@ -65,7 +65,7 @@ ROMX $0d
 	"Effect Commands"
 ROMX $0e
 	"Enemy Trainers"
-	"Enemy Trainer Parties 2"
+;	"Enemy Trainer Parties 2"
 ROMX $0f
 	"Battle Core"
 ROMX $10
@@ -371,7 +371,7 @@ WRAM0
 WRAMX 1
 	"WRAM 1"
 	"Enemy Party"
-	"Party"
+;	"Party"
 WRAMX 2
 	"Pic Animations"
 	align 8
@@ -396,7 +396,7 @@ SRAM $00
 	"Scratch"
 	org $a600
 	"SRAM Bank 0"
-	org $ae00
+	org $ad00
 	"Saved 16-bit conversion tables"
 	"Backup Save"
 SRAM $01

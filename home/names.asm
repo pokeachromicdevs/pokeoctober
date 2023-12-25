@@ -167,13 +167,39 @@ GetItemName::
 	ld a, [wNamedObjectIndexBuffer]
 	call GetItemIndexFromID
 
-	dec hl
+	push hl
+		ld b, h
+		ld c, l
+	pop hl
+
+	cphl16 FIRST_BALL_ITEM
+	jr nc, .Balls
+
+	cphl16 FIRST_KEY_ITEM
+	jr nc, .KeyItems
+
+	dec bc
+	ld hl, ItemNames
+	jr .get_string
+
+.KeyItems
+	ld hl, -(FIRST_KEY_ITEM)
+	add hl, bc
 	ld b, h
 	ld c, l
+	ld hl, KeyItemNames
+	jr .get_string
 
-	ld hl, ItemNames
+.Balls
+	ld hl, -(FIRST_BALL_ITEM)
+	add hl, bc
+	ld b, h
+	ld c, l
+	ld hl, BallItemNames
+	;jr .get_string
+
+.get_string
 	call GetNthString16
-
 	ld de, wStringBuffer1
 	push de
 		ld bc, ITEM_NAME_LENGTH
@@ -186,6 +212,7 @@ GetItemName::
 	pop bc
 	pop hl
 	ret
+
 
 GetTMHMName::
 ; Get TM/HM name for item wNamedObjectIndexBuffer.

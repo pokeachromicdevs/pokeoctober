@@ -5,30 +5,35 @@ _DoItemEffect::
 	call CopyName1
 	ld a, 1
 	ld [wItemEffectSucceeded], a
+	push bc
 	push de
 		ld a, [wCurItem]
 		call GetItemIndexFromID
-		ld d, h
-		ld e, l
-		dec de
+		ld b, h
+		ld c, l
+		ld a, BANK(ItemEffects)
 		ld hl, ItemEffects
-		add hl, de
-		add hl, de
-		ld a, [hli]
-		ld h, [hl]
-		ld l, a
+		call LoadDoubleIndirectPointer
 	pop de
+	pop bc
 	jp hl
 
 ItemEffects:
+	indirect_table 2, 1
+
+	indirect_entries NUM_ITEM_POCKET, ItemEffects1
+
+	indirect_entries FIRST_KEY_ITEM - 1 ; fill remaining slots?
+	indirect_entries (FIRST_KEY_ITEM - 1) + NUM_KEY_ITEM_POCKET, ItemEffectsKeys
+
+	indirect_entries FIRST_BALL_ITEM - 1
+	indirect_entries (FIRST_BALL_ITEM - 1) + NUM_BALL_ITEM_POCKET, ItemEffectsBalls
+
+	indirect_table_end
+
+ItemEffects1:
 ; entries correspond to item ids
-	dw PokeBallEffect      ; MASTER_BALL
-	dw PokeBallEffect      ; ULTRA_BALL
 	dw NoEffect            ; BRIGHTPOWDER
-	dw PokeBallEffect      ; GREAT_BALL
-	dw PokeBallEffect      ; POKE_BALL
-	dw TownMapEffect       ; TOWN_MAP
-	dw BicycleEffect       ; BICYCLE
 	dw EvoStoneEffect      ; MOON_STONE
 	dw StatusHealingEffect ; ANTIDOTE
 	dw StatusHealingEffect ; BURN_HEAL
@@ -46,7 +51,6 @@ ItemEffects:
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
-	dw UseHoneyEffect      ; HONEY_POT
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -66,7 +70,6 @@ ItemEffects:
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
 	dw DireHitEffect       ; DIRE_HIT
-	dw NoEffect            ; OAKS_PARCEL
 	dw RestoreHPEffect     ; FRESH_WATER
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
@@ -75,24 +78,12 @@ ItemEffects:
 	dw XItemEffect         ; X_DEFEND
 	dw XItemEffect         ; X_SPEED
 	dw XItemEffect         ; X_SPECIAL
-	dw CoinCaseEffect      ; COIN_CASE
-	dw ItemfinderEffect    ; ITEMFINDER
-	dw PokeFluteEffect     ; POKE_FLUTE
 	dw NoEffect            ; EXP_SHARE
-	dw OldRodEffect        ; OLD_ROD
-	dw GoodRodEffect       ; GOOD_ROD
 	dw NoEffect            ; SILVER_LEAF
-	dw SuperRodEffect      ; SUPER_ROD
 	dw RestorePPEffect     ; PP_UP
 	dw RestorePPEffect     ; ETHER
 	dw RestorePPEffect     ; MAX_ETHER
 	dw RestorePPEffect     ; ELIXER
-	dw NoEffect            ; RED_SCALE
-	dw NoEffect            ; SECRETPOTION
-	dw NoEffect            ; S_S_TICKET
-	dw NoEffect            ; ELMS_EGG
-	dw NoEffect            ; CLEAR_BELL
-	dw NoEffect            ; SILVER_WING
 	dw RestoreHPEffect     ; MOOMOO_MILK
 	dw NoEffect            ; QUICK_CLAW
 	dw StatusHealingEffect ; PSNCUREBERRY
@@ -136,8 +127,6 @@ ItemEffects:
 	dw NoEffect            ; EVERSTONE
 	dw NoEffect            ; SPELL_TAG
 	dw RestoreHPEffect     ; RAGECANDYBAR
-	dw NoEffect            ; GS_BALL
-	dw BlueCardEffect      ; BLUE_CARD
 	dw NoEffect            ; MIRACLE_SEED
 	dw NoEffect            ; THICK_CLUB
 	dw NoEffect            ; FOCUS_BAND
@@ -148,14 +137,8 @@ ItemEffects:
 	dw RevivalHerbEffect   ; REVIVAL_HERB
 	dw NoEffect            ; HARD_STONE
 	dw NoEffect            ; LUCKY_EGG
-	dw CardKeyEffect       ; CARD_KEY
-	dw NoEffect            ; MACHINE_PART
-	dw NoEffect            ; EGG_TICKET
-	dw NoEffect            ; LOST_ITEM
 	dw NoEffect            ; STARDUST
 	dw NoEffect            ; STAR_PIECE
-	dw BasementKeyEffect   ; BASEMENT_KEY
-	dw NoEffect            ; PASS
 	dw NoEffect            ; WHITE_FEATHER
 	dw NoEffect            ; ELECTRIC_POUCH
 	dw NoEffect            ; CHARCOAL
@@ -176,16 +159,9 @@ ItemEffects:
 	dw NoEffect            ; GUARD_THREAD
 	dw NoEffect            ; ICE_BIKINI
 	dw SacredAshEffect     ; SACRED_ASH
-	dw PokeBallEffect      ; HEAVY_BALL
 	dw NoEffect            ; FLOWER_MAIL
-	dw PokeBallEffect      ; LEVEL_BALL
-	dw PokeBallEffect      ; LURE_BALL
-	dw PokeBallEffect      ; FAST_BALL
 	dw NoEffect            ; LIGHT_BALL
 	dw NoEffect            ; WISDOM_ORB
-	dw PokeBallEffect      ; FRIEND_BALL
-	dw PokeBallEffect      ; MOON_BALL
-	dw PokeBallEffect      ; LOVE_BALL
 	dw NormalBoxEffect     ; NORMAL_BOX
 	dw GorgeousBoxEffect   ; GORGEOUS_BOX
 	dw EvoStoneEffect      ; SUN_STONE
@@ -194,17 +170,7 @@ ItemEffects:
 	dw NoEffect            ; ODD_THREAD
 	dw RestoreHPEffect     ; APPLE
 	dw RestoreHPEffect     ; BERRY
-	dw SquirtbottleEffect  ; SQUIRTBOTTLE
-	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; WATER TAIL
-	dw NoEffect            ; RAINBOW_WING
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
 	dw NoEffect
 	dw NoEffect
 	dw NoEffect
@@ -254,11 +220,8 @@ ItemEffects:
 	dw NoEffect
 	dw NoEffect
 	dw NoEffect
-	dw PokeBallEffect ; SAFARI_BALL
 	dw NoEffect       ; FUJIS_LETTER
 	dw NoEffect       ; WOBBLY_BLOON
-	dw PokeBallEffect ; DIRECT_BALL
-	dw PokeBallEffect ; NIGHT_BALL
 	dw NoEffect       ; ITEM_EE
 	dw NoEffect       ; ITEM_EF
 	dw NoEffect       ; ITEM_F0
@@ -281,7 +244,60 @@ ItemEffects:
 	dw NoEffect       ; ITEM_101
 .End:
 
-_NUM_ITEM_FX = (ItemEffects.End  - ItemEffects)/2
+_NUM_ITEM_FX = (ItemEffects1.End  - ItemEffects1)/2
+
+ItemEffectsKeys:
+	dw TownMapEffect       ; TOWN_MAP
+	dw BicycleEffect       ; BICYCLE
+	dw UseHoneyEffect      ; HONEY_POT
+	dw NoEffect            ; OAKS_PARCEL
+	dw CoinCaseEffect      ; COIN_CASE
+	dw ItemfinderEffect    ; ITEMFINDER
+	dw PokeFluteEffect     ; POKE_FLUTE
+	dw OldRodEffect        ; OLD_ROD
+	dw GoodRodEffect       ; GOOD_ROD
+	dw SuperRodEffect      ; SUPER_ROD
+	dw NoEffect            ; RED_SCALE
+	dw NoEffect            ; SECRETPOTION
+	dw NoEffect            ; S_S_TICKET
+	dw NoEffect            ; ELMS_EGG
+	dw NoEffect            ; CLEAR_BELL
+	dw NoEffect            ; SILVER_WING
+	dw NoEffect            ; GS_BALL
+	dw BlueCardEffect      ; BLUE_CARD
+	dw CardKeyEffect       ; CARD_KEY
+	dw NoEffect            ; MACHINE_PART
+	dw NoEffect            ; EGG_TICKET
+	dw NoEffect            ; LOST_ITEM
+	dw BasementKeyEffect   ; BASEMENT_KEY
+	dw NoEffect            ; PASS
+	dw SquirtbottleEffect  ; SQUIRTBOTTLE
+	dw NoEffect            ; RAINBOW_WING
+	dw NoEffect            ; VOUCHER
+	dw NoEffect            ; TICKLE_STICK
+	dw NoEffect            ; HEAVY_AMBER
+	dw NoEffect            ; TOXIC_AMBER
+	dw NoEffect            ; OLD_AMBER
+	dw NoEffect            ; DOME_FOSSIL
+	dw NoEffect            ; HELIX_FOSSIL
+
+
+ItemEffectsBalls:
+	dw PokeBallEffect      ; MASTER_BALL
+	dw PokeBallEffect      ; ULTRA_BALL
+	dw PokeBallEffect      ; GREAT_BALL
+	dw PokeBallEffect      ; POKE_BALL
+	dw PokeBallEffect      ; HEAVY_BALL
+	dw PokeBallEffect      ; LEVEL_BALL
+	dw PokeBallEffect      ; LURE_BALL
+	dw PokeBallEffect      ; FAST_BALL
+	dw PokeBallEffect      ; FRIEND_BALL
+	dw PokeBallEffect      ; MOON_BALL
+	dw PokeBallEffect      ; LOVE_BALL
+	dw PokeBallEffect      ; PARK_BALL
+	dw PokeBallEffect ; SAFARI_BALL
+	dw PokeBallEffect ; DIRECT_BALL
+	dw PokeBallEffect ; NIGHT_BALL
 
 PokeBallEffect:
 	ld a, [wBattleMode]

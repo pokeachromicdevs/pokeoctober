@@ -4,11 +4,30 @@
 	const KURTSHOUSE_TWIN1
 	const KURTSHOUSE_TWIN2
 
+	const_def 1 ; locked item indices
+	const KURTSHOUSE_ITEMIDX_BLU_APRICORN
+	const KURTSHOUSE_ITEMIDX_YLW_APRICORN
+	const KURTSHOUSE_ITEMIDX_GRN_APRICORN
+	const KURTSHOUSE_ITEMIDX_WHT_APRICORN
+	const KURTSHOUSE_ITEMIDX_BLK_APRICORN
+	const KURTSHOUSE_ITEMIDX_PNK_APRICORN
+
 KurtsHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .PlaceKurtAppropriately
+	callback MAPCALLBACK_NEWMAP, .LoadReservedIDs
+
+.LoadReservedIDs: ; we know that these items are ALWAYS gonna be used
+; so lock them beforehand..
+	loaditemindex KURTSHOUSE_ITEMIDX_BLU_APRICORN, BLU_APRICORN
+	loaditemindex KURTSHOUSE_ITEMIDX_YLW_APRICORN, YLW_APRICORN
+	loaditemindex KURTSHOUSE_ITEMIDX_GRN_APRICORN, GRN_APRICORN
+	loaditemindex KURTSHOUSE_ITEMIDX_WHT_APRICORN, WHT_APRICORN
+	loaditemindex KURTSHOUSE_ITEMIDX_BLK_APRICORN, BLK_APRICORN
+	loaditemindex KURTSHOUSE_ITEMIDX_PNK_APRICORN, PNK_APRICORN
+	return
 
 .PlaceKurtAppropriately:
 ; kurt and maizie around main chair
@@ -453,6 +472,10 @@ KurtHouseScript:
 .which_apricorn
 ; ask apricorn
 	special SelectApricornForKurt
+; TODO: check condition
+	checkmaplockeditems
+	ifequal FALSE, .no_apricorns
+; END TODO
 	ifequal16 0, .no_apricorns
 	ifequal16 BLU_APRICORN, .Blu
 	ifequal16 YLW_APRICORN, .Ylw

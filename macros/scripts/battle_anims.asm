@@ -157,9 +157,11 @@ anim_beatup: MACRO
 	db anim_beatup_command
 ENDM
 
-	enum anim_0xe7_command ; $e7
-anim_0xe7: MACRO
-	db anim_0xe7_command
+	enum anim_if_param_item_equal_command ; $e7
+anim_if_param_item_equal: MACRO
+	db anim_if_param_item_equal_command
+	dw \1 ; value
+	dw \2 ; address
 ENDM
 
 	enum anim_updateactorpic_command ; $e8

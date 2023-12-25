@@ -42,6 +42,18 @@ endc
 
 ; Item locked ID table constants
 	const_def
+	const LOCKED_ITEM_ID_MAP_1
+	const LOCKED_ITEM_ID_MAP_2
+	const LOCKED_ITEM_ID_MAP_3
+	const LOCKED_ITEM_ID_MAP_4
+	const LOCKED_ITEM_ID_MAP_5
+	const LOCKED_ITEM_ID_MAP_6
+	const LOCKED_ITEM_ID_MAP_7
+	const LOCKED_ITEM_ID_MAP_8
+NUM_MAP_LOCKED_ITEM_IDS EQU const_value + -LOCKED_ITEM_ID_MAP_1
+
+; no battle tower
+
 if const_value > ITEM_TABLE_LOCKED_ENTRIES
 	fail "Too many locked item IDs"
 endc

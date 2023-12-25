@@ -333,3 +333,8 @@ DAYCAREMAN_ACTIVE_F          EQU 7
 ; wDayCareLady:: ; df2c
 DAYCARELADY_HAS_MON_F        EQU 0
 DAYCARELADY_ACTIVE_F         EQU 7
+
+; wItemFlags::
+	const_def
+	const IN_BAG_F
+	const IN_PC_F

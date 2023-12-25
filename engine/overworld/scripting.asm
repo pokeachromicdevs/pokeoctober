@@ -247,6 +247,8 @@ ScriptCommandTable:
 	dw Script_followerstop               ; b5
 	dw Script_followerresume             ; b6
 	dw Script_checkmbc30                 ; b7
+	dw Script_loaditemindex              ; b8
+	dw Script_checkmaplockeditems        ; b9
 
 StartScript:
 	ld hl, wScriptFlags
@@ -553,15 +555,24 @@ ReceivedItemText:
 	text_far UnknownText_0x1c4719
 	text_end
 
-Script_verbosegiveitemvar: ; TODO 16-bit items
+Script_verbosegiveitemvar:
 ; script command 0x9f
 ; parameters: item, var
 
 	call GetScriptByte
-	cp ITEM_FROM_MEM
-	jr nz, .ok
+	ld l, a
+	call GetScriptByte
+	ld h, a
+
+	cphl16 ITEM_FROM_MEM ; for fruit trees etc.
+	jr z, .from_mem
+
+	call GetItemIDFromIndex
+	jr .got_item
+
+.from_mem
 	ld a, [wScriptVar]
-.ok
+.got_item
 	ld [wCurItem], a
 	call GetScriptByte
 	call GetVarAction
@@ -2032,9 +2043,13 @@ Script_givepokemail:
 	call GetScriptByte
 	ld h, a
 	ld a, [wScriptBank]
-	call GetFarByte
-	ld b, a
+	push hl
+		call GetFarHalfword
+		call GetItemIDFromIndex
+		ld b, a
+	pop hl
 	push bc
+	inc hl
 	inc hl
 	ld bc, MAIL_MSG_LENGTH
 	ld de, wd002
@@ -3114,4 +3129,62 @@ Script_checkmbc30:
 .no
 	xor a
 	ld [wScriptVar], a
+	ret
+
+Script_loaditemindex:
+	call LoadScriptItemID
+	ld [wScriptVar], a
+	ld c, a
+	call GetScriptByte
+	dec a
+	cp NUM_MAP_LOCKED_ITEM_IDS
+	ret nc
+	if LOCKED_ITEM_ID_MAP_1 > 1
+		add a, LOCKED_ITEM_TD_MAP_1
+	elif LOCKED_ITEM_ID_MAP_1 == 1
+		inc a
+	endc
+	ld l, a
+	ld a, c
+	jp LockItemID
+
+Script_checkmaplockeditems:
+; check if the script variable's value is one of the reserved map indexes
+	ld a, [wScriptVar]
+	and a
+	ret z
+	cp ITEM_TABLE_ENTRIES + 1
+	ld c, 0
+	jr nc, .done
+	ld b, a
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wItemIndexTable)
+	ldh [rSVBK], a
+	ld hl, wItemIndexTableLockedEntries + LOCKED_ITEM_ID_MAP_1
+.loop
+	inc c
+	ld a, [hli]
+	cp b
+	jr z, .found
+	ld a, c
+	cp NUM_MAP_LOCKED_ITEM_IDS
+	jr c, .loop
+	ld c, 0
+.found
+	pop af
+	ldh [rSVBK], a
+.done
+	ld a, c
+	ld [wScriptVar], a
+	ret
+
+LoadScriptItemID:
+	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	or l
+	jp nz, GetItemIDFromIndex
+	ld a, [wScriptVar]
 	ret

@@ -835,6 +835,11 @@ LoadBox:
 	call CopyBytes
 	ld a, BANK(sBox)
 	call GetSRAMBank
+	push hl
+	push de
+	call UpdateIndexesForLoadedBox
+	pop de
+	pop hl
 	call ClearIndexesForLoadedBox
 	; GC the table now that lots of entries are free
 	farcall ForceGarbageCollection
@@ -1136,7 +1141,20 @@ ComputeSavedBoxIndexTable:
 	ld [wTempLoopCounter], a
 	ld c, BOXMON_STRUCT_LENGTH
 .loop
-	ld a, [hl]
+	ld a, [hli]
+	push af
+		ld a, [hl]
+		push de
+		push hl
+			call GetItemIndexFromID
+			ld d, h
+			ld e, l
+		pop hl
+		ld a, e
+		ld [hld], a
+		ld [hl], d
+		pop de
+	pop af
 	add hl, bc
 	push hl
 	call GetPokemonIndexFromID
@@ -1234,6 +1252,38 @@ ClearIndexesForLoadedBox:
 	ld [hl], 0
 	add hl, bc
 	dec a
+	jr nz, .loop
+	ret
+
+UpdateItemIndexesForLoadedBox:
+	ld de, sBox
+	ld a, [de]
+	cp MONS_PER_BOX
+	jr c, .count_OK
+	ld a, MONS_PER_BOX
+	ld [de], a
+.count_OK
+	inc de
+	and a
+	ret z
+	ld [wTempLoopCounter], a
+	ld hl, sBoxMon1Species
+.loop
+	push hl
+	ld a, [hli]
+	ld l, [hl]
+	ld h, a
+	call GetItemIDFromIndex
+	pop hl
+	inc hl
+	ld [hl], a
+	dec hl
+	ld de, BOXMON_STRUCT_LENGTH
+	add hl, de
+	push hl
+	ld hl, wTempLoopCounter
+	dec [hl]
+	pop hl
 	jr nz, .loop
 	ret
 
