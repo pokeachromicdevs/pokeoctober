@@ -2731,7 +2731,7 @@ wRoute34SceneID::                                 db
 
 wSceneIDsEnd::
 
-	ds 38
+	ds 36 ; reserved for future scene IDs
 
 ; fight counts
 wJackFightCount::    db ; d9f2
@@ -2764,17 +2764,12 @@ wParryFightCount::   db
 wNiechelleFightCount::    db
 ; da0e
 
-	ds 100
+	ds 36 ; future fight counts
 
 wEventFlags:: flag_array NUM_EVENTS ; da72
 wEventFlagsEnd::
-; db6c
-
-	ds 6
 
 wCurBox:: db ; db72
-
-	ds 2
 
 ; 8 chars + $50
 wBoxNames:: ds BOX_NAME_LENGTH * NUM_BOXES ; db75
