@@ -709,7 +709,6 @@ SkipEvolutions::
 	inc hl
 	inc hl
 	inc hl
-	inc hl
 	jr SkipEvolutions
 
 DetermineEvolutionItemResults::
