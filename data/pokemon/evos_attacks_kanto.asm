@@ -879,6 +879,7 @@ VileplumeEvosAttacks:
 
 ParasEvosAttacks:
 	dbbw EVOLVE_LEVEL, 24, PARASECT
+	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, ABSORB
 	dbw 6, POISONPOWDER
