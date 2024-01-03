@@ -42,15 +42,20 @@ for dirname, subdirs, filenames in os.walk('../../data/pokemon/base_stats'):
                 int(i.strip()) for i in get_entry(next(entries)).split(',')
             ]
             
-            new_pokemon["types"] = [
+            new_pokemon["types"] = list(set([
                 i.strip() for i in get_entry(next(entries)).split(',')
-            ]
+            ]))
 
             new_pokemon["catch rate"] = int(get_entry(next(entries)))
             new_pokemon["base exp"] = int(get_entry(next(entries)))
-            new_pokemon["items"] = [
+            new_pokemon["items"] = list(set([
                 i.strip() for i in get_entry(next(entries)).split(',')
-            ]
+            ]))
+
+            if "NO_ITEM" in new_pokemon["items"]:
+                new_pokemon["items"].pop(
+                    new_pokemon["items"].index("NO_ITEM")
+                )
 
             new_pokemon["gender ratio"] = get_entry(next(entries)).strip()
 
@@ -60,13 +65,17 @@ for dirname, subdirs, filenames in os.walk('../../data/pokemon/base_stats'):
             next(entries) # padding
 
             new_pokemon["growth rate"] = get_entry(next(entries)).strip()
-            new_pokemon["egg groups"] = [
+            new_pokemon["egg groups"] = list(set([
                 i.strip() for i in get_entry(next(entries)).split(',')
-            ]
+            ]))
             new_pokemon["learnset"] = [
                 i.strip() for i in get_entry(next(entries)).split(',')
             ]
 
-            base_stat_db[filename] = new_pokemon
+            base_stat_db[
+                filename
+                .replace(".asm","")
+                .title()
+            ] = new_pokemon
 
 pprint.pprint(base_stat_db)
