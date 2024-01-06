@@ -208,7 +208,7 @@ Rival1Group:
 	next_party ; RIVAL1 (7)
 		db "?@", TRAINERTYPE_NORMAL
 		dbw 21, PHANPY
-		dbw 21, VULPIX
+		dbw 21, VULPVI
 		dbw 22, GOLBAT
 		dbw 22, PETAMOLE
 	end_party
@@ -754,7 +754,7 @@ SchoolboyGroup:
 	next_party ; SCHOOLBOY (7)
 	db "CHAD@", TRAINERTYPE_NORMAL
 	db 19
-	dw MR__MIME
+	dw MIMENTOR
 	end_party
 
 	next_party ; SCHOOLBOY (8)
@@ -776,7 +776,7 @@ SchoolboyGroup:
 	next_party ; SCHOOLBOY (12)
 	db "CHAD@", TRAINERTYPE_NORMAL
 	db 19
-	dw MR__MIME
+	dw MIMENTOR
 	db 19
 	dw MAGNEMITE
 	end_party
@@ -784,7 +784,7 @@ SchoolboyGroup:
 	next_party ; SCHOOLBOY (13)
 	db "CHAD@", TRAINERTYPE_NORMAL
 	db 27
-	dw MR__MIME
+	dw MIMENTOR
 	db 31
 	dw MAGNETON
 	end_party
@@ -792,7 +792,7 @@ SchoolboyGroup:
 	next_party ; SCHOOLBOY (14)
 	db "CHAD@", TRAINERTYPE_NORMAL
 	db 30
-	dw MR__MIME
+	dw MIMENTOR
 	db 34
 	dw MAGNETON
 	end_party
@@ -800,7 +800,7 @@ SchoolboyGroup:
 	next_party ; SCHOOLBOY (15)
 	db "CHAD@", TRAINERTYPE_MOVES
 	db 34
-	dw MR__MIME
+	dw MIMENTOR
 	dw PSYCHIC_M, LIGHT_SCREEN, REFLECT, ENCORE
 	db 38
 	dw MAGNETON
@@ -1460,7 +1460,7 @@ CooltrainerFGroup:
 	dw SKIPLOOM
 	dw SYNTHESIS, POISONPOWDER, MEGA_DRAIN, LEECH_SEED
 	db 25
-	dw NINETALES
+	dw VULPIX
 	dw EMBER, QUICK_ATTACK, CONFUSE_RAY, SAFEGUARD
 	end_party
 
@@ -1558,7 +1558,7 @@ CooltrainerFGroup:
 	db 35
 	dw STARMIE
 	db 35
-	dw NINETALES
+	dw VULPIX
 	end_party
 
 	next_party ; COOLTRAINERF (14)
@@ -2252,7 +2252,7 @@ SabrinaGroup:
 	dw ESPEON
 	dw SAND_ATTACK, QUICK_ATTACK, SWIFT, PSYCHIC_M
 	db 46
-	dw MR__MIME
+	dw MIMENTOR
 	dw BARRIER, REFLECT, BATON_PASS, PSYCHIC_M
 	db 48
 	dw ALAKAZAM
@@ -3817,7 +3817,7 @@ FirebreatherGroup:
 	next_party ; FIREBREATHER (7)
 	db "RAY@", TRAINERTYPE_NORMAL
 	db 9
-	dw VULPIX
+	dw VULPVI
 	end_party
 
 	next_party ; FIREBREATHER (8)
@@ -3846,7 +3846,7 @@ JugglerGroup:
 	next_party ; JUGGLER (2)
 	db "FRITZ@", TRAINERTYPE_NORMAL
 	db 29
-	dw MR__MIME
+	dw MIMENTOR
 	db 29
 	dw MAGMAR
 	db 29
@@ -4137,7 +4137,7 @@ PsychicGroup:
 	next_party ; PSYCHIC_T (11)
 	db "JARED@", TRAINERTYPE_NORMAL
 	db 32
-	dw MR__MIME
+	dw MIMENTOR
 	db 32
 	dw EXEGGCUTE
 	db 35
@@ -4181,7 +4181,7 @@ PicnickerGroup:
 	next_party ; PICNICKER (4)
 	db "KIM@", TRAINERTYPE_NORMAL
 	db 15
-	dw VULPIX
+	dw VULPVI
 	end_party
 
 	next_party ; PICNICKER (5)
@@ -4781,7 +4781,7 @@ KimonoGirlGroup:
 	db 20
 	dw SKIPLOOM
 	db 20
-	dw VULPIX
+	dw VULPVI
 	db 18
 	dw SKIPLOOM
 	end_party

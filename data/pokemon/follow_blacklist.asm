@@ -55,7 +55,7 @@ CantFollowList:
 	dw SEADRA
 	dw STARYU
 	dw STARMIE
-	dw MR__MIME
+	dw MIMENTOR
 	dw SCYTHER
 	dw JYNX
 	dw ELECTABUZZ

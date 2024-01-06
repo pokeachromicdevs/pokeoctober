@@ -36,8 +36,8 @@ PokedexDataPointerTable:
 	dba NidokingPokedexEntry
 	dba ClefairyPokedexEntry
 	dba ClefablePokedexEntry
+	dba VulpviPokedexEntry
 	dba VulpixPokedexEntry
-	dba NinetalesPokedexEntry
 	dba JigglypuffPokedexEntry
 	dba WigglytuffPokedexEntry
 	dba ZubatPokedexEntry
@@ -121,7 +121,7 @@ PokedexDataPointerTable:
 	dba SeakingPokedexEntry
 	dba StaryuPokedexEntry
 	dba StarmiePokedexEntry
-	dba MrMimePokedexEntry
+	dba MimentorPokedexEntry
 	dba ScytherPokedexEntry
 	dba JynxPokedexEntry
 	dba ElectabuzzPokedexEntry

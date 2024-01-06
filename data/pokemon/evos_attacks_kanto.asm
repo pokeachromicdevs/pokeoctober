@@ -35,8 +35,8 @@ EvosAttacksPointers1::
 	dw NidokingEvosAttacks
 	dw ClefairyEvosAttacks
 	dw ClefableEvosAttacks
+	dw VulpviEvosAttacks
 	dw VulpixEvosAttacks
-	dw NinetalesEvosAttacks
 	dw JigglypuffEvosAttacks
 	dw WigglytuffEvosAttacks
 	dw ZubatEvosAttacks
@@ -120,7 +120,7 @@ EvosAttacksPointers1::
 	dw SeakingEvosAttacks
 	dw StaryuEvosAttacks
 	dw StarmieEvosAttacks
-	dw MrMimeEvosAttacks
+	dw MimentorEvosAttacks
 	dw ScytherEvosAttacks
 	dw JynxEvosAttacks
 	dw ElectabuzzEvosAttacks
@@ -722,8 +722,8 @@ ClefableEvosAttacks:
 	dbw 55, TACKLE ; STAR_FREEZE
 	db 0 ; no more level-up moves
 
-VulpixEvosAttacks:
-	dbbw EVOLVE_ITEM, FIRE_STONE, NINETALES
+VulpviEvosAttacks:
+	dbbw EVOLVE_ITEM, FIRE_STONE, VULPIX
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
@@ -739,7 +739,7 @@ VulpixEvosAttacks:
 	dbw 55, PSYCHIC
 	db 0 ; no more level-up moves
 
-NinetalesEvosAttacks:
+VulpixEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
@@ -1987,7 +1987,7 @@ StarmieEvosAttacks:
 	dbw 37, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
-MrMimeEvosAttacks:
+MimentorEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BARRIER
 	dbw 6, CONFUSION

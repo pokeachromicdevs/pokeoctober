@@ -40,8 +40,8 @@ MonMenuIconPals:
 	icon_pals PURPLE, BLUE     ; NIDOKING
 	icon_pals PINK, GREEN      ; CLEFAIRY
 	icon_pals PINK, GREEN      ; CLEFABLE
-	icon_pals RED, YELLOW      ; VULPIX
-	icon_pals YELLOW, PINK     ; NINETALES
+	icon_pals RED, YELLOW      ; VULPVI
+	icon_pals YELLOW, PINK     ; VULPIX
 	icon_pals PINK, GREEN      ; JIGGLYPUFF
 	icon_pals PINK, GREEN      ; WIGGLYTUFF
 	icon_pals BLUE, GREEN      ; ZUBAT
@@ -125,7 +125,7 @@ MonMenuIconPals:
 	icon_pals RED, YELLOW      ; SEAKING
 	icon_pals BROWN, GRAY      ; STARYU
 	icon_pals PURPLE, BLUE     ; STARMIE
-	icon_pals PINK, GREEN      ; MR_MIME
+	icon_pals PINK, GREEN      ; MIMENTOR
 	icon_pals GREEN, GRAY      ; SCYTHER
 	icon_pals RED, PURPLE      ; JYNX
 	icon_pals YELLOW, BROWN    ; ELECTABUZZ

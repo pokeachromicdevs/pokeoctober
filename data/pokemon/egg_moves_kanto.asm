@@ -121,7 +121,7 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw StaryuEggMoves
 	dw NoEggMoves1
-	dw MrMimeEggMoves
+	dw MimentorEggMoves
 	dw ScytherEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -491,7 +491,7 @@ StaryuEggMoves:
 	dw SUPERSONIC
 	dw -1 ; end
 
-MrMimeEggMoves:
+MimentorEggMoves:
 	dw FUTURE_SIGHT
 	dw HYPNOSIS
 	dw MIMIC

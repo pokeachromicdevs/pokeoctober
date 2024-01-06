@@ -544,7 +544,7 @@ BattleTowerMons1:
 	bigdw 24 ; SDef
 	db "KENTAROSU@@"
 
-	dw MR__MIME
+	dw MIMENTOR
 	db QUICK_CLAW
 	dw TOXIC, PSYCH_UP, FIRE_PUNCH, HEADBUTT
 
@@ -3775,7 +3775,7 @@ BattleTowerMons7:
 	bigdw 166 ; SDef
 	db "RINGUMA@@@@"
 
-	dw MR__MIME
+	dw MIMENTOR
 	db KINGS_ROCK
 	dw REFLECT, FIRE_PUNCH, PSYCHIC_M, ENCORE
 

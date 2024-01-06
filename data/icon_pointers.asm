@@ -36,8 +36,8 @@ IconPointers:
 	dw NidokingIcon
 	dw ClefairyIcon
 	dw ClefableIcon
+	dw VulpviIcon
 	dw VulpixIcon
-	dw NinetalesIcon
 	dw JigglypuffIcon
 	dw WigglytuffIcon
 	dw ZubatIcon

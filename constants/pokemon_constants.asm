@@ -55,8 +55,8 @@
 	const NIDOKING   ; 22
 	const CLEFAIRY   ; 23
 	const CLEFABLE   ; 24
-	const VULPIX     ; 25
-	const NINETALES  ; 26
+	const VULPVI     ; 25
+	const VULPIX  ; 26
 	const JIGGLYPUFF ; 27
 	const WIGGLYTUFF ; 28
 	const ZUBAT      ; 29
@@ -140,8 +140,7 @@
 	const SEAKING    ; 77
 	const STARYU     ; 78
 	const STARMIE    ; 79
-	const MR__MIME   ; 7a
-MIMENTOR EQU MR__MIME
+	const MIMENTOR   ; 7a
 	const SCYTHER    ; 7b
 	const JYNX       ; 7c
 	const ELECTABUZZ ; 7d

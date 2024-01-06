@@ -37,8 +37,8 @@ KantoMonSpecials:
 	db  75 ; NIDOKING
 	db  60 ; CLEFAIRY
 	db  85 ; CLEFABLE
-	db  65 ; VULPIX
-	db 100 ; NINETALES
+	db  65 ; VULPVI
+	db 100 ; VULPIX
 	db  25 ; JIGGLYPUFF
 	db  50 ; WIGGLYTUFF
 	db  40 ; ZUBAT
@@ -122,7 +122,7 @@ KantoMonSpecials:
 	db  80 ; SEAKING
 	db  70 ; STARYU
 	db 100 ; STARMIE
-	db 100 ; MR__MIME
+	db 100 ; MIMENTOR
 	db  55 ; SCYTHER
 	db  95 ; JYNX
 	db  85 ; ELECTABUZZ

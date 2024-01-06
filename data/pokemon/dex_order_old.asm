@@ -144,8 +144,8 @@ OldPokedexOrder:
 	dw SNUBBULL
 	dw GRANBULL
 	dw VULPIII
+	dw VULPVI
 	dw VULPIX
-	dw NINETALES
 	dw FENNECURSE
 	dw PUPPERON
 	dw GROWLITHE
@@ -183,7 +183,7 @@ OldPokedexOrder:
 	dw ELEKID
 	dw ELECTABUZZ
 	dw BALLERINE
-	dw MR__MIME
+	dw MIMENTOR
 	dw SMEARGLE
 	dw FARFETCH_D
 	dw LUXSWAN

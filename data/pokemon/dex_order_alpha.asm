@@ -161,7 +161,7 @@ AlphabeticalPokedexOrder:
 	dw MOLAMBINO
 	dw MOLTRES
 	dw MORPHOBIA
-	dw MR__MIME
+	dw MIMENTOR
 	dw MUK
 	dw MURKROW
 	dw NATU
@@ -172,7 +172,7 @@ AlphabeticalPokedexOrder:
 	dw NIDORAN_M
 	dw NIDORINA
 	dw NIDORINO
-	dw NINETALES
+	dw VULPIX
 	dw NOCTOWL
 	dw OCTILLERY
 	dw ODDISH
@@ -284,7 +284,7 @@ AlphabeticalPokedexOrder:
 	dw VILEPLUME
 	dw VOLTORB
 	dw VULPIII
-	dw VULPIX
+	dw VULPVI
 	dw WARTORTLE
 	dw WEARLYCAN
 	dw WEEDLE

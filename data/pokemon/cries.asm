@@ -43,8 +43,8 @@ PokemonCries::
 	mon_cry CRY_RAICHU,      $000,  $100 ; NIDOKING
 	mon_cry CRY_CLEFAIRY,    $0cc,  $081 ; CLEFAIRY
 	mon_cry CRY_CLEFAIRY,    $0aa,  $0a0 ; CLEFABLE
-	mon_cry CRY_VULPIX,      $04f,  $090 ; VULPIX
-	mon_cry CRY_VULPIX,      $088,  $0e0 ; NINETALES
+	mon_cry CRY_VULPIX,      $04f,  $090 ; VULPVI
+	mon_cry CRY_VULPIX,      $088,  $0e0 ; VULPIX
 	mon_cry CRY_PIDGEY,      $0ff,  $0b5 ; JIGGLYPUFF
 	mon_cry CRY_PIDGEY,      $068,  $0e0 ; WIGGLYTUFF
 	mon_cry CRY_SQUIRTLE,    $0e0,  $100 ; ZUBAT
@@ -128,7 +128,7 @@ PokemonCries::
 	mon_cry CRY_CATERPIE,    $010,  $17f ; SEAKING
 	mon_cry CRY_PARAS,       $002,  $0a0 ; STARYU
 	mon_cry CRY_PARAS,       $000,  $100 ; STARMIE
-	mon_cry CRY_KRABBY,      $008,  $0c0 ; MR__MIME
+	mon_cry CRY_KRABBY,      $008,  $0c0 ; MIMENTOR
 	mon_cry CRY_CATERPIE,    $000,  $100 ; SCYTHER
 	mon_cry CRY_DROWZEE,     $0ff,  $17f ; JYNX
 	mon_cry CRY_VOLTORB,     $08f,  $17f ; ELECTABUZZ

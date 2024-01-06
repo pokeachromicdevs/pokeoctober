@@ -35,8 +35,8 @@ AnimationPointers:
 	dw NidokingAnimation
 	dw ClefairyAnimation
 	dw ClefableAnimation
+	dw VulpviAnimation
 	dw VulpixAnimation
-	dw NinetalesAnimation
 	dw JigglypuffAnimation
 	dw WigglytuffAnimation
 	dw ZubatAnimation
@@ -120,7 +120,7 @@ AnimationPointers:
 	dw SeakingAnimation
 	dw StaryuAnimation
 	dw StarmieAnimation
-	dw MrMimeAnimation
+	dw MimentorAnimation
 	dw ScytherAnimation
 	dw JynxAnimation
 	dw ElectabuzzAnimation

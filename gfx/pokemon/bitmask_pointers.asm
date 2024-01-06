@@ -35,8 +35,8 @@ BitmasksPointers:
 	dw NidokingBitmasks
 	dw ClefairyBitmasks
 	dw ClefableBitmasks
+	dw VulpviBitmasks
 	dw VulpixBitmasks
-	dw NinetalesBitmasks
 	dw JigglypuffBitmasks
 	dw WigglytuffBitmasks
 	dw ZubatBitmasks
@@ -120,7 +120,7 @@ BitmasksPointers:
 	dw SeakingBitmasks
 	dw StaryuBitmasks
 	dw StarmieBitmasks
-	dw MrMimeBitmasks
+	dw MimentorBitmasks
 	dw ScytherBitmasks
 	dw JynxBitmasks
 	dw ElectabuzzBitmasks

@@ -47,11 +47,11 @@ HabitatPokedexOrder:
 	dw NIDORAN_F
 	dw NIDORINA
 	dw NIDOQUEEN
-	dw VULPIX
+	dw VULPVI
 	dw NIDORAN_M
 	dw NIDORINO
 	dw NIDOKING
-	dw NINETALES
+	dw VULPIX
 	dw EXEGGCUTE
 	dw EXEGGUTOR
 	dw SUNKERN
@@ -267,7 +267,7 @@ HabitatPokedexOrder:
 	dw CLEFAIRY
 	dw CLEFABLE
 	dw DITTO
-	dw MR__MIME
+	dw MIMENTOR
 	dw BALLERINE
 	dw IGGLYBUFF
 	dw JIGGLYPUFF

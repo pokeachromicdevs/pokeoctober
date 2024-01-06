@@ -159,8 +159,8 @@ FollowSpritePointers::
 	follow_sprite NidokingSpriteGFX, PAL_FOLLOWER_PURPLE ;NIDOKING
 	follow_sprite ClefairySpriteGFX, PAL_FOLLOWER_JIGGLYPUFF ;CLEFAIRY
 	follow_sprite ClefableSpriteGFX, PAL_FOLLOWER_JIGGLYPUFF ;CLEFABLE
-	follow_sprite VulpixSpriteGFX, PAL_FOLLOWER_RED ;VULPIX
-	follow_sprite NinetalesSpriteGFX, PAL_FOLLOWER_BEEDRILL ;NINETALES
+	follow_sprite VulpviSpriteGFX, PAL_FOLLOWER_RED ;VULPVI
+	follow_sprite VulpixSpriteGFX, PAL_FOLLOWER_BEEDRILL ;VULPIX
 	follow_sprite JigglypuffSpriteGFX, PAL_FOLLOWER_JIGGLYPUFF ;JIGGLYPUFF
 	follow_sprite WigglytuffSpriteGFX, PAL_FOLLOWER_WIGGLYTUFF ;WIGGLYTUFF
 	follow_sprite ZubatSpriteGFX, PAL_FOLLOWER_ZUBAT ;ZUBAT
@@ -244,7 +244,7 @@ FollowSpritePointers::
 	follow_sprite SeakingSpriteGFX, PAL_FOLLOWER_OREFRY ;SEAKING
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;STARYU
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;STARMIE
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MR__MIME
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MIMENTOR
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;SCYTHER
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;JYNX
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ELECTABUZZ

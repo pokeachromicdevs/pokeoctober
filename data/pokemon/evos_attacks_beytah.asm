@@ -206,7 +206,7 @@ BurgelaEvosAttacks:
 	db 0 ; no more level-up moves
 
 VupiiiEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, VULPIX
+	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, VULPVI
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP

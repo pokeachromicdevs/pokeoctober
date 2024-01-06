@@ -35,8 +35,8 @@ EvolutionMoves::
 	dw THRASH       ; NIDOKING
 	dw NO_MOVE      ; CLEFAIRY
 	dw NO_MOVE      ; CLEFABLE
-	dw NO_MOVE      ; VULPIX
-	dw NO_MOVE      ; NINETALES, SYNCHRONIZE
+	dw NO_MOVE      ; VULPVI
+	dw NO_MOVE      ; VULPIX, SYNCHRONIZE
 	dw NO_MOVE      ; JIGGLYPUFF
 	dw PERISH_SONG  ; WIGGLYTUFF
 	dw NO_MOVE      ; ZUBAT
@@ -120,7 +120,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; SEAKING
 	dw NO_MOVE      ; STARYU
 	dw NO_MOVE      ; STARMIE
-	dw BARRIER      ; MR__MIME
+	dw BARRIER      ; MIMENTOR
 	dw NO_MOVE      ; SCYTHER
 	dw NO_MOVE      ; JYNX
 	dw NO_MOVE      ; ELECTABUZZ

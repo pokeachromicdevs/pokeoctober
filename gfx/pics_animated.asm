@@ -4,7 +4,7 @@ SECTION "Pics 1 Animated", ROMX
 
 HoOhFrontpicAnim:        INCBIN "gfx/pokemon/ho_oh/front.animated.2bpp.lz"
 MachampFrontpicAnim:     INCBIN "gfx/pokemon/machamp/front.animated.2bpp.lz"
-NinetalesFrontpicAnim:   INCBIN "gfx/pokemon/ninetales/front.animated.2bpp.lz"
+VulpixFrontpicAnim:   INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
 FeraligatrFrontpicAnim:  INCBIN "gfx/pokemon/feraligatr/front.animated.2bpp.lz"
 NidokingFrontpicAnim:    INCBIN "gfx/pokemon/nidoking/front.animated.2bpp.lz"
 RaikouFrontpicAnim:      INCBIN "gfx/pokemon/raikou/front.animated.2bpp.lz"
@@ -98,7 +98,7 @@ ExeggutorFrontpicAnim:   INCBIN "gfx/pokemon/exeggutor/front.animated.2bpp.lz"
 GastlyFrontpicAnim:      INCBIN "gfx/pokemon/gastly/front.animated.2bpp.lz"
 AzumarillFrontpicAnim:   INCBIN "gfx/pokemon/azumarill/front.animated.2bpp.lz"
 ParasectFrontpicAnim:    INCBIN "gfx/pokemon/parasect/front.animated.2bpp.lz"
-MrMimeFrontpicAnim:      INCBIN "gfx/pokemon/mr__mime/front.animated.2bpp.lz"
+MimentorFrontpicAnim:      INCBIN "gfx/pokemon/mimentor/front.animated.2bpp.lz"
 HeracrossFrontpicAnim:   INCBIN "gfx/pokemon/heracross/front.animated.2bpp.lz"
 
 SECTION "Pics 6 Animated", ROMX
@@ -122,7 +122,7 @@ TentacruelFrontpicAnim:  INCBIN "gfx/pokemon/tentacruel/front.animated.2bpp.lz"
 ElekidFrontpicAnim:      INCBIN "gfx/pokemon/elekid/front.animated.2bpp.lz"
 JumpluffFrontpicAnim:    INCBIN "gfx/pokemon/jumpluff/front.animated.2bpp.lz"
 MarowakFrontpicAnim:     INCBIN "gfx/pokemon/marowak/front.animated.2bpp.lz"
-VulpixFrontpicAnim:      INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
+VulpviFrontpicAnim:      INCBIN "gfx/pokemon/vulpvi/front.animated.2bpp.lz"
 GligarFrontpicAnim:      INCBIN "gfx/pokemon/gligar/front.animated.2bpp.lz"
 DunsparceFrontpicAnim:   INCBIN "gfx/pokemon/dunsparce/front.animated.2bpp.lz"
 

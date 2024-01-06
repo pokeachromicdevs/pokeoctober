@@ -5,7 +5,7 @@ SometimesFleeMons:
 	dw MAGNEMITE
 	dw GRIMER
 	dw TANGELA
-	dw MR__MIME
+	dw MIMENTOR
 	dw EEVEE
 	dw PORYGON
 	dw DRATINI

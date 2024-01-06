@@ -1,10 +1,10 @@
 	db "FOX@" ; species name
-	dw 200, 220 ; height, weight
+	dw 307, 440 ; height, weight
 
-	db   "As its body grows"
-	next "larger, its six"
-	next "warm tails become"
+	db   "It is said to live"
+	next "a thousand years,"
+	next "and each of its"
 
-	page "more beautiful,"
-	next "with a more luxur-"
-	next "ious coat of fur.@"
+	page "tails is loaded"
+	next "with supernatural"
+	next "powers.@"

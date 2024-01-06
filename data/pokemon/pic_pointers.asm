@@ -50,8 +50,8 @@ PokemonPicPointers::
 	mon_pic Nidoking
 	mon_pic Clefairy
 	mon_pic Clefable
+	mon_pic Vulpvi
 	mon_pic Vulpix
-	mon_pic Ninetales
 	mon_pic Jigglypuff
 	mon_pic Wigglytuff
 	mon_pic Zubat
@@ -135,7 +135,7 @@ PokemonPicPointers::
 	mon_pic Seaking
 	mon_pic Staryu
 	mon_pic Starmie
-	mon_pic MrMime
+	mon_pic Mimentor
 	mon_pic Scyther
 	mon_pic Jynx
 	mon_pic Electabuzz

@@ -35,8 +35,8 @@ AnimationIdlePointers:
 	dw NidokingAnimationIdle
 	dw ClefairyAnimationIdle
 	dw ClefableAnimationIdle
+	dw VulpviAnimationIdle
 	dw VulpixAnimationIdle
-	dw NinetalesAnimationIdle
 	dw JigglypuffAnimationIdle
 	dw WigglytuffAnimationIdle
 	dw ZubatAnimationIdle
@@ -120,7 +120,7 @@ AnimationIdlePointers:
 	dw SeakingAnimationIdle
 	dw StaryuAnimationIdle
 	dw StarmieAnimationIdle
-	dw MrMimeAnimationIdle
+	dw MimentorAnimationIdle
 	dw ScytherAnimationIdle
 	dw JynxAnimationIdle
 	dw ElectabuzzAnimationIdle

@@ -35,8 +35,8 @@ FramesPointers:
 	dba NidokingFrames
 	dba ClefairyFrames
 	dba ClefableFrames
+	dba VulpviFrames
 	dba VulpixFrames
-	dba NinetalesFrames
 	dba JigglypuffFrames
 	dba WigglytuffFrames
 	dba ZubatFrames
@@ -120,7 +120,7 @@ FramesPointers:
 	dba SeakingFrames
 	dba StaryuFrames
 	dba StarmieFrames
-	dba MrMimeFrames
+	dba MimentorFrames
 	dba ScytherFrames
 	dba JynxFrames
 	dba ElectabuzzFrames
