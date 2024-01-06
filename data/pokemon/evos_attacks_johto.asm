@@ -321,7 +321,7 @@ FurretEvosAttacks:
 	dbw 46, AMNESIA
 	dbw 50, BODY_SLAM
 	db 0 ; no more level-up moves
-	
+
 CleflingEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, MALLODY
 	db 0 ; no more evolutions
@@ -493,7 +493,7 @@ BellignanEvosAttacks:
 	dbw 50, GIGA_DRAIN
 	dbw 54, SOLARBEAM
 	db 0 ; no more level-up moves
-	
+
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
 	db 0 ; no more evolutions
@@ -789,7 +789,7 @@ AzumarillEvosAttacks:
 	dbw 36, DOUBLE_EDGE
 	dbw 48, RAIN_DANCE
 	db 0 ; no more level-up moves
-	
+
 PhandarinEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SPLASH
@@ -1521,7 +1521,7 @@ HoundoomEvosAttacks:
 	dbw 35, FLAMETHROWER
 	dbw 52, CRUNCH
 	db 0 ; no more level-up moves
-	
+
 FennecurseEvosAttacks:
 	db 0 ; no more evolutions
 	dbw  1, FIRE_SPIN
@@ -1553,7 +1553,7 @@ StromenEvosAttacks:
 	dbw 53, DESTINY_BOND
 	dbw 58, PSYCHIC_M
 	db 0 ; no more level-up moves
-	
+
 KingdraEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
@@ -1698,7 +1698,7 @@ MagbyEvosAttacks:
 	dbw 43, CONFUSE_RAY
 	dbw 49, FIRE_BLAST
 	db 0 ; no more level-up moves
-	
+
 MiltankEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE

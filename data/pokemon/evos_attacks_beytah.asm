@@ -6,7 +6,7 @@ EvosAttacksPointers3::
 	dw CamouflakeEvosAttacks
 	dw CoaltaEvosAttacks
 	dw BurgelaEvosAttacks
-	dw VupiiiEvosAttacks
+	dw VulpiiiEvosAttacks
 	dw WorfursEvosAttacks
 	dw WearlycanEvosAttacks
 	dw DodaerieEvosAttacks
@@ -205,7 +205,7 @@ BurgelaEvosAttacks:
 	dbw 46, ROLLOUT
 	db 0 ; no more level-up moves
 
-VupiiiEvosAttacks:
+VulpiiiEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, VULPVI
 	db 0 ; no more evolutions
 	dbw 1, EMBER
