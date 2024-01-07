@@ -1,0 +1,220 @@
+<h2>Pokémon Data</h2>
+<div class="pkmn-data-container">
+    {% for pkmn_name, pkmn_data in data.items() %}
+        <div class="pkmn-data">
+            <h3>{{ pkmn_name }}</h3>
+
+            <div class="requires-flex">
+                <div class="pkmn-images">
+                    <img src="../../gfx/pokemon/{{ pkmn_name.lower() }}/front.png">
+                    <img src="../../gfx/pokemon/{{ pkmn_name.lower() }}/back.png">
+                </div>
+                <div>
+                    <dl class="dl-without-titles">
+                        <div class="pkmn-types-list">
+                            <dt>Types</dt>
+                            <dd>
+                                <ul>
+                                    {% for type in pkmn_data["base stats"]["types"] %}
+                                    <li>{{ type }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Gender ratio</dt>
+                            <dd>
+                                {{ 
+                                    {
+                                        
+                                        "GENDER_F0": "0% ♀ / 100% ♂",
+                                        "GENDER_F12_5": "12.5% ♀ / 87.5% ♂",
+                                        "GENDER_F25": "25% ♀ / 75% ♂",
+                                        "GENDER_F50": "50% ♀ / 50% ♂",
+                                        "GENDER_F75": "75% ♀ / 25% ♂",
+                                        "GENDER_F100": "100% ♀ / 0% ♂",
+                                        "GENDER_UNKNOWN": "Genderless",
+                                    }[
+                                        pkmn_data["base stats"]["gender ratio"]
+                                    ] }}
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Growth rate</dt>
+                            <dd>
+                                {{ 
+                                    {
+                                        "GROWTH_MEDIUM_FAST": "Medium Fast",
+                                        "GROWTH_SLIGHTLY_FAST": "Slightly Fast",
+                                        "GROWTH_SLIGHTLY_SLOW": "Slightly Slow",
+                                        "GROWTH_MEDIUM_SLOW": "Medium Slow",
+                                        "GROWTH_FAST": "Fast",
+                                        "GROWTH_SLOW": "Slow",
+                                    }[
+                                        pkmn_data["base stats"]["growth rate"]
+                                    ] }}
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        {% if pkmn_data["evos moves"]["evolves from"]|length > 0 %}
+                        <div>
+                            <dt>Evolves from</dt>
+                            <dd>
+                            <ul>
+                                {% for from in pkmn_data["evos moves"]["evolves from"] %}
+                                    <li>{{ from }}</li>
+                                {% endfor %}
+                            </ul>
+                            </dd>
+                        </div>
+                        {% endif %}
+    
+                        {% if pkmn_data["evos moves"]["evos"]|length > 0 %}
+                        <div>
+                            <dt>Evolves into</dt>
+                            <dd>
+                            <ul>
+                                {% for evto in pkmn_data["evos moves"]["evos"] %}
+                                    {% if evto[0] == "EVOLVE_LEVEL" %}
+                                    <li>{{ "lv. %s → <b>%s</b>" % (evto[1], evto[2]) }}</li>
+                                    
+                                    {% elif evto[0] == "EVOLVE_ITEM" %}
+                                    <li>{{ "Give <b>%s</b> → <b>%s</b>" % (evto[1], evto[2]) }}</li>
+                                    
+                                    {% elif evto[0] == "EVOLVE_TRADE" %}
+                                        {% if evto[1] == "-1" %}
+                                        <li>{{ "Trade → <b>%s</b>" % (evto[2]) }}</li>
+                                        {% else %}
+                                        <li>{{ "Trade holding <b>%s</b> → <b>%s</b>" % (
+                                            evto[1].replace('_',' ').title(),
+                                            evto[2]
+                                        ) }}</li>
+                                        {% endif %}
+                                    
+                                    {% elif evto[0] == "EVOLVE_HAPPINESS" %}
+                                    <li>{{ "Happiness at %s → <b>%s</b>" % ({
+                                        "TR_ANYTIME": "anytime",
+                                        "TR_MORNDAY": "daytime",
+                                        "TR_NITE": "nighttime",
+                                    }[evto[1]], evto[2]) }}</li>
+                                    
+                                    {% elif evto[0] == "EVOLVE_STAT" %}
+                                    <li>{{ "<b>%s</b> at lv.%s → </b>%s</b>" % ({
+                                        "ATK_GT_DEF": "Atk > Def",
+                                        "ATK_LT_DEF": "Atk < Def",
+                                        "ATK_EQ_DEF": "Atk = Def"
+                                    }[evto[2]], evto[1], evto[3]) }}</li>
+                                    
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                            </dd>
+                        </div>
+                        {% endif %}
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="pkmn-stats-split">
+                <dl class="pkmn-base-stats">
+                    <div>
+                        <dt>HP</dt><dd>{{ pkmn_data["base stats"]["hp"] }}</dd>
+                    </div>
+                    <div>
+                        <dt>Atk</dt><dd>{{ pkmn_data["base stats"]["atk"] }}</dd>
+                    </div>
+                    <div>
+                        <dt>Def</dt><dd>{{ pkmn_data["base stats"]["def"] }}</dd>
+                    </div>
+                    <div>
+                        <dt>Spd</dt><dd>{{ pkmn_data["base stats"]["spd"] }}</dd>
+                    </div>
+                    <div>
+                        <dt>Sp. Atk</dt><dd>{{ pkmn_data["base stats"]["special atk"] }}</dd>
+                    </div>
+                    <div>
+                        <dt>Sp. Def</dt><dd>{{ pkmn_data["base stats"]["special def"] }}</dd>
+                    </div>
+                </dl>
+                <dl class="pkmn-misc-info">
+                    <div>
+                        <dt>Rate</dt>
+                        <dd>{{ "%0.2f" % (pkmn_data["base stats"]["catch rate"] / 255 * 100) }}%</dd>
+                    </div>
+                    <div>
+                        <dt>Groups</dt>
+                        <dd class="pkmn-types-list"><ul>
+                            {% for grp in pkmn_data["base stats"]["egg groups"] %}
+                                <li>{{ 
+                                    {
+                                        "EGG_MONSTER": "Monster",
+                                        "EGG_WATER_1": "Amphibian",
+                                        "EGG_BUG": "Bug",
+                                        "EGG_FLYING": "Flying",
+                                        "EGG_GROUND": "Field",
+                                        "EGG_FAIRY": "Fairy",
+                                        "EGG_PLANT": "Grass",
+                                        "EGG_HUMANSHAPE": "Humanlike",
+                                        "EGG_WATER_3": "Invertebrate",
+                                        "EGG_MINERAL": "Mineral",
+                                        "EGG_INDETERMINATE": "Amorphous",
+                                        "EGG_WATER_2": "Fish",
+                                        "EGG_DITTO": "Ditto",
+                                        "EGG_DRAGON": "Dragon",
+                                        "EGG_NONE": "Undiscovered"
+                                    }[grp] 
+                                }}</li>
+                            {% endfor %}
+                        </ul></dd>
+                    </div>
+                    <div>
+                        <dt>Items</dt>
+                        <dd>
+                        <ul class="pkmn-items-list">
+                            {% if pkmn_data["base stats"]["items"]|length < 1 %}
+                                <li>No items</li>
+                            {% else %}
+                            {% for item in pkmn_data["base stats"]["items"] %}
+                                <li>{{ item.replace('_',' ').title() }}</li>
+                            {% endfor %}
+                            {% endif %}
+                        </ul>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+            
+            <div class="three-column-as-table smaller-font">
+                <div>
+                    <h4>Can be found in</h4>
+                    <ul>
+                        {% for map in pkmn_data["maps"] %}
+                            <li>{{ map.replace('_',' ').title() }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <h4>Learns</h4>
+                    <ul>
+                        {% for move in pkmn_data["evos moves"]["moves"] %}
+                            {% if move|length > 1 %}
+                            <li>{{ "lv.%s → %s" % (move[0], move[1].replace('_',' ').title()) }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <h4>TM/HMs</h4>
+                    <ul class="three-columns">
+                        {% for move in pkmn_data["base stats"]["learnset"] %}
+                            <li>{{ move.replace('_',' ').title() }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

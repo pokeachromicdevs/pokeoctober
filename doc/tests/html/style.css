@@ -1,0 +1,163 @@
+@page {
+    margin: .75in;
+    size: A5;
+}
+
+html,body,div,p,h1,h2,h3,h4,h5,h6,
+ul,ol,li,dl,dt,dd,form,fieldset,caption,legend,
+table,tr,td,th,address,blockquote,img {
+    margin:0;
+    padding:0;
+}
+
+img, fieldset {
+    border:none;
+}
+
+body *, *:after, *:before {
+    box-sizing:border-box;
+}
+
+body {
+    font-size: 10pt;
+}
+
+/* debug !! */
+*, *::after, *::before {
+    outline: 1px solid rgba(255,0,0,.2);
+}
+
+.pkmn-data-container {
+    counter-reset: pkmn-pokedex 0;
+}
+
+.pkmn-data {
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+    margin: .5em 0;
+    padding: .5em;
+    border: 1px solid red;
+    border-radius: 12px;
+    max-height: 8cm;
+    overflow: hidden;
+    font-size: 8pt;
+}
+
+.pkmn-data > * {
+    margin-bottom: .5em;
+}
+
+.pkmn-data-container ul {
+    list-style: none;
+}
+
+.pkmn-data h3::before {
+    content: '#' counter(pkmn-pokedex) ' ';
+}
+
+.pkmn-data h3 {
+    counter-increment: pkmn-pokedex;
+}
+
+.pkmn-base-stats {
+    display: table;
+    max-width: 60%;
+}
+
+.pkmn-base-stats dt {
+    display: table-cell;
+    width: 100%;
+}
+
+.pkmn-base-stats dd {
+    text-align: right;
+}
+
+.pkmn-base-stats div {
+    display: table-row;
+}
+
+.pkmn-stats-split {
+    display: table;
+}
+
+.requires-flex {
+    display: flex;
+}
+
+.smaller-font {
+    font-size: 6pt;
+}
+
+.requires-flex > * {
+    flex-grow: 1;
+}
+
+.pkmn-stats-split > * {
+    display: table-cell;
+    width: 100%;
+    padding-right: 1em;
+}
+
+.pkmn-misc-info {
+    display: table;
+}
+
+.pkmn-misc-info div {
+    display: table-row;
+}
+
+.pkmn-misc-info div * {
+    display: table-cell;
+    padding-right: .5em;
+}
+
+.pkmn-stats-split dt {
+    font-weight: bold;
+}
+
+.pkmn-stats-split > *:last-child {
+    padding-right: 0;
+}
+
+.pkmn-images img {
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+    object-position: top;
+}
+
+.dl-without-titles dt {
+    display: none;
+}
+
+.pkmn-types-list ul li {
+    display: inline-block;
+    background: #eee;
+    padding: .1em .2em ;
+    border: 1px solid #000;
+}
+
+.pkmn-items-list li {
+    display: inline-block;
+}
+
+.three-columns {
+    columns: 3;
+}
+
+.three-column-as-table {
+    display: table;
+}
+
+.three-column-as-table > * {
+    display: table-cell;
+    max-width: 33.3333%;
+    width: 33.3333%;
+    padding-right:.5cm;
+}
+
+.three-column-as-table > *:last-child {
+    padding-right:0;
+}

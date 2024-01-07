@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+        <link href="html/style.css" rel="stylesheet" media="screen,print">
+    </head>
+    <body>
+        {% markdown %}
+{#- includes shouldn't be indented in order for it to work :( -#}
+
+{% include "content/intro.md" %}
+
+
+        {% endmarkdown %}
+
+        {% include "content/_pkmn_data.html" %}
+    </body>
+</html>
