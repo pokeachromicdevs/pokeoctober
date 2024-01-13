@@ -1,3 +1,6 @@
+@import url("fonts/bubblegum/font.css");
+@import url("fonts/yanone/font.css");
+
 @page {
     margin: .75in;
     size: A5;
@@ -20,6 +23,11 @@ body *, *:after, *:before {
 
 body {
     font-size: 10pt;
+    font-family: Yanone;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Bubblegum;
 }
 
 /* debug !! */
@@ -41,7 +49,8 @@ body {
     border-radius: 12px;
     max-height: 8cm;
     overflow: hidden;
-    font-size: 8pt;
+    font-size: 9pt;
+    width: 100%;
 }
 
 .pkmn-data > * {
@@ -62,7 +71,7 @@ body {
 
 .pkmn-base-stats {
     display: table;
-    max-width: 60%;
+    max-width: 20%;
 }
 
 .pkmn-base-stats dt {
@@ -143,19 +152,34 @@ body {
     display: inline-block;
 }
 
-.three-columns {
-    columns: 3;
+.learnset-list {
+    columns: 2;
+}
+
+.tm-hm-list {
+    columns: 4;
 }
 
 .three-column-as-table {
     display: table;
+    width: 100%;
 }
 
 .three-column-as-table > * {
+    padding-right:.15cm;
+}
+
+.wildmon-list-contain {
     display: table-cell;
-    max-width: 33.3333%;
-    width: 33.3333%;
-    padding-right:.5cm;
+    width: 50%;
+}
+
+.wildmon-list {
+    columns: 2;
+}
+
+.tm-hm-list-contain {
+    display: table-cell;
 }
 
 .three-column-as-table > *:last-child {

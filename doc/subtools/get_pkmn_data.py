@@ -95,6 +95,7 @@ def _add_evos_moves (pokemon_data: OrderedDict):
                     extract = next(rawdata)
                     while extract:
                         if re.match(r"^db\s+0.+$", extract): break
+                        extract = re.sub(";.+$", "", extract) # remove comments
                         evosmoves["moves"].append(
                             tuple(
                                 extract.replace("dbw ", "")

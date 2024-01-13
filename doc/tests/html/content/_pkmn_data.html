@@ -141,7 +141,7 @@
                 </dl>
                 <dl class="pkmn-misc-info">
                     <div>
-                        <dt>Rate</dt>
+                        <dt>Catch</dt>
                         <dd>{{ "%0.2f" % (pkmn_data["base stats"]["catch rate"] / 255 * 100) }}%</dd>
                     </div>
                     <div>
@@ -185,20 +185,9 @@
                         </dd>
                     </div>
                 </dl>
-            </div>
-            
-            <div class="three-column-as-table smaller-font">
-                <div>
-                    <h4>Can be found in</h4>
-                    <ul>
-                        {% for map in pkmn_data["maps"] %}
-                            <li>{{ map.replace('_',' ').title() }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
                 <div>
                     <h4>Learns</h4>
-                    <ul>
+                    <ul class="learnset-list">
                         {% for move in pkmn_data["evos moves"]["moves"] %}
                             {% if move|length > 1 %}
                             <li>{{ "lv.%s → %s" % (move[0], move[1].replace('_',' ').title()) }}</li>
@@ -206,9 +195,20 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div>
+            </div>
+            
+            <div class="three-column-as-table">
+                <div class="wildmon-list-contain">
+                    <h4>Can be found in</h4>
+                    <ul class="wildmon-list">
+                        {% for map in pkmn_data["maps"] %}
+                            <li>{{ map.replace('_',' ').title() }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="tm-hm-list-contain">
                     <h4>TM/HMs</h4>
-                    <ul class="three-columns">
+                    <ul class="tm-hm-list">
                         {% for move in pkmn_data["base stats"]["learnset"] %}
                             <li>{{ move.replace('_',' ').title() }}</li>
                         {% endfor %}
