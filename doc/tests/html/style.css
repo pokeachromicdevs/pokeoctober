@@ -1,42 +1,44 @@
-@import url("fonts/bubblegum/font.css");
-@import url("fonts/yanone/font.css");
+@import url(fonts/bubblegum/font.css);
+
+@import url(fonts/yanone/font.css);
 
 @page {
-    margin: .75in;
-    size: A5;
+    margin:.75in;size:A5
 }
 
-html,body,div,p,h1,h2,h3,h4,h5,h6,
-ul,ol,li,dl,dt,dd,form,fieldset,caption,legend,
-table,tr,td,th,address,blockquote,img {
-    margin:0;
-    padding:0;
+address,blockquote,body,caption,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,legend,li,ol,p,table,td,th,tr,ul {
+    margin: 0;
+    padding: 0
 }
 
-img, fieldset {
-    border:none;
+fieldset,img {
+    border: 0
 }
 
-body *, *:after, *:before {
-    box-sizing:border-box;
+:after,:before,body * {
+    box-sizing: border-box
 }
 
 body {
     font-size: 10pt;
     font-family: Yanone;
+    counter-reset: main-heading 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: Bubblegum;
+    font-family: Bubblegum
 }
 
-/* debug !! */
-*, *::after, *::before {
-    outline: 1px solid rgba(255,0,0,.2);
+section {
+    break-before: always
 }
 
 .pkmn-data-container {
-    counter-reset: pkmn-pokedex 0;
+    counter-reset: pkmn-pokedex 0
+}
+
+.pkmn-data-container h3 {
+    margin-bottom: .1em
 }
 
 .pkmn-data {
@@ -47,141 +49,205 @@ h1,h2,h3,h4,h5,h6 {
     padding: .5em;
     border: 1px solid red;
     border-radius: 12px;
-    max-height: 8cm;
     overflow: hidden;
     font-size: 9pt;
-    width: 100%;
+    width: 100%
 }
 
-.pkmn-data > * {
+.pkmn-data>* {
     margin-bottom: .5em;
+    padding-top: .15em
+}
+
+.pkmn-data>:first-child {
+    margin: 0;
+    padding: 0;
+    border: 0
 }
 
 .pkmn-data-container ul {
-    list-style: none;
+    list-style: none
 }
 
 .pkmn-data h3::before {
-    content: '#' counter(pkmn-pokedex) ' ';
+    content: "#"counter(pkmn-pokedex)" "
 }
 
 .pkmn-data h3 {
-    counter-increment: pkmn-pokedex;
+    counter-increment: pkmn-pokedex
 }
 
 .pkmn-base-stats {
-    display: table;
-    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    max-width: 20%
 }
 
 .pkmn-base-stats dt {
-    display: table-cell;
-    width: 100%;
+    font-weight: 700;
+    width: 100%
 }
 
 .pkmn-base-stats dd {
-    text-align: right;
+    text-align: right
 }
 
 .pkmn-base-stats div {
-    display: table-row;
 }
 
-.pkmn-stats-split {
-    display: table;
-}
-
-.requires-flex {
-    display: flex;
+.pkmn-stats-split,.requires-flex {
+    display: flex
 }
 
 .smaller-font {
-    font-size: 6pt;
+    font-size: .9em
 }
 
-.requires-flex > * {
-    flex-grow: 1;
+.requires-flex>* {
+    flex-grow: 1
 }
 
-.pkmn-stats-split > * {
-    display: table-cell;
-    width: 100%;
-    padding-right: 1em;
+.pkmn-stats-split>* {
+    padding-right: 1em
 }
 
 .pkmn-misc-info {
-    display: table;
+    display: flex;
+    flex-direction: column;
+    gap: .2em
 }
 
 .pkmn-misc-info div {
-    display: table-row;
+    display: flex;
+    align-items: center
 }
 
 .pkmn-misc-info div * {
-    display: table-cell;
-    padding-right: .5em;
+    padding-right: .5em
 }
 
 .pkmn-stats-split dt {
-    font-weight: bold;
+    font-weight: 700;
+    flex-grow: 0;
+    width: 3.6em
 }
 
-.pkmn-stats-split > *:last-child {
-    padding-right: 0;
+.pkmn-stats-split>:last-child,.three-column-as-table>:last-child {
+    padding-right: 0
 }
 
 .pkmn-images img {
     width: 4em;
     height: 4em;
     object-fit: cover;
-    object-position: top;
+    object-position: top
 }
 
 .dl-without-titles dt {
-    display: none;
+    display: none
 }
 
 .pkmn-types-list ul li {
     display: inline-block;
     background: #eee;
-    padding: .1em .2em ;
-    border: 1px solid #000;
-}
-
-.pkmn-items-list li {
-    display: inline-block;
+    padding: .1em .2em;
+    border: 1px solid #000
 }
 
 .learnset-list {
-    columns: 2;
+    columns: 2
+}
+
+.learnset-list li {
+    line-height: .9
 }
 
 .tm-hm-list {
-    columns: 4;
+    columns: 5
 }
 
 .three-column-as-table {
-    display: table;
-    width: 100%;
+    display: flex
 }
 
-.three-column-as-table > * {
-    padding-right:.15cm;
-}
-
-.wildmon-list-contain {
-    display: table-cell;
-    width: 50%;
+.three-column-as-table>* {
+    padding-right: .15cm
 }
 
 .wildmon-list {
     columns: 2;
+    opacity: .8
+}
+
+.wildmon-list li {
+    padding-bottom: .25em;
+    line-height: .9
 }
 
 .tm-hm-list-contain {
     display: table-cell;
+    opacity: .8
 }
 
-.three-column-as-table > *:last-child {
-    padding-right:0;
+.evolves-from-list,.evolves-into-list {
+    margin-left: 1em
 }
+
+.evolves-from-list {
+    font-weight: 700
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.pkmn-basic-info {
+    display: flex;
+    flex-direction: column;
+    gap: .1em
+}
+
+.pkmn-learnset-contain {
+    flex-grow: 1
+}
+
+.pkmn-base-stats-entry {
+    display: flex;
+    padding: .1em .3em;
+    background: linear-gradient(to right,#aaa 0,#888 calc(var(--indicator)/255*100%),#ccc calc(var(--indicator)/255*100%))
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5em;
+  }
+  
+  .pkmn-data h3, .pkmn-data h4 {
+    margin-bottom: .2em;
+  }
+  
+  h2 {
+    text-align: center;
+    border: 1pt solid red;
+    border-radius: 8pt;
+    padding: .25em 0;
+    counter-increment: main-heading;
+    counter-reset: lower-heading;
+  }
+
+  h3 {
+    counter-increment: lower-heading;
+  }
+
+  h2::before {
+      content: counter(main-heading, upper-alpha)". "
+  }
+
+  h3::before {
+      content: counter(main-heading, upper-alpha)"-"counter(lower-heading, decimal)". "
+  }

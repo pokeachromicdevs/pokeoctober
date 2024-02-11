@@ -173,7 +173,7 @@ def _add_base_stats (pokemon_data: OrderedDict):
                 i.strip() for i in get_entry(next(entries)).split(',')
             ]))
             new_pokemon["learnset"] = [
-                i.strip() for i in get_entry(next(entries)).split(',')
+                re.sub(";.+$", "", i.strip()) for i in get_entry(next(entries)).split(',')
             ]
             pokemon_data[i]["base stats"] = new_pokemon
 

@@ -3,19 +3,28 @@
     <head>
         <title>Test</title>
         <meta charset="utf-8">
-        <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
-        <link href="html/style.css" rel="stylesheet" media="screen,print">
-        <link href="html/_interface_.css" rel="stylesheet">
+        <script src="tests/html/paged.polyfill.js"></script>
+        <link href="tests/html/style.css" rel="stylesheet" media="screen,print">
+        <link href="tests/html/_interface_.css" rel="stylesheet">
     </head>
     <body>
-        {% markdown %}
-{#- includes shouldn't be indented in order for it to work :( -#}
+        
+    {#- includes shouldn't be indented in order for it to work :( -#}
 
+    <section id="intro">
+    {% markdown %}
 {% include "content/intro.md" %}
+    {% endmarkdown %}
+    </section>
 
+    <section id="silent-town">
+    {% markdown %}
+{% include "content/silent_town.md" %}
+    {% endmarkdown %}
+    </section>
 
-        {% endmarkdown %}
-
-        {% include "content/_pkmn_data.html" %}
+    <section id="pkmn-data">
+    {% include "content/_pkmn_data.html" %}
+    </section>
     </body>
 </html>

@@ -2,15 +2,15 @@
 <div class="pkmn-data-container">
     {% for pkmn_name, pkmn_data in data.items() %}
         <div class="pkmn-data">
-            <h3>{{ pkmn_name }}</h3>
+            <h3 id="pkmn-id-{{ pkmn_name }}">{{ pkmn_name }}</h3>
 
             <div class="requires-flex">
                 <div class="pkmn-images">
-                    <img src="../../gfx/pokemon/{{ pkmn_name.lower() }}/front.png">
-                    <img src="../../gfx/pokemon/{{ pkmn_name.lower() }}/back.png">
+                    <img loading="lazy" src="../../gfx/pokemon/{{ pkmn_name.lower() }}/front.png">
+                    <img loading="lazy" src="../../gfx/pokemon/{{ pkmn_name.lower() }}/back.png">
                 </div>
                 <div>
-                    <dl class="dl-without-titles">
+                    <dl class="dl-without-titles pkmn-basic-info">
                         <div class="pkmn-types-list">
                             <dt>Types</dt>
                             <dd>
@@ -63,9 +63,9 @@
                         <div>
                             <dt>Evolves from</dt>
                             <dd>
-                            <ul>
+                            <ul class="evolves-from-list">
                                 {% for from in pkmn_data["evos moves"]["evolves from"] %}
-                                    <li>{{ from }}</li>
+                                    <li><a href="#pkmn-id-{{ from }}">{{ from }}</a></li>
                                 {% endfor %}
                             </ul>
                             </dd>
@@ -76,37 +76,37 @@
                         <div>
                             <dt>Evolves into</dt>
                             <dd>
-                            <ul>
+                            <ul class="evolves-into-list">
                                 {% for evto in pkmn_data["evos moves"]["evos"] %}
                                     {% if evto[0] == "EVOLVE_LEVEL" %}
-                                    <li>{{ "lv. %s → <b>%s</b>" % (evto[1], evto[2]) }}</li>
+                                    <li>{{ "lv. %s → <a href=\"#pkmn-id-%s\"><b>%s</b></a>" % (evto[1], evto[2], evto[2]) }}</li>
                                     
                                     {% elif evto[0] == "EVOLVE_ITEM" %}
-                                    <li>{{ "Give <b>%s</b> → <b>%s</b>" % (evto[1], evto[2]) }}</li>
+                                    <li>{{ "Give <b>%s</b> → <a href=\"#pkmn-id-%s\"><b>%s</b></a>" % (evto[1], evto[2], evto[2]) }}</li>
                                     
                                     {% elif evto[0] == "EVOLVE_TRADE" %}
                                         {% if evto[1] == "-1" %}
-                                        <li>{{ "Trade → <b>%s</b>" % (evto[2]) }}</li>
+                                        <li>{{ "Trade → <a href=\"#pkmn-id-%s\"><b>%s</b></a>" % (evto[2], evto[2]) }}</li>
                                         {% else %}
-                                        <li>{{ "Trade holding <b>%s</b> → <b>%s</b>" % (
+                                        <li>{{ "Trade holding <b>%s</b> → <a href=\"#pkmn-id-%s\"><b>%s</b></a>" % (
                                             evto[1].replace('_',' ').title(),
-                                            evto[2]
+                                            evto[2], evto[2]
                                         ) }}</li>
                                         {% endif %}
                                     
                                     {% elif evto[0] == "EVOLVE_HAPPINESS" %}
-                                    <li>{{ "Happiness at %s → <b>%s</b>" % ({
+                                    <li>{{ "Happiness at %s → <a href=\"#pkmn-id-%s\"><b>%s</b></a>" % ({
                                         "TR_ANYTIME": "anytime",
                                         "TR_MORNDAY": "daytime",
                                         "TR_NITE": "nighttime",
-                                    }[evto[1]], evto[2]) }}</li>
+                                    }[evto[1]], evto[2], evto[2]) }}</li>
                                     
                                     {% elif evto[0] == "EVOLVE_STAT" %}
-                                    <li>{{ "<b>%s</b> at lv.%s → </b>%s</b>" % ({
+                                    <li>{{ "<b>%s</b> at lv.%s → <a href=\"#pkmn-id-%s\"><b>%s</b></a>" % ({
                                         "ATK_GT_DEF": "Atk > Def",
                                         "ATK_LT_DEF": "Atk < Def",
                                         "ATK_EQ_DEF": "Atk = Def"
-                                    }[evto[2]], evto[1], evto[3]) }}</li>
+                                    }[evto[2]], evto[1], evto[3], evto[3]) }}</li>
                                     
                                     {% endif %}
                                 {% endfor %}
@@ -116,32 +116,32 @@
                         {% endif %}
                     </dl>
                 </div>
-            </div>
-            
-            <div class="pkmn-stats-split">
                 <dl class="pkmn-base-stats">
-                    <div>
+                    <div class="pkmn-base-stats-entry" style="--indicator:{{ pkmn_data["base stats"]["hp"] }}">
                         <dt>HP</dt><dd>{{ pkmn_data["base stats"]["hp"] }}</dd>
                     </div>
-                    <div>
+                    <div class="pkmn-base-stats-entry" style="--indicator:{{ pkmn_data["base stats"]["atk"] }}">
                         <dt>Atk</dt><dd>{{ pkmn_data["base stats"]["atk"] }}</dd>
                     </div>
-                    <div>
+                    <div class="pkmn-base-stats-entry" style="--indicator:{{ pkmn_data["base stats"]["def"] }}">
                         <dt>Def</dt><dd>{{ pkmn_data["base stats"]["def"] }}</dd>
                     </div>
-                    <div>
+                    <div class="pkmn-base-stats-entry" style="--indicator:{{ pkmn_data["base stats"]["spd"] }}">
                         <dt>Spd</dt><dd>{{ pkmn_data["base stats"]["spd"] }}</dd>
                     </div>
-                    <div>
+                    <div class="pkmn-base-stats-entry" style="--indicator:{{ pkmn_data["base stats"]["special atk"] }}">
                         <dt>Sp. Atk</dt><dd>{{ pkmn_data["base stats"]["special atk"] }}</dd>
                     </div>
-                    <div>
+                    <div class="pkmn-base-stats-entry" style="--indicator:{{ pkmn_data["base stats"]["special def"] }}">
                         <dt>Sp. Def</dt><dd>{{ pkmn_data["base stats"]["special def"] }}</dd>
                     </div>
                 </dl>
+            </div>
+            
+            <div class="pkmn-stats-split">
                 <dl class="pkmn-misc-info">
                     <div>
-                        <dt>Catch</dt>
+                        <dt>Catch Rate</dt>
                         <dd>{{ "%0.2f" % (pkmn_data["base stats"]["catch rate"] / 255 * 100) }}%</dd>
                     </div>
                     <div>
@@ -185,7 +185,7 @@
                         </dd>
                     </div>
                 </dl>
-                <div>
+                <div class="pkmn-learnset-contain">
                     <h4>Learns</h4>
                     <ul class="learnset-list">
                         {% for move in pkmn_data["evos moves"]["moves"] %}
@@ -195,12 +195,18 @@
                         {% endfor %}
                     </ul>
                 </div>
+                <div class="pkmn-egg-moves-contain">
+                    <h4>Egg Moves</h4>
+                    <ul class="learnset-list">
+                            <li>TODO</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="three-column-as-table">
                 <div class="wildmon-list-contain">
                     <h4>Can be found in</h4>
-                    <ul class="wildmon-list">
+                    <ul class="wildmon-list smaller-font">
                         {% for map in pkmn_data["maps"] %}
                             <li>{{ map.replace('_',' ').title() }}</li>
                         {% endfor %}
@@ -208,7 +214,7 @@
                 </div>
                 <div class="tm-hm-list-contain">
                     <h4>TM/HMs</h4>
-                    <ul class="tm-hm-list">
+                    <ul class="tm-hm-list smaller-font">
                         {% for move in pkmn_data["base stats"]["learnset"] %}
                             <li>{{ move.replace('_',' ').title() }}</li>
                         {% endfor %}
