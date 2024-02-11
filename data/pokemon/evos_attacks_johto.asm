@@ -906,6 +906,7 @@ SunkernEvosAttacks:
 	db 0 ; no more level-up moves
 
 SunfloraEvosAttacks:
+	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 4, GROWTH
 	dbw 10, MEGA_DRAIN

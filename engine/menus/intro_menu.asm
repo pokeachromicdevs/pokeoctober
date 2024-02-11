@@ -1183,7 +1183,7 @@ Copyright:
 	call Request2bpp
 	ld de, Copyright2GFX
 	ld hl, vTiles1
-	lb bc, BANK(Copyright2GFX), 12
+	lb bc, BANK(Copyright2GFX), 16
 	call Request2bpp
 	hlcoord 2, 6
 	ld de, CopyrightString
@@ -1202,9 +1202,9 @@ CopyrightString:
 	next $60, $61, $62, $63, $64, $65, $66
 	db   $73, $74, $75, $76, $77, $78, $79, $7a, $7b, $7c
 
-	; ©2022 ACHROMICDEVS
-	next $7f, $60, $80, $81, $82
-	db   $83, $84, $85, $86, $87, $88, $89, $8a, $8b
+	; 2020-2024 ACHROMICDEVS
+	next $80, $81, $82, $83, $84, $85, $86, $87, $88
+	db   $89, $8a, $8b, $8c, $8d, $8e, $8f
 
 	db "@"
 
