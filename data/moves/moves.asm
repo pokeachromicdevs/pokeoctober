@@ -298,6 +298,8 @@ Moves1:
 	move EFFECT_MULTI_HIT,          25, NORMAL,    85, 10,   0 ; TAIL_SLAP
 	move EFFECT_ALWAYS_HIT,         60, GHOST,    100, 20,   0 ; SHADOW_PUNCH
 	move EFFECT_CONFUSE_HIT,        75, BUG,      100, 15,  10 ; SIGNAL_BEAM
+	move EFFECT_NORMAL_HIT,         80, ROCK,     100, 10,  30 ; DUST_DEVIL       ; needs EFFECT TORNADO
+	move EFFECT_NORMAL_HIT,         80, FLYING,   100, 10,  30 ; STORM_FRONT      ; EFFECT_HURRICANE
 
 
 

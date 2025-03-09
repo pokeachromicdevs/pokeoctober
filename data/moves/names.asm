@@ -284,3 +284,5 @@ MoveNames::
 	move_name "TAIL SLAP"
 	move_name "SHADOW PUNCH"
 	move_name "SIGNAL BEAM"
+	move_name "DUST DEVIL"
+	move_name "STORM FRONT"

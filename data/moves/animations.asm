@@ -307,6 +307,8 @@ BattleAnimations::
 	dw BattleAnim_TailSlap
 	dw BattleAnim_ShadowPunch
 	dw BattleAnim_SignalBeam
+	dw BattleAnim_DustDevil
+	dw BattleAnim_StormFront
 	dw BattleAnim_HeldItemTrigger
 .End:
 
@@ -4992,6 +4994,77 @@ BattleAnim_LavaBurst:
 	anim_ret
 	
 BattleAnim_DragonClaw:
+	anim_ret
+
+BattleAnim_DustDevil:
+	anim_2gfx BATTLE_ANIM_GFX_WIND, BATTLE_ANIM_GFX_ROCKS
+.loop
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_GUST, -16, 4, 9, 0, 0
+	anim_call .rocks1
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_GUST, -16, 4, 9, 0, 0
+	anim_call .rocks2
+	anim_wait 2
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_wait 4
+	anim_obj BATTLE_ANIM_OBJ_GUST, -16, 4, 9, 0, 0
+	anim_loop 6, .loop
+	anim_ret
+
+.rocks1
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $28
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $5c
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $10
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $e8
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $9c
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $d0
+	anim_ret
+
+.rocks2
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $1c
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $50
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $dc
+	anim_obj BATTLE_ANIM_OBJ_ROCK_SMASH, 16, 0, 8, 0, $90
+	anim_ret
+
+BattleAnim_StormFront:
+	anim_if_param_equal $1, BattleAnim_RainDance
+	anim_3gfx BATTLE_ANIM_GFX_WATER, BATTLE_ANIM_GFX_WIND, BATTLE_ANIM_GFX_HIT
+	anim_bgp $f8
+	anim_obp0 $7c
+.loop1
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_GUST, 8, 0, 14, 0, 0
+	anim_wait 6
+	anim_loop 9, .loop1
+	anim_sound 0, 1, SFX_RAIN_DANCE
+	anim_obj BATTLE_ANIM_OBJ_RAIN, 11, 0, 0, 0, 0
+	anim_wait 8
+	anim_obj BATTLE_ANIM_OBJ_RAIN, 11, 0, 0, 0, 1
+	anim_wait 8
+	anim_obj BATTLE_ANIM_OBJ_RAIN, 11, 0, 0, 0, 2
+	anim_wait 8
+	anim_call .inc
+	anim_wait 72
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 16, 0, 4, 0, $18
+	anim_call .inc
+	anim_wait 32
+	anim_ret
+
+.inc:
+	anim_incobj 1
+	anim_incobj 2
+	anim_incobj 3
+	anim_incobj 4
+	anim_incobj 5
+	anim_incobj 6
+	anim_incobj 7
+	anim_incobj 8
+	anim_incobj 9
 	anim_ret
 
 BattleAnimSub_EyeBeams:

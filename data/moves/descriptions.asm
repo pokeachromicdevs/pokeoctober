@@ -284,6 +284,8 @@ MoveDescriptions1:
 	dw TailSlapDescription
 	dw ShadowPunchDescription
 	dw SignalBeamDescription
+	dw DustDevilDescription
+	dw StormFrontDescription
 .End:
 	
 InvalidMoveDescription:
@@ -1375,6 +1377,14 @@ ShadowPunchDescription:
 DragonClawDescription:
 	db "Slashes with"
 	next "sharp claws.@"
-	
+
+DustDevilDescription:
+	db "An attack that may"
+	next "start a sandstorm.@"
+
+StormFrontDescription:
+	db "An attack that may"
+	next "start a downpour.@"
+
 ;--------------------------------------------------------------------
 _NUM_MOVE_DESCRIPTIONS = (MoveDescriptions1.End  - MoveDescriptions1)/2
