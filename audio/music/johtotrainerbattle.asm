@@ -1,3 +1,12 @@
+; Nihon Trainer Battle theme (Gabe note: in JEP--Johto Expansion Pak--Johto here)
+; 4/4 rhythm, composed in A Phyrgian.
+; This theme is intended for generic trainer battles. It uses the same tempo as the vanilla GSC trainer battle themes, mainly for syncing properly with the encounter animation.
+; The scale and the backing patterns are also(mostly) the same, to give the theme a familiar feel. I experimented with different root notes, but they made the track feel too uncanny when compared to what you usually hear in GSC.
+; There are four distinct segments to the theme. The first and third create tension, while the second and fourth give an upbeat resolution, to underline the "victory lap" feel of the Nihon region in the context of JEP.
+; Also, this theme is probably as close to the vanilla sound as my compositions get. I do think that it fits though, given the high frequency of this theme playing while traversing the region.
+; Composed by LuciShrimp.
+
+
 Music_JohtoTrainerBattle:
 	channel_count 4
 	channel 1, Music_JohtoTrainerBattle_Ch1
