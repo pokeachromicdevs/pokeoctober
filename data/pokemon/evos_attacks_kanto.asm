@@ -1692,14 +1692,19 @@ OnixEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, SCREECH
-	dbw 10, BIND
-	dbw 14, ROCK_THROW
-	dbw 23, HARDEN
-	dbw 27, RAGE
-	dbw 36, SANDSTORM
-	dbw 40, SLAM
-	dbw 43, ROCK_HEAD
-	dbw 44, DOUBLE_EDGE
+	dbw 1, HARDEN
+	dbw 7, BIND
+	dbw 10, BIDE
+	dbw 17, ROCK_THROW
+	dbw 20, SLAM
+	dbw 27, RAGE ; SAND_TOMB
+	dbw 30, RAGE
+	dbw 40, SANDSTORM
+	dbw 47, DUST_DEVIL
+	dbw 50, ROAR
+	dbw 57, EARTHQUAKE
+	dbw 60, CURSE
+	dbw 67, ROCK_SLASH
 	db 0 ; no more level-up moves
 
 DrowzeeEvosAttacks:

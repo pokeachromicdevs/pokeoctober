@@ -446,28 +446,27 @@ Route34Shuckle:
 TrainerFireBreatherWalt:
 	trainer FIREBREATHER, WALT, EVENT_BEAT_FIREBREATHER_WALT, .SeenTxt, .WinTxt, 0, .PostScript
 .SeenTxt:
-	text "Fire can be used"
-	line "for warmth, or it"
-	para "can be used for"
-	line "destruction."
+	text "How dare you in-"
+	line "terrupt me while"
+	para "I'm practicing"
+	line "my firebreathing"
+	para "in this highly"
+	line "flammable grass!"
 	done
 
 .WinTxt:
-	text "As for me?"
-	para "I used it for fire"
-	line "dancing!"
+	text "I fizzled out!"
 	done
 
 .PostScript:
 	endifjustbattled
 	jumptextfaceplayer .PSTxt
 .PSTxt:
-	text "I often travel to"
-	line "HAWAII with my"
-	para "fire-type #MON"
-	line "in order to put on"
-	cont "a show."
-	para "We love it there!"
+	text "Away, you nosy"
+	line "kid!"
+	
+	para "You're ruining"
+	line "my concentration!"
 	done
 
 TrainerJugglerIrwin:

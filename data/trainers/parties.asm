@@ -3807,11 +3807,9 @@ FirebreatherGroup:
 	end_party
 
 	next_party ; FIREBREATHER (6)
-	db "WALT@", TRAINERTYPE_NORMAL
-	db 20
-	dw MAGBY
+	db "MATT@", TRAINERTYPE_NORMAL
 	db 21
-	dw COALTA
+	dw MAGMAR
 	end_party
 
 	next_party ; FIREBREATHER (7)
