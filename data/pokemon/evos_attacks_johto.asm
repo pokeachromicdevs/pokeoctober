@@ -315,7 +315,7 @@ CubburnEvosAttacks:
 	db 0 ; no more level-up moves
 
 FlambearEvosAttacks:
-	dbbw EVOLVE_LEVEL, 36, BRUINUS
+	dbbw EVOLVE_LEVEL, 32, BRUINUS
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
