@@ -5,51 +5,51 @@ ENDM
 
 OddEggProbabilities:
 prob_total = 0
-; Pichu
+; Cubburn
 	prob 10
-	prob 1
-; Cleffa
+	prob 50
+; Munchlax
 	prob 14
-	prob 3
-; Igglybuff
+	prob 50
+; Ballerine
 	prob 12
-	prob 3
+	prob 50
 ; Smoochum
 	prob 14
-	prob 2
+	prob 50
 ; Magby
 	prob 12
-	prob 2
+	prob 50
 ; Elekid
 	prob 12
-	prob 2
-; Tyrogue
+	prob 50
+; Palssio
 	prob 12
-	prob 1
+	prob 50
 
 OddEggSpecies:
-	dw PICHU
-	dw PICHU
-	dw CLEFFA
-	dw CLEFFA
-	dw IGGLYBUFF
-	dw IGGLYBUFF
-	dw SMOOCHUM
-	dw SMOOCHUM
-	dw MAGBY
-	dw MAGBY
-	dw ELEKID
-	dw ELEKID
-	dw TYROGUE
-	dw TYROGUE
+	dw CUBBURN     ; exclusive move: Reversal
+	dw CUBBURN     ; exclusive move: Reversal
+	dw MUNCHLAX    ; exclusive move: Dizzy Punch
+	dw MUNCHLAX    ; exclusive move: Dizzy Punch
+	dw BALLERINE
+	dw BALLERINE
+	dw SMOOCHUM    ; exclusive move: Dizzy Punch
+	dw SMOOCHUM    ; exclusive move: Dizzy Punch
+	dw MAGBY       ; exclusive move: Dizzy Punch
+	dw MAGBY       ; exclusive move: Dizzy Punch
+	dw ELEKID      ; exclusive move: Dizzy Punch
+	dw ELEKID      ; exclusive move: Dizzy Punch
+	dw PALSSIO
+	dw PALSSIO
 
 OddEggMoves:
-	dw THUNDERSHOCK, CHARM, DIZZY_PUNCH, NO_MOVE
-	dw THUNDERSHOCK, CHARM, DIZZY_PUNCH, NO_MOVE
-	dw POUND, CHARM, DIZZY_PUNCH, NO_MOVE
-	dw POUND, CHARM, DIZZY_PUNCH, NO_MOVE
-	dw SING, CHARM, DIZZY_PUNCH, NO_MOVE
-	dw SING, CHARM, DIZZY_PUNCH, NO_MOVE
+	dw SCRATCH, LEER, REVERAL, NO_MOVE
+	dw SCRATCH, LEER, REVERSAL, NO_MOVE
+	dw TACKLE, DEFENSE_CURL, ROLLOUT, DIZZY_PUNCH
+	dw TACKLE, DEFENSE_CURL, ROLLOUT, DIZZY_PUNCH
+	dw POUND, ENCORE, CONFUSION, HYPNOSIS
+	dw POUND, ENCORE, CONFUSION, HYPNOSIS
 	dw POUND, LICK, DIZZY_PUNCH, NO_MOVE
 	dw POUND, LICK, DIZZY_PUNCH, NO_MOVE
 	dw EMBER, DIZZY_PUNCH, NO_MOVE, NO_MOVE

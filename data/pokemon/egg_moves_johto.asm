@@ -163,7 +163,7 @@ EggMovePointers2::
 	dw SmujjEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
-	dw NoEggMoves2
+	dw BallerineEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -659,6 +659,12 @@ SmujjEggMoves:
 	dw MEAN_LOOK
 	dw LICK
 	dw -1 ; end
+	
+BallerineEggMoves:
+    db CONFUSE_RAY
+    db FUTURE_SIGHT
+    db HYPNOSIS
+    db -1 ; end
 	
 AudinoEggMoves:
 	dw SWEET_KISS
