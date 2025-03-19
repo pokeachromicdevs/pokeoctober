@@ -253,20 +253,20 @@ PokemonCries::
 	mon_cry CRY_TRICULES,    $000,  $160 ; SCIZOR, needs fixing
 	mon_cry CRY_TRICULES,    555,   336   ; TRICULES, needs fixing
 	mon_cry CRY_TRICULES,    $035,  $0e0 ; HERACROSS, needs fixing
-	mon_cry CRY_WOOPER,       15,   191  ; SNEASEL
+	mon_cry CRY_SQUIRTLE,    0,    0     ; SNEASEL
 	mon_cry CRY_TEDDIURSA,   $7a2,  $06e ; TEDDIURSA
 	mon_cry CRY_TEDDIURSA,   $640,  $0d8 ; URSARING
 	mon_cry CRY_SLUGMA,     -$1d8,  $140 ; SLUGMA
 	mon_cry CRY_MAGCARGO,    $440,  $100 ; MAGCARGO
 	mon_cry CRY_CYNDAQUIL,   $1fe,  $140 ; SWINUB
 	mon_cry CRY_MAGCARGO,   -$109,  $100 ; PILOSWINE
-	mon_cry CRY_MAGCARGO,   -525,   448   ; CHOMOSWINE
+	mon_cry CRY_MAGCARGO,   -525,   448  ; SAGARSWINE
 	mon_cry CRY_PICHU,       $000,  $150 ; CAMOUFLAKE
 	mon_cry CRY_PICHU,       $030,  $150 ; TODO: GERMIFROST
 	mon_cry CRY_PICHU,       $060,  $140 ; TODO: VEGELANCHE
 	mon_cry CRY_PICHU,       $070,  $140 ; TODO: SNOUWRBUN
 	mon_cry CRY_MAGCARGO,    $0a1,  $0e8 ; CORSOLA
-	mon_cry CRY_CHIKORITA,   77,   72   ; REMORAID (diff)
+	mon_cry CRY_CHIKORITA,   77,   72    ; REMORAID (diff)
 	mon_cry CRY_CHIKORITA,   $000,  $180 ; OCTILLERY
 	mon_cry CRY_TEDDIURSA,   $002,  $06a ; DELIBIRD
 	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE

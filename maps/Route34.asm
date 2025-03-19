@@ -447,13 +447,12 @@ TrainerFireBreatherWalt:
 	trainer FIREBREATHER, WALT, EVENT_BEAT_FIREBREATHER_WALT, .SeenTxt, .WinTxt, 0, .PostScript
 .SeenTxt:
 	text "How dare you in-"
-	line "terrupt me while"
-	para "I'm practicing"
-	line "my firebreathing"
-	para "in this highly"
-	line "flammable grass!"
+ 	line "terrupt me while"
+ 	para "I'm practicing"
+ 	line "my firebreathing"
+ 	para "in this highly"
+ 	line "flammable grass!"
 	done
-
 .WinTxt:
 	text "I fizzled out!"
 	done
@@ -463,11 +462,11 @@ TrainerFireBreatherWalt:
 	jumptextfaceplayer .PSTxt
 .PSTxt:
 	text "Away, you nosy"
-	line "kid!"
-	
-	para "You're ruining"
-	line "my concentration!"
-	done
+ 	line "kid!"
+ 	
+ 	para "You're ruining"
+ 	line "my concentration!"
+ 	done
 
 TrainerJugglerIrwin:
 	trainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, PKFArielSeenTxt, PKFArielWinTxt, 0, PKFArielScript
@@ -556,7 +555,7 @@ Route34_MapEvents:
 	db 0 ; bg events
 
 	db 8 ; object events
-	object_event  9,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Silver, -1
+	object_event 13,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34Silver, -1
 	object_event  5, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  6, 23, SPRITE_ROUTE33_KAREN_ELM_WILL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
 	object_event  7, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ROUTE34_WILL
