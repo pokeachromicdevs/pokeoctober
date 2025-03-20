@@ -458,7 +458,6 @@ TrainerFireBreatherWalt:
 	done
 
 .PostScript:
-	endifjustbattled
 	jumptextfaceplayer .PSTxt
 .PSTxt:
 	text "Away, you nosy"

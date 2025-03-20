@@ -321,7 +321,7 @@ PokemonNames::
 	db "OREFRY@@@@"
 	db "BALLERINE@"
 	db "ORIJOEY@@@"
-	db "AGGROSWINE"
+	db "CARNIBOAR@"
 	db "NECROREX@@"
 	db "NURSSUM@@@"
 	db "GESTICUTE@"
