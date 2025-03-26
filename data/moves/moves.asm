@@ -299,7 +299,8 @@ Moves1:
 	move EFFECT_ALWAYS_HIT,         60, GHOST,    100, 20,   0 ; SHADOW_PUNCH
 	move EFFECT_CONFUSE_HIT,        75, BUG,      100, 15,  10 ; SIGNAL_BEAM
 	move EFFECT_NORMAL_HIT,         80, ROCK,     100, 10,  30 ; DUST_DEVIL       ; needs EFFECT TORNADO
-	move EFFECT_NORMAL_HIT,         80, FLYING,   100, 10,  30 ; STORM_FRONT      ; EFFECT_HURRICANE
+	move EFFECT_NORMAL_HIT,         80, FLYING,   100, 10,  30 ; STORM_FRONT      ; needs EFFECT_HURRICANE
+	move EFFECT_NORMAL_HIT,          0, FIRE,      80, 15,   0 ; LAVA_POOL        ; needs EFFECT_LAVA_POOL
 
 
 

@@ -287,6 +287,7 @@
 	const SIGNAL_BEAM  ; 117
 	const DUST_DEVIL   ; 118
 	const STORM_FRONT  ; 119
+	const LAVA_POOL    ; 11a
 ;	const MUDDY_RIVER
 ;	const FREEZE_DRY
 ;	const EARTH_DRILL

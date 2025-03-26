@@ -309,6 +309,7 @@ BattleAnimations::
 	dw BattleAnim_SignalBeam
 	dw BattleAnim_DustDevil
 	dw BattleAnim_StormFront
+	dw BattleAnim_LavaPool
 	dw BattleAnim_HeldItemTrigger
 .End:
 
@@ -5037,35 +5038,27 @@ BattleAnim_StormFront:
 	anim_obp0 $7c
 .loop1
 	anim_sound 0, 0, SFX_RAZOR_WIND
-	anim_obj BATTLE_ANIM_OBJ_GUST, 8, 0, 14, 0, 0
+	anim_obj BATTLE_ANIM_OBJ_GUST, 64, 112, $0
 	anim_wait 6
 	anim_loop 9, .loop1
 	anim_sound 0, 1, SFX_RAIN_DANCE
-	anim_obj BATTLE_ANIM_OBJ_RAIN, 11, 0, 0, 0, 0
+	anim_obj BATTLE_ANIM_OBJ_RAIN, 88, 0, $0
 	anim_wait 8
-	anim_obj BATTLE_ANIM_OBJ_RAIN, 11, 0, 0, 0, 1
+	anim_obj BATTLE_ANIM_OBJ_RAIN, 88, 0, $1
 	anim_wait 8
-	anim_obj BATTLE_ANIM_OBJ_RAIN, 11, 0, 0, 0, 2
+	anim_obj BATTLE_ANIM_OBJ_RAIN, 88, 0, $2
 	anim_wait 8
-	anim_call .inc
-	anim_wait 72
-	anim_sound 0, 1, SFX_RAZOR_WIND
-	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 16, 0, 4, 0, $18
-	anim_call .inc
-	anim_wait 32
-	anim_ret
+	anim_jump BattleAnim_Twister.loop2
 
-.inc:
-	anim_incobj 1
-	anim_incobj 2
-	anim_incobj 3
-	anim_incobj 4
-	anim_incobj 5
-	anim_incobj 6
-	anim_incobj 7
-	anim_incobj 8
-	anim_incobj 9
-	anim_ret
+BattleAnim_LavaPool:
+	anim_setobjpal PAL_BATTLE_OB_GRAY, PAL_BTLCUSTOM_FIRE
+	anim_2gfx BATTLE_ANIM_GFX_ANGELS, BATTLE_ANIM_GFX_POISON
+	anim_obp0 $94
+	anim_if_param_equal $1, BattleAnimSub_Sludge
+	anim_sound 16, 2, SFX_LICK
+	anim_obj BATTLE_ANIM_OBJ_DESTINY_BOND, 5, 4, 15, 0, 2
+	anim_wait 56
+	anim_jump BattleAnimSub_Sludge
 
 BattleAnimSub_EyeBeams:
 	anim_sound 6, 2, SFX_LEER
