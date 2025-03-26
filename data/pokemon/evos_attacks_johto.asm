@@ -299,7 +299,7 @@ BayleefEvosAttacks:
 	db 0 ; no more level-up moves
 
 CubburnEvosAttacks:
-	dbbw EVOLVE_LEVEL, 14, FLAMBEAR
+	dbbw EVOLVE_LEVEL, 16, FLAMBEAR
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
@@ -346,7 +346,7 @@ BruinusEvosAttacks:
 	db 0 ; no more level-up moves
 	
 PalssioEvosAttacks:
-	dbbw EVOLVE_LEVEL, 18, PRESSIO
+	dbbw EVOLVE_LEVEL, 16, PRESSIO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
