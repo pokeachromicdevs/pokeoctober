@@ -250,11 +250,11 @@ ENDM
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  7
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  8
 	map_const VIOLET_POKECENTER_1F,                         8,  4 ;  9
-	map_const SILENT_HILLS_EXIT_GATE,                  6,  4 ; 11
+	map_const SILENT_HILLS_EXIT_GATE,                       6,  4 ; 11
 	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 13
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 14
-	map_const ROUTE_36_GATE,                  5,  4 ; 15
+	map_const ROUTE_36_GATE,                                5,  4 ; 15
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 16
 	map_const VIOLET_GYM,                                  10,  9 ; 17
 	map_const DREAD_WOODS,                                 16, 20 ; 18
@@ -288,6 +288,7 @@ ENDM
 	map_const POKECOM_CENTER_ADMIN_OFFICE_MOBILE,          16, 16 ; 21
 	map_const ROUTE_34_ILEX_FOREST_GATE,                    5,  4 ; 23
 	map_const DAY_CARE,                                     5,  4 ; 24
+	map_const GOLDENROD_R34_GATE,                           5,  4 ; 25
 
 	newgroup                                                      ; 12
 

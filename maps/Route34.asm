@@ -544,7 +544,8 @@ TrainerBikerHarley:
 Route34_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 1 ; warp events
+	warp_event  9,  1, GOLDENROD_R34_GATE, 3
 
 	db 2 ; coord events
 	coord_event 11, 28, SCENE_ROUTE34_NOTHING, Route34_WillEventTrigger1

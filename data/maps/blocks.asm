@@ -187,6 +187,7 @@ VioletKylesHouse_Blocks:
 HillsGustHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
+GoldenrodR34Gate_Blocks:
 SafariZoneFuchsiaGateBeta_Blocks:
 Route19FuchsiaGate_Blocks:
 Route43MahoganyGate_Blocks:

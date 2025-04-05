@@ -747,3 +747,4 @@ ENDM
 	map_attributes VioletFishingGuild, VIOLET_FISHING_GUILD, $00, 0
 	map_attributes AzaleaLeftHouse, AZALEA_LEFT_HOUSE, $00, 0
 	map_attributes AzaleaRightHouse, AZALEA_RIGHT_HOUSE, $00, 0
+	map_attributes GoldenrodR34Gate, GOLDENROD_R34_GATE, $00, 0

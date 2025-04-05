@@ -1,0 +1,62 @@
+GoldenrodR34Gate_MapScripts:
+	db 0 ; scene scripts
+
+	db 0 ; callbacks
+
+GoldenrodR34GateGuardScript:
+	jumptextfaceplayer .Txt
+
+.Txt:
+	text "The SAKURA SHRINE"
+	line "is a sacred place."
+	para "Out of all places"
+	line "you could possibly"
+	para "mess around, it"
+	line "better not be"
+	cont "there, kid."
+	done
+
+GoldenrodR34GateMysticScript:
+	jumptextfaceplayer .Txt
+
+.Txt:
+	text "#MON will"
+	line "eventually evolve"
+	cont "after some time."
+	para "For example, my"
+	line "NATU recently"
+	cont "evolved into KATU."
+	para "Though, I think my"
+	line "little KATU can"
+	para "still evolve one"
+	line "more time."
+	done
+
+GoldenrodR34GateGentlemanScript:
+	jumptextfaceplayer .Txt
+
+.Txt:
+	text "While other people"
+	line "come here to pay"
+	para "respects, I come"
+	line "here to relax and"
+	cont "admire the view."
+	done
+
+GoldenrodR34Gate_MapEvents:
+	db 0, 0 ; filler
+
+	db 4 ; warp events
+	warp_event  4,  0, GOLDENROD_CITY, 14
+	warp_event  5,  0, GOLDENROD_CITY, 15
+	warp_event  4,  7, ROUTE_34, 1
+	warp_event  5,  7, ROUTE_34, 1
+	
+	db 0 ; coord events
+
+	db 0 ; bg events
+
+	db 3 ; object events
+	object_event  0,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodR34GateGuardScript, -1
+	object_event  7,  3, SPRITE_MYSTIC, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodR34GateMysticScript, -1
+	object_event  2,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodR34GateGentlemanScript, -1
