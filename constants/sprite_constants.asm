@@ -122,6 +122,7 @@
 	const SPRITE_FIREBREATHER
 	const SPRITE_JUGGLER
 	const SPRITE_PRODIGY
+	const SPRITE_ENGINEER
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

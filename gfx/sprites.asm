@@ -124,6 +124,7 @@ LadySpriteGFX::                INCBIN "gfx/sprites/lady.2bpp"
 FirebreatherSpriteGFX::        INCBIN "gfx/sprites/firebreather.2bpp"
 JugglerSpriteGFX::             INCBIN "gfx/sprites/juggler.2bpp"
 ProdigySpriteGFX::             INCBIN "gfx/sprites/prodigy.2bpp"
+EngineerSpriteGFX::             INCBIN "gfx/sprites/engineer.2bpp"
 
 SECTION "Follower Sprites 1", ROMX
 EeveeSpriteGFX:: 			   INCBIN "gfx/sprites/pokemon/eevee.2bpp"
