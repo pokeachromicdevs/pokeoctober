@@ -179,12 +179,12 @@ AnimationPointers:
 	dw CrobatAnimation
 	dw YanmaAnimation
 	dw TonbossAnimation
-	dw BellignanAnimation
 	dw CoinpurAnimation
 	dw MoibelleAnimation
 	dw BelledamAnimation
 	dw ChinchouAnimation
 	dw LanturnAnimation
+	dw BellignanAnimation
 	dw PichuAnimation
 	dw CleffaAnimation
 	dw IgglybuffAnimation

@@ -194,12 +194,12 @@ PokemonPicPointers::
 	mon_pic Crobat
 	mon_pic Yanma
 	mon_pic Tonboss
-	mon_pic Bellignan
 	mon_pic Coinpur
 	mon_pic Moibelle
 	mon_pic Belledam
 	mon_pic Chinchou
 	mon_pic Lanturn
+	mon_pic Bellignan
 	mon_pic Pichu
 	mon_pic Cleffa
 	mon_pic Igglybuff

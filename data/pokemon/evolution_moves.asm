@@ -179,12 +179,12 @@ EvolutionMoves::
 	dw EXTREMESPEED ; CROBAT
 	dw NO_MOVE      ; YANMA
 	dw BITE         ; TONBOSS
-	dw LOVELY_KISS  ; BELLIGNAN
 	dw NO_MOVE      ; COINPUR
 	dw NO_MOVE      ; MOIBELLE
 	dw NO_MOVE      ; BELLEDAM
 	dw NO_MOVE      ; CHINCHOU
 	dw NO_MOVE      ; LANTURN
+	dw LOVELY_KISS  ; BELLIGNAN
 	dw NO_MOVE      ; PICHU
 	dw NO_MOVE      ; CLEFFA
 	dw NO_MOVE      ; IGGLYBUFF

@@ -179,12 +179,12 @@ BitmasksPointers:
 	dw CrobatBitmasks
 	dw YanmaBitmasks
 	dw TonbossBitmasks
-	dw BellignanBitmasks
 	dw CoinpurBitmasks
 	dw MoibelleBitmasks
 	dw BelledamBitmasks
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
+	dw BellignanBitmasks
 	dw PichuBitmasks
 	dw CleffaBitmasks
 	dw IgglybuffBitmasks

@@ -201,12 +201,12 @@ JOHTO_POKEMON EQU const_value
 	const CROBAT     ; a9
 	const YANMA
 	const TONBOSS
-	const BELLIGNAN
 	const COINPUR
 	const MOIBELLE
 	const BELLEDAM
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
+	const BELLIGNAN
 	const PICHU      ; ac
 	const CLEFFA     ; ad
 	const IGGLYBUFF  ; ae

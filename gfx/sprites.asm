@@ -239,4 +239,6 @@ SphealSpriteGFX::              INCBIN "gfx/sprites/pokemon/spheal.2bpp"
 PiplupSpriteGFX::              INCBIN "gfx/sprites/pokemon/piplup.2bpp"
 WailmerSpriteGFX::             INCBIN "gfx/sprites/pokemon/wailmer.2bpp"
 WailordSpriteGFX::             INCBIN "gfx/sprites/pokemon/wailord.2bpp"
+SentretSpriteGFX::             INCBIN "gfx/sprites/pokemon/sentret.2bpp"
+
 

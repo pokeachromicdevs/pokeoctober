@@ -180,12 +180,12 @@ PokedexDataPointerTable:
 	dba CrobatPokedexEntry
 	dba YanmaPokedexEntry
 	dba TonbossPokedexEntry
-	dba BellignanPokedexEntry
 	dba CoinpurPokedexEntry
 	dba MoibellePokedexEntry
 	dba BelledamPokedexEntry
 	dba ChinchouPokedexEntry
 	dba LanturnPokedexEntry
+	dba BellignanPokedexEntry
 	dba PichuPokedexEntry
 	dba CleffaPokedexEntry
 	dba IgglybuffPokedexEntry

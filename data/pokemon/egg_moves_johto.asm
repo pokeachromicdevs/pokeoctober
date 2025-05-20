@@ -29,11 +29,11 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw YanmaEggMoves
 	dw NoEggMoves2
-	dw NoEggMoves2
 	dw CoinpurEggMoves
 	dw MoibelleEggMoves
 	dw NoEggMoves2
 	dw ChinchouEggMoves
+	dw NoEggMoves2
 	dw NoEggMoves2
 	dw PichuEggMoves
 	dw CleffaEggMoves

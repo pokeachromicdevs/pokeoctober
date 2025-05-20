@@ -179,12 +179,12 @@ AnimationIdlePointers:
 	dw CrobatAnimationIdle
 	dw YanmaAnimationIdle
 	dw TonbossAnimationIdle
-	dw BellignanAnimationIdle
 	dw CoinpurAnimationIdle
 	dw MoibelleAnimationIdle
 	dw BelledamAnimationIdle
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
+	dw BellignanAnimationIdle
 	dw PichuAnimationIdle
 	dw CleffaAnimationIdle
 	dw IgglybuffAnimationIdle

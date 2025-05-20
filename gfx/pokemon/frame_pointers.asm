@@ -179,12 +179,12 @@ FramesPointers:
 	dba CrobatFrames
 	dba YanmaFrames
 	dba TonbossFrames
-	dba BellignanFrames
 	dba CoinpurFrames
 	dba MoibelleFrames
 	dba BelledamFrames
 	dba ChinchouFrames
 	dba LanturnFrames
+	dba BellignanFrames
 	dba PichuFrames
 	dba CleffaFrames
 	dba IgglybuffFrames

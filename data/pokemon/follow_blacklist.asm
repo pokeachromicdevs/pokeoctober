@@ -90,7 +90,6 @@ CantFollowList:
 	dw PALSSIO
 	dw PRESSIO
 	dw DONMARIN
-	dw SENTRET
 	dw HOOTHOOT
 	dw NOCTOWL
 	dw LEDYBA

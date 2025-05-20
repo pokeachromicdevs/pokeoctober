@@ -303,7 +303,7 @@ FollowSpritePointers::
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PALSSIO
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;PRESSIO
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;DONMARIN
-	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BROWN ;SENTRET
+	follow_sprite SentretSpriteGFX, PAL_FOLLOWER_BROWN ;SENTRET
 	follow_sprite FurretSpriteGFX, PAL_FOLLOWER_BROWN ;FURRET
 	follow_sprite CleflingSpriteGFX, PAL_FOLLOWER_RED ;CLEFLING
 	follow_sprite MallodySpriteGFX, PAL_FOLLOWER_MALLODY ;MALLODY

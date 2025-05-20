@@ -187,12 +187,12 @@ PokemonCries::
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
 	mon_cry CRY_YANMA,       $031,  $0c8 ; YANMA
 	mon_cry CRY_YANMA,      -$022,  $200 ; TONBOSS
-	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
 	mon_cry CRY_MARILL,      $0f4,  $0c0 ; COINPUR
 	mon_cry CRY_RATTATA,     $035,  $0e0 ; MOIBELLE
 	mon_cry CRY_RATTATA,     $065,  $180 ; BELLEDAM
 	mon_cry CRY_CYNDAQUIL,   $3c9,  $140 ; CHINCHOU
 	mon_cry CRY_CYNDAQUIL,   $2d0,  $110 ; LANTURN
+	mon_cry CRY_SLOWKING,    572,   256  ; BELLIGNAN
 	mon_cry CRY_SPINARAK,    0,     256  ; PICHU
 	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
 	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF

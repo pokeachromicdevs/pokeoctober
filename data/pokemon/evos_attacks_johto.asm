@@ -30,12 +30,12 @@ EvosAttacksPointers2::
 	dw CrobatEvosAttacks
 	dw YanmaEvosAttacks
 	dw TonbossEvosAttacks
-	dw BellignanEvosAttacks
 	dw CoinpurEvosAttacks
 	dw MoibelleEvosAttacks
 	dw BelledamEvosAttacks
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
+	dw BellignanEvosAttacks
 	dw PichuEvosAttacks
 	dw CleffaEvosAttacks
 	dw IgglybuffEvosAttacks
@@ -590,23 +590,6 @@ TonbossEvosAttacks:
 	dbw 49, FLY
 	dbw 53, EXTREMESPEED
 	db 0; no more level-up moves
-
-BellignanEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, VINE_WHIP
-	dbw 1, GROWTH
-	dbw 5, WRAP
-	dbw 10, SWEET_SCENT
-	dbw 13, ACID
-	dbw 18, SLEEP_POWDER
-	dbw 25, RAZOR_LEAF
-	dbw 28, POISONPOWDER
-	dbw 33, GIGA_DRAIN
-	dbw 38, STUN_SPORE
-	dbw 41, SLAM
-	dbw 46, SYNTHESIS
-	dbw 52, SOLARBEAM
-	db 0 ; no more level-up moves
 	
 CoinpurEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, MEOWTH
@@ -692,6 +675,23 @@ LanturnEvosAttacks:
 	;dbw 46, FLOODLIGHT ; XXX
 	dbw 52, SURF
 	dbw 55, ZAP_CANNON
+	db 0 ; no more level-up moves
+	
+BellignanEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, VINE_WHIP
+	dbw 1, GROWTH
+	dbw 5, WRAP
+	dbw 10, SWEET_SCENT
+	dbw 13, ACID
+	dbw 18, SLEEP_POWDER
+	dbw 25, RAZOR_LEAF
+	dbw 28, POISONPOWDER
+	dbw 33, GIGA_DRAIN
+	dbw 38, STUN_SPORE
+	dbw 41, SLAM
+	dbw 46, SYNTHESIS
+	dbw 52, SOLARBEAM
 	db 0 ; no more level-up moves
 
 PichuEvosAttacks:
