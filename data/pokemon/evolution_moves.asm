@@ -203,6 +203,8 @@ EvolutionMoves::
 	dw NO_MOVE      ; STRAIGAR
 	dw NO_MOVE      ; GOROTORA
 	dw NO_MOVE      ; MOLAMBINO
+	dw NO_MOVE      ; CORASUN
+	dw MEGAHORN     ; MAMBOKING
 	dw NO_MOVE      ; ANGORE
 	dw NO_MOVE      ; BITEEL
 	dw CRUNCH       ; LURREEL

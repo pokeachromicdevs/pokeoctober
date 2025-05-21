@@ -103,6 +103,8 @@ NewPokedexOrder:
 	dw GOLDEEN
 	dw SEAKING
 	dw MOLAMBINO
+	dw CORASUN
+	dw MAMBOKING
 	dw ANGORE
 	dw SLOWPOKE
 	dw SLOWBRO

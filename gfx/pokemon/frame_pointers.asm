@@ -203,6 +203,8 @@ FramesPointers:
 	dba StraigarFrames
 	dba GorotoraFrames
 	dba MolambinoFrames
+	dba CorasunFrames
+	dba MambokingFrames
 	dba AngoreFrames
 	dba BiteelFrames
 	dba LurreelFrames

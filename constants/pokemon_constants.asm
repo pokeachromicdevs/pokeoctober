@@ -225,6 +225,8 @@ JOHTO_POKEMON EQU const_value
 	const STRAIGAR
 	const GOROTORA
 	const MOLAMBINO
+	const CORASUN
+	const MAMBOKING
 	const ANGORE
 	const BITEEL
 	const LURREEL

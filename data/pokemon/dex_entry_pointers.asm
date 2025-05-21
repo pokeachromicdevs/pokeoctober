@@ -204,6 +204,8 @@ PokedexDataPointerTable:
 	dba StraigarPokedexEntry
 	dba GorotoraPokedexEntry
 	dba MolambinoPokedexEntry
+	dba CorasunPokedexEntry
+	dba MambokingPokedexEntry
 	dba AngorePokedexEntry
 	dba BiteelPokedexEntry
 	dba LurreelPokedexEntry

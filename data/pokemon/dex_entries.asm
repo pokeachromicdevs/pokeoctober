@@ -218,6 +218,8 @@ GorotoraPokedexEntry::	 INCLUDE "data/pokemon/dex_entries/gorotora.asm"
 SECTION "Pokedex Entries 193-251", ROMX
 
 MolambinoPokedexEntry::  INCLUDE "data/pokemon/dex_entries/molambino.asm"
+CorasunPokedexEntry::    INCLUDE "data/pokemon/dex_entries/corasun.asm"
+MambokingPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mamboking.asm"
 AngorePokedexEntry::     INCLUDE "data/pokemon/dex_entries/angore.asm"
 BiteelPokedexEntry::	 INCLUDE "data/pokemon/dex_entries/biteel.asm"
 LurreelPokedexEntry::	 INCLUDE "data/pokemon/dex_entries/lurreel.asm"

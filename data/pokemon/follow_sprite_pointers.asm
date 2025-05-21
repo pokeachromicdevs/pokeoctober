@@ -340,6 +340,8 @@ FollowSpritePointers::
 	follow_sprite KotoraSpriteGFX, PAL_FOLLOWER_KOTORA ;STRAIGAR TODO
 	follow_sprite KotoraSpriteGFX, PAL_FOLLOWER_KOTORA ;GOROTORA TODO
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MOLAMBINO
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;CORASUN
+	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;MAMBOKING
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;ANGORE
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;BITEEL
 	follow_sprite WooperSpriteGFX, PAL_FOLLOWER_BLUE ;LURREEL

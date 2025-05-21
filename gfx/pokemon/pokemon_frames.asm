@@ -337,4 +337,6 @@ WailmerFrames:    INCLUDE "gfx/pokemon/wailmer/frames.asm"
 WailordFrames:    INCLUDE "gfx/pokemon/wailord/frames.asm"
 MolambinoFrames:  INCLUDE "gfx/pokemon/molambino/frames.asm"
 AngoreFrames:     INCLUDE "gfx/pokemon/angore/frames.asm"
+CorasunFrames:    INCLUDE "gfx/pokemon/corasun/frames.asm"
+MambokingFrames:  INCLUDE "gfx/pokemon/mamboking/frames.asm"
 

@@ -203,6 +203,8 @@ BitmasksPointers:
 	dw StraigarBitmasks
 	dw GorotoraBitmasks
 	dw MolambinoBitmasks
+	dw CorasunBitmasks
+	dw MambokingBitmasks
 	dw AngoreBitmasks
 	dw BiteelBitmasks
 	dw LurreelBitmasks

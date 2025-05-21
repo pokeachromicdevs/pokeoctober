@@ -434,4 +434,7 @@ ShuricornFrontpicAnim:     INCBIN "gfx/pokemon/shuricorn/front.animated.2bpp.lz"
 PiplupFrontpicAnim:        INCBIN "gfx/pokemon/piplup/front.animated.2bpp.lz"
 WailmerFrontpicAnim:       INCBIN "gfx/pokemon/wailmer/front.animated.2bpp.lz"
 WailordFrontpicAnim:       INCBIN "gfx/pokemon/wailord/front.animated.2bpp.lz"
+CorasunFrontpicAnim:       INCBIN "gfx/pokemon/corasun/front.animated.2bpp.lz"
+MambokingFrontpicAnim:     INCBIN "gfx/pokemon/mamboking/front.animated.2bpp.lz"
+
 

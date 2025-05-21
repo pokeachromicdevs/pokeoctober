@@ -202,6 +202,8 @@ CantFollowList:
 	dw BELLEDAM ; done but TODO: moibelle
 	dw CAMOUFLAKE
 	dw MOLAMBINO
+	dw CORASUN
+	dw MAMBOKING
 	dw KIWACKI
 	dw SILKANE
 	dw MORPHOBIA

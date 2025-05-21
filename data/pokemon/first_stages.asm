@@ -204,6 +204,8 @@ FirstEvoStages::
 	dw TYKER
 	dw TYKER
 	dw MOLAMBINO
+	dw CORASUN
+	dw MAMBOKING
 	dw ANGORE
 	dw BITEEL
 	dw BITEEL

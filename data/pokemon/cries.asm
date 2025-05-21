@@ -211,6 +211,8 @@ PokemonCries::
 	mon_cry CRY_LARVITAR,    $db3,  $168 ; STRAIGAR
 	mon_cry CRY_LARVITAR,    $ca2,  $192 ; GOROTORA
 	mon_cry CRY_MOLAMBINO,    $043, $050 ; MOLAMBINO
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CORASUN: TODO
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MAMBOKING: TODO
 	mon_cry CRY_WOOPER,      $8f0,  $100 ; ANGORE: TODO
 	mon_cry CRY_MANTINE,     -$051,  $0e8 ; BITEEL TODO
 	mon_cry CRY_MANTINE,     -$051,  $0e8 ; LURREEL TODO

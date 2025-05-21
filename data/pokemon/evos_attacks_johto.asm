@@ -54,6 +54,8 @@ EvosAttacksPointers2::
 	dw StraigarEvosAttacks
 	dw GorotoraEvosAttacks
 	dw MolambinoEvosAttacks
+	dw CorasunEvosAttacks
+	dw MambokingEvosAttacks
 	dw AngoreEvosAttacks
 	dw BiteelEvosAttacks
 	dw LurreelEvosAttacks
@@ -910,21 +912,56 @@ GorotoraEvosAttacks:
 	db 0 ; no more level-up moves
 	
 MolambinoEvosAttacks:
+	dbbw EVOLVE_LEVEL, 24, CORASUN
 	db 0 ; no more evolutions
-	dbw 1 , WATER_GUN
-	dbw 1 , GROWL
-	dbw 1 , TACKLE
-	dbw 10, RAGE
-	dbw 12, BUBBLE
-	dbw 13, HARDEN
-	dbw 16, SUPERSONIC
-	dbw 19, BIDE
-	dbw 23, SLAM
-	dbw 29, DOUBLE_TEAM
-	dbw 35, ACID_ARMOR
-	dbw 42, IRON_TAIL
-	dbw 47, THRASH
-	dbw 52, HYDRO_PUMP
+	dbw 1, BUBBLE
+	dbw 1, GROWL
+;	dbw 5, ASTONISH
+	dbw 9, RAGE
+	dbw 13, WATER_GUN
+	dbw 18, TAKE_DOWN
+	dbw 22, CHARM
+	dbw 26, RAIN_DANCE
+	dbw 31, BUBBLEBEAM
+	dbw 35, FOCUS_ENERGY
+	dbw 39, REVERSAL
+	dbw 44, THRASH
+	dbw 48, HYDRO_PUMP
+	db 0 ; no more level-up moves
+	
+CorasunEvosAttacks:
+	dbbw EVOLVE_LEVEL, 38, MAMBOKING
+	db 0 ; no more evolutions
+	dbw 1, BUBBLE
+	dbw 1, GROWL
+;	dbw 5, ASTONISH
+	dbw 9, RAGE
+	dbw 13, WATER_GUN
+	dbw 18, TAKE_DOWN
+	dbw 22, CHARM
+	dbw 28, RAIN_DANCE
+	dbw 33, BUBBLEBEAM
+	dbw 37, FOCUS_ENERGY
+	dbw 41, REVERSAL
+	dbw 46, THRASH
+	dbw 50, HYDRO_PUMP
+	db 0 ; no more level-up moves
+	
+MambokingEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, BUBBLE
+	dbw 1, GROWL
+;	dbw 5, ASTONISH
+	dbw 9, RAGE
+	dbw 13, WATER_GUN
+	dbw 18, TAKE_DOWN
+	dbw 22, CHARM
+	dbw 28, RAIN_DANCE
+	dbw 33, BUBBLEBEAM
+	dbw 37, FOCUS_ENERGY
+	dbw 43, REVERSAL
+	dbw 46, THRASH
+	dbw 50, HYDRO_PUMP
 	db 0 ; no more level-up moves
 	
 AngoreEvosAttacks:

@@ -203,6 +203,8 @@ AnimationPointers:
 	dw StraigarAnimation
 	dw GorotoraAnimation
 	dw MolambinoAnimation
+	dw CorasunAnimation
+	dw MambokingAnimation
 	dw AngoreAnimation
 	dw BiteelAnimation
 	dw LurreelAnimation

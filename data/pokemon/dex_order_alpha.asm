@@ -51,6 +51,7 @@ AlphabeticalPokedexOrder:
 	dw CLOYSTER
 	dw COALTA
 	dw COINPUR
+	dw CORASUN
 	dw CORSOLA
 	dw CROBAT
 	dw CROCONAW
@@ -163,6 +164,7 @@ AlphabeticalPokedexOrder:
 	dw MAGNEMITE
 	dw MAGNETON
 	dw MALLODY
+	dw MAMBOKING
 	dw MANKEY
 	dw MANTINE
 	dw MAREEP

@@ -203,6 +203,8 @@ AnimationIdlePointers:
 	dw StraigarAnimationIdle
 	dw GorotoraAnimationIdle
 	dw MolambinoAnimationIdle
+	dw CorasunAnimationIdle
+	dw MambokingAnimationIdle
 	dw AngoreAnimationIdle
 	dw BiteelAnimationIdle
 	dw LurreelAnimationIdle

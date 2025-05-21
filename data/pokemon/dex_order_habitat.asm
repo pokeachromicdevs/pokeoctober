@@ -219,6 +219,9 @@ HabitatPokedexOrder:
 	dw ANGORE
 	dw REMORAID
 	dw OCTILLERY
+	dw MOLAMBINO
+	dw CORASUN
+	dw MAMBOKING
 	dw QWILFISH
 	dw CORSOLA
 	dw MANTINE

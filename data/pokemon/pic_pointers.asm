@@ -218,6 +218,8 @@ PokemonPicPointers::
 	mon_pic Straigar
 	mon_pic Gorotora
 	mon_pic Molambino
+	mon_pic Corasun
+	mon_pic Mamboking
 	mon_pic Angore
 	mon_pic Biteel
 	mon_pic Lurreel

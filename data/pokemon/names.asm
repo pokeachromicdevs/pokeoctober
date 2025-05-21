@@ -208,6 +208,8 @@ PokemonNames::
 	db "STRAIGAR@@"
 	db "GOROTORA@@"
 	db "MOLAMBINO@"
+	db "CORASUN@@@"
+	db "MAMBOKING@"
 	db "ANGORE@@@@"
 	db "BITEEL@@@@"
 	db "LURREEL@@@"

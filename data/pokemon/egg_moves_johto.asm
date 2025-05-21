@@ -56,6 +56,8 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw NoEggMoves2
+	dw NoEggMoves2
 	dw MarillEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -652,6 +654,7 @@ MolambinoEggMoves:
 	db RAIN_DANCE
 	db REVERSAL
 	db SWAGGER
+	db SCARY_FACE
 	db -1 ; end
 
 SmujjEggMoves:
