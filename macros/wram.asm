@@ -369,7 +369,7 @@ battle_anim_struct: MACRO
 \1Index::              db
 \1Field01::            ds 1
 \1Field02::            ds 1
-\1FramesetID::         db
+\1FramesetID::         dw
 \1Function::           db
 \1Palette::            db
 \1TileID::             db
@@ -389,7 +389,6 @@ battle_anim_struct: MACRO
 \1Field14::            ds 1
 \1Field15::            ds 1
 \1Field16::            ds 1
-\1Field17::            ds 1
 ENDM
 
 battle_bg_effect: MACRO

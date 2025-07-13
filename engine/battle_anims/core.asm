@@ -31,7 +31,7 @@ InitBattleAnimation:
 	ld e, a
 	ld d, 0
 	ld hl, BattleAnimObjects
-rept 6
+rept 7
 	add hl, de
 endr
 	ld e, l
@@ -48,7 +48,10 @@ endr
 	ld [hli], a ; 02
 	ld a, [de]
 	inc de
-	ld [hli], a ; Frameset ID
+	ld [hli], a ; Frameset ID lo
+	ld a, [de]
+	inc de
+	ld [hli], a ; Frameset ID hi
 	ld a, [de]
 	inc de
 	ld [hli], a ; Function

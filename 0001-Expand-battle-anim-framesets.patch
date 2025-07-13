@@ -1,0 +1,131 @@
+From 9789365fb0eee77abc0845a5fbe11c13f9d635b7 Mon Sep 17 00:00:00 2001
+From: emilyploszaj <emilyploszaj@gmail.com>
+Date: Sun, 13 Jul 2025 00:13:46 -0500
+Subject: [PATCH] Expand battle anim framesets
+
+---
+ constants/battle_anim_constants.asm | 2 +-
+ data/battle_anims/objects.asm       | 2 +-
+ engine/battle_anims/core.asm        | 7 +++++--
+ engine/battle_anims/helpers.asm     | 6 ++++--
+ home/text.asm                       | 2 +-
+ macros/wram.asm                     | 3 +--
+ 6 files changed, 13 insertions(+), 9 deletions(-)
+
+diff --git a/constants/battle_anim_constants.asm b/constants/battle_anim_constants.asm
+index 9287ea1a..b76ed62f 100644
+--- a/constants/battle_anim_constants.asm
++++ b/constants/battle_anim_constants.asm
+@@ -4,6 +4,7 @@
+ 	const BATTLEANIMSTRUCT_01
+ 	const BATTLEANIMSTRUCT_02
+ 	const BATTLEANIMSTRUCT_FRAMESET_ID
++	const BATTLEANIMSTRUCT_FRAMESET_ID_LO
+ 	const BATTLEANIMSTRUCT_FUNCTION
+ 	const BATTLEANIMSTRUCT_PALETTE
+ 	const BATTLEANIMSTRUCT_TILEID
+@@ -23,7 +24,6 @@
+ 	const BATTLEANIMSTRUCT_14
+ 	const BATTLEANIMSTRUCT_15
+ 	const BATTLEANIMSTRUCT_16
+-	const BATTLEANIMSTRUCT_17
+ BATTLEANIMSTRUCT_LENGTH EQU const_value
+ NUM_ANIM_OBJECTS EQU 10 ; see wActiveAnimObjects
+ 
+diff --git a/data/battle_anims/objects.asm b/data/battle_anims/objects.asm
+index ed9cfa69..b5b96683 100644
+--- a/data/battle_anims/objects.asm
++++ b/data/battle_anims/objects.asm
+@@ -10,7 +10,7 @@ battleanimobj: MACRO
+ 	db \2 ; enemy animation y fix param
+ 	; if $FF: y = y + 5 tiles
+ 	; else:   y = -y - (1 tile) * (is_softboiled_animation)
+-	db \3 ; video sequence
++	dw \3 ; video sequence
+ 	db \4 ; callback
+ 	db \5 ; palette
+ 	db \6 ; tile offset
+diff --git a/engine/battle_anims/core.asm b/engine/battle_anims/core.asm
+index e4642ea0..f51b5daa 100644
+--- a/engine/battle_anims/core.asm
++++ b/engine/battle_anims/core.asm
+@@ -31,7 +31,7 @@ InitBattleAnimation:
+ 	ld e, a
+ 	ld d, 0
+ 	ld hl, BattleAnimObjects
+-rept 6
++rept 7
+ 	add hl, de
+ endr
+ 	ld e, l
+@@ -48,7 +48,10 @@ endr
+ 	ld [hli], a ; 02
+ 	ld a, [de]
+ 	inc de
+-	ld [hli], a ; Frameset ID
++	ld [hli], a ; Frameset ID lo
++	ld a, [de]
++	inc de
++	ld [hli], a ; Frameset ID hi
+ 	ld a, [de]
+ 	inc de
+ 	ld [hli], a ; Function
+diff --git a/engine/battle_anims/helpers.asm b/engine/battle_anims/helpers.asm
+index 12a9b48b..b9cc7428 100755
+--- a/engine/battle_anims/helpers.asm
++++ b/engine/battle_anims/helpers.asm
+@@ -1,4 +1,5 @@
+ ReinitBattleAnimFrameset:
++	; Does not re-init frameset
+ 	ld hl, BATTLEANIMSTRUCT_FRAMESET_ID
+ 	add hl, bc
+ 	ld [hl], a
+@@ -76,8 +77,9 @@ GetBattleAnimFrame:
+ .GetPointer:
+ 	ld hl, BATTLEANIMSTRUCT_FRAMESET_ID
+ 	add hl, bc
+-	ld e, [hl]
+-	ld d, 0
++	ld a, [hli]
++	ld d, [hl]
++	ld e, a
+ 	ld hl, BattleAnimFrameData
+ 	add hl, de
+ 	add hl, de
+diff --git a/home/text.asm b/home/text.asm
+index 0a38fc48..f252f6fc 100644
+--- a/home/text.asm
++++ b/home/text.asm
+@@ -239,7 +239,7 @@ ENDM
+ 	dict "<PKMN>",    PlacePKMN
+ 	dict "<POKE>",    PlacePOKE
+ 	dict "%",         NextChar
+-	dict "¯",         " "
++	;dict "¯",         " "
+ 	dict "<DEXEND>",  PlaceDexEnd
+ 	dict "<TARGET>",  PlaceMoveTargetsName
+ 	dict "<USER>",    PlaceMoveUsersName
+diff --git a/macros/wram.asm b/macros/wram.asm
+index 3a939e71..fdf21bc6 100644
+--- a/macros/wram.asm
++++ b/macros/wram.asm
+@@ -369,7 +369,7 @@ battle_anim_struct: MACRO
+ \1Index::              db
+ \1Field01::            ds 1
+ \1Field02::            ds 1
+-\1FramesetID::         db
++\1FramesetID::         dw
+ \1Function::           db
+ \1Palette::            db
+ \1TileID::             db
+@@ -389,7 +389,6 @@ battle_anim_struct: MACRO
+ \1Field14::            ds 1
+ \1Field15::            ds 1
+ \1Field16::            ds 1
+-\1Field17::            ds 1
+ ENDM
+ 
+ battle_bg_effect: MACRO
+-- 
+2.43.0
+
