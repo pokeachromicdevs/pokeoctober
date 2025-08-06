@@ -757,6 +757,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLE_ANIM_OAMSET_DB
 	const BATTLE_ANIM_OAMSET_DC
 	const BATTLE_ANIM_OAMSET_DE
+NUM_BATTLE_ANIM_OAMSETS EQU const_value
 
 ; BattleBGEffects indexes (see engine/battle_anims/bg_effects.asm)
 	const_def 1

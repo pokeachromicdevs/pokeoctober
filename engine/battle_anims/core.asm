@@ -82,7 +82,8 @@ endr
 
 BattleAnimOAMUpdate:
 	call InitBattleAnimBuffer
-	call GetBattleAnimFrame
+	farcall GetBattleAnimFrame
+	ld a, h
 	cp dowait_command
 	jp z, .done
 	cp delanim_command
