@@ -672,7 +672,7 @@ INCLUDE "data/battle_tower/unknown.asm"
 
 
 SECTION "Move Animations", ROMX
-INCLUDE "data/moves/animations.asm"
+INCLUDE "data/moves/animations_pointers.asm"
 
 
 SECTION "Crystal Events", ROMX
