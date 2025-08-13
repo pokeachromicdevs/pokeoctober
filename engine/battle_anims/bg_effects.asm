@@ -1189,7 +1189,7 @@ BattleBGEffect_DoubleTeam:
 	add hl, bc
 	ld a, [hl]
 	ld d, $2
-	call BattleBGEffects_Sine
+	call Sine
 	ld hl, BG_EFFECT_STRUCT_03
 	add hl, bc
 	add [hl]
@@ -1645,7 +1645,7 @@ BattleBGEffect_26:
 	add hl, bc
 	ld a, [hl]
 	ld d, $8
-	call BattleBGEffects_Sine
+	call Sine
 	call BGEffect_FillLYOverridesBackup
 	ld hl, BG_EFFECT_STRUCT_03
 	add hl, bc
@@ -1685,13 +1685,13 @@ BattleBGEffect_2c:
 	add hl, bc
 	ld a, [hl]
 	ld d, $6
-	call BattleBGEffects_Sine
+	call Sine
 	push af
 	ld hl, BG_EFFECT_STRUCT_BATTLE_TURN
 	add hl, bc
 	ld a, [hl]
 	ld d, $2
-	call BattleBGEffects_Sine
+	call Sine
 	ld e, a
 	pop af
 	add e
@@ -1788,7 +1788,7 @@ BattleBGEffect_BounceDown:
 	add hl, bc
 	ld a, [hl]
 	ld d, $10
-	call BattleBGEffects_Cosine
+	call Cosine
 	add $10
 	ld d, a
 	pop af
@@ -2250,7 +2250,7 @@ BattleBGEffect_WobbleMon:
 	cp $40
 	jr nc, .two
 	ld d, $6
-	call BattleBGEffects_Sine
+	call Sine
 	call BGEffect_FillLYOverridesBackup
 	ld hl, BG_EFFECT_STRUCT_03
 	add hl, bc
@@ -2341,7 +2341,7 @@ BattleBGEffect_35:
 	cp $40
 	jr nc, .finish
 	ld d, $6
-	call BattleBGEffects_Sine
+	call Sine
 	ldh [hSCX], a
 	ld hl, BG_EFFECT_STRUCT_03
 	add hl, bc
@@ -2707,7 +2707,7 @@ Functionc8f2e:
 	ld a, [wBattleAnimTemp2]
 	ld d, a
 	ld a, [wBattleAnimTemp0]
-	call BattleBGEffects_Sine
+	call Sine
 	ld [bc], a
 .next
 	inc bc
@@ -2736,7 +2736,7 @@ InitSurfWaves:
 	ld a, [wBattleAnimTemp2]
 	ld d, a
 	ld a, [wBattleAnimTemp0]
-	call BattleBGEffects_Sine
+	call Sine
 	ld [bc], a
 	inc bc
 	ld a, [wBattleAnimTemp1]
@@ -2772,7 +2772,7 @@ Functionc8f9a:
 	ld d, a
 	ld a, [wBattleAnimTemp1]
 	push hl
-	call BattleBGEffects_Sine
+	call Sine
 	ld e, a
 	pop hl
 	ldh a, [hLYOverrideEnd]
@@ -2903,16 +2903,4 @@ BGEffect_CheckFlyDigStatus:
 BattleBGEffects_CheckSGB:
 	ldh a, [hSGB]
 	and a
-	ret
-
-BattleBGEffects_Sine:
-	ld e, a
-	callfar BattleAnim_Sine_e
-	ld a, e
-	ret
-
-BattleBGEffects_Cosine:
-	ld e, a
-	callfar BattleAnim_Cosine_e
-	ld a, e
 	ret

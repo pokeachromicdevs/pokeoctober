@@ -195,7 +195,7 @@ DoAnimFrame:
 	ld a, [hl]
 	add $3
 	ld [hl], a
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -213,7 +213,7 @@ DoAnimFrame:
 	inc a
 	ld [hl], a
 	ld d, $2
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -254,14 +254,14 @@ DoAnimFrame:
 	ld a, [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -299,14 +299,14 @@ DoAnimFrame:
 	ld a, [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -401,7 +401,7 @@ DoAnimFrame:
 .move_vertical
 	ld a, e
 	ld d, $20
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -469,7 +469,7 @@ DoAnimFrame:
 	jr c, .asm_8d4cd
 	dec [hl]
 	ld d, $28
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -506,7 +506,7 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_0C
 	add hl, bc
 	ld a, [hl]
-	call Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -585,7 +585,7 @@ DoAnimFrame:
 
 	push af
 	push de
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -593,7 +593,7 @@ DoAnimFrame:
 
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -633,14 +633,14 @@ DoAnimFrame:
 	inc [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -679,7 +679,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -704,7 +704,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -740,7 +740,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -790,7 +790,7 @@ DoAnimFrame:
 	add 2
 	ld [hl], a
 	ld d, 8
-	call .Sprites_Sine
+	call Sine
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -851,7 +851,7 @@ DoAnimFrame:
 	add e
 	ld [hl], a
 	ld d, 8
-	call .Sprites_Sine
+	call Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -951,7 +951,7 @@ DoAnimFrame:
 	ld a, [hl]
 	inc [hl]
 	ld d, 4
-	call .Sprites_Sine
+	call Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -995,7 +995,7 @@ DoAnimFrame:
 	ld a, [hl]
 	add 2
 	ld [hl], a
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -1093,7 +1093,7 @@ DoAnimFrame:
 	add 4
 	ld [hl], a
 	ld d, 4
-	call .Sprites_Sine
+	call Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1179,7 +1179,7 @@ DoAnimFrame:
 	add 4
 	ld [hl], a
 	ld d, 4
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -1247,14 +1247,14 @@ DoAnimFrame:
 	ld a, [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -1289,7 +1289,7 @@ DoAnimFrame:
 	inc [hl]
 	inc [hl]
 	ld d, $90
-	call .Sprites_Sine
+	call Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -1301,7 +1301,7 @@ DoAnimFrame:
 	inc [hl]
 	inc [hl]
 	ld d, $90
-	call .Sprites_Cosine
+	call Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -1335,7 +1335,7 @@ DoAnimFrame:
 	inc [hl]
 	inc [hl]
 	ld d, $90
-	call .Sprites_Sine
+	call Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1345,7 +1345,7 @@ DoAnimFrame:
 	inc [hl]
 	inc [hl]
 	ld d, $90
-	call .Sprites_Cosine
+	call Cosine
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1394,7 +1394,7 @@ DoAnimFrame:
 	ld a, [hl]
 	add a, 2
 	ld [hl], a
-	call .Sprites_Sine
+	call Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1429,12 +1429,4 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	inc [hl]
-	ret
-
-.Sprites_Sine:
-	call Sprites_Sine
-	ret
-
-.Sprites_Cosine:
-	call Sprites_Cosine
 	ret

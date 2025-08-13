@@ -532,8 +532,7 @@ Intro_InitSineLYOverrides:
 .loop
 	push af
 	push de
-	farcall BattleAnim_Sine_e
-	ld a, e
+	call Sine
 	ld [bc], a
 	inc bc
 	pop de

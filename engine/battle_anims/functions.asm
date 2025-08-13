@@ -136,7 +136,7 @@ BattleAnimFunction_ThrowFromPlayerToEnemy:
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	; Store the result in the Y offset
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -170,13 +170,13 @@ BattleAnimFunction_04:
 	ld d, $10
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	sra a
@@ -217,13 +217,13 @@ BattleAnimFunction_03:
 	ld d, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -318,7 +318,7 @@ BattleAnimFunction_PokeBall:
 	add hl, bc
 	ld a, [hli]
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -366,7 +366,7 @@ BattleAnimFunction_PokeBall:
 	add hl, bc
 	ld a, [hli]
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -491,7 +491,7 @@ BattleAnimFunction_07:
 	add hl, bc
 	ld a, [hli]
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -554,7 +554,7 @@ BattleAnimFunction_08:
 	add hl, bc
 	ld a, [hl]
 	ld d, $18
-	call BattleAnim_Cosine
+	call Cosine
 	sub $18
 	sra a
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
@@ -564,7 +564,7 @@ BattleAnimFunction_08:
 	add hl, bc
 	ld a, [hl]
 	ld d, $18
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -731,13 +731,13 @@ BattleAnimFunction_0A:
 	ld d, $10
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -827,7 +827,7 @@ BattleAnimFunction_RazorLeaf:
 	add hl, bc
 	ld a, [hl]
 	dec [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -864,7 +864,7 @@ BattleAnimFunction_RazorLeaf:
 	add hl, bc
 	ld a, [hl]
 	ld d, $10
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1008,7 +1008,7 @@ BattleAnimFunction_4E:
 	add hl, bc
 	ld a, [hl]
 	dec [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1154,7 +1154,7 @@ BattleAnimFunction_0D:
 	add hl, bc
 	ld a, [hl]
 	ld d, $10
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1231,7 +1231,7 @@ Functioncd6f7:
 	ld a, [hl]
 	dec [hl]
 	ld d, $8
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1260,7 +1260,7 @@ Functioncd728:
 	ld a, [hl]
 	dec [hl]
 	ld d, $8
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1376,13 +1376,13 @@ Functioncd7d2:
 	ld d, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1461,7 +1461,7 @@ Functioncd860:
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1537,7 +1537,7 @@ Functioncd8cc:
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1590,13 +1590,13 @@ Functioncd913:
 	ld d, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1681,7 +1681,7 @@ Functioncd99a:
 	ld a, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	sra a
@@ -1694,7 +1694,7 @@ Functioncd99a:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -1846,7 +1846,7 @@ BattleAnimFunction_LeechSeed:
 Functioncda8d:
 	dec [hl]
 	ld d, $20
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2005,7 +2005,7 @@ Functioncdb65:
 	ld a, [hl]
 	inc [hl]
 	ld d, $8
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2136,7 +2136,7 @@ Functioncdc27:
 	inc [hl]
 	inc [hl]
 	ld d, $2
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2165,7 +2165,7 @@ Functioncdc57:
 	add hl, bc
 	ld a, [hl]
 	ld d, $20
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2187,7 +2187,7 @@ Functioncdc75:
 	add hl, bc
 	ld a, [hli]
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2285,7 +2285,7 @@ Functioncdcfe:
 	inc [hl]
 	inc [hl]
 	ld d, $10
-	call BattleAnim_Sine
+	call Sine
 	ld d, a
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -2348,13 +2348,13 @@ Functioncdd4f:
 	inc [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2415,7 +2415,7 @@ Functioncddbc:
 	ld d, $10
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
@@ -2423,7 +2423,7 @@ Functioncddbc:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2492,7 +2492,7 @@ BattleAnimFunction_25:
 	inc [hl]
 	inc [hl]
 	ld d, $4
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2521,7 +2521,7 @@ BattleAnimFunction_26:
 	dec [hl]
 	dec [hl]
 	ld d, $10
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2621,7 +2621,7 @@ BattleAnimFunction_SpiralDescent:
 	ld d, $18
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	sra a
@@ -2633,7 +2633,7 @@ BattleAnimFunction_SpiralDescent:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2662,7 +2662,7 @@ BattleAnimFunction_2D:
 	ld d, $18
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	sra a
@@ -2674,7 +2674,7 @@ BattleAnimFunction_2D:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2714,7 +2714,7 @@ Functioncdf60:
 	ld a, [hl]
 	inc [hl]
 	ld d, $18
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2739,7 +2739,7 @@ BattleAnimFunction_34:
 	ld d, $18
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	sra a
@@ -2751,7 +2751,7 @@ BattleAnimFunction_34:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2781,7 +2781,7 @@ BattleAnimFunction_3C:
 	ld d, $18
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	sra a
@@ -2793,7 +2793,7 @@ BattleAnimFunction_3C:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2849,7 +2849,7 @@ Functionce023:
 	ld hl, BATTLEANIMSTRUCT_VAR2
 	add hl, bc
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	bit 7, a
 	jr nz, .asm_ce046
 	xor $ff
@@ -2921,7 +2921,7 @@ Functionce09e:
 	add hl, bc
 	ld a, [hl]
 	ld d, $8
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -2964,7 +2964,7 @@ Functionce0dd:
 	add hl, bc
 	ld a, [hl]
 	ld d, $10
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	bit 7, a
@@ -3015,7 +3015,7 @@ Functionce12a:
 	add hl, bc
 	ld a, [hli]
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3052,13 +3052,13 @@ BattleAnimFunction_2F:
 	ld d, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3112,13 +3112,13 @@ BattleAnimFunction_42:
 	ld d, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3160,7 +3160,7 @@ Functionce1fb:
 	add hl, bc
 	ld a, [hl]
 	ld d, $30
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_VAR2
 	add hl, bc
 	add [hl]
@@ -3172,7 +3172,7 @@ Functionce1fb:
 	ld a, [hl]
 	add $8
 	ld d, $30
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3193,7 +3193,7 @@ Functionce22d:
 	add hl, bc
 	ld a, [hl]
 	ld d, $10
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3201,7 +3201,7 @@ Functionce22d:
 	add hl, bc
 	ld a, [hl]
 	ld d, $10
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3301,7 +3301,7 @@ BattleAnimFunction_33:
 	add hl, bc
 	ld a, [hl]
 	ld d, $18
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	sra a
@@ -3316,7 +3316,7 @@ BattleAnimFunction_33:
 	ld a, [hl]
 	inc [hl]
 	ld d, $18
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3470,13 +3470,13 @@ BattleAnimFunction_39:
 	inc [hl]
 	push af
 	ld d, $2
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop af
 	ld d, $8
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3496,7 +3496,7 @@ BattleAnimFunction_3A:
 	add hl, bc
 	ld a, [hl]
 	ld d, $8
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3539,13 +3539,13 @@ BattleAnimFunction_3D:
 	ld d, $18
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	sra a
@@ -3597,13 +3597,13 @@ Functionce465:
 	ld a, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3647,7 +3647,7 @@ Functionce4b0:
 	ld a, [hl]
 	inc [hl]
 	ld d, $18
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3676,7 +3676,7 @@ BattleAnimFunction_41:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	call BattleAnim_Sine
+	call Sine
 	bit 7, a
 	jr nz, .asm_ce4f4
 	xor $ff
@@ -3709,13 +3709,13 @@ BattleAnimFunction_43:
 	ld a, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3742,13 +3742,13 @@ BattleAnimFunction_44:
 	and $3f
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -3832,7 +3832,7 @@ BattleAnimFunction_47:
 	inc [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	ld hl, BATTLEANIMSTRUCT_VAR1
@@ -3844,7 +3844,7 @@ BattleAnimFunction_47:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -4046,7 +4046,7 @@ BattleAnimFunction_4D:
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld d, [hl]
-	call BattleAnim_Sine
+	call Sine
 	xor $ff
 	inc a
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
@@ -4099,14 +4099,14 @@ BattleAnimFunction_RadialMoveOut:
 	ld e, [hl]
 	push de
 	ld a, e
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 
 	ld a, e ; reload angle
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -4134,13 +4134,13 @@ BattleAnimFunction_RadialMoveIn:
 	ld d, [hl]
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -4164,7 +4164,7 @@ BattleAnimFunction_RadialMoveIn:
 Functionce6f1:
 	push af
 	push de
-	call BattleAnim_Sine
+	call Sine
 	sra a
 	sra a
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
@@ -4172,7 +4172,7 @@ Functionce6f1:
 	ld [hl], a
 	pop de
 	pop af
-	call BattleAnim_Cosine
+	call Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
@@ -4212,40 +4212,4 @@ BattleAnim_IncAnonJumptableIndex:
 	add hl, bc
 	inc [hl]
 	ret
-
-BattleAnim_Cosine:
-; a = d * cos(a * pi/32)
-	add %010000 ; cos(x) = sin(x + pi/2)
-	; fallthrough
-BattleAnim_Sine:
-; a = d * sin(a * pi/32)
-	calc_sine_wave BattleAnimSineWave
-
-BattleAnim_Sine_e:
-	ld a, e
-	call BattleAnim_Sine
-	ld e, a
-	ret
-
-BattleAnim_Cosine_e:
-	ld a, e
-	call BattleAnim_Cosine
-	ld e, a
-	ret
-
-BattleAnim_AbsSinePrecise:
-	ld a, e
-	call BattleAnim_Sine
-	ld e, l
-	ld d, h
-	ret
-
-BattleAnim_AbsCosinePrecise:
-	ld a, e
-	call BattleAnim_Cosine
-	ld e, l
-	ld d, h
-	ret
-
-BattleAnimSineWave:
-	sine_table 32
+	
