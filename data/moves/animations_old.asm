@@ -1383,8 +1383,22 @@ BattleAnim_Bide:
 	anim_incbgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING
 	anim_ret
 
-BattleAnim_Constrict:
 BattleAnim_Bind:
+	anim_1gfx BATTLE_ANIM_GFX_ROPE
+	anim_sound 0, 1, SFX_BIND
+	anim_obj BATTLE_ANIM_OBJ_BIND1, 132, 64, $0
+	anim_wait 8
+	anim_obj BATTLE_ANIM_OBJ_BIND2, 132, 56, $0
+	anim_wait 8
+	anim_obj BATTLE_ANIM_OBJ_BIND1, 132, 48, $0
+	anim_wait 64
+	anim_sound 0, 1, SFX_BIND
+	anim_incobj 1
+	anim_incobj 2
+	anim_incobj 3
+	anim_wait 96
+	anim_ret
+
 BattleAnim_Wrap:
 	anim_1gfx BATTLE_ANIM_GFX_ROPE
 	anim_sound 0, 1, SFX_BIND
@@ -1409,6 +1423,19 @@ BattleAnim_Confusion:
 	anim_wait 128
 	anim_incbgeffect BATTLE_BG_EFFECT_NIGHT_SHADE
 	anim_jump BattleAnim_ShowMon_1
+
+BattleAnim_Constrict:
+	anim_1gfx BATTLE_ANIM_GFX_ROPE
+	anim_sound 0, 1, SFX_BIND
+	anim_obj BATTLE_ANIM_OBJ_BIND2, 132, 64, $0
+	anim_wait 8
+	anim_obj BATTLE_ANIM_OBJ_BIND1, 132, 48, $0
+	anim_wait 8
+	anim_obj BATTLE_ANIM_OBJ_BIND2, 132, 40, $0
+	anim_wait 8
+	anim_obj BATTLE_ANIM_OBJ_BIND1, 132, 56, $0
+	anim_wait 64
+	anim_ret
 
 BattleAnim_Earthquake:
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $60, $4, $10
@@ -1707,6 +1734,20 @@ BattleAnim_BodySlam:
 	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_TakeDown:
+	anim_1gfx BATTLE_ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, $1, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_TACKLE
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 128, 56, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_TACKLE
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 144, 48, $0
+	anim_wait 3
+	anim_jump BattleAnim_ShowMon_0
+
 BattleAnim_DoubleEdge:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_1Row
@@ -1887,6 +1928,23 @@ BattleAnim_Twineedle:
 	anim_ret
 
 BattleAnim_PinMissile:
+	anim_2gfx BATTLE_ANIM_GFX_HORN, BATTLE_ANIM_GFX_HIT
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 64, 92, $28
+	anim_wait 12
+	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 56, 84, $28
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj BATTLE_ANIM_OBJ_HIT, 136, 56, $0
+	anim_wait 12
+	anim_obj BATTLE_ANIM_OBJ_MEDIUM_HORN, 52, 88, $28
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj BATTLE_ANIM_OBJ_HIT, 128, 48, $0
+	anim_wait 12
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj BATTLE_ANIM_OBJ_HIT, 132, 52, $0
+	anim_wait 16
+	anim_ret
+
 BattleAnim_SpikeCannon:
 	anim_2gfx BATTLE_ANIM_GFX_HORN, BATTLE_ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_MEGA_PUNCH
@@ -2404,7 +2462,6 @@ BattleAnim_Smokescreen:
 	anim_wait 128
 	anim_ret
 
-BattleAnim_StrongArm:
 BattleAnim_Strength:
 	anim_2gfx BATTLE_ANIM_GFX_ROCKS, BATTLE_ANIM_GFX_HIT
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_Y, $10, $1, $20

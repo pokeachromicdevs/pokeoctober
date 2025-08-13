@@ -37,6 +37,7 @@ BattleAnim_Echo:
 BattleAnim_Magnetism:
 BattleAnim_Uppercut:
 BattleAnim_BrightMoss:
+BattleAnim_StrongArm:
 BattleAnim_InkSpray:
 BattleAnim_Lunge:
 BattleAnim_Uproot:
