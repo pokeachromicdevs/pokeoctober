@@ -101,14 +101,20 @@ BattleAnimOAMUpdate:
 	push bc
 	call GetBattleAnimOAMPointer
 	ld a, [wBattleAnimTempTileID]
-	add [hl] ; tile offset
+	ld b, a
+	call GetBattleAnimOAMByte
+	add a, b
 	ld [wBattleAnimTempTileID], a
 	inc hl
-	ld a, [hli] ; oam data length
+	call GetBattleAnimOAMByte
+	inc hl
 	ld c, a
-	ld a, [hli] ; oam data pointer
-	ld h, [hl]
-	ld l, a
+	call GetBattleAnimOAMByte
+	inc hl
+	ld b, a
+	call GetBattleAnimOAMByte
+	ld h, a
+	ld l, b
 	ld a, [wBattleAnimOAMPointerLo]
 	ld e, a
 	ld d, HIGH(wVirtualOAM)
@@ -121,7 +127,7 @@ BattleAnimOAMUpdate:
 	add b
 	ld b, a
 	push hl
-	ld a, [hl]
+	call GetBattleAnimOAMByte
 	ld hl, wBattleAnimTempOAMFlags
 	bit OAM_Y_FLIP, [hl]
 	jr z, .no_yflip
@@ -142,7 +148,7 @@ BattleAnimOAMUpdate:
 	add b
 	ld b, a
 	push hl
-	ld a, [hl]
+	call GetBattleAnimOAMByte
 	ld hl, wBattleAnimTempOAMFlags
 	bit OAM_X_FLIP, [hl]
 	jr z, .no_xflip
@@ -157,9 +163,13 @@ BattleAnimOAMUpdate:
 	; Tile ID
 	inc hl
 	inc de
+	push bc
+	call GetBattleAnimOAMByte
+	ld b, a
 	ld a, [wBattleAnimTempTileID]
 	add BATTLEANIM_BASE_TILE
-	add [hl]
+	add b
+	pop bc
 	ld [de], a
 
 	; Attributes
@@ -167,11 +177,11 @@ BattleAnimOAMUpdate:
 	inc de
 	ld a, [wBattleAnimTempOAMFlags]
 	ld b, a
-	ld a, [hl]
+	call GetBattleAnimOAMByte
 	xor b
 	and PRIORITY | Y_FLIP | X_FLIP
 	ld b, a
-	ld a, [hl]
+	call GetBattleAnimOAMByte
 	and OBP_NUM
 	or b
 	ld b, a

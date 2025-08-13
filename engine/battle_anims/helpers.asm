@@ -25,6 +25,10 @@ GetBattleAnimOAMPointer:
 	add hl, de
 	ret
 
+GetBattleAnimOAMByte:
+	ld a, BANK(BattleAnimOAMData)
+	jp GetFarByte
+
 LoadBattleAnimGFX:
 	push hl
 	cp BATTLE_ANIM_GFX_POKE_BALL
