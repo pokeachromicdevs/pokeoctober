@@ -1,6 +1,6 @@
 QueueBattleAnimation:
 	ld hl, wActiveAnimObjects
-	ld e, NUM_ANIM_OBJECTS
+	ld e, NUM_BATTLE_ANIM_STRUCTS
 .loop
 	ld a, [hl]
 	and a
@@ -18,12 +18,6 @@ QueueBattleAnimation:
 	ld hl, wLastAnimObjectIndex
 	inc [hl]
 	call InitBattleAnimation
-	ret
-
-DeinitBattleAnimation:
-	ld hl, BATTLEANIMSTRUCT_INDEX
-	add hl, bc
-	ld [hl], $0
 	ret
 
 InitBattleAnimation:
@@ -214,7 +208,7 @@ BattleAnimOAMUpdate:
 	ret
 
 InitBattleAnimBuffer:
-	ld hl, BATTLEANIMSTRUCT_01
+	ld hl, BATTLEANIMSTRUCT_OAMFLAGS
 	add hl, bc
 	ld a, [hl]
 
@@ -226,7 +220,7 @@ InitBattleAnimBuffer:
 	add hl, bc
 	ld a, [hl]
 	ld [wBattleAnimTempPalette], a
-	ld hl, BATTLEANIMSTRUCT_02
+	ld hl, BATTLEANIMSTRUCT_FIX_Y
 	add hl, bc
 	ld a, [hl]
 	ld [wBattleAnimTempField02], a
@@ -247,7 +241,7 @@ InitBattleAnimBuffer:
 	and a
 	ret z
 
-	ld hl, BATTLEANIMSTRUCT_01
+	ld hl, BATTLEANIMSTRUCT_OAMFLAGS
 	add hl, bc
 	ld a, [hl]
 	ld [wBattleAnimTempOAMFlags], a

@@ -15,7 +15,8 @@ SwapHLDE::
 	ld d, h
 	ld e, l
 	pop hl
-	ret
+DoNothing::
+	ret ; no-optimize Stub Function (global do nothing)
 
 SECTION "rst10", ROM0 ; rst Bankswitch
 	ldh [hROMBank], a

@@ -660,7 +660,7 @@ BattleAnimCmd_ResetObp0:
 
 BattleAnimCmd_ClearObjs:
 	ld hl, wActiveAnimObjects
-	ld a, NUM_ANIM_OBJECTS * BATTLEANIMSTRUCT_LENGTH
+	ld a, NUM_BATTLE_ANIM_STRUCTS * BATTLEANIMSTRUCT_LENGTH
 .loop
 	ld [hl], 0
 	inc hl
@@ -709,7 +709,7 @@ endr
 
 BattleAnimCmd_IncObj:
 	call GetBattleAnimByte
-	ld e, NUM_ANIM_OBJECTS
+	ld e, NUM_BATTLE_ANIM_STRUCTS
 	ld bc, wActiveAnimObjects
 .loop
 	ld hl, BATTLEANIMSTRUCT_INDEX
@@ -727,7 +727,7 @@ BattleAnimCmd_IncObj:
 	ret
 
 .found
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	inc [hl]
 	ret
@@ -759,7 +759,7 @@ BattleAnimCmd_IncBGEffect:
 
 BattleAnimCmd_SetObj:
 	call GetBattleAnimByte
-	ld e, NUM_ANIM_OBJECTS
+	ld e, NUM_BATTLE_ANIM_STRUCTS
 	ld bc, wActiveAnimObjects
 .loop
 	ld hl, BATTLEANIMSTRUCT_INDEX
@@ -778,7 +778,7 @@ BattleAnimCmd_SetObj:
 
 .found
 	call GetBattleAnimByte
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	ld [hl], a
 	ret
@@ -1541,7 +1541,7 @@ BattleAnim_UpdateOAM_All:
 	ld a, 0
 	ld [wBattleAnimOAMPointerLo], a
 	ld hl, wActiveAnimObjects
-	ld e, NUM_ANIM_OBJECTS
+	ld e, NUM_BATTLE_ANIM_STRUCTS
 .loop
 	ld a, [hl]
 	and a
