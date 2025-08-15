@@ -1,5 +1,40 @@
 ; pic + oam animations
 
+battleframe: MACRO
+	dw \1
+x = \2
+if _NARG > 2
+rept _NARG + -2
+x = x | (1 << (\3 + 1))
+	shift
+endr
+endc
+	db x
+ENDM
+
+battledelanim_command   EQU $fcff
+battledowait_command    EQU $fdff
+battledorestart_command EQU $feff
+battleendanim_command   EQU $ffff
+
+battledelanim: MACRO
+; Removes the object from the screen, as opposed to `endanim` which just stops all motion
+	dw battledelanim_command
+ENDM
+
+battledowait: MACRO
+	dw battledowait_command
+	db \1 ; frames
+ENDM
+
+battledorestart: MACRO
+	dw battledorestart_command
+ENDM
+
+battleendanim: MACRO
+	dw battleendanim_command
+ENDM
+
 frame: MACRO
 	db \1
 x = \2

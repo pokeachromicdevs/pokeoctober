@@ -791,7 +791,7 @@ BattleAnimFunc_Bubble:
 
 SECTION "BattleAnimFunc_Null", ROMX
 
-BattleAnimFunc_BetaPursuit ; unused
+BattleAnimFunc_BetaPursuit: ; unused
 BattleAnimFunc_Null:
 	call BattleAnim_AnonJumptable
 .anon_dw

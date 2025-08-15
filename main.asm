@@ -426,6 +426,11 @@ SECTION "Move Animation Framesets", ROMX
 INCLUDE "engine/battle_anims/framesets.asm"
 
 
+SECTION "Move Animations OAM", ROMX
+
+INCLUDE "engine/battle_anims/anim_oam.asm"
+
+
 SECTION "Battle Animation Stuff", ROMX
 
 INCLUDE "engine/battle_anims/anim_commands.asm"
@@ -434,11 +439,6 @@ INCLUDE "data/battle_anims/objects.asm"
 INCLUDE "engine/battle_anims/functions.asm"
 INCLUDE "engine/battle_anims/helpers.asm"
 INCLUDE "data/battle_anims/object_gfx.asm"
-
-
-SECTION "Move Animations OAM", ROMX
-
-INCLUDE "data/battle_anims/oam.asm"
 
 
 SECTION "Pic Animations Engine", ROMX
