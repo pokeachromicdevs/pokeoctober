@@ -257,6 +257,7 @@
 	const ROCK_SMASH   ;  f9
 	const WHIRLPOOL    ;  fa
 	const BEAT_UP      ;  fb
+OLD_MOVES EQU const_value + -1
 	const UPROOT       ;  fc needs anim
 	const WIND_RIDE    ;  fd needs anim
 	const ROCK_HEAD    ;  fe
@@ -319,10 +320,14 @@ NUM_ATTACKS EQU const_value + -1
 		fail "Too many moves defined!"
 	endc
 
+
+NUM_SPECIAL_ANIMS EQU $1b ;fix if more special (always on) animations are added
+
 ; Battle animations use the same constants as the moves
-	const ANIM_HELD_ITEM_TRIGGER     ; fc
 ; Animations with negative IDs will play even when animations are disabled
-const_value = -$1a ;fix if more negative values are added
+
+const_value = -NUM_SPECIAL_ANIMS
+	const ANIM_HELD_ITEM_TRIGGER ; -1b (ffe5)
 	const ANIM_THROW_POKE_BALL   ; -1a (ffe6)
 	const ANIM_SEND_OUT_MON      ; -19 (ffe7)
 	const ANIM_RETURN_MON        ; -18 (ffe8)

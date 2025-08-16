@@ -984,40 +984,40 @@ AngoreEvosAttacks:
 BiteelEvosAttacks:
 	dbbw EVOLVE_LEVEL, 28, LURREEL
 	db 0 ; no more evolutions
-	db 1 , WRAP
-	db 1 , LEER
-	db 1 , THUNDER_WAVE
-	db 4, THUNDERSHOCK
-	db 8, LEECH_LIFE
-	db 12, BITE
-	db 17, TACKLE ; THUNDERJOLT
-	db 21, FLASH
-	db 25, TACKLE ;DEEP_DIVE
-	db 29, TERRORIZE
-	db 34, SPARK
-	db 38, CONFUSE_RAY
-	db 42, IRON_TAIL
-	db 46, TACKLE ; FLOODLIGHT
-	db 51, THUNDER
+	dbw 1 , WRAP
+	dbw 1 , LEER
+	dbw 1 , THUNDER_WAVE
+	dbw 4, THUNDERSHOCK
+	dbw 8, LEECH_LIFE
+	dbw 12, BITE
+	dbw 17, TACKLE ; THUNDERJOLT
+	dbw 21, FLASH
+	dbw 25, TACKLE ;DEEP_DIVE
+	dbw 29, TERRORIZE
+	dbw 34, SPARK
+	dbw 38, CONFUSE_RAY
+	dbw 42, IRON_TAIL
+	dbw 46, TACKLE ; FLOODLIGHT
+	dbw 51, THUNDER
 	db 0 ; no more level-up moves
 	
 LurreelEvosAttacks:
 	db 0 ; no more evolutions
-	db 1 , WRAP
-	db 1 , LEER
-	db 1 , THUNDER_WAVE
-	db 4, THUNDERSHOCK
-	db 8, LEECH_LIFE
-	db 12, BITE
-	db 17, TACKLE ; THUNDERJOLT
-	db 21, FLASH
-	db 27, TACKLE; DEEP_DIVE
-	db 31, TERRORIZE
-	db 36, SPARK
-	db 40, CONFUSE_RAY
-	db 44, IRON_TAIL
-	db 48, TACKLE ; FLOODLIGHT
-	db 53, THUNDER
+	dbw 1 , WRAP
+	dbw 1 , LEER
+	dbw 1 , THUNDER_WAVE
+	dbw 4, THUNDERSHOCK
+	dbw 8, LEECH_LIFE
+	dbw 12, BITE
+	dbw 17, TACKLE ; THUNDERJOLT
+	dbw 21, FLASH
+	dbw 27, TACKLE; DEEP_DIVE
+	dbw 31, TERRORIZE
+	dbw 36, SPARK
+	dbw 40, CONFUSE_RAY
+	dbw 44, IRON_TAIL
+	dbw 48, TACKLE ; FLOODLIGHT
+	dbw 53, THUNDER
 	db 0 ; no more level-up moves
 
 	

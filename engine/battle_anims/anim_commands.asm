@@ -397,9 +397,13 @@ BattleAnimCmd_Ret:
 	ld [hl], e
 	inc hl
 	ld [hl], d
+	ld a, [wBattleAnimParentBank]
+	ld [wBattleAnimBank], a
 	ret
 
 BattleAnimCmd_Call:
+	call GetBattleAnimByte
+	push af
 	call GetBattleAnimByte
 	ld e, a
 	call GetBattleAnimByte
@@ -413,11 +417,15 @@ BattleAnimCmd_Call:
 	ld [hl], e
 	inc hl
 	ld [hl], d
+	ld a, [wBattleAnimBank]
+	ld [wBattleAnimParentBank], a
 	pop de
+	pop af
 	ld hl, wBattleAnimAddress
 	ld [hl], e
 	inc hl
 	ld [hl], d
+	ld [wBattleAnimBank], a
 	ld hl, wBattleAnimFlags
 	set BATTLEANIM_IN_SUBROUTINE_F, [hl]
 	ret
@@ -603,6 +611,8 @@ BattleAnimCmd_Obj:
 	call GetBattleAnimByte
 	ld [wBattleObjectTempID], a
 	call GetBattleAnimByte
+	ld [wBattleObjectTempID + 1], a
+	call GetBattleAnimByte
 	ld [wBattleObjectTempXCoord], a
 	call GetBattleAnimByte
 	ld [wBattleObjectTempYCoord], a
@@ -650,7 +660,7 @@ BattleAnimCmd_ResetObp0:
 
 BattleAnimCmd_ClearObjs:
 	ld hl, wActiveAnimObjects
-	ld a, NUM_ANIM_OBJECTS * BATTLEANIMSTRUCT_LENGTH
+	ld a, NUM_BATTLE_ANIM_STRUCTS * BATTLEANIMSTRUCT_LENGTH
 .loop
 	ld [hl], 0
 	inc hl
@@ -699,7 +709,7 @@ endr
 
 BattleAnimCmd_IncObj:
 	call GetBattleAnimByte
-	ld e, NUM_ANIM_OBJECTS
+	ld e, NUM_BATTLE_ANIM_STRUCTS
 	ld bc, wActiveAnimObjects
 .loop
 	ld hl, BATTLEANIMSTRUCT_INDEX
@@ -717,7 +727,7 @@ BattleAnimCmd_IncObj:
 	ret
 
 .found
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	inc [hl]
 	ret
@@ -749,7 +759,7 @@ BattleAnimCmd_IncBGEffect:
 
 BattleAnimCmd_SetObj:
 	call GetBattleAnimByte
-	ld e, NUM_ANIM_OBJECTS
+	ld e, NUM_BATTLE_ANIM_STRUCTS
 	ld bc, wActiveAnimObjects
 .loop
 	ld hl, BATTLEANIMSTRUCT_INDEX
@@ -768,7 +778,7 @@ BattleAnimCmd_SetObj:
 
 .found
 	call GetBattleAnimByte
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	ld [hl], a
 	ret
@@ -1454,12 +1464,9 @@ ClearBattleAnims::
 	jr nz, .loop
 
 	ld hl, wFXAnimID
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	ld hl, BattleAnimations
-	add hl, de
-	add hl, de
+	ld a, [hli]
+	ld c, a
+	ld b, [hl]
 	call GetBattleAnimPointer
 	call BattleAnimAssignPals
 	call BattleAnimDelayFrame
@@ -1534,7 +1541,7 @@ BattleAnim_UpdateOAM_All:
 	ld a, 0
 	ld [wBattleAnimOAMPointerLo], a
 	ld hl, wActiveAnimObjects
-	ld e, NUM_ANIM_OBJECTS
+	ld e, NUM_BATTLE_ANIM_STRUCTS
 .loop
 	ld a, [hl]
 	and a
@@ -1544,7 +1551,7 @@ BattleAnim_UpdateOAM_All:
 	push hl
 	push de
 	call DoBattleAnimFrame
-	call BattleAnimOAMUpdate
+	farcall BattleAnimOAMUpdate
 	pop de
 	pop hl
 	jr c, .done

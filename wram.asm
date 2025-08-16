@@ -3167,8 +3167,10 @@ wLastAnimObjectIndex:: db ; d40e
 
 wBattleAnimFlags:: db ; d40f
 wBattleAnimAddress:: dw ; d410
+wBattleAnimBank:: db ; d411
 wBattleAnimDelay:: db ; d412
 wBattleAnimParent:: dw ; d413
+wBattleAnimParentBank:: db ; d414
 wBattleAnimLoops:: db ; d415
 wBattleAnimVar:: db ; d416
 wBattleAnimByte:: db ; d417
@@ -3182,7 +3184,7 @@ wBattleAnimTemp2:: db
 wBattleAnimTemp3:: db
 
 NEXTU ; d419
-wBattleObjectTempID:: db
+wBattleObjectTempID:: dw
 wBattleObjectTempXCoord:: db
 wBattleObjectTempYCoord:: db
 wBattleObjectTempParam:: db
