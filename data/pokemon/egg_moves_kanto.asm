@@ -180,7 +180,7 @@ SquirtleEggMoves:
 	
 CaterpieEggMoves:
 	dw SPIDER_WEB
-	dw PIN_MISSILE
+	dw LEECH_LIFE
 	dw BIDE
 	dw TAKE_DOWN
 	dw -1 ; end
@@ -404,6 +404,7 @@ OnixEggMoves:
 DrowzeeEggMoves:
 	dw LIGHT_SCREEN
 	dw BARRIER
+	dw SUBMISSION
 	dw -1 ; end
 
 KrabbyEggMoves:
