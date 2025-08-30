@@ -51,7 +51,6 @@ CloysterFrontpicAnim:    INCBIN "gfx/pokemon/cloyster/front.animated.2bpp.lz"
 AirmorFrontpicAnim:      INCBIN "gfx/pokemon/airmor/front.animated.2bpp.lz"
 DewgongFrontpicAnim:     INCBIN "gfx/pokemon/dewgong/front.animated.2bpp.lz"
 VictreebelFrontpicAnim:  INCBIN "gfx/pokemon/victreebel/front.animated.2bpp.lz"
-RaichuFrontpicAnim:      INCBIN "gfx/pokemon/raichu/front.animated.2bpp.lz"
 PrimeapeFrontpicAnim:    INCBIN "gfx/pokemon/primeape/front.animated.2bpp.lz"
 
 SECTION "Pics 4 Animated", ROMX
@@ -436,5 +435,6 @@ WailmerFrontpicAnim:       INCBIN "gfx/pokemon/wailmer/front.animated.2bpp.lz"
 WailordFrontpicAnim:       INCBIN "gfx/pokemon/wailord/front.animated.2bpp.lz"
 CorasunFrontpicAnim:       INCBIN "gfx/pokemon/corasun/front.animated.2bpp.lz"
 MambokingFrontpicAnim:     INCBIN "gfx/pokemon/mamboking/front.animated.2bpp.lz"
+RaichuFrontpicAnim:        INCBIN "gfx/pokemon/raichu/front.animated.2bpp.lz"
 
 

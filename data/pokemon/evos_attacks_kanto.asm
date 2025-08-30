@@ -162,11 +162,13 @@ BulbasaurEvosAttacks:
 	dbw 15, POISONPOWDER
 	dbw 21, RAZOR_LEAF
 	dbw 25, TAKE_DOWN
-;	dbw 30, TOXIC_LEECH
-	dbw 36, SLEEP_POWDER
-	dbw 40, DOUBLE_EDGE
-	dbw 45, SYNTHESIS
-	dbw 51, SOLARBEAM
+;	dbw 30, POISON_LEECH
+	dbw 36, STUN_SPORE
+	dbw 40, TOXIC
+	dbw 45, DOUBLE_EDGE
+	dbw 51, SYNTHESIS
+	dbw 55, SLEEP_POWDER
+	dbw 60, SOLARBEAM
 	db 0 ; no more level-up moves
 
 IvysaurEvosAttacks:
@@ -179,11 +181,13 @@ IvysaurEvosAttacks:
 	dbw 15, POISONPOWDER
 	dbw 23, RAZOR_LEAF
 	dbw 27, TAKE_DOWN
-;	dbw 32, TOXIC_LEECH
-	dbw 38, SLEEP_POWDER
-	dbw 42, DOUBLE_EDGE
-	dbw 47, SYNTHESIS
-	dbw 53, SOLARBEAM
+;	dbw 32, POISON_LEECH
+	dbw 38, STUN_SPORE
+	dbw 42, TOXIC
+	dbw 47, DOUBLE_EDGE
+	dbw 53, SYNTHESIS
+	dbw 57, SLEEP_POWDER
+	dbw 62, SOLARBEAM
 	db 0 ; no more level-up moves
 
 VenusaurEvosAttacks:
@@ -195,11 +199,13 @@ VenusaurEvosAttacks:
 	dbw 15, POISONPOWDER
 	dbw 23, RAZOR_LEAF
 	dbw 27, TAKE_DOWN
-;	dbw 32, TOXIC_LEECH
-	dbw 40, SLEEP_POWDER
-	dbw 44, DOUBLE_EDGE
-	dbw 49, SYNTHESIS
-	dbw 55, SOLARBEAM
+;	dbw 32, POISON_LEECH
+	dbw 40, STUN_SPORE
+	dbw 44, TOXIC
+	dbw 49, DOUBLE_EDGE
+	dbw 55, SYNTHESIS
+	dbw 59, SLEEP_POWDER
+	dbw 64, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CharmanderEvosAttacks:
@@ -216,7 +222,9 @@ CharmanderEvosAttacks:
 	dbw 36, FLAMETHROWER
 	dbw 40, SLASH
 	dbw 45, CRUNCH
-	dbw 51, THRASH
+;   dbw 51, THICK_SMOKE
+	dbw 55, THRASH
+	dbw 60, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 CharmeleonEvosAttacks:
@@ -233,7 +241,9 @@ CharmeleonEvosAttacks:
 	dbw 38, FLAMETHROWER
 	dbw 42, SLASH
 	dbw 47, CRUNCH
-	dbw 53, THRASH
+;   dbw 53, THICK_SMOKE
+	dbw 57, THRASH
+	dbw 62, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 CharizardEvosAttacks:
@@ -249,13 +259,15 @@ CharizardEvosAttacks:
 	dbw 40, FLAMETHROWER
 	dbw 44, SLASH
 	dbw 49, CRUNCH
-	dbw 55, THRASH
+;   dbw 55, THICK_SMOKE
+	dbw 59, THRASH
+	dbw 64, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 SquirtleEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, WARTORTLE
 	db 0 ; no more evolutions
-	dbw 1, LAVA_BURST ; POUND
+	dbw 1, POUND
 	dbw 1, TAIL_WHIP
 	dbw 6, WITHDRAW
 	dbw 10, BUBBLE
@@ -265,8 +277,10 @@ SquirtleEvosAttacks:
 	dbw 30, RAPID_SPIN
 	dbw 36, SURF
 	dbw 40, RAIN_DANCE
-	dbw 45, SKULL_BASH
-	dbw 51, HYDRO_PUMP
+;	dbw 45, IRON_DEFENSE
+;	dbw 51, IRON_HEAD
+	dbw 55, SKULL_BASH
+	dbw 60, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 WartortleEvosAttacks:
@@ -282,8 +296,10 @@ WartortleEvosAttacks:
 	dbw 32, RAPID_SPIN
 	dbw 38, SURF
 	dbw 42, RAIN_DANCE
-	dbw 47, SKULL_BASH
-	dbw 53, HYDRO_PUMP
+;	dbw 47, IRON_DEFENSE
+;	dbw 53, IRON_HEAD
+	dbw 57, SKULL_BASH
+	dbw 62, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 BlastoiseEvosAttacks:
@@ -298,8 +314,10 @@ BlastoiseEvosAttacks:
 	dbw 32, RAPID_SPIN
 	dbw 40, SURF
 	dbw 44, RAIN_DANCE
-	dbw 49, SKULL_BASH
-	dbw 55, HYDRO_PUMP
+;	dbw 49, IRON_DEFENSE
+;	dbw 55, IRON_HEAD
+	dbw 59, SKULL_BASH
+	dbw 64, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 CaterpieEvosAttacks:
@@ -349,9 +367,9 @@ KakunaEvosAttacks:
 
 BeedrillEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, HARDEN
 	dbw 1, POISON_STING
 	dbw 1, STRING_SHOT
+	dbw 7, HARDEN
 	dbw 13, FOCUS_ENERGY
 	dbw 17, RAGE
 	dbw 22, TWINEEDLE
@@ -371,14 +389,16 @@ PidgeyEvosAttacks:
 	dbw 1, SAND_ATTACK
 	dbw 5, QUICK_ATTACK
 	dbw 9, GUST
-	dbw 14, MUD_SLAP
-	dbw 19, WING_ATTACK
+	dbw 13, MUD_SLAP
+	dbw 18, WING_ATTACK
 	dbw 23, WHIRLWIND
-	dbw 28, RAZOR_WIND
-	dbw 33, MIRROR_MOVE
-	dbw 37, TWISTER
-	dbw 42, AGILITY
-	dbw 47, FLY
+	dbw 28, TWISTER
+	dbw 32, FLY
+	dbw 37, MIRROR_MOVE
+	dbw 42, RAZOR_WIND
+;   dbw 46, ROOST 
+	dbw 50, AGILITY
+	dbw 55, STORM_FRONT
 	db 0 ; no more level-up moves
 
 PidgeottoEvosAttacks:
@@ -388,14 +408,16 @@ PidgeottoEvosAttacks:
 	dbw 1, SAND_ATTACK
 	dbw 5, QUICK_ATTACK
 	dbw 9, GUST
-	dbw 14, MUD_SLAP
-	dbw 21, WING_ATTACK
+	dbw 13, MUD_SLAP
+	dbw 18, WING_ATTACK
 	dbw 25, WHIRLWIND
-	dbw 30, RAZOR_WIND
-	dbw 35, MIRROR_MOVE
-	dbw 39, TWISTER
-	dbw 44, AGILITY
-	dbw 49, FLY
+	dbw 30, TWISTER
+	dbw 34, FLY
+	dbw 39, MIRROR_MOVE
+	dbw 44, RAZOR_WIND
+;   dbw 48, ROOST 
+	dbw 52, AGILITY
+	dbw 57, STORM_FRONT
 	db 0 ; no more level-up moves
 
 PidgeotEvosAttacks:
@@ -404,14 +426,16 @@ PidgeotEvosAttacks:
 	dbw 1, SAND_ATTACK
 	dbw 5, QUICK_ATTACK
 	dbw 9, GUST
-	dbw 14, MUD_SLAP
-	dbw 21, WING_ATTACK
+	dbw 13, MUD_SLAP
+	dbw 18, WING_ATTACK
 	dbw 25, WHIRLWIND
-	dbw 30, RAZOR_WIND
-	dbw 35, MIRROR_MOVE
-	dbw 35, TWISTER
-	dbw 46, AGILITY
-	dbw 51, FLY
+	dbw 30, TWISTER
+	dbw 34, FLY
+	dbw 41, MIRROR_MOVE
+	dbw 46, RAZOR_WIND
+;   dbw 50, ROOST 
+	dbw 54, AGILITY
+	dbw 59, STORM_FRONT
 	db 0 ; no more level-up moves
 
 RattataEvosAttacks:
@@ -458,13 +482,15 @@ SpearowEvosAttacks:
 	dbw 4, PURSUIT
 	dbw 9, MIRROR_MOVE
 	dbw 13, FURY_ATTACK
-	dbw 18, WING_ATTACK
+;	dbw 18, AERIAL_ACE
 	dbw 24, TERRORIZE
-	dbw 29, FAINT_ATTACK
+	dbw 28, FAINT_ATTACK
 	dbw 33, FLY
-	dbw 38, DRILL_PECK
-	dbw 44, AGILITY
-	dbw 49, SKY_ATTACK
+	dbw 37, ROOST
+	dbw 42, DRILL_PECK
+;   dbw 48, BLINDSIDE
+	dbw 52, AGILITY
+	dbw 57, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 FearowEvosAttacks:
@@ -475,13 +501,15 @@ FearowEvosAttacks:
 	dbw 4, PURSUIT
 	dbw 9, MIRROR_MOVE
 	dbw 13, FURY_ATTACK
-	dbw 18, WING_ATTACK
+;	dbw 18, AERIAL_ACE
 	dbw 26, TERRORIZE
-	dbw 31, FAINT_ATTACK
+	dbw 30, FAINT_ATTACK
 	dbw 35, FLY
-	dbw 40, DRILL_PECK
-	dbw 46, AGILITY
-	dbw 51, SKY_ATTACK
+	dbw 39, ROOST
+	dbw 44, DRILL_PECK
+;   dbw 50, BLINDSIDE
+	dbw 54, AGILITY
+	dbw 59, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 EkansEvosAttacks:
@@ -499,7 +527,7 @@ EkansEvosAttacks:
 	dbw 37, HAZE
 	dbw 42, MEAN_LOOK
 	dbw 46, BODY_SLAM
-;	dbw 51, GUNK_BEAM
+;	dbw 51, GUNK_SHOT
 	db 0 ; no more level-up moves
 
 ArbokEvosAttacks:
@@ -516,7 +544,7 @@ ArbokEvosAttacks:
 	dbw 39, HAZE
 	dbw 44, MEAN_LOOK
 	dbw 48, BODY_SLAM
-;	dbw 53, GUNK_BEAM
+;	dbw 53, GUNK_SHOT
 	db 0 ; no more level-up moves
 
 PikachuEvosAttacks:
@@ -555,6 +583,8 @@ RaichuEvosAttacks:
 	dbw 51, LIGHT_SCREEN
 	dbw 56, THUNDER
 	db 0 ; no more level-up moves
+	
+; --------------------------------------------------- SHADOW LEARNSETS UP TO HERE ^ ^
 
 SandshrewEvosAttacks:
 	dbbw EVOLVE_LEVEL, 22, SANDSLASH
