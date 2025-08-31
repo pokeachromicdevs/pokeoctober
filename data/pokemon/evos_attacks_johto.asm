@@ -729,6 +729,8 @@ CleffaEvosAttacks:
 	dbw 41, DIZZY_PUNCH
 	dbw 47, MOONLIGHT
 ;	dbw 54, STAR_FREEZE
+	dbw 59, LIGHT_SCREEN
+	dbw 64, BODY_SLAM
 	db 0 ; no more level-up moves
 
 IgglybuffEvosAttacks:

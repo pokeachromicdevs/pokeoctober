@@ -584,24 +584,24 @@ RaichuEvosAttacks:
 	dbw 56, THUNDER
 	db 0 ; no more level-up moves
 	
-; --------------------------------------------------- SHADOW LEARNSETS UP TO HERE ^ ^
-
 SandshrewEvosAttacks:
 	dbbw EVOLVE_LEVEL, 22, SANDSLASH
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, SAND_ATTACK
 	dbw 4, POISON_STING
-	dbw 9, MUD_SLAP
+;	dbw 9, SAND_TO9MB
 	dbw 14, RAPID_SPIN
 	dbw 18, DEFENSE_CURL
 	dbw 23, DIG
 	dbw 28, FURY_SWIPES
 	dbw 32, ROLLOUT
-	dbw 37, PROTECT
-	dbw 42, METAL_CLAW
-	dbw 46, SANDSTORM
-	dbw 51, EARTHQUAKE
+	dbw 37, METAL_CLAW
+	dbw 42, SLASH
+;	dbw 46, EARTH_DRILL
+	dbw 51, PROTECT
+	dbw 56, SANDSTORM
+	dbw 61, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 SandslashEvosAttacks:
@@ -609,17 +609,21 @@ SandslashEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, SAND_ATTACK
 	dbw 4, POISON_STING
-	dbw 9, MUD_SLAP
+;	dbw 9, SAND_TO9MB
 	dbw 14, RAPID_SPIN
 	dbw 18, DEFENSE_CURL
 	dbw 25, DIG
 	dbw 30, FURY_SWIPES
 	dbw 34, ROLLOUT
-	dbw 39, PROTECT
-	dbw 44, METAL_CLAW
-	dbw 48, SANDSTORM
-	dbw 53, EARTHQUAKE
+	dbw 39, METAL_CLAW
+	dbw 44, SLASH
+;	dbw 48, EARTH_DRILL
+	dbw 53, PROTECT
+	dbw 58, SANDSTORM
+	dbw 63, EARTHQUAKE
 	db 0 ; no more level-up moves
+	
+; --------------------------------------------------- SHADOW LEARNSETS UP TO HERE ^ ^
 
 NidoranFEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, NIDORINA
@@ -735,6 +739,8 @@ ClefairyEvosAttacks:
 	dbw 41, DIZZY_PUNCH
 	dbw 47, MOONLIGHT
 ;	dbw 54, STAR_FREEZE
+	dbw 59, LIGHT_SCREEN
+	dbw 64, BODY_SLAM
 	db 0 ; no more level-up moves
 
 ClefableEvosAttacks:
@@ -757,32 +763,36 @@ VulpixEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
+	dbw 1, SPITE
 	dbw 6, QUICK_ATTACK
-	dbw 11, SPITE
-	dbw 17, PSYCH_UP
-	dbw 22, FIRE_SPIN
-	dbw 28, FAINT_ATTACK
-;	dbw 33, LAVA_BURST
-	dbw 39, WILL_O_WISP
-	dbw 44, CONFUSE_RAY
-	dbw 50, FIRE_BLAST
-	dbw 55, PSYCHIC
+	dbw 11, SAFEGUARD
+	dbw 19, FIRE_SPIN
+	dbw 24, CONFUSE_RAY
+	dbw 30, FAINT_ATTACK
+	dbw 35, WILL_O_WISP
+	dbw 41, FLAMETHROWER
+;	dbw 46, ENERGY_SINGE
+;	dbw 52, NASTY_PLOT
+	dbw 57, FIRE_BLAST
+	dbw 63, PSYCHIC
 	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
+	dbw 1, SPITE
 	dbw 6, QUICK_ATTACK
-	dbw 11, SPITE
-	dbw 17, PSYCH_UP
-	dbw 22, FIRE_SPIN
-	dbw 28, FAINT_ATTACK
-;	dbw 33, LAVA_BURST
-	dbw 39, WILL_O_WISP
-	dbw 44, CONFUSE_RAY
-	dbw 50, FIRE_BLAST
-	dbw 55, PSYCHIC
+	dbw 11, SAFEGUARD
+	dbw 19, FIRE_SPIN
+	dbw 24, CONFUSE_RAY
+	dbw 30, FAINT_ATTACK
+	dbw 35, WILL_O_WISP
+	dbw 41, FLAMETHROWER
+;	dbw 46, ENERGY_SINGE
+;	dbw 52, NASTY_PLOT
+	dbw 57, FIRE_BLAST
+	dbw 63, PSYCHIC
 	db 0 ; no more level-up moves
 
 
@@ -914,14 +924,16 @@ ParasEvosAttacks:
 	dbw 1, ABSORB
 	dbw 6, STUN_SPORE
 	dbw 10, LEECH_LIFE
-	dbw 17, MEGA_DRAIN
-	dbw 23, POISONPOWDER
-;	dbw 27, DUAL_PINCER
-	dbw 32, GIGA_DRAIN
-	dbw 38, SPORE
-	dbw 42, GROWTH
-	dbw 47, SLASH
-	dbw 53, LUNGE
+	dbw 15, MEGA_DRAIN
+	dbw 21, GROWTH
+	dbw 27, POISONPOWDER
+	dbw 32, CROSS_CUTTER
+	dbw 38, SLASH
+	dbw 42, GIGA_DRAIN
+	dbw 47, SPORE
+	dbw 53, SUBSTITUTE
+;	dbw 57, STUN_CUT
+	dbw 62, LUNGE
 	db 0 ; no more level-up moves
 
 ParasectEvosAttacks:
@@ -930,14 +942,16 @@ ParasectEvosAttacks:
 	dbw 1, ABSORB
 	dbw 6, STUN_SPORE
 	dbw 10, LEECH_LIFE
-	dbw 17, MEGA_DRAIN
-	dbw 23, POISONPOWDER
-;	dbw 29, DUAL_PINCER
-	dbw 34, GIGA_DRAIN
-	dbw 40, SPORE
-	dbw 44, GROWTH
-	dbw 49, SLASH
-	dbw 55, LUNGE
+	dbw 15, MEGA_DRAIN
+	dbw 21, GROWTH
+	dbw 29, POISONPOWDER
+	dbw 34, CROSS_CUTTER
+	dbw 40, SLASH
+	dbw 44, GIGA_DRAIN
+	dbw 49, SPORE
+	dbw 55, SUBSTITUTE
+;	dbw 59, STUN_CUT
+	dbw 64, LUNGE
 	db 0 ; no more level-up moves
 
 VenonatEvosAttacks:

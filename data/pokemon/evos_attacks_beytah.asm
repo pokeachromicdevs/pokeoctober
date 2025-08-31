@@ -477,16 +477,18 @@ VulpiiiEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
+	dbw 1, SPITE
 	dbw 6, QUICK_ATTACK
-	dbw 11, SPITE
-	dbw 17, PSYCH_UP
-	dbw 22, FIRE_SPIN
+	dbw 11, SAFEGUARD
+	dbw 17, FIRE_SPIN
+	dbw 22, CONFUSE_RAY
 	dbw 28, FAINT_ATTACK
-;	dbw 33, LAVA_BURST
-	dbw 39, WILL_O_WISP
-	dbw 44, CONFUSE_RAY
-	dbw 50, FIRE_BLAST
-	dbw 55, PSYCHIC
+	dbw 33, WILL_O_WISP
+	dbw 39, FLAMETHROWER
+;	dbw 44, ENERGY_SINGE
+;	dbw 50, NASTY_PLOT
+	dbw 55, FIRE_BLAST
+	dbw 61, PSYCHIC
 	db 0 ; no more level-up moves
 
 WorfursEvosAttacks:
@@ -546,13 +548,15 @@ ParasporEvosAttacks:
 	dbw 6, STUN_SPORE
 	dbw 10, LEECH_LIFE
 	dbw 15, MEGA_DRAIN
-	dbw 21, POISONPOWDER
-;	dbw 25, DUAL_PINCER
-	dbw 30, GIGA_DRAIN
-	dbw 36, SPORE
-	dbw 40, GROWTH
-	dbw 45, SLASH
-	dbw 51, LUNGE
+	dbw 21, GROWTH
+	dbw 25, POISONPOWDER
+	dbw 30, CROSS_CUTTER
+	dbw 36, SLASH
+	dbw 40, GIGA_DRAIN
+	dbw 45, SPORE
+	dbw 51, SUBSTITUTE
+;	dbw 55, STUN_CUT
+	dbw 60, LUNGE
 	db 0 ; no more level-up moves
 
 KiwackiEvosAttacks:
@@ -601,7 +605,7 @@ TerrachnidEvosAttacks:
 	dbw 15, MACH_PUNCH
 	dbw 22, CURSE
 	dbw 26, CROSS_CUTTER
-	dbw 30, CUT; STUN CUT
+;	dbw 30, STUN CUT
 	dbw 37, TOXIC
 	dbw 41, LUNGE
 	dbw 45, EARTHQUAKE
