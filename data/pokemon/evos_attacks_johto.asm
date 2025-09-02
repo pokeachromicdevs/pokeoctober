@@ -598,17 +598,18 @@ CoinpurEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, GROWL
-	dbw 1, TAIL_WHIP
-	dbw 6, BITE
-	dbw 12, TEMPT
+	dbw 1, THIEF
+	dbw 5, BITE
+	dbw 11, FURY_SWIPES
 	dbw 16, PAY_DAY
-	dbw 22, FAINT_ATTACK
-	dbw 28, FURY_SWIPES
-	dbw 32, SCREECH
-	dbw 38, COIN_HURL
-	dbw 44, CHARM
-	dbw 48, SWAGGER
-	dbw 54, SLASH
+	dbw 22, SCREECH
+	dbw 27, FAINT_ATTACK
+;	dbw 33, FAKE_OUT
+	dbw 39, METAL_CLAW
+	dbw 44, SLASH
+;	dbw 50, NASTY_PLOT
+	dbw 55, CHARM
+	dbw 61, COIN_HURL
 	db 0 ; no more level-up moves
 
 MoibelleEvosAttacks:
