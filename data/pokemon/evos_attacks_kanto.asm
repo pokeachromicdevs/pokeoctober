@@ -486,7 +486,7 @@ SpearowEvosAttacks:
 	dbw 24, TERRORIZE
 	dbw 28, FAINT_ATTACK
 	dbw 33, FLY
-	dbw 37, ROOST
+;	dbw 37, ROOST
 	dbw 42, DRILL_PECK
 ;   dbw 48, BLINDSIDE
 	dbw 52, AGILITY
@@ -505,7 +505,7 @@ FearowEvosAttacks:
 	dbw 26, TERRORIZE
 	dbw 30, FAINT_ATTACK
 	dbw 35, FLY
-	dbw 39, ROOST
+;	dbw 39, ROOST
 	dbw 44, DRILL_PECK
 ;   dbw 50, BLINDSIDE
 	dbw 54, AGILITY
