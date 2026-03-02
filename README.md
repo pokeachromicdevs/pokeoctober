@@ -36,7 +36,7 @@ the Crystal Clear project is NOT allowed to use any of the code contained within
 
 ## Build instructions
 
-See [INSTALL.md](INSTALL.md).
+See [INSTALL.md](docs/INSTALL.md).
 
 ## Credits
 
