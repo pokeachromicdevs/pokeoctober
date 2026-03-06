@@ -370,13 +370,23 @@ ReadMart:
 	ld de, wCurMart + 1
 .loop
 ; copy the item to wCurMart + (ItemIndex)
-	ld a, [hli]
-	ld [de], a
-	inc de
+	push hl
+		ld a, [hli]
+		ld h, [hl]
+		ld l, a
+		push hl
+			call GetItemIDFromIndex
+		pop hl
+		ld [de], a
+		inc de
 ; -1 is the terminator
-	cp -1
+		cphl16 -1
+	pop hl
 	jr z, .done
 
+; set hl to the price
+	inc hl
+	inc hl
 	push de
 ; copy the price to de
 	ld a, [hli]
@@ -677,6 +687,7 @@ BargainShopAskPurchaseQuantity:
 	add hl, de
 	add hl, de
 	add hl, de
+	add hl, de
 	inc hl
 	ld a, [hli]
 	ldh [hMoneyTemp + 2], a
@@ -713,6 +724,7 @@ RooftopSaleAskPurchaseQuantity:
 	ld h, [hl]
 	ld l, a
 	inc hl
+	add hl, de
 	add hl, de
 	add hl, de
 	add hl, de
@@ -919,6 +931,8 @@ Text_Mart_AlreadyHaveTM:
 	text_end
 
 SellMenu:
+	ld hl, wItemFlags
+	set IN_BAG_F, [hl]
 	call DisableSpriteUpdates
 	farcall DepositSellInitPackBuffers
 .loop
@@ -930,6 +944,8 @@ SellMenu:
 	jr .loop
 
 .quit
+	ld hl, wItemFlags
+	res IN_BAG_F, [hl]
 	call ReturnToMapWithSpeechTextbox
 	and a
 	ret

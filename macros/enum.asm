@@ -42,6 +42,12 @@ shift_const: MACRO
 const_value = const_value + 1
 ENDM
 
+const_align: MACRO
+  align_mask = (1 << (\1)) - 1
+  const_value += (align_mask + 1 - (const_value & align_mask)) & align_mask
+  assert !(const_value & align_mask)
+ENDM
+
 ; Enumerate strings
 
 define: MACRO

@@ -3,8 +3,8 @@
 ; item associated with the table entry is used instead.
 
 TimeCapsule_CatchRateItems:
-	db $5A, BERRY
-	db $78, BERRY
-	db $87, BERRY
-	db -1,      BERRY
+	dbw $5A, BERRY
+	dbw $78, BERRY
+	dbw $87, BERRY
+	dbw -1,  BERRY
 	db 0 ; end

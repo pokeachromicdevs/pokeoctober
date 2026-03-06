@@ -5,283 +5,271 @@ _DoItemEffect::
 	call CopyName1
 	ld a, 1
 	ld [wItemEffectSucceeded], a
+	push bc
 	push de
 		ld a, [wCurItem]
 		call GetItemIndexFromID
-		ld d, h
-		ld e, l
-		dec de
+		ld b, h
+		ld c, l
+		ld a, BANK(ItemEffects)
 		ld hl, ItemEffects
-		add hl, de
-		add hl, de
-		ld a, [hli]
-		ld h, [hl]
-		ld l, a
+		call LoadDoubleIndirectPointer
 	pop de
+	pop bc
 	jp hl
 
 ItemEffects:
 ; entries correspond to item ids
-	dw PokeBallEffect      ; MASTER_BALL
-	dw PokeBallEffect      ; ULTRA_BALL
-	dw NoEffect            ; BRIGHTPOWDER
-	dw PokeBallEffect      ; GREAT_BALL
-	dw PokeBallEffect      ; POKE_BALL
-	dw TownMapEffect       ; TOWN_MAP
-	dw BicycleEffect       ; BICYCLE
-	dw EvoStoneEffect      ; MOON_STONE
-	dw StatusHealingEffect ; ANTIDOTE
-	dw StatusHealingEffect ; BURN_HEAL
-	dw StatusHealingEffect ; ICE_HEAL
-	dw StatusHealingEffect ; AWAKENING
-	dw StatusHealingEffect ; PARLYZ_HEAL
-	dw FullRestoreEffect   ; FULL_RESTORE
-	dw RestoreHPEffect     ; MAX_POTION
-	dw RestoreHPEffect     ; HYPER_POTION
-	dw RestoreHPEffect     ; SUPER_POTION
-	dw RestoreHPEffect     ; POTION
-	dw EscapeRopeEffect    ; ESCAPE_ROPE
-	dw RepelEffect         ; REPEL
-	dw RestorePPEffect     ; MAX_ELIXER
-	dw EvoStoneEffect      ; FIRE_STONE
-	dw EvoStoneEffect      ; THUNDERSTONE
-	dw EvoStoneEffect      ; WATER_STONE
-	dw UseHoneyEffect      ; HONEY_POT
-	dw VitaminEffect       ; HP_UP
-	dw VitaminEffect       ; PROTEIN
-	dw VitaminEffect       ; IRON
-	dw VitaminEffect       ; CARBOS
-	dw NoEffect            ; LUCKY_PUNCH
-	dw VitaminEffect       ; CALCIUM
-	dw RareCandyEffect     ; RARE_CANDY
-	dw XAccuracyEffect     ; X_ACCURACY
-	dw EvoStoneEffect      ; LEAF_STONE
-	dw NoEffect            ; METAL_POWDER
-	dw NoEffect            ; NUGGET
-	dw PokeDollEffect      ; POKE_DOLL
-	dw StatusHealingEffect ; FULL_HEAL
-	dw ReviveEffect        ; REVIVE
-	dw ReviveEffect        ; MAX_REVIVE
-	dw XItemEffect         ; GUARD_SPEC
-	dw SuperRepelEffect    ; SUPER_REPEL
-	dw MaxRepelEffect      ; MAX_REPEL
-	dw DireHitEffect       ; DIRE_HIT
-	dw NoEffect            ; OAKS_PARCEL
-	dw RestoreHPEffect     ; FRESH_WATER
-	dw RestoreHPEffect     ; SODA_POP
-	dw RestoreHPEffect     ; LEMONADE
-	dw XItemEffect         ; X_ATTACK
-	dw NoEffect            ; SNAKESKIN
-	dw XItemEffect         ; X_DEFEND
-	dw XItemEffect         ; X_SPEED
-	dw XItemEffect         ; X_SPECIAL
-	dw CoinCaseEffect      ; COIN_CASE
-	dw ItemfinderEffect    ; ITEMFINDER
-	dw PokeFluteEffect     ; POKE_FLUTE
-	dw NoEffect            ; EXP_SHARE
-	dw OldRodEffect        ; OLD_ROD
-	dw GoodRodEffect       ; GOOD_ROD
-	dw NoEffect            ; SILVER_LEAF
-	dw SuperRodEffect      ; SUPER_ROD
-	dw RestorePPEffect     ; PP_UP
-	dw RestorePPEffect     ; ETHER
-	dw RestorePPEffect     ; MAX_ETHER
-	dw RestorePPEffect     ; ELIXER
-	dw NoEffect            ; RED_SCALE
-	dw NoEffect            ; SECRETPOTION
-	dw NoEffect            ; S_S_TICKET
-	dw NoEffect            ; ELMS_EGG
-	dw NoEffect            ; CLEAR_BELL
-	dw NoEffect            ; SILVER_WING
-	dw RestoreHPEffect     ; MOOMOO_MILK
-	dw NoEffect            ; QUICK_CLAW
-	dw StatusHealingEffect ; PSNCUREBERRY
-	dw NoEffect            ; GOLD_LEAF
-	dw NoEffect            ; SOFT_SAND
-	dw NoEffect            ; BLACK_FEATHER
-	dw StatusHealingEffect ; PRZCUREBERRY
-	dw StatusHealingEffect ; BURNT_BERRY
-	dw StatusHealingEffect ; ICE_BERRY
-	dw NoEffect            ; POISON_BARB
-	dw NoEffect            ; KINGS_ROCK
-	dw BitterBerryEffect   ; BITTER_BERRY
-	dw StatusHealingEffect ; MINT_BERRY
-	dw NoEffect            ; RED_APRICORN
-	dw NoEffect            ; TINYMUSHROOM
-	dw NoEffect            ; BIG_MUSHROOM
-	dw NoEffect            ; SILVERPOWDER
-	dw NoEffect            ; BLU_APRICORN
-	dw NoEffect            ; EARTHEN_CLAY
-	dw NoEffect            ; AMULET_COIN
-	dw NoEffect            ; YLW_APRICORN
-	dw NoEffect            ; GRN_APRICORN
-	dw NoEffect            ; CLEANSE_TAG
-	dw NoEffect            ; MYSTIC_WATER
-	dw NoEffect            ; TWISTEDSPOON
-	dw NoEffect            ; WHT_APRICORN
-	dw NoEffect            ; BLACKBELT
-	dw NoEffect            ; BLK_APRICORN
-	dw DiggingClawEffect   ; DIGGING_CLAW
-	dw NoEffect            ; PNK_APRICORN
-	dw NoEffect            ; BLACKGLASSES
-	dw NoEffect            ; SLOWPOKETAIL
-	dw NoEffect            ; PINK_BOW
-	dw NoEffect            ; STICK
-	dw NoEffect            ; SMOKE_BALL
-	dw NoEffect            ; NEVERMELTICE
-	dw NoEffect            ; MAGNET
-	dw StatusHealingEffect ; MIRACLEBERRY
-	dw NoEffect            ; PEARL
-	dw NoEffect            ; BIG_PEARL
-	dw NoEffect            ; EVERSTONE
-	dw NoEffect            ; SPELL_TAG
-	dw RestoreHPEffect     ; RAGECANDYBAR
-	dw NoEffect            ; GS_BALL
-	dw BlueCardEffect      ; BLUE_CARD
-	dw NoEffect            ; MIRACLE_SEED
-	dw NoEffect            ; THICK_CLUB
-	dw NoEffect            ; FOCUS_BAND
-	dw NoEffect            ; MYSTIC_PETAL
-	dw EnergypowderEffect  ; ENERGYPOWDER
-	dw EnergyRootEffect    ; ENERGY_ROOT
-	dw HealPowderEffect    ; HEAL_POWDER
-	dw RevivalHerbEffect   ; REVIVAL_HERB
-	dw NoEffect            ; HARD_STONE
-	dw NoEffect            ; LUCKY_EGG
-	dw CardKeyEffect       ; CARD_KEY
-	dw NoEffect            ; MACHINE_PART
-	dw NoEffect            ; EGG_TICKET
-	dw NoEffect            ; LOST_ITEM
-	dw NoEffect            ; STARDUST
-	dw NoEffect            ; STAR_PIECE
-	dw BasementKeyEffect   ; BASEMENT_KEY
-	dw NoEffect            ; PASS
-	dw NoEffect            ; WHITE_FEATHER
-	dw NoEffect            ; ELECTRIC_POUCH
-	dw NoEffect            ; CHARCOAL
-	dw RestoreHPEffect     ; BERRY_JUICE
-	dw NoEffect            ; SHARP_SCYTHE
-	dw NoEffect            ; FIRE_MANE
-	dw NoEffect            ; METAL_COAT
-	dw NoEffect            ; DRAGON_FANG
-	dw NoEffect            ; TWISTED_SPOON
-	dw NoEffect            ; LEFTOVERS
-	dw NoEffect            ; FOSSIL_SHARD
-	dw NoEffect            ; GROSS_GARBAGE
-	dw NoEffect            ; CHAMPIONBELT
-	dw RestorePPEffect     ; MYSTERYBERRY
-	dw NoEffect            ; DRAGON_SCALE
-	dw NoEffect            ; BERSERK_GENE
-	dw NoEffect            ; TAG
-	dw NoEffect            ; GUARD_THREAD
-	dw NoEffect            ; ICE_BIKINI
-	dw SacredAshEffect     ; SACRED_ASH
-	dw PokeBallEffect      ; HEAVY_BALL
-	dw NoEffect            ; FLOWER_MAIL
-	dw PokeBallEffect      ; LEVEL_BALL
-	dw PokeBallEffect      ; LURE_BALL
-	dw PokeBallEffect      ; FAST_BALL
-	dw NoEffect            ; LIGHT_BALL
-	dw NoEffect            ; WISDOM_ORB
-	dw PokeBallEffect      ; FRIEND_BALL
-	dw PokeBallEffect      ; MOON_BALL
-	dw PokeBallEffect      ; LOVE_BALL
-	dw NormalBoxEffect     ; NORMAL_BOX
-	dw GorgeousBoxEffect   ; GORGEOUS_BOX
-	dw EvoStoneEffect      ; SUN_STONE
-	dw NoEffect            ; POLKADOT_BOW
-	dw NoEffect            ; UP_GRADE
-	dw NoEffect            ; ODD_THREAD
-	dw RestoreHPEffect     ; APPLE
-	dw RestoreHPEffect     ; BERRY
-	dw SquirtbottleEffect  ; SQUIRTBOTTLE
-	dw PokeBallEffect      ; PARK_BALL
-	dw NoEffect            ; WATER TAIL
-	dw NoEffect            ; RAINBOW_WING
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect      ; FLEE_FEATHER
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw NoEffect
-	dw PokeBallEffect ; SAFARI_BALL
-	dw NoEffect       ; FUJIS_LETTER
-	dw NoEffect       ; WOBBLY_BLOON
-	dw PokeBallEffect ; DIRECT_BALL
-	dw PokeBallEffect ; NIGHT_BALL
-	dw NoEffect       ; ITEM_EE
-	dw NoEffect       ; ITEM_EF
-	dw NoEffect       ; ITEM_F0
-	dw NoEffect       ; ITEM_F1
-	dw NoEffect       ; ITEM_F2
-	dw NoEffect       ; ITEM_F3
-	dw NoEffect       ; ITEM_F4
-	dw NoEffect       ; ITEM_F5
-	dw NoEffect       ; ITEM_F6
-	dw NoEffect       ; ITEM_F7
-	dw NoEffect       ; ITEM_F8
-	dw NoEffect       ; ITEM_F9
-	dw NoEffect       ; ITEM_FA
-	dw NoEffect       ; ITEM_FB
-	dw NoEffect       ; ITEM_FC
-	dw NoEffect       ; ITEM_FD
-	dw NoEffect       ; ITEM_FE
-	dw NoEffect       ; ITEM_FF
-	dw NoEffect       ; ITEM_100
-	dw NoEffect       ; ITEM_101
-.End:
+	indirect_table 2, 1
+	indirect_entries NUM_ITEM_POCKET, ItemEffects1
+	indirect_entries FIRST_KEY_ITEM - 1 ; sparse table
+	indirect_entries NUM_KEY_ITEM_POCKET + (FIRST_KEY_ITEM - 1), ItemKeyEffects
+	indirect_entries FIRST_BALL_ITEM - 1 ; sparse table
+	indirect_entries NUM_BALL_ITEM_POCKET + (FIRST_BALL_ITEM - 1), ItemBallEffects
+	indirect_table_end
 
-_NUM_ITEM_FX = (ItemEffects.End  - ItemEffects)/2
+ItemEffects1:
+	dw NoEffect            ; BRIGHTPOWDER
+  dw EvoStoneEffect      ; MOON_STONE
+  dw StatusHealingEffect ; ANTIDOTE
+  dw StatusHealingEffect ; BURN_HEAL
+  dw StatusHealingEffect ; ICE_HEAL
+  dw StatusHealingEffect ; AWAKENING
+  dw StatusHealingEffect ; PARLYZ_HEAL
+  dw FullRestoreEffect   ; FULL_RESTORE
+  dw RestoreHPEffect     ; MAX_POTION
+  dw RestoreHPEffect     ; HYPER_POTION
+  dw RestoreHPEffect     ; SUPER_POTION
+  dw RestoreHPEffect     ; POTION
+  dw EscapeRopeEffect    ; ESCAPE_ROPE
+  dw RepelEffect         ; REPEL
+  dw RestorePPEffect     ; MAX_ELIXER
+  dw EvoStoneEffect      ; FIRE_STONE
+  dw EvoStoneEffect      ; THUNDERSTONE
+  dw EvoStoneEffect      ; WATER_STONE
+  dw VitaminEffect       ; HP_UP
+  dw VitaminEffect       ; PROTEIN
+  dw VitaminEffect       ; IRON
+  dw VitaminEffect       ; CARBOS
+  dw NoEffect            ; LUCKY_PUNCH
+  dw VitaminEffect       ; CALCIUM
+  dw RareCandyEffect     ; RARE_CANDY
+  dw XAccuracyEffect     ; X_ACCURACY
+  dw EvoStoneEffect      ; LEAF_STONE
+  dw NoEffect            ; METAL_POWDER
+  dw NoEffect            ; NUGGET
+  dw PokeDollEffect      ; POKE_DOLL
+  dw StatusHealingEffect ; FULL_HEAL
+  dw ReviveEffect        ; REVIVE
+  dw ReviveEffect        ; MAX_REVIVE
+  dw XItemEffect         ; GUARD_SPEC
+  dw SuperRepelEffect    ; SUPER_REPEL
+  dw MaxRepelEffect      ; MAX_REPEL
+  dw DireHitEffect       ; DIRE_HIT
+  dw RestoreHPEffect     ; FRESH_WATER
+  dw RestoreHPEffect     ; SODA_POP
+  dw RestoreHPEffect     ; LEMONADE
+  dw XItemEffect         ; X_ATTACK
+  dw NoEffect            ; SNAKESKIN
+  dw XItemEffect         ; X_DEFEND
+  dw XItemEffect         ; X_SPEED
+  dw XItemEffect         ; X_SPECIAL
+  dw NoEffect            ; EXP_SHARE
+  dw NoEffect            ; SILVER_LEAF
+  dw RestorePPEffect     ; PP_UP
+  dw RestorePPEffect     ; ETHER
+  dw RestorePPEffect     ; MAX_ETHER
+  dw RestorePPEffect     ; ELIXER
+  dw RestoreHPEffect     ; MOOMOO_MILK
+  dw NoEffect            ; QUICK_CLAW
+  dw StatusHealingEffect ; PSNCUREBERRY
+  dw NoEffect            ; GOLD_LEAF
+  dw NoEffect            ; SOFT_SAND
+  dw NoEffect            ; BLACK_FEATHER
+  dw StatusHealingEffect ; PRZCUREBERRY
+  dw StatusHealingEffect ; BURNT_BERRY
+  dw StatusHealingEffect ; ICE_BERRY
+  dw NoEffect            ; TOXIC_NEEDLE
+  dw NoEffect            ; KINGS_ROCK
+  dw BitterBerryEffect   ; BITTER_BERRY
+  dw StatusHealingEffect ; MINT_BERRY
+  dw NoEffect            ; RED_APRICORN
+  dw NoEffect            ; CORDYCEPS
+  dw NoEffect            ; BIG_MUSHROOM
+  dw NoEffect            ; SILVERPOWDER
+  dw NoEffect            ; BLU_APRICORN
+  dw NoEffect            ; EARTHEN_CLAY
+  dw NoEffect            ; AMULET_COIN
+  dw NoEffect            ; YLW_APRICORN
+  dw NoEffect            ; GRN_APRICORN
+  dw NoEffect            ; CLEANSE_TAG
+  dw NoEffect            ; AQUA_HORN
+  dw NoEffect            ; MIGRAINE_SEED
+  dw NoEffect            ; WHT_APRICORN
+  dw NoEffect            ; BLACKBELT
+  dw NoEffect            ; BLK_APRICORN
+  dw DiggingClawEffect   ; DIGGING_CLAW
+  dw NoEffect            ; PNK_APRICORN
+  dw NoEffect            ; BLACKGLASSES
+  dw NoEffect            ; SLOWPOKETAIL
+  dw NoEffect            ; PINK_BOW
+  dw NoEffect            ; STICK
+  dw NoEffect            ; ICE_FANG
+  dw NoEffect            ; THUNDER_FANG
+  dw StatusHealingEffect ; MIRACLEBERRY
+  dw NoEffect            ; PEARL
+  dw NoEffect            ; BIG_PEARL
+  dw NoEffect            ; EVERSTONE
+  dw NoEffect            ; SPELL_TAG
+  dw RestoreHPEffect     ; RAGECANDYBAR
+  dw NoEffect            ; MIRACLE_SEED
+  dw NoEffect            ; THICK_CLUB
+  dw NoEffect            ; FOCUS_ORB
+  dw NoEffect            ; MYSTIC_PETAL
+  dw EnergypowderEffect  ; ENERGYPOWDER
+  dw EnergyRootEffect    ; ENERGY_ROOT
+  dw HealPowderEffect    ; HEAL_POWDER
+  dw RevivalHerbEffect   ; REVIVAL_HERB
+  dw NoEffect            ; HARD_STONE
+  dw NoEffect            ; LUCKY_EGG
+  dw NoEffect            ; STARDUST
+  dw NoEffect            ; STAR_PIECE
+  dw NoEffect            ; WHITE_FEATHER
+  dw NoEffect            ; ELECTRIC_POUCH
+  dw NoEffect            ; CHARCOAL
+  dw RestoreHPEffect     ; BERRY_JUICE
+  dw NoEffect            ; SHARP_SCYTHE
+  dw NoEffect            ; FIRE_MANE
+  dw NoEffect            ; METAL_COAT
+  dw NoEffect            ; DRAGON_FANG
+  dw NoEffect            ; TWISTED_SPOON
+  dw NoEffect            ; LEFTOVERS
+  dw NoEffect            ; FOSSIL_SHARD
+  dw NoEffect            ; GROSS_GARBAGE
+  dw NoEffect            ; CHAMPIONBELT
+  dw RestorePPEffect     ; MYSTERYBERRY
+  dw NoEffect            ; DRAGON_SCALE
+  dw NoEffect            ; BERSERK_GENE
+  dw NoEffect            ; TAG
+  dw NoEffect            ; GUARD_THREAD
+  dw NoEffect            ; ICE_BIKINI
+  dw SacredAshEffect     ; SACRED_ASH
+  dw NoEffect            ; FLOWER_MAIL
+  dw NoEffect            ; WISDOM_ORB
+  dw NormalBoxEffect     ; NORMAL_BOX
+  dw GorgeousBoxEffect   ; GORGEOUS_BOX
+  dw EvoStoneEffect      ; SUN_STONE
+  dw NoEffect            ; POLKADOT_BOW
+  dw NoEffect            ; ODD_THREAD
+  dw NoEffect            ; UP_GRADE
+  dw RestoreHPEffect     ; BERRY
+  dw RestoreHPEffect     ; APPLE
+  dw NoEffect            ; WATER_TAIL
+  dw NoEffect            ; COUNTERCUFF
+  dw NoEffect            ; BRICK_PIECE
+  dw NoEffect            ; SURF_MAIL
+  dw NoEffect            ; LITEBLUEMAIL
+  dw NoEffect            ; PORTRAITMAIL
+  dw NoEffect            ; LOVELY_MAIL
+  dw NoEffect            ; EON_MAIL
+  dw NoEffect            ; MORPH_MAIL
+  dw NoEffect            ; BLUESKY_MAIL
+  dw NoEffect            ; MUSIC_MAIL
+  dw NoEffect            ; MIRAGE_MAIL
+  dw NoEffect            ; PRETTY_TAIL
+  dw NoEffect            ; BURST_ORB
+  dw NoEffect            ; HIDDEN_NEEDLE
+  dw NoEffect            ; SHARP_HORN
+  dw NoEffect            ; HEART_STONE
+  dw NoEffect            ; POISON_STONE
+  dw NoEffect            ; DETECT_ORB
+  dw NoEffect            ; LONG_TONGUE
+  dw NoEffect            ; LONG_VINE
+  dw NoEffect            ; ICE_WING
+  dw NoEffect            ; THUNDER_WING
+  dw NoEffect            ; FIRE_WING
+  dw NoEffect            ; FIRE_TAIL
+  dw NoEffect            ; THUNDER_TAIL
+  dw NoEffect            ; CALM_SEED
+  dw NoEffect            ; SPOON
+  dw NoEffect            ; PEBBLE
+  dw NoEffect            ; BIG_STONE
+  dw NoEffect            ; TORN_COLLAR
+  dw NoEffect            ; CRUSHED_TIRE
+  dw NoEffect            ; TINY_SCALES
+  dw NoEffect            ; STEEL_SCALES
+  dw NoEffect            ; MYSTIC_TAG
+  dw NoEffect            ; FLEE_FEATHER
+  dw NoEffect            ; CRANIDOS_FOSSIL
+  dw NoEffect            ; MYSTIC_WATER
+  dw NoEffect            ; CONFUSE_CLAW
+  dw NoEffect            ; STEEL_SHELL
+  dw NoEffect            ; FIVE_YEN_COIN
+  dw NoEffect            ; LIFE_TAG
+  dw NoEffect            ; STRANGE_POWDER
+  dw NoEffect            ; BUG_FLYING_FOSSIL
+  dw NoEffect            ; SKELEBRO_FOSSIL
+  dw NoEffect            ; INVISIBLE_WALL
+  dw NoEffect            ; SKATEBOARD
+  dw NoEffect            ; MOMS_LOVE
+  dw NoEffect            ; MYSTIC_THREAD
+  dw NoEffect            ; MYSTIC_NEEDLE
+  dw NoEffect            ; FUJIS_LETTER
+  dw NoEffect            ; WOBBLY_BLOON
+
+ItemKeyEffects:
+  dw TownMapEffect       ; TOWN_MAP
+  dw BicycleEffect       ; BICYCLE
+  dw UseHoneyEffect      ; HONEY_POT
+  dw NoEffect            ; OAKS_PARCEL
+  dw CoinCaseEffect      ; COIN_CASE
+  dw ItemfinderEffect    ; ITEMFINDER
+  dw PokeFluteEffect     ; POKE_FLUTE
+  dw OldRodEffect        ; OLD_ROD
+  dw GoodRodEffect       ; GOOD_ROD
+  dw SuperRodEffect      ; SUPER_ROD
+  dw NoEffect            ; RED_SCALE
+  dw NoEffect            ; SECRETPOTION
+  dw NoEffect            ; S_S_TICKET
+  dw NoEffect            ; ELMS_EGG
+  dw NoEffect            ; CLEAR_BELL
+  dw NoEffect            ; SILVER_WING
+  dw NoEffect            ; GS_BALL
+  dw BlueCardEffect      ; BLUE_CARD
+  dw CardKeyEffect       ; CARD_KEY
+  dw NoEffect            ; MACHINE_PART
+  dw NoEffect            ; EGG_TICKET
+  dw NoEffect            ; LOST_ITEM
+  dw BasementKeyEffect   ; BASEMENT_KEY
+  dw NoEffect            ; PASS
+  dw SquirtbottleEffect  ; SQUIRTBOTTLE
+  dw NoEffect            ; RAINBOW_WING
+  dw NoEffect            ; VOUCHER
+  dw NoEffect            ; TICKLE_STICK
+  dw NoEffect            ; HEAVY_AMBER
+  dw NoEffect            ; TOXIC_AMBER
+  dw NoEffect            ; OLD_AMBER
+  dw NoEffect            ; DOME_FOSSIL
+  dw NoEffect            ; HELIX_FOSSIL
+
+ItemBallEffects:
+  dw PokeBallEffect      ; MASTER_BALL
+  dw PokeBallEffect      ; ULTRA_BALL
+  dw PokeBallEffect      ; GREAT_BALL
+  dw PokeBallEffect      ; POKE_BALL
+  dw PokeBallEffect      ; SAFARI_BALL
+  dw PokeBallEffect      ; DIRECT_BALL
+  dw PokeBallEffect      ; NIGHT_BALL
+  dw PokeBallEffect      ; PARK_BALL
+  dw NoEffect            ; SMOKE_BALL
+  dw PokeBallEffect      ; HEAVY_BALL
+  dw PokeBallEffect      ; LEVEL_BALL
+  dw PokeBallEffect      ; LURE_BALL
+  dw PokeBallEffect      ; FAST_BALL
+  dw NoEffect            ; LIGHT_BALL
+  dw PokeBallEffect      ; FRIEND_BALL
+  dw PokeBallEffect      ; MOON_BALL
+  dw PokeBallEffect      ; LOVE_BALL
 
 PokeBallEffect:
 	ld a, [wBattleMode]
@@ -496,12 +484,14 @@ PokeBallEffect:
 	call DelayFrames
 
 	ld a, [wCurItem]
+	ld [wBattleAnimParam], a
 	call GetItemIndexFromID
 	cphl16 POKE_BALL + 1 ; Assumes Master/Ultra/Great come before
 	jr c, .not_kurt_ball
-	ld a, POKE_BALL
-.not_kurt_ball
+	ld hl, POKE_BALL
+	call GetItemIDFromIndex
 	ld [wBattleAnimParam], a
+.not_kurt_ball
 
 	ld de, ANIM_THROW_POKE_BALL
 	ld a, e
@@ -1276,7 +1266,10 @@ EvoStoneEffect:
 	call GetPartyParamLocation
 
 	ld a, [hl]
-	cp EVERSTONE
+	push hl
+		call GetItemIndexFromID
+		cphl16 EVERSTONE
+	pop hl
 	jr z, .NoEffect
 
 	ld a, $1
@@ -1619,18 +1612,18 @@ HealStatus:
 
 GetItemHealingAction:
 	push hl
+	push de
 		ld hl, StatusHealingActions
+		ld de, 4
 .next
-; still no bounds checking here, bub
 		call GetItemIDFromHL
+		and a
+		jr z, .found_it ; NO_ITEM bound check
 		ld b, a
 		ld a, [wCurItem]
 		cp b
 		jr z, .found_it
-		inc hl
-		inc hl
-		inc hl
-		inc hl
+		add hl, de
 		jr .next
 .found_it
 		inc hl
@@ -1640,6 +1633,7 @@ GetItemHealingAction:
 		ld a, [hl]
 		ld c, a
 		cp %11111111
+	pop de
 	pop hl
 	ret
 
@@ -1709,7 +1703,7 @@ RevivePokemon:
 	ld [wLowHealthAlarm], a
 	ld a, [wCurItem]
 	push hl
-		call GetItemIDFromIndex
+		call GetItemIndexFromID
 		cphl16 REVIVE
 	pop hl
 	jr z, .revive_half_hp
@@ -2588,7 +2582,7 @@ ItemfinderEffect:
 
 RestorePPEffect:
 	ld a, [wCurItem]
-	ld [wd002], a
+	ld [wTempRestorePPItem], a
 
 .loop
 	; Party Screen opens to choose on which mon to use the Item
@@ -2597,17 +2591,21 @@ RestorePPEffect:
 	jp c, PPRestoreItem_Cancel
 
 .loop2
-	ld a, [wd002]
+	ld a, [wTempRestorePPItem]
+	push hl
 	call GetItemIndexFromID
 	cphl16 MAX_ELIXER
+	pop hl
 	jp z, Elixer_RestorePPofAllMoves
 	cphl16 ELIXER
 	jp z, Elixer_RestorePPofAllMoves
 
 	ld hl, TextJump_RaiseThePPOfWhichMove
-	ld a, [wd002]
+	ld a, [wTempRestorePPItem]
+	push hl
 	call GetItemIndexFromID
 	cphl16 PP_UP
+	pop hl
 	jr z, .ppup
 	ld hl, TextJump_RestoreThePPOfWhichMove
 
@@ -2637,9 +2635,11 @@ RestorePPEffect:
 	call CopyName1
 	pop hl
 
-	ld a, [wd002]
+	ld a, [wTempRestorePPItem]
+	push hl
 	call GetItemIndexFromID
 	cphl16 PP_UP
+	pop hl
 	jp nz, Not_PP_Up
 
 	ld a, [hl]
@@ -2800,15 +2800,25 @@ RestorePP:
 	cp b
 	jr nc, .dont_restore
 
-	ld a, [wd002]
+	ld a, [wTempRestorePPItem]
+	push hl
 	call GetItemIndexFromID
 	cphl16 MAX_ELIXER
+	pop hl
 	jr z, .restore_all
+	ld a, [wTempRestorePPItem]
+	push hl
+	call GetItemIndexFromID
 	cphl16 MAX_ETHER
+	pop hl
 	jr z, .restore_all
 
 	ld c, 5
+	ld a, [wTempRestorePPItem]
+	push hl
+	call GetItemIndexFromID
 	cp MYSTERYBERRY
+	pop hl
 	jr z, .restore_some
 
 	ld c, 10

@@ -1391,7 +1391,7 @@ wCurSpecies:: db ; cf60
 
 wNamedObjectTypeBuffer:: db
 
-	ds 1
+wItemFlags:: db
 
 wJumptableIndex::
 wBattleTowerBattleEnded::
@@ -1667,6 +1667,10 @@ UNION ; d002
 ; mail temp storage
 wTempMail:: mailmsg wTempMail
 
+NEXTU
+
+wTempRestorePPItem:: db
+
 NEXTU ; d002
 ; poke seer
 wSeerAction:: db
@@ -1859,7 +1863,7 @@ NEXTU ; d03e
 ; hidden item data
 wHiddenItemData::
 wHiddenItemEvent:: dw
-wHiddenItemID:: db
+wHiddenItemID:: dw
 wHiddenItemDataEnd::
 
 NEXTU ; d03e
@@ -2279,8 +2283,6 @@ wCurBaseDataEnd::
 
 wCurDamage:: dw ; d256
 
-	ds 2
-
 wMornEncounterRate::  db ; d25a
 wDayEncounterRate::   db ; d25b
 wNiteEncounterRate::  db ; d25c
@@ -2360,7 +2362,7 @@ NEXTU ; d288
 ; catch tutorial dude pack
 wDudeBag::
 wDudeNumItems:: db
-wDudeItems:: ds 2 * 4
+wDudeItems:: ds 2 * 3
 wDudeItemsEnd:: db
 
 wDudeNumKeyItems:: db ; d292
@@ -2368,7 +2370,7 @@ wDudeKeyItems:: ds 18
 wDudeKeyItemsEnd:: db
 
 wDudeNumBalls:: db ; d2a6
-wDudeBalls:: ds 2 * 4 ; d2a7
+wDudeBalls:: ds 2 * 3 ; d2a7
 wDudeBallsEnd:: db ; d2af
 wDudeBagEnd::
 ENDU ; d430
@@ -2604,7 +2606,7 @@ wTMsHMs:: ; d859
 wTMsHMsEnd::
 
 wNumItems:: db ; d892
-wItems:: ds MAX_ITEMS * 2 + 1 ; d893
+wItems:: ds MAX_ITEMS * 3 + 1 ; d893
 wItemsEnd::
 
 wNumKeyItems:: db ; d8bc
@@ -2616,7 +2618,7 @@ wBalls:: ds MAX_BALLS * 2 + 1 ; d8d8
 wBallsEnd::
 
 wNumPCItems:: db
-wPCItems:: ds MAX_PC_ITEMS * 2 + 1 ; d8f1
+wPCItems:: ds MAX_PC_ITEMS * 3 + 1 ; d8f1
 wPCItemsEnd::
 
 wPokegearFlags::

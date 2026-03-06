@@ -37,6 +37,76 @@ PlaceMenuItemQuantity:
 .done
 	ret
 
+PlaceMenuItemBallName:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_BALL_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wNamedObjectIndex], a
+	call GetItemName
+	pop hl
+	call PlaceString
+	ret
+
+PlaceMenuItemBallQuantity:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_BALL_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wCurItem], a
+	farcall _CheckTossableItem
+	ld a, [wItemAttributeValue]
+	pop hl
+	and a
+	jr nz, .done
+	ld de, $15
+	add hl, de
+	ld [hl], '×'
+	inc hl
+	ld de, wMenuSelectionQuantity
+	lb bc, 1, 2
+	call PrintNum
+
+.done
+	ret
+
+PlaceMenuKeyItemName:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_KEY_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wNamedObjectIndex], a
+	call GetItemName
+	pop hl
+	call PlaceString
+	ret
+
+PlaceMenuKeyItemQuantity:
+	push de
+	ld a, [wMenuSelection]
+	ld h, HIGH(FIRST_KEY_ITEM)
+	ld l, a
+	call GetItemIDFromIndex
+	ld [wCurItem], a
+	farcall _CheckTossableItem
+	ld a, [wItemAttributeValue]
+	pop hl
+	and a
+	jr nz, .done
+	ld de, $15
+	add hl, de
+	ld [hl], '×'
+	inc hl
+	ld de, wMenuSelectionQuantity
+	lb bc, 1, 2
+	call PrintNum
+
+.done
+	ret
+
 PlaceMoneyTopRight:
 	ld hl, MenuHeader_0x24b15
 	call CopyMenuHeader

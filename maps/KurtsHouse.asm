@@ -4,11 +4,31 @@
 	const KURTSHOUSE_TWIN1
 	const KURTSHOUSE_TWIN2
 
+	const_def 1 ; locked item table entries
+	const KURTSHOUSE_INDEX_RED_APRICORN
+	const KURTSHOUSE_INDEX_BLU_APRICORN
+	const KURTSHOUSE_INDEX_YLW_APRICORN
+	const KURTSHOUSE_INDEX_GRN_APRICORN
+	const KURTSHOUSE_INDEX_WHT_APRICORN
+	const KURTSHOUSE_INDEX_BLK_APRICORN
+	const KURTSHOUSE_INDEX_PNK_APRICORN
+
 KurtsHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .LoadReservedIDs
 	callback MAPCALLBACK_OBJECTS, .PlaceKurtAppropriately
+
+.LoadReservedIDs:
+	loaditemindex KURTSHOUSE_INDEX_RED_APRICORN, BLU_APRICORN
+	loaditemindex KURTSHOUSE_INDEX_BLU_APRICORN, BLU_APRICORN
+	loaditemindex KURTSHOUSE_INDEX_YLW_APRICORN, YLW_APRICORN
+	loaditemindex KURTSHOUSE_INDEX_GRN_APRICORN, GRN_APRICORN
+	loaditemindex KURTSHOUSE_INDEX_WHT_APRICORN, WHT_APRICORN
+	loaditemindex KURTSHOUSE_INDEX_BLK_APRICORN, BLK_APRICORN
+	loaditemindex KURTSHOUSE_INDEX_PNK_APRICORN, PNK_APRICORN
+	endcallback
 
 .PlaceKurtAppropriately:
 ; kurt and maizie around main chair
@@ -431,7 +451,7 @@ KurtHouseScript:
 	iftrue .GiveLoveBall
 ; prompts for apricorn
 	writetext .KurtPromptsApricorn
-	buttonsound
+buttonsound
 
 	checkitem RED_APRICORN
 	iftrue .which_apricorn
@@ -453,6 +473,7 @@ KurtHouseScript:
 .which_apricorn
 ; ask apricorn
 	special SelectApricornForKurt
+	checkmaplockeditems
 	ifequal16 0, .no_apricorns
 	ifequal16 BLU_APRICORN, .Blu
 	ifequal16 YLW_APRICORN, .Ylw

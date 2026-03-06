@@ -82,7 +82,10 @@ GiveOddEgg:
 	dec c
 	jr nz, .move_loop
 
+	push hl
 	ld a, EGG_TICKET
+	call GetItemIDFromIndex
+	pop hl
 	ld [wCurItem], a
 	ld a, 1
 	ld [wItemQuantityChangeBuffer], a

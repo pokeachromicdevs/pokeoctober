@@ -129,7 +129,8 @@ ItemTableGarbageCollection:
 	push af
 
 ; init used items bitmap
-	___conversion_bitmap_initialize wItemIndexTable, ITEM_TABLE, .set_bit
+	___conversion_bitmap_initialize \
+		wItemIndexTable, ITEM_TABLE, .set_bit
 
 ; goto where items are used
 	ld a, 1
@@ -137,53 +138,48 @@ ItemTableGarbageCollection:
 
 ; check structs
 	; held items
-	___conversion_bitmap_check_structs wPartyMons + (wPartyMon1Item - wPartyMon1), PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, .set_bit
-	___conversion_bitmap_check_structs wOTPartyMons + (wOTPartyMon1Item - wOTPartyMon1), PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, .set_bit
-
-; --bag items--
-
-	; items pocket
-___item = 0
-	rept MAX_ITEMS
-	___conversion_bitmap_check_values .set_bit, wItems + (___item * 2)
-___item = ___item + 1
-	endr
-	
-	; key items pocket
-___item = 0
-	rept MAX_KEY_ITEMS
-	___conversion_bitmap_check_values .set_bit, wKeyItems + ___item
-___item = ___item + 1
-	endr
-	
-	; balls pocket
-___item = 0
-	rept MAX_BALLS
-	___conversion_bitmap_check_values .set_bit, wBalls + (___item * 2)
-___item = ___item + 1
-	endr
-	
-	; pc items
-___item = 0
-	rept MAX_PC_ITEMS
-	___conversion_bitmap_check_values .set_bit, wPCItems + (___item * 2)
-___item = ___item + 1
-	endr
+	___conversion_bitmap_check_structs \
+		wPartyMons + (wPartyMon1Item - wPartyMon1), \
+		PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, \
+		.set_bit
+	___conversion_bitmap_check_structs \
+		wOTPartyMons + (wOTPartyMon1Item - wOTPartyMon1), \
+		PARTYMON_STRUCT_LENGTH, PARTY_LENGTH, \
+		.set_bit
 
 ; check individual variables
 	___conversion_bitmap_check_values .set_bit, \
-		wSwitchItem, wPackUsedItem, wTempMonItem, wMartItemID, \
-		wCurItem, wEnemyMonItem, wBattleMonItem, wWhichMomItem, \
-		wItemBallItemID, wContestMonItem
+		wSwitchItem, \
+		wPackUsedItem, \
+		wTempMonItem, \
+		wMartItemID, \
+		wCurItem, \
+		wEnemyMonItem, \
+		wBattleMonItem, \
+		wWhichMomItem, \
+		wItemBallItemID, \
+		wContestMonItem
 
 ; battle tower stuff should be here but this ROM hack doesn't care
 
 	ld a, BANK(wItemIndexTable)
 	ldh [rSVBK], a
-	___conversion_bitmap_free_unused wItemIndexTable, ITEM_TABLE
+	___conversion_bitmap_free_unused \
+		wItemIndexTable, ITEM_TABLE
 
 	pop af
 	ldh [rSVBK], a
+
+; now for the save data
+	call OpenSRAM
+	ldh a, [hSRAMBank]
+	push af
+		ld a, BANK(sBox)
+		___conversion_bitmap_check_structs \
+			sBoxMon1Item,
+			BOXMON_STRUCT_LENGTH, MONS_PER_BOX, \
+		.set_bit
+	pop af
 
 	pop de
 	ret

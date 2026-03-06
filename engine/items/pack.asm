@@ -13,6 +13,8 @@
 	const PACKSTATE_QUITRUNSCRIPT      ; 10
 
 Pack:
+	ld hl, wItemFlags
+	set IN_BAG_F, [hl]
 	ld hl, wOptions
 	set NO_TEXT_SCROLL, [hl]
 	call InitPackBuffers
@@ -30,6 +32,8 @@ Pack:
 	ld [wLastPocket], a
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
+	ld hl, wItemFlags
+	res IN_BAG_F, [hl]
 	ret
 
 .RunJumptable:
@@ -595,6 +599,8 @@ QuitItemSubmenu:
 	ret
 
 BattlePack:
+	ld hl, wItemFlags
+	set IN_BAG_F, [hl]
 	ld hl, wOptions
 	set NO_TEXT_SCROLL, [hl]
 	call InitPackBuffers
@@ -612,6 +618,8 @@ BattlePack:
 	ld [wLastPocket], a
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
+	ld hl, wItemFlags
+	res IN_BAG_F, [hl]
 	ret
 
 .RunJumptable:
@@ -1036,6 +1044,8 @@ DepositSellTutorial_InterpretJoypad:
 	ret
 
 TutorialPack:
+	ld hl, wItemFlags
+	set IN_BAG_F, [hl]
 	call DepositSellInitPackBuffers
 	ld a, [wInputType]
 	or a
@@ -1047,6 +1057,8 @@ TutorialPack:
 	jr c, .loop
 	xor a ; FALSE
 	ld [wPackUsedItem], a
+	ld hl, wItemFlags
+	res IN_BAG_F. [hl]
 	ret
 
 .RunJumptable:
@@ -1098,9 +1110,9 @@ TutorialPack:
 	db 5, 8 ; rows, columns
 	db 1 ; horizontal spacing
 	dbw 0, wDudeNumKeyItems
-	dba PlaceMenuItemName
-	dba PlaceMenuItemQuantity
-	dba UpdateItemDescription
+	dba PlaceMenuKeyItemName
+	dba PlaceMenuKeyItemQuantity
+	dba UpdateKeyItemDescription
 
 .TMHM:
 	ld a, TM_HM_POCKET
@@ -1127,9 +1139,9 @@ TutorialPack:
 	db 5, 8 ; rows, columns
 	db 2 ; horizontal spacing
 	dbw 0, wDudeNumBalls
-	dba PlaceMenuItemName
-	dba PlaceMenuItemQuantity
-	dba UpdateItemDescription
+	dba PlaceMenuBallItemName
+	dba PlaceMenuBallItemQuantity
+	dba UpdateBallItemDescription
 
 .DisplayPocket:
 	push hl
@@ -1445,7 +1457,7 @@ ItemsPocketMenuHeader:
 .MenuData:
 	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
 	db 5, 8 ; rows, columns
-	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
+	db SCROLLINGMENU_ITEMS_16_QUANTITY ; item format
 	dbw 0, wNumItems
 	dba PlaceMenuItemName
 	dba PlaceMenuItemQuantity
@@ -1478,9 +1490,9 @@ KeyItemsPocketMenuHeader:
 	db 5, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_NORMAL ; item format
 	dbw 0, wNumKeyItems
-	dba PlaceMenuItemName
-	dba PlaceMenuItemQuantity
-	dba UpdateItemDescription
+	dba PlaceMenuKeyItemName
+	dba PlaceMenuKeyItemQuantity
+	dba UpdateKeyItemDescription
 
 PC_Mart_KeyItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -1493,9 +1505,9 @@ PC_Mart_KeyItemsPocketMenuHeader:
 	db 5, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_NORMAL ; item format
 	dbw 0, wNumKeyItems
-	dba PlaceMenuItemName
-	dba PlaceMenuItemQuantity
-	dba UpdateItemDescription
+	dba PlaceMenuKeyItemName
+	dba PlaceMenuKeyItemQuantity
+	dba UpdateKeyItemDescription
 
 BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -1509,9 +1521,9 @@ BallsPocketMenuHeader:
 	db 5, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumBalls
-	dba PlaceMenuItemName
-	dba PlaceMenuItemQuantity
-	dba UpdateItemDescription
+	dba PlaceMenuBallItemName
+	dba PlaceMenuBallItemQuantity
+	dba UpdateBallItemDescription
 
 PC_Mart_BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -1524,9 +1536,9 @@ PC_Mart_BallsPocketMenuHeader:
 	db 5, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumBalls
-	dba PlaceMenuItemName
-	dba PlaceMenuItemQuantity
-	dba UpdateItemDescription
+	dba PlaceMenuBallItemName
+	dba PlaceMenuBallItemQuantity
+	dba UpdateBallItemDescription
 
 Text_PackNoItems:
 	; No items.

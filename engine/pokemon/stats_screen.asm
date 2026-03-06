@@ -709,9 +709,6 @@ StatsScreen_LoadGFX:
 	ld a, [wTempMonItem]
 	and a
 	ret z
-	ld b, a
-	farcall TimeCapsule_ReplaceTeruSama
-	ld a, b
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ret

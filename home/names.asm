@@ -167,11 +167,32 @@ GetItemName::
 	ld a, [wNamedObjectIndexBuffer]
 	call GetItemIndexFromID
 
-	dec hl
+	push hl
+		ld b, h
+		ld c, l
+	pop hl
+
+	cphl16 FIRST_BALL_ITEM
+	jr nc, .Balls
+	cphl16 FIRST_KEY_ITEM
+	jr nc, .Key_Items
+	dec bc
+	ld hl, ItemNames
+	jr .get_nth_string_16
+.Key_Items
+	ld hl, -(FIRST_KEY_ITEM)
+	add hl, bc
 	ld b, h
 	ld c, l
-
-	ld hl, ItemNames
+	ld hl, KeyItemNames
+	jr .get_nth_string_16
+.Balls
+	ld hl, -(FIRST_BALL_ITEM)
+	add hl, bc
+	ld b, h
+	ld c, l
+	ld hl, BallNames
+.get_nth_string_16
 	call GetNthString16
 
 	ld de, wStringBuffer1
@@ -180,6 +201,7 @@ GetItemName::
 		call CopyBytes
 	pop de
 
+.done
 	pop af
 	rst Bankswitch
 

@@ -16,7 +16,7 @@ SwitchItemsInBag:
 	dec a
 	ld [wSwitchItem], a
 	call Function249a7
-	jp c, Function249d1
+	jp c, .combine_stacks
 	ld a, [wScrollingMenuCursorPosition]
 	ld c, a
 	ld a, [wSwitchItem]
@@ -91,18 +91,22 @@ Function249a7:
 	ld e, l
 	ld a, [wScrollingMenuCursorPosition]
 	call ItemSwitch_GetNthItem
+	ld a, [wMenuData_ScrollingMenuItemFormat]
+	cp SCROLLINGMENU_ITEMS_16_QUANTITY
+	jr z, .try_combining_stacks_handle_16_bit
 	ld a, [de]
 	cp [hl]
-	jr nz, .asm_249cd
+	jr nz, .no_combine
+.check_stack_combine
 	ld a, [wScrollingMenuCursorPosition]
-	call Function24a97
+	call ItemSwitch_GetItemQuantity
 	cp 99
-	jr z, .asm_249cd
+	jr z, .no_combine
 	ld a, [wSwitchItem]
-	call Function24a97
+	call ItemSwitch_GetItemQuantity
 	cp 99
 	jr nz, .asm_249cf
-.asm_249cd
+.no_combine
 	and a
 	ret
 
@@ -110,19 +114,28 @@ Function249a7:
 	scf
 	ret
 
-Function249d1:
-	ld a, [wSwitchItem]
-	call ItemSwitch_GetNthItem
+.try_combining_stacks_handle_16_bit
+	ld a, [de]
+	cp [hl]
+	jr nz, .no_combine
+	inc de
 	inc hl
+	ld a, [de]
+	cp [hl]
+	jr nz, .no_combine
+	jr .check_stack_combine
+
+.combine_stacks:
+	ld a, [wSwitchItem]
+	call ItemSwitch_GetItemQuantityPointer
 	push hl
 	ld a, [wScrollingMenuCursorPosition]
-	call ItemSwitch_GetNthItem
-	inc hl
+	call ItemSwitch_GetItemQuantityPointer
 	ld a, [hl]
 	pop hl
 	add [hl]
 	cp 100
-	jr c, .asm_24a01
+	jr c, .merge_stacks
 	sub 99
 	push af
 	ld a, [wScrollingMenuCursorPosition]
@@ -130,19 +143,17 @@ Function249d1:
 	inc hl
 	ld [hl], 99
 	ld a, [wSwitchItem]
-	call ItemSwitch_GetNthItem
-	inc hl
+	call ItemSwitch_GetItemQuantityPointer
 	pop af
 	ld [hl], a
 	xor a
 	ld [wSwitchItem], a
 	ret
 
-.asm_24a01
+.merge_stacks
 	push af
 	ld a, [wScrollingMenuCursorPosition]
-	call ItemSwitch_GetNthItem
-	inc hl
+	call ItemSwitch_GetItemQuantityPointer
 	pop af
 	ld [hl], a
 	ld hl, wMenuData_ItemsPointerAddr
@@ -240,25 +251,54 @@ ItemSwitch_ConvertItemFormatToDW:
 	ret
 
 .format_dws
-	dw 0
-	dw 1
-	dw 2
+	dw 0 ; unused
+	dw 1 ; SCROLLINGMENU_ITEMS_NORMAL
+	dw 2 ; SCROLLINGMENU_ITEMS_QUANTITY
+	dw 3 ; SCROLLINGMENU_ITEMS_16BIT_QUANTITY
 
-Function24a97:
+ItemSwitch_GetItemQuantity:
 	push af
 	call ItemSwitch_ConvertItemFormatToDW
 	ld a, c
-	cp 2
-	jr nz, .not_2
+	cp 1
+	jr z, .no_qty
+	cp 3
+	jr z, .item_16bit
 	pop af
 	call ItemSwitch_GetNthItem
 	inc hl
 	ld a, [hl]
 	ret
 
-.not_2
+.no_qty
 	pop af
 	ld a, $1
+	ret
+
+.item_16bit
+	pop af
+	call ItemSwitch_GetNthItem
+	inc hl
+	inc hl
+	ld a, [hl]
+	ret
+
+ItemSwitch_GetItemQuantityPointer:
+	push af
+	call ItemSwitch_GetItemFormatSize
+	ld a, c
+	cp 3
+	jr z, .item_16bit
+	pop af
+	call ItemSwitch_GetNthItem
+	inc hl
+	ret
+
+.item_16bit
+	pop af
+	call ItemSwitch_GetNthItem
+	inc hl
+	inc hl
 	ret
 
 Function24aab:

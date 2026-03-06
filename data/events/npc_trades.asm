@@ -1,12 +1,17 @@
 npctrade: MACRO
 ; dialog set, requested mon, offered mon, nickname, dvs, item, OT ID, OT name, gender requested
 	db \1
-	dw \2, \3
-	db \4, \5, \6, \7
+	dw \2
+	dw \3
+	db \4
+	db \5
+	dw \6
+	db \7
 	shift
 	dw \7
-	db \8, \9
-	db 0, 0
+	db \8
+	db \9
+	db 0
 ENDM
 
 NPCTrades:
