@@ -904,7 +904,7 @@ BattleAnimCmd_IfParamItemEqual:
 	call GetBattleAnimByte
 	ld h, a
 	call GetItemIDFromIndex
-	jr BattleAnimCmd_IfParamEqualContinue
+	jp BattleAnimCmd_IfParamEqualContinue
 
 BattleAnimCmd_Transform:
 	ldh a, [rSVBK]

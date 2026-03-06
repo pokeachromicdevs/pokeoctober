@@ -2044,7 +2044,7 @@ Script_givepokemail:
 	ld h, a
 	ld a, [wScriptBank]
 	push hl
-	call GetFarWord
+	call GetFarHalfword
 	call GetItemIDFromIndex
 	ld b, a
 	pop hl

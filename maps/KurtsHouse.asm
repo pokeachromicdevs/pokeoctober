@@ -28,7 +28,7 @@ KurtsHouse_MapScripts:
 	loaditemindex KURTSHOUSE_INDEX_WHT_APRICORN, WHT_APRICORN
 	loaditemindex KURTSHOUSE_INDEX_BLK_APRICORN, BLK_APRICORN
 	loaditemindex KURTSHOUSE_INDEX_PNK_APRICORN, PNK_APRICORN
-	endcallback
+	return
 
 .PlaceKurtAppropriately:
 ; kurt and maizie around main chair
@@ -451,7 +451,7 @@ KurtHouseScript:
 	iftrue .GiveLoveBall
 ; prompts for apricorn
 	writetext .KurtPromptsApricorn
-buttonsound
+	buttonsound
 
 	checkitem RED_APRICORN
 	iftrue .which_apricorn

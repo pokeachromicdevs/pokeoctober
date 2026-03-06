@@ -43,7 +43,7 @@ PlaceMenuItemBallName:
 	ld h, HIGH(FIRST_BALL_ITEM)
 	ld l, a
 	call GetItemIDFromIndex
-	ld [wNamedObjectIndex], a
+	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	pop hl
 	call PlaceString
@@ -57,13 +57,13 @@ PlaceMenuItemBallQuantity:
 	call GetItemIDFromIndex
 	ld [wCurItem], a
 	farcall _CheckTossableItem
-	ld a, [wItemAttributeValue]
+	ld a, [wItemAttributeParamBuffer]
 	pop hl
 	and a
 	jr nz, .done
 	ld de, $15
 	add hl, de
-	ld [hl], '×'
+	ld [hl], "×"
 	inc hl
 	ld de, wMenuSelectionQuantity
 	lb bc, 1, 2
@@ -78,7 +78,7 @@ PlaceMenuKeyItemName:
 	ld h, HIGH(FIRST_KEY_ITEM)
 	ld l, a
 	call GetItemIDFromIndex
-	ld [wNamedObjectIndex], a
+	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	pop hl
 	call PlaceString
@@ -92,13 +92,13 @@ PlaceMenuKeyItemQuantity:
 	call GetItemIDFromIndex
 	ld [wCurItem], a
 	farcall _CheckTossableItem
-	ld a, [wItemAttributeValue]
+	ld a, [wItemAttributeParamBuffer]
 	pop hl
 	and a
 	jr nz, .done
 	ld de, $15
 	add hl, de
-	ld [hl], '×'
+	ld [hl], "×"
 	inc hl
 	ld de, wMenuSelectionQuantity
 	lb bc, 1, 2

@@ -2733,8 +2733,6 @@ wRoute34SceneID::                                 db
 
 wSceneIDsEnd::
 
-	ds 38
-
 ; fight counts
 wJackFightCount::    db ; d9f2
 wBeverlyFightCount:: db ; unused
@@ -2766,8 +2764,6 @@ wParryFightCount::   db
 wNiechelleFightCount::    db
 ; da0e
 
-	ds 100
-
 wEventFlags:: flag_array NUM_EVENTS ; da72
 wEventFlagsEnd::
 ; db6c
@@ -2784,8 +2780,6 @@ wBoxNames:: ds BOX_NAME_LENGTH * NUM_BOXES ; db75
 wCelebiEvent:: ; dbf3
 ; bit 2: forest is restless
 	db
-
-	ds 1
 
 wBikeFlags:: ; dbf5
 ; bit 0: using strength
@@ -2869,8 +2863,6 @@ wPlayerMonSelection:: ds 3
 wdc5f:: db
 wdc60:: db
 
-	ds 18
-
 wStepCount:: db ; dc73
 wPoisonStepCount:: db ; dc74
 	ds 2
@@ -2908,8 +2900,6 @@ wDigMapNumber::  db ; dcac
 wBackupWarpNumber:: db ; dcad
 wBackupMapGroup::   db ; dcae
 wBackupMapNumber::  db ; dcaf
-
-	ds 3
 
 wLastSpawnMapGroup:: db
 wLastSpawnMapNumber:: db

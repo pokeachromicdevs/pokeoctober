@@ -158,7 +158,7 @@ anim_beatup: MACRO
 ENDM
 
 	enum anim_if_param_item_equal_command ; $e7
-anim_0xe7: MACRO
+anim_if_param_item_equal: MACRO
 	db anim_if_param_item_equal_command
 	dw \1 ; value
 	dw \2 ; address

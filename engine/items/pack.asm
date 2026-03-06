@@ -1058,7 +1058,7 @@ TutorialPack:
 	xor a ; FALSE
 	ld [wPackUsedItem], a
 	ld hl, wItemFlags
-	res IN_BAG_F. [hl]
+	res IN_BAG_F, [hl]
 	ret
 
 .RunJumptable:
@@ -1139,8 +1139,8 @@ TutorialPack:
 	db 5, 8 ; rows, columns
 	db 2 ; horizontal spacing
 	dbw 0, wDudeNumBalls
-	dba PlaceMenuBallItemName
-	dba PlaceMenuBallItemQuantity
+	dba PlaceMenuItemBallName
+	dba PlaceMenuItemBallQuantity
 	dba UpdateBallItemDescription
 
 .DisplayPocket:
@@ -1521,8 +1521,8 @@ BallsPocketMenuHeader:
 	db 5, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumBalls
-	dba PlaceMenuBallItemName
-	dba PlaceMenuBallItemQuantity
+	dba PlaceMenuItemBallName
+	dba PlaceMenuItemBallQuantity
 	dba UpdateBallItemDescription
 
 PC_Mart_BallsPocketMenuHeader:
@@ -1536,8 +1536,8 @@ PC_Mart_BallsPocketMenuHeader:
 	db 5, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumBalls
-	dba PlaceMenuBallItemName
-	dba PlaceMenuBallItemQuantity
+	dba PlaceMenuItemBallName
+	dba PlaceMenuItemBallQuantity
 	dba UpdateBallItemDescription
 
 Text_PackNoItems:

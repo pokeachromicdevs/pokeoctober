@@ -231,6 +231,7 @@ FIRST_KEY_ITEM EQU const_value
 	const OLD_AMBER
 	const DOME_FOSSIL
 	const HELIX_FOSSIL
+NUM_KEY_ITEM_POCKET EQU const_value - FIRST_KEY_ITEM
 
 ; Ball items assume the value of HIGH(FIRST_BALL_ITEM) when storing in bag
 	const_align 8 
@@ -252,6 +253,9 @@ FIRST_BALL_ITEM EQU const_value
 	const FRIEND_BALL
 	const MOON_BALL
 	const LOVE_BALL
+NUM_BALL_ITEM_POCKET EQU const_value - FIRST_KEY_ITEM
+
+NUM_ITEMS EQU const_value - 1
 
 USE_SCRIPT_VAR EQU 0
 ITEM_FROM_MEM  EQU -1

@@ -15,14 +15,14 @@ SwitchItemsInBag:
 	ld a, [wSwitchItem]
 	dec a
 	ld [wSwitchItem], a
-	call Function249a7
+	call .try_combining_stacks
 	jp c, .combine_stacks
 	ld a, [wScrollingMenuCursorPosition]
 	ld c, a
 	ld a, [wSwitchItem]
 	cp c
-	jr c, .asm_2497a
-	jr .asm_2494a
+	jr c, .above
+	jr .below
 
 .init
 	ld a, [wScrollingMenuCursorPosition]
@@ -35,14 +35,14 @@ SwitchItemsInBag:
 	ld [wSwitchItem], a
 	ret
 
-.asm_2494a
+.below
 	ld a, [wSwitchItem]
 	call Function24a40
 	ld a, [wScrollingMenuCursorPosition]
 	ld d, a
 	ld a, [wSwitchItem]
 	ld e, a
-	call Function24a6c
+	call ItemSwitch_GetItemFormatSize
 	push bc
 	ld a, [wSwitchItem]
 	call ItemSwitch_GetNthItem
@@ -61,14 +61,14 @@ SwitchItemsInBag:
 	ld [wSwitchItem], a
 	ret
 
-.asm_2497a
+.above
 	ld a, [wSwitchItem]
 	call Function24a40
 	ld a, [wScrollingMenuCursorPosition]
 	ld d, a
 	ld a, [wSwitchItem]
 	ld e, a
-	call Function24a6c
+	call ItemSwitch_GetItemFormatSize
 	push bc
 	ld a, [wSwitchItem]
 	call ItemSwitch_GetNthItem
@@ -84,7 +84,7 @@ SwitchItemsInBag:
 	ld [wSwitchItem], a
 	ret
 
-Function249a7:
+.try_combining_stacks:
 	ld a, [wSwitchItem]
 	call ItemSwitch_GetNthItem
 	ld d, h
@@ -105,12 +105,12 @@ Function249a7:
 	ld a, [wSwitchItem]
 	call ItemSwitch_GetItemQuantity
 	cp 99
-	jr nz, .asm_249cf
+	jr nz, .combine
 .no_combine
 	and a
 	ret
 
-.asm_249cf
+.combine
 	scf
 	ret
 
@@ -219,7 +219,7 @@ ItemSwitch_GetNthItem:
 	call AddNTimes
 	ret
 
-Function24a6c:
+ItemSwitch_GetItemFormatSize:
 	push hl
 	call ItemSwitch_ConvertItemFormatToDW
 	ld a, d

@@ -1,3 +1,5 @@
+MAX_ITEM_STACK equ 99
+
 _ReceiveItem::
 	call DoesHLEqualNumItems
 	jp nz, PutItemInPocket
@@ -167,7 +169,7 @@ PutItemInPocket:
 	sub [hl]
 	add d
 	ld d, a
-	ld a, [wItemQuantityChange]
+	ld a, [wItemQuantityChangeBuffer]
 	cp d
 	jr z, .ok_pop
 	jr c, .ok_pop
@@ -195,8 +197,8 @@ PutItemInPocket:
 	call GetItemIndexFromID
 	ld c, l
 	pop hl
-	ld a, [wItemQuantityChange]
-	ld [wItemQuantity], a
+	ld a, [wItemQuantityChangeBuffer]
+	ld [wItemQuantityBuffer], a
 .loop2
 	inc hl
 	ld a, [hli]
@@ -207,7 +209,7 @@ PutItemInPocket:
 	ld a, [hli]
 	cp c
 	jr nz, .loop2
-	ld a, [wItemQuantity]
+	ld a, [wItemQuantityBuffer]
 	add [hl]
 	cp MAX_ITEM_STACK + 1
 	jr nc, .newstack
@@ -221,7 +223,7 @@ PutItemInPocket:
 .newstack
 	ld [hl], MAX_ITEM_STACK
 	sub MAX_ITEM_STACK
-	ld [wItemQuantity], a
+	ld [wItemQuantityBuffer], a
 	jr .loop2
 
 .terminator2
@@ -236,7 +238,7 @@ PutItemInPocket:
 	ld [hli], a
 	ld a, c
 	ld [hli], a
-	ld a, [wItemQuantity]
+	ld a, [wItemQuantityBuffer]
 	ld [hli], a
 	ld [hl], -1
 	ld h, d
@@ -403,98 +405,98 @@ RemoveItemFromPocketLow:
 	and a
 	ret
 
-+RemoveItemFromPocket:
-+	ld d, h
-+	ld e, l
-+	ld a, [hli]
-+	ld c, a
-+	ld a, [wCurItemQuantity]
-+	cp c
-+	jr nc, .ok ; memory
-+	ld c, a
-+	ld b, 0
-+	add hl, bc
-+	add hl, bc
-+	add hl, bc
-+	ld a, [wCurItem]
-+	push hl
-+	call GetItemIndexFromID
-+	ld b, h
-+	ld c, l
-+	pop hl
-+	ld a, b
-+	cp [hl]
-+	inc hl
-+	inc hl
-+	jr nz, .nope1
-+	dec hl
-+	ld a, c
-+	cp [hl]
-+	inc hl
-+	jr z, .skip
-+.nope1
-+	ld h, d
-+	ld l, e
-+	inc hl
-+
-+.ok
-+	ld a, [wCurItem]
-+	push hl
-+	call GetItemIndexFromID
-+	ld b, h
-+	ld c, l
-+	pop hl
-+.loop
-+	ld a, [hli]
-+	cp -1
-+	jr z, .nope
-+	cp b
-+	inc hl
-+	jr nz, .nope2
-+	dec hl
-+	ld a, [hli]
-+	cp c
-+	jr z, .skip
-+.nope2
-+	inc hl
-+	jr .loop
-+
-+.skip
-+	ld a, [wItemQuantityChange]
-+	ld b, a
-+	ld a, [hl]
-+	sub b
-+	jr c, .nope
-+	ld [hl], a
-+	ld [wItemQuantity], a
-+	and a
-+	jr nz, .yup
-+	dec hl
-+	dec hl
-+	ld b, h
-+	ld c, l
-+	inc hl
-+	inc hl
-+	inc hl
-+.loop2
-+	ld a, [hli]
-+	ld [bc], a
-+	inc bc
-+	cp -1
-+	jr nz, .loop2
-+	ld h, d
-+	ld l, e
-+	dec [hl]
-+
-+.yup
-+	scf
-+	ret
-+
-+.nope
-+	and a
-+	ret
-+
-+CheckTheItemLow:
+RemoveItemFromPocket:
+	ld d, h
+	ld e, l
+	ld a, [hli]
+	ld c, a
+	ld a, [wCurItemQuantity]
+	cp c
+	jr nc, .ok ; memory
+	ld c, a
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	add hl, bc
+	ld a, [wCurItem]
+	push hl
+	call GetItemIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+	ld a, b
+	cp [hl]
+	inc hl
+	inc hl
+	jr nz, .nope1
+	dec hl
+	ld a, c
+	cp [hl]
+	inc hl
+	jr z, .skip
+.nope1
+	ld h, d
+	ld l, e
+	inc hl
+
+.ok
+	ld a, [wCurItem]
+	push hl
+	call GetItemIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+.loop
+	ld a, [hli]
+	cp -1
+	jr z, .nope
+	cp b
+	inc hl
+	jr nz, .nope2
+	dec hl
+	ld a, [hli]
+	cp c
+	jr z, .skip
+.nope2
+	inc hl
+	jr .loop
+
+.skip
+	ld a, [wItemQuantityChangeBuffer]
+	ld b, a
+	ld a, [hl]
+	sub b
+	jr c, .nope
+	ld [hl], a
+	ld [wItemQuantityBuffer], a
+	and a
+	jr nz, .yup
+	dec hl
+	dec hl
+	ld b, h
+	ld c, l
+	inc hl
+	inc hl
+	inc hl
+.loop2
+	ld a, [hli]
+	ld [bc], a
+	inc bc
+	cp -1
+	jr nz, .loop2
+	ld h, d
+	ld l, e
+	dec [hl]
+
+.yup
+	scf
+	ret
+
+.nope
+	and a
+	ret
+
+CheckTheItemLow:
 	ld a, [wCurItem]
 	push hl
 		call GetItemIndexFromID
@@ -515,36 +517,36 @@ RemoveItemFromPocketLow:
 	and a
 	ret
 
-+CheckTheItem:
-+	ld a, [wCurItem]
-+	push hl
-+	call GetItemIndexFromID
-+	ld b, h
-+	ld c, l
-+	pop hl
-+	inc hl
-+.loop
-+	ld a, [hli]
-+	cp -1
-+	jr z, .done
-+	cp b
-+	jr nz, .inc_two
-+	ld a, [hli]
-+	cp c
-+	jr nz, .inc_one
-+	scf
-+	ret
-+
-+.inc_two
-+	inc hl
-+.inc_one
-+	inc hl
-+	jr .loop
-+
-+.done
-+	and a
-+	ret
-+
+CheckTheItem:
+	ld a, [wCurItem]
+	push hl
+	call GetItemIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+	inc hl
+.loop
+	ld a, [hli]
+	cp -1
+	jr z, .done
+	cp b
+	jr nz, .inc_two
+	ld a, [hli]
+	cp c
+	jr nz, .inc_one
+	scf
+	ret
+
+.inc_two
+	inc hl
+.inc_one
+	inc hl
+	jr .loop
+
+.done
+	and a
+	ret
+
 
 ReceiveKeyItem:
 	ld hl, wNumKeyItems

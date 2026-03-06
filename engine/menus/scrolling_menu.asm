@@ -537,7 +537,7 @@ ScrollingMenu_GetListItemCoordAndFunctionArgs16bit:
 	add hl, de
 	ld a, [wMenuData_ItemsPointerBank]
 	push hl
-	call GetFarWord
+	call GetFarHalfword
 	ld a, l
 	cp -1
 	jr z, .end_of_list

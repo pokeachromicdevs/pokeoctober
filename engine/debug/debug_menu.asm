@@ -1768,8 +1768,8 @@ Debug_FillBag:
 	giveitem AQUA_HORN
 	giveitem POTION, 5
 	giveitem MAX_POTION, 8
-	giveitem ITEM_101
-	giveitem ITEM_100
+	; giveitem ITEM_101
+	; giveitem ITEM_100
 	giveitem POTION
 	giveitem MASTER_BALL
 	giveitem ULTRA_BALL

@@ -439,6 +439,7 @@ INCLUDE "data/battle_anims/objects.asm"
 INCLUDE "engine/battle_anims/functions.asm"
 INCLUDE "engine/battle_anims/helpers.asm"
 INCLUDE "data/battle_anims/object_gfx.asm"
+INCLUDE "home/battle_anim.asm"
 
 
 SECTION "Pic Animations Engine", ROMX
@@ -686,6 +687,7 @@ INCLUDE "engine/events/odd_egg.asm"
 
 SECTION "16-bit ID stuff", ROMX
 
+INCLUDE "engine/16/macros.asm"
 INCLUDE "engine/16/table_functions.asm"
 
 ; own section
@@ -713,4 +715,4 @@ EXROM_Sentinel::
 INCLUDE "checks/events.asm"
 INCLUDE "checks/pokemon.asm"
 INCLUDE "checks/moves.asm"
-INCLUDE "checks/items.asm"
+; INCLUDE "checks/items.asm"
