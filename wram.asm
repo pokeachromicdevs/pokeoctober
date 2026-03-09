@@ -958,10 +958,7 @@ ENDU ; c7e8
 
 ENDU ; c7e8
 
-; This was a buffer for map-related pointers in the 1997 G/S prototype.
-; See wMapBuffer in pokegold-spaceworld's wram.asm.
-wUnusedMapBuffer:: ds 24
-wUnusedMapBufferEnd::
+wPlayerNameBackup:: ds NAME_LENGTH
 
 
 SECTION "Overworld Map", WRAM0
@@ -1750,8 +1747,6 @@ NEXTU ; d002
 ; movement buffer data
 wMovementBufferCount:: db
 wMovementBufferObject:: db
-wUnusedMovementBufferBank:: db
-wUnusedMovementBufferPointer:: dw
 wMovementBuffer:: ds 55
 
 NEXTU ; d002

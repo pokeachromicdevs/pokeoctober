@@ -24,9 +24,8 @@ ROM0
 	"serial"
 	org $0060
 	"joypad"
-	org $0080
-	"Follower Script Home" ; full!
-	"Free Space 0080"
+	"Follower Script Home"
+	"Get Item ID from HL"
 	org $00f9
 	"Reset Crash Handler"
 	org $0100

@@ -439,7 +439,6 @@ INCLUDE "data/battle_anims/objects.asm"
 INCLUDE "engine/battle_anims/functions.asm"
 INCLUDE "engine/battle_anims/helpers.asm"
 INCLUDE "data/battle_anims/object_gfx.asm"
-INCLUDE "home/battle_anim.asm"
 
 
 SECTION "Pic Animations Engine", ROMX

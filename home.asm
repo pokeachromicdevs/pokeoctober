@@ -9,7 +9,7 @@ INCLUDE "home/rst.asm"
 
 INCLUDE "home/interrupts.asm"
 
-SECTION "Free Space 0080", ROM0
+SECTION "Get Item ID from HL", ROM0
 GetItemIDFromHL::
 ; in:
 ; 	[hl] = address of 16-bit item index
@@ -23,6 +23,9 @@ GetItemIDFromHL::
 		call GetItemIDFromIndex
 	pop hl
 	ret
+
+SECTION "Battle Animation Handler", ROM0
+INCLUDE "home/battle_anim.asm"
 
 SECTION "Reset Crash Handler", ROM0
 
