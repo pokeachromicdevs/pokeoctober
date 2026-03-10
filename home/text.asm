@@ -239,7 +239,7 @@ ENDM
 	dict "<PKMN>",    PlacePKMN
 	dict "<POKE>",    PlacePOKE
 	dict "%",         NextChar
-	;dict "¯",         " "
+	dict "¯",         " "
 	dict "<DEXEND>",  PlaceDexEnd
 	dict "<TARGET>",  PlaceMoveTargetsName
 	dict "<USER>",    PlaceMoveUsersName
