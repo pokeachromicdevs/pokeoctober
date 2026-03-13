@@ -32,10 +32,6 @@ Route34Silver:
 	closetext
 	applymovement ROUTE34_SILVER, .SilverOut
 	disappear ROUTE34_SILVER
-	playsound SFX_EXIT_BUILDING
-	pause 60
-	setevent EVENT_AZALEA_POKECENTER_SHOW_SAVE_DIALOG
-	credits
 	end
 
 .Text:
@@ -52,7 +48,7 @@ Route34Silver:
 	cont "keep up with me!"
 	para "Welp, I'm off to"
 	line "challenge the GYM"
-	cont "in GOLDENROD!"
+	cont "in MARIGOLD!"
 	para "Catch ya later!"
 	done
 
