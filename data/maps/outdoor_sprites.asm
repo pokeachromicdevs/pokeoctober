@@ -241,6 +241,8 @@ AzaleaGroupSprites:
 	end_outdoor_sprites
 
 GoldenrodGroupSprites:
+  def_static_sprite
+    static_sprite SPRITE_GENTLEMAN
 	end_outdoor_sprites
 
 OlivineGroupSprites:

@@ -58,8 +58,8 @@ GoldenrodR34Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, GOLDENROD_CITY, 14
-	warp_event  5,  0, GOLDENROD_CITY, 15
+	warp_event  4,  0, GOLDENROD_CITY, 1
+	warp_event  5,  0, GOLDENROD_CITY, 2
 	warp_event  4,  7, ROUTE_34, 1
 	warp_event  5,  7, ROUTE_34, 1
 	
