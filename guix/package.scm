@@ -8,7 +8,9 @@
   (guix utils)
   (guix gexp)
   (guix build-system gnu)
-  (guix licenses))
+  (guix licenses)
+  (ice-9 popen)
+  (ice-9 rdelim))
 
 (define license (@@ (guix licenses) license))
 
@@ -16,6 +18,13 @@
   (license "pokecrystal16"
     "https://github.com/vulcandth/pokecrystal16/blob/master/README.md#faqs"
     "May you share freely, never taking more than you give"))
+
+(define (extract-git-version)
+  (let* 
+    ((p (open-input-pipe "git describe --tags --abbrev=8 --dirty='!'"))
+    (s (read-line p)))
+    (close-pipe p)
+    (if (eof-object? s) "?" s)))
 
 (define rgbds-0.4.1
   (package (inherit rgbds) (version "0.4.1")
@@ -34,6 +43,7 @@
             (delete 'check)))))))
 
 (define* (pokeoctober #:key (debug? #t))
+  (let ((git-desc (extract-git-version)))
   (package
     (name "pokeoctober")
     (version "demo-2")
@@ -47,12 +57,13 @@
         #:select? (git-predicate "..")))
     (build-system gnu-build-system)
     (arguments (list
+      #:make-flags #~(list (string-append "GIT_DESCRIBE=" #$git-desc))
       #:phases
       #~(modify-phases %standard-phases
         (delete 'configure)
         (delete 'check)
         (replace 'build
-          (lambda* (#:key parallel-build? #:allow-other-keys)
+          (lambda* (#:key make-flags parallel-build? #:allow-other-keys)
             (let* (
               (jobs
                 (if parallel-build?
@@ -60,7 +71,7 @@
                   "1"))
               (target
                 #$(if debug? "pokeoctober_debug.gbc" "pokeoctober.gbc")))
-              (invoke "make" "-j" jobs target))))
+              (apply invoke "make" "-j" jobs target make-flags))))
         (replace 'install
           (lambda _
             (let (
@@ -72,6 +83,6 @@
     (home-page "https://github.com/pokeachromicdevs/pokeoctober")
     (license pkc16-license)
     (synopsis "Pokémon October")
-    (description "ROM hack of Pokémon Crystal")))
+    (description "ROM hack of Pokémon Crystal"))))
 
 (pokeoctober #:debug? (getenv "DEBUG"))
