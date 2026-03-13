@@ -30,7 +30,7 @@
       (substitute-keyword-arguments
         (package-arguments rgbds)
         ((#:phases phases)
-          `(modify-phases ,phases
+          #~(modify-phases #$phases
             (delete 'check)))))))
 
 (define* (pokeoctober #:key (debug? #t))
@@ -46,8 +46,9 @@
         #:recursive? #t
         #:select? (git-predicate "..")))
     (build-system gnu-build-system)
-    (arguments
-      `(#:phases (modify-phases %standard-phases
+    (arguments (list
+      #:phases
+      #~(modify-phases %standard-phases
         (delete 'configure)
         (delete 'check)
         (replace 'build
@@ -55,21 +56,19 @@
             (let* (
               (jobs
                 (if parallel-build?
-                  (string-append "-j" (number->string (parallel-job-count)))
-                  "")))
-              (invoke "make" jobs ,(if debug? "pokeoctober_debug.gbc" "pokeoctober.gbc")))))
+                  (number->string (parallel-job-count))
+                  "1"))
+              (target
+                #$(if debug? "pokeoctober_debug.gbc" "pokeoctober.gbc")))
+              (invoke "make" "-j" jobs target))))
         (replace 'install
-          (lambda* (#:key outputs #:allow-other-keys)
-            (let* ((out (assoc-ref outputs "out")))
-              ,@(if debug? '(
-                (install-file "pokeoctober_debug.gbc" out)
-                (install-file "pokeoctober_debug.sym" out)
-                (install-file "pokeoctober_debug.map" out)
-              ) '(
-                (install-file "pokeoctober.gbc" out)
-                (install-file "pokeoctober.sym" out)
-                (install-file "pokeoctober.map" out)
-              ))))))))
+          (lambda _
+            (let (
+              (out #$output)
+              (base #$(if debug? "pokeoctober_debug" "pokeoctober")))
+              (for-each
+                (lambda (ext) (install-file (string-append base ext) out))
+                (list ".gbc" ".sym" ".map"))))))))
     (home-page "https://github.com/pokeachromicdevs/pokeoctober")
     (license pkc16-license)
     (synopsis "Pokémon October")
