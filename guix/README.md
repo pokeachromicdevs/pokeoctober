@@ -10,10 +10,16 @@ give it a try. you don't have to, though.
 Prepend `DEBUG=1` to make the debug ROM.
 
 ```
-guix time-machine -C channels.scm -- guix build -f package.scm -r built
+guix time-machine -C channels.scm -- build -f package.scm -r built
+```
+
+Doing that *and* getting the build hash:
+
+```
+guix hash -r $(guix time-machine -C channels.scm -- build -f package.scm -r built)
 ```
 
 ## Open a shell with tools needed for development
 ```
-cd ..; guix time-machine -C guix/channels.scm -- guix shell -C -D -f guix/package.scm
+cd ..; guix time-machine -C guix/channels.scm -- shell -C -D -f guix/package.scm
 ```
