@@ -25,6 +25,10 @@ CHRIS EQU __enum__
 	const PHONECONTACT_BUENA
 
 KRIS EQU __enum__
+
+INCLUDE "sheets/generated/trainer/trainer_constants.gen.asm"
+
+IF 0
 	trainerclass FALKNER ; 1
 	const FALKNER1
 
@@ -771,5 +775,6 @@ KRIS EQU __enum__
 	const NIECHELLE3
 	const NIECHELLE4
 	const NIECHELLE5
+ENDC
 
 NUM_TRAINER_CLASSES EQU __enum__

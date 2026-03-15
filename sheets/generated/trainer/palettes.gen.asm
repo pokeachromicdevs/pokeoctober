@@ -1,0 +1,42 @@
+; The following was generated from 
+; trainers_items_wild.xlsx, do not edit directly!
+TrainerPalettes:
+INCBIN "gfx/trainers/rival1.gbcpal", middle_colors
+INCBIN "gfx/trainers/youngster.gbcpal", middle_colors
+INCBIN "gfx/trainers/bug_catcher.gbcpal", middle_colors
+INCBIN "gfx/trainers/soldier.gbcpal", middle_colors
+INCBIN "gfx/trainers/instructor.gbcpal", middle_colors
+INCBIN "gfx/trainers/lass.gbcpal", middle_colors
+INCBIN "gfx/trainers/teacher.gbcpal", middle_colors
+INCBIN "gfx/trainers/officer.gbcpal", middle_colors
+INCBIN "gfx/trainers/sportsman.gbcpal", middle_colors
+INCBIN "gfx/trainers/camper.gbcpal", middle_colors
+INCBIN "gfx/trainers/fledgling.gbcpal", middle_colors
+INCBIN "gfx/trainers/bird_keeper.gbcpal", middle_colors
+INCBIN "gfx/trainers/leader_falkner.gbcpal", middle_colors
+INCBIN "gfx/trainers/fisher.gbcpal", middle_colors
+INCBIN "gfx/trainers/lassnienie.gbcpal", middle_colors
+INCBIN "gfx/trainers/sage.gbcpal", middle_colors
+INCBIN "gfx/trainers/mystic.gbcpal", middle_colors
+INCBIN "gfx/trainers/blackbelt.gbcpal", middle_colors
+INCBIN "gfx/trainers/schoolboy.gbcpal", middle_colors
+INCBIN "gfx/trainers/rock_climber.gbcpal", middle_colors
+INCBIN "gfx/trainers/beauty.gbcpal", middle_colors
+INCBIN "gfx/trainers/leader_whitney.gbcpal", middle_colors
+INCBIN "gfx/trainers/prodigy.gbcpal", middle_colors
+INCBIN "gfx/trainers/manchild.gbcpal", middle_colors
+INCBIN "gfx/trainers/sailor.gbcpal", middle_colors
+INCBIN "gfx/trainers/gruntm.gbcpal", middle_colors
+INCBIN "gfx/trainers/gruntf.gbcpal", middle_colors
+INCBIN "gfx/trainers/rocketkaren.gbcpal", middle_colors
+INCBIN "gfx/trainers/ballsmith.gbcpal", middle_colors
+INCBIN "gfx/trainers/twins.gbcpal", middle_colors
+INCBIN "gfx/trainers/picnicker.gbcpal", middle_colors
+INCBIN "gfx/trainers/leader_bugsy.gbcpal", middle_colors
+INCBIN "gfx/trainers/firebreather.gbcpal", middle_colors
+INCBIN "gfx/trainers/medium.gbcpal", middle_colors
+INCBIN "gfx/trainers/leader_morton.gbcpal", middle_colors
+INCBIN "gfx/trainers/rocket_will.gbcpal", middle_colors
+INCBIN "gfx/trainers/juggler.gbcpal", middle_colors
+INCBIN "gfx/trainers/biker.gbcpal", middle_colors
+INCBIN "gfx/trainers/e4karen.gbcpal", middle_colors

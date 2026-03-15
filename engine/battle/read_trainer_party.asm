@@ -305,4 +305,4 @@ GetNextTrainerDataByte:
 	inc hl
 	ret
 
-INCLUDE "data/trainers/party_pointers.asm"
+INCLUDE "sheets/generated/trainer/party_pointers.gen.asm"

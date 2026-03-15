@@ -1,0 +1,42 @@
+; The following was generated from 
+; trainers_items_wild.xlsx, do not edit directly!
+TrainerGroups:
+	dba Rival1Group
+	dba YoungsterGroup
+	dba BugCatcherGroup
+	dba SoldierGroup
+	dba InstructorGroup
+	dba LassGroup
+	dba TeacherGroup
+	dba OfficerGroup
+	dba SportsmanGroup
+	dba CamperGroup
+	dba FledglingGroup
+	dba BirdKeeperGroup
+	dba LeaderFalknerGroup
+	dba FisherGroup
+	dba LassNieNieGroup
+	dba SageGroup
+	dba MysticGroup
+	dba BlackbeltGroup
+	dba SchoolboyGroup
+	dba RockClimberGroup
+	dba BeautyGroup
+	dba LeaderWhitneyGroup
+	dba ProdigyGroup
+	dba ManchildGroup
+	dba SailorGroup
+	dba GruntMGroup
+	dba GruntFGroup
+	dba RocketKarenGroup
+	dba BallsmithGroup
+	dba TwinsGroup
+	dba PicnickerGroup
+	dba LeaderBugsyGroup
+	dba FirebreatherGroup
+	dba MediumGroup
+	dba LeaderMortonGroup
+	dba RocketWillGroup
+	dba JugglerGroup
+	dba BikerGroup
+	dba E4KarenGroup

@@ -4,7 +4,7 @@ INCLUDE "constants.asm"
 SECTION "Audio", ROMX
 
 INCLUDE "audio/engine.asm"
-INCLUDE "data/trainers/encounter_music.asm"
+INCLUDE "sheets/generated/trainer/encounter_music.gen.asm"
 Music:
 if def(_NO_MUSIC)
 rept NUM_MUSIC_TRACKS

@@ -75,4 +75,4 @@ GetTrainerAttributes:
 	ld [wEnemyTrainerBaseReward], a
 	ret
 
-INCLUDE "data/trainers/attributes.asm"
+INCLUDE "sheets/generated/trainer/attributes.gen.asm"

@@ -141,7 +141,7 @@ INCBIN "gfx/battle/dude.2bpp.lz"
 SECTION "bankB", ROMX
 
 INCLUDE "engine/battle/trainer_huds.asm"
-INCLUDE "data/trainers/class_names.asm"
+INCLUDE "sheets/generated/trainer/class_names.gen.asm"
 INCLUDE "engine/battle/ai/redundant.asm"
 INCLUDE "engine/events/move_deleter.asm"
 INCLUDE "engine/link/mystery_gift_2.asm"
@@ -690,7 +690,7 @@ INCLUDE "engine/16/macros.asm"
 INCLUDE "engine/16/table_functions.asm"
 
 ; own section
-INCLUDE "data/trainers/parties.asm"
+INCLUDE "sheets/generated/trainer/trainer_parties.gen.asm"
 INCLUDE "engine/pokedex/new_pokedex_entry.asm"
 
 SECTION "Pokemon Follow Sprites", ROMX

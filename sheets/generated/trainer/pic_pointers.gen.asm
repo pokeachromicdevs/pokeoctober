@@ -1,0 +1,42 @@
+; The following was generated from 
+; trainers_items_wild.xlsx, do not edit directly!
+TrainerPicPointers::
+	db Rival1Pic
+	db YoungsterPic
+	db BugCatcherPic
+	db SoldierPic
+	db InstructorPic
+	db LassPic
+	db TeacherPic
+	db OfficerPic
+	db SportsmanPic
+	db CamperPic
+	db FledglingPic
+	db BirdKeeperPic
+	db LeaderFalknerPic
+	db FisherPic
+	db LassNieNiePic
+	db SagePic
+	db MysticPic
+	db BlackbeltPic
+	db SchoolboyPic
+	db RockClimberPic
+	db BeautyPic
+	db LeaderWhitneyPic
+	db ProdigyPic
+	db ManchildPic
+	db SailorPic
+	db GruntMPic
+	db GruntFPic
+	db RocketKarenPic
+	db BallsmithPic
+	db TwinsPic
+	db PicnickerPic
+	db LeaderBugsyPic
+	db FirebreatherPic
+	db MediumPic
+	db LeaderMortonPic
+	db RocketWillPic
+	db JugglerPic
+	db BikerPic
+	db E4KarenPic

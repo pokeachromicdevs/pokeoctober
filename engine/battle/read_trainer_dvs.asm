@@ -18,4 +18,4 @@ GetTrainerDVs:
 	pop hl
 	ret
 
-INCLUDE "data/trainers/dvs.asm"
+INCLUDE "sheets/generated/trainer/dvs.gen.asm"
