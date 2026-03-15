@@ -112,6 +112,8 @@ OctoberCredits_StringTable:
 			; cianwood city
 		dw .CoralDev, .Blank
 			; blue battle
+		dw .LuciShrimp, .Blank
+			; trainer battle
 
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -222,3 +224,4 @@ OctoberCredits_StringTable:
 .GameScenario:  db "    GAME SCENARIO   ";;
 .Tajiri:        db "    SATOSHI TAJIRI  ";;
 .BattleAnims:   db "  BATTLE ANIMATIONS ";;
+.LuciShrimp:    db "     LUCISHRIMP     "
