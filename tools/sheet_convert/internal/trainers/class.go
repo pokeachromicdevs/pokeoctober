@@ -57,12 +57,12 @@ func (s *State) ProcessTrainerClasses(sheetName string) error {
 		}
 		nowClass.MoveWeighting = mw.String()
 		if rr.ItemA != "" {
-			nowClass.ItemA = rr.ItemA
+			nowClass.ItemA = utils.NormalizeAsConstNameUnderspaces(rr.ItemA)
 		} else {
 			nowClass.ItemA = "NO_ITEM"
 		}
 		if rr.ItemB != "" {
-			nowClass.ItemB = rr.ItemB
+			nowClass.ItemB = utils.NormalizeAsConstNameUnderspaces(rr.ItemB)
 		} else {
 			nowClass.ItemB = "NO_ITEM"
 		}

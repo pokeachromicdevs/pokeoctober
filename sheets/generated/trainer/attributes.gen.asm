@@ -231,7 +231,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
 ; E4Karen
-	dw Full Heal, Max Potion ; items
+	dw FULL_HEAL, MAX_POTION ; items
 	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
