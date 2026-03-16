@@ -436,5 +436,6 @@ WailordFrontpicAnim:       INCBIN "gfx/pokemon/wailord/front.animated.2bpp.lz"
 CorasunFrontpicAnim:       INCBIN "gfx/pokemon/corasun/front.animated.2bpp.lz"
 MambokingFrontpicAnim:     INCBIN "gfx/pokemon/mamboking/front.animated.2bpp.lz"
 RaichuFrontpicAnim:        INCBIN "gfx/pokemon/raichu/front.animated.2bpp.lz"
+NorspruceFrontpicAnim:     INCBIN "gfx/pokemon/norspruce/front.animated.2bpp.lz"
 
 

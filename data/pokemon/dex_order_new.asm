@@ -165,6 +165,7 @@ NewPokedexOrder:
 	dw PUPPERON
 	dw GROWLITHE
 	dw ARCANINE
+	dw NORSPRUCE
 	dw STANTLER
 	dw MARILL
 	dw AZUMARILL

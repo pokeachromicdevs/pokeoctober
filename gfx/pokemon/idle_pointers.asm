@@ -281,6 +281,7 @@ AnimationIdlePointers:
 	dw LickilickyAnimationIdle
 	dw PoryginAnimationIdle
 	dw Porygon2AnimationIdle
+	dw NorspruceAnimationIdle
 	dw StantlerAnimationIdle
 	dw SmeargleAnimationIdle
 	dw TyrogueAnimationIdle

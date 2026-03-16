@@ -289,6 +289,7 @@ PokemonCries::
 	mon_cry CRY_SEEL,       -$100,  $180 ; LICKILICKY
 	mon_cry CRY_WEEPINBELL,  $0B0,  $17f ; PORYGIN
 	mon_cry CRY_GIRAFARIG,   $073,  $240 ; PORYGON2
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; NORSPRUCE: TODO
 	mon_cry CRY_AIPOM,      -$160,  $180 ; STANTLER
 	mon_cry CRY_PICHU,      -$21a,  $1f0 ; SMEARGLE
 	mon_cry CRY_AIPOM,       $02c,  $108 ; TYROGUE

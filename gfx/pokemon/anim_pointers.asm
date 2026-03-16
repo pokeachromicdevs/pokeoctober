@@ -281,6 +281,7 @@ AnimationPointers:
 	dw LickilickyAnimation
 	dw PoryginAnimation
 	dw Porygon2Animation
+	dw NorspruceAnimation
 	dw StantlerAnimation
 	dw SmeargleAnimation
 	dw TyrogueAnimation

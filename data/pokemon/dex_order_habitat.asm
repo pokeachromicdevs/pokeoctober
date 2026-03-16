@@ -206,6 +206,7 @@ HabitatPokedexOrder:
 	dw STROMEN
 	dw RATTLIT
 	dw AGGROSWINE
+	dw NORSPRUCE
 
 ; SEA
 	dw GYARADOS
