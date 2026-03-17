@@ -282,6 +282,7 @@ FirstEvoStages::
 	dw LICKITUNG
 	dw PORYGIN
 	dw PORYGIN
+	dw NORSPRUCE
 	dw STANTLER
 	dw SMEARGLE
 	dw TYROGUE

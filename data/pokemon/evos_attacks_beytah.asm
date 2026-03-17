@@ -53,7 +53,7 @@ EvosAttacksPointers3::
 	dw ShuricornEvosAttacks
 .End:
 
-StantlerEvosAttacks:
+NorspruceEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POWDER_SNOW
 	dbw 1, FLASH
