@@ -1,6 +1,7 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
+	dw NorspruceEvosAttacks
 	dw StantlerEvosAttacks
 	dw SmeargleEvosAttacks
 	dw TyrogueEvosAttacks
@@ -52,6 +53,26 @@ EvosAttacksPointers3::
 	dw ShuricornEvosAttacks
 .End:
 
+StantlerEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POWDER_SNOW
+	dbw 1, FLASH
+	dbw 1, MIST
+	dbw 5, ABSORB
+	dbw 10, GROWTH
+	dbw 15, ICY_WIND
+	dbw 20, CONFUSE_RAY
+	dbw 25, MEGA_DRAIN
+	dbw 30, AURORA_BEAM
+;   dbw 35, DOUBLE_HIT
+;	dbw 40, HAIL
+;	dbw 45, FREEZE_DRY
+	dbw 50, GIGA_DRAIN
+	dbw 55, LEECH_SEED
+;	dbw 60, FROSTBITE
+	dbw 65, BLIZZARD
+	db 0 ; no more level-up moves
+	
 StantlerEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, FLASH

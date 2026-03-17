@@ -299,6 +299,7 @@ PokemonPicPointers::
 	mon_pic Lickilicky
 	mon_pic Porygin
 	mon_pic Porygon2
+	mon_pic Norspruce
 	mon_pic Stantler
 	mon_pic Smeargle
 	mon_pic Tyrogue

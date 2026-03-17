@@ -281,6 +281,7 @@ FramesPointers:
 	dba LickilickyFrames
 	dba PoryginFrames
 	dba Porygon2Frames
+	dba NorspruceFrames
 	dba StantlerFrames
 	dba SmeargleFrames
 	dba TyrogueFrames

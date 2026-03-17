@@ -286,6 +286,7 @@ PokemonNames::
 	db "LICKILICKY"
 	db "PORYGIN@@@"
 	db "PORYGON2@@"
+	db "NORSPRUCE@"
 	db "STANTLEER@"
 	db "SMEARGLE@@"
 	db "TYROGUE@@@"

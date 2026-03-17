@@ -282,6 +282,7 @@ PokedexDataPointerTable:
 	dba LickilickyPokedexEntry
 	dba PoryginPokedexEntry
 	dba Porygon2PokedexEntry
+	dba NorsprucePokedexEntry
 	dba StantlerPokedexEntry
 	dba SmearglePokedexEntry
 	dba TyroguePokedexEntry

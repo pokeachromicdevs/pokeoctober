@@ -339,4 +339,4 @@ MolambinoFrames:  INCLUDE "gfx/pokemon/molambino/frames.asm"
 AngoreFrames:     INCLUDE "gfx/pokemon/angore/frames.asm"
 CorasunFrames:    INCLUDE "gfx/pokemon/corasun/frames.asm"
 MambokingFrames:  INCLUDE "gfx/pokemon/mamboking/frames.asm"
-
+NorspruceFrames:  INCLUDE "gfx/pokemon/norspruce/frames.asm"

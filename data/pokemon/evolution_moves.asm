@@ -281,6 +281,7 @@ EvolutionMoves::
 	dw NO_MOVE      ; LICKILICKY
 	dw NO_MOVE      ; PORYGIN
 	dw CONVERSION2  ; PORYGON2
+	dw NO_MOVE      ; NORSPRUCE
 	dw NO_MOVE      ; STANTLER
 	dw NO_MOVE      ; SMEARGLE
 	dw NO_MOVE      ; TYROGUE

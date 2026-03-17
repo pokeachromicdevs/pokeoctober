@@ -303,6 +303,7 @@ JOHTO_POKEMON EQU const_value
 	const LICKILICKY
 	const PORYGIN
 	const PORYGON2   ; e9
+	const NORSPRUCE
 	const STANTLER   ; ea
 	const SMEARGLE   ; eb
 	const TYROGUE    ; ec

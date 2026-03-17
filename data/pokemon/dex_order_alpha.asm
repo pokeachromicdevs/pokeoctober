@@ -196,6 +196,7 @@ AlphabeticalPokedexOrder:
 	dw NIDORINO
 	dw NINETALES
 	dw NOCTOWL
+	dw NORSPRUCE
 	dw NURSSUM
 	dw OCTILLERY
 	dw ODDISH

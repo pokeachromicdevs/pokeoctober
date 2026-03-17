@@ -130,6 +130,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw NoEggMoves2
 	dw StantlerEggMoves
 	dw NoEggMoves2
 	dw TyrogueEggMoves

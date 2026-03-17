@@ -281,6 +281,7 @@ BitmasksPointers:
 	dw LickilickyBitmasks
 	dw PoryginBitmasks
 	dw Porygon2Bitmasks
+	dw NorspruceBitmasks
 	dw StantlerBitmasks
 	dw SmeargleBitmasks
 	dw TyrogueBitmasks
