@@ -14,7 +14,7 @@ Route31VioletGateCooltrainerFScript:
 	jumptextfaceplayer Route31VioletGateCooltrainerFText
 	
 TrainerOfficerMatt:
-	trainer OFFICER, MATT, EVENT_BEAT_OFFICER_MATT, OfficerMattSeenText, OfficerMattBeatenText, 0, .Script
+	trainer TC_OFFICER, OFFICER_MATT_1, EVENT_BEAT_OFFICER_MATT, OfficerMattSeenText, OfficerMattBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

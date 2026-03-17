@@ -11,7 +11,7 @@ FightingDojo_MapScripts:
 
 ; scripts here
 TrainerBlackBeltKaori:
-	trainer BLACKBELT_T, KAORI, EVENT_BEAT_BLACKBELT_KAORI, .Seen, .Beaten, 0, .Script
+	trainer TC_BLACKBELT, BLACKBELT_KAORI_1, EVENT_BEAT_BLACKBELT_KAORI, .Seen, .Beaten, 0, .Script
 .Seen:
 	text "We don't just use"
 	line "fighting-types"
@@ -40,7 +40,7 @@ TrainerBlackBeltKaori:
 	done
 
 TrainerBlackBeltJiro:
-	trainer BLACKBELT_T, JIRO, EVENT_BEAT_BLACKBELT_JIRO, .Seen, .Beaten, 0, .Script
+	trainer TC_BLACKBELT, BLACKBELT_JIRO_1, EVENT_BEAT_BLACKBELT_JIRO, .Seen, .Beaten, 0, .Script
 .Seen:
 	text "Haha! Feisty kid"
 	line "wants to join in"
@@ -66,7 +66,7 @@ TrainerBlackBeltJiro:
 	done
 
 TrainerBlackBeltKiyoshi:
-	trainer BLACKBELT_T, KIYOSHI, EVENT_BEAT_BLACKBELT_KIYOSHI, .Seen, .Beaten, 0, .Script
+	trainer TC_BLACKBELT, BLACKBELT_KIYOSHI_1, EVENT_BEAT_BLACKBELT_KIYOSHI, .Seen, .Beaten, 0, .Script
 .Seen:
 .Beaten:
 	text "<...>"
@@ -91,7 +91,7 @@ TrainerBlackBeltKiyo:
 	waitbutton
 	closetext
 	winlosstext .Beaten, 0
-	loadtrainer BLACKBELT_T, KIYO
+	loadtrainer TC_BLACKBELT, BLACKBELT_KIYO_1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLACKBELT_KIYO

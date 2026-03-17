@@ -7,14 +7,14 @@ AzaleaGym_MapScripts:
 AzaleaGymStatue:
 	checkflag ENGINE_FOGBADGE
 	iftrue .Beaten
-	gettrainername STRING_BUFFER_4, MORTY, MORTY1
+	gettrainername STRING_BUFFER_4, TC_MORTON, MORTON_MORTON_1
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, MORTY, MORTY1
+	gettrainername STRING_BUFFER_4, TC_MORTON, MORTON_MORTON_1
 	jumpstd gymstatue2
 
 TrainerSageTakao:
-	trainer SAGE, TAKAO, EVENT_BEAT_SAGE_TAKAO, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_SAGE, SAGE_TAKAO_1, EVENT_BEAT_SAGE_TAKAO, .SeenTxt, .WinTxt, 0, .PostScript
 .SeenTxt:
 	text "The mystic #MON"
 	line "that used to"
@@ -45,7 +45,7 @@ TrainerSageTakao:
 	done
 
 TrainerMysticAndrea:
-	trainer MYSTIC, ANDREA, EVENT_BEAT_MYSTIC_ANDREA, .SeenTxt, .BeatenTxt, 0, .AfterScript
+	trainer TC_MYSTIC, MYSTIC_ANDREA_1, EVENT_BEAT_MYSTIC_ANDREA, .SeenTxt, .BeatenTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "Let me read"
@@ -72,7 +72,7 @@ TrainerMysticAndrea:
 	done
 
 TrainerInstructorFrank:
-	trainer INSTRUCTOR, FRANK, EVENT_BEAT_INSTRUCTOR_FRANK, .SeenTxt, .BeatenTxt, 0, .AfterScript
+	trainer TC_INSTRUCTOR, INSTRUCTOR_FRANK_1, EVENT_BEAT_INSTRUCTOR_FRANK, .SeenTxt, .BeatenTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "The immortal GHOST"
@@ -102,7 +102,7 @@ TrainerInstructorFrank:
 	done
 
 TrainerMediumDorothy:
-	trainer MEDIUM, DOROTHY, EVENT_BEAT_MEDIUM_DOROTHY, .SeenTxt, .BeatenTxt, 0, .AfterScript
+	trainer TC_MEDIUM, MEDIUM_DOROTHY_1, EVENT_BEAT_MEDIUM_DOROTHY, .SeenTxt, .BeatenTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "I can sense your"
@@ -126,7 +126,7 @@ TrainerMediumDorothy:
 	done
 	
 TrainerSoldierGrant:
-	trainer SOLDIER, GRANT, EVENT_BEAT_SOLDIER_GRANT, .SeenTxt, .BeatenTxt, 0, .AfterScript
+	trainer TC_SOLDIER, SOLDIER_GRANT_1, EVENT_BEAT_SOLDIER_GRANT, .SeenTxt, .BeatenTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "My ghosts served"
@@ -163,7 +163,7 @@ AzaleaGymMortyScript:
 	waitbutton
 	closetext
 	winlosstext .WinTxt, 0
-	loadtrainer MORTY, MORTY1
+	loadtrainer TC_MORTON, MORTON_MORTON_1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MORTY

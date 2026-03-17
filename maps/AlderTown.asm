@@ -15,7 +15,7 @@ AlderTown_MapScripts:
 	end
 	
 TrainerFisherBilly:
-	trainer FISHER, FISHER_BILLY, EVENT_BEAT_FISHER_BILLY, FisherBillySeenText, FisherBillyBeatenText, 0, .Script
+	trainer TC_FISHER, FISHER_BILLY_1, EVENT_BEAT_FISHER_BILLY, FisherBillySeenText, FisherBillyBeatenText, 0, .Script
 	
 .Script:
 	endifjustbattled

@@ -11,12 +11,22 @@ BugContestantPointers:
 	dw BugContestant_BugCatcherJosh
 	dw BugContestant_YoungsterSamuel
 
+BugContestant_YoungsterMax:
+BugContestant_BugCatcherEd:
+BugContestant_CooltrainerMNick:
+BugContestant_PokefanMWilliam:
+BugContestant_CamperBarry:
+BugContestant_PicnickerCindy:
+BugContestant_BugCatcherJosh:
+BugContestant_YoungsterSamuel:
+
 ; contestant format:
 ;   db class, id
 ;   dw 1st-place mon, score
 ;   dw 2nd-place mon, score
 ;   dw 3rd-place mon, score
 
+IF 0
 BugContestant_YoungsterMax:
 	db YOUNGSTER,  MAX
 	dw KAKUNA,     300
@@ -42,7 +52,7 @@ BugContestant_PokefanMWilliam:
 	dw VENONAT,    321
 
 ; BugContestant_BugCatcherBenny:
-; 	db BUG_CATCHER, BUG_CATCHER_BENNY
+; 	db BUG_CATCHER, BUGCATCHER_BENNY
 ; 	dw BUTTERFREE, 318
 ; 	dw WEEDLE,     295
 ; 	dw CATERPIE,   285
@@ -70,3 +80,4 @@ BugContestant_YoungsterSamuel:
 	dw WEEDLE,     270
 	dw PINSIR,     282
 	dw CATERPIE,   251
+ENDC

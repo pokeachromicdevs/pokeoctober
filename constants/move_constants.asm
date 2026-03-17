@@ -319,7 +319,7 @@ NUM_ATTACKS EQU const_value + -1
 	if NUM_ATTACKS > $3fff
 		fail "Too many moves defined!"
 	endc
-
+; -----------------------------------------
 
 NUM_SPECIAL_ANIMS EQU $1b ;fix if more special (always on) animations are added
 

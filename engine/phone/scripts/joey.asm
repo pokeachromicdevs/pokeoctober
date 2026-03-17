@@ -1,5 +1,5 @@
 JoeyPhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, YOUNGSTER, JOEY1
+	gettrainername STRING_BUFFER_3, TC_YOUNGSTER, YOUNGSTER_JOEY_1
 	checkflag ENGINE_JOEY
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
@@ -19,7 +19,7 @@ JoeyPhoneCalleeScript:
 	farsjump UnknownScript_0xa0a4b
 
 JoeyPhoneCallerScript:
-	gettrainername STRING_BUFFER_3, YOUNGSTER, JOEY1
+	gettrainername STRING_BUFFER_3, TC_YOUNGSTER, YOUNGSTER_JOEY_1
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_JOEY
 	iftrue .Generic

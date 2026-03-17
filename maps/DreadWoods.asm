@@ -13,7 +13,7 @@ DreadWoods_MapScripts:
 	db 0 ; callbacks
 
 TrainerSchoolboyAndy:
-	trainer SCHOOLBOY, SCHOOLBOY_ANDY, EVENT_BEAT_SCHOOLBOY_ANDY, SchoolboyAndySeenText, SchoolboyAndyBeatenText, 0, .AfterScript
+	trainer TC_SCHOOLBOY, SCHOOLBOY_ANDY_1, EVENT_BEAT_SCHOOLBOY_ANDY, SchoolboyAndySeenText, SchoolboyAndyBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -24,7 +24,7 @@ TrainerSchoolboyAndy:
 	end
 
 TrainerManchildMiguel:
-	trainer MANCHILD, MIGUEL, EVENT_BEAT_MANCHILD_MIGUEL, ManchildMiguelSeenText, ManchildMiguelBeatenText, 0, .AfterScript
+	trainer TC_MANCHILD, MANCHILD_MIGUEL_1, EVENT_BEAT_MANCHILD_MIGUEL, ManchildMiguelSeenText, ManchildMiguelBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -162,7 +162,7 @@ DreadWoods_WarnGuy:
 	done
 
 TrainerBeautyNina:
-	trainer BEAUTY, NINA, EVENT_BEAT_BEAUTY_NINA, .SeenText, .BeatenText, 0, .AfterScript
+	trainer TC_BEAUTY, BEAUTY_NINA_1, EVENT_BEAT_BEAUTY_NINA, .SeenText, .BeatenText, 0, .AfterScript
 .SeenText:
 	text "Many people fear"
 	line "these woods, but I"
@@ -191,7 +191,7 @@ TrainerBeautyNina:
 
 
 TrainerOfficerManfred:
-	trainer OFFICER, MANFRED, EVENT_BEAT_OFFICER_MANFRED, .SeenText, .BeatenText, 0, .AfterScript
+	trainer TC_OFFICER, OFFICER_MANFRED_1, EVENT_BEAT_OFFICER_MANFRED, .SeenText, .BeatenText, 0, .AfterScript
 .SeenText:
 	text "Why did I have to"
 	line "be stationed here?"
@@ -220,7 +220,7 @@ TrainerOfficerManfred:
 	done
 
 TrainerSailorEdward:
-	trainer SAILOR, SAILOR_EDWARD, EVENT_BEAT_SAILOR_EDWARD, .SeenText, .BeatenText, 0, .AfterScript
+	trainer TC_SAILOR, SAILOR_EDWARD_1, EVENT_BEAT_SAILOR_EDWARD, .SeenText, .BeatenText, 0, .AfterScript
 .SeenText:
 	text "Argh! I'm going to"
 	line "build me pirate"

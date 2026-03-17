@@ -21,7 +21,7 @@ AlderGymBugsyScript:
 	waitbutton
 	closetext
 	winlosstext BugsyText_ResearchIncomplete, 0
-	loadtrainer BUGSY, BUGSY1
+	loadtrainer TC_BUGSY, BUGSY_BUGSY_1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY
@@ -37,8 +37,8 @@ AlderGymBugsyScript:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
 	setevent EVENT_BEAT_TWINS_MEI_AND_LEI
-	setevent EVENT_BEAT_BUG_CATCHER_SHELBY
-	setevent EVENT_BEAT_BUG_CATCHER_YUKIJI
+	setevent EVENT_BEAT_BUGCATCHER_SHELBY
+	setevent EVENT_BEAT_BUGCATCHER_YUKIJI
 	setevent EVENT_BEAT_PICNICKER_JAMIE
 	writetext BugsyText_HiveBadgeSpeech
 	buttonsound
@@ -58,7 +58,7 @@ AlderGymBugsyScript:
 	end
 
 TrainerTwinsMeiAndLei1:
-	trainer TWINS, MEIANDLEI1, EVENT_BEAT_TWINS_MEI_AND_LEI, TwinsMeiAndLei1SeenText, TwinsMeiAndLei1BeatenText, 0, .AfterScript
+	trainer TC_TWINS, TWINS_MEIandLEI_1, EVENT_BEAT_TWINS_MEI_AND_LEI, TwinsMeiAndLei1SeenText, TwinsMeiAndLei1BeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -69,7 +69,7 @@ TrainerTwinsMeiAndLei1:
 	end
 
 TrainerTwinsMeiAndLei2:
-	trainer TWINS, MEIANDLEI2, EVENT_BEAT_TWINS_MEI_AND_LEI, TwinsMeiAndLei2SeenText, TwinsMeiAndLei2BeatenText, 0, .AfterScript
+	trainer TC_TWINS, TWINS_MEIandLEI_2, EVENT_BEAT_TWINS_MEI_AND_LEI, TwinsMeiAndLei2SeenText, TwinsMeiAndLei2BeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -80,7 +80,7 @@ TrainerTwinsMeiAndLei2:
 	end
 
 TrainerBugCatcherShelby:
-	trainer BUG_CATCHER, SHELBY, EVENT_BEAT_BUG_CATCHER_SHELBY, BugCatcherShelbySeenText, BugCatcherShelbyBeatenText, 0, .AfterScript
+	trainer TC_BUGCATCHER, BUGCATCHER_SHELBY_1, EVENT_BEAT_BUGCATCHER_SHELBY, BugCatcherShelbySeenText, BugCatcherShelbyBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -91,7 +91,7 @@ TrainerBugCatcherShelby:
 	end
 
 TrainerBugCatcherYukiji:
-	trainer BUG_CATCHER, YUKIJI, EVENT_BEAT_BUG_CATCHER_YUKIJI, BugCatcherYukijiSeenText, BugCatcherYukijiBeatenText, 0, .AfterScript
+	trainer TC_BUGCATCHER, BUGCATCHER_YUKIJI_1, EVENT_BEAT_BUGCATCHER_YUKIJI, BugCatcherYukijiSeenText, BugCatcherYukijiBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -102,7 +102,7 @@ TrainerBugCatcherYukiji:
 	end
 
 TrainerPicnickerJamie:
-	trainer PICNICKER, JAMIE, EVENT_BEAT_PICNICKER_JAMIE, PicnickerJamieSeenText, PicnickerJamieBeatenText, 0, .AfterScript
+	trainer TC_PICNICKER, PICNICKER_JAMIE_1, EVENT_BEAT_PICNICKER_JAMIE, PicnickerJamieSeenText, PicnickerJamieBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -132,10 +132,10 @@ AlderGymGuyScript:
 AlderGymStatue:
 	checkflag ENGINE_HIVEBADGE
 	iftrue .Beaten
-	gettrainername STRING_BUFFER_4, BUGSY, BUGSY1
+	gettrainername STRING_BUFFER_4, TC_BUGSY, BUGSY_BUGSY_1
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, BUGSY, BUGSY1
+	gettrainername STRING_BUFFER_4, TC_BUGSY, BUGSY_BUGSY_1
 	jumpstd gymstatue2
 
 BugsyText_INeverLose:

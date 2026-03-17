@@ -87,31 +87,31 @@ PlayBattleMusic:
 	jr .done
 
 .trainermusic
-	ld de, MUSIC_CHAMPION_BATTLE
-	cp CHAMPION
-	jr z, .done
-	cp RED
-	jr z, .done
+	; ld de, MUSIC_CHAMPION_BATTLE
+	; cp CHAMPION
+	; jr z, .done
+	; cp RED
+	; jr z, .done
 
 	ld de, MUSIC_PROF_BATTLE
-	cp POKEMON_PROF
+	cp TC_ELM
 	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...
 	ld de, MUSIC_ROCKET_BATTLE
-	cp GRUNTM
+	cp TC_GRUNTM
 	jr z, .done
-	cp GRUNTF
+	cp TC_GRUNTF
 	jr z, .done
-	cp EXECUTIVEM
+	; cp TC_EXECUTIVEM
+	; jr z, .done
+	; cp TC_EXECUTIVEF
+	; jr z, .done
+	; cp TC_SCIENTIST
+	; jr z, .done
+	cp TC_ROCKETWILL
 	jr z, .done
-	cp EXECUTIVEF
-	jr z, .done
-	cp SCIENTIST
-	jr z, .done
-	cp WILL
-	jr z, .done
-	cp KAREN
+	cp TC_ROCKETKAREN
 	jr z, .done
 	
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
@@ -126,14 +126,15 @@ PlayBattleMusic:
 
 	ld de, MUSIC_RIVAL_BATTLE
 	ld a, [wOtherTrainerClass]
-	cp RIVAL1
+	cp TC_RIVAL1
 	jr z, .done
-	cp RIVAL2
-	jr nz, .othertrainer
+	jr .othertrainer
+	;cp TC_RIVAL2
+	;jr nz, .othertrainer
 
-	ld a, [wOtherTrainerID]
-	cp RIVAL2_2_CHIKORITA ; Rival in Indigo Plateau
-	jr c, .done
+	; ld a, [wOtherTrainerID]
+	; cp RIVAL2_2_CHIKORITA ; Rival in Indigo Plateau
+	; jr c, .done
 	ld de, MUSIC_CHAMPION_BATTLE
 	jr .done
 	

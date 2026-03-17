@@ -14,7 +14,7 @@ Route31_MapScripts:
 	db 0 ; callbacks
 
 TrainerInstructorStanley:
-	trainer INSTRUCTOR, STANLEY, EVENT_BEAT_INSTRUCTOR_STANLEY, InstructorStanley1SeenText, InstructorStanley1BeatenText, 0, .Script
+	trainer TC_INSTRUCTOR, INSTRUCTOR_STANLEY_1, EVENT_BEAT_INSTRUCTOR_STANLEY, InstructorStanley1SeenText, InstructorStanley1BeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_INSTRUCTOR_STANLEY
@@ -39,7 +39,7 @@ TrainerInstructorStanley:
 	askforphonenumber PHONE_INSTRUCTOR_STANLEY
 	ifequal PHONE_CONTACTS_FULL, .PhoneFullSTD
 	ifequal PHONE_CONTACT_REFUSED, .DeclinedNumberSTD
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, STANLEY1
+	gettrainername STRING_BUFFER_3, TC_INSTRUCTOR, INSTRUCTOR_STANLEY_1
 	scall .RegisterNumberSTD
 	sjump .AcceptedNumberSTD
 
@@ -65,7 +65,7 @@ TrainerInstructorStanley:
 	checkflag ENGINE_FLYPOINT_GOLDENROD
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer INSTRUCTOR, STANLEY
+	loadtrainer TC_INSTRUCTOR, INSTRUCTOR_STANLEY_1
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 1
@@ -73,7 +73,7 @@ TrainerInstructorStanley:
 	end
 
 .LoadFight1:
-	loadtrainer BUG_CATCHER, STANLEY2
+	loadtrainer TC_INSTRUCTOR, INSTRUCTOR_STANLEY_REMATCH2
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 2
@@ -81,7 +81,7 @@ TrainerInstructorStanley:
 	end
 
 .LoadFight2:
-	loadtrainer BUG_CATCHER, STANLEY3
+	loadtrainer TC_INSTRUCTOR, INSTRUCTOR_STANLEY_REMATCH3
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 3
@@ -89,7 +89,7 @@ TrainerInstructorStanley:
 	end
 
 .LoadFight3:
-	loadtrainer BUG_CATCHER, STANLEY4
+	loadtrainer TC_INSTRUCTOR, INSTRUCTOR_STANLEY_REMATCH4
 	startbattle
 	reloadmapafterbattle
 	loadmem wWadeFightCount, 4
@@ -97,7 +97,7 @@ TrainerInstructorStanley:
 	end
 
 .LoadFight4:
-	loadtrainer INSTRUCTOR, STANLEY
+	loadtrainer TC_INSTRUCTOR, INSTRUCTOR_STANLEY_REMATCH5
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_STANLEY
@@ -171,7 +171,7 @@ TrainerInstructorStanley:
 	end
 
 TrainerYoungsterMax:
-	trainer YOUNGSTER, MAX, EVENT_BEAT_BUG_CATCHER_DON, YoungsterMaxSeenText, YoungsterMaxBeatenText, 0, .Script
+	trainer TC_YOUNGSTER, YOUNGSTER_MAX_1, EVENT_BEAT_BUGCATCHER_DON, YoungsterMaxSeenText, YoungsterMaxBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -182,7 +182,7 @@ TrainerYoungsterMax:
 	end
 
 TrainerLassSam:
-	trainer LASS, LASS_SAM, EVENT_BEAT_LASS_SAM, LassSamSeenText, LassSamBeatenText, 0, .Script
+	trainer TC_LASS, LASS_SAM_1, EVENT_BEAT_LASS_SAM, LassSamSeenText, LassSamBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -193,7 +193,7 @@ TrainerLassSam:
 	end
 
 TrainerTeacherAnn:
-	trainer TEACHER, ANN, EVENT_BEAT_TEACHER_ANN, TeacherAnnSeenText, TeacherAnnBeatenText, 0, .Script
+	trainer TC_TEACHER, TEACHER_ANN_1, EVENT_BEAT_TEACHER_ANN, TeacherAnnSeenText, TeacherAnnBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

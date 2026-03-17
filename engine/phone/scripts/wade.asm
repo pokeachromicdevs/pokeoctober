@@ -1,5 +1,5 @@
 StanleyPhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, STANLEY1
+	gettrainername STRING_BUFFER_3, TC_BUGCATCHER, BUGCATCHER_STANLEY_1
 	checkflag ENGINE_STANLEY
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
@@ -37,7 +37,7 @@ StanleyPhoneCalleeScript:
 	farsjump UnknownScript_0xa0ab5
 
 STANLEYPhoneCallerScript:
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, STANLEY1
+	gettrainername STRING_BUFFER_3, TC_BUGCATCHER, BUGCATCHER_STANLEY_1
 	farscall PhoneScript_GreetPhone_Male
 	farscall PhoneScript_Random2
 	ifequal 0, .NoContest

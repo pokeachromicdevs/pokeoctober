@@ -25,7 +25,7 @@ BTTrainerClassGenders:
 	db FEMALE ; ERIKA
 	db MALE   ; YOUNGSTER
 	db MALE   ; SCHOOLBOY
-	db MALE   ; BIRD_KEEPER
+	db MALE   ; BIRDKEEPER
 	db FEMALE ; LASS
 	db FEMALE ; JANINE
 	db MALE   ; COOLTRAINERM
@@ -51,7 +51,7 @@ BTTrainerClassGenders:
 	db MALE   ; BURGLAR
 	db MALE   ; FIREBREATHER
 	db MALE   ; JUGGLER
-	db MALE   ; BLACKBELT_T
+	db MALE   ; BLACKBELT
 	db MALE   ; EXECUTIVEM
 	db MALE   ; PSYCHIC_T
 	db FEMALE ; PICNICKER

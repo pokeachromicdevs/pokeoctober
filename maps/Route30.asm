@@ -12,7 +12,7 @@ Route30_MapScripts:
 	db 0 ; callbacks
 	
 TrainerSoldierDwight:
-	trainer SOLDIER, DWIGHT, EVENT_BEAT_SOLDIER_DWIGHT, SoldierDwightSeenText, SoldierDwightBeatenText, 0, .Script
+	trainer TC_SOLDIER, SOLDIER_DWIGHT_1, EVENT_BEAT_SOLDIER_DWIGHT, SoldierDwightSeenText, SoldierDwightBeatenText, 0, .Script
 	
 .Script:
 	endifjustbattled

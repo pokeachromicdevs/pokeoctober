@@ -183,7 +183,7 @@ CherrygroveGroupSprites:
 		static_sprite SPRITE_FRUIT_TREE
 		static_sprite SPRITE_OFFICER
 		static_sprite SPRITE_BLACK_BELT
-		static_sprite SPRITE_BIRD_KEEPER
+		static_sprite SPRITE_BIRDKEEPER
 
 	end_outdoor_sprites
 

@@ -3,26 +3,26 @@ FinalMonTexts::
 ; TRAINER_CLASS_ID, TEXT_POINTER
 
 ; gym leaders
-	dbw FALKNER, .FalknerText
-	dbw WHITNEY, .WhitneyText
-	dbw BUGSY,   .BugsyText
-	dbw MORTY,   .MortyText
-	dbw PRYCE,   .PryceText
-	dbw JASMINE, .JasmineText
-	dbw CHUCK,   .ChuckText
-	dbw CLAIR,   .ClairText
+	dbw TC_FALKNER, .FalknerText
+	dbw TC_WHITNEY, .WhitneyText
+	dbw TC_BUGSY,   .BugsyText
+	dbw TC_MORTON,   .MortyText
+	; dbw PRYCE,   .PryceText
+	; dbw JASMINE, .JasmineText
+	; dbw CHUCK,   .ChuckText
+	; dbw CLAIR,   .ClairText
 
 ; execs
-	dbw KAREN, .KarenText
-	dbw WILL,  .WillText
+	dbw TC_ROCKETKAREN, .KarenText
+	dbw TC_ROCKETWILL,  .WillText
 	;dbw GIOVANNI, .GiovanniText
 
 ; e4
 	;dbw LORELEI,  .LoreleiText
-	dbw BRUNO,    .BrunoText
+	; dbw BRUNO,    .BrunoText
 	;dbw AGATHA,   .AgathaText
-	dbw KOGA,     .KogaText
-	dbw CHAMPION, .LanceText
+	; dbw KOGA,     .KogaText
+	; dbw CHAMPION, .LanceText
 
 	db -1 ; end of list
 

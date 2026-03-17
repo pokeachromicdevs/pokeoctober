@@ -172,7 +172,6 @@ ROMX $3f
 	"Crash Handler"
 ROMX $41
 	"bank41"
-	"Enemy Trainer Parties 1"
 ROMX $42
 	"Credits"
 	"October Credits"
@@ -227,7 +226,6 @@ ROMX $5b
 	"bank5B"
 ROMX $5d
 	"Crystal Phone Text 2"
-	"Enemy Trainer Parties 3"
 ROMX $5e
 	"UpdateBattleHUDs"
 	"Songs 5"

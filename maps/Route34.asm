@@ -155,7 +155,7 @@ Route34_WillEventTriggerCommon:
 	closetext
 	setlasttalked ROUTE34_WILL
 	winlosstext .WillWinText, 0
-	loadtrainer WILL, WILL1
+	loadtrainer TC_ROCKETWILL, ROCKETWILL_WILL_1
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -344,7 +344,7 @@ Route34Shuckle:
 	done
 
 ; TrainerManchildZachary:
-; 	trainer MANCHILD, ZACHARY, EVENT_BEAT_MANCHILD_ZACHARY, .SeenTxt, .BeatenTxt, 0, .AfterScript
+; 	trainer TC_MANCHILD, MANCHILD_ZACHARY_1, EVENT_BEAT_MANCHILD_ZACHARY, .SeenTxt, .BeatenTxt, 0, .AfterScript
 ;
 ; .SeenTxt:
 ; 	text "GHOST-types give"
@@ -422,7 +422,7 @@ Route34Shuckle:
 	;done
 
 ; TrainerLassCharlotte:
-; 	trainer LASS, CHARLOTTE, EVENT_BEAT_LASS_CHARLOTTE, .SeenTxt, .WinTxt, 0, .PostScript
+; 	trainer TC_LASS, LASS_CHARLOTTE_1, EVENT_BEAT_LASS_CHARLOTTE, .SeenTxt, .WinTxt, 0, .PostScript
 ; .SeenTxt:
 ; 	text "My PICHU is the"
 ; 	line "greatest!"
@@ -443,8 +443,9 @@ Route34Shuckle:
 ; 	cont "more cuter?"
 ; 	done
 
+; TODO replace ROB with WALT
 TrainerFireBreatherWalt:
-	trainer FIREBREATHER, WALT, EVENT_BEAT_FIREBREATHER_WALT, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_FIREBREATHER, FIREBREATHER_ROB_1, EVENT_BEAT_FIREBREATHER_WALT, .SeenTxt, .WinTxt, 0, .PostScript
 .SeenTxt:
 	text "How dare you in-"
  	line "terrupt me while"
@@ -468,7 +469,7 @@ TrainerFireBreatherWalt:
  	done
 
 TrainerJugglerIrwin:
-	trainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, PKFArielSeenTxt, PKFArielWinTxt, 0, PKFArielScript
+	trainer TC_JUGGLER, JUGGLER_IRWIN_1, EVENT_BEAT_JUGGLER_IRWIN, PKFArielSeenTxt, PKFArielWinTxt, 0, PKFArielScript
 
 PKFArielSeenTxt:
 	text "Behold my graceful"
@@ -495,7 +496,7 @@ PKFArielScript:
 Route34_PokefanFHack:
 	checkevent EVENT_BEAT_JUGGLER_IRWIN
 	iftrue .skip
-	loadtrainer JUGGLER, IRWIN1
+	loadtrainer TC_JUGGLER, JUGGLER_IRWIN_1
 	encountermusic
 	setlasttalked ROUTE34_POKEFAN
 	showemote EMOTE_SHOCK, LAST_TALKED, 30
@@ -516,7 +517,7 @@ Route34_PokefanFHack:
 	step_end
 
 TrainerBikerHarley:
-	trainer BIKER, HARLEY, EVENT_BEAT_BIKER_HARLEY, .SeenTxt, .WinTxt, 0, .Script
+	trainer TC_BIKER, BIKER_HARLEY_1, EVENT_BEAT_BIKER_HARLEY, .SeenTxt, .WinTxt, 0, .Script
 
 .SeenTxt:
 	text "I claim this turf"

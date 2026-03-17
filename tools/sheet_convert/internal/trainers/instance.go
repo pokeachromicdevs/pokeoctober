@@ -129,9 +129,9 @@ func (s *State) writeTrInstances(consts io.Writer, parties io.Writer) {
 			}
 			if items {
 				if moves {
-					verdict = "TRAINERTYPE_ITEMS | TRAINERTYPE_MOVES"
+					verdict = "TRAINERTYPE_ITEM | TRAINERTYPE_MOVES"
 				} else {
-					verdict = "TRAINERTYPE_ITEMS"
+					verdict = "TRAINERTYPE_ITEM"
 				}
 			} else {
 				if moves {
@@ -139,29 +139,33 @@ func (s *State) writeTrInstances(consts io.Writer, parties io.Writer) {
 				}
 			}
 
+			// name, trainer type
 			fmt.Fprintf(parties,
 				"\t\tdb \"%s\", %s\n", utils.NormalizeName(i.Name), verdict,
 			)
 
-			// write the pokemon list
+			// party list
 			for _, m := range i.MonList {
+				// species
 				fmt.Fprintf(parties,
 					"\t\tdbw %d, %s\n", m.Level, utils.NormalizeAsConstName(m.Species),
 				)
+				// item
 				if items {
 					if m.HeldItem == "" {
 						fmt.Fprintf(parties, "\t\tdw NO_ITEM\n")
 					} else {
-						fmt.Fprintf(parties, "\t\tdw %s\n", utils.NormalizeAsConstName(m.HeldItem))
+						fmt.Fprintf(parties, "\t\tdw %s\n", utils.NormalizeAsConstNameUnderspaces(m.HeldItem))
 					}
 				}
+				// moves
 				if moves {
 					fmt.Fprintf(parties, "\t\tdw ")
 					for i := range 4 {
 						if i >= len(m.MoveList) {
 							fmt.Fprintf(parties, "NO_MOVE")
 						} else {
-							fmt.Fprint(parties, utils.NormalizeAsConstName(m.MoveList[i]))
+							fmt.Fprint(parties, utils.NormalizeAsConstNameUnderspaces(m.MoveList[i]))
 						}
 						if i < 3 {
 							fmt.Fprintf(parties, ", ")

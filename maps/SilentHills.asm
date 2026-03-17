@@ -1,4 +1,4 @@
-	object_const_def ; object_event constants
+constant	object_const_def ; object_event constants
 	const SILENTHILLS_BUG_CATCHER1
 	const SILENTHILLS_BUG_CATCHER2
 
@@ -8,7 +8,7 @@ SilentHills_MapScripts:
 	db 0 ; callbacks
 
 TrainerBugCatcherLenny:
-	trainer BUG_CATCHER, LENNY, EVENT_BEAT_BUG_CATCHER_LENNY, BugCatcherLennySeenText, BugCatcherLennyBeatenText, 0, .Script
+	trainer TC_BUGCATCHER, BUGCATCHER_LENNY_1, EVENT_BEAT_BUGCATCHER_LENNY, BugCatcherLennySeenText, BugCatcherLennyBeatenText, 0, .Script
 
 .Script
 	endifjustbattled
@@ -18,13 +18,13 @@ TrainerBugCatcherLenny:
 	closetext
 	end
 
-TrainerBugCatcherTimothy:
-	trainer BUG_CATCHER, BC_TIMOTHY, EVENT_BEAT_BUG_CATCHER_TIMOTHY, BugCatcherTimothySeenText, BugCatcherTimothyBeatenText, 0, .Script
+TrainerBugCatcherTimmy:
+	trainer TC_BUGCATCHER, BUGCATCHER_TIMMY_1, EVENT_BEAT_BUGCATCHER_TIMMY, BugCatcherTimmySeenText, BugCatcherTimmyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcherTimothyAfterText
+	writetext BugCatcherTimmyAfterText
 	waitbutton
 	closetext
 	end
@@ -63,17 +63,17 @@ SilentHillsNameRaterSignText:
 	line "Nicknames Rated"
 	done
 
-BugCatcherTimothySeenText:
+BugCatcherTimmySeenText:
 	text "Have you seen any"
 	line "PINSIR around"
 	cont "here?"
 	done
 
-BugCatcherTimothyBeatenText:
+BugCatcherTimmyBeatenText:
 	text "No? Dang…"
 	done
 
-BugCatcherTimothyAfterText:
+BugCatcherTimmyAfterText:
 	text "Some people said"
 	line "there's a weird"
 	cont "PINSIR around"
@@ -150,7 +150,7 @@ SilentHills_MapEvents:
 
 	db 5 ; object events
 	object_event 10, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherLenny, -1
-	object_event  42, 8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherTimothy, -1
+	object_event  42, 8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherTimmy, -1
 	object_event  30, 10, SPRITE_OFFICER,     SPRITEMOVEDATA_STANDING_DOWN,  0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT,  0, SilentHills_MineBlockage, -1
 	object_event 17,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentHillsPsnCure1, -1
 	object_event 47,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentHillsPsnCure2, -1

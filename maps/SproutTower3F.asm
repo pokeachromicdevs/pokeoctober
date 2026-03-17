@@ -23,7 +23,7 @@ SproutTower3F_MapScripts:
 	return
 
 TrainerSchoolboyAvery:
-	trainer SCHOOLBOY, AVERY, EVENT_BEAT_SCHOOLBOY_AVERY, SchoolboyAverySeenText, SchoolboyAveryBeatenText, 0, .AfterScript
+	trainer TC_SCHOOLBOY, SCHOOLBOY_AVERY_1, EVENT_BEAT_SCHOOLBOY_AVERY, SchoolboyAverySeenText, SchoolboyAveryBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -34,7 +34,7 @@ TrainerSchoolboyAvery:
 	end
 
 TrainerTeacherBella:
-	trainer TEACHER, BELLA, EVENT_BEAT_TEACHER_BELLA, TeacherBellaSeenText, TeacherBellaBeatenText, 0, .AfterScript
+	trainer TC_TEACHER, TEACHER_BELLA_1, EVENT_BEAT_TEACHER_BELLA, TeacherBellaSeenText, TeacherBellaBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -45,7 +45,7 @@ TrainerTeacherBella:
 	end
 
 TrainerLassJune:
-	trainer LASS, JUNE, EVENT_BEAT_LASS_JUNE, LassJuneSeenText, LassJuneBeatenText, 0, .AfterScript
+	trainer TC_LASS, LASS_JUNE_1, EVENT_BEAT_LASS_JUNE, LassJuneSeenText, LassJuneBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -155,13 +155,13 @@ SproutTower3F_RivalBattle:
 	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
 	iftrue .TotoTeam
 .ChikoTeam
-	loadtrainer RIVAL1, RIVAL1_2_CHIKORITA
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_CHIKORITA2
 	sjump .BattleAndFinishUp
 .CyndaTeam
-	loadtrainer RIVAL1, RIVAL1_2_CYNDAQUIL
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_CYNDAQUIL2
 	sjump .BattleAndFinishUp
 .TotoTeam
-	loadtrainer RIVAL1, RIVAL1_2_TOTODILE
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_TOTODILE2
 	sjump .BattleAndFinishUp
 .BattleAndFinishUp
 	startbattle

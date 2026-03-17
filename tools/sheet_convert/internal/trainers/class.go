@@ -122,7 +122,7 @@ func (s *State) writeTrClasses(
 		)
 		//
 		fmt.Fprintf(picptr,
-			"\tdb %sPic\n", utils.NormalizeAsSymbolName(k),
+			"\tdba %sPic\n", utils.NormalizeAsSymbolName(k),
 		)
 		//
 		fmt.Fprintf(pal,

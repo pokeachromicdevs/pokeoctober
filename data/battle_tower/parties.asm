@@ -1,9 +1,19 @@
 BattleTowerMons:
 ; 10 groups of 21 mons.
 ; Each mon is several bytes too long; the initial species, item and move IDs must be converted to 8-bit when loading.
-
 BattleTowerMons1:
+BattleTowerMons2:
+BattleTowerMons3:
+BattleTowerMons4:
+BattleTowerMons5:
+BattleTowerMons6:
+BattleTowerMons7:
+BattleTowerMons8:
+BattleTowerMons9:
+BattleTowerMons10:
 
+IF 0
+BattleTowerMons1:
 	dw JOLTEON
 	db MIRACLEBERRY
 	dw THUNDERBOLT, HYPER_BEAM, SHADOW_BALL, ROAR
@@ -5700,3 +5710,4 @@ BattleTowerMons10:
 	bigdw 214 ; SAtk
 	bigdw 214 ; SDef
 	db "RANTA-N@@@@"
+ENDC

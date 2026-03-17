@@ -16,7 +16,7 @@ SproutTowerF6Ether:
 	itemball ETHER
 	
 TrainerBlackbeltHitoshi:
-	trainer BLACKBELT_T, HITOSHI, EVENT_BEAT_BLACKBELT_HITOSHI, BlackbeltHitoshiSeenText, BlackbeltHitoshiBeatenText, 0, .AfterScript
+	trainer TC_BLACKBELT, BLACKBELT_HITOSHI_1, EVENT_BEAT_BLACKBELT_HITOSHI, BlackbeltHitoshiSeenText, BlackbeltHitoshiBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -27,7 +27,7 @@ TrainerBlackbeltHitoshi:
 	end
 	
 TrainerBlackbeltLee:
-	trainer BLACKBELT_T, LEE, EVENT_BEAT_BLACKBELT_LEE, BlackbeltLeeSeenText, BlackbeltLeeBeatenText, 0, .AfterScript
+	trainer TC_BLACKBELT, BLACKBELT_LEE_1, EVENT_BEAT_BLACKBELT_LEE, BlackbeltLeeSeenText, BlackbeltLeeBeatenText, 0, .AfterScript
 
 .AfterScript:
 	opentext

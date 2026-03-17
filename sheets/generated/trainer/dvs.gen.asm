@@ -14,7 +14,7 @@ TrainerClassDVs:
 	dn   9,  8,  8,  8 ; Camper
 	dn   9,  8,  8,  8 ; Fledgling
 	dn   9,  8,  8,  8 ; Bird Keeper
-	dn   9, 10,  7,  7 ; Leader Falkner
+	dn   9, 10,  7,  7 ; Falkner
 	dn   9,  8,  8,  8 ; Fisher
 	dn   5,  8,  8,  8 ; LassNieNie
 	dn   9,  8,  8,  8 ; Sage
@@ -23,7 +23,7 @@ TrainerClassDVs:
 	dn   9,  8,  8,  8 ; Schoolboy
 	dn   9,  9,  8,  8 ; Rock Climber
 	dn   6,  9, 12,  8 ; Beauty
-	dn   9,  8,  8,  8 ; Leader Whitney
+	dn   9,  8,  8,  8 ; Whitney
 	dn  10, 10, 10, 10 ; Prodigy
 	dn   7,  8,  8,  8 ; Manchild
 	dn   9,  8,  8,  8 ; Sailor
@@ -33,11 +33,12 @@ TrainerClassDVs:
 	dn   9, 10,  8,  8 ; Ballsmith
 	dn   6,  8, 10,  8 ; Twins
 	dn   6, 10, 10,  8 ; Picnicker
-	dn   8,  8,  8,  8 ; Leader Bugsy
+	dn   8,  8,  8,  8 ; Bugsy
 	dn   9,  8,  8,  8 ; Firebreather
 	dn   7,  8,  8,  8 ; Medium
-	dn   9,  8,  8,  8 ; Leader Morton
+	dn   9,  8,  8,  8 ; Morton
 	dn  13, 12, 13, 13 ; Rocket Will
 	dn   9,  8,  8,  8 ; Juggler
 	dn   9,  8,  8,  8 ; Biker
 	dn   7, 15, 13, 15 ; E4Karen
+	dn  15, 15, 15, 15 ; Elm

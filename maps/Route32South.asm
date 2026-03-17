@@ -18,7 +18,7 @@ Route32South_MapScripts:
 	end
 
 TrainerFisherGeorge:
-	trainer FISHER, FISHER_GEORGE, EVENT_BEAT_FISHER_GEORGE, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_FISHER, FISHER_GEORGE_1, EVENT_BEAT_FISHER_GEORGE, .SeenTxt, .WinTxt, 0, .PostScript
 
 .SeenTxt:
 	text "I did it!"
@@ -46,7 +46,7 @@ TrainerFisherGeorge:
 	done
 
 TrainerBeautyPeony:
-	trainer BEAUTY, PEONY, EVENT_BEAT_BEAUTY_PEONY, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_BEAUTY, BEAUTY_PEONY_1, EVENT_BEAT_BEAUTY_PEONY, .SeenTxt, .WinTxt, 0, .PostScript
 
 .SeenTxt:
 	text "Ah<...> a beautiful"
@@ -72,7 +72,7 @@ TrainerBeautyPeony:
 	done
 
 TrainerFledglingWinston:
-	trainer FLEDGLING, WINSTON, EVENT_BEAT_FLEDGLING_WINSTON, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_FLEDGLING, FLEDGLING_WINSTON_1, EVENT_BEAT_FLEDGLING_WINSTON, .SeenTxt, .WinTxt, 0, .PostScript
 
 .SeenTxt:
 	text "Who are you?"
@@ -90,7 +90,7 @@ TrainerFledglingWinston:
 	done
 
 TrainerBugCatcherHikaru:
-	trainer BUG_CATCHER, HIKARU, EVENT_BEAT_BUGCATCHER_HIKARU, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_BUGCATCHER, BUGCATCHER_HIKARU_1, EVENT_BEAT_BUGCATCHER_HIKARU, .SeenTxt, .WinTxt, 0, .PostScript
 
 .SeenTxt:
 	text "Ninja strike!"

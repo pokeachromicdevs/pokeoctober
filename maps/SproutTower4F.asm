@@ -11,7 +11,7 @@ SproutTower4F_MapScripts:
 	db 0 ; callbacks
 
 TrainerSageEdmond:
-	trainer SAGE, EDMOND, EVENT_BEAT_SAGE_EDMOND, SageEdmondSeenText, SageEdmondBeatenText, 0, .AfterScript
+	trainer TC_SAGE, SAGE_EDMOND_1, EVENT_BEAT_SAGE_EDMOND, SageEdmondSeenText, SageEdmondBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -22,7 +22,7 @@ TrainerSageEdmond:
 	end
 	
 TrainerSageJin:
-	trainer SAGE, JIN, EVENT_BEAT_SAGE_JIN, SageJinSeenText, SageJinBeatenText, 0, .AfterScript
+	trainer TC_SAGE, SAGE_JIN_1, EVENT_BEAT_SAGE_JIN, SageJinSeenText, SageJinBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled

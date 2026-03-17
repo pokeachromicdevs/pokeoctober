@@ -12,7 +12,7 @@ SproutTowerF7EscapeRope:
 	itemball ESCAPE_ROPE
 	
 TrainerMysticStella:
-	trainer MYSTIC, STELLA, EVENT_BEAT_MYSTIC_STELLA, MysticStellaSeenText, MysticStellaBeatenText, 0, .AfterScript
+	trainer TC_MYSTIC, MYSTIC_STELLA_1, EVENT_BEAT_MYSTIC_STELLA, MysticStellaSeenText, MysticStellaBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -23,7 +23,7 @@ TrainerMysticStella:
 	end
 	
 TrainerLassAnnie:
-	trainer LASS, ANNIE, EVENT_BEAT_LASS_ANNIE, LassAnnieSeenText, LassAnnieBeatenText, 0, .AfterScript
+	trainer TC_LASS, LASS_ANNIE_1, EVENT_BEAT_LASS_ANNIE, LassAnnieSeenText, LassAnnieBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled

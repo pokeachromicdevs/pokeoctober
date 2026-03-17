@@ -11,7 +11,7 @@ SproutTower5F_MapScripts:
 	db 0 ; callbacks
 
 TrainerYoungsterDan:
-	trainer YOUNGSTER, DAN, EVENT_BEAT_YOUNGSTER_DAN, YoungsterDanSeenText, YoungsterDanBeatenText, 0, .AfterScript
+	trainer TC_YOUNGSTER, YOUNGSTER_DAN_1, EVENT_BEAT_YOUNGSTER_DAN, YoungsterDanSeenText, YoungsterDanBeatenText, 0, .AfterScript
 	
 .AfterScript:
 	endifjustbattled
@@ -22,7 +22,7 @@ TrainerYoungsterDan:
 	end
 
 TrainerRockClimberLoid:
-	trainer ROCKCLIMBER, LOID, EVENT_BEAT_ROCKCLIMBER_LOID, RockClimberLoidSeenText, RockClimberLoidBeatenText, 0, .AfterScript
+	trainer TC_ROCKCLIMBER, ROCKCLIMBER_LOID_1, EVENT_BEAT_ROCKCLIMBER_LOID, RockClimberLoidSeenText, RockClimberLoidBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -33,7 +33,7 @@ TrainerRockClimberLoid:
 	end
 	
 TrainerInstructorCurtis:
-	trainer INSTRUCTOR, CURTIS, EVENT_BEAT_INSTRUCTOR_CURTIS, InstructorCurtisSeenText, InstructorCurtisBeatenText, 0, .AfterScript
+	trainer TC_INSTRUCTOR, INSTRUCTOR_CURTIS_1, EVENT_BEAT_INSTRUCTOR_CURTIS, InstructorCurtisSeenText, InstructorCurtisBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled

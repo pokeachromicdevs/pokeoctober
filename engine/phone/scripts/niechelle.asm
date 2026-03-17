@@ -1,5 +1,5 @@
 NiechellePhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, LASS, NIECHELLE
+	gettrainername STRING_BUFFER_3, TC_LASSNIENIE, LASSNIENIE_NIECHELLE_1
 	checkflag ENGINE_NIECHELLE
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Female
@@ -18,7 +18,7 @@ NiechellePhoneCalleeScript:
 	farsjump NiechelleComeBattleScript
 
 NiechellePhoneCallerScript:
-	gettrainername STRING_BUFFER_3, LASS, NIECHELLE
+	gettrainername STRING_BUFFER_3, TC_LASSNIENIE, LASSNIENIE_NIECHELLE_1
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_NIECHELLE
 	iftrue .GenericCall

@@ -20,7 +20,7 @@ Route32North_MapScripts:
 
 TrainerFisherKoi:
 ; lmao
-	trainer FISHER, KOI, EVENT_BEAT_FISHER_KOI, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_FISHER, FISHER_KOI_1, EVENT_BEAT_FISHER_KOI, .SeenTxt, .WinTxt, 0, .PostScript
 
 .SeenTxt:
 	text "All hail MAGIKARP!"
@@ -44,7 +44,7 @@ TrainerFisherKoi:
 	done
 
 TrainerLassTina:
-	trainer LASS, TINA, EVENT_BEAT_LASS_TINA, .Seen, .Beat, 0, .PostScript
+	trainer TC_LASS, LASS_TINA_1, EVENT_BEAT_LASS_TINA, .Seen, .Beat, 0, .PostScript
 
 .Seen:
 	text "H-Hey! Have you"
@@ -114,7 +114,7 @@ TrainerLassTina:
 	step_end
 	
 TrainerProdigyAxel:
-	trainer PRODIGY, AXEL, EVENT_BEAT_PRODIGY_AXEL, .SeenTxt, .WinTxt, 0, .PostScript
+	trainer TC_PRODIGY, PRODIGY_AXEL_1, EVENT_BEAT_PRODIGY_AXEL, .SeenTxt, .WinTxt, 0, .PostScript
 
 .SeenTxt:
 	text "Haha!"

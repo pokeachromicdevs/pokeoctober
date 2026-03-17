@@ -26,6 +26,9 @@ end_party: MACRO
 __party_open__  = 0
 ENDM
 
+INCLUDE "sheets/generated/trainer/trainer_parties.gen.asm"
+
+IF 0
 SECTION "Enemy Trainer Parties 1", ROMX
 
 FalknerGroup:
@@ -832,7 +835,7 @@ SchoolboyGroup:
 	end_party_list
 
 BirdKeeperGroup:
-	next_party ; BIRD_KEEPER (1)
+	next_party ; BIRDKEEPER (1)
 	db "RODNEY@", TRAINERTYPE_NORMAL
 	db 4
 	dw HOOTHOOT
@@ -840,13 +843,13 @@ BirdKeeperGroup:
 	dw SPEAROW
 	end_party
 
-	next_party ; BIRD_KEEPER (2)
+	next_party ; BIRDKEEPER (2)
 	db "ABE@", TRAINERTYPE_NORMAL
 	db 9
 	dw SPEAROW
 	end_party
 
-	next_party ; BIRD_KEEPER (3)
+	next_party ; BIRDKEEPER (3)
 	db "BRYAN@", TRAINERTYPE_NORMAL
 	db 12
 	dw PIDGEY
@@ -854,7 +857,7 @@ BirdKeeperGroup:
 	dw PIDGEOTTO
 	end_party
 
-	next_party ; BIRD_KEEPER (5)
+	next_party ; BIRDKEEPER (5)
 	db "TOBY@", TRAINERTYPE_NORMAL
 	db 15
 	dw DODUO
@@ -864,7 +867,7 @@ BirdKeeperGroup:
 	dw DODUO
 	end_party
 
-	next_party ; BIRD_KEEPER (7)
+	next_party ; BIRDKEEPER (7)
 	db "VANCE@", TRAINERTYPE_NORMAL
 	db 25
 	dw PIDGEOTTO
@@ -872,7 +875,7 @@ BirdKeeperGroup:
 	dw PIDGEOTTO
 	end_party
 
-	next_party ; BIRD_KEEPER (8)
+	next_party ; BIRDKEEPER (8)
 	db "HANK@", TRAINERTYPE_NORMAL
 	db 12
 	dw PIDGEY
@@ -880,7 +883,7 @@ BirdKeeperGroup:
 	dw PIDGEOT
 	end_party
 
-	next_party ; BIRD_KEEPER (9)
+	next_party ; BIRDKEEPER (9)
 	db "ROY@", TRAINERTYPE_NORMAL
 	db 29
 	dw FEAROW
@@ -888,7 +891,7 @@ BirdKeeperGroup:
 	dw FEAROW
 	end_party
 
-	next_party ; BIRD_KEEPER (10)
+	next_party ; BIRDKEEPER (10)
 	db "BORIS@", TRAINERTYPE_NORMAL
 	db 30
 	dw DODUO
@@ -898,19 +901,19 @@ BirdKeeperGroup:
 	dw DODRIO
 	end_party
 
-	next_party ; BIRD_KEEPER (11)
+	next_party ; BIRDKEEPER (11)
 	db "BOB@", TRAINERTYPE_NORMAL
 	db 34
 	dw NOCTOWL
 	end_party
 
-	next_party ; BIRD_KEEPER (12)
+	next_party ; BIRDKEEPER (12)
 	db "JOSE@", TRAINERTYPE_NORMAL
 	db 36
 	dw FARFETCH_D
 	end_party
 
-	next_party ; BIRD_KEEPER (13)
+	next_party ; BIRDKEEPER (13)
 	db "PETER@", TRAINERTYPE_NORMAL
 	db 6
 	dw PIDGEY
@@ -920,19 +923,19 @@ BirdKeeperGroup:
 	dw SPEAROW
 	end_party
 
-	next_party ; BIRD_KEEPER (14)
+	next_party ; BIRDKEEPER (14)
 	db "JOSE@", TRAINERTYPE_NORMAL
 	db 34
 	dw FARFETCH_D
 	end_party
 
-	next_party ; BIRD_KEEPER (15)
+	next_party ; BIRDKEEPER (15)
 	db "PERRY@", TRAINERTYPE_NORMAL
 	db 34
 	dw FARFETCH_D
 	end_party
 
-	next_party ; BIRD_KEEPER (16)
+	next_party ; BIRDKEEPER (16)
 	db "BRET@", TRAINERTYPE_NORMAL
 	db 32
 	dw PIDGEOTTO
@@ -940,14 +943,14 @@ BirdKeeperGroup:
 	dw FEAROW
 	end_party
 
-	next_party ; BIRD_KEEPER (17)
+	next_party ; BIRDKEEPER (17)
 	db "JOSE@", TRAINERTYPE_MOVES
 	db 40
 	dw FARFETCH_D
 	dw FURY_ATTACK, DETECT, FLY, SLASH
 	end_party
 
-	next_party ; BIRD_KEEPER (18)
+	next_party ; BIRDKEEPER (18)
 	db "VANCE@", TRAINERTYPE_NORMAL
 	db 32
 	dw PIDGEOTTO
@@ -955,7 +958,7 @@ BirdKeeperGroup:
 	dw PIDGEOTTO
 	end_party
 
-	next_party ; BIRD_KEEPER (19)
+	next_party ; BIRDKEEPER (19)
 	db "VANCE@", TRAINERTYPE_MOVES
 	db 38
 	dw PIDGEOT
@@ -965,7 +968,7 @@ BirdKeeperGroup:
 	dw SWIFT, DETECT, STEEL_WING, FLY
 	end_party
 
-	next_party ; BIRD_KEEPER (20)
+	next_party ; BIRDKEEPER (20)
 	db "CLYDE@", TRAINERTYPE_NORMAL
 	db 7
 	dw MURKROW
@@ -3902,7 +3905,7 @@ JugglerGroup:
 	end_party_list
 
 BlackbeltGroup:
-	next_party ; BLACKBELT_T (1)
+	next_party ; BLACKBELT (1)
 	db "KENJI@", TRAINERTYPE_NORMAL
 	db 27
 	dw ONIX
@@ -3914,7 +3917,7 @@ BlackbeltGroup:
 	dw MACHOKE
 	end_party
 
-	next_party ; BLACKBELT_T (3)
+	next_party ; BLACKBELT (3)
 	db "KENJI@", TRAINERTYPE_MOVES
 	db 33
 	dw ONIX
@@ -3930,13 +3933,13 @@ BlackbeltGroup:
 	dw DOUBLE_TEAM, HI_JUMP_KICK, MUD_SLAP, SWIFT
 	end_party
 
-	next_party ; BLACKBELT_T (8)
+	next_party ; BLACKBELT (8)
 	db "KENJI@", TRAINERTYPE_NORMAL
 	db 28
 	dw MACHOKE
 	end_party
 
-	next_party ; BLACKBELT_T (9)
+	next_party ; BLACKBELT (9)
 	db "LEE@", TRAINERTYPE_NORMAL
 	db 12
 	dw GEODUDE
@@ -3946,7 +3949,7 @@ BlackbeltGroup:
 	dw MANKEY
 	end_party
 
-	next_party ; BLACKBELT_T (9)
+	next_party ; BLACKBELT (9)
 	db "HITOSHI@", TRAINERTYPE_NORMAL
 	db 12
 	dw MACHOP
@@ -3954,7 +3957,7 @@ BlackbeltGroup:
 	dw TYROGUE
 	end_party
 
-	next_party ; BLACKBELT_T (9)
+	next_party ; BLACKBELT (9)
 	db "GENKI@", TRAINERTYPE_NORMAL
 	db 9
 	dw MACHOP
@@ -5716,3 +5719,4 @@ NiechelleGroup:
 	end_party
 	
 	end_party_list
+ENDC

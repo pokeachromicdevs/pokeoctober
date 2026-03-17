@@ -13,7 +13,7 @@ TrainerGroups:
 	dba CamperGroup
 	dba FledglingGroup
 	dba BirdKeeperGroup
-	dba LeaderFalknerGroup
+	dba FalknerGroup
 	dba FisherGroup
 	dba LassNieNieGroup
 	dba SageGroup
@@ -22,7 +22,7 @@ TrainerGroups:
 	dba SchoolboyGroup
 	dba RockClimberGroup
 	dba BeautyGroup
-	dba LeaderWhitneyGroup
+	dba WhitneyGroup
 	dba ProdigyGroup
 	dba ManchildGroup
 	dba SailorGroup
@@ -32,11 +32,12 @@ TrainerGroups:
 	dba BallsmithGroup
 	dba TwinsGroup
 	dba PicnickerGroup
-	dba LeaderBugsyGroup
+	dba BugsyGroup
 	dba FirebreatherGroup
 	dba MediumGroup
-	dba LeaderMortonGroup
+	dba MortonGroup
 	dba RocketWillGroup
 	dba JugglerGroup
 	dba BikerGroup
 	dba E4KarenGroup
+	dba ElmGroup

@@ -749,27 +749,27 @@ _CGB_TrainerCard:
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, FALKNER ; KRIS
+	ld a, TC_FALKNER ; KRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, WHITNEY
+	ld a, TC_WHITNEY
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, BUGSY
+	ld a, TC_BUGSY
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, MORTY
+	ld a, TC_MORTON
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, PRYCE
-	call GetTrainerPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-	ld a, JASMINE
-	call GetTrainerPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-	ld a, CHUCK
-	call GetTrainerPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
+	;ld a, PRYCE
+	;call GetTrainerPalettePointer
+	;call LoadPalette_White_Col1_Col2_Black
+	;ld a, JASMINE
+	;call GetTrainerPalettePointer
+	;call LoadPalette_White_Col1_Col2_Black
+	;ld a, CHUCK
+	;call GetTrainerPalettePointer
+	;call LoadPalette_White_Col1_Col2_Black
 	ld hl, .BadgePalettes
 	ld bc, 8 palettes
 	ld a, BANK(wOBPals1)

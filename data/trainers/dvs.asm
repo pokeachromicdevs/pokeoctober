@@ -24,7 +24,7 @@ TrainerClassDVs:
 	dn  7,  8,  8,  8 ; ERIKA
 	dn  9,  8,  8,  8 ; YOUNGSTER
 	dn  9,  8,  8,  8 ; SCHOOLBOY
-	dn  9,  8,  8,  8 ; BIRD_KEEPER
+	dn  9,  8,  8,  8 ; BIRDKEEPER
 	dn  5,  8,  8,  8 ; LASS
 	dn  9,  8,  8,  8 ; JANINE
 	dn 13,  8, 12,  8 ; COOLTRAINERM
@@ -50,7 +50,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; BURGLAR
 	dn  9,  8,  8,  8 ; FIREBREATHER
 	dn  9,  8,  8,  8 ; JUGGLER
-	dn  9,  8,  8,  8 ; BLACKBELT_T
+	dn  9,  8,  8,  8 ; BLACKBELT
 	dn 13,  8, 10,  8 ; EXECUTIVEM
 	dn  9,  8,  8,  8 ; PSYCHIC_T
 	dn  6, 10, 10,  8 ; PICNICKER

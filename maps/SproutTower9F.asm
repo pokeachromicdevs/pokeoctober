@@ -14,7 +14,7 @@ SageLiScript:
 
 ; load the trainer parties beforehand
 	winlosstext .WinText, 0
-	loadtrainer SAGE, LI
+	loadtrainer TC_SAGE, SAGE_LI_1
 
 ; talk to sage
 	opentext

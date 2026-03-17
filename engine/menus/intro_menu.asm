@@ -669,7 +669,7 @@ ENDC
 	;call RotateThreePalettesRight
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, POKEMON_PROF
+	ld a, TC_ELM
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -708,7 +708,7 @@ ENDC
 
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, POKEMON_PROF
+	ld a, TC_ELM
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -740,7 +740,7 @@ ENDC
 ; name the rival
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, RIVAL1
+	ld a, TC_RIVAL1
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -758,7 +758,7 @@ ENDC
 	call ClearTileMap
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, POKEMON_PROF
+	ld a, TC_ELM
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -874,7 +874,7 @@ NameRivalIntro:
 
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, RIVAL1
+	ld a, TC_RIVAL1
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 

@@ -5,26 +5,26 @@
 ; accounted for prior to the list check.
 
 GymLeaders:
-	db FALKNER
-	db WHITNEY
-	db BUGSY
-	db MORTY
-	db PRYCE
-	db JASMINE
-	db CHUCK
-	db CLAIR
-	db BRUNO
-	db KOGA
-	db CHAMPION
-	db RED
+	db TC_FALKNER
+	db TC_WHITNEY
+	db TC_BUGSY
+	db TC_MORTON
+	; db PRYCE
+	; db JASMINE
+	; db CHUCK
+	; db CLAIR
+	; db BRUNO
+	; db KOGA
+	; db CHAMPION
+	; db RED
 ; fallthrough
 KantoGymLeaders:
-	db BROCK
-	db MISTY
-	db LT_SURGE
-	db ERIKA
-	db JANINE
-	db SABRINA
-	db BLAINE
-	db BLUE
+	; db BROCK
+	; db MISTY
+	; db LT_SURGE
+	; db ERIKA
+	; db JANINE
+	; db SABRINA
+	; db BLAINE
+	; db BLUE
 	db -1

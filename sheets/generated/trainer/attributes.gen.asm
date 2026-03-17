@@ -5,7 +5,7 @@ TrainerClassAttributes:
 ; Rival1
 	dw NO_ITEM, NO_ITEM ; items
 	db 15 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
 ; Youngster
@@ -41,7 +41,7 @@ TrainerClassAttributes:
 ; Teacher
 	dw NO_ITEM, NO_ITEM ; items
 	db 18 ; base reward
-	dw AI_BASIC | AI_OPPORTUNIST | AI_AGGRESIVE | AI_STATUS ; move strategy
+	dw AI_BASIC | AI_OPPORTUNIST | AI_AGGRESSIVE | AI_STATUS ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
 ; Officer
@@ -74,10 +74,10 @@ TrainerClassAttributes:
 	dw AI_BASIC | AI_TYPES | AI_OFFENSIVE | AI_OPPORTUNIST | AI_STATUS ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
-; Leader Falkner
+; Falkner
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
 
 ; Fisher
@@ -128,10 +128,10 @@ TrainerClassAttributes:
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
-; Leader Whitney
+; Whitney
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
 
 ; Prodigy
@@ -167,13 +167,13 @@ TrainerClassAttributes:
 ; RocketKaren
 	dw NO_ITEM, NO_ITEM ; items
 	db 10 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
 ; Ballsmith
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
 ; Twins
@@ -188,10 +188,10 @@ TrainerClassAttributes:
 	dw AI_BASIC | AI_CAUTIOUS | AI_STATUS ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
-; Leader Bugsy
+; Bugsy
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
 
 ; Firebreather
@@ -206,16 +206,16 @@ TrainerClassAttributes:
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
-; Leader Morton
+; Morton
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_AGGRESIVE | AI_SMART | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_AGGRESSIVE | AI_SMART | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
 
 ; Rocket Will
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
 
 ; Juggler
@@ -233,5 +233,11 @@ TrainerClassAttributes:
 ; E4Karen
 	dw FULL_HEAL, MAX_POTION ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
+
+; Elm
+	dw FULL_HEAL, MAX_POTION ; items
+	db 25 ; base reward
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy

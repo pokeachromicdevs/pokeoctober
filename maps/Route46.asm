@@ -12,7 +12,7 @@ Route46_MapScripts:
 	db 0 ; callbacks
 	
 TrainerYoungsterBenny:	
-	trainer YOUNGSTER, BENNY, EVENT_BEAT_YOUNGSTER_BENNY, YoungsterBennySeenText, YoungsterBennyBeatenText, 0, .Script
+	trainer TC_YOUNGSTER, YOUNGSTER_BENNY_1, EVENT_BEAT_YOUNGSTER_BENNY, YoungsterBennySeenText, YoungsterBennyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -23,7 +23,7 @@ TrainerYoungsterBenny:
 	end
 	
 TrainerSportsmanJayden:	
-	trainer SPORTSMAN, JAYDEN, EVENT_BEAT_SPORTSMAN_JAYDEN, SportsmanJaydenSeenText, SportsmanJaydenBeatenText, 0, .Script
+	trainer TC_SPORTSMAN, SPORTSMAN_JAYDEN_1, EVENT_BEAT_SPORTSMAN_JAYDEN, SportsmanJaydenSeenText, SportsmanJaydenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -34,7 +34,7 @@ TrainerSportsmanJayden:
 	end
 	
 TrainerLassYuri:	
-	trainer LASS, YURI, EVENT_BEAT_LASS_YURI, LassYuriSeenText, LassYuriBeatenText, 0, .Script
+	trainer TC_LASS, LASS_YURI_1, EVENT_BEAT_LASS_YURI, LassYuriSeenText, LassYuriBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -45,7 +45,7 @@ TrainerLassYuri:
 	end
 	
 TrainerCamperCraig:	
-	trainer CAMPER, CRAIG, EVENT_BEAT_CAMPER_CRAIG, CamperCraigSeenText, CamperCraigBeatenText, 0, .Script
+	trainer TC_CAMPER, CAMPER_CRAIG_1, EVENT_BEAT_CAMPER_CRAIG, CamperCraigSeenText, CamperCraigBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

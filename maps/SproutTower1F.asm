@@ -14,7 +14,7 @@ SproutTower1F_MapScripts:
 	return
 
 TrainerFledglingTimothy:
-	trainer FLEDGLING, FLEDGLING_TIMOTHY, EVENT_BEAT_FLEDGLING_TIMOTHY, .Seen, .Beat, 0, .PostScript
+	trainer TC_FLEDGLING, FLEDGLING_TIMOTHY_1, EVENT_BEAT_FLEDGLING_TIMOTHY, .Seen, .Beat, 0, .PostScript
 
 .Seen:
 	text "H-have you seen my"

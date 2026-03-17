@@ -25,7 +25,7 @@ VioletGymSageBlock:
 	jumptextfaceplayer VioletGymSageBlockText
 
 TrainerOfficerSamson:
-	trainer OFFICER, SAMSON, EVENT_BEAT_OFFICER_SAMSON, OfficerSamsonSeenText, OfficerSamsonBeatenText, 0, .Script
+	trainer TC_OFFICER, OFFICER_SAMSON_1, EVENT_BEAT_OFFICER_SAMSON, OfficerSamsonSeenText, OfficerSamsonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -283,7 +283,7 @@ SproutTowerSign:
 	done
 
 TrainerFisherManny:
-	trainer FISHER, MANNY, EVENT_BEAT_FISHER_MANNY, .Seen, .Beat, 0, .PostScript
+	trainer TC_FISHER, FISHER_MANNY_1, EVENT_BEAT_FISHER_MANNY, .Seen, .Beat, 0, .PostScript
 
 .Seen:
 	text "Well, if nothing's"

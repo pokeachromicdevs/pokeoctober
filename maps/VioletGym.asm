@@ -28,7 +28,7 @@ VioletGymWhitneyScript:
 	waitbutton
 	closetext
 	winlosstext WhitneyShouldntBeSoSeriousText, 0
-	loadtrainer WHITNEY, WHITNEY1
+	loadtrainer TC_WHITNEY, WHITNEY_WHITNEY_1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY
@@ -67,7 +67,7 @@ VioletGymWhitneyScript:
 	end
 
 TrainerBeautyCelica:
-	trainer BEAUTY, CELICA, EVENT_BEAT_BEAUTY_CELICA, BeautyCelicaSeenText, BeautyCelicaBeatenText, 0, .Script
+	trainer TC_BEAUTY, BEAUTY_CELICA_1, EVENT_BEAT_BEAUTY_CELICA, BeautyCelicaSeenText, BeautyCelicaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -78,7 +78,7 @@ TrainerBeautyCelica:
 	end
 
 TrainerLassGloria:
-	trainer LASS, GLORIA, EVENT_BEAT_LASS_GLORIA, LassGloriaSeenText, LassGloriaBeatenText, 0, .Script
+	trainer TC_LASS, LASS_GLORIA_1, EVENT_BEAT_LASS_GLORIA, LassGloriaSeenText, LassGloriaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -89,7 +89,7 @@ TrainerLassGloria:
 	end
 
 TrainerBeautySarah:
-	trainer BEAUTY, SARAH, EVENT_BEAT_BEAUTY_SARAH, BeautySarahSeenText, BeautySarahBeatenText, 0, .Script
+	trainer TC_BEAUTY, BEAUTY_SARAH_1, EVENT_BEAT_BEAUTY_SARAH, BeautySarahSeenText, BeautySarahBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -97,7 +97,7 @@ TrainerBeautySarah:
 
 
 TrainerLassHelen:
-	trainer LASS, HELEN, EVENT_BEAT_LASS_HELEN, LassHelenSeenText, LassHelenBeatenText, 0, .Script
+	trainer TC_LASS, LASS_HELEN_1, EVENT_BEAT_LASS_HELEN, LassHelenSeenText, LassHelenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -108,7 +108,7 @@ TrainerLassHelen:
 	end
 
 TrainerFledglingTerry:
-	trainer FLEDGLING, TERRY, EVENT_BEAT_FLEDGLING_TERRY, FledglingTerrySeenText, FledglingTerryBeatenText, 0, .Script
+	trainer TC_FLEDGLING, FLEDGLING_TERRY_1, EVENT_BEAT_FLEDGLING_TERRY, FledglingTerrySeenText, FledglingTerryBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -138,10 +138,10 @@ VioletGymGuyScript:
 VioletGymStatue:
 	checkflag ENGINE_PLAINBADGE
 	iftrue .Beaten
-	gettrainername STRING_BUFFER_4, WHITNEY, WHITNEY1
+	gettrainername STRING_BUFFER_4, TC_WHITNEY, WHITNEY_WHITNEY_1
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, WHITNEY, WHITNEY1
+	gettrainername STRING_BUFFER_4, TC_WHITNEY, WHITNEY_WHITNEY_1
 	jumpstd gymstatue2
 
 WhitneyBeforeText:

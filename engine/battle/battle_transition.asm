@@ -267,7 +267,7 @@ StartTrainerBattle_DetermineWhichAnimation:
 
 .check_trainer
 	ld a, [wOtherTrainerClass]
-	cp POKEMON_PROF
+	cp TC_ELM
 	jr z, .prof_transition
 	jr .regular
 
@@ -799,19 +799,19 @@ INCLUDE "gfx/overworld/trainer_battle_nite.pal"
 .loadpokeballgfx
 	ld de, TeamRocketTransition
 	ld a, [wOtherTrainerClass]
-	cp GRUNTM
+	cp TC_GRUNTM
 	ret z
-	cp GRUNTF
+	cp TC_GRUNTF
 	ret z
-	cp EXECUTIVEM
+	;cp TC_EXECUTIVEM
+	;ret z
+	;cp TC_EXECUTIVEF
+	;ret z
+	;cp TC_SCIENTIST
+	;ret z
+	cp TC_ROCKETKAREN
 	ret z
-	cp EXECUTIVEF
-	ret z
-	cp SCIENTIST
-	ret z
-	cp KAREN
-	ret z
-	cp WILL
+	cp TC_ROCKETWILL
 	ret z
 	ld de, PokeBallTransition
 	ret

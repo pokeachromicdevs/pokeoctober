@@ -40,3 +40,4 @@ TrainerClassNames::
 	db "JUGGLER@"
 	db "BIKER@"
 	db "KAREN@"
+	db "#MON PROF@"

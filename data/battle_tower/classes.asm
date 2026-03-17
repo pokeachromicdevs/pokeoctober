@@ -1,4 +1,5 @@
 BattleTowerTrainers:
+IF 0
 ; The trainer class is not used in Crystal 1.0 due to a bug.
 ; Instead, the sixth character in the trainer's name is used.
 ; See BattleTowerText in engine/events/battle_tower/trainer_text.asm.
@@ -27,7 +28,7 @@ BattleTowerTrainers:
 	db "OBRIEN@@@@", GENTLEMAN
 	db "FROST@@@@@", BEAUTY
 	db "MORSE@@@@@", SUPER_NERD
-	db "YUFUNE@@@@", BLACKBELT_T
+	db "YUFUNE@@@@", BLACKBELT
 	db "RAJAN@@@@@", COOLTRAINERF
 	db "RODRIGUEZ@", OFFICER
 	db "SANTIAGO@@", PSYCHIC_T
@@ -35,7 +36,7 @@ BattleTowerTrainers:
 	db "THURMAN@@@", SCIENTIST
 	db "VALENTINO@", BEAUTY
 	db "WAGNER@@@@", CAMPER
-	db "YATES@@@@@", BIRD_KEEPER
+	db "YATES@@@@@", BIRDKEEPER
 	db "ANDREWS@@@", PICNICKER
 	db "BAHN@@@@@@", POKEMANIAC
 	db "MORI@@@@@@", SCIENTIST
@@ -52,11 +53,11 @@ BattleTowerTrainers:
 	db "LEONG@@@@@", YOUNGSTER
 	db "MARINO@@@@", TEACHER
 	db "NEWMAN@@@@", SAILOR
-	db "NGUYEN@@@@", BLACKBELT_T
+	db "NGUYEN@@@@", BLACKBELT
 	db "OGDEN@@@@@", SUPER_NERD
 	db "PARK@@@@@@", COOLTRAINERF
 	db "RAINE@@@@@", SWIMMERM
-	db "SELLS@@@@@", BIRD_KEEPER
+	db "SELLS@@@@@", BIRDKEEPER
 	db "ROCKWELL@@", BOARDER
 	db "THORNTON@@", LASS
 	db "TURNER@@@@", OFFICER
@@ -73,3 +74,4 @@ BattleTowerTrainers:
 	db "DYKSTRA@@@", SWIMMERF
 	db "EATON@@@@@", BIKER
 	db "WONG@@@@@@", FIREBREATHER
+ENDC

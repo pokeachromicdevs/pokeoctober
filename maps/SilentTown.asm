@@ -215,7 +215,7 @@ SilentTownSilverBattleScript:
 	iftrue .CHIKORITA
 ; has cyndaquil
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_TOTODILE1
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -225,7 +225,7 @@ SilentTownSilverBattleScript:
 
 .TOTODILE:
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_CHIKORITA1
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -235,7 +235,7 @@ SilentTownSilverBattleScript:
 
 .CHIKORITA:
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_CYNDAQUIL1
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -280,7 +280,7 @@ SilentTownSilverBattleScript:
 	iftrue .CHIKORITA
 ; has cyndaquil
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_TOTODILE1
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic

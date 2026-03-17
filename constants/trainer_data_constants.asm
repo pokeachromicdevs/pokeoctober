@@ -32,6 +32,7 @@ const_value = 0
 	shift_const AI_13
 	shift_const AI_14
 	shift_const AI_15
+AI_NONE EQU NO_AI
 
 ; TRNATTR_AI_ITEM_SWITCH bit flags
 CONTEXT_USE_F      EQU 6

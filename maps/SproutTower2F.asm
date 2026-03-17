@@ -11,7 +11,7 @@ SproutTower2F_MapScripts:
 	db 0 ; callbacks
 
 TrainerSageNico:
-	trainer SAGE, NICO, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .AfterScript
+	trainer TC_SAGE, SAGE_NICO_1, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -22,7 +22,7 @@ TrainerSageNico:
 	end
 	
 TrainerSageChow:
-	trainer SAGE, CHOW, EVENT_BEAT_SAGE_CHOW, SageChowSeenText, SageChowBeatenText, 0, .AfterScript
+	trainer TC_SAGE, SAGE_CHOW_1, EVENT_BEAT_SAGE_CHOW, SageChowSeenText, SageChowBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -33,7 +33,7 @@ TrainerSageChow:
 	end
 	
 TrainerBlackbeltGenki:
-	trainer BLACKBELT_T, GENKI, EVENT_BEAT_BLACKBELT_GENKI, BlackbeltGenkiSeenText, BlackbeltGenkiBeatenText, 0, .AfterScript
+	trainer TC_BLACKBELT, BLACKBELT_GENKI_1, EVENT_BEAT_BLACKBELT_GENKI, BlackbeltGenkiSeenText, BlackbeltGenkiBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled

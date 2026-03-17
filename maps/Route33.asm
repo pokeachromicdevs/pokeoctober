@@ -66,7 +66,7 @@ Route33_MapScripts:
 	end
 
 TrainerRoute33RocketGrunt1:
-	trainer GRUNTM, GRUNTM_ROUTE_33, EVENT_BEAT_ROUTE33_ROCKET_1, .Seen, .Beaten, 0, .After
+	trainer TC_GRUNTM, GRUNTM_GRUNT_R33, EVENT_BEAT_ROUTE33_ROCKET_1, .Seen, .Beaten, 0, .After
 
 .Seen
 	text "Hey! Get out of"
@@ -101,7 +101,7 @@ TrainerRoute33RocketGrunt1:
 	done
 
 TrainerRoute33RocketGrunt2:
-	trainer GRUNTF, GRUNTF_ROUTE_33, EVENT_BEAT_ROUTE33_ROCKET_2, .Seen, .Beaten, 0, .After
+	trainer TC_GRUNTF, GRUNTF_GRUNT_R33, EVENT_BEAT_ROUTE33_ROCKET_2, .Seen, .Beaten, 0, .After
 
 .Seen
 	text "Kid, get out of"
@@ -133,7 +133,7 @@ TrainerRoute33RocketGrunt2:
 	done
 
 TrainerRoute33Hyuck:
-	trainer GRUNTM, GRUNTM_ROUTE_33_HYUCK, EVENT_BEAT_ROUTE33_ROCKET_HYUCK, .Seen, .Beaten, 0, .After
+	trainer TC_GRUNTM, GRUNTM_GRUNT_HYUCKR33, EVENT_BEAT_ROUTE33_ROCKET_HYUCK, .Seen, .Beaten, 0, .After
 	end
 
 .Seen
@@ -193,7 +193,7 @@ Route33_EncounterKaren:
 
 ; battle
 	winlosstext .WinAgainstKarenText, 0
-	loadtrainer KAREN, KAREN1
+	loadtrainer TC_ROCKETKAREN, ROCKETKAREN_KAREN_1
 	startbattle
 
 ; after battle
@@ -503,13 +503,13 @@ Route33_EncounterRival:
 	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
 	iftrue .TotoTeam
 .ChikoTeam:
-	loadtrainer RIVAL1, RIVAL1_3_CHIKORITA
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_CHIKORITA3
 	sjump .GotTeam
 .CyndaTeam:
-	loadtrainer RIVAL1, RIVAL1_3_CYNDAQUIL
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_CYNDAQUIL3
 	sjump .GotTeam
 .TotoTeam:
-	loadtrainer RIVAL1, RIVAL1_3_TOTODILE
+	loadtrainer TC_RIVAL1, RIVAL1_RIVAL_TOTODILE3
 	; sjump .GotTeam
 .GotTeam:
 	startbattle
@@ -648,7 +648,7 @@ Route33CaveBlockageScript:
 	done
 
 TrainerBugCatcherNate:
-	trainer BUG_CATCHER, BC_NATE, EVENT_BEAT_BUG_CATCHER_NATE, .Seen, .Beaten, 0, .After
+	trainer TC_BUGCATCHER, BUGCATCHER_NATE_1, EVENT_BEAT_BUGCATCHER_NATE, .Seen, .Beaten, 0, .After
 
 .Seen
 	text "MT. HIVE is a bug-"
@@ -673,7 +673,7 @@ TrainerBugCatcherNate:
 	done
 
 TrainerManchildMarco:
-	trainer MANCHILD, MARCO, EVENT_BEAT_MANCHILD_MARCO, .Seen, .Beaten, 0, .After
+	trainer TC_MANCHILD, MANCHILD_MARCO_1, EVENT_BEAT_MANCHILD_MARCO, .Seen, .Beaten, 0, .After
 
 .Seen
 	text "A-are there bugs"
@@ -698,7 +698,7 @@ TrainerManchildMarco:
 	done
 
 TrainerFirebreatherRob:
-	trainer FIREBREATHER, FB_ROB, EVENT_BEAT_FIREBREATHER_ROB, .Seen, .Beaten, 0, .After
+	trainer TC_FIREBREATHER, FIREBREATHER_ROB_1, EVENT_BEAT_FIREBREATHER_ROB, .Seen, .Beaten, 0, .After
 
 .Seen
 	text "Go! My<...> not-bug-"
@@ -775,7 +775,7 @@ Route33_EncounterKurt:
 ; battle
 	setlasttalked ROUTE33_KURT_2
 	winlosstext .KurtWinText, 0
-	loadtrainer BALLSMITH, KURT
+	loadtrainer TC_BALLSMITH, BALLSMITH_KURT_1
 	startbattle
 ; after battle
 	reloadmapafterbattle

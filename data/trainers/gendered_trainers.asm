@@ -1,10 +1,11 @@
 ; Used by GetMobileOTTrainerClass
 
 MaleTrainers:
+IF 0
 	db BURGLAR
 	db YOUNGSTER
 	db SCHOOLBOY
-	db BIRD_KEEPER
+	db BIRDKEEPER
 	db POKEMANIAC
 	db GENTLEMAN
 	db BUG_CATCHER
@@ -15,7 +16,7 @@ MaleTrainers:
 	db GUITARIST
 	db HIKER
 	db FIREBREATHER
-	db BLACKBELT_T
+	db BLACKBELT
 	db PSYCHIC_T
 	db CAMPER
 	db COOLTRAINERM
@@ -35,9 +36,11 @@ MaleTrainers:
 	db ROCKCLIMBER
 	db SPORTSMAN
 	db MANCHILD
+ENDC
 .End
 
 FemaleTrainers:
+IF 0
 	db MEDIUM
 	db LASS
 	db BEAUTY
@@ -50,4 +53,5 @@ FemaleTrainers:
 	db COOLTRAINERF
 	db MYSTIC
 	db LASSNIENIE
+ENDC
 .End

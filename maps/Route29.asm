@@ -121,7 +121,7 @@ CatchingTutorialDudeScript:
 	end
 
 TrainerYoungsterJoey:
-	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
+	trainer TC_YOUNGSTER, YOUNGSTER_JOEY_1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_YOUNGSTER_JOEY
@@ -144,7 +144,7 @@ TrainerYoungsterJoey:
 	askforphonenumber PHONE_YOUNGSTER_JOEY
 	ifequal PHONE_CONTACTS_FULL, .PhoneFull
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	gettrainername STRING_BUFFER_3, YOUNGSTER, JOEY1
+	gettrainername STRING_BUFFER_3, TC_YOUNGSTER, YOUNGSTER_JOEY_1
 	scall .RegisteredNumber
 	sjump .NumberAccepted
 
@@ -170,7 +170,7 @@ TrainerYoungsterJoey:
 	checkflag ENGINE_FLYPOINT_GOLDENROD
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer YOUNGSTER, JOEY1
+	loadtrainer TC_YOUNGSTER, YOUNGSTER_JOEY_1
 	startbattle
 	reloadmapafterbattle
 	loadmem wJoeyFightCount, 1
@@ -178,7 +178,7 @@ TrainerYoungsterJoey:
 	end
 
 .LoadFight1:
-	loadtrainer YOUNGSTER, JOEY2
+	loadtrainer TC_YOUNGSTER, YOUNGSTER_JOEY_REMATCH2
 	startbattle
 	reloadmapafterbattle
 	loadmem wJoeyFightCount, 2
@@ -186,7 +186,7 @@ TrainerYoungsterJoey:
 	end
 
 .LoadFight2:
-	loadtrainer YOUNGSTER, JOEY3
+	loadtrainer TC_YOUNGSTER, YOUNGSTER_JOEY_REMATCH3
 	startbattle
 	reloadmapafterbattle
 	loadmem wJoeyFightCount, 3
@@ -194,7 +194,7 @@ TrainerYoungsterJoey:
 	end
 
 .LoadFight3:
-	loadtrainer YOUNGSTER, JOEY4
+	loadtrainer TC_YOUNGSTER, YOUNGSTER_JOEY_REMATCH4
 	startbattle
 	reloadmapafterbattle
 	loadmem wJoeyFightCount, 4
@@ -202,7 +202,7 @@ TrainerYoungsterJoey:
 	end
 
 .LoadFight4:
-	loadtrainer YOUNGSTER, JOEY5
+	loadtrainer TC_YOUNGSTER, YOUNGSTER_JOEY_REMATCH5
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_JOEY
@@ -267,7 +267,7 @@ TrainerYoungsterJoey:
 	end
 
 TrainerYoungsterMikey:
-	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
+	trainer TC_YOUNGSTER, YOUNGSTER_MIKEY_1, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
 
 .Script
 	endifjustbattled

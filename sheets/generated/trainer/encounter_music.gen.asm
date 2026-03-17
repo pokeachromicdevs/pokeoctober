@@ -13,7 +13,7 @@ TrainerEncounterMusic::
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Camper
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Fledgling
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bird Keeper
-	db MUSIC_YOUNGSTER_ENCOUNTER      ; Leader Falkner
+	db MUSIC_YOUNGSTER_ENCOUNTER      ; Falkner
 	db MUSIC_HIKER_ENCOUNTER          ; Fisher
 	db MUSIC_LASS_ENCOUNTER           ; LassNieNie
 	db MUSIC_SAGE_ENCOUNTER           ; Sage
@@ -22,7 +22,7 @@ TrainerEncounterMusic::
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Schoolboy
 	db MUSIC_HIKER_ENCOUNTER          ; Rock Climber
 	db MUSIC_BEAUTY_ENCOUNTER         ; Beauty
-	db MUSIC_LASS_ENCOUNTER           ; Leader Whitney
+	db MUSIC_LASS_ENCOUNTER           ; Whitney
 	db MUSIC_POKEMANIAC_ENCOUNTER     ; Prodigy
 	db MUSIC_HIKER_ENCOUNTER          ; Manchild
 	db MUSIC_HIKER_ENCOUNTER          ; Sailor
@@ -32,11 +32,12 @@ TrainerEncounterMusic::
 	db MUSIC_SAGE_ENCOUNTER           ; Ballsmith
 	db MUSIC_LASS_ENCOUNTER           ; Twins
 	db MUSIC_LASS_ENCOUNTER           ; Picnicker
-	db MUSIC_YOUNGSTER_ENCOUNTER      ; Leader Bugsy
+	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bugsy
 	db MUSIC_HIKER_ENCOUNTER          ; Firebreather
 	db MUSIC_SAGE_ENCOUNTER           ; Medium
-	db MUSIC_OFFICER_ENCOUNTER        ; Leader Morton
+	db MUSIC_OFFICER_ENCOUNTER        ; Morton
 	db MUSIC_ROCKET_ENCOUNTER         ; Rocket Will
 	db MUSIC_POKEMANIAC_ENCOUNTER     ; Juggler
 	db MUSIC_HIKER_ENCOUNTER          ; Biker
 	db MUSIC_OFFICER_ENCOUNTER        ; E4Karen
+	db MUSIC_OFFICER_ENCOUNTER        ; Elm

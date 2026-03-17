@@ -1184,7 +1184,7 @@ INCLUDE "gfx/battle/exp_bar.pal"
 
 INCLUDE "data/pokemon/palettes.asm"
 
-INCLUDE "sheets/generated/trainer/palettes.gen.asm"
+INCLUDE "data/trainers/palettes.asm"
 
 LoadMapPals:
 	farcall LoadSpecialMapPalette

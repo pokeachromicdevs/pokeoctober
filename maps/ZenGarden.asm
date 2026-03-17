@@ -4,7 +4,7 @@ ZenGarden_MapScripts:
 	db 0 ; callbacks
 	
 TrainerLassNiechelle:
-	trainer LASSNIENIE, NIECHELLE, EVENT_BEAT_LASS_NIECHELLE, LassNiechelleSeenText, LassNiechelleBeatenText, 0, .Script
+	trainer TC_LASSNIENIE, LASSNIENIE_NIECHELLE_1, EVENT_BEAT_LASS_NIECHELLE, LassNiechelleSeenText, LassNiechelleBeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_LASS_NIECHELLE
@@ -27,7 +27,7 @@ TrainerLassNiechelle:
 	askforphonenumber PHONE_LASS_NIECHELLE
 	ifequal PHONE_CONTACTS_FULL, Route46PhoneFullF
 	ifequal PHONE_CONTACT_REFUSED, Route46NumberDeclinedF
-	gettrainername STRING_BUFFER_3, LASSNIENIE, NIECHELLE
+	gettrainername STRING_BUFFER_3, TC_LASSNIENIE, LASSNIENIE_NIECHELLE_1
 	scall Route46RegisteredNumberF
 	sjump Route46NumberAcceptedF
 
@@ -49,7 +49,7 @@ TrainerLassNiechelle:
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer LASSNIENIE, NIECHELLE2
+	loadtrainer TC_LASSNIENIE, LASSNIENIE_NIECHELLE_REMATCH1
 	startbattle
 	reloadmapafterbattle
 	loadmem wNiechelleFightCount, 1
@@ -57,7 +57,7 @@ TrainerLassNiechelle:
 	end
 
 .LoadFight1:
-	loadtrainer LASSNIENIE, NIECHELLE3
+	loadtrainer TC_LASSNIENIE, LASSNIENIE_NIECHELLE_REMATCH2
 	startbattle
 	reloadmapafterbattle
 	loadmem wNiechelleFightCount, 2
@@ -65,7 +65,7 @@ TrainerLassNiechelle:
 	end
 	
 .LoadFight2:
-	loadtrainer LASSNIENIE, NIECHELLE4
+	loadtrainer TC_LASSNIENIE, LASSNIENIE_NIECHELLE_4
 	startbattle
 	reloadmapafterbattle
 	loadmem wNiechelleFightCount, 3
@@ -73,7 +73,7 @@ TrainerLassNiechelle:
 	end
 
 .LoadFight3:
-	loadtrainer LASSNIENIE, NIECHELLE5
+	loadtrainer TC_LASSNIENIE, LASSNIENIE_NIECHELLE_5
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_NIECHELLE
@@ -230,7 +230,7 @@ ZenGardenSageScript1:
 	done
 
 TrainerFledglingTommy:
-	trainer FLEDGLING, FLEDGLING_TOMMY, EVENT_BEAT_FLEDGLING_TOMMY, .SeenTxt, .WinTxt, 0, .AfterScript
+	trainer TC_FLEDGLING, FLEDGLING_TOMMY_1, EVENT_BEAT_FLEDGLING_TOMMY, .SeenTxt, .WinTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "This GARDEN is a"
@@ -258,7 +258,7 @@ TrainerFledglingTommy:
 	done
 
 TrainerSageChen:
-	trainer SAGE, CHEN, EVENT_BEAT_SAGE_CHEN, .SeenTxt, .WinTxt, 0, .AfterScript
+	trainer TC_SAGE, SAGE_CHEN_1, EVENT_BEAT_SAGE_CHEN, .SeenTxt, .WinTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "There is no place"
@@ -286,7 +286,7 @@ TrainerSageChen:
 	done
 
 TrainerSageMonty:
-	trainer SAGE, MONTY, EVENT_BEAT_SAGE_MONTY, .SeenTxt, .WinTxt, 0, .AfterScript
+	trainer TC_SAGE, SAGE_MONTY_1, EVENT_BEAT_SAGE_MONTY, .SeenTxt, .WinTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "Can you withhold"
@@ -313,7 +313,7 @@ TrainerSageMonty:
 	done
 
 TrainerMysticSonia:
-	trainer MYSTIC, SONIA, EVENT_BEAT_MYSTIC_SONIA, .SeenTxt, .WinTxt, 0, .AfterScript
+	trainer TC_MYSTIC, MYSTIC_SONIA_1, EVENT_BEAT_MYSTIC_SONIA, .SeenTxt, .WinTxt, 0, .AfterScript
 
 .SeenTxt:
 	text "Hey! Get out of"

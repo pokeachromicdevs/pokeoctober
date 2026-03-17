@@ -82,8 +82,8 @@
 	const BIRDKEEPER_RODNEY_1
 	const BIRDKEEPER_CLYDE_1
 
-	trainerclass TC_LEADERFALKNER
-	const LEADERFALKNER_FALKNER_1
+	trainerclass TC_FALKNER
+	const FALKNER_FALKNER_1
 
 	trainerclass TC_FISHER
 	const FISHER_MANNY_1
@@ -136,8 +136,8 @@
 	const BEAUTY_NINA_1
 	const BEAUTY_PEONY_1
 
-	trainerclass TC_LEADERWHITNEY
-	const LEADERWHITNEY_WHITNEY_1
+	trainerclass TC_WHITNEY
+	const WHITNEY_WHITNEY_1
 
 	trainerclass TC_PRODIGY
 	const PRODIGY_AXEL_1
@@ -163,14 +163,14 @@
 	const BALLSMITH_KURT_1
 
 	trainerclass TC_TWINS
-	const TWINS_MEIandLEI1_1
-	const TWINS_MEIandLEI2_1
+	const TWINS_MEIandLEI_1
+	const TWINS_MEIandLEI_2
 
 	trainerclass TC_PICNICKER
 	const PICNICKER_JAMIE_1
 
-	trainerclass TC_LEADERBUGSY
-	const LEADERBUGSY_BUGSY_1
+	trainerclass TC_BUGSY
+	const BUGSY_BUGSY_1
 
 	trainerclass TC_FIREBREATHER
 	const FIREBREATHER_ROB_1
@@ -179,8 +179,8 @@
 	trainerclass TC_MEDIUM
 	const MEDIUM_DOROTHY_1
 
-	trainerclass TC_LEADERMORTON
-	const LEADERMORTON_MORTON_1
+	trainerclass TC_MORTON
+	const MORTON_MORTON_1
 
 	trainerclass TC_ROCKETWILL
 	const ROCKETWILL_WILL_1
@@ -193,3 +193,6 @@
 
 	trainerclass TC_E4KAREN
 	const E4KAREN_KAREN_1
+
+	trainerclass TC_ELM
+	const ELM_ELM_1

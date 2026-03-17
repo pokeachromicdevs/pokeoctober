@@ -15,7 +15,7 @@ SproutTowerF8HpUp:
 	itemball HP_UP
 
 TrainerSageNeal:
-	trainer SAGE, NEAL, EVENT_BEAT_SAGE_NEAL, SageNealSeenText, SageNealBeatenText, 0, .AfterScript
+	trainer TC_SAGE, SAGE_NEAL_1, EVENT_BEAT_SAGE_NEAL, SageNealSeenText, SageNealBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
@@ -26,7 +26,7 @@ TrainerSageNeal:
 	end
 
 TrainerOfficerAaron:
-	trainer OFFICER, AARON_O, EVENT_BEAT_OFFICER_AARON, OfficerAaronSeenText, OfficerAaronBeatenText, 0, .AfterScript
+	trainer TC_OFFICER, OFFICER_AARON_1, EVENT_BEAT_OFFICER_AARON, OfficerAaronSeenText, OfficerAaronBeatenText, 0, .AfterScript
 
 .AfterScript:
 	endifjustbattled
