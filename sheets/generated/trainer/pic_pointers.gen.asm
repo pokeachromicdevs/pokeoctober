@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 TrainerPicPointers::
 	dba Rival1Pic
 	dba YoungsterPic
@@ -14,7 +14,6 @@ TrainerPicPointers::
 	dba FledglingPic
 	dba BirdKeeperPic
 	dba FalknerPic
-	dba FisherPic
 	dba LassNieNiePic
 	dba SagePic
 	dba MysticPic
@@ -23,6 +22,7 @@ TrainerPicPointers::
 	dba RockClimberPic
 	dba BeautyPic
 	dba WhitneyPic
+	dba FisherPic
 	dba ProdigyPic
 	dba ManchildPic
 	dba SailorPic

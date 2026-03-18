@@ -43,16 +43,16 @@ func main() {
 		slog.Error("could not open trainer sheet", "e", e)
 		os.Exit(1)
 	}
-	slog.Info("parsing Trainers Master")
-	e = ss.ProcessTrainerInstances("Trainers Master")
-	if e != nil {
-		slog.Error("could not convert to trainer instance data", "e", e)
-		os.Exit(1)
-	}
 	slog.Info("parsing Trainer Class Attrs Master")
 	e = ss.ProcessTrainerClasses("Trainer Class Attrs Master")
 	if e != nil {
 		slog.Error("could not convert to trainer class data", "e", e)
+		os.Exit(1)
+	}
+	slog.Info("parsing Trainers Master")
+	e = ss.ProcessTrainerInstances("Trainers Master")
+	if e != nil {
+		slog.Error("could not convert to trainer instance data", "e", e)
 		os.Exit(1)
 	}
 	e = ss.WriteBuffers()

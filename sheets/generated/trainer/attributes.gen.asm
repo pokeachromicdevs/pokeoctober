@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 TrainerClassAttributes:
 
 ; Rival1
@@ -59,7 +59,7 @@ TrainerClassAttributes:
 ; Camper
 	dw NO_ITEM, NO_ITEM ; items
 	db 5 ; base reward
-	dw AI_BASIC | AI_CAUTIOUS | AI_STATUS ; move strategy
+	dw AI_BASIC | AI_STATUS | AI_CAUTIOUS ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
 ; Fledgling
@@ -78,12 +78,6 @@ TrainerClassAttributes:
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
-	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
-
-; Fisher
-	dw NO_ITEM, NO_ITEM ; items
-	db 10 ; base reward
-	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
 
 ; LassNieNie
@@ -132,6 +126,12 @@ TrainerClassAttributes:
 	dw NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
+
+; Fisher
+	dw NO_ITEM, NO_ITEM ; items
+	db 10 ; base reward
+	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
 
 ; Prodigy

@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 TrainerGroups:
 	dba Rival1Group
 	dba YoungsterGroup
@@ -14,7 +14,6 @@ TrainerGroups:
 	dba FledglingGroup
 	dba BirdKeeperGroup
 	dba FalknerGroup
-	dba FisherGroup
 	dba LassNieNieGroup
 	dba SageGroup
 	dba MysticGroup
@@ -23,6 +22,7 @@ TrainerGroups:
 	dba RockClimberGroup
 	dba BeautyGroup
 	dba WhitneyGroup
+	dba FisherGroup
 	dba ProdigyGroup
 	dba ManchildGroup
 	dba SailorGroup

@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 TrainerPalettes:
 INCBIN "gfx/trainers/rival1.gbcpal", middle_colors
 INCBIN "gfx/trainers/youngster.gbcpal", middle_colors
@@ -14,7 +14,6 @@ INCBIN "gfx/trainers/camper.gbcpal", middle_colors
 INCBIN "gfx/trainers/fledgling.gbcpal", middle_colors
 INCBIN "gfx/trainers/bird_keeper.gbcpal", middle_colors
 INCBIN "gfx/trainers/falkner.gbcpal", middle_colors
-INCBIN "gfx/trainers/fisher.gbcpal", middle_colors
 INCBIN "gfx/trainers/lassnienie.gbcpal", middle_colors
 INCBIN "gfx/trainers/sage.gbcpal", middle_colors
 INCBIN "gfx/trainers/mystic.gbcpal", middle_colors
@@ -23,6 +22,7 @@ INCBIN "gfx/trainers/schoolboy.gbcpal", middle_colors
 INCBIN "gfx/trainers/rock_climber.gbcpal", middle_colors
 INCBIN "gfx/trainers/beauty.gbcpal", middle_colors
 INCBIN "gfx/trainers/whitney.gbcpal", middle_colors
+INCBIN "gfx/trainers/fisher.gbcpal", middle_colors
 INCBIN "gfx/trainers/prodigy.gbcpal", middle_colors
 INCBIN "gfx/trainers/manchild.gbcpal", middle_colors
 INCBIN "gfx/trainers/sailor.gbcpal", middle_colors

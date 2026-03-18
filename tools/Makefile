@@ -14,12 +14,14 @@ tools := \
 	ipspatch \
 	md5 \
 	gif2anim \
+	mktrainerdata \
 	gbstrim
+
 all: $(tools)
 	@:
 
 clean:
-	rm -f $(tools) gif2anim
+	rm -f $(tools)
 	rm -f gif2anim_nim/generated/*.o
 
 gfx md5: common.h
@@ -30,3 +32,6 @@ gfx md5: common.h
 gif2anim:
 	cd gif2anim_nim/generated && ./compile_gif2anim.sh
 	mv gif2anim_nim/generated/gif2anim ./gif2anim
+
+mktrainerdata: sheet_convert/cmd/mktrainerdata/main.go
+	cd sheet_convert && go build -o ../$@ ../$<

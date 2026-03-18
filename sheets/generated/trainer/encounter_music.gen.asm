@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 TrainerEncounterMusic::
 	db MUSIC_RIVAL_ENCOUNTER          ; Rival1
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Youngster
@@ -14,7 +14,6 @@ TrainerEncounterMusic::
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Fledgling
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bird Keeper
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Falkner
-	db MUSIC_HIKER_ENCOUNTER          ; Fisher
 	db MUSIC_LASS_ENCOUNTER           ; LassNieNie
 	db MUSIC_SAGE_ENCOUNTER           ; Sage
 	db MUSIC_SAGE_ENCOUNTER           ; Mystic
@@ -23,6 +22,7 @@ TrainerEncounterMusic::
 	db MUSIC_HIKER_ENCOUNTER          ; Rock Climber
 	db MUSIC_BEAUTY_ENCOUNTER         ; Beauty
 	db MUSIC_LASS_ENCOUNTER           ; Whitney
+	db MUSIC_HIKER_ENCOUNTER          ; Fisher
 	db MUSIC_POKEMANIAC_ENCOUNTER     ; Prodigy
 	db MUSIC_HIKER_ENCOUNTER          ; Manchild
 	db MUSIC_HIKER_ENCOUNTER          ; Sailor

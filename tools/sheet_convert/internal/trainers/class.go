@@ -31,11 +31,14 @@ func (s *State) ProcessTrainerClasses(sheetName string) error {
 			slog.Error(fmt.Sprintf("can't parse row %d - SKIPPING!", i+1), "e", e)
 			continue
 		}
+
+		// trainer class struct to contain it in
 		nowClass, ok := s.classes.Get(rr.ClassName)
 		if !ok {
-			slog.Error(fmt.Sprintf("at row %d: class %s was not defined - SKIPPING!", i+1, rr.ClassName), "e", e)
-			continue
+			nowClass = &TrainerClass{Instances: make([]*TrainerInstance, 0, 40)}
+			s.classes.Set(rr.ClassName, nowClass)
 		}
+
 		nowClass.Title = rr.DispName
 		nowClass.DVs = []int{
 			rr.Atk,

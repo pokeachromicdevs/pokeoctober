@@ -44,11 +44,11 @@ func (s *State) ProcessTrainerInstances(sheetName string) error {
 				continue
 			}
 
-			// trainer class struct to contain it in
+			// get class
 			nowTrainersList, classOk := s.classes.Get(rr.Class)
 			if !classOk {
-				nowTrainersList = &TrainerClass{Instances: make([]*TrainerInstance, 0, 40)}
-				s.classes.Set(rr.Class, nowTrainersList)
+				slog.Error(fmt.Sprintf("at row %d: class %s was not defined - SKIPPING!", i+1, rr.Class), "e", e)
+				continue
 			}
 
 			// put an instance in

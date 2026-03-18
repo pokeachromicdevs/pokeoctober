@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 TrainerClassNames::
 	db "RIVAL@"
 	db "YOUNGSTER@"
@@ -14,7 +14,6 @@ TrainerClassNames::
 	db "FLEDGLING@"
 	db "BIRD KEEPER"
 	db "LEADER@"
-	db "FISHER@"
 	db "LASS@"
 	db "SAGE@"
 	db "MYSTIC@"
@@ -23,6 +22,7 @@ TrainerClassNames::
 	db "ROCK CLIMBER"
 	db "BEAUTY@"
 	db "LEADER@"
+	db "FISHER@"
 	db "PRODIGY@"
 	db "MANCHILD@"
 	db "SAILOR@"

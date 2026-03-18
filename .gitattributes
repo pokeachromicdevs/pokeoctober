@@ -34,3 +34,6 @@
 *.2bpp binary diff=hex
 *.1bpp binary diff=hex
 *.exe binary diff=hex
+
+# master spreadsheet
+*.xlsx binary diff=hex

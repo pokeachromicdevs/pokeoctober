@@ -54,7 +54,8 @@ IPSPATCH_COMMAND ?= create
 .PHONY: all clean tidy tools \
 	engine/menus/main_menu.asm \
 	audio/music_pointers.asm \
-	main debug gbs
+	main debug gbs \
+	update-sheet # in sheets/Makefile
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
@@ -263,3 +264,5 @@ gfx/intro/fire3.2bpp: gfx/intro/fire.2bpp gfx/intro/unused_blastoise_venusaur.2b
 
 %.dimensions: %.png
 	tools/png_dimensions $< $@
+
+include sheets/Makefile

@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 TrainerClassDVs:
 	;  atk,def,spd,spc
 	dn  13, 13, 13, 13 ; Rival1
@@ -15,7 +15,6 @@ TrainerClassDVs:
 	dn   9,  8,  8,  8 ; Fledgling
 	dn   9,  8,  8,  8 ; Bird Keeper
 	dn   9, 10,  7,  7 ; Falkner
-	dn   9,  8,  8,  8 ; Fisher
 	dn   5,  8,  8,  8 ; LassNieNie
 	dn   9,  8,  8,  8 ; Sage
 	dn   7,  8,  8,  8 ; Mystic
@@ -24,6 +23,7 @@ TrainerClassDVs:
 	dn   9,  9,  8,  8 ; Rock Climber
 	dn   6,  9, 12,  8 ; Beauty
 	dn   9,  8,  8,  8 ; Whitney
+	dn   9,  8,  8,  8 ; Fisher
 	dn  10, 10, 10, 10 ; Prodigy
 	dn   7,  8,  8,  8 ; Manchild
 	dn   9,  8,  8,  8 ; Sailor

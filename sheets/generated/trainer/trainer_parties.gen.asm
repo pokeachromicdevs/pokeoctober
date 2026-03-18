@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 
 SECTION "Trainer Class Rival1", ROMX
 Rival1Group:
@@ -398,33 +398,6 @@ FalknerGroup:
 	end_party
 	end_party_list
 
-SECTION "Trainer Class Fisher", ROMX
-FisherGroup:
-	next_party ; Manny (1)
-		db "MANNY@", TRAINERTYPE_NORMAL
-		dbw 9, REMORAID
-	end_party
-	next_party ; Koi (1)
-		db "KOI@", TRAINERTYPE_MOVES
-		dbw 15, MAGIKARP
-		dw SPLASH, TWISTER, TACKLE, FLAIL
-		dbw 15, MAGIKARP
-		dw SPLASH, WATER_GUN, TACKLE, FLAIL
-		dbw 15, MAGIKARP
-		dw SPLASH, MINIMIZE, TACKLE, FLAIL
-	end_party
-	next_party ; George (1)
-		db "GEORGE@", TRAINERTYPE_NORMAL
-		dbw 20, GYARADOS
-	end_party
-	next_party ; Billy (1)
-		db "BILLY@", TRAINERTYPE_NORMAL
-		dbw 16, WOOPER
-		dbw 16, POLIWAG
-		dbw 17, BITEEL
-	end_party
-	end_party_list
-
 SECTION "Trainer Class LassNieNie", ROMX
 LassNieNieGroup:
 	next_party ; Niechelle (1)
@@ -663,6 +636,33 @@ WhitneyGroup:
 		dbw 20, MILTANK
 		dw PRZCUREBERRY
 		dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
+	end_party
+	end_party_list
+
+SECTION "Trainer Class Fisher", ROMX
+FisherGroup:
+	next_party ; Manny (1)
+		db "MANNY@", TRAINERTYPE_NORMAL
+		dbw 9, REMORAID
+	end_party
+	next_party ; Koi (1)
+		db "KOI@", TRAINERTYPE_MOVES
+		dbw 15, MAGIKARP
+		dw SPLASH, TWISTER, TACKLE, FLAIL
+		dbw 15, MAGIKARP
+		dw SPLASH, WATER_GUN, TACKLE, FLAIL
+		dbw 15, MAGIKARP
+		dw SPLASH, MINIMIZE, TACKLE, FLAIL
+	end_party
+	next_party ; George (1)
+		db "GEORGE@", TRAINERTYPE_NORMAL
+		dbw 20, GYARADOS
+	end_party
+	next_party ; Billy (1)
+		db "BILLY@", TRAINERTYPE_NORMAL
+		dbw 16, WOOPER
+		dbw 16, POLIWAG
+		dbw 17, BITEEL
 	end_party
 	end_party_list
 

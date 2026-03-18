@@ -1,5 +1,5 @@
 ; The following was generated from 
-; trainers_items_wild.xlsx, do not edit directly!
+; sheets/master.xlsx, do not edit directly!
 
 	trainerclass TC_RIVAL1
 	const RIVAL1_RIVAL_CHIKORITA1
@@ -85,12 +85,6 @@
 	trainerclass TC_FALKNER
 	const FALKNER_FALKNER_1
 
-	trainerclass TC_FISHER
-	const FISHER_MANNY_1
-	const FISHER_KOI_1
-	const FISHER_GEORGE_1
-	const FISHER_BILLY_1
-
 	trainerclass TC_LASSNIENIE
 	const LASSNIENIE_NIECHELLE_1
 	const LASSNIENIE_NIECHELLE_REMATCH1
@@ -138,6 +132,12 @@
 
 	trainerclass TC_WHITNEY
 	const WHITNEY_WHITNEY_1
+
+	trainerclass TC_FISHER
+	const FISHER_MANNY_1
+	const FISHER_KOI_1
+	const FISHER_GEORGE_1
+	const FISHER_BILLY_1
 
 	trainerclass TC_PRODIGY
 	const PRODIGY_AXEL_1
