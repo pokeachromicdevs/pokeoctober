@@ -1,6 +1,7 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 ItemNames::
+	db "BRIGHTPOWDER@"
 	db "MOON STONE@"
 	db "ANTIDOTE@"
 	db "BURN HEAL@"

@@ -1,5 +1,6 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
+	const BRIGHTPOWDER
 	const MOON_STONE
 	const ANTIDOTE
 	const BURN_HEAL

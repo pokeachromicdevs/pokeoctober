@@ -1,6 +1,7 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 ItemDescriptions1::
+	dw BrightpowderDesc
 	dw MoonStoneDesc
 	dw AntidoteDesc
 	dw BurnHealDesc

@@ -1,6 +1,7 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 ItemEffects1::
+	dw NoEffect
 	dw EvoStoneEffect
 	dw StatusHealingEffect
 	dw StatusHealingEffect

@@ -9,6 +9,25 @@ import (
 	"strings"
 )
 
+// expected sheet layout
+const (
+	ccTrainerClass = iota
+	ccName
+	ccDVs_ATK
+	ccDVs_DEF
+	ccDVs_SPD
+	ccDVs_SPC
+	ccBaseReward
+	ccItemUsage
+	ccSwitchPokemon
+	ccMoveWeighting
+	ccItemA
+	ccItemB
+	ccEncounterMusic
+	ccGender
+	cc_ // number of columns
+)
+
 // process trainer classses in sheetName
 func (s *State) ProcessTrainerClasses(sheetName string) error {
 	// state prechecking
@@ -26,60 +45,14 @@ func (s *State) ProcessTrainerClasses(sheetName string) error {
 		if i < 2 { // skip header row
 			continue
 		}
+
 		rr, e := classRowFrom(r)
 		if e != nil {
 			slog.Error(fmt.Sprintf("can't parse row %d - SKIPPING!", i+1), "e", e)
 			continue
 		}
 
-		// trainer class struct to contain it in
-		nowClass, ok := s.classes.Get(rr.ClassName)
-		if !ok {
-			nowClass = &TrainerClass{Instances: make([]*TrainerInstance, 0, 40)}
-			s.classes.Set(rr.ClassName, nowClass)
-		}
-
-		nowClass.Title = rr.DispName
-		if len(nowClass.Title) > utils.MaxNameLength {
-			slog.Error(
-				fmt.Sprintf("row %d - display name '%s' is longer than max name length (%d) - TRUNCATING!",
-					i+1,
-					nowClass.Title,
-					utils.MaxNameLength,
-				),
-			)
-			nowClass.Title = string([]rune(nowClass.Title[:11]))
-		}
-		nowClass.DVs = []int{
-			rr.Atk,
-			rr.Def,
-			rr.Spd,
-			rr.Spc,
-		}
-		nowClass.BaseReward = rr.BaseReward
-		nowClass.UsageStrat = utils.NormalizeAsConstName(rr.ItemUsage + "_USE")
-		nowClass.SwitchStrat = utils.NormalizeAsConstName("SWITCH_" + rr.SwitchPokemon)
-		var mw strings.Builder
-		mww := strings.Split(rr.MoveWeighting, ",")
-		for i, v := range mww {
-			ii := strings.TrimSpace(v)
-			mw.WriteString(utils.NormalizeAsConstName("AI_" + ii))
-			if i+1 < len(mww) {
-				mw.WriteString(" | ")
-			}
-		}
-		nowClass.MoveWeighting = mw.String()
-		if rr.ItemA != "" {
-			nowClass.ItemA = utils.NormalizeAsConstNameUnderspaces(rr.ItemA)
-		} else {
-			nowClass.ItemA = "NO_ITEM"
-		}
-		if rr.ItemB != "" {
-			nowClass.ItemB = utils.NormalizeAsConstNameUnderspaces(rr.ItemB)
-		} else {
-			nowClass.ItemB = "NO_ITEM"
-		}
-		nowClass.EncountMusic = utils.NormalizeAsConstNameUnderspaces("MUSIC_" + rr.EncountMusic)
+		s.addClassFromRow(i, rr)
 	}
 	return nil
 }
@@ -164,36 +137,36 @@ type classRow struct {
 // deserialize a []string row into Row
 func classRowFrom(r []string) (*classRow, error) {
 	// should be how big each row is
-	o := make([]string, 14)
+	o := make([]string, cc_)
 
 	// copy row, ignoring empties
 	for i, x := range r {
-		if i > len(o) {
+		if i >= len(o) {
 			break
 		}
 		o[i] = strings.TrimSpace(x)
 	}
-	at, e := validateDv(o[2])
+	at, e := validateDv(o[ccDVs_ATK])
 	if e != nil {
 		slog.Error("invalid ATK value", "e", e)
 		return nil, e
 	}
-	df, e := validateDv(o[3])
+	df, e := validateDv(o[ccDVs_DEF])
 	if e != nil {
 		slog.Error("invalid DEF value", "e", e)
 		return nil, e
 	}
-	sd, e := validateDv(o[4])
+	sd, e := validateDv(o[ccDVs_SPD])
 	if e != nil {
 		slog.Error("invalid SPD value", "e", e)
 		return nil, e
 	}
-	sc, e := validateDv(o[5])
+	sc, e := validateDv(o[ccDVs_SPC])
 	if e != nil {
 		slog.Error("invalid SPC value", "e", e)
 		return nil, e
 	}
-	reward, e := strconv.Atoi(o[6])
+	reward, e := strconv.Atoi(o[ccBaseReward])
 	if e != nil {
 		slog.Error("invalid base reward", "lv", o[6], "e", e)
 		return nil, e
@@ -205,20 +178,20 @@ func classRowFrom(r []string) (*classRow, error) {
 	}
 	// deserialized row
 	return &classRow{
-		ClassName:     o[0],
-		DispName:      o[1],
+		ClassName:     o[ccTrainerClass],
+		DispName:      o[ccName],
 		Atk:           at,
 		Def:           df,
 		Spd:           sd,
 		Spc:           sc,
 		BaseReward:    reward,
-		ItemUsage:     o[7],
-		SwitchPokemon: o[8],
-		MoveWeighting: o[9],
-		ItemA:         o[10],
-		ItemB:         o[11],
-		EncountMusic:  o[12],
-		Gender:        o[13],
+		ItemUsage:     o[ccItemUsage],
+		SwitchPokemon: o[ccSwitchPokemon],
+		MoveWeighting: o[ccMoveWeighting],
+		ItemA:         o[ccItemA],
+		ItemB:         o[ccItemB],
+		EncountMusic:  o[ccEncounterMusic],
+		Gender:        o[ccGender],
 	}, nil
 }
 
@@ -235,4 +208,54 @@ func validateDv(i string) (int, error) {
 		return 0, e
 	}
 	return n, nil
+}
+
+func (s *State) addClassFromRow(i int, rr *classRow) {
+	nowClass, ok := s.classes.Get(rr.ClassName)
+	if !ok {
+		nowClass = &TrainerClass{Instances: make([]*TrainerInstance, 0, 40)}
+		s.classes.Set(rr.ClassName, nowClass)
+	}
+
+	nowClass.Title = rr.DispName
+	if len(nowClass.Title) > utils.MaxNameLength {
+		slog.Error(
+			fmt.Sprintf("row %d - display name '%s' is longer than max name length (%d) - TRUNCATING!",
+				i+1,
+				nowClass.Title,
+				utils.MaxNameLength,
+			),
+		)
+		nowClass.Title = string([]rune(nowClass.Title[:11]))
+	}
+	nowClass.DVs = []int{
+		rr.Atk,
+		rr.Def,
+		rr.Spd,
+		rr.Spc,
+	}
+	nowClass.BaseReward = rr.BaseReward
+	nowClass.UsageStrat = utils.NormalizeAsConstName(rr.ItemUsage + "_USE")
+	nowClass.SwitchStrat = utils.NormalizeAsConstName("SWITCH_" + rr.SwitchPokemon)
+	var mw strings.Builder
+	mww := strings.Split(rr.MoveWeighting, ",")
+	for i, v := range mww {
+		ii := strings.TrimSpace(v)
+		mw.WriteString(utils.NormalizeAsConstName("AI_" + ii))
+		if i+1 < len(mww) {
+			mw.WriteString(" | ")
+		}
+	}
+	nowClass.MoveWeighting = mw.String()
+	if rr.ItemA != "" {
+		nowClass.ItemA = utils.NormalizeAsConstNameUnderspaces(rr.ItemA)
+	} else {
+		nowClass.ItemA = "NO_ITEM"
+	}
+	if rr.ItemB != "" {
+		nowClass.ItemB = utils.NormalizeAsConstNameUnderspaces(rr.ItemB)
+	} else {
+		nowClass.ItemB = "NO_ITEM"
+	}
+	nowClass.EncountMusic = utils.NormalizeAsConstNameUnderspaces("MUSIC_" + rr.EncountMusic)
 }
