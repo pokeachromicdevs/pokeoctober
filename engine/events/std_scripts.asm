@@ -385,10 +385,10 @@ BugContestResults_FirstPlace:
 	sjump BugContestResults_ReturnAfterWinnersPrize
 
 BugContestResults_SecondPlace:
-	getitemname STRING_BUFFER_4, EVERSTONE
+	getitemname STRING_BUFFER_4, EVER_STONE
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
-	verbosegiveitem EVERSTONE
+	verbosegiveitem EVER_STONE
 	iffalse BugContestResults_NoRoomForEverstone
 	sjump BugContestResults_ReturnAfterWinnersPrize
 

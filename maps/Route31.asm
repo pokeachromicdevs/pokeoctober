@@ -118,11 +118,11 @@ TrainerInstructorStanley:
 	iffalse .PackFull
 	sjump .Done
 .Psncureberry:
-	verbosegiveitem PSNCUREBERRY
+	verbosegiveitem PSN_CURE_BERRY
 	iffalse .PackFull
 	sjump .Done
 .Przcureberry:
-	verbosegiveitem PRZCUREBERRY
+	verbosegiveitem PRZ_CURE_BERRY
 	iffalse .PackFull
 	sjump .Done
 .BitterBerry:

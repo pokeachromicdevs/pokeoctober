@@ -1,0 +1,35 @@
+; The following was generated from 
+; sheets/master.xlsx, do not edit directly!
+	const TOWN_MAP
+	const BICYCLE
+	const HONEY_POT
+	const OAKS_PARCEL
+	const COIN_CASE
+	const ITEMFINDER
+	const POKE_FLUTE
+	const OLD_ROD
+	const GOOD_ROD
+	const SUPER_ROD
+	const RED_SCALE
+	const SECRETPOTION
+	const S_S_TICKET
+	const ELMS_EGG
+	const CLEAR_BELL
+	const SILVER_WING
+	const GS_BALL
+	const BLUE_CARD
+	const CARD_KEY
+	const MACHINE_PART
+	const EGG_TICKET
+	const LOST_ITEM
+	const BASEMENT_KEY
+	const PASS
+	const SQUIRTBOTTLE
+	const RAINBOW_WING
+	const VOUCHER
+	const TICKLE_STICK
+	const HEAVY_AMBER
+	const TOXIC_AMBER
+	const OLD_AMBER
+	const DOME_FOSSIL
+	const HELIX_FOSSIL

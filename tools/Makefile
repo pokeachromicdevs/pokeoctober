@@ -15,6 +15,7 @@ tools := \
 	md5 \
 	gif2anim \
 	mktrainerdata \
+	mkitemdata \
 	gbstrim
 
 all: $(tools)
@@ -34,4 +35,7 @@ gif2anim:
 	mv gif2anim_nim/generated/gif2anim ./gif2anim
 
 mktrainerdata: sheet_convert/cmd/mktrainerdata/main.go
+	cd sheet_convert && go build -o ../$@ ../$<
+
+mkitemdata: sheet_convert/cmd/mkitemdata/main.go
 	cd sheet_convert && go build -o ../$@ ../$<

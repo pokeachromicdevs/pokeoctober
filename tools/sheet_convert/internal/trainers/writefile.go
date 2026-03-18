@@ -4,8 +4,6 @@ import (
 	"fmt"
 )
 
-// TODO based on the processed data in s.classes
-// export trainer files to s.files
 func (s *State) WriteBuffers() error {
 	// write preamble
 	preamble := "; The following was generated from \n; " + s.in.Path + ", do not edit directly!"

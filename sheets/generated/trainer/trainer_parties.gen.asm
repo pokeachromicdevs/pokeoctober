@@ -28,7 +28,7 @@ WhitneyGroup:
 		dw NO_ITEM
 		dw GUST, SAND_ATTACK, FURY_ATTACK, MUD_SLAP
 		dbw 20, MILTANK
-		dw PRZCUREBERRY
+		dw PRZ_CURE_BERRY
 		dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
 	end_party
 	end_party_list
@@ -44,7 +44,7 @@ BugsyGroup:
 		dw FIRE_MANE
 		dw POISON_STING, BITE, SPIDER_WEB, NIGHT_SHADE
 		dbw 26, HERACROSS
-		dw SILVERPOWDER
+		dw SILVER_POWDER
 		dw FURY_CUTTER, DETECT, HORN_ATTACK, CROSS_CUTTER
 	end_party
 	end_party_list
@@ -60,7 +60,7 @@ MortonGroup:
 		dw SPELL_TAG
 		dw LICK, PURSUIT, STOMP, HYPNOSIS
 		dbw 32, FENNECURSE
-		dw MIRACLEBERRY
+		dw MIRACLE_BERRY
 		dw SHADOW_BALL, FAINT_ATTACK, FLAME_WHEEL, WILL_O_WISP
 	end_party
 	end_party_list
@@ -763,6 +763,11 @@ GruntMGroup:
 		db "GRUNT@", TRAINERTYPE_NORMAL
 		dbw 20, SMEARGLE
 		dbw 20, RATICATE
+	end_party
+	next_party ; Grunt (HyuckMarigold)
+		db "GRUNT@", TRAINERTYPE_NORMAL
+		dbw 22, SMEARGLE
+		dbw 23, RATICATE
 	end_party
 	end_party_list
 

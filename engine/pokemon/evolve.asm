@@ -463,7 +463,7 @@ IsMonHoldingEverstone:
 	call AddNTimes
 	ld a, [hl]
 	call GetItemIndexFromID
-	cphl16 EVERSTONE
+	cphl16 EVER_STONE
 	pop hl
 	ret
 

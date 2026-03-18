@@ -1,3 +1,3 @@
 package utils
 
-const MaxNameLength = 12
+const MaxNameLength = 13

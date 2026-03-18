@@ -612,7 +612,7 @@ ShowElmTogepiScript:
 ElmGiveEverstoneScript:
 	writetext ElmGiveEverstoneText1
 	buttonsound
-	verbosegiveitem EVERSTONE
+	verbosegiveitem EVER_STONE
 	iffalse ElmScript_NoRoomForEverstone
 	writetext ElmGiveEverstoneText2
 	waitbutton
@@ -757,7 +757,7 @@ ElmsAideScript:
 	writetext AideEggHatchedShowText
 	buttonsound
 	setevent EVENT_SHOWED_TOGEPI_TO_ELM
-	verbosegiveitem EVERSTONE
+	verbosegiveitem EVER_STONE
 	iffalse .EverstoneFail
 	writetext ElmGiveEverstoneText2
 	waitbutton

@@ -6,7 +6,7 @@
 	db WATER, PSYCHIC ; type
 	db 70 ; catch rate
 	db 164 ; base exp
-	dw APPLE, SLOWPOKETAIL ; items
+	dw APPLE, SLOWPOKE_TAIL ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

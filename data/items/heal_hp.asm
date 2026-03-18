@@ -10,8 +10,8 @@ HealingHPAmounts:
 	dw MOOMOO_MILK,  100
 	dw BERRY,         20
 	dw APPLE,         50
-	dw ENERGYPOWDER,  50
+	dw ENERGY_POWDER,  50
 	dw ENERGY_ROOT,  200
-	dw RAGECANDYBAR,  20
+	dw CAKE_OF_RAGE,  20
 	dw BERRY_JUICE,   40
 	dw -1, 0 ; end
