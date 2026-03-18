@@ -1,4 +1,5 @@
 BTTrainerClassSprites:
+IF 0
 ; entries correspond to trainer classes
 	db SPRITE_FALKNER
 	db SPRITE_WHITNEY
@@ -78,3 +79,4 @@ BTTrainerClassSprites:
 	db SPRITE_SPORTSMAN
 	db SPRITE_MANCHILD
 	db SPRITE_LASS
+ENDC

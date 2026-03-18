@@ -80,7 +80,7 @@ func NormalizeName(s string) string {
 			ss.WriteRune(i)
 		}
 	}
-	if ss.Len() < 11 {
+	if ss.Len() <= MaxNameLength {
 		ss.WriteRune('@')
 	}
 	return ss.String()

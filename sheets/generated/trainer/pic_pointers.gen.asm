@@ -1,6 +1,14 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 TrainerPicPointers::
+	dba FalknerPic
+	dba WhitneyPic
+	dba BugsyPic
+	dba MortonPic
+	dba BrycePic
+	dba SylviaPic
+	dba FergusPic
+	dba SandraPic
 	dba Rival1Pic
 	dba YoungsterPic
 	dba BugCatcherPic
@@ -13,7 +21,6 @@ TrainerPicPointers::
 	dba CamperPic
 	dba FledglingPic
 	dba BirdKeeperPic
-	dba FalknerPic
 	dba LassNieNiePic
 	dba SagePic
 	dba MysticPic
@@ -21,7 +28,6 @@ TrainerPicPointers::
 	dba SchoolboyPic
 	dba RockClimberPic
 	dba BeautyPic
-	dba WhitneyPic
 	dba FisherPic
 	dba ProdigyPic
 	dba ManchildPic
@@ -32,12 +38,9 @@ TrainerPicPointers::
 	dba BallsmithPic
 	dba TwinsPic
 	dba PicnickerPic
-	dba BugsyPic
 	dba FirebreatherPic
 	dba MediumPic
-	dba MortonPic
 	dba RocketWillPic
 	dba JugglerPic
 	dba BikerPic
-	dba E4KarenPic
 	dba ElmPic

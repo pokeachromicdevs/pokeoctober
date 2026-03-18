@@ -613,7 +613,7 @@ INCLUDE "engine/events/follower.asm"
 
 SECTION "Miscellaneous Text", ROMX
 
-INCLUDE "data/items/names.asm"
+INCLUDE "sheets/generated/item/names.gen.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
@@ -692,4 +692,3 @@ EXROM_Sentinel::
 INCLUDE "checks/events.asm"
 INCLUDE "checks/pokemon.asm"
 INCLUDE "checks/moves.asm"
-; INCLUDE "checks/items.asm"

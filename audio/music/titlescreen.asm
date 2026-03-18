@@ -30,6 +30,7 @@ title2_3_Ch1:
 	pitch_offset 1
 	duty_cycle 3
 	stereo_panning TRUE, FALSE
+	vibrato 16, 1, 2
 	soundinput 0
 ; P1-1
 	note_type 12, 8, 0
@@ -45,7 +46,7 @@ title2_3_Ch1:
 	note C_,16
 ; P1-6
 	tempo 136
-	note_type 12, 11, 3
+	note_type 12, 12, 4
 	note D_,4
 	octave 2
 	note G_,2
@@ -107,7 +108,7 @@ title2_3_Ch1:
 	note D#,1
 ; P1-13
 	note D_,8
-	note_type 8, 11, 3
+	note_type 8, 12, 4
 	note C_,4
 	octave 2
 	note B_,4
@@ -159,7 +160,7 @@ title2_3_Ch1:
 	note C_,6
 ; P1-20
 	note D_,9
-	note_type 12, 11, 3
+	note_type 12, 12, 4
 	note D#,1
 	note E_,1
 	note F_,6
@@ -167,7 +168,7 @@ title2_3_Ch1:
 	note D#,1
 ; P1-21
 	note D_,8
-	note_type 8, 11, 3
+	note_type 8, 12, 4
 	note C_,4
 	octave 2
 	note B_,4
@@ -200,7 +201,7 @@ title2_3_Ch1:
 	octave 4
 	note C_,3
 ; P1-26
-	note_type 12, 11, 3
+	note_type 12, 12, 4
 	octave 3
 	note D_,12
 	note E_,4
@@ -210,7 +211,7 @@ title2_3_Ch1:
 	note F_,4
 ; P1-28
 	note E_,8
-	note_type 8, 11, 3
+	note_type 8, 12, 4
 	note G_,4
 	note F_,4
 	note E_,4
@@ -220,7 +221,7 @@ title2_3_Ch1:
 	note C_,6
 	note C#,6
 ; P1-30
-	note_type 12, 11, 3
+	note_type 12, 12, 4
 	note D_,1
 	rest 1
 	stereo_panning TRUE, TRUE
@@ -259,7 +260,7 @@ title2_3_Ch1:
 	note D_,1
 	octave 1
 	note A_,1
-	note_type 8, 11, 3
+	note_type 8, 12, 4
 	stereo_panning TRUE, FALSE
 	octave 4
 	note C_,4
@@ -267,7 +268,7 @@ title2_3_Ch1:
 	note C#,4
 ; P1-32
 	stereo_panning TRUE, TRUE
-	note_type 12, 11, 3
+	note_type 12, 12, 4
 	note D_,1
 	rest 1
 	octave 2
@@ -305,14 +306,14 @@ title2_3_Ch1:
 	note D_,1
 	octave 1
 	note A_,1
-	note_type 8, 11, 3
+	note_type 8, 12, 4
 	stereo_panning TRUE, FALSE
 	octave 3
 	note E_,4
 	note E_,4
 	note C_,4
 ; P1-34
-	note_type 12, 11, 7
+	note_type 12, 12, 7
 	note D_,16
 ; P1-35
 	note C_,16
@@ -342,25 +343,23 @@ title2_3_Ch1:
 	note F_,8
 	note E_,8
 ; P1-42
+	note_type 12, 10, 0
 	note D_,16
 ; P1-43
+	note_type 12, 10, 7
 	note D_,16
 ; P1-44
+	note_type 12, 10, 1
 	octave 2
-	note G_,1
-	rest 3
-	note G_,1
-	rest 5
+	note G_,4
+	note G_,6
 	note G_,1
 	note G_,1
-	note G_,1
-	rest 3
+	note G_,4
 ; P1-45
-	note G_,1
-	rest 3
-	note G_,1
-	rest 3
-	note_type 8, 11, 3
+	note G_,4
+	note G_,4
+	note_type 8, 12, 4
 	note A_,2
 	note A_,2
 	note A_,2
@@ -368,7 +367,7 @@ title2_3_Ch1:
 	note A_,2
 	note F#,2
 ; P1-46
-	note_type 12, 11, 2
+	note_type 12, 12, 2
 	note G_,16
 	sound_ret
 ;----------------------------------------
@@ -377,13 +376,12 @@ title2_3_Ch2:
 	duty_cycle 3
 	vibrato 16, 1, 4
 ; P2-1
-	note_type 12, 10, 0
+	note_type 12, 12, 0
 ; P2-2
 	octave 3
 	stereo_panning TRUE, TRUE
 	note D_,16
 ; P2-3
-	volume_envelope 11, 0
 	note C_,8
 	note G#,6
 	note G_,1
@@ -392,7 +390,6 @@ title2_3_Ch2:
 	note F_,16
 ; P2-5
 	note G#,16
-	note_type 12, 12, 7
 ; P2-6
 	rest 16
 ; P2-7
@@ -400,6 +397,7 @@ title2_3_Ch2:
 ; P2-8
 	rest 16
 ; P2-9
+	note_type 12, 12, 7
 	note E_,4
 	note D_,2
 	note C_,4
@@ -412,10 +410,12 @@ title2_3_Ch2:
 	octave 4
 	note D_,8
 ; P2-11
+	note_type 12, 8, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,4
 	note F_,4
+	note_type 12, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note F_,6
@@ -423,10 +423,12 @@ title2_3_Ch2:
 	note D#,1
 ; P2-12
 	note D_,8
+	note_type 12, 10, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,8
 ; P2-13
+	note_type 12, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note D_,4
@@ -441,10 +443,12 @@ title2_3_Ch2:
 	octave 4
 	note D_,8
 ; P2-15
+	note_type 12, 10, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,6
 	note F_,2
+	note_type 12, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	note_type 8, 12, 7
 	octave 4
@@ -455,10 +459,11 @@ title2_3_Ch2:
 	note C_,4
 ; P2-16
 	note D_,12
+	note_type 8, 10, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,9
-	note_type 12, 12, 7
+	note_type 12, 10, 7
 	note G_,1
 	note A_,1
 ; P2-17
@@ -468,6 +473,7 @@ title2_3_Ch2:
 	note G_,4
 	note A_,4
 ; P2-18
+	note_type 12, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	octave 3
 	note G_,6
@@ -475,10 +481,12 @@ title2_3_Ch2:
 	octave 4
 	note D_,8
 ; P2-19
+	note_type 12, 10, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,2
 	note F_,6
+	note_type 12, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note F_,6
@@ -486,6 +494,7 @@ title2_3_Ch2:
 	note D#,1
 ; P2-20
 	note D_,8
+	note_type 12, 10, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 3
 	note C_,2
@@ -494,11 +503,12 @@ title2_3_Ch2:
 ; P2-21
 	note B_,6
 	note G_,2
-	note_type 8, 12, 7
+	note_type 8, 10, 7
 	note F_,4
 	note G_,4
 	note F_,4
 ; P2-22
+	note_type 8, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	octave 3
 	note G_,9
@@ -517,8 +527,10 @@ title2_3_Ch2:
 ; P2-24
 	note G_,9
 	note A#,3
+	note_type 8, 12, 0
 	note G_,12
 ; P2-25
+	note_type 8, 12, 7
 	note G_,12
 	note A_,12
 ; P2-26
@@ -526,9 +538,11 @@ title2_3_Ch2:
 	note F_,3
 	note F_,12
 ; P2-27
+	note_type 8, 10, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 3
 	note D_,12
+	note_type 8, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note A#,6
@@ -540,15 +554,17 @@ title2_3_Ch2:
 	note G_,3
 	note G_,12
 ; P2-29
+	note_type 8, 10, 7
 	stereo_panning FALSE, TRUE ;;;
 	octave 3
 	note E_,12
+	note_type 8, 12, 7
 	stereo_panning TRUE, TRUE ;;;
 	octave 5
 	note C_,6
 	note C#,6
 ; P2-30
-	note_type 12, 12, 7
+	note_type 12, 10, 4
 	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
@@ -599,13 +615,13 @@ title2_3_Ch2:
 	note D_,1
 	note A_,1
 	stereo_panning TRUE, TRUE ;;;
-	note_type 8, 12, 7
+	note_type 8, 10, 7
 	octave 5
 	note C_,4
 	note C_,4
 	note C#,4
 ; P2-32
-	note_type 12, 12, 7
+	note_type 12, 10, 7
 	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
@@ -696,10 +712,12 @@ title2_3_Ch2:
 	note F_,1
 	note A_,1
 ; P2-42
+	note_type 12, 11, 0
 	note G_,16
-; P2-43
+	note_type 12, 11, 7
 	note G_,16
 ; P2-44
+	note_type 12, 12, 7
 	octave 4
 	note G_,1
 	rest 3
@@ -713,7 +731,7 @@ title2_3_Ch2:
 	note G_,1
 	rest 3
 	note G_,4
-	note_type 8, 11, 3
+	note_type 8, 12, 3
 	octave 3
 	note F_,2
 	note F_,2
@@ -729,6 +747,7 @@ title2_3_Ch2:
 title2_3_Ch3:
 ;----------------------------------------
 	note_type 12, 2, 7
+	vibrato 16, 1, 4
 	stereo_panning FALSE, TRUE
 ; P3-2
 	octave 3
@@ -739,7 +758,7 @@ title2_3_Ch3:
 	note F_,16
 ; P3-5
 	stereo_panning TRUE, TRUE
-	note_type 12, 1, 7
+	note_type 12, 1, 6
 ;					g#
 	octave 2
 	note G#,4
@@ -959,6 +978,8 @@ title2_3_Ch3:
 	octave 3
 	note D_,1
 	rest 1
+	stereo_panning TRUE, FALSE
+	note_type 12, 1, 7
 	note A_,2
 	rest 2
 	octave 4
@@ -974,14 +995,17 @@ title2_3_Ch3:
 	note D_,4
 	octave 3
 	note A_,2
-	note_type 8, 1, 7
+	stereo_panning TRUE, TRUE
+	note_type 8, 1, 6
 	note C_,4
 	note C_,4
 	note C#,4
 ; P3-32
-	note_type 12, 1, 7
+	note_type 12, 1, 6
 	note D_,1
 	rest 1
+	stereo_panning TRUE, FALSE
+	note_type 12, 1, 7
 	note A_,2
 	rest 2
 	octave 5
@@ -999,13 +1023,14 @@ title2_3_Ch3:
 	note C_,2
 	octave 3
 	note B_,2
-	note_type 8, 1, 7
+	stereo_panning TRUE, TRUE
+	note_type 8, 1, 6
 	note C_,4
 	note C_,4
 	note E_,2
 	note F#,2
 ; P3-34
-	note_type 12, 1, 7
+	note_type 12, 1, 6
 	note G_,16
 ; P3-35
 	note F_,16
@@ -1065,7 +1090,7 @@ title2_3_Ch3:
 	rest 3
 	note G_,1
 	rest 3
-	note_type 8, 1, 7
+	note_type 8, 1, 6
 	note F_,2
 	note F_,2
 	note F_,2
@@ -1073,7 +1098,7 @@ title2_3_Ch3:
 	note F_,2
 	note A_,2
 ; P3-46
-	note_type 12, 1, 7
+	note_type 12, 1, 6
 	note G_,1
 	rest 15
 	sound_ret 

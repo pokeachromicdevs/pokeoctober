@@ -123,7 +123,8 @@ pokeoctober-v.$(GIT_VERSION)-debug.ips: pokeoctober_debug.gbc baserom.gbc
 poke%.gbc: $$(%_obj) pokeoctober.link
 	$(RGBLINK) -n poke$*.sym -m poke$*.map -l pokeoctober.link -o $@ $(filter %.o,$^)
 	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_OCTOBER $@
-	tools/sort_symfile.sh pokeoctober.sym
+	tools/sort_symfile.sh poke$*.sym
+	$(MAKE) update-sheet
 
 pokeoctober.gbs: $(soundtrack_obj) gbs.link
 	$(RGBLINK) -n gbs.sym -m gbs.map -l gbs.link -o $@ $(filter %.o,$^)

@@ -761,15 +761,15 @@ _CGB_TrainerCard:
 	ld a, TC_MORTON
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	;ld a, PRYCE
-	;call GetTrainerPalettePointer
-	;call LoadPalette_White_Col1_Col2_Black
-	;ld a, JASMINE
-	;call GetTrainerPalettePointer
-	;call LoadPalette_White_Col1_Col2_Black
-	;ld a, CHUCK
-	;call GetTrainerPalettePointer
-	;call LoadPalette_White_Col1_Col2_Black
+	ld a, TC_BRYCE
+	call GetTrainerPalettePointer
+	call LoadPalette_White_Col1_Col2_Black
+	ld a, TC_SYLVIA
+	call GetTrainerPalettePointer
+	call LoadPalette_White_Col1_Col2_Black
+	ld a, TC_FERGUS
+	call GetTrainerPalettePointer
+	call LoadPalette_White_Col1_Col2_Black
 	ld hl, .BadgePalettes
 	ld bc, 8 palettes
 	ld a, BANK(wOBPals1)

@@ -75,136 +75,65 @@ func wrfiles(outdir string, i trainers.Files) error {
 		return e
 	}
 
-	// write trainer_constants.asm
-	c := strings.NewReader(i.TrainerConstants.String())
-	f, e := os.Create(outdir + "/trainer_constants.gen.asm")
+	e = wr1file(outdir, i.TrainerConstants, "trainer_constants.gen.asm")
 	if e != nil {
-		slog.Error("could not create constants file", "e", e)
-		return e
-	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write constants file", "e", e)
-		return e
-	}
-	f.Close()
-
-	// write trainer_parties.asm
-	c = strings.NewReader(i.Parties.String())
-	f, e = os.Create(outdir + "/trainer_parties.gen.asm")
-	if e != nil {
-		slog.Error("could not create parties file", "e", e)
-		return e
-	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write parties file", "e", e)
 		return e
 	}
 
-	// write party_pointers.asm
-	c = strings.NewReader(i.PartyPtrs.String())
-	f, e = os.Create(outdir + "/party_pointers.gen.asm")
+	e = wr1file(outdir, i.Parties, "trainer_parties.gen.asm")
 	if e != nil {
-		slog.Error("could not create party ptrs file", "e", e)
 		return e
 	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write party ptrs file", "e", e)
-		return e
-	}
-	f.Close()
 
-	// write attributes.asm
-	c = strings.NewReader(i.Attributes.String())
-	f, e = os.Create(outdir + "/attributes.gen.asm")
+	e = wr1file(outdir, i.PartyPtrs, "party_pointers.gen.asm")
 	if e != nil {
-		slog.Error("could not create attrs file", "e", e)
 		return e
 	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write attrs file", "e", e)
-		return e
-	}
-	f.Close()
 
-	// write class_names.asm
-	c = strings.NewReader(i.ClassNames.String())
-	f, e = os.Create(outdir + "/class_names.gen.asm")
+	e = wr1file(outdir, i.Attributes, "attributes.gen.asm")
 	if e != nil {
-		slog.Error("could not create class_names file", "e", e)
 		return e
 	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write class_names file", "e", e)
-		return e
-	}
-	f.Close()
 
-	// write dvs.asm
-	c = strings.NewReader(i.DVs.String())
-	f, e = os.Create(outdir + "/dvs.gen.asm")
+	e = wr1file(outdir, i.ClassNames, "class_names.gen.asm")
 	if e != nil {
-		slog.Error("could not create dvs file", "e", e)
 		return e
 	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write dvs file", "e", e)
-		return e
-	}
-	f.Close()
 
-	// write encounter_music.asm
-	c = strings.NewReader(i.EncounterMusics.String())
-	f, e = os.Create(outdir + "/encounter_music.gen.asm")
+	e = wr1file(outdir, i.DVs, "dvs.gen.asm")
 	if e != nil {
-		slog.Error("could not create encounter_music file", "e", e)
 		return e
 	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write encounter_music file", "e", e)
-		return e
-	}
-	f.Close()
 
-	// write pic_pointers.asm
-	c = strings.NewReader(i.PicPointers.String())
-	f, e = os.Create(outdir + "/pic_pointers.gen.asm")
+	e = wr1file(outdir, i.EncounterMusics, "encounter_music.gen.asm")
 	if e != nil {
-		slog.Error("could not create pic_pointers file", "e", e)
 		return e
 	}
-	_, e = io.Copy(f, c)
-	if e != nil {
-		f.Close()
-		slog.Error("could not write pic_pointers file", "e", e)
-		return e
-	}
-	f.Close()
 
-	// write palettes.asm
-	c = strings.NewReader(i.Palettes.String())
-	f, e = os.Create(outdir + "/palettes.gen.asm")
+	e = wr1file(outdir, i.PicPointers, "pic_pointers.gen.asm")
 	if e != nil {
-		slog.Error("could not create palettes file", "e", e)
+		return e
+	}
+
+	e = wr1file(outdir, i.Palettes, "palettes.gen.asm")
+	if e != nil {
+		return e
+	}
+
+	return nil
+}
+
+func wr1file(outdir string, which strings.Builder, name string) error {
+	c := strings.NewReader(which.String())
+	f, e := os.Create(outdir + "/" + name)
+	if e != nil {
+		slog.Error("could not create file", "name", name, "e", e)
 		return e
 	}
 	_, e = io.Copy(f, c)
 	if e != nil {
 		f.Close()
-		slog.Error("could not write palettes file", "e", e)
+		slog.Error("could not write file", "name", name, "e", e)
 		return e
 	}
 	f.Close()

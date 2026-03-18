@@ -1,6 +1,86 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 
+SECTION "Trainer Class Falkner", ROMX
+FalknerGroup:
+	next_party ; Falkner (1)
+		db "FALKNER@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+		dbw 9, PIDGEY
+		dw NO_ITEM
+		dw MUD_SLAP, QUICK_ATTACK, GUST, NO_MOVE
+		dbw 11, NATU
+		dw NO_ITEM
+		dw PECK, NIGHT_SHADE, NO_MOVE, NO_MOVE
+		dbw 14, ADBARSTORK
+		dw BERRY
+		dw FURY_ATTACK, GROWL, WHIRLWIND, NO_MOVE
+	end_party
+	end_party_list
+
+SECTION "Trainer Class Whitney", ROMX
+WhitneyGroup:
+	next_party ; Whitney (1)
+		db "WHITNEY@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+		dbw 17, KOALYPTUS
+		dw NO_ITEM
+		dw SCRATCH, GROWL, BITE, RAZOR_LEAF
+		dbw 19, FARFETCH_D
+		dw NO_ITEM
+		dw GUST, SAND_ATTACK, FURY_ATTACK, MUD_SLAP
+		dbw 20, MILTANK
+		dw PRZ_CURE_BERRY
+		dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
+	end_party
+	end_party_list
+
+SECTION "Trainer Class Bugsy", ROMX
+BugsyGroup:
+	next_party ; Bugsy (1)
+		db "BUGSY@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+		dbw 23, LEDIAN
+		dw NO_ITEM
+		dw TACKLE, SUPERSONIC, COMET_PUNCH, ROLLOUT
+		dbw 24, ARIADOS
+		dw FIRE_MANE
+		dw POISON_STING, BITE, SPIDER_WEB, NIGHT_SHADE
+		dbw 26, HERACROSS
+		dw SILVER_POWDER
+		dw FURY_CUTTER, DETECT, HORN_ATTACK, CROSS_CUTTER
+	end_party
+	end_party_list
+
+SECTION "Trainer Class Morton", ROMX
+MortonGroup:
+	next_party ; Morton (1)
+		db "MORTON@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+		dbw 29, RATTLIT
+		dw NO_ITEM
+		dw CONFUSION, ECHO, SHADOW_BALL, RAPID_SPIN
+		dbw 30, GIRAFARIG
+		dw SPELL_TAG
+		dw LICK, PURSUIT, STOMP, HYPNOSIS
+		dbw 32, FENNECURSE
+		dw MIRACLE_BERRY
+		dw SHADOW_BALL, FAINT_ATTACK, FLAME_WHEEL, WILL_O_WISP
+	end_party
+	end_party_list
+
+SECTION "Trainer Class Bryce", ROMX
+BryceGroup:
+	end_party_list
+
+SECTION "Trainer Class Sylvia", ROMX
+SylviaGroup:
+	end_party_list
+
+SECTION "Trainer Class Fergus", ROMX
+FergusGroup:
+	end_party_list
+
+SECTION "Trainer Class Sandra", ROMX
+SandraGroup:
+	end_party_list
+
 SECTION "Trainer Class Rival1", ROMX
 Rival1Group:
 	next_party ; Rival (Chikorita1)
@@ -382,22 +462,6 @@ BirdKeeperGroup:
 	end_party
 	end_party_list
 
-SECTION "Trainer Class Falkner", ROMX
-FalknerGroup:
-	next_party ; Falkner (1)
-		db "FALKNER@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-		dbw 9, PIDGEY
-		dw NO_ITEM
-		dw MUD_SLAP, QUICK_ATTACK, GUST, NO_MOVE
-		dbw 11, NATU
-		dw NO_ITEM
-		dw PECK, NIGHT_SHADE, NO_MOVE, NO_MOVE
-		dbw 14, ADBARSTORK
-		dw BERRY
-		dw FURY_ATTACK, GROWL, WHIRLWIND, NO_MOVE
-	end_party
-	end_party_list
-
 SECTION "Trainer Class LassNieNie", ROMX
 LassNieNieGroup:
 	next_party ; Niechelle (1)
@@ -623,22 +687,6 @@ BeautyGroup:
 	end_party
 	end_party_list
 
-SECTION "Trainer Class Whitney", ROMX
-WhitneyGroup:
-	next_party ; Whitney (1)
-		db "WHITNEY@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-		dbw 17, KOALYPTUS
-		dw NO_ITEM
-		dw SCRATCH, GROWL, BITE, RAZOR_LEAF
-		dbw 19, FARFETCH_D
-		dw NO_ITEM
-		dw GUST, SAND_ATTACK, FURY_ATTACK, MUD_SLAP
-		dbw 20, MILTANK
-		dw PRZCUREBERRY
-		dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
-	end_party
-	end_party_list
-
 SECTION "Trainer Class Fisher", ROMX
 FisherGroup:
 	next_party ; Manny (1)
@@ -716,6 +764,11 @@ GruntMGroup:
 		dbw 20, SMEARGLE
 		dbw 20, RATICATE
 	end_party
+	next_party ; Grunt (HyuckMarigold)
+		db "GRUNT@", TRAINERTYPE_NORMAL
+		dbw 22, SMEARGLE
+		dbw 23, RATICATE
+	end_party
 	end_party_list
 
 SECTION "Trainer Class GruntF", ROMX
@@ -779,22 +832,6 @@ PicnickerGroup:
 	end_party
 	end_party_list
 
-SECTION "Trainer Class Bugsy", ROMX
-BugsyGroup:
-	next_party ; Bugsy (1)
-		db "BUGSY@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-		dbw 23, LEDIAN
-		dw NO_ITEM
-		dw TACKLE, SUPERSONIC, COMET_PUNCH, ROLLOUT
-		dbw 24, ARIADOS
-		dw FIRE_MANE
-		dw POISON_STING, BITE, SPIDER_WEB, NIGHT_SHADE
-		dbw 26, HERACROSS
-		dw SILVERPOWDER
-		dw FURY_CUTTER, DETECT, HORN_ATTACK, CROSS_CUTTER
-	end_party
-	end_party_list
-
 SECTION "Trainer Class Firebreather", ROMX
 FirebreatherGroup:
 	next_party ; Rob (1)
@@ -814,22 +851,6 @@ MediumGroup:
 		db "DOROTHY@", TRAINERTYPE_NORMAL
 		dbw 23, STROMEN
 		dbw 24, BIPULLA
-	end_party
-	end_party_list
-
-SECTION "Trainer Class Morton", ROMX
-MortonGroup:
-	next_party ; Morton (1)
-		db "MORTON@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-		dbw 29, RATTLIT
-		dw NO_ITEM
-		dw CONFUSION, ECHO, SHADOW_BALL, RAPID_SPIN
-		dbw 30, GIRAFARIG
-		dw SPELL_TAG
-		dw LICK, PURSUIT, STOMP, HYPNOSIS
-		dbw 32, FENNECURSE
-		dw MIRACLEBERRY
-		dw SHADOW_BALL, FAINT_ATTACK, FLAME_WHEEL, WILL_O_WISP
 	end_party
 	end_party_list
 
@@ -862,18 +883,11 @@ BikerGroup:
 	end_party
 	end_party_list
 
-SECTION "Trainer Class E4Karen", ROMX
-E4KarenGroup:
-	next_party ; Karen (1)
-		db "KAREN@", TRAINERTYPE_NORMAL
-		dbw 100, PIKACHU
-	end_party
-	end_party_list
-
 SECTION "Trainer Class Elm", ROMX
 ElmGroup:
 	next_party ; Elm (1)
-		db "ELM@", TRAINERTYPE_NORMAL
-		dbw 100, PIKACHU
+		db "ELM@", TRAINERTYPE_MOVES
+		dbw 66, TAUROS
+		dw RAGE, EARTHQUAKE, THRASH, SWAGGER
 	end_party
 	end_party_list

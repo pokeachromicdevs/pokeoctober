@@ -9,6 +9,29 @@ import (
 	"strings"
 )
 
+// expected sheet layout
+const (
+	// not parsed, informational only
+	ciWhere = iota
+	// this is the trigger to define an instance
+	ciWhen
+	// if set, constants will use this instead of _1, _2, ...
+	ciSuggestedLabel
+	// REQUIRED, if `When` is set
+	ciTrainerClass
+	// REQUIRED, if `When` is set
+	ciName
+	// up to 6 of the consequent rows
+	ciPokemon
+	ciLv
+	ciHeldItem
+	ciMove1
+	ciMove2
+	ciMove3
+	ciMove4
+	ci_ // ← number of columns
+)
+
 // process trainer instances in sheetName
 func (s *State) ProcessTrainerInstances(sheetName string) error {
 	// state prechecking
@@ -203,18 +226,18 @@ type insRow struct {
 // deserialize a []string row into Row
 func insRowFrom(r []string) (*insRow, error) {
 	// should be how big each row is
-	o := make([]string, 12)
+	o := make([]string, ci_)
 
 	// copy row, ignoring empties
 	for i, x := range r {
-		if i > len(o) {
+		if i >= len(o) {
 			break
 		}
 		o[i] = strings.TrimSpace(x)
 	}
 
 	// validate party level
-	lv, e := strconv.Atoi(o[6])
+	lv, e := strconv.Atoi(o[ciLv])
 	if e != nil {
 		slog.Error("invalid level number", "lv", o[6], "e", e)
 		return nil, e
@@ -227,17 +250,17 @@ func insRowFrom(r []string) (*insRow, error) {
 
 	// deserialized row
 	return &insRow{
-		Where:        o[0],
-		When:         o[1],
-		SuggestLabel: o[2],
-		Class:        o[3],
-		Name:         o[4],
-		PartyMon:     o[5],
+		Where:        o[ciWhere],
+		When:         o[ciWhen],
+		SuggestLabel: o[ciSuggestedLabel],
+		Class:        o[ciTrainerClass],
+		Name:         o[ciName],
+		PartyMon:     o[ciPokemon],
 		PartyLev:     lv,
-		HeldItem:     o[7],
-		Move1:        o[8],
-		Move2:        o[9],
-		Move3:        o[10],
-		Move4:        o[11],
+		HeldItem:     o[ciHeldItem],
+		Move1:        o[ciMove1],
+		Move2:        o[ciMove2],
+		Move3:        o[ciMove3],
+		Move4:        o[ciMove4],
 	}, nil
 }

@@ -14,15 +14,26 @@ TRAINER_GEN_OUTPUTS := \
 	sheets/generated/trainer/trainer_constants.gen.asm \
 	sheets/generated/trainer/trainer_parties.gen.asm
 
-update-sheet:
-	tools/get_file.sh \
-		"$(MASTER_SHEET_URL)" \
-		sheets/master.xlsx
+ITEM_GEN_TOOL := tools/mkitemdata
+ITEM_GEN_OUTPUTS := \
+	sheets/generated/item/normal_item_constants.gen.asm \
+	sheets/generated/item/key_item_constants.gen.asm \
+	sheets/generated/item/ball_item_constants.gen.asm \
+	sheets/generated/item/attributes.gen.asm \
+	sheets/generated/item/names.gen.asm \
+	sheets/generated/item/effect_pointers.gen.asm \
+	sheets/generated/item/description_pointers.gen.asm \
 
-sheets/master.xlsx: update-sheet
+update-sheet:
+	tools/get_file.sh "$(MASTER_SHEET_URL)" sheets/master.xlsx
+
+sheets/master.xlsx:
+	tools/get_file.sh "$(MASTER_SHEET_URL)" $@
 
 $(TRAINER_GEN_OUTPUTS) &: sheets/master.xlsx
-	# refresh all
-	rm -f $(TRAINER_GEN_OUTPUTS)
 	$(TRAINER_GEN_TOOL) \
 		-in $< -out sheets/generated/trainer
+
+$(ITEM_GEN_OUTPUTS) &: sheets/master.xlsx
+	$(ITEM_GEN_TOOL) \
+		-in $< -out sheets/generated/item

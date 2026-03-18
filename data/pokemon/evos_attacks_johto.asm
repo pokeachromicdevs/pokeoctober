@@ -883,7 +883,7 @@ TykerEvosAttacks:
 	db 0 ; no more level-up moves
 
 StraigarEvosAttacks:
-	dbbw EVOLVE_ITEM, THUNDERSTONE, GOROTORA
+	dbbw EVOLVE_ITEM, THUNDER_STONE, GOROTORA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP

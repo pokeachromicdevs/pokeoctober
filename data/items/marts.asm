@@ -43,8 +43,8 @@ Marts:
 MartPagoda2F: ; berries and apricorns
 	db 8
 	dw BERRY
-	dw PSNCUREBERRY
-	dw PRZCUREBERRY
+	dw PSN_CURE_BERRY
+	dw PRZ_CURE_BERRY
 	dw BURNT_BERRY
 	dw ICE_BERRY
 	dw RED_APRICORN
@@ -109,7 +109,7 @@ MartAlder:
 	db 5 ; # items
 	dw POTION
 	dw SUPER_POTION
-	dw SLOWPOKETAIL
+	dw SLOWPOKE_TAIL
 	dw REPEL
 	dw ETHER
 
@@ -208,13 +208,13 @@ MartEcruteak:
 MartMahogany1:
 	db 4 ; # items
 	dw CORDYCEPS
-	dw SLOWPOKETAIL
+	dw SLOWPOKE_TAIL
 	dw POKE_BALL
 	dw POTION
 
 MartMahogany2:
 	db 9 ; # items
-	dw RAGECANDYBAR
+	dw CAKE_OF_RAGE
 	dw GREAT_BALL
 	dw SUPER_POTION
 	dw HYPER_POTION
@@ -290,7 +290,7 @@ MartVermilion:
 	dw PARLYZ_HEAL
 	dw AWAKENING
 	dw BURN_HEAL
-	dw LITEBLUEMAIL
+	dw LITE_BLUE_MAIL
 
 MartCeladon2F1:
 	db 7 ; # items
@@ -375,7 +375,7 @@ MartMtMoon:
 	dw SODA_POP
 	dw LEMONADE
 	dw REPEL
-	dw PORTRAITMAIL
+	dw PORTRAIT_MAIL
 
 MartIndigoPlateau:
 	db 7 ; # items
@@ -389,7 +389,7 @@ MartIndigoPlateau:
 
 MartUnderground:
 	db 4 ; # items
-	dw ENERGYPOWDER
+	dw ENERGY_POWDER
 	dw ENERGY_ROOT
 	dw HEAL_POWDER
 	dw REVIVAL_HERB

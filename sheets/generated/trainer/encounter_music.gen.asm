@@ -1,6 +1,14 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 TrainerEncounterMusic::
+	db MUSIC_YOUNGSTER_ENCOUNTER      ; Falkner
+	db MUSIC_LASS_ENCOUNTER           ; Whitney
+	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bugsy
+	db MUSIC_OFFICER_ENCOUNTER        ; Morton
+	db MUSIC_OFFICER_ENCOUNTER        ; Bryce
+	db MUSIC_LASS_ENCOUNTER           ; Sylvia
+	db MUSIC_OFFICER_ENCOUNTER        ; Fergus
+	db MUSIC_BEAUTY_ENCOUNTER         ; Sandra
 	db MUSIC_RIVAL_ENCOUNTER          ; Rival1
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Youngster
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bug Catcher
@@ -13,7 +21,6 @@ TrainerEncounterMusic::
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Camper
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Fledgling
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bird Keeper
-	db MUSIC_YOUNGSTER_ENCOUNTER      ; Falkner
 	db MUSIC_LASS_ENCOUNTER           ; LassNieNie
 	db MUSIC_SAGE_ENCOUNTER           ; Sage
 	db MUSIC_SAGE_ENCOUNTER           ; Mystic
@@ -21,7 +28,6 @@ TrainerEncounterMusic::
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Schoolboy
 	db MUSIC_HIKER_ENCOUNTER          ; Rock Climber
 	db MUSIC_BEAUTY_ENCOUNTER         ; Beauty
-	db MUSIC_LASS_ENCOUNTER           ; Whitney
 	db MUSIC_HIKER_ENCOUNTER          ; Fisher
 	db MUSIC_POKEMANIAC_ENCOUNTER     ; Prodigy
 	db MUSIC_HIKER_ENCOUNTER          ; Manchild
@@ -32,12 +38,9 @@ TrainerEncounterMusic::
 	db MUSIC_SAGE_ENCOUNTER           ; Ballsmith
 	db MUSIC_LASS_ENCOUNTER           ; Twins
 	db MUSIC_LASS_ENCOUNTER           ; Picnicker
-	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bugsy
 	db MUSIC_HIKER_ENCOUNTER          ; Firebreather
 	db MUSIC_SAGE_ENCOUNTER           ; Medium
-	db MUSIC_OFFICER_ENCOUNTER        ; Morton
 	db MUSIC_ROCKET_ENCOUNTER         ; Rocket Will
 	db MUSIC_POKEMANIAC_ENCOUNTER     ; Juggler
 	db MUSIC_HIKER_ENCOUNTER          ; Biker
-	db MUSIC_OFFICER_ENCOUNTER        ; E4Karen
 	db MUSIC_OFFICER_ENCOUNTER        ; Elm
