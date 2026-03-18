@@ -277,6 +277,7 @@ PokedexDataPointerTable:
 	dba KingdraPokedexEntry
 	dba AlumaidenPokedexEntry
 	dba ValhaldraPokedexEntry
+	dba MagstaceanPokedexEntry
 	dba PhanpyPokedexEntry
 	dba DonphanPokedexEntry
 	dba LickilickyPokedexEntry

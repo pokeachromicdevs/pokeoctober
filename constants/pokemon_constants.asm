@@ -298,6 +298,7 @@ JOHTO_POKEMON EQU const_value
 	const KINGDRA    ; e6
 	const ALUMAIDEN
 	const VALHALDRA
+	const MAGSTACEAN
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
 	const LICKILICKY

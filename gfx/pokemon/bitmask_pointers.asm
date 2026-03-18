@@ -276,6 +276,7 @@ BitmasksPointers:
 	dw KingdraBitmasks
 	dw AlumaidenBitmasks
 	dw ValhaldraBitmasks
+	dw MagstaceanBitmasks
 	dw PhanpyBitmasks
 	dw DonphanBitmasks
 	dw LickilickyBitmasks

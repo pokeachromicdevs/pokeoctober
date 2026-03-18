@@ -284,6 +284,7 @@ PokemonCries::
 	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; ALUMAIDEN: TODO
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; VALHALDRA: TODO
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MAGSTACEAN: TODO
 	mon_cry CRY_SENTRET,     $048,  $230 ; PHANPY
 	mon_cry CRY_SENTRET,    -184,  768   ; DONPHAN
 	mon_cry CRY_SEEL,       -$100,  $180 ; LICKILICKY

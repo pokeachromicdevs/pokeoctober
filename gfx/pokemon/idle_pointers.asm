@@ -276,6 +276,7 @@ AnimationIdlePointers:
 	dw KingdraAnimationIdle
 	dw AlumaidenAnimationIdle
 	dw ValhaldraAnimationIdle
+	dw MagstaceanAnimationIdle
 	dw PhanpyAnimationIdle
 	dw DonphanAnimationIdle
 	dw LickilickyAnimationIdle

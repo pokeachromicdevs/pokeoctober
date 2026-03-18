@@ -127,6 +127,7 @@ EvosAttacksPointers2::
 	dw KingdraEvosAttacks
 	dw AlumaidenEvosAttacks
 	dw ValhaldraEvosAttacks
+	dw MagstaceanEvosAttacks
 	dw PhanpyEvosAttacks
 	dw DonphanEvosAttacks
 	dw LickilickyEvosAttacks
@@ -2041,6 +2042,23 @@ ValhaldraEvosAttacks:
 	dbw 55, CURSE
 	dbw 60, SURF
 	dbw 65, OUTRAGE
+	db 0 ; no more level-up moves
+	
+MagstaceanEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, MUD_SLAP
+	dbw 1, LEER
+	dbw 1, BUBBLE
+	dbw 6, VICEGRIP
+	dbw 12, HARDEN
+	dbw 16, BUBBLEBEAM
+	dbw 20, METAL_CLAW
+;	dbw 26, MUD_SHOT
+	dbw 32, STOMP
+	dbw 36, PROTECT
+	dbw 40, CRABHAMMER
+	dbw 46, SWORDS_DANCE
+	dbw 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 PhanpyEvosAttacks:

@@ -294,6 +294,7 @@ PokemonPicPointers::
 	mon_pic Kingdra
 	mon_pic Alumaiden
 	mon_pic Valhaldra
+	mon_pic Magstacean
 	mon_pic Phanpy
 	mon_pic Donphan
 	mon_pic Lickilicky

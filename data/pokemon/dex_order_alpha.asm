@@ -163,6 +163,7 @@ AlphabeticalPokedexOrder:
 	dw MAGMAR
 	dw MAGNEMITE
 	dw MAGNETON
+	dw MAGSTACEAN
 	dw MALLODY
 	dw MAMBOKING
 	dw MANKEY

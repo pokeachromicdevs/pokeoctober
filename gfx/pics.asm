@@ -894,5 +894,7 @@ MambokingFrontpic:  INCBIN "gfx/pokemon/mamboking/front.static.2bpp.lz"
 MambokingBackpic:   INCBIN "gfx/pokemon/mamboking/back.2bpp.lz"
 NorspruceFrontpic:  INCBIN "gfx/pokemon/norspruce/front.static.2bpp.lz"
 NorspruceBackpic:   INCBIN "gfx/pokemon/norspruce/back.2bpp.lz"
+MagstaceanFrontpic: INCBIN "gfx/pokemon/magstacean/front.static.2bpp.lz"
+MagstaceanBackpic:  INCBIN "gfx/pokemon/magstacean/back.2bpp.lz"
 
 INCLUDE "gfx/pics_animated.asm"

@@ -213,6 +213,7 @@ NewPokedexOrder:
 	dw TENTACRUEL
 	dw KRABBY
 	dw KINGLER
+	dw MAGSTACEAN
 	dw SHUCKLE
 	dw SHUQLOUR
 	dw STARYU

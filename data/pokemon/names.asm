@@ -281,6 +281,7 @@ PokemonNames::
 	db "KINGDRA@@@"
 	db "ALUMAIDEN@"
 	db "VALHALDRA@"
+	db "MAGSTACEAN"
 	db "PHANPY@@@@"
 	db "DONPHAN@@@"
 	db "LICKILICKY"

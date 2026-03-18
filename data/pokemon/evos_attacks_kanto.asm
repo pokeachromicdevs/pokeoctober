@@ -1792,6 +1792,8 @@ HypnoEvosAttacks:
 
 KrabbyEvosAttacks:
 	dbbw EVOLVE_LEVEL, 28, KINGLER
+	dbbw EVOLVE_ITEM, METAL_COAT, MAGSTACEAN
+	dbbw EVOLVE_TRADE, METAL_COAT, MAGSTACEAN
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 5, LEER

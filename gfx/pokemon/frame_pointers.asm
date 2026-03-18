@@ -276,6 +276,7 @@ FramesPointers:
 	dba KingdraFrames
 	dba AlumaidenFrames
 	dba ValhaldraFrames
+	dba MagstaceanFrames
 	dba PhanpyFrames
 	dba DonphanFrames
 	dba LickilickyFrames
