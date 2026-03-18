@@ -1,6 +1,26 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 
+	trainerclass TC_FALKNER
+	const FALKNER_FALKNER_1
+
+	trainerclass TC_WHITNEY
+	const WHITNEY_WHITNEY_1
+
+	trainerclass TC_BUGSY
+	const BUGSY_BUGSY_1
+
+	trainerclass TC_MORTON
+	const MORTON_MORTON_1
+
+	trainerclass TC_BRYCE
+
+	trainerclass TC_SYLVIA
+
+	trainerclass TC_FERGUS
+
+	trainerclass TC_SANDRA
+
 	trainerclass TC_RIVAL1
 	const RIVAL1_RIVAL_CHIKORITA1
 	const RIVAL1_RIVAL_CYNDAQUIL1
@@ -82,9 +102,6 @@
 	const BIRDKEEPER_RODNEY_1
 	const BIRDKEEPER_CLYDE_1
 
-	trainerclass TC_FALKNER
-	const FALKNER_FALKNER_1
-
 	trainerclass TC_LASSNIENIE
 	const LASSNIENIE_NIECHELLE_1
 	const LASSNIENIE_NIECHELLE_REMATCH1
@@ -130,9 +147,6 @@
 	const BEAUTY_NINA_1
 	const BEAUTY_PEONY_1
 
-	trainerclass TC_WHITNEY
-	const WHITNEY_WHITNEY_1
-
 	trainerclass TC_FISHER
 	const FISHER_MANNY_1
 	const FISHER_KOI_1
@@ -169,18 +183,12 @@
 	trainerclass TC_PICNICKER
 	const PICNICKER_JAMIE_1
 
-	trainerclass TC_BUGSY
-	const BUGSY_BUGSY_1
-
 	trainerclass TC_FIREBREATHER
 	const FIREBREATHER_ROB_1
 	const FIREBREATHER_MATT_1
 
 	trainerclass TC_MEDIUM
 	const MEDIUM_DOROTHY_1
-
-	trainerclass TC_MORTON
-	const MORTON_MORTON_1
 
 	trainerclass TC_ROCKETWILL
 	const ROCKETWILL_WILL_1
@@ -190,9 +198,6 @@
 
 	trainerclass TC_BIKER
 	const BIKER_HARLEY_1
-
-	trainerclass TC_E4KAREN
-	const E4KAREN_KAREN_1
 
 	trainerclass TC_ELM
 	const ELM_ELM_1

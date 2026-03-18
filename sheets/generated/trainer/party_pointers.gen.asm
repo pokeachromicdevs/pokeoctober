@@ -1,6 +1,14 @@
 ; The following was generated from 
 ; sheets/master.xlsx, do not edit directly!
 TrainerGroups:
+	dba FalknerGroup
+	dba WhitneyGroup
+	dba BugsyGroup
+	dba MortonGroup
+	dba BryceGroup
+	dba SylviaGroup
+	dba FergusGroup
+	dba SandraGroup
 	dba Rival1Group
 	dba YoungsterGroup
 	dba BugCatcherGroup
@@ -13,7 +21,6 @@ TrainerGroups:
 	dba CamperGroup
 	dba FledglingGroup
 	dba BirdKeeperGroup
-	dba FalknerGroup
 	dba LassNieNieGroup
 	dba SageGroup
 	dba MysticGroup
@@ -21,7 +28,6 @@ TrainerGroups:
 	dba SchoolboyGroup
 	dba RockClimberGroup
 	dba BeautyGroup
-	dba WhitneyGroup
 	dba FisherGroup
 	dba ProdigyGroup
 	dba ManchildGroup
@@ -32,12 +38,9 @@ TrainerGroups:
 	dba BallsmithGroup
 	dba TwinsGroup
 	dba PicnickerGroup
-	dba BugsyGroup
 	dba FirebreatherGroup
 	dba MediumGroup
-	dba MortonGroup
 	dba RocketWillGroup
 	dba JugglerGroup
 	dba BikerGroup
-	dba E4KarenGroup
 	dba ElmGroup

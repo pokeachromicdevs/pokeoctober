@@ -40,6 +40,16 @@ func (s *State) ProcessTrainerClasses(sheetName string) error {
 		}
 
 		nowClass.Title = rr.DispName
+		if len(nowClass.Title) > utils.MaxNameLength {
+			slog.Error(
+				fmt.Sprintf("row %d - display name '%s' is longer than max name length (%d) - TRUNCATING!",
+					i+1,
+					nowClass.Title,
+					utils.MaxNameLength,
+				),
+			)
+			nowClass.Title = string([]rune(nowClass.Title[:11]))
+		}
 		nowClass.DVs = []int{
 			rr.Atk,
 			rr.Def,
@@ -89,7 +99,7 @@ func (s *State) writeTrClasses(
 	fmt.Fprintf(dv, "TrainerClassDVs:\n\t;  atk,def,spd,spc\n")
 	fmt.Fprintf(emusic, "TrainerEncounterMusic::\n")
 	fmt.Fprintf(picptr, "TrainerPicPointers::\n")
-	fmt.Fprintf(pal, "TrainerPalettes:\n")
+	// fmt.Fprintf(pal, "TrainerPalettes:\n")
 	for k, v := range s.classes.All() {
 		fmt.Fprintf(partyPtr,
 			"\tdba %sGroup\n",
@@ -148,12 +158,13 @@ type classRow struct {
 	ItemA         string
 	ItemB         string
 	EncountMusic  string
+	Gender        string
 }
 
 // deserialize a []string row into Row
 func classRowFrom(r []string) (*classRow, error) {
 	// should be how big each row is
-	o := make([]string, 13)
+	o := make([]string, 14)
 
 	// copy row, ignoring empties
 	for i, x := range r {
@@ -207,6 +218,7 @@ func classRowFrom(r []string) (*classRow, error) {
 		ItemA:         o[10],
 		ItemB:         o[11],
 		EncountMusic:  o[12],
+		Gender:        o[13],
 	}, nil
 }
 

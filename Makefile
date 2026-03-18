@@ -83,7 +83,7 @@ GIT_VERSION  := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$1}')
 GIT_OFFSET   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$2}')
 GIT_COMMIT   := $(shell echo $(GIT_DESCRIBE) | awk -F "-" '{print $$3}' | cut -c2-)
 
-RGBASMFLAGS = -DGIT_VERSION="\"$(GIT_VERSION)"\" -DGIT_OFFSET="\"$(GIT_OFFSET)"\" -DGIT_COMMIT="\"$(GIT_COMMIT)"\" -DDISPLAY_DISCORD_LINK=""
+RGBASMFLAGS = -D_NO_MUSIC -DGIT_VERSION="\"$(GIT_VERSION)"\" -DGIT_OFFSET="\"$(GIT_OFFSET)"\" -DGIT_COMMIT="\"$(GIT_COMMIT)"\" -DDISPLAY_DISCORD_LINK=""
 
 $(october_obj): RGBASMFLAGS +=
 $(october_debug_obj): RGBASMFLAGS += -D_DEBUG
@@ -123,7 +123,8 @@ pokeoctober-v.$(GIT_VERSION)-debug.ips: pokeoctober_debug.gbc baserom.gbc
 poke%.gbc: $$(%_obj) pokeoctober.link
 	$(RGBLINK) -n poke$*.sym -m poke$*.map -l pokeoctober.link -o $@ $(filter %.o,$^)
 	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_OCTOBER $@
-	tools/sort_symfile.sh pokeoctober.sym
+	tools/sort_symfile.sh poke$*.sym
+	$(MAKE) update-sheet
 
 pokeoctober.gbs: $(soundtrack_obj) gbs.link
 	$(RGBLINK) -n gbs.sym -m gbs.map -l gbs.link -o $@ $(filter %.o,$^)
