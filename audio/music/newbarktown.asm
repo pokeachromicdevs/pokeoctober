@@ -213,8 +213,8 @@ Town073_Ch2:
 	rest 4
 ; P3-1
 .loop30
-	volume_envelope 9, 7
-	duty_cycle 2
+	volume_envelope 8, 7
+	duty_cycle 3
 	stereo_panning TRUE, TRUE
 	octave 1
 	note F_,6
