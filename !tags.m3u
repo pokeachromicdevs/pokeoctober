@@ -14,9 +14,9 @@
 # %arranger  Junichi Masuda
 # %sequencer Junichi Masuda
 # %length    1:16
-# %fade      0
+# %fade      1
 # %date      1999-08-17
-# %comment   From the Pokémon Gold & Silver source code leaks.
+# %comment   From the Pokémon Gold & Silver source code leaks. Slightly modified.
 pokeoctober.gbs?1
 
 # %title     An Adventure Begins
