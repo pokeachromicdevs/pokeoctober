@@ -1,6 +1,7 @@
 ; Used by BattleTowerText
 
 BTTrainerClassGenders:
+IF 0
 ; entries correspond to trainer classes
 	db MALE   ; FALKNER
 	db FEMALE ; WHITNEY
@@ -80,3 +81,4 @@ BTTrainerClassGenders:
 	db MALE   ; SPORTSMAN
 	db MALE   ; MANCHILD
 	db FEMALE ; NIECHELLE
+ENDC
