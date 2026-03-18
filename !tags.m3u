@@ -32,11 +32,11 @@ pokeoctober.gbs?84
 # %title     Silent Town
 # %artist    Junichi Masuda
 # %composer  Junichi Masuda
-# %arranger  Junichi Masuda
-# %sequencer Junichi Masuda
-# %length    1:08
+# %arranger  Zumi
+# %sequencer Junichi Masuda, Zumi
+# %length    1:12
 # %date      1999-03-01
-# %comment   From the Pokémon Gold & Silver source code leaks.
+# %comment   From the Pokémon Gold & Silver source code leaks. Modified to sound more like the final.
 pokeoctober.gbs?60
 
 # %title     Silver's Theme
@@ -148,7 +148,7 @@ pokeoctober.gbs?121
 # %sequencer Zumi
 # %comment   Originally the credits theme from Pokémon Gold, Silver & Crystal. Rearranged in the style of Pokémon Red & Blue.
 # %length    1:46
-# %fade      0
+# %fade      1
 pokeoctober.gbs?119
 
 #### Things we haven't used yet ####
