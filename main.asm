@@ -690,5 +690,5 @@ EXROM_Sentinel::
 
 ; --------------------------
 INCLUDE "checks/events.asm"
-INCLUDE "checks/pokemon.asm"
+;INCLUDE "checks/pokemon.asm"
 INCLUDE "checks/moves.asm"
