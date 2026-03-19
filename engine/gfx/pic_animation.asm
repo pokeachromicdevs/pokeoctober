@@ -150,8 +150,10 @@ ENDM
 	setup_command PokeAnim_StereoCry
 
 PokeAnim_SetWait:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_anim
+ENDC
 	ld a, 18
 	ld [wPokeAnimWaitCounter], a
 .no_anim
@@ -160,8 +162,10 @@ PokeAnim_SetWait:
 	ld [wPokeAnimSceneIndex], a
 
 PokeAnim_Wait:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_anim
+ENDC
 	ld hl, wPokeAnimWaitCounter
 	dec [hl]
 	ret nz
@@ -172,8 +176,10 @@ PokeAnim_Wait:
 	ret
 
 PokeAnim_Setup:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_anim
+ENDC
 	ld c, FALSE
 	ld b, 0
 	call PokeAnim_InitAnim
@@ -185,8 +191,10 @@ PokeAnim_Setup:
 	ret
 
 PokeAnim_Setup2:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_anim
+ENDC
 	ld c, FALSE
 	ld b, 4
 	call PokeAnim_InitAnim
@@ -198,8 +206,10 @@ PokeAnim_Setup2:
 	ret
 
 PokeAnim_Idle:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_anim
+ENDC
 	ld c, TRUE
 	ld b, 0
 	call PokeAnim_InitAnim
@@ -211,8 +221,10 @@ PokeAnim_Idle:
 	ret
 
 PokeAnim_Play:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_anim
+ENDC
 	call PokeAnim_DoAnimScript
 	ld a, [wPokeAnimJumptableIndex]
 	bit 7, a
@@ -225,8 +237,10 @@ PokeAnim_Play:
 	ret
 
 PokeAnim_Play2:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_anim
+ENDC
 	call PokeAnim_DoAnimScript
 	ld a, [wPokeAnimJumptableIndex]
 	bit 7, a

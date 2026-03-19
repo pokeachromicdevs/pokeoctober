@@ -94,13 +94,14 @@ _GetFrontpic:
 	ld a, b
 	ld de, wDecompressScratch
 	call FarDecompress
+IF DEF(_REQUIRE_MBC30)
+; if MBC30 - load animation tiles
 	call DoesEmulatorSupportMBC30
 	jr nz, .no_animation
-; if MBC30 - load animation tiles
+ENDC
 	push de
 		ld a, BANK(wCurPartySpecies)
 		ldh [rSVBK], a
-		; mbc30
 		call GetFrontAnimPicPointer
 		ld a, BANK(wDecompressScratch)
 		ldh [rSVBK], a

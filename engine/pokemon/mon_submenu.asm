@@ -151,8 +151,10 @@ GetMonSubmenuItems:
 	call AddMonMenuItem
 	ld a, MONMENUITEM_MOVE
 	call AddMonMenuItem
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .skip_follow
+ENDC
 	ld a, [wWhichPartyFollower]
 	and a
 	jr z, .add_follow

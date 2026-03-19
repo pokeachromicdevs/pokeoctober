@@ -133,6 +133,7 @@ endr
 	hlcoord 1, 9
 	call PlaceString
 
+IF DEF(_REQUIRE_MBC30)
 ; indicate if MBC30 is enabled:
 	ld de, CrashOveride_MBC30String
 	hlcoord 1, 14
@@ -145,6 +146,7 @@ endr
 	ld de, CrashOveride_NotString
 	hlcoord 1, 13
 	call PlaceString
+ENDC
 
 .inf
 	call DelayFrame
@@ -258,5 +260,7 @@ endc
 CrashOveride_NotString:
 	db "NOT@"
 
+IF DEF(_REQUIRE_MBC30)
 CrashOveride_MBC30String:
 	db "MBC30@"
+ENDC

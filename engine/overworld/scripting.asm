@@ -3179,6 +3179,7 @@ Script_ifequal16:
 	jp Script_sjump
 
 Script_checkmbc30:
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .no
 ; yes
@@ -3189,3 +3190,9 @@ Script_checkmbc30:
 	xor a
 	ld [wScriptVar], a
 	ret
+ELSE
+; fake MBC30 support, quick patch
+	ld a, 1
+	ld [wScriptVar], a
+	ret
+ENDC

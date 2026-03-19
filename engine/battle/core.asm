@@ -178,7 +178,6 @@ WildFled_EnemyFled_LinkBattleCanceled:
 
 BattleTurn:
 .loop
-	call Stubbed_Function3c1bf
 	call CheckContestBattleOver
 	jp c, .quit
 
@@ -239,20 +238,6 @@ BattleTurn:
 
 .quit
 	ret
-
-Stubbed_Function3c1bf:
-	ret
-	ld a, 5 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	ld hl, $a89b ; address of MBC30 bank
-	inc [hl]
-	jr nz, .finish
-	dec hl
-	inc [hl]
-	jr nz, .finish
-	dec [hl]
-	inc hl
-	dec [hl]
 
 .finish
 	call CloseSRAM
@@ -3647,8 +3632,10 @@ Function_SetEnemyMonAndSendOutAnimation:
 	farcall CheckBattleScene
 	jr c, .cry_no_anim
 
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .cry_no_anim
+ENDC
 
 	hlcoord 12, 0
 	ld d, $0
@@ -9383,8 +9370,10 @@ BattleStartMessage:
 	farcall CheckBattleScene
 	jr c, .cry_no_anim
 
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr nz, .cry_no_anim
+ENDC
 
 	hlcoord 12, 0
 	ld d, $0

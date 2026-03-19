@@ -1,3 +1,4 @@
+IF DEF(_REQUIRE_MBC30)
 DoesEmulatorSupportMBC30::
 ; sets the z flag if it does
 	ld a, BANK(EXROM_Sentinel)
@@ -5,3 +6,4 @@ DoesEmulatorSupportMBC30::
 	call GetFarByte
 	cp BANK(EXROM_Sentinel)
 	ret
+ENDC

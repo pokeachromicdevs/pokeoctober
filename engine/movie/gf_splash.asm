@@ -37,9 +37,11 @@ Copyright_GFPresents:
 	call LoadStandardFont
 	call ClearSprites
 
+IF DEF(_REQUIRE_MBC30)
 	call DoesEmulatorSupportMBC30
 	jr z, .skipmbcwarn
 	call CantDetectMBC30Screen
+ENDC
 
 .skipmbcwarn
 	call WarningScreen
@@ -73,6 +75,7 @@ WarningScreen_WaitButton:
 	ret nz
 	jr .loop
 
+IF DEF(_REQUIRE_MBC30)
 CantDetectMBC30Screen:
 	hlcoord 1, 3
 	ld de, .Tx1
@@ -92,7 +95,8 @@ CantDetectMBC30Screen:
 .Tx2:
 	db   "Some features will"
 	next "be unavailable.@"
-
+ENDC
+	
 WarningScreen:
 	hlcoord 3, 1
 	ld de, .Header

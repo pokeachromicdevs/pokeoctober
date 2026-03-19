@@ -684,9 +684,11 @@ INCLUDE "engine/debug/crash_handler.asm"
 
 ; mbc30 additions
 
+IF DEF(_REQUIRE_MBC30)
 SECTION "MBC30 Verification", ROMX
 EXROM_Sentinel::
 	db BANK(@)
+ENDC
 
 ; --------------------------
 INCLUDE "checks/events.asm"
