@@ -134,13 +134,8 @@ ROMX $2e
 	"bank2E"
 ROMX $2f
 	"Phone Scripts 2"
-ROMX $30
-	"Sprites 1"
-ROMX $31
-	"Sprites 2"
 ROMX $32
 	"bank32"
-	"Sprites 3"
 ROMX $33
 	"Battle Animation Stuff"
 ROMX $34
@@ -253,27 +248,6 @@ ROMX $7c
 ROMX $7d
 	"Evolutions and Attacks 2"
 	"Cries"
-ROMX $7e
-	"Pokemon Follow Sprites"
-ROMX $7f
-	"Pokemon"
-ROMX $81
-	"MBC30 Verification"
-ROMX $88
-	"Follower Sprites 1"
-ROMX $89
-	"Follower Sprites 2"
-ROMX $8a
-	"Pic Animations Frame Pointers"
-	"Pic Animations Unown Anims"
-	"Pic Animations Unown Idle"
-	"Pic Animations Unown Bitmasks"
-	"Pic Animations Unown Frames"
-ROMX $8b
-	"Pic Animations Anims"
-	"Pic Animations Idles"
-ROMX $8d
-	"Pic Animations Bitmasks"
 WRAM0
 	"Stack"
 	"Audio RAM"
