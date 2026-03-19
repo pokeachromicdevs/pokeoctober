@@ -8,13 +8,18 @@ Music_GoldenrodCity_Ch1:
 	stereopanning $f
 	tempo 176
 	volume $77
-	notetype $c, $97
-	note __, 16
-	note __, 16
-	note __, 16
-	note __, 16
+	notetype $c, $77
+	note __, 2
+	dutycycle $2
+	callchannel Music_GoldenrodCity_branch_eb4a9
+	note C_, 4
+	octave 3
+	note G#, 2
+	octave 4
+	note C_, 2
 Music_GoldenrodCity_branch_eb46d:
 	dutycycle $0
+	volume_envelope 9, 7
 	callchannel Music_GoldenrodCity_branch_eb4a9
 	octave 3
 	note G#, 1
@@ -177,6 +182,9 @@ Music_GoldenrodCity_Ch2:
 	vibrato $12, $23
 	dutycycle $2
 	notetype $c, $97
+	octave 4
+	note C#, 1
+	note D#, 1
 Music_GoldenrodCity_branch_eb523:
 	intensity $97
 	callchannel Music_GoldenrodCity_branch_eb555
@@ -226,11 +234,7 @@ Music_GoldenrodCity_branch_eb555:
 	octave 4
 	note C_, 2
 	octave 3
-	note G#, 6
-	octave 3
-	note G#, 1
-	octave 3
-	note A_, 1
+	note G#, 8
 	note A#, 4
 	octave 4
 	note C#, 4
@@ -249,10 +253,8 @@ Music_GoldenrodCity_branch_eb572:
 	note C#, 4
 	note C_, 6
 	note D#, 6
-	note C_, 2
+	note C_, 4
 	octave 4
-	note G#, 1
-	note A_, 1
 	note A#, 6
 	octave 5
 	note C#, 6
@@ -267,6 +269,7 @@ Music_GoldenrodCity_Ch3:
 	stereopanning $ff
 	vibrato $8, $23
 	notetype $c, $25
+	rest 2
 Music_GoldenrodCity_branch_eb58c:
 	callchannel Music_GoldenrodCity_branch_eb5aa
 	callchannel Music_GoldenrodCity_branch_eb5aa
@@ -387,6 +390,7 @@ Music_GoldenrodCity_branch_eb5d2:
 Music_GoldenrodCity_Ch4:
 	togglenoise $3
 	notetype $c
+	note __, 2
 	note __, 16
 	note __, 16
 	note __, 16

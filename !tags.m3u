@@ -105,6 +105,16 @@ pokeoctober.gbs?110
 # %date      1999-08-17
 pokeoctober.gbs?37
 
+# %title     Marigold City
+# %artist    Go Ichinose
+# %composer  Go Ichinose
+# %arranger  Go Ichinose
+# %sequencer Go Ichinose
+# %comment   Based on the early MIDI version found in the HG/SS source
+# %length    1:19
+# %fade      1
+pokeoctober.gbs?61
+
 # %title     Friendly Mart
 # %artist    Zumi
 # %composer  Go Ichinose, Shota Kageyama
