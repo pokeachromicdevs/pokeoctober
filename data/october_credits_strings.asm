@@ -83,6 +83,8 @@ OctoberCredits_StringTable:
 
 	dw .BattleAnims, .Blank
 		dw .Soup,  .Blank
+		dw .EightBitZeta, .Blank
+			; bug fixes
 	
 	dw .Blank, .Blank
 	dw .Blank, .Blank
@@ -156,6 +158,8 @@ OctoberCredits_StringTable:
 			; the place where everything is compiled
 		dw .MeanShape, .Blank
 			; idea help
+		dw .MDTravis, .Blank
+			; more resources and findings
 
 ; last screen
 	dw .Blank, .Blank
@@ -224,4 +228,6 @@ OctoberCredits_StringTable:
 .GameScenario:  db "    GAME SCENARIO   ";;
 .Tajiri:        db "    SATOSHI TAJIRI  ";;
 .BattleAnims:   db "  BATTLE ANIMATIONS ";;
-.LuciShrimp:    db "     LUCISHRIMP     "
+.LuciShrimp:    db "     LUCISHRIMP     ";;
+.EightBitZeta:  db "      8BITZETA      ";;
+.MDTravis:      db "      MDTRAVIS      ";;
