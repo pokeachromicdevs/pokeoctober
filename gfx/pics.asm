@@ -1613,5 +1613,7 @@ SECTION "_MagstaceanFrontpic", ROMX
 MagstaceanFrontpic: INCBIN "gfx/pokemon/magstacean/front.static.2bpp.lz"
 SECTION "_MagstaceanBackpic", ROMX
 MagstaceanBackpic:  INCBIN "gfx/pokemon/magstacean/back.2bpp.lz"
+SECTION "_RivalWaterPic", ROMX
+RivalWaterPic:  INCBIN "gfx/trainers/rivalwater.2bpp.lz"
 
 INCLUDE "gfx/pics_animated.asm"
