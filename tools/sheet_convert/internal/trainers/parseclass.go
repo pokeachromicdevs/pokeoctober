@@ -13,6 +13,7 @@ import (
 const (
 	ccTrainerClass = iota
 	ccName
+	ccRemark
 	ccDVs_ATK
 	ccDVs_DEF
 	ccDVs_SPD
@@ -136,16 +137,7 @@ type classRow struct {
 
 // deserialize a []string row into Row
 func classRowFrom(r []string) (*classRow, error) {
-	// should be how big each row is
-	o := make([]string, cc_)
-
-	// copy row, ignoring empties
-	for i, x := range r {
-		if i >= len(o) {
-			break
-		}
-		o[i] = strings.TrimSpace(x)
-	}
+	o := utils.NormalizeRow(r, cc_)
 	at, e := validateDv(o[ccDVs_ATK])
 	if e != nil {
 		slog.Error("invalid ATK value", "e", e)

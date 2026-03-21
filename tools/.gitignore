@@ -9,5 +9,7 @@ scan_includes
 ipspatch
 gif2anim
 gbstrim
-mktrainerdata
-mkitemdata
+/mktrainerdata
+/mkitemdata
+/mkpkmndata
+/mkwilddata

@@ -86,17 +86,7 @@ type itemRow struct {
 // deserialize a []string row into Row
 // only basic type conversions
 func itemRowFrom(r []string) (*itemRow, error) {
-	// should be how big each row is
-	o := make([]string, ci_)
-
-	// copy row, ignoring empties
-	for i, x := range r {
-		if i >= len(o) {
-			break
-		}
-		o[i] = strings.TrimSpace(x)
-	}
-
+	o := utils.NormalizeRow(r, ci_)
 	var pocket PocketEnum
 	switch o[ciPocket] {
 	case "Item":

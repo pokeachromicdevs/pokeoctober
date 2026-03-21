@@ -36,3 +36,7 @@ func (om *OrderedMap[K, V]) Get(key K) (V, bool) {
 	val, exists := om.values[key]
 	return val, exists
 }
+
+func (om *OrderedMap[K, V]) Len() int {
+	return len(om.keys)
+}

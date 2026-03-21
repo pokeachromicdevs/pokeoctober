@@ -22,7 +22,15 @@ ITEM_GEN_OUTPUTS := \
 	sheets/generated/item/attributes.gen.asm \
 	sheets/generated/item/names.gen.asm \
 	sheets/generated/item/effect_pointers.gen.asm \
-	sheets/generated/item/description_pointers.gen.asm \
+	sheets/generated/item/description_pointers.gen.asm
+
+WILD_GEN_TOOL := tools/mkwilddata
+WILD_GEN_KANSAI_OUTPUTS := \
+	sheets/generated/wild/kansai_grass.gen.asm \
+	sheets/generated/wild/kansai_water.gen.asm
+WILD_GEN_KANTO_OUTPUTS := \
+	sheets/generated/wild/kanto_grass.gen.asm \
+	sheets/generated/wild/kanto_water.gen.asm
 
 update-sheet:
 	tools/get_file.sh "$(MASTER_SHEET_URL)" sheets/master.xlsx
@@ -37,3 +45,17 @@ $(TRAINER_GEN_OUTPUTS) &: sheets/master.xlsx
 $(ITEM_GEN_OUTPUTS) &: sheets/master.xlsx
 	$(ITEM_GEN_TOOL) \
 		-in $< -out sheets/generated/item
+
+$(WILD_GEN_KANSAI_OUTPUTS) &: sheets/master.xlsx
+	$(WILD_GEN_TOOL) \
+		-in $< -out sheets/generated/wild \
+		-ingrass "Kansai Overworld Wild" \
+		-inwater "Kansai Water Wild" \
+		-basename kansai
+
+$(WILD_GEN_KANTO_OUTPUTS) &: sheets/master.xlsx
+	$(WILD_GEN_TOOL) \
+		-in $< -out sheets/generated/wild \
+		-ingrass "Kanto Overworld Wild" \
+		-inwater "Kanto Water Wild" \
+		-basename kanto

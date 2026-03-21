@@ -6,7 +6,6 @@ import (
 	"log/slog"
 	"sheetconvert/internal/utils"
 	"strconv"
-	"strings"
 )
 
 // expected sheet layout
@@ -225,16 +224,7 @@ type insRow struct {
 
 // deserialize a []string row into Row
 func insRowFrom(r []string) (*insRow, error) {
-	// should be how big each row is
-	o := make([]string, ci_)
-
-	// copy row, ignoring empties
-	for i, x := range r {
-		if i >= len(o) {
-			break
-		}
-		o[i] = strings.TrimSpace(x)
-	}
+	o := utils.NormalizeRow(r, ci_)
 
 	// validate party level
 	lv, e := strconv.Atoi(o[ciLv])

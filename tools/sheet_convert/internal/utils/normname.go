@@ -65,8 +65,11 @@ func NormalizeAsSymbolName(s string) string {
 	for _, i := range s {
 		if i == ' ' {
 			continue
+		} else if i == '\'' {
+			continue
+		} else {
+			ss.WriteRune(i)
 		}
-		ss.WriteRune(i)
 	}
 	return ss.String()
 }
@@ -80,8 +83,25 @@ func NormalizeName(s string) string {
 			ss.WriteRune(i)
 		}
 	}
-	if ss.Len() <= MaxNameLength {
-		ss.WriteRune('@')
+	// if ss.Len() <= MaxNameLength {
+	ss.WriteRune('@')
+	// }
+	return ss.String()
+}
+
+func NormalizeAsPokeName(s string) string {
+	var ss strings.Builder
+	sr := []rune(s)
+	for i := range 10 {
+		if i >= len(sr) {
+			ss.WriteRune('@')
+			continue
+		}
+		if (sr[i] <= 'z') && (sr[i] >= 'a') {
+			ss.WriteRune(unicode.ToUpper(sr[i]))
+		} else {
+			ss.WriteRune(sr[i])
+		}
 	}
 	return ss.String()
 }
