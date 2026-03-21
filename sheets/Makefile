@@ -32,6 +32,15 @@ WILD_GEN_KANTO_OUTPUTS := \
 	sheets/generated/wild/kanto_grass.gen.asm \
 	sheets/generated/wild/kanto_water.gen.asm
 
+TYPE_GEN_TOOL := tools/mktypedata
+TYPE_GEN_OUTPUTS := \
+	sheets/generated/type/constants_physical.gen.asm \
+	sheets/generated/type/constants_special.gen.asm \
+	sheets/generated/type/names.gen.asm \
+	sheets/generated/type/search_strings.gen.asm \
+	sheets/generated/type/search_types.gen.asm \
+	sheets/generated/type/matchups.gen.asm
+
 update-sheet:
 	tools/get_file.sh "$(MASTER_SHEET_URL)" sheets/master.xlsx
 
@@ -59,3 +68,7 @@ $(WILD_GEN_KANTO_OUTPUTS) &: sheets/master.xlsx
 		-ingrass "Kanto Overworld Wild" \
 		-inwater "Kanto Water Wild" \
 		-basename kanto
+
+$(TYPE_GEN_OUTPUTS) &: sheets/master.xlsx
+	$(TYPE_GEN_TOOL) \
+		-in $< -out sheets/generated/type

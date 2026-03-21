@@ -105,3 +105,13 @@ func NormalizeAsPokeName(s string) string {
 	}
 	return ss.String()
 }
+
+func CenterText(s string, nchars int) string {
+	if len(s) > nchars {
+		return s[:nchars]
+	}
+	padding := nchars - len(s)
+	left := padding / 2
+	right := padding - left
+	return strings.Repeat(" ", left) + s + strings.Repeat(" ", right)
+}

@@ -40,3 +40,12 @@ func (om *OrderedMap[K, V]) Get(key K) (V, bool) {
 func (om *OrderedMap[K, V]) Len() int {
 	return len(om.keys)
 }
+
+func (om *OrderedMap[K, V]) KeyAt(n int) (K, bool) {
+	var i K
+	if n >= len(om.keys) {
+		return i, false
+	}
+	i = om.keys[n]
+	return i, true
+}

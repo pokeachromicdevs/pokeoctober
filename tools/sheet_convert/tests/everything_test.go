@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"sheetconvert/internal/types"
 	"sheetconvert/internal/wildmons"
 	"testing"
 )
@@ -28,4 +29,16 @@ func TestWaterMons(t *testing.T) {
 	ss.ProcessWaterMons("Kansai Water Wild")
 	ss.WriteBuffers()
 	fmt.Fprintf(os.Stderr, "%s\n", ss.Files.Water.String())
+}
+
+func TestTypes(t *testing.T) {
+	handler := slog.NewTextHandler(os.Stderr, nil)
+	logger := slog.New(handler)
+	slog.SetDefault(logger)
+
+	ss, _ := types.MakeState("../../../sheets/master.xlsx")
+	ss.ProcessTypes("Types")
+	ss.ProcessMatchups("Type Matchups")
+	ss.WriteBuffers()
+	fmt.Fprintf(os.Stderr, "%s\n", ss.Files.Matchups.String())
 }

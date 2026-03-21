@@ -17,6 +17,7 @@ tools := \
 	mktrainerdata \
 	mkitemdata \
 	mkwilddata \
+	mktypedata \
 	gbstrim
 
 all: $(tools)
@@ -42,4 +43,7 @@ mkitemdata: sheet_convert/cmd/mkitemdata/main.go
 	cd sheet_convert && go build -o ../$@ ../$<
 
 mkwilddata: sheet_convert/cmd/mkwilddata/main.go
+	cd sheet_convert && go build -o ../$@ ../$<
+
+mktypedata: sheet_convert/cmd/mktypedata/main.go
 	cd sheet_convert && go build -o ../$@ ../$<
