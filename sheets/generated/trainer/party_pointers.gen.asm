@@ -10,6 +10,7 @@ TrainerGroups:
 	dba FergusGroup
 	dba SandraGroup
 	dba Rival1Group
+	dba RivalWaterGroup
 	dba YoungsterGroup
 	dba BugCatcherGroup
 	dba SoldierGroup

@@ -10,6 +10,7 @@ TrainerEncounterMusic::
 	db MUSIC_OFFICER_ENCOUNTER        ; Fergus
 	db MUSIC_BEAUTY_ENCOUNTER         ; Sandra
 	db MUSIC_RIVAL_ENCOUNTER          ; Rival1
+	db MUSIC_RIVAL_ENCOUNTER          ; RivalWater
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Youngster
 	db MUSIC_YOUNGSTER_ENCOUNTER      ; Bug Catcher
 	db MUSIC_OFFICER_ENCOUNTER        ; Soldier

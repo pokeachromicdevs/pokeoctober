@@ -11,6 +11,7 @@ TrainerClassDVs:
 	dn   9,  8,  8,  8 ; Fergus
 	dn   7, 12, 13, 13 ; Sandra
 	dn  13, 13, 13, 13 ; Rival1
+	dn  13, 13, 13, 13 ; RivalWater
 	dn   9,  8,  8,  8 ; Youngster
 	dn   9,  8,  8,  8 ; Bug Catcher
 	dn  12, 12, 10,  7 ; Soldier

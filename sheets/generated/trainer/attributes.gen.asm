@@ -56,6 +56,12 @@ TrainerClassAttributes:
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
 
+; RivalWater
+	dw NO_ITEM, NO_ITEM ; items
+	db 15 ; base reward
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
+	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy
+
 ; Youngster
 	dw NO_ITEM, NO_ITEM ; items
 	db 4 ; base reward

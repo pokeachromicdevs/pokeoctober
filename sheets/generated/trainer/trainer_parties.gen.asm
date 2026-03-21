@@ -139,6 +139,10 @@ Rival1Group:
 	end_party
 	end_party_list
 
+SECTION "Trainer Class RivalWater", ROMX
+RivalWaterGroup:
+	end_party_list
+
 SECTION "Trainer Class Youngster", ROMX
 YoungsterGroup:
 	next_party ; Joey (1)

@@ -10,6 +10,7 @@ TrainerPicPointers::
 	dba FergusPic
 	dba SandraPic
 	dba Rival1Pic
+	dba RivalWaterPic
 	dba YoungsterPic
 	dba BugCatcherPic
 	dba SoldierPic

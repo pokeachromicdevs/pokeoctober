@@ -10,6 +10,7 @@ TrainerClassNames::
 	db "LEADER@"
 	db "LEADER@"
 	db "RIVAL@"
+	db "RIVAL@"
 	db "YOUNGSTER@"
 	db "BUG CATCHER@"
 	db "SOLDIER@"

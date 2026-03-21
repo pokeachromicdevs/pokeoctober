@@ -9,6 +9,7 @@ INCBIN "gfx/trainers/sylvia.gbcpal", middle_colors
 INCBIN "gfx/trainers/fergus.gbcpal", middle_colors
 INCBIN "gfx/trainers/sandra.gbcpal", middle_colors
 INCBIN "gfx/trainers/rival1.gbcpal", middle_colors
+INCBIN "gfx/trainers/rivalwater.gbcpal", middle_colors
 INCBIN "gfx/trainers/youngster.gbcpal", middle_colors
 INCBIN "gfx/trainers/bug_catcher.gbcpal", middle_colors
 INCBIN "gfx/trainers/soldier.gbcpal", middle_colors
