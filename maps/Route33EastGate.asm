@@ -33,21 +33,21 @@ Route33EastGateOfficerScript:
 	jumptextfaceplayer .OtherText
 
 .OtherText:
-	text "I'll do better next"
-	line "time<...> even though"
-	para "they don't pay me"
-	line "to be vigilant"
-	cont "enough."
+	text "I'll have to ask"
+	line "the higher-ups for"
+	para "a gas mask or"
+	line "something, I"
+	cont "guess."
 	done
 
 .Text:
-	text "Nghh<...> what"
-	line "happened<...>?"
-	para "I was minding my"
-	line "business for a"
-	para "second, and then"
-	line "everything was"
-	cont "black<...>"
+	text "Howdy kid! You"
+	line "drove off that"
+	para "ROCKET? What a"
+	line "relief! He bust-"
+	para "ed in here and"
+	line "sent me running"
+	cont "with SMOG!"
 	done
 
 Route33EastGateGruntScript:
@@ -103,24 +103,24 @@ Route33EastGateRocketTollScript:
 	step_end
 
 .RocketAskTxt:
-	text "Hey! You there!"
+	text "Hey! Twerp kid!"
 	para "You need to pay"
-	line "the toll if you"
+	line "our toll if you"
 	cont "want to pass!"
 	para "Entry is ¥200!"
 	para "Pay the ¥200?"
 	done
 
 .YouCanGoThruTxt:
-	text "Go right ahead."
-	para "Don't cause any"
-	line "trouble!"
+	text "Go right ahead<...>"
+	para "Hehehe! What a"
+	line "shmuck!"
 	done
 
 .DeniedOrOutOfMoneyTxt:
-	text "Well I'm not gonna"
-	line "let you through"
-	cont "for free!"
+	text "What?! You think"
+	line "we're running a"
+	cont "charity?"
 	para "Either pay up or"
 	line "scram!"
 	done
