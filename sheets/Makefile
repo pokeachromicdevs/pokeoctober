@@ -2,7 +2,7 @@
 
 MASTER_SHEET_URL ?= https://docs.google.com/spreadsheets/d/1EXduxJ0XTL5LtPwJing2lao1tqwN437fJjsR0dlbG0E/export?format=xlsx
 
-TRAINER_GEN_TOOL := tools/mktrainerdata
+TRAINER_GEN_TOOL := tools/mkdata trainer
 TRAINER_GEN_OUTPUTS := \
 	sheets/generated/trainer/attributes.gen.asm \
 	sheets/generated/trainer/class_names.gen.asm \
@@ -14,7 +14,7 @@ TRAINER_GEN_OUTPUTS := \
 	sheets/generated/trainer/trainer_constants.gen.asm \
 	sheets/generated/trainer/trainer_parties.gen.asm
 
-ITEM_GEN_TOOL := tools/mkitemdata
+ITEM_GEN_TOOL := tools/mkdata item
 ITEM_GEN_OUTPUTS := \
 	sheets/generated/item/normal_item_constants.gen.asm \
 	sheets/generated/item/key_item_constants.gen.asm \
@@ -24,7 +24,7 @@ ITEM_GEN_OUTPUTS := \
 	sheets/generated/item/effect_pointers.gen.asm \
 	sheets/generated/item/description_pointers.gen.asm
 
-WILD_GEN_TOOL := tools/mkwilddata
+WILD_GEN_TOOL := tools/mkdata wild
 WILD_GEN_KANSAI_OUTPUTS := \
 	sheets/generated/wild/kansai_grass.gen.asm \
 	sheets/generated/wild/kansai_water.gen.asm
@@ -32,7 +32,7 @@ WILD_GEN_KANTO_OUTPUTS := \
 	sheets/generated/wild/kanto_grass.gen.asm \
 	sheets/generated/wild/kanto_water.gen.asm
 
-TYPE_GEN_TOOL := tools/mktypedata
+TYPE_GEN_TOOL := tools/mkdata type
 TYPE_GEN_OUTPUTS := \
 	sheets/generated/type/constants_physical.gen.asm \
 	sheets/generated/type/constants_special.gen.asm \

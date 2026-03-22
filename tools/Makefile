@@ -14,10 +14,7 @@ tools := \
 	ipspatch \
 	md5 \
 	gif2anim \
-	mktrainerdata \
-	mkitemdata \
-	mkwilddata \
-	mktypedata \
+	mkdata \
 	gbstrim
 
 all: $(tools)
@@ -36,14 +33,5 @@ gif2anim:
 	cd gif2anim_nim/generated && ./compile_gif2anim.sh
 	mv gif2anim_nim/generated/gif2anim ./gif2anim
 
-mktrainerdata: sheet_convert/cmd/mktrainerdata/main.go
-	cd sheet_convert && go build -o ../$@ ../$<
-
-mkitemdata: sheet_convert/cmd/mkitemdata/main.go
-	cd sheet_convert && go build -o ../$@ ../$<
-
-mkwilddata: sheet_convert/cmd/mkwilddata/main.go
-	cd sheet_convert && go build -o ../$@ ../$<
-
-mktypedata: sheet_convert/cmd/mktypedata/main.go
+mkdata: sheet_convert/cmd/mkdata/main.go
 	cd sheet_convert && go build -o ../$@ ../$<
