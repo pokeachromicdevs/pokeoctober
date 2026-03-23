@@ -36,7 +36,7 @@ TrainerClassDVs:
 	dn   9,  8,  8,  8 ; Sailor
 	dn  13,  8, 10,  8 ; GruntM
 	dn   7, 14, 10,  8 ; GruntF
-	dn   7, 15, 13, 15 ; RocketKaren
+	dn   7, 15, 13, 15 ; Rocket Karen
 	dn   9, 10,  8,  8 ; Ballsmith
 	dn   6,  8, 10,  8 ; Twins
 	dn   6, 10, 10,  8 ; Picnicker

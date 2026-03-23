@@ -155,7 +155,7 @@ Route34_WillEventTriggerCommon:
 	closetext
 	setlasttalked ROUTE34_WILL
 	winlosstext .WillWinText, 0
-	loadtrainer TC_ROCKETWILL, ROCKETWILL_WILL_1
+	loadtrainer TC_ROCKETWILL, ROCKETWILL_WILL_ROUTE34
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

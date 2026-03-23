@@ -193,7 +193,7 @@ Route33_EncounterKaren:
 
 ; battle
 	winlosstext .WinAgainstKarenText, 0
-	loadtrainer TC_ROCKETKAREN, ROCKETKAREN_KAREN_1
+	loadtrainer TC_ROCKETKAREN, ROCKETKAREN_KAREN_R33
 	startbattle
 
 ; after battle

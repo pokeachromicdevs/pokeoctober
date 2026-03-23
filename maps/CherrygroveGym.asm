@@ -56,7 +56,7 @@ CherrygroveGymFalknerScript:
 	end
 
 TrainerBirdKeeperRod:
-	trainer TC_BIRDKEEPER, BIRDKEEPER_RODNEY_1, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
+	trainer TC_BIRDKEEPER, BIRDKEEPER_ROD_1, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

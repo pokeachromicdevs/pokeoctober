@@ -688,7 +688,7 @@ KoffingBackpic:      INCBIN "gfx/pokemon/koffing/back.2bpp.lz"
 BirdKeeperPic:       INCBIN "gfx/trainers/bird_keeper.2bpp.lz"
 FalknerPic:          INCBIN "gfx/trainers/falkner.2bpp.lz"
 E4KarenPic:
-RocketKarenPic:      INCBIN "gfx/trainers/rocketkaren.2bpp.lz"
+RocketKarenPic:      INCBIN "gfx/trainers/rocket_karen.2bpp.lz"
 SECTION "_NidorinaBackpic", ROMX
 NidorinaBackpic:     INCBIN "gfx/pokemon/nidorina/back.2bpp.lz"
 SECTION "_TentacruelBackpic", ROMX

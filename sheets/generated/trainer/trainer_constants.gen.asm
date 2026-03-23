@@ -101,7 +101,7 @@
 	const FLEDGLING_WINSTON_1
 
 	trainerclass TC_BIRDKEEPER
-	const BIRDKEEPER_RODNEY_1
+	const BIRDKEEPER_ROD_1
 	const BIRDKEEPER_CLYDE_1
 
 	trainerclass TC_LASSNIENIE
@@ -174,7 +174,7 @@
 	const GRUNTF_GRUNT_R33
 
 	trainerclass TC_ROCKETKAREN
-	const ROCKETKAREN_KAREN_1
+	const ROCKETKAREN_KAREN_R33
 
 	trainerclass TC_BALLSMITH
 	const BALLSMITH_KURT_1
@@ -194,7 +194,8 @@
 	const MEDIUM_DOROTHY_1
 
 	trainerclass TC_ROCKETWILL
-	const ROCKETWILL_WILL_1
+	const ROCKETWILL_WILL_ROUTE34
+	const ROCKETWILL_WILL_RADIOTOWER
 
 	trainerclass TC_JUGGLER
 	const JUGGLER_IRWIN_1
@@ -203,4 +204,3 @@
 	const BIKER_HARLEY_1
 
 	trainerclass TC_ELM
-	const ELM_ELM_1

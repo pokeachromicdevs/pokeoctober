@@ -455,8 +455,8 @@ FledglingGroup:
 
 SECTION "Trainer Class Bird Keeper", ROMX
 BirdKeeperGroup:
-	next_party ; Rodney (1)
-		db "RODNEY@", TRAINERTYPE_NORMAL
+	next_party ; Rod (1)
+		db "ROD@", TRAINERTYPE_NORMAL
 		dbw 4, HOOTHOOT
 		dbw 7, SPEAROW
 	end_party
@@ -772,6 +772,8 @@ GruntMGroup:
 		db "GRUNT@", TRAINERTYPE_NORMAL
 		dbw 22, SMEARGLE
 		dbw 23, RATICATE
+		dbw 20, KOFFING
+		dbw 20, KOFFING
 	end_party
 	end_party_list
 
@@ -786,9 +788,9 @@ GruntFGroup:
 	end_party
 	end_party_list
 
-SECTION "Trainer Class RocketKaren", ROMX
+SECTION "Trainer Class Rocket Karen", ROMX
 RocketKarenGroup:
-	next_party ; Karen (1)
+	next_party ; Karen (R33)
 		db "KAREN@", TRAINERTYPE_NORMAL
 		dbw 21, SNEASEL
 		dbw 22, GASTLY
@@ -860,11 +862,16 @@ MediumGroup:
 
 SECTION "Trainer Class Rocket Will", ROMX
 RocketWillGroup:
-	next_party ; Will (1)
+	next_party ; Will (Route34)
 		db "WILL@", TRAINERTYPE_NORMAL
 		dbw 28, SLOWPOKE
 		dbw 29, GASTLY
 		dbw 30, NATU
+	end_party
+	next_party ; Will (RadioTower)
+		db "WILL@", TRAINERTYPE_NORMAL
+		dbw 28, SLOWPOKE
+		dbw 28, SNEASEL
 	end_party
 	end_party_list
 
@@ -889,9 +896,4 @@ BikerGroup:
 
 SECTION "Trainer Class Elm", ROMX
 ElmGroup:
-	next_party ; Elm (1)
-		db "ELM@", TRAINERTYPE_MOVES
-		dbw 66, TAUROS
-		dw RAGE, EARTHQUAKE, THRASH, SWAGGER
-	end_party
 	end_party_list

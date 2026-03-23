@@ -35,7 +35,7 @@ TrainerEncounterMusic::
 	db MUSIC_HIKER_ENCOUNTER          ; Sailor
 	db MUSIC_ROCKET_ENCOUNTER         ; GruntM
 	db MUSIC_ROCKET_ENCOUNTER         ; GruntF
-	db MUSIC_ROCKET_ENCOUNTER         ; RocketKaren
+	db MUSIC_ROCKET_ENCOUNTER         ; Rocket Karen
 	db MUSIC_SAGE_ENCOUNTER           ; Ballsmith
 	db MUSIC_LASS_ENCOUNTER           ; Twins
 	db MUSIC_LASS_ENCOUNTER           ; Picnicker
