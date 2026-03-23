@@ -1,7 +1,7 @@
 .PHONY: all clean
 
 CC := gcc
-CFLAGS := -O3 -std=c99 -Wall -Wextra -Wno-missing-field-initializers
+CFLAGS := -O3 -std=c17 -Wall -Wextra -Wno-missing-field-initializers
 
 tools := \
 	lzcomp \
@@ -22,16 +22,11 @@ all: $(tools)
 
 clean:
 	rm -f $(tools)
-	rm -f gif2anim_nim/generated/*.o
 
 gfx md5: common.h
 
 %: %.c
 	$(CC) $(CFLAGS) -o $@ $<
-
-gif2anim:
-	cd gif2anim_nim/generated && ./compile_gif2anim.sh
-	mv gif2anim_nim/generated/gif2anim ./gif2anim
 
 mkdata: sheet_convert/cmd/mkdata/main.go
 	cd sheet_convert && go build -o ../$@ ../$<
