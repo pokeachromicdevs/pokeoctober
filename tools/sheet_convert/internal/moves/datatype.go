@@ -22,6 +22,7 @@ type Move struct {
 	Accuracy int
 	PP       int
 	Chance   int
+	CritMove bool
 }
 
 type Files struct {
@@ -35,6 +36,8 @@ type Files struct {
 	DescPtrs strings.Builder
 	// data/moves/animations.asm
 	AnimPtrs strings.Builder
+	// data/moves/critical_hit_moves.asm
+	CritMoves strings.Builder
 }
 
 // encapsulate this module's globals

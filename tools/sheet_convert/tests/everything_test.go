@@ -52,5 +52,5 @@ func TestMoves(t *testing.T) {
 	ss, _ := moves.MakeState("../../../sheets/master.xlsx")
 	ss.ProcessMoves("Moves")
 	ss.WriteBuffers()
-	fmt.Fprintf(os.Stderr, "%s\n", ss.Files.AnimPtrs.String())
+	fmt.Fprintf(os.Stderr, "%s\n", ss.Files.CritMoves.String())
 }

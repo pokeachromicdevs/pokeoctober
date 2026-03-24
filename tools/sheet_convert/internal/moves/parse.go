@@ -16,6 +16,7 @@ const (
 	cmAccuracy
 	cmPP
 	cmChance
+	cmCritChance
 	cmRemark1
 	cmRemark2
 	cmOrigin
@@ -53,6 +54,7 @@ func (s *State) ProcessMoves(sheetName string) error {
 			Accuracy: rr.accuracy,
 			PP:       rr.pp,
 			Chance:   rr.chance,
+			CritMove: rr.crit,
 		}
 		s.moves.Set(rr.name, m)
 	}
@@ -68,6 +70,7 @@ type moveRow struct {
 	accuracy int
 	pp       int
 	chance   int
+	crit     bool
 }
 
 func toRow(or []string) (*moveRow, error) {
@@ -76,6 +79,7 @@ func toRow(or []string) (*moveRow, error) {
 		slog.Error("effect constant is empty")
 		return nil, fmt.Errorf("effect constant is empty")
 	}
+	hasCrit := r[cmCritChance] != ""
 	power, e := strconv.Atoi(r[cmPower])
 	if e != nil {
 		slog.Error("invalid power value", "v", r[cmPower], "e", e)
@@ -105,5 +109,6 @@ func toRow(or []string) (*moveRow, error) {
 		accuracy: accuracy,
 		pp:       pp,
 		chance:   chance,
+		crit:     hasCrit,
 	}, nil
 }

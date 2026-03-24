@@ -13,6 +13,7 @@ func (s *State) WriteBuffers() error {
 	fmt.Fprintln(&s.Files.Names, preamble)
 	fmt.Fprintln(&s.Files.DescPtrs, preamble)
 	fmt.Fprintln(&s.Files.AnimPtrs, preamble)
+	fmt.Fprintln(&s.Files.CritMoves, preamble)
 
 	for k, m := range s.moves.All() {
 		fmt.Fprintf(&s.Files.Constants,
@@ -45,6 +46,13 @@ func (s *State) WriteBuffers() error {
 			"\tdw BattleAnim_%s\n",
 			utils.NormalizeAsSymbolName(k),
 		)
+
+		if m.CritMove {
+			fmt.Fprintf(&s.Files.CritMoves,
+				"\tdw %s\n",
+				utils.NormalizeAsConstNameUnderspaces(k),
+			)
+		}
 	}
 	return nil
 }
