@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"sheetconvert/internal/moves"
 	"sheetconvert/internal/types"
 	"sheetconvert/internal/wildmons"
 	"testing"
@@ -41,4 +42,15 @@ func TestTypes(t *testing.T) {
 	ss.ProcessMatchups("Type Matchups")
 	ss.WriteBuffers()
 	fmt.Fprintf(os.Stderr, "%s\n", ss.Files.Matchups.String())
+}
+
+func TestMoves(t *testing.T) {
+	handler := slog.NewTextHandler(os.Stderr, nil)
+	logger := slog.New(handler)
+	slog.SetDefault(logger)
+
+	ss, _ := moves.MakeState("../../../sheets/master.xlsx")
+	ss.ProcessMoves("Moves")
+	ss.WriteBuffers()
+	fmt.Fprintf(os.Stderr, "%s\n", ss.Files.AnimPtrs.String())
 }

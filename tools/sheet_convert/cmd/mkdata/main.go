@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"os"
 	"sheetconvert/internal/items"
+	"sheetconvert/internal/moves"
 	"sheetconvert/internal/pokemon"
 	"sheetconvert/internal/trainers"
 	"sheetconvert/internal/types"
@@ -23,6 +24,7 @@ func main() {
 		"trainer": trainers.ProcessArgs,
 		"type":    types.ProcessArgs,
 		"wild":    wildmons.ProcessArgs,
+		"move":    moves.ProcessArgs,
 	}
 
 	if len(os.Args) < 2 {

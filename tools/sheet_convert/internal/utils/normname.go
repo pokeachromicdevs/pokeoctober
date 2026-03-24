@@ -31,6 +31,8 @@ func NormalizeAsConstNameUnderspaces(s string) string {
 			ss.WriteRune('_')
 		} else if i == '&' {
 			ss.WriteString("and")
+		} else if i == '-' {
+			ss.WriteRune('_')
 		} else if i == '\'' {
 			ss.WriteRune('_')
 		} else if (i <= 'z') && (i >= 'a') {
@@ -64,6 +66,8 @@ func NormalizeAsSymbolName(s string) string {
 	var ss strings.Builder
 	for _, i := range s {
 		if i == ' ' {
+			continue
+		} else if i == '-' {
 			continue
 		} else if i == '\'' {
 			continue

@@ -2,6 +2,7 @@ package utils
 
 import "strings"
 
+// should prevent panics
 func NormalizeRow(r []string, size int) []string {
 	// should be how big each row is
 	o := make([]string, size)
