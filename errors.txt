@@ -1,0 +1,6 @@
+/bin/sh: 1: go: not found
+make: *** [Makefile:38: mktrainerdata] Error 127
+data/pokemon/base_stats/norspruce.asm: no newline at end of file
+data/pokemon/base_stats/norspruce.asm: no newline at end of file
+make: tools/mkitemdata: No such file or directory
+make: *** [sheets/Makefile:38: sheets/generated/item/normal_item_constants.gen.asm] Error 127

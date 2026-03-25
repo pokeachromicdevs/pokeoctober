@@ -2340,6 +2340,25 @@ FaintYourPokemon:
 	ld a, $f0
 	ld [wCryTracks], a
 	ld a, [wBattleMonSpecies]
+	
+; Add this code to make the cry deeper  
+	push hl  
+	call LoadCry  
+	jr c, .skip_pitch_adjust  
+	ld hl, wCryPitch  
+	ld a, [hli]  
+	ld h, [hl]  
+	ld l, a  
+	; Subtract pitch value to make it deeper (adjust $40 as needed)  
+	ld de, -$40  
+	add hl, de  
+	ld a, l  
+	ld [wCryPitch], a  
+	ld a, h  
+	ld [wCryPitch + 1], a  
+.skip_pitch_adjust:  
+	pop hl  
+	
 	call PlayStereoCry
 	call PlayerMonFaintedAnimation
 	hlcoord 9, 7
@@ -2350,6 +2369,25 @@ FaintYourPokemon:
 
 FaintEnemyPokemon:
 	call WaitSFX
+	
+	; Add this code to make the cry deeper  
+	push hl  
+	call LoadCry  
+	jr c, .skip_pitch_adjust  
+	ld hl, wCryPitch  
+	ld a, [hli]  
+	ld h, [hl]  
+	ld l, a  
+	; Subtract pitch value to make it deeper (adjust $40 as needed)  
+	ld de, -$40  
+	add hl, de  
+	ld a, l  
+	ld [wCryPitch], a  
+	ld a, h  
+	ld [wCryPitch + 1], a  
+.skip_pitch_adjust:  
+	pop hl  
+	
 	ld de, SFX_KINESIS
 	call PlaySFX
 	call EnemyMonFaintedAnimation
