@@ -46,3 +46,4 @@ TrainerClassDVs:
 	dn   9,  8,  8,  8 ; Juggler
 	dn   9,  8,  8,  8 ; Biker
 	dn  15, 15, 15, 15 ; Elm
+	dn   9,  8,  8,  8 ; Burglar

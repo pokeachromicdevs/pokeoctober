@@ -265,3 +265,9 @@ TrainerClassAttributes:
 	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY ; move strategy
 	dw CONTEXT_USE | SWITCH_OFTEN ; item & switch strategy
+
+; Burglar
+	dw NO_ITEM, NO_ITEM ; items
+	db 22 ; base reward
+	dw AI_BASIC | AI_OFFENSIVE | AI_CAUTIOUS | AI_STATUS ; move strategy
+	dw CONTEXT_USE | SWITCH_SOMETIMES ; item & switch strategy

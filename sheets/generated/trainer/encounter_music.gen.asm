@@ -45,3 +45,4 @@ TrainerEncounterMusic::
 	db MUSIC_POKEMANIAC_ENCOUNTER     ; Juggler
 	db MUSIC_HIKER_ENCOUNTER          ; Biker
 	db MUSIC_OFFICER_ENCOUNTER        ; Elm
+	db MUSIC_POKEMANIAC_ENCOUNTER     ; Burglar

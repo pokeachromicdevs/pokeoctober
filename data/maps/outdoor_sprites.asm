@@ -243,6 +243,7 @@ AzaleaGroupSprites:
 GoldenrodGroupSprites:
   def_static_sprite
     static_sprite SPRITE_GENTLEMAN
+		static_sprite SPRITE_PHARMACIST
 	end_outdoor_sprites
 
 OlivineGroupSprites:

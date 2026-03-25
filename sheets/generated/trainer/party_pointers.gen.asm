@@ -45,3 +45,4 @@ TrainerGroups:
 	dba JugglerGroup
 	dba BikerGroup
 	dba ElmGroup
+	dba BurglarGroup

@@ -772,8 +772,6 @@ GruntMGroup:
 		db "GRUNT@", TRAINERTYPE_NORMAL
 		dbw 22, SMEARGLE
 		dbw 23, RATICATE
-		dbw 20, KOFFING
-		dbw 20, KOFFING
 	end_party
 	end_party_list
 
@@ -896,4 +894,18 @@ BikerGroup:
 
 SECTION "Trainer Class Elm", ROMX
 ElmGroup:
+	end_party_list
+
+SECTION "Trainer Class Burglar", ROMX
+BurglarGroup:
+	next_party ; Harry (1)
+		db "HARRY@", TRAINERTYPE_NORMAL
+		dbw 20, ELEKID
+		dbw 20, KOFFING
+	end_party
+	next_party ; Marv (1)
+		db "MARV@", TRAINERTYPE_NORMAL
+		dbw 20, SLUGMA
+		dbw 20, KOFFING
+	end_party
 	end_party_list

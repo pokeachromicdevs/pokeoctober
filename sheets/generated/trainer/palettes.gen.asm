@@ -44,3 +44,4 @@ INCBIN "gfx/trainers/rocket_will.gbcpal", middle_colors
 INCBIN "gfx/trainers/juggler.gbcpal", middle_colors
 INCBIN "gfx/trainers/biker.gbcpal", middle_colors
 INCBIN "gfx/trainers/elm.gbcpal", middle_colors
+INCBIN "gfx/trainers/burglar.gbcpal", middle_colors

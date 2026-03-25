@@ -204,3 +204,7 @@
 	const BIKER_HARLEY_1
 
 	trainerclass TC_ELM
+
+	trainerclass TC_BURGLAR
+	const BURGLAR_HARRY_1
+	const BURGLAR_MARV_1

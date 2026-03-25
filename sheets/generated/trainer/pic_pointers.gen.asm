@@ -45,3 +45,4 @@ TrainerPicPointers::
 	dba JugglerPic
 	dba BikerPic
 	dba ElmPic
+	dba BurglarPic
