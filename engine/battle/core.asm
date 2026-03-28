@@ -2414,7 +2414,6 @@ FaintYourPokemon:
 	ld a, h  
 	ld [wCryPitch + 1], a  
 .skip_pitch_adjust:  
-	pop hl  
 	call PlayStereoCry
 ; Restore original pitch  
 	pop hl  
@@ -2422,6 +2421,7 @@ FaintYourPokemon:
 	ld [wCryPitch], a  
 	ld a, h  
 	ld [wCryPitch + 1], a
+	pop hl
 	call PlayerMonFaintedAnimation
 	hlcoord 9, 7
 	lb bc, 5, 11
@@ -2448,8 +2448,6 @@ FaintEnemyPokemon:
 	ld a, h  
 	ld [wCryPitch + 1], a  
 .skip_pitch_adjust:  
-	pop hl  
-	
 	ld de, SFX_KINESIS
 	call PlaySFX
 	call EnemyMonFaintedAnimation
