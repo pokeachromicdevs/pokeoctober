@@ -1753,15 +1753,23 @@ HandleWeather:
 
 	ld hl, wWeatherCount
 	dec [hl]
-	jp z, .ended
+	jp nz, .continues
+	
+; ended
+	ld hl, .WeatherEndedMessages
+	call .PrintWeatherMessage
+	xor a
+	ld [wBattleWeather], a
+	ret
 
+.continues
 	ld hl, .WeatherMessages
 	call .PrintWeatherMessage
 	call .PlayWeatherAnimation
 
 	ld a, [wBattleWeather]
 	cp WEATHER_SANDSTORM
-	ret nz
+	jr nz, .check_hail
 
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1835,12 +1843,51 @@ HandleWeather:
 	ld hl, SandstormHitsText
 	jp StdBattleTextbox
 
-.ended
-	ld hl, .WeatherEndedMessages
-	call .PrintWeatherMessage
-	xor a
-	ld [wBattleWeather], a
-	ret
+.check_hail
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
+	ret nz
+
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .enemy_first_hail
+
+; player first
+	call SetPlayerTurn
+	call .HailDamage
+	call SetEnemyTurn
+	jr .HailDamage
+
+.enemy_first_hail
+	call SetEnemyTurn
+	call .HailDamage
+	call SetPlayerTurn
+
+.HailDamage:
+	ld a, BATTLE_VARS_SUBSTATUS3
+	call GetBattleVar
+	bit SUBSTATUS_UNDERGROUND, a
+	ret nz
+
+	ld hl, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok1
+	ld hl, wEnemyMonType1
+.ok1
+	ld a, [hli]
+	cp ICE
+	ret z
+
+	ld a, [hl]
+	cp ICE
+	ret z
+
+	call GetSixteenthMaxHP
+	call SubtractHPFromUser
+
+	ld hl, PeltedByHailText
+	jp StdBattleTextbox
 
 .PrintWeatherMessage:
 	ld a, [wBattleWeather]
@@ -1859,12 +1906,14 @@ HandleWeather:
 	dw BattleText_RainContinuesToFall
 	dw BattleText_TheSunlightIsStrong
 	dw BattleText_TheSandstormRages
+	dw BattleText_HailContinuesToFall
 
 .WeatherEndedMessages:
 ; entries correspond to WEATHER_* constants
 	dw BattleText_TheRainStopped
 	dw BattleText_TheSunlightFaded
 	dw BattleText_TheSandstormSubsided
+	dw BattleText_TheHailStopped
 
 SubtractHPFromTarget:
 	call SubtractHP
@@ -2344,12 +2393,13 @@ FaintYourPokemon:
 ; Add this code to make the cry deeper  
 	push hl  
 	call LoadCry  
-	jr c, .skip_pitch_adjust  
+	jr c, .skip_pitch_adjust 
+	
 	ld hl, wCryPitch  
 	ld a, [hli]  
 	ld h, [hl]  
 	ld l, a  
-	; Subtract pitch value to make it deeper (adjust $40 as needed)  
+; Subtract pitch value to make it deeper (adjust $40 as needed)  
 	ld de, -$40  
 	add hl, de  
 	ld a, l  
@@ -2358,8 +2408,13 @@ FaintYourPokemon:
 	ld [wCryPitch + 1], a  
 .skip_pitch_adjust:  
 	pop hl  
-	
 	call PlayStereoCry
+; Restore original pitch  
+	pop hl  
+	ld a, l  
+	ld [wCryPitch], a  
+	ld a, h  
+	ld [wCryPitch + 1], a
 	call PlayerMonFaintedAnimation
 	hlcoord 9, 7
 	lb bc, 5, 11

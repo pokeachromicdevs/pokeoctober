@@ -163,3 +163,5 @@ MoveEffectsPointers:
 	dw DoBurn
 	dw EvilEye
 	dw ShellBomb
+	dw FreezeHit ; for Blizzard, purposefully with different EFFECT_* constant
+	dw Hail

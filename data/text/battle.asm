@@ -144,6 +144,12 @@ BattleText_TheSandstormRages:
 	text "The SANDSTORM"
 	line "rages."
 	done
+	
+BattleText_HailContinuesToFall:
+	text "HAIL continues to"
+	line "fall."
+	prompt
+
 
 BattleText_TheRainStopped:
 	text "The rain stopped."
@@ -157,6 +163,10 @@ BattleText_TheSunlightFaded:
 BattleText_TheSandstormSubsided:
 	text "The SANDSTORM"
 	line "subsided."
+	prompt
+	
+BattleText_TheHailStopped:
+	text "The HAIL stopped."
 	prompt
 
 BattleText_EnemyMonFainted:
@@ -1131,3 +1141,14 @@ BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
 	done
+	
+ItStartedToHailText:
+	text "It started"
+	line "to HAIL!"
+	prompt
+
+PeltedByHailText:
+	text "<USER>"
+	line "is pelted by HAIL!"
+	prompt
+

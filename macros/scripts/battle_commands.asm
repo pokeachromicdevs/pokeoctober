@@ -184,6 +184,7 @@ ENDM
 	command notifyweakenedeffect    ; b1
 	command evileye                 ; b2
 	command burn                    ; b3
+	command starthail               ; b4
 
 	enum_start $fe
 	command endturn                 ; fe

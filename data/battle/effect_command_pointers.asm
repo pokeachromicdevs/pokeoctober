@@ -183,3 +183,4 @@ BattleCommandPointers:
 	dw BattleCommand_NotifyWeakenedEffect
 	dw BattleCommand_EvilEye
 	dw BattleCommand_Burn
+	dw BattleCommand_StartHail

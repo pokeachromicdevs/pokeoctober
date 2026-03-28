@@ -2252,3 +2252,10 @@ ShellBomb:
 	kingsrock
 	spikes
 	endmove
+	
+Hail:
+	checkobedience
+	usedmovetext
+	doturn
+	starthail
+	endmove
