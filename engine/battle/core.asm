@@ -1882,6 +1882,13 @@ HandleWeather:
 	ld a, [hl]
 	cp ICE
 	ret z
+	
+	call SwitchTurnCore
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_IN_HAIL
+	call Call_PlayBattleAnim
+	call SwitchTurnCore
 
 	call GetSixteenthMaxHP
 	call SubtractHPFromUser

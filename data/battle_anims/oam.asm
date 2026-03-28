@@ -223,6 +223,7 @@ BattleAnimOAMData:
 	dbbw $11,  2, .OAMData_11 ; BATTLE_ANIM_OAMSET_DB
 	dbbw $00, 16, .OAMData_dc ; BATTLE_ANIM_OAMSET_DC
 	dbbw $00,  9, .OAMData_c3 ; BATTLE_ANIM_OAMSET_DE
+	dbbw $00, 13, .OAMData_Hail ; BATTLEANIMOAMSET_HAIL
 
 .OAMData_11:
 	dsprite  -1, 0,  -1, 4, $00, $0
@@ -1110,3 +1111,19 @@ BattleAnimOAMData:
 	dsprite   1, 0, -1, 0, $16, $0
 	dsprite   1, 0,  0, 0, $17, $0
 	dsprite   1, 0,  1, 0, $15, X_FLIP
+	
+.OAMData_Hail:
+	dbsprite -13,  -2, 4, 0, $04, $0
+	dbsprite -11,  -4, 4, 0, $04, $0
+	dbsprite  -9,  -1, 4, 0, $04, $0
+	dbsprite  -7,  -5, 4, 0, $04, $0
+	dbsprite  -5,  -3, 4, 0, $04, $0
+	dbsprite  -3,  -5, 4, 0, $04, $0
+	dbsprite  -1,  -3, 4, 0, $04, $0
+	dbsprite   0,  -3, 4, 0, $04, $0
+	dbsprite   2,  -5, 4, 0, $04, $0
+	dbsprite   4,   0, 4, 0, $04, $0
+	dbsprite   6,  -2, 4, 0, $04, $0
+	dbsprite   8,  -4, 4, 0, $04, $0
+	dbsprite  10,  -2, 4, 0, $04, $0
+

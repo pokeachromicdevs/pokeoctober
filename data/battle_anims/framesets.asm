@@ -200,6 +200,7 @@ BattleAnimFrameData:
 	dw .Frameset_BlurVerticalDown    ; BATTLE_ANIM_FRAMESET_BLUR_VERTICAL_DOWN
 ;	dw .Frameset_LavaBurstSmoke      ; BATTLE_ANIM_FRAMESET_LAVA_BURST_SMOKE
 ;	dw .Frameset_BurnedShort         ; BATTLE_ANIM_FRAMESET_BURNED_SHORT
+	dw .Frameset_Hail 				 ; BATTLE_ANIM_FRAMESET_HAIL
 
 .Frameset_HitBig:
 	battleframe BATTLE_ANIM_OAMSET_00,  6
@@ -1353,4 +1354,8 @@ BattleAnimFrameData:
 ;	battleframe BATTLE_ANIM_OAMSET_0E,  4
 ;	battleframe BATTLE_ANIM_OAMSET_0A,  4
 ;	battledelanim
+
+.Frameset_Hail:
+	oamframe BATTLEANIMOAMSET_HAIL, 32
+	oamend
 

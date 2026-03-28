@@ -355,6 +355,7 @@ const_value = -NUM_SPECIAL_ANIMS
 	const ANIM_IN_SUN            ;  -3 (fffd)
 	const ANIM_SAFARI_THROW_ROCK ;  -2 (fffe)
 	const ANIM_SAFARI_THROW_BAIT ;  -1 (ffff)
+	const ANIM_IN_HAIL           ; 116
 
 	if const_value
 		fail "Please adjust the initial constant value to ensure that the last animation constant has a value of -1"

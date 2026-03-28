@@ -28,6 +28,7 @@ BattleAnimationsNegatives::
 	dw BattleAnim_InSun
 	dw BattleAnim_ThrowRock
 	dw BattleAnim_ThrowBait
+	dw BattleAnim_Hail
 .End:
 
 
@@ -351,4 +352,20 @@ BattleAnim_Wobble:
 BattleAnim_Shake:
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_X, $20, $2, $40
 	anim_wait 40
+	anim_ret
+	
+BattleAnim_Hail:
+BattleAnim_InHail:
+	anim_1gfx ANIM_GFX_ICE
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_obj ANIM_OBJ_HAIL, 88, 0, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL, 72, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL, 56, 0, $2
+.loop
+	anim_sound 0, 1, SFX_SHINE
+	anim_wait 8
+	anim_loop 8, .loop
+	anim_wait 8
 	anim_ret
