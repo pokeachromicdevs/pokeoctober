@@ -1,27 +1,27 @@
 roms := pokeoctober.gbc pokeoctober_debug.gbc
 
 rom_obj := \
-audio.o \
-home.o \
-main.o \
-wram.o \
-data/text/common.o \
-data/maps/map_data.o \
-data/pokemon/dex_entries.o \
-data/pokemon/egg_moves.o \
-data/pokemon/evos_attacks.o \
-engine/movie/credits.o \
-engine/overworld/events.o \
-gfx/pics.o \
-gfx/sprites.o
+	audio.o \
+	home.o \
+	main.o \
+	wram.o \
+	data/text/common.o \
+	data/maps/map_data.o \
+	data/pokemon/dex_entries.o \
+	data/pokemon/egg_moves.o \
+	data/pokemon/evos_attacks.o \
+	engine/movie/credits.o \
+	engine/overworld/events.o \
+	gfx/pics.o \
+	gfx/sprites.o
 
 october_obj       := $(rom_obj:.o=.o)
 october_debug_obj := $(rom_obj:.o=_debug.o)
 
 soundtrack_obj := \
-audio_gbs.o \
-wram_gbs.o \
-gbs_gbs.o
+	audio_gbs.o \
+	wram_gbs.o \
+	gbs_gbs.o
 
 ### Build tools
 
@@ -124,7 +124,7 @@ poke%.gbc: $$(%_obj) pokeoctober.link
 	$(RGBLINK) -n poke$*.sym -m poke$*.map -l pokeoctober.link -o $@ $(filter %.o,$^)
 	$(RGBFIX) -Cjv -i BETA -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_OCTOBER $@
 	tools/sort_symfile.sh poke$*.sym
-	$(MAKE) update-sheet
+	# $(MAKE) update-sheet
 
 pokeoctober.gbs: $(soundtrack_obj) gbs.link
 	$(RGBLINK) -n gbs.sym -m gbs.map -l gbs.link -o $@ $(filter %.o,$^)

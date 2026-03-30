@@ -685,7 +685,9 @@ SECTION "_OnixBackpic", ROMX
 OnixBackpic:         INCBIN "gfx/pokemon/onix/back.2bpp.lz"
 SECTION "_KoffingBackpic", ROMX
 KoffingBackpic:      INCBIN "gfx/pokemon/koffing/back.2bpp.lz"
+SECTION "_BirdKeeperPic", ROMX
 BirdKeeperPic:       INCBIN "gfx/trainers/bird_keeper.2bpp.lz"
+SECTION "_FalknerPic", ROMX
 FalknerPic:          INCBIN "gfx/trainers/falkner.2bpp.lz"
 E4KarenPic:
 RocketKarenPic:      INCBIN "gfx/trainers/rocket_karen.2bpp.lz"
@@ -1357,6 +1359,7 @@ SECTION "_EkansBackpic", ROMX
 EkansBackpic:        INCBIN "gfx/pokemon/ekans/back.2bpp.lz"
 SECTION "_SeakingBackpic", ROMX
 SeakingBackpic:      INCBIN "gfx/pokemon/seaking/back.2bpp.lz"
+SECTION "_BurglarPic", ROMX
 BurglarPic:          INCBIN "gfx/trainers/burglar.2bpp.lz"
 SECTION "_PsyduckBackpic", ROMX
 PsyduckBackpic:      INCBIN "gfx/pokemon/psyduck/back.2bpp.lz"

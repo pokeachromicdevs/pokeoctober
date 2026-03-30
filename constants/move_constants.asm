@@ -321,7 +321,7 @@ NUM_ATTACKS EQU const_value + -1
 	endc
 ; -----------------------------------------
 
-NUM_SPECIAL_ANIMS EQU $1b ;fix if more special (always on) animations are added
+NUM_SPECIAL_ANIMS EQU $1c ;fix if more special (always on) animations are added
 
 ; Battle animations use the same constants as the moves
 ; Animations with negative IDs will play even when animations are disabled
