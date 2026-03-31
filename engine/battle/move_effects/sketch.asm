@@ -112,7 +112,7 @@ BattleCommand_Sketch:
 	ld [hl], a
 .done_copy
 	call GetMoveName
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 
 	ld hl, SketchedText
 	jp StdBattleTextbox

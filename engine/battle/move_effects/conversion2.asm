@@ -23,7 +23,7 @@ BattleCommand_Conversion2:
 ; TODO: Curse type needed?
 	;cp CURSE_T
 	;jr z, .failed
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	call BattleCommand_SwitchTurn
 
 .loop

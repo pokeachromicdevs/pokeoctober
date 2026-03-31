@@ -29,7 +29,7 @@ BattleCommand_PerishSong:
 	ld [wEnemyPerishCount], a
 
 .done
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, StartPerishText
 	jp StdBattleTextbox
 

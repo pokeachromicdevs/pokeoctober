@@ -13,7 +13,7 @@ BattleCommand_BellyDrum:
 	jr nc, .failed
 
 	push bc
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	pop bc
 	callfar SubtractHPFromUser
 	call UpdateUserInParty

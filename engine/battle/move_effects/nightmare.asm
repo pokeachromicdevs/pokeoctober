@@ -3,7 +3,7 @@ BattleCommand_Nightmare:
 
 ; Can't hit an absent opponent.
 
-	call CheckHiddenOpponent
+	call BattleCommand_CheckHit
 	jr nz, .failed
 
 ; Can't hit a substitute.
@@ -28,7 +28,7 @@ BattleCommand_Nightmare:
 ; Otherwise give the opponent a nightmare.
 
 	set SUBSTATUS_NIGHTMARE, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, StartedNightmareText
 	jp StdBattleTextbox
 

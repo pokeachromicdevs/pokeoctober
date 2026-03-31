@@ -10,7 +10,7 @@ BattleCommand_BatonPass:
 	jp z, FailedBatonPass
 
 	call UpdateBattleMonInParty
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 
 	ld c, 50
 	call DelayFrames

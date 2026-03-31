@@ -42,7 +42,7 @@ BattleCommand_Present:
 .got_power
 	ld a, c
 	ld [wPresentPower], a
-	call AnimateCurrentMoveEitherSide
+	farcall AnimateCurrentMoveEitherSide
 	ld d, [hl]
 	pop bc
 	ret

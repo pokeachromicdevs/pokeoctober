@@ -26,7 +26,7 @@ BattleCommand_LeechSeed:
 	bit SUBSTATUS_LEECH_SEED, [hl]
 	jr nz, .evaded
 	set SUBSTATUS_LEECH_SEED, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, WasSeededText
 	jp StdBattleTextbox
 

@@ -6,7 +6,7 @@ BattleCommand_FocusEnergy:
 	bit SUBSTATUS_FOCUS_ENERGY, [hl]
 	jr nz, .already_pumped
 	set SUBSTATUS_FOCUS_ENERGY, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, GettingPumpedText
 	jp StdBattleTextbox
 

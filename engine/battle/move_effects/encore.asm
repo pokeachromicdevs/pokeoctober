@@ -107,7 +107,7 @@ BattleCommand_Encore:
 	call GetMoveData
 
 .finish_move
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, GotAnEncoreText
 	jp StdBattleTextbox
 

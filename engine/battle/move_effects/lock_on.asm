@@ -11,7 +11,7 @@ BattleCommand_LockOn:
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVarAddr
 	set SUBSTATUS_LOCK_ON, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 
 	ld hl, TookAimText
 	jp StdBattleTextbox

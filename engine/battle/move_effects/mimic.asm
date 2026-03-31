@@ -12,7 +12,7 @@ BattleCommand_Mimic:
 	jr z, .player_turn
 	ld hl, wEnemyMonMoves
 .player_turn
-	call CheckHiddenOpponent
+	call BattleCommand_CheckHit
 	jr nz, .fail
 	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
 	call GetBattleVar
@@ -47,7 +47,7 @@ BattleCommand_Mimic:
 	add hl, bc
 	ld [hl], 5
 	call GetMoveName
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, LearnedMoveText
 	jp StdBattleTextbox
 

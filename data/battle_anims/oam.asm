@@ -1113,17 +1113,17 @@ BattleAnimOAMData:
 	dsprite   1, 0,  1, 0, $15, X_FLIP
 	
 .OAMData_Hail:
-	dbsprite -13,  -2, 4, 0, $04, $0
-	dbsprite -11,  -4, 4, 0, $04, $0
-	dbsprite  -9,  -1, 4, 0, $04, $0
-	dbsprite  -7,  -5, 4, 0, $04, $0
-	dbsprite  -5,  -3, 4, 0, $04, $0
-	dbsprite  -3,  -5, 4, 0, $04, $0
-	dbsprite  -1,  -3, 4, 0, $04, $0
-	dbsprite   0,  -3, 4, 0, $04, $0
-	dbsprite   2,  -5, 4, 0, $04, $0
-	dbsprite   4,   0, 4, 0, $04, $0
-	dbsprite   6,  -2, 4, 0, $04, $0
-	dbsprite   8,  -4, 4, 0, $04, $0
-	dbsprite  10,  -2, 4, 0, $04, $0
+	dsprite -13,  -2, 4, 0, $04, $0
+	dsprite -11,  -4, 4, 0, $04, $0
+	dsprite  -9,  -1, 4, 0, $04, $0
+	dsprite  -7,  -5, 4, 0, $04, $0
+	dsprite  -5,  -3, 4, 0, $04, $0
+	dsprite  -3,  -5, 4, 0, $04, $0
+	dsprite  -1,  -3, 4, 0, $04, $0
+	dsprite   0,  -3, 4, 0, $04, $0
+	dsprite   2,  -5, 4, 0, $04, $0
+	dsprite   4,   0, 4, 0, $04, $0
+	dsprite   6,  -2, 4, 0, $04, $0
+	dsprite   8,  -4, 4, 0, $04, $0
+	dsprite  10,  -2, 4, 0, $04, $0
 

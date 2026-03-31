@@ -40,7 +40,7 @@ BattleCommand_Curse:
 
 	ld a, $1
 	ld [wKickCounter], a
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld a, SPEED
 	call LowerStat
 	call BattleCommand_SwitchTurn
@@ -57,7 +57,7 @@ BattleCommand_Curse:
 
 ; Cut HP in half and put a curse on the opponent.
 
-	call CheckHiddenOpponent
+	call BattleCommand_CheckHit
 	jr nz, .failed
 
 	call CheckSubstituteOpp
