@@ -1,3 +1,4 @@
+INCLUDE "git_version.asm" ; generated at build time!
 INCLUDE "checks/rgbasm_version.asm"
 
 INCLUDE "charmap.asm"
