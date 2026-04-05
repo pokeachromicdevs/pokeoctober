@@ -126,6 +126,10 @@ def match_rule(dep: str, targets: dict, source_root: Path) -> dict | None:
     return (configure_utils.make(source_root, targets,
       'LZ', *inputs), list(inputs))
   
+  # any '2BPP' or '1BPP' rule with 'tools_gfx' in its options
+  # runs a separate rule '2BPP_GFX' / '1BPP_GFX' that also
+  # runs `tools/gfx` after `rgbgfx`
+  
   # .2bpp from sourceroot to buildroot
   g = re.match(r'(.+)\.2bpp$', dep)
   if g:

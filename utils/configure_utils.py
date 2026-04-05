@@ -35,15 +35,15 @@ ninja_required_version = 1.5
 
 '''
 
-def Rule(out: list[str], name: str, command: str, description: str = '', generator: bool = False) -> str:
+def Rule(name: str, command: str, description: str = '', generator: bool = False) -> str:
   lines = [f'rule {name}', f'  command = {command}']
   if description:
     lines.append(f'  description = {description}')
   if generator:
       lines.append(f'  generator = 1')
-  out.append('\n'.join(lines) + '\n')
+  return '\n'.join(lines) + '\n'
 
-def Target(out: list[str], output: list[str], rule: str, inputs: list[str],
+def Target(output: list[str], rule: str, inputs: list[str],
         implicit: list[str] = None, implicit_out: list[str] = None,
         order_only: list[str] = None, variables: dict = None) -> str:
   outs = ' '.join(shlex.quote(str(i)) for i in output)
@@ -59,7 +59,7 @@ def Target(out: list[str], output: list[str], rule: str, inputs: list[str],
   if variables:
     for k, v in variables.items():
       lines.append(f'  {k} = {v}')
-  out.append('\n'.join(lines) + '\n')
+  return '\n'.join(lines) + '\n'
 
 def scan_sources(scan_includes, source_dir, sources):
   per_deps = {}
@@ -96,16 +96,13 @@ def emit_asm_objects(ln, source_dir, build_dir, per_deps, targets, variants):
     for idx, (suffix, flags) in enumerate(variants):
       output = str(build_dir / f'{stem}{suffix}.o')
       variables = {'rgbasm': flags} if flags else None
-      Target(ln, [output], 'ASM', [source], implicit=implicit, variables=variables)
+      ln += [Target([output], 'ASM', [source], implicit=implicit, variables=variables)]
       all_objects[idx].append(output)
   return all_objects
 
 def write_ninja(
-  build_dir: Path,
-  source_root: Path,
-  tools_dir: Path,
-  tools: dict[str, str],
-  targets: dict[str, dict],
+  build_dir: Path, source_root: Path, tools_dir: Path,
+  tools: dict[str, str], targets: dict[str, dict],
   per_asm_deps: dict[str, list[str]],
   per_gbs_deps: dict[str, list[str]],
 ):
@@ -115,71 +112,71 @@ def write_ninja(
   ln = [NINJA_HEADER]
 
   # variables
-  ln.append(f'source_root = {source_root}\n')
-  ln.append(f'build_root = {build_dir}\n\n')
+  ln += ['source_root = %s\n' % (source_root)]
+  ln += ['build_root = %s\n' % (build_dir)]
 
   # generation rules
-  Rule(ln, '2BPP',
+  ln += [Rule('2BPP',
     '%s $rgbgfx -o $out $in' % (tools['rgbgfx']),
-    description='2BPP $out',)
+    description='2BPP $out',)]
   
-  Rule(ln, '2BPP_GFX',
+  ln += [Rule('2BPP_GFX',
     '%s $rgbgfx -o $out $in && %s $tools_gfx -o $out $out' % (tools['rgbgfx'],tools['gfx']),
-    description='2BPP+ $out',)
+    description='2BPP+ $out',)]
   
-  Rule(ln, '1BPP',
+  ln += [Rule('1BPP',
     '%s $rgbgfx -d1 -o $out $in' % (tools['rgbgfx']),
-    description='1BPP $out',)
+    description='1BPP $out',)]
   
-  Rule(ln, '1BPP_GFX',
+  ln += [Rule('1BPP_GFX',
     '%s $rgbgfx -d1 -o $out $in && %s $tools_gfx -d1 -o $out $out' % (tools['rgbgfx'],tools['gfx']),
-    description='1BPP+ $out',)
+    description='1BPP+ $out',)]
   
-  Rule(ln, 'GBCPAL',
+  ln += [Rule('GBCPAL',
     '%s -p $out $in' % (tools['rgbgfx']),
-    description='GBCPAL $out',)
+    description='GBCPAL $out',)]
   
-  Rule(ln, 'LZ',
+  ln += [Rule('LZ',
     '%s -- $in $out' % (tools['lzcomp']),
-    description='LZ $out',)
+    description='LZ $out',)]
   
-  Rule(ln, 'DIMENSIONS',
+  ln += [Rule('DIMENSIONS',
     '%s $in $out' % (tools['png_dimensions']),
-    description='DIMENSIONS $out',)
+    description='DIMENSIONS $out',)]
   
-  Rule(ln, 'PKMN_ANIM_TMAP',
+  ln += [Rule('PKMN_ANIM_TMAP',
     '%s -t $out $in' % (tools['pokemon_animation_graphics']),
-    description='PKMN_ANIM_TMAP $out',)
+    description='PKMN_ANIM_TMAP $out',)]
   
-  Rule(ln, 'PKMN_STATIC',
+  ln += [Rule('PKMN_STATIC',
     '%s -s $out $in' % (tools['pokemon_animation_graphics']),
-    description='PKMN_STATIC $out',)
+    description='PKMN_STATIC $out',)]
   
-  Rule(ln, 'PKMN_ANIMATED',
+  ln += [Rule('PKMN_ANIMATED',
     '%s -a $out $in' % (tools['pokemon_animation_graphics']),
-    description='PKMN_ANIMATED $out',)
+    description='PKMN_ANIMATED $out',)]
   
-  Rule(ln, 'PKMN_BITMASK',
+  ln += [Rule('PKMN_BITMASK',
     '%s -b $in > $out' % (tools['pokemon_animation']),
-    description='PKMN_BITMASK $out',)
+    description='PKMN_BITMASK $out',)]
   
-  Rule(ln, 'PKMN_FRAMES',
+  ln += [Rule('PKMN_FRAMES',
     '%s -f $in > $out' % (tools['pokemon_animation']),
-    description='PKMN_FRAMES $out',)
+    description='PKMN_FRAMES $out',)]
   
-  Rule(ln, 'CAT',
+  ln += [Rule('CAT',
     'cat $in > $out',
-    description='$in -> $out',)
+    description='$in -> $out',)]
   
-  Rule(ln, 'ASM',
+  ln += [Rule('ASM',
     '%s $rgbasm '
     '-i $source_root '
     '-i $build_root '
     '-L '
     '-o $out $in' % (tools['rgbasm']),
-    description='ASM $out',)
+    description='ASM $out',)]
   
-  Rule(ln, 'LINK',
+  ln += [Rule('LINK',
     '%s '
     '-n $symfile '
     '-m $mapfile '
@@ -189,9 +186,9 @@ def write_ninja(
     '%s -Cjv -i BETA -k 01 -l 0x33 '
     '-m 0x10 -p 0 -r 3 -t PM_OCTOBER $out' % (
       tools['rgblink'],tools['rgbfix']),
-    description='LINK $out',)
+    description='LINK $out',)]
 
-  Rule(ln, 'LINKGBS',
+  ln += [Rule('LINKGBS',
     '%s '
     '-n $symfile '
     '-m $mapfile '
@@ -200,10 +197,10 @@ def write_ninja(
     ' && '
     '%s $out ' % (
       tools['rgblink'],tools['gbstrim']),
-    description='LINKGBS $out',)
+    description='LINKGBS $out',)]
 
   # keep rebuilding self
-  Rule(ln, 
+  ln += [Rule(
     'REGENERATE',
     f'python3 {source_root}/utils/configure.py '
     f'--tools-dir {tools_dir} '
@@ -211,21 +208,21 @@ def write_ninja(
     f'--build-dir {build_dir}',
     description='Reconfiguring',
     generator=True
-  )
-  Target(ln, ['build.ninja'], 'REGENERATE', [
+  )]
+  ln += [Target(['build.ninja'], 'REGENERATE', [
     str(source_root / 'utils/configure.py'),
     str(source_root / 'utils/configure_targets.py'),
     str(source_root / 'utils/configure_utils.py'),
   ], implicit=[str(source_root / asm) for asm in per_asm_deps]+
-  [str(source_root / asm) for asm in per_gbs_deps])
+  [str(source_root / asm) for asm in per_gbs_deps])]
   
 
   # special git version target, see `resolve_implict` for the effects
-  Rule(ln, 'GIT_INFO',
+  ln += [Rule('GIT_INFO',
     'python3 $source_root/utils/git_version.py $out',
-    description='GIT_INFO $out',)
-  Target(ln, ['always'], 'phony', [])
-  Target(ln, [str(build_dir /'git_version.asm')], 'GIT_INFO', [], implicit=['always'])
+    description='GIT_INFO $out',)]
+  ln += [Target(['always'], 'phony', [])]
+  ln += [Target([str(build_dir /'git_version.asm')], 'GIT_INFO', [], implicit=['always'])]
 
   # generated asset build statements
   for dep, info in targets.items():
@@ -245,7 +242,7 @@ def write_ninja(
           tr_inputs.append(str(build_dir / i))
         else:
           tr_inputs.append(ii)
-      Target(ln, [str(build_dir / dep)], rule, tr_inputs, variables=info['flags'])
+      ln += [Target([str(build_dir / dep)], rule, tr_inputs, variables=info['flags'])]
 
   objects, objects_debug = emit_asm_objects(ln,
     source_root, build_dir,
@@ -258,34 +255,34 @@ def write_ninja(
     variants=[('_gbs', '-D_GBS')])
 
   # link
-  Target(ln, ['pokeoctober.gbc'], 'LINK', objects,
+  ln += [Target(['pokeoctober.gbc'], 'LINK', objects,
     implicit_out=[
     'pokeoctober.sym',
     'pokeoctober.map'],
     variables={
       'symfile': 'pokeoctober.sym',
       'mapfile': 'pokeoctober.map',
-      'linkfile': str(source_root / 'pokeoctober.link')})
+      'linkfile': str(source_root / 'pokeoctober.link')})]
   
-  Target(ln, ['pokeoctober_debug.gbc'], 'LINK', objects_debug,
+  ln += [Target(['pokeoctober_debug.gbc'], 'LINK', objects_debug,
     implicit_out=[
     'pokeoctober_debug.sym',
     'pokeoctober_debug.map'],
     variables={
       'symfile': 'pokeoctober_debug.sym',
       'mapfile': 'pokeoctober_debug.map',
-      'linkfile': str(source_root / 'pokeoctober.link')})
+      'linkfile': str(source_root / 'pokeoctober.link')})]
   
-  Target(ln, ['pokeoctober.gbs'], 'LINKGBS', objects_gbs,
+  ln += [Target(['pokeoctober.gbs'], 'LINKGBS', objects_gbs,
     implicit_out=[
     'pokeoctober.gbs.sym',
     'pokeoctober.gbs.map'],
     variables={
       'symfile': 'pokeoctober.gbs.sym',
       'mapfile': 'pokeoctober.gbs.map',
-      'linkfile': str(source_root / 'gbs.link')})
+      'linkfile': str(source_root / 'gbs.link')})]
 
-  ln.append(f'\ndefault {shlex.quote('pokeoctober.gbc')}\n')
+  ln += ['default %s\n' % (shlex.quote('pokeoctober.gbc'))]
 
   ninja_path.write_text(''.join(ln))
   print(f'wrote {ninja_path}')
@@ -307,16 +304,15 @@ def resolve_targets(all_deps: list[str], source_root: Path, match_fn) -> dict[st
     newly_resolved = []
 
     for dep in unresolved:
-      r = match_fn(str(dep), targets, source_root)[0]
-      if r is not None:
-        targets[dep] = r
-        newly_resolved.append(dep)
-      elif r is None:
-        info = match_fn(dep, targets, source_root)[1]
-        if info:
-          for i in info:
+      r, new_inputs = match_fn(str(dep), targets, source_root)
+      if r is None:
+        if new_inputs:
+          for i in new_inputs:
             if i not in targets and not Path(i).exists() and i not in unresolved:
               unresolved.append(i)
+      else:
+        targets[dep] = r
+        newly_resolved.append(dep)
     
     for dep in newly_resolved:
       unresolved.remove(dep)
@@ -328,11 +324,6 @@ def resolve_targets(all_deps: list[str], source_root: Path, match_fn) -> dict[st
     print(f'ERROR: Could not resolve inputs for: {dep}')
 
   return targets
-
-def input_ready(source_root: Path, targets: dict, path: str) -> bool:
-  if path in targets:
-    return True
-  return Path(i).exists()
 
 def make(source_root: Path, targets: dict, rule, *inputs, flags: dict=None):
   # Return None if any input not yet resolved
