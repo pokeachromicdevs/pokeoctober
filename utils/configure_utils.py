@@ -21,10 +21,11 @@ def find_tool(tools_dir: Path, name: str) -> str:
   # Fall back to PATH
   return find_sys_tool(name)
 
-def scan_file(scan_includes: str, path: Path) -> list[str]:
+def scan_file(scan_includes: str, path: Path, source_root: Path) -> list[str]:
   result = subprocess.run(
     [scan_includes, str(path)],
-    capture_output=True, text=True, check=True,)
+    capture_output=True, text=True, check=True,
+    cwd=source_root,)
   deps = result.stdout.strip().split()
   return [d for d in deps if d]
 
@@ -60,6 +61,45 @@ def Target(out: list[str], output: list[str], rule: str, inputs: list[str],
       lines.append(f'  {k} = {v}')
   out.append('\n'.join(lines) + '\n')
 
+def scan_sources(scan_includes, source_dir, sources):
+  per_deps = {}
+  all_deps = []
+  for asm in sources:
+    deps = scan_file(scan_includes, source_dir / asm, source_dir)
+    per_deps[asm] = deps
+    for d in deps:
+      if d not in all_deps:
+        all_deps.append(d)
+  return per_deps, all_deps
+
+def resolve_implicit(deps, targets, build_dir, source_dir):
+  implicit = []
+  for dep in deps:
+    if dep in targets:
+      if targets[dep] != {} or dep == 'git_version.asm':
+        implicit.append(str(build_dir / dep))
+      else:
+        implicit.append(str(source_dir / dep))
+  return implicit
+
+def emit_asm_objects(ln, source_dir, build_dir, per_deps, targets, variants):
+  """
+  variants: list of (suffix, rgbasm_flags)
+  e.g. [('', None), ('_debug', '-D_DEBUG'), ('_gbs', '-D_GBS')]
+  Returns one list of outputs per variant.
+  """
+  all_objects = [[] for _ in variants]
+  for asm in per_deps:
+    stem     = Path(asm).stem
+    source   = str(source_dir / asm)
+    implicit = resolve_implicit(per_deps[asm], targets, build_dir, source_dir) or None
+    for idx, (suffix, flags) in enumerate(variants):
+      output = str(build_dir / f'{stem}{suffix}.o')
+      variables = {'rgbasm': flags} if flags else None
+      Target(ln, [output], 'ASM', [source], implicit=implicit, variables=variables)
+      all_objects[idx].append(output)
+  return all_objects
+
 def write_ninja(
   build_dir: Path,
   source_root: Path,
@@ -67,7 +107,7 @@ def write_ninja(
   tools: dict[str, str],
   targets: dict[str, dict],
   per_asm_deps: dict[str, list[str]],
-  asm_sources: list[str],
+  per_gbs_deps: dict[str, list[str]],
 ):
   build_dir.mkdir(parents=True, exist_ok=True)
   ninja_path = build_dir / 'build.ninja'
@@ -151,24 +191,36 @@ def write_ninja(
       tools['rgblink'],tools['rgbfix']),
     description='LINK $out',)
 
+  Rule(ln, 'LINKGBS',
+    '%s '
+    '-n $symfile '
+    '-m $mapfile '
+    '-l $linkfile '
+    '-o $out $in'
+    ' && '
+    '%s $out ' % (
+      tools['rgblink'],tools['gbstrim']),
+    description='LINKGBS $out',)
+
   # keep rebuilding self
-  # Rule(ln, 
-  #   'REGENERATE',
-  #   f'python3 {source_root}/utils/configure.py '
-  #   f'--tools-dir {tools_dir} '
-  #   f'--source-dir {source_root} '
-  #   f'--build-dir {build_dir}',
-  #   description='Reconfiguring',
-  #   generator=True
-  # ))
-  # Target(ln, ['build.ninja'], 'REGENERATE', [
-  #   str(source_root / 'utils/configure.py'),
-  #   str(source_root / 'utils/configure_targets.py'),
-  #   str(source_root / 'utils/configure_utils.py'),
-  # ]))
+  Rule(ln, 
+    'REGENERATE',
+    f'python3 {source_root}/utils/configure.py '
+    f'--tools-dir {tools_dir} '
+    f'--source-dir {source_root} '
+    f'--build-dir {build_dir}',
+    description='Reconfiguring',
+    generator=True
+  )
+  Target(ln, ['build.ninja'], 'REGENERATE', [
+    str(source_root / 'utils/configure.py'),
+    str(source_root / 'utils/configure_targets.py'),
+    str(source_root / 'utils/configure_utils.py'),
+  ], implicit=[str(source_root / asm) for asm in per_asm_deps]+
+  [str(source_root / asm) for asm in per_gbs_deps])
   
 
-  # special git version target
+  # special git version target, see `resolve_implict` for the effects
   Rule(ln, 'GIT_INFO',
     'python3 $source_root/utils/git_version.py $out',
     description='GIT_INFO $out',)
@@ -195,39 +247,43 @@ def write_ninja(
           tr_inputs.append(ii)
       Target(ln, [str(build_dir / dep)], rule, tr_inputs, variables=info['flags'])
 
-  # -- ASM object files
-  objects = []
-  for asm in asm_sources:
-    stem   = Path(asm).stem
-    output = str(build_dir / f'{stem}.o')
-    source = str(source_root / asm)
-    implicit = []
-    for dep in per_asm_deps.get(asm, []):
-      if dep in targets:
-        if targets[dep] != {}:
-          implicit.append(str(build_dir / dep))
-        else:
-          # part of the above exception
-          if dep == 'git_version.asm':
-            implicit.append(str(build_dir / dep))
-          else:
-            implicit.append(str(source_root / dep))
-    Target(ln, [output], 'ASM', [source], implicit=implicit or None)
-    objects.append(output)
+  objects, objects_debug = emit_asm_objects(ln,
+    source_root, build_dir,
+    per_asm_deps, targets,
+    variants=[('', None), ('_debug', '-D_DEBUG')])
+
+  objects_gbs, = emit_asm_objects(ln,
+    source_root, build_dir,
+    per_gbs_deps, targets,
+    variants=[('_gbs', '-D_GBS')])
 
   # link
-  rom = ['pokeoctober.gbc']
-  symfile = str(build_dir / 'pokeoctober.sym')
-  mapfile = str(build_dir / 'pokeoctober.map')
-  linkfile = str(source_root / 'pokeoctober.link')
-  Target(ln, rom, 'LINK', objects,
+  Target(ln, ['pokeoctober.gbc'], 'LINK', objects,
     implicit_out=[
     'pokeoctober.sym',
     'pokeoctober.map'],
     variables={
-      'symfile': symfile,
-      'mapfile': mapfile,
-      'linkfile': linkfile})
+      'symfile': 'pokeoctober.sym',
+      'mapfile': 'pokeoctober.map',
+      'linkfile': str(source_root / 'pokeoctober.link')})
+  
+  Target(ln, ['pokeoctober_debug.gbc'], 'LINK', objects_debug,
+    implicit_out=[
+    'pokeoctober_debug.sym',
+    'pokeoctober_debug.map'],
+    variables={
+      'symfile': 'pokeoctober_debug.sym',
+      'mapfile': 'pokeoctober_debug.map',
+      'linkfile': str(source_root / 'pokeoctober.link')})
+  
+  Target(ln, ['pokeoctober.gbs'], 'LINKGBS', objects_gbs,
+    implicit_out=[
+    'pokeoctober.gbs.sym',
+    'pokeoctober.gbs.map'],
+    variables={
+      'symfile': 'pokeoctober.gbs.sym',
+      'mapfile': 'pokeoctober.gbs.map',
+      'linkfile': str(source_root / 'gbs.link')})
 
   ln.append(f'\ndefault {shlex.quote('pokeoctober.gbc')}\n')
 

@@ -40,6 +40,7 @@ def main():
     'pokemon_animation_graphics': configure_utils.find_tool(tools_dir, 'pokemon_animation_graphics'),
     'gfx': configure_utils.find_tool(tools_dir, 'gfx'),
     'lzcomp': configure_utils.find_tool(tools_dir, 'lzcomp'),
+    'gbstrim': configure_utils.find_tool(tools_dir, 'gbstrim'),
     'rgbasm': configure_utils.find_sys_tool('rgbasm'),
     'rgblink': configure_utils.find_sys_tool('rgblink'),
     'rgbgfx': configure_utils.find_sys_tool('rgbgfx'),
@@ -50,27 +51,22 @@ def main():
     if tools[i] == None:
       sys.exit('tool %s not found' % i)
 
-  # scan dependencies
-  per_asm_deps: dict[str, list[str]] = {}
-  all_deps: list[str] = []
-  for asm in configure_targets.asm_sources:
-    path = source_dir / asm
-    deps = configure_utils.scan_file(tools['scan_includes'], path)
-    per_asm_deps[asm] = deps
-    for d in deps:
-      if d not in all_deps:
-        all_deps.append(d)
+  per_asm_deps, all_asm_deps = configure_utils.scan_sources(
+    tools['scan_includes'], source_dir, configure_targets.asm_sources)
+  
+  per_gbs_deps, all_gbs_deps = configure_utils.scan_sources(
+    tools['scan_includes'], source_dir, configure_targets.gbs_sources)
   
   # resolve targets from dependencies
+  all_deps = list(dict.fromkeys(all_asm_deps + all_gbs_deps))  # deduplicated, order preserved
   targets = configure_utils.resolve_targets(
     all_deps, source_dir, configure_targets.match_rule)
 
   # Write ninja file
   configure_utils.write_ninja(
-    build_dir, source_dir, 
-    tools_dir, tools,
-    targets, per_asm_deps,
-    configure_targets.asm_sources)
+    build_dir, source_dir, tools_dir,
+    tools, targets,
+    per_asm_deps, per_gbs_deps)
 
 
 if __name__ == '__main__':

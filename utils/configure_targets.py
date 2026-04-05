@@ -26,6 +26,11 @@ asm_sources = [
   'gfx/pics.asm',
   'gfx/sprites.asm',
 ]
+gbs_sources = [
+  'audio.asm',
+  'wram.asm',
+  'gbs.asm',
+]
 
 # For every single dependency, this function is run.
 def match_rule(dep: str, targets: dict, source_root: Path) -> dict | None:
