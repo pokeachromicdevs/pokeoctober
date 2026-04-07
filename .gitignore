@@ -62,3 +62,4 @@ gfx/sprites/pokemon/buffer
 
 guix/built
 build/
+git_version.asm
